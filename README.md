@@ -1,5 +1,8 @@
+# Processing Py Site
+
 The directory structure for processing-py-site is as follows:
 
+<pre>
 +-processing-py-site/
   |
   +-Cover/
@@ -17,6 +20,7 @@ The directory structure for processing-py-site is as follows:
   |   +-include/
   |
   +-Tutorials/
+</pre>
 
 The script Reference/api_en/htmlgenerator.py generates .html Reference pages from the .xml files in the same directory.
 
