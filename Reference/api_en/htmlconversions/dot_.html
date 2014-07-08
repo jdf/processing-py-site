@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title># (comment) \ Language (API) \ Processing.py</title>
+        <title>. (dot) \ Language (API) \ Processing.py</title>
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
@@ -56,15 +56,34 @@
     <tr class="name-row">
         <th scope="row">Name</th>
 
-        <td><h3># (comment)</h3></td>
+        <td><h3>. (dot)</h3></td>
     </tr>
 
 <tr class=""><th scope="row">Examples</th><td><div class="example"><img src="images/<image/>" alt="example pic" /><pre class="margin">
 
-# Draws two lines which divides the window
-# into four quadrants
-line(0, 50, 100, 50)  # Draw the horizontal line
-line(50, 0, 50, 100)  # Draw the vertical line
+class HLine(object):  # Class definition
+
+    def __init__(self, y, s):  # Object constructor
+        self.ypos = y
+        self.speed = s
+
+    def update(self):  # Update method
+        self.ypos += self.speed
+        if self.ypos > width:
+            self.ypos = 0
+        line(0, self.ypos, width, self.ypos)
+
+# Declare and construct two objects (h1 and h2) of the class HLine(object):
+h1 = HLine(20, 1.0)
+h2 = HLine(50, 5.0)
+def setup():
+    size(200, 200)
+
+def draw():
+    if (h2.speed > 1.0):  # Dot syntax can be used to get a value
+        h2.speed -= 0.01  # or set a value.
+    h1.update()  # Calls the h1 object's update() function
+    h2.update()  # Calls the h2 object's update() function
 
 </pre></div>
 
@@ -74,20 +93,27 @@ line(50, 0, 50, 100)  # Draw the vertical line
         <th scope="row">Description</th>
         <td>
 
-Explanatory notes embedded within the code. Comments are used to remind yourself and to inform others about the details of the code. Single-line comments are signified with the pound character. Comments are ignored by the interpreter.
+Provides access to an object's methods and data. An object is one instance of a class and may contain both methods (object functions) and data (object variables and constants), as specified in the class definition. The dot operator directs the program to the information encapsulated within an object.
 
 </td>
     </tr>
 
     <tr class=""><th scope="row">Syntax</th><td><pre>
-# <kbd>comment</kbd>
+<kbd>object</kbd>.<kbd>method()</kbd>
+<kbd>object</kbd>.<kbd>data</kbd>
 </pre></td></tr>
     
 <!--    <tr class=""><th scope="row">Syntax</th><td><pre>something(<kbd>x1</kbd>) something(<kbd>x1</kbd>, <kbd>y1</kbd>)</pre></td></tr> --!>
 
 <tr class="">   <th scope="row">Parameters</th><td><table cellpadding="0" cellspacing="0" border="0"><tr class="">
-<th scope="row" class="code">comment</th>
-<td><![CDATA[any sequence of characters]]></td>
+<th scope="row" class="code">object</th>
+<td><![CDATA[the object to be accessed]]></td>
+</tr><tr class="">
+<th scope="row" class="code">method()</th>
+<td><![CDATA[a method encapsulated in the object]]></td>
+</tr><tr class="">
+<th scope="row" class="code">data</th>
+<td><![CDATA[a variable or constant encapsulated in the object]]></td>
 </tr></table></td> </tr>
 
     <tr class=""><th scope="row">Returns</th><td class="code">void</td></tr>

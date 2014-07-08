@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title># (comment) \ Language (API) \ Processing.py</title>
+        <title>long \ Language (API) \ Processing.py</title>
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
@@ -56,15 +56,16 @@
     <tr class="name-row">
         <th scope="row">Name</th>
 
-        <td><h3># (comment)</h3></td>
+        <td><h3>long</h3></td>
     </tr>
 
 <tr class=""><th scope="row">Examples</th><td><div class="example"><img src="images/<image/>" alt="example pic" /><pre class="margin">
 
-# Draws two lines which divides the window
-# into four quadrants
-line(0, 50, 100, 50)  # Draw the horizontal line
-line(50, 0, 50, 100)  # Draw the vertical line
+long a# Declare variable 'a' of type long
+a = 23# Assign 'a' the value 23
+long b = -256# Declare variable 'b' and assign it the value -256
+long c = a + b# Declare variable 'c' and assign it the sum of 'a' and 'b'
+i = (int)c# Converts the value of 'c' from a long to an int
 
 </pre></div>
 
@@ -74,20 +75,24 @@ line(50, 0, 50, 100)  # Draw the vertical line
         <th scope="row">Description</th>
         <td>
 
-Explanatory notes embedded within the code. Comments are used to remind yourself and to inform others about the details of the code. Single-line comments are signified with the pound character. Comments are ignored by the interpreter.
+Datatype for large integers. While integers can be as large as 2,147,483,647 and as low as -2,147,483,648 (stored as 32 bits), a <b>long</b> integer has a minimum value of -9,223,372,036,854,775,808 and a maximum value of 9,223,372,036,854,775,807 (stored as 64 bits). Use this datatype when you need a number to have a greater magnitude than can be stored within an <b>int</b>. Processing functions don't use this datatype, so while they work in the language, you'll usually have to convert to a <b>int</b> using the <b>(int)</b> syntax before passing into a function.
 
 </td>
     </tr>
 
     <tr class=""><th scope="row">Syntax</th><td><pre>
-# <kbd>comment</kbd>
+long <kbd>var</kbd>
+long <kbd>var</kbd> = <kbd>value</kbd>
 </pre></td></tr>
     
 <!--    <tr class=""><th scope="row">Syntax</th><td><pre>something(<kbd>x1</kbd>) something(<kbd>x1</kbd>, <kbd>y1</kbd>)</pre></td></tr> --!>
 
 <tr class="">   <th scope="row">Parameters</th><td><table cellpadding="0" cellspacing="0" border="0"><tr class="">
-<th scope="row" class="code">comment</th>
-<td><![CDATA[any sequence of characters]]></td>
+<th scope="row" class="code">var</th>
+<td><![CDATA[variable name referencing the value]]></td>
+</tr><tr class="">
+<th scope="row" class="code">value</th>
+<td><![CDATA[any integer value]]></td>
 </tr></table></td> </tr>
 
     <tr class=""><th scope="row">Returns</th><td class="code">void</td></tr>

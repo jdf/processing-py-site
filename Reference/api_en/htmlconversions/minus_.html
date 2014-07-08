@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title># (comment) \ Language (API) \ Processing.py</title>
+        <title>- (minus) \ Language (API) \ Processing.py</title>
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
@@ -56,15 +56,22 @@
     <tr class="name-row">
         <th scope="row">Name</th>
 
-        <td><h3># (comment)</h3></td>
+        <td><h3>- (minus)</h3></td>
     </tr>
 
 <tr class=""><th scope="row">Examples</th><td><div class="example"><img src="images/<image/>" alt="example pic" /><pre class="margin">
 
-# Draws two lines which divides the window
-# into four quadrants
-line(0, 50, 100, 50)  # Draw the horizontal line
-line(50, 0, 50, 100)  # Draw the vertical line
+c = 50 - 5  # Sets 'c' to 45
+d = c - 5  # Sets 'd' to 40
+e = d - 60  # Sets 'e' to -20
+
+</pre></div>
+
+<div class="example"><img src="images/size_1.png" alt="example pic" /><pre class="margin">
+
+a = 5  # Sets 'a' to 5
+b = -a  # Sets 'b' to -5
+c = -(5 + 3)  # Sets 'c' to -8
 
 </pre></div>
 
@@ -74,20 +81,24 @@ line(50, 0, 50, 100)  # Draw the vertical line
         <th scope="row">Description</th>
         <td>
 
-Explanatory notes embedded within the code. Comments are used to remind yourself and to inform others about the details of the code. Single-line comments are signified with the pound character. Comments are ignored by the interpreter.
+Subtracts one value from another and may also be used to negate a value. As a subtraction operator, the value of the second parameter is subtracted from the first. For example, 5 - 3 yields the number 2. As a negation operator, it is equivalent to multiplying a number by -1. For example, -5 is the same as 5 * -1.  
 
 </td>
     </tr>
 
     <tr class=""><th scope="row">Syntax</th><td><pre>
-# <kbd>comment</kbd>
+-<kbd>value1</kbd>
+<kbd>value1</kbd> - <kbd>value2</kbd>
 </pre></td></tr>
     
 <!--    <tr class=""><th scope="row">Syntax</th><td><pre>something(<kbd>x1</kbd>) something(<kbd>x1</kbd>, <kbd>y1</kbd>)</pre></td></tr> --!>
 
 <tr class="">   <th scope="row">Parameters</th><td><table cellpadding="0" cellspacing="0" border="0"><tr class="">
-<th scope="row" class="code">comment</th>
-<td><![CDATA[any sequence of characters]]></td>
+<th scope="row" class="code">value1</th>
+<td><![CDATA[int or float]]></td>
+</tr><tr class="">
+<th scope="row" class="code">value2</th>
+<td><![CDATA[int or float]]></td>
 </tr></table></td> </tr>
 
     <tr class=""><th scope="row">Returns</th><td class="code">void</td></tr>

@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title># (comment) \ Language (API) \ Processing.py</title>
+        <title>() (parentheses) \ Language (API) \ Processing.py</title>
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
@@ -56,15 +56,13 @@
     <tr class="name-row">
         <th scope="row">Name</th>
 
-        <td><h3># (comment)</h3></td>
+        <td><h3>() (parentheses)</h3></td>
     </tr>
 
 <tr class=""><th scope="row">Examples</th><td><div class="example"><img src="images/<image/>" alt="example pic" /><pre class="margin">
 
-# Draws two lines which divides the window
-# into four quadrants
-line(0, 50, 100, 50)  # Draw the horizontal line
-line(50, 0, 50, 100)  # Draw the vertical line
+a = (4 + 3) * 2         # Grouping expressions
+line(a, 0, a, 100)      # Containing a list of parameters
 
 </pre></div>
 
@@ -74,20 +72,27 @@ line(50, 0, 50, 100)  # Draw the vertical line
         <th scope="row">Description</th>
         <td>
 
-Explanatory notes embedded within the code. Comments are used to remind yourself and to inform others about the details of the code. Single-line comments are signified with the pound character. Comments are ignored by the interpreter.
+Grouping and containing expressions and parameters. Parentheses have multiple functions relating to functions and structures. They are used to contain a list of parameters passed to functions and control structures and they are used to group expressions to control the order of execution. Some functions have no parameters and in this case, the space between parentheses is blank.
 
 </td>
     </tr>
 
     <tr class=""><th scope="row">Syntax</th><td><pre>
-# <kbd>comment</kbd>
+<kbd>function</kbd>()
+<kbd>function</kbd>(<kbd>p1</kbd>, ..., <kbd>pN</kbd>)
 </pre></td></tr>
     
 <!--    <tr class=""><th scope="row">Syntax</th><td><pre>something(<kbd>x1</kbd>) something(<kbd>x1</kbd>, <kbd>y1</kbd>)</pre></td></tr> --!>
 
 <tr class="">   <th scope="row">Parameters</th><td><table cellpadding="0" cellspacing="0" border="0"><tr class="">
-<th scope="row" class="code">comment</th>
-<td><![CDATA[any sequence of characters]]></td>
+<th scope="row" class="code">function</th>
+<td><![CDATA[any function]]></td>
+</tr><tr class="">
+<th scope="row" class="code">p1, ..., pN</th>
+<td><![CDATA[list of parameters specific to the function]]></td>
+</tr><tr class="">
+<th scope="row" class="code">expressions</th>
+<td><![CDATA[any valid expression or group of expression]]></td>
 </tr></table></td> </tr>
 
     <tr class=""><th scope="row">Returns</th><td class="code">void</td></tr>

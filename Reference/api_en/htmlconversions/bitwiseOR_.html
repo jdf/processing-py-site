@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title># (comment) \ Language (API) \ Processing.py</title>
+        <title>| (bitwise OR) \ Language (API) \ Processing.py</title>
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
@@ -56,15 +56,28 @@
     <tr class="name-row">
         <th scope="row">Name</th>
 
-        <td><h3># (comment)</h3></td>
+        <td><h3>| (bitwise OR)</h3></td>
     </tr>
 
 <tr class=""><th scope="row">Examples</th><td><div class="example"><img src="images/<image/>" alt="example pic" /><pre class="margin">
 
-# Draws two lines which divides the window
-# into four quadrants
-line(0, 50, 100, 50)  # Draw the horizontal line
-line(50, 0, 50, 100)  # Draw the vertical line
+a = 205  # In binary: 11001101
+b = 45  # In binary: 00101101
+c = a | b  # In binary: 11101101
+println(c)  # Prints "237", the decimal equivalent to 11101101
+
+</pre></div>
+
+<div class="example"><img src="images/size_1.png" alt="example pic" /><pre class="margin">
+
+a = 255 << 24  # Binary: 11111111000000000000000000000000
+r = 204 << 16  # Binary: 00000000110011000000000000000000
+g = 204 << 8   # Binary: 00000000000000001100110000000000
+b = 51         # Binary: 00000000000000000000000000110011
+# OR the values together: 11111111110011001100110000110011
+argb = a | r | g | b
+fill(argb)
+rect(30, 20, 55, 55)
 
 </pre></div>
 
@@ -74,20 +87,30 @@ line(50, 0, 50, 100)  # Draw the vertical line
         <th scope="row">Description</th>
         <td>
 
-Explanatory notes embedded within the code. Comments are used to remind yourself and to inform others about the details of the code. Single-line comments are signified with the pound character. Comments are ignored by the interpreter.
+Compares each corresponding bit in the binary representation of the values. For each comparison two 1's yield 1, 1 and 0 yield 1, and two 0's yield 0. This is easy to see when we look at the binary representation of numbers<br />
+<br />
+<pre>  11010110  # 214
+| 01011100  # 92
+  --------
+  11011110  # 222</pre>
+<br />
+To see the binary representation of a number, use the <b>binary()</b> function with <b>println()</b>.
 
 </td>
     </tr>
 
     <tr class=""><th scope="row">Syntax</th><td><pre>
-# <kbd>comment</kbd>
+<kbd>value</kbd> | <kbd>value2</kbd>
 </pre></td></tr>
     
 <!--    <tr class=""><th scope="row">Syntax</th><td><pre>something(<kbd>x1</kbd>) something(<kbd>x1</kbd>, <kbd>y1</kbd>)</pre></td></tr> --!>
 
 <tr class="">   <th scope="row">Parameters</th><td><table cellpadding="0" cellspacing="0" border="0"><tr class="">
-<th scope="row" class="code">comment</th>
-<td><![CDATA[any sequence of characters]]></td>
+<th scope="row" class="code">value1</th>
+<td><![CDATA[int, char, byte]]></td>
+</tr><tr class="">
+<th scope="row" class="code">value2</th>
+<td><![CDATA[int, char, byte]]></td>
 </tr></table></td> </tr>
 
     <tr class=""><th scope="row">Returns</th><td class="code">void</td></tr>

@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title># (comment) \ Language (API) \ Processing.py</title>
+        <title>float \ Language (API) \ Processing.py</title>
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
@@ -56,15 +56,25 @@
     <tr class="name-row">
         <th scope="row">Name</th>
 
-        <td><h3># (comment)</h3></td>
+        <td><h3>float</h3></td>
     </tr>
 
 <tr class=""><th scope="row">Examples</th><td><div class="example"><img src="images/<image/>" alt="example pic" /><pre class="margin">
 
-# Draws two lines which divides the window
-# into four quadrants
-line(0, 50, 100, 50)  # Draw the horizontal line
-line(50, 0, 50, 100)  # Draw the vertical line
+a = 1.5387 # Declare variable 'a' and assign it the value 1.5387
+b = -2.984 # Declare variable 'b' and assign it the value -2.984
+c = a + b  # Declare variable 'c' and assign it the sum of 'a' and 'b'
+
+</pre></div>
+
+<div class="example"><img src="images/size_1.png" alt="example pic" /><pre class="margin">
+
+f = 0
+for i in range(100000):
+    f = f + 0.0001  # Bad idea! See below.
+for i in range(100000):
+    # The variable 'f' will work better here, less affected by rounding
+    f = i / 1000.0  # Count by thousandths
 
 </pre></div>
 
@@ -74,20 +84,27 @@ line(50, 0, 50, 100)  # Draw the vertical line
         <th scope="row">Description</th>
         <td>
 
-Explanatory notes embedded within the code. Comments are used to remind yourself and to inform others about the details of the code. Single-line comments are signified with the pound character. Comments are ignored by the interpreter.
+Data type for floating-point numbers, a number that has a decimal point. 
+<br/>
+Floats are not precise, so avoid adding small values (such as 0.0001), as these  may not always increment because of rounding error. If you want to increment a value in small intervals, use an int, and divide by a float value before using it. (See above example.)<br />
+<br />
 
 </td>
     </tr>
 
     <tr class=""><th scope="row">Syntax</th><td><pre>
-# <kbd>comment</kbd>
+<kbd>var</kbd>
+<kbd>var</kbd> = <kbd>value</kbd>
 </pre></td></tr>
     
 <!--    <tr class=""><th scope="row">Syntax</th><td><pre>something(<kbd>x1</kbd>) something(<kbd>x1</kbd>, <kbd>y1</kbd>)</pre></td></tr> --!>
 
 <tr class="">   <th scope="row">Parameters</th><td><table cellpadding="0" cellspacing="0" border="0"><tr class="">
-<th scope="row" class="code">comment</th>
-<td><![CDATA[any sequence of characters]]></td>
+<th scope="row" class="code">var</th>
+<td><![CDATA[variable name referencing the float]]></td>
+</tr><tr class="">
+<th scope="row" class="code">value</th>
+<td><![CDATA[any floating-point value]]></td>
 </tr></table></td> </tr>
 
     <tr class=""><th scope="row">Returns</th><td class="code">void</td></tr>

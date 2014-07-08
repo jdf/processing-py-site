@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title># (comment) \ Language (API) \ Processing.py</title>
+        <title>+ (addition) \ Language (API) \ Processing.py</title>
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
@@ -56,15 +56,33 @@
     <tr class="name-row">
         <th scope="row">Name</th>
 
-        <td><h3># (comment)</h3></td>
+        <td><h3>+ (addition)</h3></td>
     </tr>
 
 <tr class=""><th scope="row">Examples</th><td><div class="example"><img src="images/<image/>" alt="example pic" /><pre class="margin">
 
-# Draws two lines which divides the window
-# into four quadrants
-line(0, 50, 100, 50)  # Draw the horizontal line
-line(50, 0, 50, 100)  # Draw the vertical line
+a = 50 + 5  # Sets 'a' to 55
+b = a + 5  # Sets 'b' to 60
+
+</pre></div>
+
+<div class="example"><img src="images/size_1.png" alt="example pic" /><pre class="margin">
+
+s1 = "Chernenko"
+s2 = "Brezhnev"
+sc1 = s1 + s2
+sc2 = s1 + ", Andropov, " + s2
+println(sc1)  # Prints "ChernenkoBrezhnev"
+println(sc2)  # Prints "Chernenko, Andropov, Brezhnev"
+
+</pre></div>
+
+<div class="example"><img src="images/size_1.png" alt="example pic" /><pre class="margin">
+
+s1 = "Gorbachev"
+i = 1987
+sc1 = s1 + str(i)
+println(sc1)  # Prints "Gorbachev1987"
 
 </pre></div>
 
@@ -74,20 +92,23 @@ line(50, 0, 50, 100)  # Draw the vertical line
         <th scope="row">Description</th>
         <td>
 
-Explanatory notes embedded within the code. Comments are used to remind yourself and to inform others about the details of the code. Single-line comments are signified with the pound character. Comments are ignored by the interpreter.
+Adds two values or concatenates string values. As a mathematical operator, it calculates the sum of two values. As a string operator, it combines two strings into one. Note that for concatenation, non-string datatypes must be cast to strings using str(). 
 
 </td>
     </tr>
 
     <tr class=""><th scope="row">Syntax</th><td><pre>
-# <kbd>comment</kbd>
+<kbd>value1</kbd> + <kbd>value2</kbd>
 </pre></td></tr>
     
 <!--    <tr class=""><th scope="row">Syntax</th><td><pre>something(<kbd>x1</kbd>) something(<kbd>x1</kbd>, <kbd>y1</kbd>)</pre></td></tr> --!>
 
 <tr class="">   <th scope="row">Parameters</th><td><table cellpadding="0" cellspacing="0" border="0"><tr class="">
-<th scope="row" class="code">comment</th>
-<td><![CDATA[any sequence of characters]]></td>
+<th scope="row" class="code">value1</th>
+<td><![CDATA[String, int, float, char, byte, boolean]]></td>
+</tr><tr class="">
+<th scope="row" class="code">value2</th>
+<td><![CDATA[String, int, float, char, byte, boolean]]></td>
 </tr></table></td> </tr>
 
     <tr class=""><th scope="row">Returns</th><td class="code">void</td></tr>

@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title># (comment) \ Language (API) \ Processing.py</title>
+        <title>% (modulo) \ Language (API) \ Processing.py</title>
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
@@ -56,15 +56,25 @@
     <tr class="name-row">
         <th scope="row">Name</th>
 
-        <td><h3># (comment)</h3></td>
+        <td><h3>% (modulo)</h3></td>
     </tr>
 
 <tr class=""><th scope="row">Examples</th><td><div class="example"><img src="images/<image/>" alt="example pic" /><pre class="margin">
 
-# Draws two lines which divides the window
-# into four quadrants
-line(0, 50, 100, 50)  # Draw the horizontal line
-line(50, 0, 50, 100)  # Draw the vertical line
+a = 5 % 4          # Sets 'a' to 1
+b = 125 % 100      # Sets 'b' to 25
+c = 285.5 % 140.0  # Sets 'c' to 5.5
+d = 30.0 % 33.0    # Sets 'd' to 30.0
+
+</pre></div>
+
+<div class="example"><img src="images/size_1.png" alt="example pic" /><pre class="margin">
+
+a = 0
+def draw():
+    background(200)
+    a = (a + 1) % width  # 'a' increases between 0 and width
+    line(a, 0, a, height)
 
 </pre></div>
 
@@ -74,20 +84,27 @@ line(50, 0, 50, 100)  # Draw the vertical line
         <th scope="row">Description</th>
         <td>
 
-Explanatory notes embedded within the code. Comments are used to remind yourself and to inform others about the details of the code. Single-line comments are signified with the pound character. Comments are ignored by the interpreter.
+Calculates the remainder when one number is divided by another. For example, when 52.1 is divided by 10, the divisor (10) goes into the dividend (52.1) five times (5 * 10 == 50), and there is a remainder of 2.1 (52.1 - 50 == 2.1). Thus, <strong>52.1 % 10</strong> produces <strong>2.1</strong>.<br/>
+<br/>
+Note that when the divisor is greater than the dividend, the remainder constitutes the value of the entire dividend. That is, a number cannot be divided by any number larger than itself. For example, when 9 is divided by 10, the result is zero with a remainder of 9. Thus, <strong>9 % 10</strong> produces <strong>9</strong>.<br/>
+<br/>
+Modulo is extremely useful for keeping numbers within a boundary such as keeping a shape on the screen. (See the second example above.)
 
 </td>
     </tr>
 
     <tr class=""><th scope="row">Syntax</th><td><pre>
-# <kbd>comment</kbd>
+<kbd>value1</kbd> % <kbd>value2</kbd>
 </pre></td></tr>
     
 <!--    <tr class=""><th scope="row">Syntax</th><td><pre>something(<kbd>x1</kbd>) something(<kbd>x1</kbd>, <kbd>y1</kbd>)</pre></td></tr> --!>
 
 <tr class="">   <th scope="row">Parameters</th><td><table cellpadding="0" cellspacing="0" border="0"><tr class="">
-<th scope="row" class="code">comment</th>
-<td><![CDATA[any sequence of characters]]></td>
+<th scope="row" class="code">value1</th>
+<td><![CDATA[int or float]]></td>
+</tr><tr class="">
+<th scope="row" class="code">value2</th>
+<td><![CDATA[int or float]]></td>
 </tr></table></td> </tr>
 
     <tr class=""><th scope="row">Returns</th><td class="code">void</td></tr>

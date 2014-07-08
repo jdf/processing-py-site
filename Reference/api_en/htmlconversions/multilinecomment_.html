@@ -61,11 +61,11 @@
 
 <tr class=""><th scope="row">Examples</th><td><div class="example"><img src="images/<image/>" alt="example pic" /><pre class="margin">
 
-'''
-   Draws two lines which divides the window 
-   into four quadrants. First draws a horizontal
-   line and then the vertical line 
-''' 
+"""
+     Draws two lines which divides the window 
+     into four quadrants. First draws a horizontal
+     line and then the vertical line 
+""" 
 line(0, 50, 100, 50)
 line(50, 0, 50, 100)
 
@@ -77,16 +77,23 @@ line(50, 0, 50, 100)
         <th scope="row">Description</th>
         <td>
 
-Explanatory notes embedded within the code. Comments are used to remind yourself and to inform others about the function of your program. Multiline comments are used for large text descriptions of code or to comment out chunks of code while debugging applications. In Python, multiline comments are actually multiline strings, but they are ignored by the interpreter. 
+Explanatory notes embedded within the code. Comments are used to remind yourself and to inform others about the function of your program. Multiline comments are used for large text descriptions of code or to comment out chunks of code while debugging applications. Note that in Python mode you can make multiline comments with single quotes '''like this''' or with double quotes """like this""". Comments are ignored by the interpreter.  
 
 </td>
     </tr>
 
-    <tr class=""><th scope="row">Syntax</th><td><pre>@syntax</pre></td></tr>
+    <tr class=""><th scope="row">Syntax</th><td><pre>
+/*
+  <kbd>comment</kbd>
+*/
+</pre></td></tr>
     
 <!--    <tr class=""><th scope="row">Syntax</th><td><pre>something(<kbd>x1</kbd>) something(<kbd>x1</kbd>, <kbd>y1</kbd>)</pre></td></tr> --!>
 
-@parameters
+<tr class="">   <th scope="row">Parameters</th><td><table cellpadding="0" cellspacing="0" border="0"><tr class="">
+<th scope="row" class="code">comment</th>
+<td><![CDATA[any sequence of characters]]></td>
+</tr></table></td> </tr>
 
     <tr class=""><th scope="row">Returns</th><td class="code">void</td></tr>
 </table>

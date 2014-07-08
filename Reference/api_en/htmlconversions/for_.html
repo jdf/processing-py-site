@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title># (comment) \ Language (API) \ Processing.py</title>
+        <title>for \ Language (API) \ Processing.py</title>
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
@@ -56,15 +56,45 @@
     <tr class="name-row">
         <th scope="row">Name</th>
 
-        <td><h3># (comment)</h3></td>
+        <td><h3>for</h3></td>
     </tr>
 
-<tr class=""><th scope="row">Examples</th><td><div class="example"><img src="images/<image/>" alt="example pic" /><pre class="margin">
+<tr class=""><th scope="row">Examples</th><td><div class="example"><img src="images/for_0.png" alt="example pic" /><pre class="margin">
 
-# Draws two lines which divides the window
-# into four quadrants
-line(0, 50, 100, 50)  # Draw the horizontal line
-line(50, 0, 50, 100)  # Draw the vertical line
+for i in range(40):
+    line(30, i, 80, i)
+
+</pre></div>
+
+<div class="example"><img src="images/size_1.png" alt="example pic" /><pre class="margin">
+
+for i in range(0, 80, 5):
+    line(30, i, 80, i)
+
+</pre></div>
+
+<div class="example"><img src="images/size_1.png" alt="example pic" /><pre class="margin">
+
+for i in range(40, 80, 5):
+    line(30, i, 80, i)
+
+</pre></div>
+
+<div class="example"><img src="images/size_1.png" alt="example pic" /><pre class="margin">
+
+# Nested for() loops can be used to
+# generate two-dimensional patterns
+for i in range(30, 80, 5):
+    for j in range(0, 80, 5):
+        point(i, j)
+
+</pre></div>
+
+<div class="example"><img src="images/size_1.png" alt="example pic" /><pre class="margin">
+
+nums = [5, 4, 3, 2, 1]
+for i in nums:
+    println(i)
 
 </pre></div>
 
@@ -74,20 +104,38 @@ line(50, 0, 50, 100)  # Draw the vertical line
         <th scope="row">Description</th>
         <td>
 
-Explanatory notes embedded within the code. Comments are used to remind yourself and to inform others about the details of the code. Single-line comments are signified with the pound character. Comments are ignored by the interpreter.
+Controls a sequence of repetitions. In Python, a for loop requires a list function to iterate over. The range() function provides such a list, and accepts arguments in three ways: <br/>
+</br>
+range(10)       # Creates the list [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] <br/>
+range(5, 10)    # Creates the list [5, 6, 7, 8, 9] <br/>
+range(5, 10, 2) # Creates the list [5, 7, 9] <br/>
+</br>
+In the first example above, the <b>for</b> structure is executed 40 times. The for structure loops until it reaches the last element of the list created by range(40): 39.
+<br/>
+A second type of <b>for</b> structure makes it easier to iterate over each element of a list. The last example above shows how it works. First, define a variable name. This variable name will be assigned to each element of the list in turn as the <b>for</b> moves through the entire list. Then specify the list to iterate over after <b>in</b>, in this case <b>nums</b>. 
 
 </td>
     </tr>
 
     <tr class=""><th scope="row">Syntax</th><td><pre>
-# <kbd>comment</kbd>
+for <kbd>var</kbd> in <kbd>iterable</kbd>:
+    <kbd>statements</kbd>
+
+for <kbd>var</kbd> in <kbd>iterable</kbd>:
+    <kbd>statements</kbd>
 </pre></td></tr>
     
 <!--    <tr class=""><th scope="row">Syntax</th><td><pre>something(<kbd>x1</kbd>) something(<kbd>x1</kbd>, <kbd>y1</kbd>)</pre></td></tr> --!>
 
 <tr class="">   <th scope="row">Parameters</th><td><table cellpadding="0" cellspacing="0" border="0"><tr class="">
-<th scope="row" class="code">comment</th>
-<td><![CDATA[any sequence of characters]]></td>
+<th scope="row" class="code">var</th>
+<td><![CDATA[variable to be assigned to each element of the iterable]]></td>
+</tr><tr class="">
+<th scope="row" class="code">iterable</th>
+<td><![CDATA[iterable object to loop over]]></td>
+</tr><tr class="">
+<th scope="row" class="code">statements</th>
+<td><![CDATA[collection of statements executed each time through the loop]]></td>
 </tr></table></td> </tr>
 
     <tr class=""><th scope="row">Returns</th><td class="code">void</td></tr>

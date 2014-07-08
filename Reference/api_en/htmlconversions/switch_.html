@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title># (comment) \ Language (API) \ Processing.py</title>
+        <title>switch \ Language (API) \ Processing.py</title>
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
@@ -56,15 +56,52 @@
     <tr class="name-row">
         <th scope="row">Name</th>
 
-        <td><h3># (comment)</h3></td>
+        <td><h3>switch</h3></td>
     </tr>
 
 <tr class=""><th scope="row">Examples</th><td><div class="example"><img src="images/<image/>" alt="example pic" /><pre class="margin">
 
-# Draws two lines which divides the window
-# into four quadrants
-line(0, 50, 100, 50)  # Draw the horizontal line
-line(50, 0, 50, 100)  # Draw the vertical line
+num = 1
+switch(num) 
+    case 0: 
+        println("Zero")# Does not execute
+        break
+    case 1: 
+        println("One")# Prints "One"
+        break
+
+</pre></div>
+
+<div class="example"><img src="images/size_1.png" alt="example pic" /><pre class="margin">
+
+char letter = 'N'
+switch(letter) 
+    case 'A': 
+        println("Alpha")# Does not execute
+        break
+    case 'B': 
+        println("Bravo")# Does not execute
+        break
+    default:                         # Default executes if the case labels
+        println("None")# don't match the switch parameter
+        break
+
+</pre></div>
+
+<div class="example"><img src="images/size_1.png" alt="example pic" /><pre class="margin">
+
+# Removing a "break" enables testing
+# for more than one value at once
+char letter = 'b'
+switch(letter) 
+    case 'a':
+    case 'A': 
+        println("Alpha")# Does not execute
+        break
+    case 'b':
+    case 'B': 
+        println("Bravo")# Prints "Bravo"
+        break
 
 </pre></div>
 
@@ -74,20 +111,34 @@ line(50, 0, 50, 100)  # Draw the vertical line
         <th scope="row">Description</th>
         <td>
 
-Explanatory notes embedded within the code. Comments are used to remind yourself and to inform others about the details of the code. Single-line comments are signified with the pound character. Comments are ignored by the interpreter.
+Works like an <b>if else</b> structure, but <b>switch</b> is more convenient when you need to select between three or more alternatives. Program controls jumps to the case with the same value as the expression. All remaining statements in the switch are executed unless redirected by a <b>break</b>. Only primitive datatypes which can convert to an integer (byte, char, and int) may be used as the <b>expression</b> parameter. The default is optional.
 
 </td>
     </tr>
 
     <tr class=""><th scope="row">Syntax</th><td><pre>
-# <kbd>comment</kbd>
+switch(<kbd>expression</kbd>)
+{
+  case <kbd>label</kbd>: 
+     <kbd>statements</kbd>          
+  case <kbd>label</kbd>:          // Optional
+     <kbd>statements</kbd>        // &quot;
+  default:             // &quot;
+     <kbd>statements</kbd>        // &quot;
+}
 </pre></td></tr>
     
 <!--    <tr class=""><th scope="row">Syntax</th><td><pre>something(<kbd>x1</kbd>) something(<kbd>x1</kbd>, <kbd>y1</kbd>)</pre></td></tr> --!>
 
 <tr class="">   <th scope="row">Parameters</th><td><table cellpadding="0" cellspacing="0" border="0"><tr class="">
-<th scope="row" class="code">comment</th>
-<td><![CDATA[any sequence of characters]]></td>
+<th scope="row" class="code">expression</th>
+<td><![CDATA[byte, char, or int]]></td>
+</tr><tr class="">
+<th scope="row" class="code">label</th>
+<td><![CDATA[byte, char, or int]]></td>
+</tr><tr class="">
+<th scope="row" class="code">statements</th>
+<td><![CDATA[one or more statements to be executed]]></td>
 </tr></table></td> </tr>
 
     <tr class=""><th scope="row">Returns</th><td class="code">void</td></tr>

@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title># (comment) \ Language (API) \ Processing.py</title>
+        <title>while \ Language (API) \ Processing.py</title>
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
@@ -56,15 +56,15 @@
     <tr class="name-row">
         <th scope="row">Name</th>
 
-        <td><h3># (comment)</h3></td>
+        <td><h3>while</h3></td>
     </tr>
 
-<tr class=""><th scope="row">Examples</th><td><div class="example"><img src="images/<image/>" alt="example pic" /><pre class="margin">
+<tr class=""><th scope="row">Examples</th><td><div class="example"><img src="images/while_.png" alt="example pic" /><pre class="margin">
 
-# Draws two lines which divides the window
-# into four quadrants
-line(0, 50, 100, 50)  # Draw the horizontal line
-line(50, 0, 50, 100)  # Draw the vertical line
+i = 0
+while i < 80:
+    line(30, i, 80, i)
+    i = i + 5
 
 </pre></div>
 
@@ -74,20 +74,26 @@ line(50, 0, 50, 100)  # Draw the vertical line
         <th scope="row">Description</th>
         <td>
 
-Explanatory notes embedded within the code. Comments are used to remind yourself and to inform others about the details of the code. Single-line comments are signified with the pound character. Comments are ignored by the interpreter.
+Controls a sequence of repetitions. The <b>while</b> structure executes a series of statements continuously while the <b>expression</b> is <b>True</b>. The expression must be updated during the repetitions or the program will never "break out" of <b>while</b>.
+<br/> <br/>
+This function can be dangerous because the code inside the <b>while</b> loop will not finish until the expression inside <b>while</b> becomes False. It will lock out all other code from running (e.g., mouse and keyboard events will not be updated). Be careful &mdash; if used incorrectly, this can lock up your code (and sometimes even the Processing environment itself).
 
 </td>
     </tr>
 
     <tr class=""><th scope="row">Syntax</th><td><pre>
-# <kbd>comment</kbd>
+while <kbd>expression</kbd>: 
+    <kbd>statements</kbd>
 </pre></td></tr>
     
 <!--    <tr class=""><th scope="row">Syntax</th><td><pre>something(<kbd>x1</kbd>) something(<kbd>x1</kbd>, <kbd>y1</kbd>)</pre></td></tr> --!>
 
 <tr class="">   <th scope="row">Parameters</th><td><table cellpadding="0" cellspacing="0" border="0"><tr class="">
-<th scope="row" class="code">comment</th>
-<td><![CDATA[any sequence of characters]]></td>
+<th scope="row" class="code">expression</th>
+<td><![CDATA[a valid expression]]></td>
+</tr><tr class="">
+<th scope="row" class="code">statements</th>
+<td><![CDATA[one or more statements]]></td>
 </tr></table></td> </tr>
 
     <tr class=""><th scope="row">Returns</th><td class="code">void</td></tr>

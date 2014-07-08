@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title># (comment) \ Language (API) \ Processing.py</title>
+        <title>Conditional Expressions \ Language (API) \ Processing.py</title>
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
@@ -56,15 +56,16 @@
     <tr class="name-row">
         <th scope="row">Name</th>
 
-        <td><h3># (comment)</h3></td>
+        <td><h3>Conditional Expressions</h3></td>
     </tr>
 
 <tr class=""><th scope="row">Examples</th><td><div class="example"><img src="images/<image/>" alt="example pic" /><pre class="margin">
 
-# Draws two lines which divides the window
-# into four quadrants
-line(0, 50, 100, 50)  # Draw the horizontal line
-line(50, 0, 50, 100)  # Draw the vertical line
+s = 0
+for i in range(5, 100, 5):
+    s = 0 if i < 50 else 255
+    stroke(s)
+    line(30, i, 80, i)
 
 </pre></div>
 
@@ -74,20 +75,35 @@ line(50, 0, 50, 100)  # Draw the vertical line
         <th scope="row">Description</th>
         <td>
 
-Explanatory notes embedded within the code. Comments are used to remind yourself and to inform others about the details of the code. Single-line comments are signified with the pound character. Comments are ignored by the interpreter.
+A shortcut for writing an <b>if</b> and <b>else</b> structure. Conditional expressions in Python take the form <b>expression1 if test else expression2</b>. If the <b>test</b> evaluates to <b>True</b>, <b>expression1</b> is evaluated and returned. If the <b>condition</b> evaluates to <b>False</b>, <b>expression2</b> is evaluated and returned.
+<br /><br />
+The following conditional expression: <br />
+<pre>result = expression1 if test else expression2</pre><br />
+is equivalent to this structure: <br />
+<pre>if test:<br />
+  result = expression1 <br />
+ else: <br />
+  result = expression2 <br />
+</pre>
 
 </td>
     </tr>
 
     <tr class=""><th scope="row">Syntax</th><td><pre>
-# <kbd>comment</kbd>
+<kbd>expression1</kbd> if <kbd>test</kbd> else <kbd>expression2</kbd>
 </pre></td></tr>
     
 <!--    <tr class=""><th scope="row">Syntax</th><td><pre>something(<kbd>x1</kbd>) something(<kbd>x1</kbd>, <kbd>y1</kbd>)</pre></td></tr> --!>
 
 <tr class="">   <th scope="row">Parameters</th><td><table cellpadding="0" cellspacing="0" border="0"><tr class="">
-<th scope="row" class="code">comment</th>
-<td><![CDATA[any sequence of characters]]></td>
+<th scope="row" class="code">test</th>
+<td><![CDATA[any valid expression which evaluates to True or False]]></td>
+</tr><tr class="">
+<th scope="row" class="code">expression1</th>
+<td><![CDATA[any valid expression]]></td>
+</tr><tr class="">
+<th scope="row" class="code">expression2</th>
+<td><![CDATA[any valid expression]]></td>
 </tr></table></td> </tr>
 
     <tr class=""><th scope="row">Returns</th><td class="code">void</td></tr>

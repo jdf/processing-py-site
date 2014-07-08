@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title># (comment) \ Language (API) \ Processing.py</title>
+        <title>return \ Language (API) \ Processing.py</title>
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
@@ -56,15 +56,49 @@
     <tr class="name-row">
         <th scope="row">Name</th>
 
-        <td><h3># (comment)</h3></td>
+        <td><h3>return</h3></td>
     </tr>
 
 <tr class=""><th scope="row">Examples</th><td><div class="example"><img src="images/<image/>" alt="example pic" /><pre class="margin">
 
-# Draws two lines which divides the window
-# into four quadrants
-line(0, 50, 100, 50)  # Draw the horizontal line
-line(50, 0, 50, 100)  # Draw the vertical line
+val = 30
+
+def draw():
+    t = timestwo(val)
+    println(t)
+
+# The first 'int' in the function declaration
+# specifies the type of data to be returned.
+def timestwo(dVal):
+    dVal = dVal * 2
+    return dVal  # Returns an int of 60, in this case
+
+</pre></div>
+
+<div class="example"><img src="images/size_1.png" alt="example pic" /><pre class="margin">
+
+vals = [10, 20, 30]
+
+def draw():
+    t = timestwo(vals)
+    println(t)
+    noLoop()
+
+def timestwo(dVals):
+    for i in range(len(dVals)):
+        dVals[i] = dVals[i] * 2
+    return dVals  # Returns a list of 3 ints: 20, 40, 60
+
+</pre></div>
+
+<div class="example"><img src="images/size_1.png" alt="example pic" /><pre class="margin">
+
+def draw(): 
+    background(204)
+    line(0, 0, width, height)
+    if mousePressed:
+        return# Break out of draw(), skipping the line statement below
+    line(0, height, width, 0)# Executed only if mouse is not pressed
 
 </pre></div>
 
@@ -74,20 +108,30 @@ line(50, 0, 50, 100)  # Draw the vertical line
         <th scope="row">Description</th>
         <td>
 
-Explanatory notes embedded within the code. Comments are used to remind yourself and to inform others about the details of the code. Single-line comments are signified with the pound character. Comments are ignored by the interpreter.
+Keyword used to indicate the value to return from a function.
+<br/>
+The keyword <b>return</b> may also be used to break out of a function, thus not allowing the program to the remaining statements. (See the third example above.)
 
 </td>
     </tr>
 
-    <tr class=""><th scope="row">Syntax</th><td><pre>
-# <kbd>comment</kbd>
-</pre></td></tr>
+    <tr class=""><th scope="row">Syntax</th><td><pre><![CDATA[
+def <kbd>function</kbd>:
+    <kbd>statements</kbd>
+    return <kbd>value</kbd>
+]]></pre></td></tr>
     
 <!--    <tr class=""><th scope="row">Syntax</th><td><pre>something(<kbd>x1</kbd>) something(<kbd>x1</kbd>, <kbd>y1</kbd>)</pre></td></tr> --!>
 
 <tr class="">   <th scope="row">Parameters</th><td><table cellpadding="0" cellspacing="0" border="0"><tr class="">
-<th scope="row" class="code">comment</th>
-<td><![CDATA[any sequence of characters]]></td>
+<th scope="row" class="code">function</th>
+<td><![CDATA[the function being defined]]></td>
+</tr><tr class="">
+<th scope="row" class="code">statements</th>
+<td><![CDATA[any valid statements]]></td>
+</tr><tr class="">
+<th scope="row" class="code">value</th>
+<td><![CDATA[the value to return]]></td>
 </tr></table></td> </tr>
 
     <tr class=""><th scope="row">Returns</th><td class="code">void</td></tr>
