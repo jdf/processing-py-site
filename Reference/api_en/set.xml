@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>set()</name>
+
+<category>Image</category>
+
+<subcategory>Pixels</subcategory>
+
+<type></type>
+
+<example>
+<image>set_0.png</image>
+<code><![CDATA[
+black = color(0)
+set(30, 20, black)
+set(85, 20, black)
+set(85, 75, black)
+set(30, 75, black)
+]]></code>
+</example>
+
+<example>
+<image>set_1.png</image>
+<code><![CDATA[
+for i in range(30, width-15): 
+    for j in range(20, height-25): 
+        c = color(204-j, 153-i, 0)
+        set(i, j, c)
+]]></code>
+</example>
+
+<example>
+<image>set_2.png</image>
+<code><![CDATA[
+size(100, 100)
+myImage = loadImage("apples.jpg")
+set(0, 0, myImage)
+line(0, 0, width, height)
+line(0, height, width, 0)
+]]></code>
+</example>
+
+<description><![CDATA[
+Changes the color of any pixel, or writes an image directly to the display window.<br />
+<br />
+The <b>x</b> and <b>y</b> parameters specify the pixel to change and the <b>c</b> parameter specifies the color value. The <b>c</b> parameter is interpreted according to the current color mode.  (The default color mode is RGB values from 0 to 255.)  When setting an image, the <b>x</b> and <b>y</b> parameters define the coordinates for the upper-left corner of the image, regardless of the current <b>imageMode()</b>.
+<br /><br />
+Setting the color of a single pixel with <b>set(x, y)</b> is easy, but not as fast as putting the data directly into <b>pixels</b>. The equivalent statement to <b>set(x, y, #000000)</b> using <b>pixels</b> is <b>pixels[y*width+x] = #000000</b>. See the reference for <a href="pixels.html">pixels</a> for more information.
+]]></description>
+
+</root>

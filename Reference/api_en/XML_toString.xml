@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>toString()</name>
+
+<category>XMLElement</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+data = "&ltmammals&gt&ltanimal&gtGoat&lt/animal&gt&lt/mammals&gt"
+def setup(): 
+    XML xml = parseXML(data)
+    
+    #Format with line breaks, XML declaration, and 2-space indentation
+    s = xml.toString()
+    println(s)
+# Sketch prints:
+#&lt?xml version=&quot1.0&quotencoding=&quotUTF-8&quot?&gt
+#&ltmammals&gt
+#    &ltanimal&gtGoat&lt/animal&gt
+#&lt/mammals&gt
+]]></code>
+</example>
+
+<description><![CDATA[
+Takes an XML object and converts it to a String, using default formatting rules (includes an XML declaration, line breaks, and two spaces for indents).  These are the same formatting rules used by <b>println()</b> when printing an XML object.  This method produces the same results as using <b>format(2)</b>.
+]]></description>
+
+</root>

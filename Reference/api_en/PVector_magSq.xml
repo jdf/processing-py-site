@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>magSq()</name>
+
+<category>PVector</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+v = None
+
+def setup(): 
+    v = PVector(20.0, 30.0, 40.0)
+    m = v.magSq()
+    println(m)  # Prints "2900.0"
+]]></code>
+</example>
+
+<description><![CDATA[
+Calculates the magnitude (length) of the vector, squared.  This method is often used to improve performance since, unlike <b>mag()</b>, it does not require a <b>sqrt()</b> operation.
+]]></description>
+
+</root>

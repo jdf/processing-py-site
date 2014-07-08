@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>lerp()</name>
+
+<category>PVector</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+# Non-static (lerp on a specific vector)
+current = None
+target = None
+
+def setup(): 
+    current = PVector(0.0, 0.0)
+    target = PVector(100.0, 100.0)
+    current.lerp(target, 0.5)
+    println(current)# Prints "[ 50.0, 50.0, 0.0 ]"
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+# Static (return a vector)
+start = None
+end = None
+middle = None
+
+def setup():
+    start = PVector(0.0, 0.0)
+    end = PVector(100.0, 100.0)
+    middle = PVector.lerp(start, end, 0.5)
+    println(middle)  # Prints "[ 50.0, 50.0, 0.0 ]"
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+# Non-static (lerp on a specific vector)
+PVector v
+def setup(): 
+    v = PVector(0.0, 0.0)
+def draw(): 
+    v.lerp(mouseX, mouseY, 0.0, 0.1)
+    ellipse(v.x, v.y, 20, 20)
+]]></code>
+</example>
+
+<description><![CDATA[
+Calculates linear interpolation from one vector to another vector.  (Just like regular <b>lerp()</b>, but for vectors.)<br/>
+<br/>
+Note that there is one <em>static</em> version of this method, and two <em>non-static</em> versions.  The static version, <b>lerp(v1, v2, amt)</b> is given the two vectors to interpolate and returns a new PVector object.  The static version is used by referencing the PVector class directly.  (See the middle example above.)  The non-static versions, <b>lerp(v, amt)</b> and <b>lerp(x, y, z, amt)</b>, do not return a new PVector, but transform the values of the PVector on which they are called.  These non-static versions function the same way, but the former takes another vector as input, while the latter takes three float values.  (See the top and bottom examples above, respectively.)
+]]></description>
+
+</root>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>False</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+rect(30, 20, 50, 50)
+b = False
+if not b: # If b is False
+    line(20, 10, 90, 80)  # This line is drawn
+else:
+    line(20, 80, 90, 10)  # This line is not drawn
+]]></code>
+</example>
+
+<description><![CDATA[
+Reserved word representing the logical value "False". Only variables of type <b>Boolean</b> may be assigned the value <b>False</b>.
+]]></description>
+
+<syntax></syntax>
+
+<returns></returns>
+
+<related>
+True
+Boolean
+</related>
+
+<availability>1.0</availability>
+
+<type>Keyword</type>
+
+<partof>PYDE</partof>
+
+
+</root>

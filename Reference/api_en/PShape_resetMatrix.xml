@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>resetMatrix()</name>
+
+<!-- unsupported_modes>js</unsupported_modes -->
+<!-- js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode -->
+
+<category>PShape</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+s = None
+
+def setup():
+    size(100, 100)
+    s = loadShape("ohio.svg")
+    s.rotate(PI / 6)
+
+def draw():
+    background(204)
+    shape(s)
+
+def mousePressed():
+    # Removes all transformations applied to shape
+    # Loads the identity matrix
+    s.resetMatrix()
+]]></code>
+</example>
+
+<description><![CDATA[
+Replaces the current matrix of a shape with the identity matrix. The equivalent function in OpenGL is <b>glLoadIdentity()</b>. 
+]]></description>
+
+</root>

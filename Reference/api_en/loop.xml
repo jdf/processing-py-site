@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>loop()</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+x = 0
+
+def setup():
+    size(200, 200)
+    noLoop()  # draw() will not loop
+
+def draw():
+    background(204)
+    x = x + .1
+    if x > width:
+        x = 0
+
+    line(x, 0, x, height)
+
+def mousePressed():
+    loop()  # Holding down the mouse activates looping
+
+def mouseReleased():
+    noLoop()  # Releasing the mouse stops looping draw()
+]]></code>
+</example>
+
+<description><![CDATA[
+By default, Processing loops through <b>draw()</b> continuously, executing the code within it. However, the <b>draw()</b> loop may be stopped by calling <b>noLoop()</b>. In that case, the <b>draw()</b> loop can be resumed with <b>loop()</b>.
+]]></description>
+
+
+</root>

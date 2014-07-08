@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>max()</name>
+
+<category>Math</category>
+
+<subcategory>Calculation</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+a = max(5, 9)  # Sets 'a' to 9
+b = max(-4, -12)  # Sets 'b' to -4
+c = max(12.3, 230.24)  # Sets 'c' to 230.24
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+values = 9, -4, 362, 21  # Create an array of ints
+d = max(values)  # Sets 'd' to 362
+]]></code>
+</example>
+
+<description><![CDATA[
+Determines the largest value in a sequence of numbers, and then returns that value. <b>max()</b> accepts either two or three <b>float</b> or <b>int</b> values as parameters, or an array of any length.
+]]></description>
+
+</root>

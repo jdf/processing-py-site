@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>getChild()</name>
+
+<category>PShape</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image>PShape_getChild_.png</image>
+<code><![CDATA[
+states = None 
+ohio = None
+
+def setup(): 
+    size(100, 100)
+    states = loadShape("tristate.svg")
+    ohio = states.getChild("OH")
+    ohio.disableStyle()
+
+def draw(): 
+    background(0)
+    shape(states, -48, 5)
+    fill(102, 0, 0)
+    shape(ohio, -48, 5)
+]]></code>
+</example>
+
+<description><![CDATA[
+Extracts a child shape from a parent shape. Specify the name of the shape with the <b>target</b> parameter. The shape is returned as a <b>PShape</b> object, or <b>null</b> is returned if there is an error.
+]]></description>
+
+</root>

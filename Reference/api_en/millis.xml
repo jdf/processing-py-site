@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>millis()</name>
+
+<category>Input</category>
+
+<subcategory>Time &amp; Date</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+def draw(): 
+    m = millis()
+    noStroke()
+    fill(m % 255)
+    rect(25, 25, 50, 50)
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns the number of milliseconds (thousandths of a second) since starting the program. This information is often used for timing events and animation sequences. 
+]]></description>
+
+</root>

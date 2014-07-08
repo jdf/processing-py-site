@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>textLeading()</name>
+
+<category>Typography</category>
+
+<subcategory>Attributes</subcategory>
+
+<type></type>
+
+<example>
+<image>textLeading_.png</image>
+<code><![CDATA[
+# Text to display. The "&#92n" is a "line" character
+lines = "L1\nL2\nL3"
+textSize(12)
+fill(0)  # Set fill to black
+textLeading(10)  # Set leading to 10
+text(lines, 10, 25)
+textLeading(20)  # Set leading to 20
+text(lines, 40, 25)
+textLeading(30)  # Set leading to 30
+text(lines, 70, 25)
+]]></code>
+</example>
+<description><![CDATA[
+Sets the spacing between lines of text in units of pixels. This setting will be used in all subsequent calls to the <b>text()</b> function.  Note, however, that the leading is reset by <b>textSize()</b>. For example, if the leading is set to 20 with <b>textLeading(20)</b>, then if <b>textSize(48)</b> is run at a later point, the leading will be reset to the default for the text size of 48.
+]]></description>
+
+</root>

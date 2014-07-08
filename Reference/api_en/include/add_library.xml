@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>add_library</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+add_library('pdf')
+
+def setup():
+    size(displayWidth, displayHeight, PDF, "i_am_a_pdf.pdf")
+
+def draw():
+    line(0, 0, width, height)
+    line(0, height, width, 0)
+]]></code>
+</example>
+
+<description><![CDATA[
+The keyword <b>add_library</b> is used to load a library into a Processing sketch. 
+A library is one or more classes that are grouped together to extend the capabilities of Processing. 
+]]></description>
+
+<syntax>
+add_library(<c>libraryName</c>)
+</syntax>
+
+<parameter>
+<label>libraryName</label>
+<description><![CDATA[the name of the library to load (e.g. "pdf")]]></description>
+</parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Keyword</type>
+
+<partof>PYDE</partof>
+
+
+
+
+
+
+
+
+</root>

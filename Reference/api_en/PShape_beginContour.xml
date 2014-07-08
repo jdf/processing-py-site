@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>beginContour()</name>
+
+<!-- unsupported_modes>js</unsupported_modes -->
+<!-- js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode -->
+
+<category>PShape</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+s = None
+
+def setup():
+    size(100, 100, P2D)
+    # Make a shape
+    s = createShape()
+    s.beginShape()
+    s.noStroke()
+    # Exterior part of shape
+    s.vertex(-50, -50)
+    s.vertex(50, -50)
+    s.vertex(50, 50)
+    s.vertex(-50, 50)
+    # Interior part of shape
+    s.beginContour()
+    s.vertex(-20, -20)
+    s.vertex(20, -20)
+    s.vertex(20, 20)
+    s.vertex(-20, 20)
+    s.endContour()
+    # Finish off shape
+    s.endShape()
+
+def draw():
+    background(52)
+    translate(width / 2, height / 2)
+    s.rotate(0.01)
+    shape(s)
+]]></code>
+</example>
+
+<description><![CDATA[
+The <b>beginContour()</b> and <b>endContour()</b> methods make it possible to define shapes with other shapes cut out of them. For example, the inside of a letter 'O'. These two functions are always used together, you'll never use one without the other. Between them, define the geometry you want to create. As you'll see when you run the example above, the second smaller shape is cut out of the first larger shape.
+]]></description>
+
+</root>

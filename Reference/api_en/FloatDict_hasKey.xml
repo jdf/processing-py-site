@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>hasKey()</name>
+
+<category>FloatDict</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+FloatDict inventory
+def setup(): 
+    size(200, 200)
+    inventory = FloatDict(goods, amounts)
+    inventory = FloatDict()
+    inventory.set("coffee",108.6)
+    inventory.set("flour",5.8)
+    inventory.set("tea",8.2)
+    println(inventory)
+    if inventory.hasKey("flour") == True:
+        println("Yes, we have flour.")
+    else:
+        println("Sorry, no flour.")
+    
+]]></code>
+</example>
+
+<description><![CDATA[
+Check if a key is a part of the data structure.
+]]></description>
+
+</root>

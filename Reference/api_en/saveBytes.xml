@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>saveBytes()</name>
+
+<!-- unsupported_modes>js</unsupported_modes -->
+<!-- js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode -->
+
+<category>Output</category>
+
+<subcategory>Files</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+nums = 0, 34, 5, 127, 52
+# Writes the bytes to a file
+saveBytes("numbers.dat", nums)
+]]></code>
+</example>
+
+<description><![CDATA[
+As the opposite of <b>loadBytes()</b>, this function will write an entire list of bytes to a file. The data is saved in binary format. This file is saved to the sketch's folder, which is opened by selecting "Show Sketch Folder" from the "Sketch" menu. Alternatively, the files can be saved to any location on the computer by using an absolute path (something that starts with / on Unix and Linux, or a drive letter on Windows).
+]]></description>
+
+</root>

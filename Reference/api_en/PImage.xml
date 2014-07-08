@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<root>
+
+<name>PImage</name>
+
+<category>Image</category>
+
+<subcategory>PImage</subcategory>
+
+<type></type>
+
+<example>
+<image>PImage.png</image>
+<code><![CDATA[
+photo = None
+
+def setup():
+    size(100, 100)
+    photo = loadImage("laDefense.jpg")
+
+def draw():
+    image(photo, 0, 0)
+]]></code>
+</example>
+
+<!-- js_mode><description><![CDATA[
+Use a "@pjs preload" directive to preload images before your sketch starts. You can easily add one with the "Playback Settings" tool in the "JavaScript" menu.
+]]></description></js_mode -->
+
+<description><![CDATA[
+Datatype for storing images. Processing can display <b>.gif</b>, <b>.jpg</b>, <b>.tga</b>, and <b>.png</b> images. Images may be displayed in 2D and 3D space. Before an image is used, it must be loaded with the <b>loadImage()</b> function. The <b>PImage</b> class contains fields for the <b>width</b> and <b>height</b> of the image, as well as a list called <b>pixels</b> that contains the values for every pixel in the image. The methods described below allow easy access to the image's pixels and alpha channel and simplify the process of compositing.<br/>
+<br/>
+Before using the <b>pixels</b> list, be sure to use the <b>loadPixels()</b> method on the image to make sure that the pixel data is properly loaded.<br/>
+<br/>
+To create a new image, use the <b>createImage()</b> function. Do not use the syntax <b>new PImage()</b>. 
+]]></description>
+
+</root>

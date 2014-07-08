@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>acos()</name>
+
+<category>Math</category>
+
+<subcategory>Trigonometry</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+a = PI
+c = cos(a)
+ac = acos(c)
+# Prints "3.1415927 : -1.0 : 3.1415927"
+println("%.7f : %.1f : %.7f" % (a, c, ac))
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+a = PI + PI/4.0
+c = cos(a)
+ac = acos(c)
+# Prints "3.926991 : -0.70710665 : 2.3561943"
+println("%.6f : %.8f : %.7f" % (a, c, ac))
+]]></code>
+</example>
+
+<description><![CDATA[
+The inverse of <b>cos()</b>, returns the arc cosine of a value. This function expects the values in the range of -1 to 1 and values are returned in the range <b>0</b> to <b>PI (3.1415927)</b>.
+]]></description>
+
+</root>

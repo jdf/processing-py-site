@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>String Find</name>
+
+<category>Data</category>
+
+<subcategory>String Methods</subcategory>
+
+<usage></usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+pet = 'sea snail'
+println(pet.find('a'))       # Prints the index of the 'a' in 'pet': 2.
+println(pet.find('a', 3, 7)) # Prints the index of the second 'a' in 
+                             # 'pet': 6.
+]]></code>
+</example>
+
+<description><![CDATA[
+Return the lowest index in the string where a substring is found. Optional arguments start and end specify a range to search in. 
+]]></description>
+
+<syntax>
+a.find(<c>sub</c>)
+a.find(<c>sub</c>,<c>start</c>,<c>end</c>)
+</syntax>
+
+<parameter>
+<label>sub</label>
+<description>substring to search for</description>
+</parameter>
+
+<parameter>
+<label>start</label>
+<description>starting point in search range</description>
+</parameter>
+
+<parameter>
+<label>start</label>
+<description>end point in search range</description>
+</parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof>PYDE</partof>
+
+</root>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>height</name>
+
+<category>PImage</category>
+
+<subcategory>Field</subcategory>
+
+<type></type>
+
+<example>
+<image>PImage_height.png</image>
+<code><![CDATA[
+tiles = loadImage("tiles.jpg")
+image(tiles, 20, 10)
+rect(55, 10, tiles.width, tiles.height)
+]]></code>
+</example>
+
+<description><![CDATA[
+The height of the image in units of pixels.
+]]></description>
+
+</root>

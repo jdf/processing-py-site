@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>getVertex()</name>
+
+<!-- unsupported_modes>js</unsupported_modes -->
+<!-- js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode -->
+
+<category>PShape</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+s = None
+
+def setup(): 
+    size(100, 100, P2D)
+    s = createShape()
+    s.beginShape()
+    s.vertex(0, 0)
+    s.vertex(60, 0)
+    s.vertex(60, 60)
+    s.vertex(0, 60)
+    s.endShape(CLOSE)
+
+def draw(): 
+    translate(20, 20)
+    for i in range(s.getVertexCount()): 
+        v = s.getVertex(i)
+        v.x += random(-1, 1)
+        v.y += random(-1, 1)
+        s.setVertex(i, v)
+    shape(s)
+]]></code>
+</example>
+
+<description><![CDATA[
+The <b>getVertex()</b> method returns a PVector with the coordinates of the vertex point located at the position defined by the <b>index</b> parameter. This method works when shapes are created as shown in the example above, but won't work properly when a shape is defined explicitly (e.g. createShape(RECT, 20, 20, 80, 80).
+]]></description>
+
+</root>

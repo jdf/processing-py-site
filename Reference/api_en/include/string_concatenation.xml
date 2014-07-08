@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>String Concatenation</name>
+
+<category>Data</category>
+
+<subcategory>String Methods</subcategory>
+
+<usage></usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+a = 'a'
+s = a * 3       # Multiplying a string by n duplicates the it n times.
+println(s)      # Prints 'aaa'.
+s += 'b' + 'bb' # String concatenation with the plus sign.
+println(s)      # Prints 'aaabbb'.
+]]></code>
+</example>
+
+<description><![CDATA[
+Concatenate strings with the attention operator +. Multiplying a string by an integer n duplicates the string n times. 
+]]></description>
+
+<syntax>
+
+</syntax>
+
+<parameter>
+<label></label>
+<description></description>
+</parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof>PYDE</partof>
+
+
+
+
+
+
+
+
+</root>

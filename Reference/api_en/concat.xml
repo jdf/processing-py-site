@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>concat()</name>
+
+<category>Data</category>
+
+<subcategory>List Functions</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+sa1 = "OH", "NY", "CA"
+sa2 = "KY", "IN", "MA"
+sa3 = concat(sa1, sa2)
+println(sa3)
+# Prints updated list contents to the console:
+# [0] "OH"
+# [1] "NY"
+# [2] "CA"
+# [3] "KY"
+# [4] "IN"
+# [5] "MA"
+]]></code>
+</example>
+
+<description><![CDATA[
+Concatenates two lists. For example, concatenating the list [1, 2, 3] and the list [4, 5, 6] yields [1, 2, 3, 4, 5, 6]. Both parameters must be lists of the same datatype.
+<br/> <br/>
+When using an array of objects, the data returned from the function must be cast to the object array's data type. For example: <em>SomeClass[] items = (SomeClass[]) concat(array1, array2)</em>.
+]]></description>
+
+</root>

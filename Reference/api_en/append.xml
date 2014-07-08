@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>append()</name>
+
+<category>Data</category>
+
+<subcategory>List Functions</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+sa1 = ["OH", "NY", "CA"]
+sa1.append("MA")
+println(sa1)
+# Prints updated list contents to the console:
+# [0] "OH"
+# [1] "NY"
+# [2] "CA"
+# [3] "MA"
+]]></code>
+</example>
+
+<description><![CDATA[
+Expands a list by one element and adds data to the new position. You can store any type inside a list, and you canmake a list that contains different data types.<br/>
+<br/>
+]]></description>
+
+</root>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>del</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage></usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+a = [1,2,3]
+println(a) # Prints: [1,2,3]
+del a[0]   # Delete the list member at index 0. 
+println(a) # Prints: [2, 3]
+del a      # Delete the variable 'a'
+]]></code>
+</example>
+
+<description><![CDATA[
+Remove an item from a list given its index, or delete entire variables. 
+]]></description>
+
+<syntax>
+del <c>a</c>
+</syntax>
+
+<syntax>
+del <c>a[<c>i</c>]</c>
+</syntax>
+
+<parameter>
+<label>a</label>
+<description>list to delete from or variable to delete</description>
+</parameter>
+
+<parameter>
+<label>i</label>
+<description>index of list member to delete</description>
+</parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Keyword</type>
+
+<partof>PYDE</partof>
+
+</root>

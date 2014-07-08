@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>year()</name>
+
+<category>Input</category>
+
+<subcategory>Time &amp; Date</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+def setup():
+    metaBold = loadFont("fonts/Meta-Bold.vlw.gz")
+    textFont(metaBold, 44)
+    noLoop()
+
+def draw():
+    d = day()  # Values from 1 - 31
+    m = month()  # Values from 1 - 12
+    y = year()  # 2003, 2004, 2005, etc.
+    s = str(d)
+    text(s, 10, 28)
+    s = str(m)
+    text(s, 10, 56)
+    s = str(y)
+    text(s, 10, 84)
+]]></code>
+</example>
+
+<description><![CDATA[
+Processing communicates with the clock on your computer. The <b>year()</b> function returns the current year as an integer (2003, 2004, 2005, etc).
+]]></description>
+
+</root>

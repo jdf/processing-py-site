@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>endRaw()</name>
+
+<!-- unsupported_modes>js</unsupported_modes -->
+<!-- js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode -->
+
+<category>Output</category>
+
+<subcategory>Files</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+add_library('pdf')
+
+
+def setup():
+    size(400, 400)
+    beginRaw(PDF, "raw.pdf")
+
+
+def draw():
+    line(pmouseX, pmouseY, mouseX, mouseY)
+
+
+def keyPressed():
+    if key == ' ':
+        endRaw()
+        exit()
+]]></code>
+</example>
+
+<description><![CDATA[
+Complement to <b>beginRaw()</b>; they must always be used together. See the <b>beginRaw()</b> reference for details.
+]]></description>
+
+</root>

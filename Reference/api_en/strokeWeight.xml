@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>strokeWeight()</name>
+
+<category>Shape</category>
+
+<subcategory>Attributes</subcategory>
+
+<type></type>
+
+<example>
+<image>strokeWeight_.png</image>
+<code><![CDATA[
+strokeWeight(1)  # Default
+line(20, 20, 80, 20)
+strokeWeight(4)  # Thicker
+line(20, 40, 80, 40)
+strokeWeight(10)  # Beastly
+line(20, 70, 80, 70)
+]]></code>
+</example>
+
+<description><![CDATA[
+Sets the width of the stroke used for lines, points, and the border around shapes. All widths are set in units of pixels.
+]]></description>
+
+</root>

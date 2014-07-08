@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>float</name>
+
+<category>Data</category>
+
+<subcategory>Primitive</subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+a = 1.5387 # Declare variable 'a' and assign it the value 1.5387
+b = -2.984 # Declare variable 'b' and assign it the value -2.984
+c = a + b  # Declare variable 'c' and assign it the sum of 'a' and 'b'
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+f = 0
+for i in range(100000):
+    f = f + 0.0001  # Bad idea! See below.
+for i in range(100000):
+    # The variable 'f' will work better here, less affected by rounding
+    f = i / 1000.0  # Count by thousandths
+]]></code>
+</example>
+
+<description><![CDATA[
+Data type for floating-point numbers, a number that has a decimal point. 
+<br/>
+Floats are not precise, so avoid adding small values (such as 0.0001), as these  may not always increment because of rounding error. If you want to increment a value in small intervals, use an int, and divide by a float value before using it. (See above example.)<br />
+<br />
+]]></description>
+
+<syntax>
+<c>var</c>
+<c>var</c> = <c>value</c>
+</syntax>
+
+<parameter>
+<label>var</label>
+<description><![CDATA[variable name referencing the float]]></description>
+</parameter>
+
+<parameter>
+<label>value</label>
+<description><![CDATA[any floating-point value]]></description>
+</parameter>
+
+<returns></returns>
+
+<related>
+int
+</related>
+
+<availability>1.0</availability>
+
+<type>Datatype</type>
+
+<partof>PYDE</partof>
+
+</root>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>getName()</name>
+
+<category>XMLElement</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+# The following short XML file called "mammals.xml" is parsed
+# in the code below. It must be in the project's "data" folder.
+#
+# &lt?xml version=&quot1.0&quot?&gt
+# &ltmammals&gt
+#     &ltanimal id=&quot0&quotspecies=&quotCapra hircus&quot&gtGoat&lt/animal&gt
+#     &ltanimal id=&quot1&quotspecies=&quotPanthera pardus&quot&gtLeopard&lt/animal&gt
+#     &ltanimal id=&quot2&quotspecies=&quotEquus zebra&quot&gtZebra&lt/animal&gt
+# &lt/mammals&gt
+def setup():
+    xml = loadXML("mammals.xml")
+    println(xml.getName())
+# Sketch prints:
+# mammals
+]]></code>
+</example>
+
+<description><![CDATA[
+Gets the element's full name, which is returned as a String.
+]]></description>
+
+</root>

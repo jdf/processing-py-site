@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>set()</name>
+
+<category>IntDict</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+IntDict inventory
+def setup(): 
+    size(200, 200)
+    inventory = IntDict()
+    inventory.set("cd",84)
+    inventory.set("tapes",15)
+    inventory.set("records",102)
+    println(inventory)
+    inventory.set("records", 90)# Fewer records
+    inventory.set("mp3s", 2054)# Add MP3s
+    println(inventory)
+]]></code>
+</example>
+
+<description><![CDATA[
+Create a new key/value pair or change the value of one.
+]]></description>
+
+</root>

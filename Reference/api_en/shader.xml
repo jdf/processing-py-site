@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>shader()</name>
+
+<!-- unsupported_modes>js</unsupported_modes -->
+<!-- js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode -->
+
+<category>Rendering</category>
+
+<subcategory>Shaders</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+PShader edges
+PImage img
+        
+def setup(): 
+    size(640, 360, P2D)
+    img = loadImage("leaves.jpg")
+    edges = loadShader("edges.glsl")
+def draw(): 
+    shader(edges)
+    image(img, 0, 0)
+]]></code>
+</example>
+
+<description><![CDATA[
+Applies the shader specified by the parameters. It's compatible with the P2D and P3D renderers, but not with the default renderer.
+]]></description>
+
+</root>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>setFloat()</name>
+
+<category>TableRow</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+def setup():
+    table = Table()
+
+    table.addColumn("number", Table.INT)
+    table.addColumn("mass", Table.FLOAT)
+    table.addColumn("name", Table.STRING)
+
+    row = table.addRow()
+    row.setInt("number", 8)
+    row.setFloat("mass", 15.9994)
+    row.setString("name", "Oxygen")
+
+    println(row.getInt("number"))            # Prints 8
+    println(nf(row.getFloat("mass"), 2, 4))  # Prints 15.9994
+    println(row.getString("name"))           # Prints "Oxygen
+]]></code>
+</example>
+
+<description><![CDATA[
+Stores a float value in the <b>TableRow</b>'s specified column. The column may be specified by either its ID or title.
+]]></description>
+
+</root>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>curveTangent()</name>
+
+<category>Shape</category>
+
+<subcategory>Curves</subcategory>
+
+<type></type>
+
+<example>
+<image>curveTangent_.png</image>
+<code><![CDATA[
+noFill()
+curve(5, 26, 73, 24, 73, 61, 15, 65)
+steps = 6
+for i in range(steps): 
+    t = i / float(steps)
+    x = curvePoint(5, 73, 73, 15, t)
+    y = curvePoint(26, 24, 61, 65, t)
+    #ellipse(x, y, 5, 5)
+    tx = curveTangent(5, 73, 73, 15, t)
+    ty = curveTangent(26, 24, 61, 65, t)
+    a = atan2(ty, tx)
+    a -= PI/2.0
+    line(x, y, cos(a)*8 + x, sin(a)*8 + y)
+]]></code>
+</example>
+
+<description><![CDATA[
+Calculates the tangent of a point on a curve. There's a good definition of <a href="http://en.wikipedia.org/wiki/Tangent" target="new"><em>tangent</em> on Wikipedia</a>.
+]]></description>
+
+</root>

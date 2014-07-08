@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>exp()</name>
+
+<category>Math</category>
+
+<subcategory>Calculation</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+v1 = exp(1.0)
+println(v1)# Prints "2.7182817459106445"
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns Euler's number <i>e</i> (2.71828...) raised to the power of the <b>n</b> parameter.
+]]></description>
+
+</root>

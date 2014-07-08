@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>mousePressed</name>
+
+<category>Input</category>
+
+<subcategory>Mouse</subcategory>
+
+<type>variable</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+# Click within the image to change 
+# the value of the rectangle
+
+def draw(): 
+    if mousePressed == True:
+        fill(0)
+    else:
+        fill(255)
+    rect(25, 25, 50, 50)
+]]></code>
+</example>
+
+<description><![CDATA[
+The <b>mousePressed</b> variable stores whether or not a mouse button is currently being pressed. The value is True when <i>any</i> mouse button is pressed, and False if no button is pressed. The <b>mouseButton</b> variable (see the related reference entry) can be used to determine which button has been pressed.
+]]></description>
+
+</root>

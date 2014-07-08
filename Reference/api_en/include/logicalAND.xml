@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>&amp;&amp; (logical AND)</name>
+
+<category>Control</category>
+
+<subcategory>Logical Operators</subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image>logicalAND.png</image>
+<code><![CDATA[
+for i in range(5, 95, 5):
+    if 35 < i < 60:
+        stroke(0)    # Set color to black
+    else:
+        stroke(255)  # Set color to white
+    line(30, i, 80, i)
+]]></code>
+</example>
+
+<description><![CDATA[
+Compares two expressions and returns <b>True</b> only if both evaluate to <b>True</b>. Returns <b>False</b> if one or both evaluate to <b>False</b>. The following list shows all possible combinations:<br /><br /><tt>True &amp;&amp; False   # Evaluates False because the second is False <br />False &amp;&amp; True   # Evaluates False because the first is False <br />True &amp;&amp; True    # Evaluates True because both are True <br />False &amp;&amp; False  # Evaluates False because both are False</tt>
+]]></description>
+
+<syntax>
+<c>expression1</c> &amp;&amp; <c>expression2</c>
+</syntax>
+
+<parameter>
+<label>expression1</label>
+<description><![CDATA[any valid expression]]></description>
+</parameter>
+
+<parameter>
+<label>expression2</label>
+<description><![CDATA[any valid expression]]></description>
+</parameter>
+
+<returns></returns>
+
+<related>
+or (logical OR)
+not (logical NOT)
+if
+</related>
+
+<availability>1.0</availability>
+
+<type>Operator</type>
+
+<partof>PYDE</partof>
+
+</root>

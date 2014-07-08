@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>sort()</name>
+
+<category>Data</category>
+
+<subcategory>Array Functions</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+float[] a = 3.4, 3.6, 2, 0, 7.1 
+a = sort(a)
+println(a)
+# Prints the contents of the sorted array:
+# [0] 0.0
+# [1] 2.0
+# [2] 3.4
+# [3] 3.6
+# [4] 7.1
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+String[] s = "deer", "elephant", "bear", "aardvark", "cat" 
+s = sort(s)
+println(s)
+# Prints the contents of the sorted array:
+# [0] "aardvark"
+# [1] "bear"
+# [2] "cat"
+# [3] "deer"
+# [4] "elephant"
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+String[] s = "deer", "elephant", "bear", "aardvark", "cat" 
+s = sort(s, 3)
+println(s)
+# Prints the contents of the array, with the first 3 elements sorted:
+# [0] "bear"
+# [1] "deer"
+# [2] "elephant"
+# [3] "aardvark"
+# [4] "cat"
+]]></code>
+</example>
+
+<description><![CDATA[
+Sorts an array of numbers from smallest to largest, or puts an array of words in alphabetical order. The original array is not modified; a re-ordered array is returned. The <b>count</b> parameter states the number of elements to sort. For example, if there are 12 elements in an array and <b>count</b> is set to 5, only the first 5 elements in the array will be sorted. <!--As of release 0126, the alphabetical ordering is case insensitive.-->
+]]></description>
+
+</root>

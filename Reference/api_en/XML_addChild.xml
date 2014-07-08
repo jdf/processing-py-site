@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>addChild()</name>
+
+<category>XMLElement</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+# The following short XML file called "mammals.xml" is parsed
+# in the code below. It must be in the project's "data" folder.
+#
+# &lt?xml version=&quot1.0&quot?&gt
+# &ltmammals&gt
+#     &ltanimal id=&quot0&quotspecies=&quotCapra hircus&quot&gtGoat&lt/animal&gt
+#     &ltanimal id=&quot1&quotspecies=&quotPanthera pardus&quot&gtLeopard&lt/animal&gt
+#     &ltanimal id=&quot2&quotspecies=&quotEquus zebra&quot&gtZebra&lt/animal&gt
+# &lt/mammals&gt
+xml = None
+
+def setup():
+    xml = loadXML("mammals.xml")
+    newChild = xml.addChild("animal")
+    newChild.setContent("bloodhound")
+    println(xml)
+# Sketch prints:
+# &ltmammals&gt
+#     &ltanimal id=&quot0&quotspecies=&quotCapra hircus&quot&gtGoat&lt/animal&gt
+#     &ltanimal id=&quot1&quotspecies=&quotPanthera pardus&quot&gtLeopard&lt/animal&gt
+#     &ltanimal id=&quot2&quotspecies=&quotEquus zebra&quot&gtZebra&lt/animal&gt
+# &ltanimal&gtbloodhound&lt/animal&gt
+# &lt/mammals&gt
+]]></code>
+</example>
+
+<description><![CDATA[
+Appends a new child to the element.  The child can be specified with either a String, which will be used as the new tag's name, or as a reference to an existing XML object.<br/>
+<br/>
+A reference to the newly created child is returned as an XML object.
+]]></description>
+
+</root>

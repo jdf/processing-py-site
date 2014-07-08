@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>boolean()</name>
+
+<category>Data</category>
+
+<subcategory>Conversion</subcategory>
+
+<example>
+<image></image>
+<code><![CDATA[
+s = "True"
+b = boolean(s)
+if b:
+    println("The boolean is True")
+else:
+    println("The boolean is False")
+]]></code>
+</example>
+
+<description><![CDATA[
+Converts an int, string, or array to its boolean representation. For int calues, the number 0 evaluates to false and all other numbers evaluate to true. 
+]]></description>
+
+</root>

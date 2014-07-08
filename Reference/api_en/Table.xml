@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>Table</name>
+
+<category>Data</category>
+
+<subcategory>Composite</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+def setup():
+    table = Table()
+
+    table.addColumn("id")
+    table.addColumn("species")
+    table.addColumn("name")
+
+    newRow = table.addRow()
+    newRow.setInt("id", table.lastRowIndex())
+    newRow.setString("species", "Panthera leo")
+    newRow.setString("name", "Lion")
+
+    saveTable(table, "data/new.csv")
+# Sketch saves the following to a file called "new.csv":
+# id,species,name
+# 0,Panthera leo,Lion
+]]></code>
+</example>
+
+<description><![CDATA[
+<b>Table</b> objects store data with multiple rows and columns, much like in a traditional spreadsheet.  Tables can be generated from scratch, dynamically, or using data from an existing file.  Tables can also be output and saved to disk, as in the example above.
+]]></description>
+
+
+<type>class</type>
+
+</root>

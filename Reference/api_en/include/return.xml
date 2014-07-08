@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>return</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+val = 30
+
+def draw():
+    t = timestwo(val)
+    println(t)
+
+# The first 'int' in the function declaration
+# specifies the type of data to be returned.
+def timestwo(dVal):
+    dVal = dVal * 2
+    return dVal  # Returns an int of 60, in this case
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+vals = [10, 20, 30]
+
+def draw():
+    t = timestwo(vals)
+    println(t)
+    noLoop()
+
+def timestwo(dVals):
+    for i in range(len(dVals)):
+        dVals[i] = dVals[i] * 2
+    return dVals  # Returns a list of 3 ints: 20, 40, 60
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+def draw(): 
+    background(204)
+    line(0, 0, width, height)
+    if mousePressed:
+        return# Break out of draw(), skipping the line statement below
+    line(0, height, width, 0)# Executed only if mouse is not pressed
+]]></code>
+</example>
+
+<description><![CDATA[
+Keyword used to indicate the value to return from a function.
+<br/>
+The keyword <b>return</b> may also be used to break out of a function, thus not allowing the program to the remaining statements. (See the third example above.)
+]]></description>
+
+<syntax><![CDATA[
+def <c>function</c>:
+    <c>statements</c>
+    return <c>value</c>
+]]></syntax>
+
+<parameter>
+<label>function</label>
+<description><![CDATA[the function being defined]]></description>
+</parameter>
+
+<parameter>
+<label>statements</label>
+<description><![CDATA[any valid statements]]></description>
+</parameter>
+
+<parameter>
+<label>value</label>
+<description><![CDATA[the value to return]]></description>
+</parameter>
+
+<returns></returns>
+
+<related>
+</related>
+
+<availability>1.0</availability>
+
+<type>Keyword</type>
+
+<partof>PDE</partof>
+
+
+</root>

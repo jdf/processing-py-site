@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>True</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+rect(30, 20, 50, 50)
+b = True
+if b: # If b is True
+    line(20, 10, 90, 80) # This line is drawn
+else:
+    line(20, 80, 90, 10) # This line is not drawn
+]]></code>
+</example>
+
+<description><![CDATA[
+Reserved word representing the logical value "True". 
+]]></description>
+
+<syntax></syntax>
+
+<returns></returns>
+
+<related>
+False
+Boolean
+</related>
+
+<availability>1.0</availability>
+
+<type>Keyword</type>
+
+<partof>PYDE</partof>
+
+
+</root>

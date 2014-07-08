@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>: (Colon)</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage></usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+def setup():  # A colon declares the start of an indented block.
+    size(150, 150)
+
+# Any statements followed by indendent lines should end with a colon.
+def draw():             # Here
+    for i in range(5):  # And here
+        line(i * 20, 0, i * 20, height)
+    background(0)
+]]></code>
+</example>
+
+<description><![CDATA[
+A colon declares the start of an indented block. Any statement followed by an indendent block of code should end with a colon. 
+]]></description>
+
+<syntax>
+
+</syntax>
+
+<parameter>
+<label></label>
+<description></description>
+</parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof>PYDE</partof>
+
+
+
+
+
+
+
+
+</root>

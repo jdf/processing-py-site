@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>keyArray()</name>
+
+<category>StringDict</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+StringDict inventory
+def setup(): 
+    size(200, 200)
+    inventory = StringDict()
+    inventory.set("coffee","black")
+    inventory.set("flour","white")
+    inventory.set("tea","green")
+    println(inventory)
+    String[] theKeys = inventory.keyArray()
+    println(theKeys)
+]]></code>
+</example>
+
+<description><![CDATA[
+Return a copy of the internal keys array.
+]]></description>
+
+</root>

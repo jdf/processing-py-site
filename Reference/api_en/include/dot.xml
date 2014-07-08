@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>. (dot)</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+class HLine(object):  # Class definition
+
+    def __init__(self, y, s):  # Object constructor
+        self.ypos = y
+        self.speed = s
+
+    def update(self):  # Update method
+        self.ypos += self.speed
+        if self.ypos > width:
+            self.ypos = 0
+        line(0, self.ypos, width, self.ypos)
+
+# Declare and construct two objects (h1 and h2) of the class HLine(object):
+h1 = HLine(20, 1.0)
+h2 = HLine(50, 5.0)
+def setup():
+    size(200, 200)
+
+def draw():
+    if (h2.speed > 1.0):  # Dot syntax can be used to get a value
+        h2.speed -= 0.01  # or set a value.
+    h1.update()  # Calls the h1 object's update() function
+    h2.update()  # Calls the h2 object's update() function
+]]></code>
+</example>
+
+<description><![CDATA[
+Provides access to an object's methods and data. An object is one instance of a class and may contain both methods (object functions) and data (object variables and constants), as specified in the class definition. The dot operator directs the program to the information encapsulated within an object.
+]]></description>
+
+<syntax>
+<c>object</c>.<c>method()</c>
+<c>object</c>.<c>data</c>
+</syntax>
+
+<parameter>
+<label>object</label>
+<description><![CDATA[the object to be accessed]]></description>
+</parameter>
+
+<parameter>
+<label>method()</label>
+<description><![CDATA[a method encapsulated in the object]]></description>
+</parameter>
+
+<parameter>
+<label>data</label>
+<description><![CDATA[a variable or constant encapsulated in the object]]></description>
+</parameter>
+
+<returns></returns>
+
+<related>
+Object
+</related>
+
+<availability>1.0</availability>
+
+<type>Operator</type>
+
+<partof>PYDE</partof>
+
+</root>

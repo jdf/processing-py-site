@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>append()</name>
+
+<category>FloatList</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+FloatList inventory
+def setup(): 
+    size(200, 200)
+    inventory = FloatList()
+    inventory.append(108.6)
+    inventory.append(5.8)
+    inventory.append(8.2)
+    inventory.append(3.14)
+    println(inventory)
+]]></code>
+</example>
+
+<description><![CDATA[
+Add a new entry to the list.
+]]></description>
+
+</root>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>set()</name>
+
+<category>StringList</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+StringList inventory
+def setup(): 
+    size(200, 200)
+    inventory = StringList()
+    inventory.append("coffee")
+    inventory.append("flour")
+    inventory.append("tea")
+    println(inventory)
+    inventory.set(1, "barley")
+    println(inventory)
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+StringList inventory
+def setup(): 
+    size(200, 200)
+    inventory = StringList()
+    inventory.append("coffee")
+    inventory.append("flour")
+    inventory.append("tea")
+    println(inventory)
+    inventory.set(4, "honey")
+    println(inventory)
+]]></code>
+</example>
+
+<description><![CDATA[
+Set the entry at a particular index. If the index is past the length of the list, it'll expand the list to accommodate, and fill the intermediate entries with "null".
+]]></description>
+
+</root>

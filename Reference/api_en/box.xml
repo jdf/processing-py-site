@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>box()</name>
+
+<category>Shape</category>
+
+<subcategory>3D Primitives</subcategory>
+
+<type></type>
+
+<example>
+<image>box_0.png</image>
+<code><![CDATA[
+size(100, 100, P3D)
+translate(58, 48, 0)
+rotateY(0.5)
+noFill()
+box(40)
+]]></code>
+</example>
+
+<example>
+<image>box_1.png</image>
+<code><![CDATA[
+size(100, 100, P3D)
+translate(58, 48, 0)
+rotateY(0.5)
+noFill()
+box(40, 20, 50)
+]]></code>
+</example>
+
+<description><![CDATA[
+A box is an extruded rectangle. A box with equal dimensions on all sides is a cube.
+]]></description>
+
+</root>

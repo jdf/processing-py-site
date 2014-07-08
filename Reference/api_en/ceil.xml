@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>ceil()</name>
+
+<category>Math</category>
+
+<subcategory>Calculation</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+x = 8.22
+a = ceil(x) # Sets 'a' to 9
+]]></code>
+</example>
+
+<description><![CDATA[
+Calculates the closest int value that is greater than or equal to the value of the parameter. For example, <b>ceil(9.03)</b> returns the value 10.
+]]></description>
+
+</root>

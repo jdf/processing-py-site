@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>frameRate</name>
+
+<category>Environment</category>
+
+<subcategory></subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+def setup(): 
+    frameRate(30)
+
+def draw(): 
+    line(0, 0, width, height)
+    println(frameRate)
+]]></code>
+</example>
+
+<description><![CDATA[
+The system variable <b>frameRate</b> contains the approximate frame rate of a running sketch. The initial value is 10 fps and is updated with each frame. The value is averaged over several frames, and so will only be accurate after the draw function has run 5-10 times.
+]]></description>
+
+</root>

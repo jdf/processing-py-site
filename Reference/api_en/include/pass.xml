@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>pass</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage></usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+def setup():
+    stroke(0, 0, 255)
+
+def draw():
+    rect(25, 25, 50, 50)
+
+# This function does nothing.
+def doNothing():
+    pass
+]]></code>
+</example>
+
+<description><![CDATA[
+When pass is executed, nothing happens. Pass is useful when a statement is required syntactically -- as in the above function doNothing. 
+]]></description>
+
+<syntax>
+
+</syntax>
+
+<parameter>
+<label></label>
+<description></description>
+</parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Keyword</type>
+
+<partof>PYDE</partof>
+
+</root>

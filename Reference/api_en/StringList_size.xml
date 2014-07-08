@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>size()</name>
+
+<category>StringList</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+StringList inventory
+def setup(): 
+    size(200, 200)
+    inventory = StringList()
+    inventory.append("coffee")
+    inventory.append("flour")
+    inventory.append("tea")
+    println(inventory)
+    s = inventory.size()
+    println(s)
+]]></code>
+</example>
+
+<description><![CDATA[
+Get the length of the list.
+]]></description>
+
+</root>

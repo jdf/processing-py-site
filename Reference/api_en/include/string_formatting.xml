@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>String Formatting</name>
+
+<category>Data</category>
+
+<subcategory>String Methods</subcategory>
+
+<usage></usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+age = 7
+animal = 'turtle'
+weight = 317.5
+# Format string to include animal, age, and weight to one digit after the decimal point.
+s = ("This %s is %i years old, and weighs %.1f pounds." % (animal, age, weight))
+println(s)
+]]></code>
+</example>
+
+<description><![CDATA[
+Substitute variables in a string using the string format operator % as shown above. Symbols that can be used with % include: 
+%i for integers, %f for floats and  %s for strings. 
+]]></description>
+
+<syntax>
+</syntax>
+
+<parameter>
+<label></label>
+<description></description>
+</parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof>PYDE</partof>
+
+
+
+
+
+
+
+
+</root>

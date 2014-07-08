@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>getContent()</name>
+
+<category>XMLElement</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+# The following short XML file called "positions.xml" is parsed
+# in the code below. It must be in the project's "data" folder.
+#
+# &lt?xml version=&quot1.0&quot?&gt
+# &ltpositions&gt
+#     &ltposition id="0"&gt128&lt/position&gt
+#     &ltposition id="1"&gt256&lt/position&gt
+#     &ltposition id="2"&gt512&lt/position&gt
+# &lt/positions&gt
+def setup(): 
+    xml = loadXML("positions.xml")
+    firstChild = xml.getChild("position")
+    println(firstChild.getIntContent())
+# Sketch prints:
+# 128
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns the content of an element as an int. If there is no such content, either <b>null</b> or the provided default value is returned.
+]]></description>
+
+</root>

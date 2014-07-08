@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>List Index</name>
+
+<category>Data</category>
+
+<subcategory>List Methods</subcategory>
+
+<usage></usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+a = ['a', 'b', 'c']
+println(a.index('b')) # Prints 1
+]]></code>
+</example>
+
+<description><![CDATA[
+Return the index in the list of the first item whose value is x. It is an error if there is no such item.
+]]></description>
+
+<syntax>
+<c>a</c>.index(<c>x</c>)
+</syntax>
+
+<parameter>
+<label>a</label>
+<description>the list to search through</description>
+</parameter>
+
+<parameter>
+<label>x</label>
+<description>the item to search for</description>
+</parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof>PYDE</partof>
+
+
+
+
+
+
+
+
+</root>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>hasKey()</name>
+
+<category>StringDict</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+StringDict inventory
+def setup(): 
+    size(200, 200)
+    inventory = StringDict()
+    inventory.set("coffee","black")
+    inventory.set("flour","white")
+    inventory.set("tea","green")
+    println(inventory)noLoop()
+    if inventory.hasKey("tea") == True:
+        println("Yes, we have tea.")
+    else:
+        println("Sorry, no tea.")
+    
+]]></code>
+</example>
+
+<description><![CDATA[
+Check if a key is a part of the data structure.
+]]></description>
+
+</root>

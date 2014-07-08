@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>Conditional Expressions</name>
+
+<category>Control</category>
+
+<subcategory>Conditionals</subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+s = 0
+for i in range(5, 100, 5):
+    s = 0 if i < 50 else 255
+    stroke(s)
+    line(30, i, 80, i)
+]]></code>
+</example>
+
+<description><![CDATA[
+A shortcut for writing an <b>if</b> and <b>else</b> structure. Conditional expressions in Python take the form <b>expression1 if test else expression2</b>. If the <b>test</b> evaluates to <b>True</b>, <b>expression1</b> is evaluated and returned. If the <b>condition</b> evaluates to <b>False</b>, <b>expression2</b> is evaluated and returned.
+<br /><br />
+The following conditional expression: <br />
+<pre>result = expression1 if test else expression2</pre><br />
+is equivalent to this structure: <br />
+<pre>if test:<br />
+  result = expression1 <br />
+ else: <br />
+  result = expression2 <br />
+</pre>
+]]></description>
+
+<syntax>
+<c>expression1</c> if <c>test</c> else <c>expression2</c>
+</syntax>
+
+<parameter>
+<label>test</label>
+<description><![CDATA[any valid expression which evaluates to True or False]]></description>
+</parameter>
+
+<parameter>
+<label>expression1</label>
+<description><![CDATA[any valid expression]]></description>
+</parameter>
+
+<parameter>
+<label>expression2</label>
+<description><![CDATA[any valid expression]]></description>
+</parameter>
+
+<returns>Variable, dependent on the datatype of the expressions</returns>
+
+<related>
+if
+else
+</related>
+
+<availability>1.0</availability>
+
+<type>Structure</type>
+
+<partof>PYDE</partof>
+
+
+<level>Extended</level>
+
+
+
+
+
+</root>

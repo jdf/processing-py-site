@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>bezierDetail()</name>
+
+<category>Shape</category>
+
+<subcategory>Curves</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+# Move the mouse left and right to see the detail change
+
+def setup(): 
+    size(100, 100, P3D)
+    noFill()
+
+def draw(): 
+    background(204)
+    d = int(map(mouseX, 0, 100, 1, 20))
+    bezierDetail(d)
+    bezier(85, 20, 10, 10, 90, 90, 15, 80)
+]]></code>
+</example>
+
+<description><![CDATA[
+Sets the resolution at which Beziers display. The default value is 20. This function is only useful when using the <b>P3D</b> renderer; the default <b>P2D</b> renderer does not use this information.
+]]></description>
+
+</root>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>endRecord()</name>
+
+<!-- unsupported_modes>js</unsupported_modes -->
+<!-- js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode -->
+
+<category>Output</category>
+
+<subcategory>Files</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+add_library('pdf')
+
+
+def setup():
+    size(400, 400)
+    beginRecord(PDF, "everything.pdf")
+
+
+def draw():
+    ellipse(mouseX, mouseY, 10, 10)
+
+
+def mousePressed():
+    endRecord()
+    exit()
+]]></code>
+</example>
+
+<description><![CDATA[
+Stops the recording process started by <b>beginRecord()</b> and closes the file.
+]]></description>
+
+</root>

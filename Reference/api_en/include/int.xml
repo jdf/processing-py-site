@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>int</name>
+
+<category>Data</category>
+
+<subcategory>Primitive</subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+a = 23     # Declare variable 'a' and assign it the value 23
+b = -256   # Declare variable 'b' and assign it the value -256
+c = a + b  # Declare variable 'c' and assign it the sum of 'a' and 'b'
+]]></code> 
+</example>
+
+<description><![CDATA[
+Datatype for integers, numbers without a decimal point. Integers can be as large as 9,223,372,036,854,775,807 and as low as -9,223,372,036,854,775,808. They are stored as 32 bits of information.  
+]]></description>
+
+<syntax>
+<c>var</c> = <c>value</c>
+</syntax>
+
+<parameter>
+<label>var</label>
+<description><![CDATA[variable name referencing the value]]></description>
+</parameter>
+
+<parameter>
+<label>value</label>
+<description><![CDATA[any integer value]]></description>
+</parameter>
+
+<returns></returns>
+
+<related>
+float
+</related>
+
+<availability>1.0</availability>
+
+<type>Datatype</type>
+
+<partof>PYDE</partof>
+
+</root>

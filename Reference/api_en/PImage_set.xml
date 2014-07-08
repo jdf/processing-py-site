@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>set()</name>
+
+<category>PImage</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image>PImage_set_.png</image>
+<code><![CDATA[
+tower = None
+
+def setup(): 
+    size(100, 100)
+    tower = loadImage("tower.jpg")
+    black = color(0)
+    tower.set(30, 20, black)
+    tower.set(85, 20, black)
+    tower.set(85, 75, black)
+    tower.set(30, 75, black)
+
+def draw(): 
+    image(tower, 0, 0)
+]]></code>
+</example>
+
+<description><![CDATA[
+Changes the color of any pixel or writes an image directly into the display window.<br />
+<br />
+The <b>x</b> and <b>y</b> parameters specify the pixel to change and the <b>color</b> parameter specifies the color value. The color parameter is affected by the current color mode (the default is RGB values from 0 to 255). When setting an image, the <b>x</b> and <b>y</b> parameters define the coordinates for the upper-left corner of the image, regardless of the current <b>imageMode()</b>.
+<br /><br />
+Setting the color of a single pixel with <b>set(x, y)</b> is easy, but not as fast as putting the data directly into <b>pixels</b>. The equivalent statement to <b>set(x, y, #000000)</b> using <b>pixels</b> is <b>pixels[y*width+x] = #000000</b>. See the reference for <b>pixels</b> for more information.
+]]></description>
+
+</root>

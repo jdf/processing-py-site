@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>IntDict</name>
+
+<category>Data</category>
+
+<subcategory>Composite</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+IntDict inventory
+def setup(): 
+    size(200, 200)
+    inventory = IntDict()
+    inventory.set("cd",84)
+    inventory.set("tapes",15)
+    inventory.set("records",102)
+    println(inventory)
+    noLoop()
+    fill(0)
+    textAlign(CENTER)
+def draw(): 
+    numRecords = inventory.get("records")
+    text(numRecords, width/2, height/2)
+]]></code>
+</example>
+
+<description><![CDATA[
+A simple class to use a String as a lookup for an int value. String "keys" are associated with integer values.
+]]></description>
+
+
+<type>class</type>
+
+</root>

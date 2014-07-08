@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>ellipse()</name>
+
+<category>Shape</category>
+
+<subcategory>2D Primitives</subcategory>
+
+<type></type>
+
+<example>
+<image>ellipse_.png</image>
+<code><![CDATA[
+ellipse(56, 46, 55, 55)
+]]></code>
+</example>
+
+<description><![CDATA[
+Draws an ellipse (oval) to the screen. An ellipse with equal width and height is a circle. By default, the first two parameters set the location, and the third and fourth parameters set the shape's width and height. The origin may be changed with the <b>ellipseMode()</b> function.
+]]></description>
+
+
+</root>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>remove()</name>
+
+<category>FloatList</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+FloatList inventory
+def setup(): 
+    size(200, 200)
+    inventory = FloatList()
+    inventory.append(108.6)
+    inventory.append(5.8)
+    inventory.append(8.2)
+    println(inventory)
+    inventory.remove(1)
+    println(inventory)
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+FloatList inventory
+def setup(): 
+    size(200, 200)
+    inventory = FloatList()
+    inventory.append(108.6)
+    inventory.append(5.8)
+    inventory.append(8.2)
+    println(inventory)
+    val = inventory.remove(1)
+    println("The value " + val + " was removed.")
+]]></code>
+</example>
+
+<description><![CDATA[
+Remove an element from the specified index.
+]]></description>
+
+</root>

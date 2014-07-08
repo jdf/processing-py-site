@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>pop()</name>
+
+<category>Data</category>
+
+<subcategory>List Methods</subcategory>
+
+<usage></usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+a = [1, 2, 3, 4]
+println(a)
+a.pop()    # Removes the last element of the list.
+println(a) # Prints: [1, 2, 3]
+a.pop(1)   # Remove the element at index 1 of the list. 
+println(a) # Prints: [1, 3]
+]]></code>
+</example>
+
+<description><![CDATA[
+pop() removes and returns the last element of the list if no index is given, or a specific element if an index is given. 
+]]></description>
+
+<syntax>
+<c>a</c>.pop()
+<c>a</c>.pop(<c>i</c>)
+</syntax>
+
+
+<parameter>
+<label>a</label>
+<description>List from which to pop.</description>
+</parameter>
+
+<parameter>
+<label>i</label>
+<description>Index of element to pop.</description>
+</parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>PYDE</type>
+
+<partof></partof>
+
+
+
+
+
+
+
+
+</root>

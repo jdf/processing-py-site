@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>setString()</name>
+
+<category>XMLElement</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+# The following short XML file called "mammals.xml" is parsed 
+# in the code below. It must be in the project's "data" folder.
+#
+# &lt?xml version=&quot1.0&quot?&gt
+# &ltmammals&gt
+#     &ltanimal id=&quot0&quotspecies=&quotCapra hircus&quot&gtGoat&lt/animal&gt
+#     &ltanimal id=&quot1&quotspecies=&quotPanthera pardus&quot&gtLeopard&lt/animal&gt
+#     &ltanimal id=&quot2&quotspecies=&quotEquus zebra&quot&gtZebra&lt/animal&gt
+# &lt/mammals&gt
+def setup(): 
+    xml = loadXML("mammals.xml")
+    firstChild = xml.getChild("animal")
+    println(firstChild.getString("species"))
+    firstChild.setString("species", "Jamides zebra")
+    println(firstChild.getString("species"))
+# Sketch prints:
+# Capra hircus
+# Jamides zebra
+]]></code>
+</example>
+
+<description><![CDATA[
+Sets the content of an element's attribute as a String.  The first String specifies the attribute name, while the second specifies the new content.
+]]></description>
+
+</root>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>red()</name>
+
+<category>Color</category>
+
+<subcategory>Creating &amp; Reading</subcategory>
+
+<type></type>
+
+<example>
+<image>red_.png</image>
+<code><![CDATA[
+c = color(255, 204, 0)  # Define color 'c'
+fill(c)  # Use color variable 'c' as fill color
+rect(15, 20, 35, 60)  # Draw left rectangle
+
+redValue = red(c)  # Get red in 'c'
+println(redValue)  # Print "255.0"
+fill(redValue, 0, 0)  # Use 'redValue' in fill
+rect(50, 20, 35, 60)  # Draw right rectangle
+]]></code>
+</example>
+
+<description><![CDATA[
+Extracts the red value from a color, scaled to match current <b>colorMode()</b>. The value is always returned as a float, so be careful not to assign it to an int value.<br />
+<br />
+The <b>red()</b> function is easy to use and understand, but it is slower than a technique called bit shifting. When working in <b>colorMode(RGB, 255)</b>, you can acheive the same results as <b>red()</b> but with greater speed by using the right shift operator (<b>>></b>) with a bit mask. For example, the following two lines of code are equivalent means of getting the red value of the color value <b>c</b>:<br />
+<br />
+<pre>r1 = red(c)  # Simpler, but slower to calculate
+r2 = c >> 16 & 0xFF  # Very fast to calculate</pre>
+]]></description>
+
+</root>

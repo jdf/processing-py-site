@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>String Join</name>
+
+<category>Data</category>
+
+<subcategory>String Methods</subcategory>
+
+<usage></usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+separator = 'and'              # String to separate sequence items by.
+words = ('this ',' that')      # String to join.
+joined = separator.join(words) # Join items in sequence 'words', separated by 'separator'.
+println(joined)
+]]></code>
+</example>
+
+<description><![CDATA[
+join() returns a string where elements of a sequence have been joined by a separator.
+]]></description>
+
+<syntax>
+
+</syntax>
+
+<parameter>
+<label></label>
+<description></description>
+</parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof>PYDE</partof>
+
+</root>

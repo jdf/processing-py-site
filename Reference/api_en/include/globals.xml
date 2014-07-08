@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>Globals</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage></usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+limeGreen = color(152, 250, 144) # Define global variable 'limeGreen'
+
+def drawSquare():
+    fill(limeGreen) # Fill using global variable 'limeGreen'
+    noStroke()
+    rect(0,0,width,height)
+    
+drawSquare()
+]]></code>
+</example>
+
+<description><![CDATA[
+Global variables are declared outside functions and are accessible throughout the program.  
+]]></description>
+
+<syntax>
+</syntax>
+
+<parameter>
+<label></label>
+<description></description>
+</parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof>PYDE</partof>
+
+</root>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>normal()</name>
+
+<category>Lights, Camera</category>
+
+<subcategory>Lights</subcategory>
+
+<type></type>
+
+<example>
+<image>normal_.png</image>
+<code><![CDATA[
+size(100, 100, P3D)
+noStroke()
+background(0)
+pointLight(150, 250, 150, 10, 30, 50)
+beginShape()
+normal(0, 0, 1)
+vertex(20, 20, -10)
+vertex(80, 20, 10)
+vertex(80, 80, -10)
+vertex(20, 80, 10)
+endShape(CLOSE)
+]]></code>
+</example>
+
+<description><![CDATA[
+Sets the current normal vector. Used for drawing three dimensional shapes and surfaces, <b>normal()</b> specifies a vector perpendicular to a shape's surface which, in turn, determines how lighting affects it. Processing attempts to automatically assign normals to shapes, but since that's imperfect, this is a better option when you want more control. This function is identical to <b>glNormal3f()</b> in OpenGL.
+]]></description>
+
+</root>

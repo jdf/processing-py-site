@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>StringList</name>
+
+<category>Data</category>
+
+<subcategory>Composite</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+StringList inventory
+def setup(): 
+    size(200, 200)
+    inventory = StringList()
+    inventory.append("coffee")
+    inventory.append("flour")
+    inventory.append("tea")
+    println(inventory)
+    noLoop()
+    fill(0)
+    textAlign(CENTER)
+def draw(): 
+    item = inventory.get(2)
+    text(item, width/2, height/2)
+]]></code>
+</example>
+
+<description><![CDATA[
+Helper class for a list of Strings. Lists are designed to have some of the 
+features of ArrayLists, but to maintain the simplicity and efficiency of
+working with arrays.<br />
+<br />
+Functions like sort() and shuffle() always act on the list itself. To get 
+a sorted copy, use list.copy().sort().
+]]></description>
+
+
+<type>class</type>
+
+</root>

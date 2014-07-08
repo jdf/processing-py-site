@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>IntList</name>
+
+<category>Data</category>
+
+<subcategory>Composite</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+IntList inventory
+def setup(): 
+    size(200, 200)
+    inventory = IntList()
+    inventory.append(84)
+    inventory.append(15)
+    inventory.append(102)
+    println(inventory)
+    noLoop()
+    fill(0)
+    textAlign(CENTER)
+def draw(): 
+    nums = inventory.get(2)
+    text(nums, width/2, height/2)
+]]></code>
+</example>
+
+<description><![CDATA[
+Helper class for a list of ints. Lists are designed to have some of the 
+features of ArrayLists, but to maintain the simplicity and efficiency of
+working with arrays. <br />
+<br />
+Functions like sort() and shuffle() always act on the list itself. To get 
+a sorted copy, use list.copy().sort().
+]]></description>
+
+
+<type>class</type>
+
+</root>

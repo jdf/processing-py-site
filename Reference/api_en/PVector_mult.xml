@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>mult()</name>
+
+<category>PVector</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+v = None
+
+def setup():
+    noLoop()
+    v = PVector(5, 10, 0)
+
+def draw():
+    ellipse(v.x, v.y, 12, 12)
+    v.mult(6)
+    ellipse(v.x, v.y, 24, 24)
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+v1 = None
+
+def setup(): 
+    noLoop()
+    v1 = PVector(5, 10, 0)
+
+def draw(): 
+    ellipse(v1.x, v1.y, 12, 12)
+    v2 = PVector.mult(v1, 6)
+    ellipse(v2.x, v2.y, 24, 24)
+]]></code>
+</example>
+
+<description><![CDATA[
+Multiplies a vector by a scalar.  The version of the method that uses a float acts directly on the vector upon which it is called (as in the first example above), and therefore has no return value.  The versions that receive both a PVector and a float as arugments are static methods, and each returns a new PVector that is the result of the multiplication operation.  Both examples above produce the same visual output.
+]]></description>
+
+</root>

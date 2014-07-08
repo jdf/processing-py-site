@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>reverse()</name>
+
+<category>Data</category>
+
+<subcategory>Array Functions</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+sa[] = "OH", "NY", "MA", "CA"
+sa = reverse(sa)
+println(sa)
+# Prints updated array contents to the console:
+# [0] "CA"
+# [1] "MA"
+# [2] "NY"
+# [3] "OH"
+]]></code>
+</example>
+
+<description><![CDATA[
+Reverses the order of an array.
+]]></description>
+
+</root>

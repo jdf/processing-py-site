@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>selectInput()</name>
+
+<!-- unsupported_modes>js</unsupported_modes -->
+<!-- js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode -->
+
+<category>Input</category>
+
+<subcategory>Files</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+def setup():
+    selectInput("Select a file to process:", "fileSelected")
+
+def fileSelected(selection):
+    if selection == None:
+        println("Window was closed or the user hit cancel.")
+    else:
+        println("User selected " + selection.getAbsolutePath())
+]]></code>
+</example>
+
+
+<description><![CDATA[
+Opens a platform-specific file chooser dialog to select a file for input. After the selection is made, the selected File will be passed to the 'callback' function. If the dialog is closed or canceled, None will be sent to the function, so that the program is not waiting for additional input. The callback is necessary because of how threading works.
+]]></description>
+
+</root>

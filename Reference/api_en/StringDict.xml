@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>StringDict</name>
+
+<category>Data</category>
+
+<subcategory>Composite</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+StringDict inventory
+def setup(): 
+    size(200, 200)
+    inventory = StringDict()
+    inventory.set("coffee","black")
+    inventory.set("flour","white")
+    inventory.set("tea","green")
+    println(inventory)
+    noLoop()
+    fill(0)
+    textAlign(CENTER)
+def draw(): 
+    s = inventory.get("tea")
+    text(s, width/2, height/2)
+]]></code>
+</example>
+
+<description><![CDATA[
+A simple class to use a String as a lookup for an String value. String "keys" are associated with String values.
+]]></description>
+
+
+<type>class</type>
+
+</root>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>curveTightness()</name>
+
+<category>Shape</category>
+
+<subcategory>Curves</subcategory>
+
+<type></type>
+
+
+<example>
+<image></image>
+<code><![CDATA[
+# Move the mouse left and right to see the curve change
+def setup():
+    size(100, 100)
+    noFill()
+
+
+def draw():
+    background(204)
+    t = map(mouseX, 0, width, -5, 5)
+    curveTightness(t)
+    beginShape()
+    curveVertex(10, 26)
+    curveVertex(10, 26)
+    curveVertex(83, 24)
+    curveVertex(83, 61)
+    curveVertex(25, 65)
+    curveVertex(25, 65)
+    endShape()
+]]></code>
+</example>
+
+<description><![CDATA[
+Modifies the quality of forms created with <b>curve()</b> and <b>curveVertex()</b>. The parameter <b>tightness</b> determines how the curve fits to the vertex points. The value 0.0 is the default value for <b>tightness</b> (this value defines the curves to be Catmull-Rom splines) and the value 1.0 connects all the points with straight lines. Values within the range -5.0 and 5.0 will deform the curves but will leave them recognizable and as values increase in magnitude, they will continue to deform.
+]]></description>
+
+</root>

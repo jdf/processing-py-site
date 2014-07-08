@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>rect()</name>
+
+<category>Shape</category>
+
+<subcategory>2D Primitives</subcategory>
+
+<type></type>
+
+<example>
+<image>rect_0.png</image>
+<code><![CDATA[
+rect(30, 20, 55, 55)
+]]></code>
+</example>
+
+<example>
+<image>rect_1.png</image>
+<code><![CDATA[
+rect(30, 20, 55, 55, 7)
+]]></code>
+</example>
+
+<example>
+<image>rect_2.png</image>
+<code><![CDATA[
+rect(30, 20, 55, 55, 3, 6, 12, 18)
+]]></code>
+</example>
+
+<!-- js_mode><description><![CDATA[
+The "@pjs crisp" directive affects how lines are rendered. You can set it with the "Playback Settings" tool in the "JavaScript" menu.
+]]></description></js_mode -->
+
+<description><![CDATA[
+Draws a rectangle to the screen. A rectangle is a four-sided shape with every angle at ninety degrees. By default, the first two parameters set the location of the upper-left corner, the third sets the width, and the fourth sets the height. The way these parameters are interpreted, however, may be changed with the <b>rectMode()</b> function.<br />
+<br />
+To draw a rounded rectangle, add a fifth parameter, which is used as the radius value for all four corners.<br/>
+<br/>
+To use a different radius value for each corner, include eight parameters. When using eight parameters, the latter four set the radius of the arc at each corner separately, starting with the top-left corner and moving clockwise around the rectangle.
+
+
+]]></description>
+
+</root>

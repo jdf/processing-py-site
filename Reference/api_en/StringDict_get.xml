@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>get()</name>
+
+<category>StringDict</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+StringDict inventory
+def setup(): 
+    size(200, 200)
+    inventory = StringDict()
+    inventory.set("coffee","black")
+    inventory.set("flour","white")
+    inventory.set("tea","green")
+    println(inventory)
+    noLoop()
+    fill(0)
+    textAlign(CENTER)
+def draw(): 
+    teaColor = inventory.get("tea")
+    text(teaColor, width/2, height/2)
+]]></code>
+</example>
+
+<description><![CDATA[
+Return a value for the specified key.
+]]></description>
+
+</root>

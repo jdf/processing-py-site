@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>keyPressed</name>
+
+<category>Input</category>
+
+<subcategory>Keyboard</subcategory>
+
+<type>variable</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+# Click on the image to give it focus,
+# and then press any key.
+# Note: The rectangle in this example may
+# flicker as the operating system may
+# register a long key press as a repetition
+# of key presses.
+
+
+def draw():
+    if keyPressed == True:
+        fill(0)
+    else:
+        fill(255)
+    rect(25, 25, 50, 50)
+
+]></code>
+</example>
+
+<description><![CDATA[
+The Boolean system variable <b>keyPressed</b> is <b>True</b> if any key is pressed and <b>False</b> if no keys are pressed.
+]]></description>
+
+</root>

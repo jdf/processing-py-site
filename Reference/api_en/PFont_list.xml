@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>list()</name>
+
+<category>PFont</category>
+
+<subcategory></subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+size(200, 200)
+fontList = PFont.list()
+println('\n'.join(fontList)) # Print a line-separated list of fonts installed on the System
+]]></code>
+</example>
+
+<description><![CDATA[
+Gets a list of the fonts installed on the system. The data is returned as a String list. This list provides the names of each font for input into <b>createFont()</b>, which allows Processing to dynamically format fonts.
+]]></description>
+
+</root>

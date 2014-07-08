@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>valueArray()</name>
+
+<category>IntDict</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+IntDict inventory
+def setup(): 
+    size(200, 200)
+    inventory = IntDict()
+    inventory.set("cd",84)
+    inventory.set("tapes",15)
+    inventory.set("records",102)
+    println(inventory)
+    int[] amounts = inventory.valueArray()
+    println(amounts)
+]]></code>
+</example>
+
+<description><![CDATA[
+The version of this method without a parameter creates a new 
+array and copies each of the values into it. The version with
+the <b>int[]</b> parameters fills an already-allocated array with the 
+values (more efficient than creating a new array each time). 
+If 'array' is null, or not the same size as the number of values, 
+a new array will be allocated and returned.
+]]></description>
+
+</root>

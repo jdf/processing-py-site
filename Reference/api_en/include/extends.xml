@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>extends</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+DrawDot dd1 = DrawDot(50, 80)
+def setup(): 
+    size(200, 200)
+ 
+def draw(): 
+    dd1.display()
+ 
+class Dot(object): 
+    xpos, ypos
+class DrawDot(object): extends Dot 
+    DrawDot(x, y) 
+        xpos = x
+        ypos = y
+    
+    def display(): 
+        ellipse(xpos, ypos, 200, 200)
+    
+]]></code>
+</example>
+
+<description><![CDATA[
+Allows a new class to <em>inherit</em> the methods and data fields (variables and constants) from an existing class. In code, state the name of the new class, followed by the keyword <b>extends</b> and the name of the <i>base class</i>. The concept of inheritance is one of the fundamental principles of object oriented programming.<br/>
+<br/>
+Note that in Java, and therefore also Processing, you cannot extend a class more than once. Instead, see <b>implements</b>.
+]]></description>
+
+<syntax></syntax>
+
+<returns></returns>
+
+<related>
+class
+super
+implements
+</related>
+
+<availability>1.0</availability>
+
+<type>Keyword</type>
+
+<partof>PDE</partof>
+
+
+</root>

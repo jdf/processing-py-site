@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>mouseDragged()</name>
+
+<category>Input</category>
+
+<subcategory>Mouse</subcategory>
+
+<type>p5function</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+# Drag (click and hold) your mouse across the 
+# image to change the value of the rectangle
+
+value = 0
+
+def draw(): 
+    fill(value)
+    rect(25, 25, 50, 50)
+
+def mouseDragged(): 
+    value = value + 5
+    if value > 255:
+        value = 0
+]]></code>
+</example>
+
+<description><![CDATA[
+The <b>mouseDragged()</b> function is called once every time the mouse moves while a mouse button is pressed. (If a button <i>is not</i> being pressed, <b>mouseMoved()</b> is called instead.)
+<br/><br/>
+Mouse and keyboard events only work when a program has <b>draw()</b>. Without <b>draw()</b>, the code is only run once and then stops listening for events.
+]]></description>
+
+</root>

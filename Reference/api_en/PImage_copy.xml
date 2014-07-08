@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>copy()</name>
+
+<category>PImage</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image>PImage_copy_.png</image>
+<code><![CDATA[
+apples = None
+
+def setup(): 
+    size(100, 100)
+    apples = loadImage("apples.jpg")
+    x = width/2
+    apples.copy(x, 0, x, height, 0, 0, x, height)
+
+def draw(): 
+    image(apples, 0, 0)
+]]></code>
+</example>
+
+<description><![CDATA[
+Copies a region of pixels from one image into another. If the source and destination regions aren't the same size, it will automatically resize source pixels to fit the specified target region. No alpha information is used in the process, however if the source image has an alpha channel set, it will be copied as well.
+<br /><br />
+As of release 0149, this function ignores <b>imageMode()</b>.
+]]></description>
+
+</root>

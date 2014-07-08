@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>height</name>
+
+<category>PShape</category>
+
+<subcategory>field</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+s = None
+
+def setup(): 
+    # The file "bot.svg" must be in the data folder
+    # of the current sketch to load successfully
+    s = loadShape("bot.svg")
+    println(s.height)# Prints "281.0", the height of the shape
+]]></code>
+</example>
+
+<description><![CDATA[
+The height of the PShape document.
+]]></description>
+
+</root>

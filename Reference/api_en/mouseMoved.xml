@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>mouseMoved()</name>
+
+<category>Input</category>
+
+<subcategory>Mouse</subcategory>
+
+<type>p5function</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+# Move the mouse across the image
+# to change its value
+
+value = 0
+
+def draw():
+    fill(value)
+    rect(25, 25, 50, 50)
+
+def mouseMoved():
+    value = value + 5
+    if value > 255:
+        value = 0
+]]></code>
+</example>
+
+<description><![CDATA[
+The <b>mouseMoved()</b> function is called every time the mouse moves and a mouse button is not pressed. (If a button <i>is</i> being pressed, <b>mouseDragged()</b> is called instead.)
+<br/><br/>
+Mouse and keyboard events only work when a program has <b>draw()</b>. Without <b>draw()</b>, the code is only run once and then stops listening for events.
+]]></description>
+
+</root>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>sort()</name>
+
+<category>StringList</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+StringList inventory
+def setup(): 
+    size(200, 200)
+    inventory = StringList()
+    inventory.append("coffee")
+    inventory.append("tea")
+    inventory.append("flour")
+    println(inventory)
+    inventory.sort()
+    println(inventory)
+]]></code>
+</example>
+
+<description><![CDATA[
+Sorts the array in place.
+]]></description>
+
+</root>

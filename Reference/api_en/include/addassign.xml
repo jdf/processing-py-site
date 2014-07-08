@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>+= (add assign)</name>
+
+<category>Math</category>
+
+<subcategory>Operators</subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+a = 50
+b = 23
+a += b  # Sets 'a' to 73
+c = "c"
+c += "d"  # Sets 'c' to "cd"
+d = [1, 2, 3]
+d += [4]  # Sets 'd' to [1,2,3,4]
+]]></code>
+</example>
+
+<description><![CDATA[
+Combines addition with assignment for numbers, concatenation with assignment for strings, and list appending with assignment for lists. The expression <b>a += b</b> is equivalent to <b>a = a + b</b>. 
+]]></description>
+
+<syntax>
+<c>value1</c> += <c>value2</c>
+</syntax>
+
+<parameter>
+<label>value1</label>
+<description><![CDATA[int, float, list,  string]]></description>
+</parameter>
+
+<parameter>
+<label>value2</label>
+<description><![CDATA[any value the same datatype as value1]]></description>
+</parameter>
+
+<returns></returns>
+
+<related>
+= (assign)
++ (add)
+-= (subtract assign)
+</related>
+
+<availability>1.0</availability>
+
+<type>Operator</type>
+
+<partof>PYDE</partof>
+
+</root>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>set()</name>
+
+<category>StringDict</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+StringDict inventory
+def setup(): 
+    size(200, 200)
+    inventory = StringDict()
+    inventory.set("coffee","black")
+    inventory.set("flour","white")
+    inventory.set("tea","green")
+    println(inventory)
+    inventory.set("flour", "unbleached")
+    inventory.set("cinnamon", "brown")
+    println(inventory)
+]]></code>
+</example>
+
+<description><![CDATA[
+Create a new key/value pair or change the value of one.
+]]></description>
+
+</root>

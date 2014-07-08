@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>set()</name>
+
+<category>IntList</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+IntList inventory
+def setup(): 
+    size(200, 200)
+    inventory = IntList()
+    inventory.append(84)
+    inventory.append(15)
+    inventory.append(102)
+    println(inventory)
+    inventory.set(2, 408)
+    println(inventory)
+]]></code>
+</example>
+
+<description><![CDATA[
+Set the entry at a particular index.
+]]></description>
+
+</root>

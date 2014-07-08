@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>pixels</name>
+
+<category>Image</category>
+
+<subcategory>Pixels</subcategory>
+
+<type>variable</type>
+
+<example>
+<image>pixels.png</image>
+<code><![CDATA[
+pink = color(255, 102, 204)
+loadPixels()
+for i in range((width*height/2)-width/2): 
+    pixels[i] = pink
+updatePixels()
+]]></code>
+</example>
+
+<description><![CDATA[
+List containing the values for all the pixels in the display window. These values are of the color datatype. This list is the size of the display window. For example, if the image is 100x100 pixels, there will be 10000 values and if the window is 200x300 pixels, there will be 60000 values. The <b>index</b> value defines the position of a value within the list. For example, the statement <b>color b = pixels[230]</b> will set the variable <b>b</b> to be equal to the value at that location in the list.<br />
+<br />
+Before accessing this list, the data must loaded with the <b>loadPixels()</b> function. After the list data has been modified, the <b>updatePixels()</b> function must be run to update the changes. Without <b>loadPixels()</b>, running the code may (or will in future releases) result in a NullPointerException.
+]]></description>
+
+</root>

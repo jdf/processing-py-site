@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>textWidth()</name>
+
+<category>Typography</category>
+
+<subcategory>Attributes</subcategory>
+
+<type></type>
+
+<example>
+<image>textWidth_.png</image>
+<code><![CDATA[
+textSize(28)
+c = 'T'
+cw = textWidth(c)
+text(c, 0, 40)
+line(cw, 0, cw, 50)
+s = "Tokyo"
+sw = textWidth(s)
+text(s, 0, 85)
+line(sw, 50, sw, 100)
+]]></code>
+</example>
+
+<description><![CDATA[
+Calculates and returns the width of any character or text string.
+]]></description>
+
+</root>

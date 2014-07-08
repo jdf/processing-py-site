@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>dist()</name>
+
+<category>PVector</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+v1 = PVector(10, 20, 0)
+v2 = PVector(60, 80, 0)
+d = v1.dist(v2)
+println(d)  # Prints "78.10249328613281"
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+v1 = PVector(10, 20, 0)
+v2 = PVector(60, 80, 0)
+d = PVector.dist(v1, v2)
+println(d)  # Prints "78.10249328613281"
+]]></code>
+</example>
+
+<description><![CDATA[
+Calculates the Euclidean distance between two points (considering a point as a vector object).
+]]></description>
+
+</root>

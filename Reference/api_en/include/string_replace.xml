@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>String Replace</name>
+
+<category>Data</category>
+
+<subcategory>String Methods</subcategory>
+
+<usage></usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+word = "cake"
+println(word)  # Prints cake
+word = word.replace('c', 'm')
+println(word)  # Prints make
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns a copy of the string with all occurrences of an old substring replaced by a new substring.
+]]></description>
+
+<syntax>
+s.replace(<c>old</c>, <c>new</c>)
+</syntax>
+
+<parameter>
+<label>old</label>
+<description>substring to replace</description>
+</parameter>
+
+<parameter>
+<label>new</label>
+<description>substring to substitute old with</description>
+</parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof>PYDE</partof>
+
+</root>

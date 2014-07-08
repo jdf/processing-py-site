@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>for</name>
+
+<category>Control</category>
+
+<subcategory>Iteration</subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image>for_0.png</image>
+<code><![CDATA[
+for i in range(40):
+    line(30, i, 80, i)
+]]></code>
+</example>
+
+<example>
+<image>for_1.png</image>
+<code><![CDATA[
+for i in range(0, 80, 5):
+    line(30, i, 80, i)
+]]></code>
+</example>
+
+<example>
+<image>for_2.png</image>
+<code><![CDATA[
+for i in range(40, 80, 5):
+    line(30, i, 80, i)
+]]></code>
+</example>
+
+<example>
+<image>for_3.png</image>
+<code><![CDATA[
+# Nested for() loops can be used to
+# generate two-dimensional patterns
+for i in range(30, 80, 5):
+    for j in range(0, 80, 5):
+        point(i, j)
+]]></code>
+</example>
+
+<example>
+<image>blank.png</image>
+<code><![CDATA[
+nums = [5, 4, 3, 2, 1]
+for i in nums:
+    println(i)
+]]></code>
+</example>
+
+<description><![CDATA[
+Controls a sequence of repetitions. In Python, a for loop requires a list function to iterate over. The range() function provides such a list, and accepts arguments in three ways: <br/>
+</br>
+range(10)       # Creates the list [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] <br/>
+range(5, 10)    # Creates the list [5, 6, 7, 8, 9] <br/>
+range(5, 10, 2) # Creates the list [5, 7, 9] <br/>
+</br>
+In the first example above, the <b>for</b> structure is executed 40 times. The for structure loops until it reaches the last element of the list created by range(40): 39.
+<br/>
+A second type of <b>for</b> structure makes it easier to iterate over each element of a list. The last example above shows how it works. First, define a variable name. This variable name will be assigned to each element of the list in turn as the <b>for</b> moves through the entire list. Then specify the list to iterate over after <b>in</b>, in this case <b>nums</b>. 
+]]></description>
+
+<syntax>
+for <c>var</c> in <c>iterable</c>:
+    <c>statements</c>
+
+for <c>var</c> in <c>iterable</c>:
+    <c>statements</c>
+</syntax>
+
+<parameter>
+<label>var</label>
+<description><![CDATA[variable to be assigned to each element of the iterable]]></description>
+</parameter>
+
+<parameter>
+<label>iterable</label>
+<description><![CDATA[iterable object to loop over]]></description>
+</parameter>
+
+<parameter>
+<label>statements</label>
+<description><![CDATA[collection of statements executed each time through the loop]]></description>
+</parameter>
+
+<returns></returns>
+
+<related>
+while
+</related>
+
+<availability>1.0</availability>
+
+<type>Structure</type>
+
+<partof>PYDE</partof>
+
+
+
+
+
+
+
+
+</root>

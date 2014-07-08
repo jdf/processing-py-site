@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>str()</name>
+
+<category>Data</category>
+
+<subcategory>Conversion</subcategory>
+
+<example>
+<image></image>
+<code><![CDATA[
+b = False
+y = -28
+c = 'R'
+f = -32.6
+i = 1024
+sb = str(b)
+sy = str(y)
+sc = str(c)
+sf = str(f)
+si = str(i)
+sb = sb + sy + sc + sf + si
+println(sb)  # Prints 'False-28R-32.61024'
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns the string representation of primitive datatypes and arrays. For example the integer 3 will return the string "3", the float -12.6 will return the string "-12.6", and a Boolean value True will return the string "True".
+]]></description>
+
+</root>

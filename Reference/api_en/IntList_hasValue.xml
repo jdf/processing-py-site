@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>hasValue()</name>
+
+<category>IntList</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+IntList inventory
+def setup(): 
+    size(200, 200)
+    inventory = IntList()
+    inventory.append(84)
+    inventory.append(15)
+    inventory.append(102)
+    println(inventory)
+    if inventory.hasValue(15) == True:
+        println("Yes, we have a '15'")
+    else:
+        println("Sorry, no '15'")
+    
+]]></code>
+</example>
+
+<description><![CDATA[
+Check if a number is a part of the data structure.
+]]></description>
+
+</root>

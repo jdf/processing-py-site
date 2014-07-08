@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name># (comment)</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+# Draws two lines which divides the window
+# into four quadrants
+line(0, 50, 100, 50)  # Draw the horizontal line
+line(50, 0, 50, 100)  # Draw the vertical line
+]]></code>
+</example>
+
+<description><![CDATA[
+Explanatory notes embedded within the code. Comments are used to remind yourself and to inform others about the details of the code. Single-line comments are signified with the pound sign. Comments are ignored by the interpreter.
+]]></description>
+
+</root>

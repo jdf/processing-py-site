@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>not (logical NOT)</name>
+
+<category>Control</category>
+
+<subcategory>Logical Operators</subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image>logicalNOT.png</image>
+<code><![CDATA[
+a = False
+if not a:
+    rect(30, 20, 50, 50)
+a = True
+if a:
+    line(20, 10, 90, 80)
+    line(20, 80, 90, 10)
+]]></code>
+</example>
+
+<description><![CDATA[
+Inverts the Boolean value of an expression. Returns <b>True</b> if the expression is <b>False</b> and returns <b>False</b> if the expression is <b>True</b>. If the expression <b>(a>b)</b> evaluates to True, then <b>not(a>b)</b> evaluates to False. 
+]]></description>
+
+<syntax>
+not<c>expression</c>
+</syntax>
+
+<parameter>
+<label>expression</label>
+<description><![CDATA[any valid expression]]></description>
+</parameter>
+
+<returns></returns>
+
+<related>
+or (logical OR)
+and (logical AND)
+if
+</related>
+
+<availability>1.0</availability>
+
+<type>Operator</type>
+
+<partof>PYDE</partof>
+
+</root>

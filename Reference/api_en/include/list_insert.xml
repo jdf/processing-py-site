@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>List Insert</name>
+
+<category></category>
+
+<subcategory></subcategory>
+
+<usage></usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+a = ['b', 'c', 'd']
+println(a) # Prints ['b', 'c', 'd']
+a.insert(0, 'a')
+println(a) # Prints ['a', 'b', 'c', 'd']
+]]></code>
+</example>
+
+<description><![CDATA[
+Insert an item at a given position.
+]]></description>
+
+<syntax>
+<c>a</c>.insert(<c>i</c>, <c>x</c>)
+</syntax>
+
+<parameter>
+<label>a</label>
+<description>The list to insert into.</description>
+</parameter>
+
+<parameter>
+<label>i</label>
+<description>The index of the element before which to insert.</description>
+</parameter>
+
+<parameter>
+<label>x</label>
+<description>The item to insert.</description>
+</parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof>PYDE</partof>
+
+</root>

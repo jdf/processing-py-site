@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>range()</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage></usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+for i in range(5):
+    println(range(i)) 
+
+'''
+The above prints:
+
+[]
+[0]
+[0, 1]
+[0, 1, 2]
+[0, 1, 2, 3]
+'''
+]]></code>
+</example>
+
+<description><![CDATA[
+Range() generates lists containing arithmetic progressions. It is useful when you need to iterate over a sequence of numbers. The end point is never part of the generated list, i.e. the list generate by range(5) will not include 5. 
+It is possible to let range start at another number, or to specify another increment.
+]]></description>
+
+<syntax>
+range(<c>end</c>)
+range(<c>start</c>, <c>end</c>)
+range(<c>start</c>, <c>end</c>, <c>increment</c>)
+</syntax>
+
+<parameter>
+<label>start</label>
+<description><<![CDATA[
+start point of the generated list
+]]></description>
+</parameter>
+
+<parameter>
+<label>end</label>
+<description><<![CDATA[
+end point of the generated list
+]]></description>
+</parameter>
+
+<parameter>
+<label>increment</label>
+<description><<![CDATA[
+value to increment by 
+]]></description>
+</parameter>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof>PYDE</partof>
+
+
+
+
+
+
+
+
+</root>

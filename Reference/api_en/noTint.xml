@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>noTint()</name>
+
+<category>Image</category>
+
+<subcategory>Loading &amp; Displaying</subcategory>
+
+<type></type>
+
+<example>
+<image>noTint_.png</image>
+<code><![CDATA[
+img = loadImage("laDefense.jpg")
+tint(0, 153, 204)# Tint blue
+image(img, 0, 0)
+noTint()# Disable tint
+image(img, 50, 0)
+]]></code>
+</example>
+
+<description><![CDATA[
+Removes the current fill value for displaying images and reverts to displaying images with their original hues.
+]]></description>
+
+</root>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>println()</name>
+
+<category>Output</category>
+
+<subcategory>Text Area</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+s = "The size is "
+w = 1920
+h = 1080
+println(s)
+println(w, "x", h)
+# This program writes to the console:
+# The size is 
+# 1920 x 1080
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+print("begin- ")
+f = 0.3
+i = 1024
+print("f is " + f + " and i is " + 1024)
+s = " -end"
+println(s)
+# This program writes to the console:
+# "begin- f is 0.3 and i is 1024 -end"
+]]></code>
+</example>
+
+<description><![CDATA[
+The <b>print()</b> function writes to the console area, the black rectangle at the bottom of the Processing environment. This function is often helpful for looking at the data a program is producing. Each call to this function creates a new line of output. More than one parameter can be passed into the function by separating them with commas. Alternatively, individual elements can be separated with quotes ("") and joined with the addition operator (+).<br />
+<br/>
+Before Processing 2.1, <b>println()</b> was used to write array data to the console. Now, use <b>printArray()</b> to write array data to the console.
+]]></description>
+
+</root>

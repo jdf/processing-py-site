@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>or (logical OR)</name>
+
+<category>Control</category>
+
+<subcategory>Logical Operators</subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image>logicalOR.png</image>
+<code><![CDATA[
+for i in range(5, 95, 5):
+    if (i < 35) or (i > 60):
+        line(30, i, 80, i)
+]]></code>
+</example>
+
+<description><![CDATA[
+Compares two expressions and returns <b>True</b> if one or both evaluate to <b>True</b>. Returns <b>False</b> only if both expressions are <b>False</b>. The following list shows all possible combinations:<br /><br /><tt>True or False   # Evaluates True because the first is True <br />False or True   # Evaluates True because the second is True <br />True or True    # Evaluates True because both are True <br />False or False  # Evaluates False because both are False</tt> 
+]]></description>
+
+<syntax>
+<c>expression1</c> or <c>expression2</c>
+</syntax>
+
+<parameter>
+<label>expression1</label>
+<description><![CDATA[any valid expression]]></description>
+</parameter>
+
+<parameter>
+<label>expression2</label>
+<description><![CDATA[any valid expression]]></description>
+</parameter>
+
+<returns></returns>
+
+<related>
+and (logical AND)
+not (logical NOT)
+if
+</related>
+
+<availability>1.0</availability>
+
+<type>Operator</type>
+
+<partof>PYDE</partof>
+
+
+
+
+
+
+
+
+</root>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>string</name>
+
+<category>Data</category>
+
+<subcategory>Composite</subcategory>
+
+<usage></usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+str1 = 'CCCP'
+data = ['C', 'C', 'C', 'P']
+str2 = "".join(data) # Join elements of data into one string.
+println(str1)        # Prints 'CCCP'
+println(str2)        # Prints 'CCCP'
+]]></code>
+</example>
+
+<description><![CDATA[
+A string is a sequence of characters. Python's built-in string classes include methods for examining individual characters, comparing strings, searching strings, extracting
+
+
+Strings are always defined inside either double quotes ("Abc") or single quotes ('ABC
+]]></description>
+
+<syntax>
+
+</syntax>
+
+<parameter>
+<label></label>
+<description></description>
+</parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof></partof>
+
+
+
+
+
+
+
+
+</root>

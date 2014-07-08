@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>atan()</name>
+
+<category>Math</category>
+
+<subcategory>Trigonometry</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+a = PI/3
+t = tan(a)
+at = atan(t)
+# Prints "1.0471976 : 1.7320509 : 1.0471976"
+println("%.7f : %.7f : %.7f" % (a, t, at))
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+a = PI + PI/3.0
+t = tan(a)
+at = atan(t)
+# Prints "4.1887903 : 1.7320513 : 1.0471977"
+println("%.7f : %.7f : %.7f" % (a, t, at))
+]]></code>
+</example>
+
+<description><![CDATA[
+The inverse of <b>tan()</b>, returns the arc tangent of a value. This function expects the values in the range of -Infinity to Infinity (exclusive) and values are returned in the range <b>-PI/2</b> to <b>PI/2 </b>.
+]]></description>
+
+</root>

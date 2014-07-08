@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>Array</name>
+
+<category>Data</category>
+
+<subcategory>Composite</subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+int[] numbers = int[3]
+numbers[0] = 90# Assign value to first element in the array
+numbers[1] = 150# Assign value to second element in the array
+numbers[2] = 30# Assign value to third element in the array
+a = numbers[0] + numbers[1]# Sets variable 'a' to 240
+b = numbers[1] + numbers[2]# Sets variable 'b' to 180 
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+int[] numbers = 90, 150, 30 # Alternate syntax
+a = numbers[0] + numbers[1]# Sets variable 'a' to 240
+b = numbers[1] + numbers[2]# Sets variable 'b' to 180
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+degrees = 360
+float[] cos_vals = float[degrees]
+# Use a for() loop to quickly iterate
+# through all values in an array.
+for i in range(degrees): 
+    cos_vals[i] = cos(TWO_PI/degrees * i)
+]]></code>
+</example>
+
+<description><![CDATA[
+An array is a list of data. It is possible to have an array of any type of data. Each piece of data in an array is identified by an index number representing its position in the array. The first element in the array is <b>[0]</b>, the second element is <b>[1]</b>, and so on. Arrays are similar to objects, so they must be created with the keyword <b>new</b>.<br/>
+<br/>
+Each array has a variable <b>length</b>, which is an integer value for the total number of elements in the array. Note that since index numbering begins at zero (not 1), the last value in an array with a <b>length</b> of 5 should be referenced as <b>array[4]</b> (that is, the <b>length</b> minus 1), not <b>array[5]</b>, which would trigger an error.<br/>
+<br/>
+Another common source of confusion is the difference between using <b>length</b> to get the size of an array and <b>length()</b> to get the size of a String. Notice the presence of parentheses when working with Strings. (<b>array.length</b> is a variable, while <b>String.length()</b> is a method specific to the String class.)
+]]></description>
+
+<syntax>
+<c>datatype</c>[] <c>var</c>
+<c>var</c>[<c>element</c>] = <c>value</c>
+<c>var</c>.length
+</syntax>
+
+<parameter>
+<label>datatype</label>
+<description><![CDATA[any primitive or compound datatype, including user-defined classes]]></description>
+</parameter>
+
+<parameter>
+<label>var</label>
+<description><![CDATA[any valid variable name]]></description>
+</parameter>
+
+<parameter>
+<label>element</label>
+<description><![CDATA[int: must not exceed the length of the array minus 1]]></description>
+</parameter>
+
+<parameter>
+<label>value</label>
+<description><![CDATA[data to assign to the array element; must be the same datatype as the array]]></description>
+</parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Object</type>
+
+<partof>PDE</partof>
+
+
+
+
+
+
+
+
+
+
+</root>
