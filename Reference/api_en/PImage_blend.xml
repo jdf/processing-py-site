@@ -93,4 +93,10 @@ All modes use the alpha information (highest byte) of source image pixels as the
 As of release 0149, this function ignores <b>imageMode()</b>.
 ]]></description>
 
+<related>
+alpha()
+copy()
+</related>
+
+
 </root>

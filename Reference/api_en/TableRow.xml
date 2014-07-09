@@ -37,4 +37,14 @@ A <b>TableRow</b> object represents a single row of data values, stored in colum
 
 <type>class</type>
 
+<related>
+Table
+addRow()
+removeRow()
+clearRows()
+getRow()
+rows()
+</related>
+
+
 </root>

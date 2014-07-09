@@ -26,4 +26,8 @@ def setup():
 Rotates a vector by the specified angle (2D vectors only), while maintaining the same magnitude.
 ]]></description>
 
+<related>
+
+</related>
+
 </root>

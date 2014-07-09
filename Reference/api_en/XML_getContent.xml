@@ -34,4 +34,9 @@ def setup():
 Returns the content of an element. If there is no such content, <b>null</b> is returned.
 ]]></description>
 
+<related>
+getIntContent()
+getFloatContent()
+</related>
+
 </root>

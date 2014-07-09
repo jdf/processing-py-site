@@ -23,4 +23,8 @@ println(v3)# Prints "[ -40.0, 60.0, -400.0 ]"
 Calculates and returns a vector composed of the cross product between two vectors.
 ]]></description>
 
+<related>
+
+</related>
+
 </root>

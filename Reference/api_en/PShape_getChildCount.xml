@@ -25,4 +25,8 @@ def setup():
 Returns the number of children within the PShape.
 ]]></description>
 
+<related>
+
+</related>
+
 </root>

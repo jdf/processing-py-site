@@ -36,4 +36,10 @@ def mousePressed():
 Replaces the current matrix of a shape with the identity matrix. The equivalent function in OpenGL is <b>glLoadIdentity()</b>. 
 ]]></description>
 
+<related>
+rotate()
+scale()
+translate()
+</related>
+
 </root>

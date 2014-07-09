@@ -26,4 +26,8 @@ def setup():
 Calculates the magnitude (length) of the vector and returns the result as a float (this is simply the equation <em>sqrt(x*x + y*y + z*z)</em>.)
 ]]></description>
 
+<related>
+magSq()
+</related>
+
 </root>

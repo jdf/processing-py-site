@@ -32,4 +32,8 @@ println(d)  # Prints "2200.0"
 Calculates the dot product of two vectors.
 ]]></description>
 
+<related>
+
+</related>
+
 </root>

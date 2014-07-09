@@ -32,4 +32,10 @@ Increases or decreases the size of a shape by expanding and contracting vertices
 Using this method with the <b>z</b> parameter requires using the P3D parameter in combination with size. 
 ]]></description>
 
+<related>
+rotate()
+translate()
+resetMatrix()
+</related>
+
 </root>

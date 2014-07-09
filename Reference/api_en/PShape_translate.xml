@@ -32,4 +32,14 @@ Specifies an amount to displace the shape. The <b>x</b> parameter specifies left
 Using this method with the <b>z</b> parameter requires using the P3D parameter in combination with size. 
 ]]></description>
 
+<related>
+popMatrix()
+pushMatrix()
+rotate()
+rotateX()
+rotateY()
+rotateZ()
+scale()
+</related>
+
 </root>

@@ -43,4 +43,8 @@ def setup():
 Trims leading and trailing whitespace, such as spaces and tabs, from string table values. If no column is specified, then the values in all columns and rows are trimmed. A specific column may be referenced by either its ID or title.
 ]]></description>
 
+<related>
+removeTokens()
+</related>
+
 </root>

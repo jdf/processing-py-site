@@ -48,4 +48,10 @@ The <b>PShape</b> object contains a group of methods that can operate on the sha
 
 <type>class</type>
 
+<related>
+loadShape()
+createShape()
+shapeMode()
+</related>
+
 </root>

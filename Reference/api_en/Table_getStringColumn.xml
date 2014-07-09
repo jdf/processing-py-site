@@ -38,4 +38,13 @@ def setup():
 Retrieves all values in the specified column, and returns them as a string list.  The column may be specified by either its ID or title.
 ]]></description>
 
+<related>
+getInt()
+getFloat()
+getString()
+setInt()
+setFloat()
+setString()
+</related>
+
 </root>

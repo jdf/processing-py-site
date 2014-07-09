@@ -29,4 +29,9 @@ def setup():
 Removes a row from a <b>Table</b> object.
 ]]></description>
 
+<related>
+addRow()
+clearRows()
+</related>
+
 </root>

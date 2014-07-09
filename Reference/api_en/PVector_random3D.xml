@@ -28,4 +28,9 @@ def setup():
 Returns a new 3D unit vector with a random direction.  If you pass in <b>this</b> as an argument, it will use the PApplet's random number generator.
 ]]></description>
 
+<related>
+random2D()
+</related>
+
+
 </root>

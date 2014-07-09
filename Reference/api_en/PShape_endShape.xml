@@ -36,4 +36,8 @@ def draw():
 This method is used to complete a custom shape created with the <b>createShape()</b> function. It's always and only used with <b>createShape()</b>. 
 ]]></description>
 
+<related>
+beginShape()
+</related>
+
 </root>

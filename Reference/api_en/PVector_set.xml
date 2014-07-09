@@ -62,4 +62,8 @@ def setup():
 Sets the x, y, and z component of the vector using three separate variables, the data from a PVector, or the values from a float array.
 ]]></description>
 
+<related>
+
+</related>
+
 </root>

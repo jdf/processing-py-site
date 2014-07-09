@@ -30,4 +30,8 @@ def draw():
 Disables the shape's style data and uses Processing's current styles. Styles include attributes such as colors, stroke weight, and stroke joints. 
 ]]></description>
 
+<related>
+endShape()
+</related>
+
 </root>

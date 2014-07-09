@@ -38,4 +38,10 @@ def setup():
 
 <type>class</type>
 
+<related>
+loadTable()
+saveTable()
+TableRow
+</related>
+
 </root>

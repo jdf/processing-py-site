@@ -34,4 +34,8 @@ def setup():
 Returns an attribute value of the element as a float. If the <b>defaultValue</b> parameter is specified and the attribute doesn't exist, then <b>defaultValue</b> is returned. If no <b>defaultValue</b> is specified and the attribute doesn't exist, the value 0.0 is returned.
 ]]></description>
 
+<related>
+
+</related>
+
 </root>

@@ -36,4 +36,12 @@ def setup():
 Returns a reference to the specified <b>TableRow</b>.  The reference can then be used to get and set values of the selected row, as illustrated in the example above.
 ]]></description>
 
+<related>
+rows()
+findRow()
+findRows()
+matchRow()
+matchRows()
+</related>
+
 </root>

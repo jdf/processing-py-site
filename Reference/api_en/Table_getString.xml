@@ -31,4 +31,13 @@ def setup():
 Retrieves a String value from the <b>Table</b>'s specified row and column. The row is specified by its ID, while the column may be specified by either its ID or title.
 ]]></description>
 
+<related>
+getInt()
+getFloat()
+getStringColumn()
+setInt()
+setFloat()
+setString()
+</related>
+
 </root>

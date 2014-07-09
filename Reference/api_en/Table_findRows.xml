@@ -39,4 +39,13 @@ def setup():
 <description><![CDATA[
 Finds the rows in the <b>Table</b> that contain the value provided, and returns references to those rows.  Returns an iterator, so <b>for</b> must be used to iterate through all the rows, as shown in the example above. The column to search may be specified by either its ID or title.
 ]]></description>
+
+<related>
+getRow()
+rows()
+findRow()
+matchRow()
+matchRows()
+</related>
+
 </root>

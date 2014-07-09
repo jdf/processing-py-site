@@ -33,4 +33,7 @@ def draw():
 Sets the default properties for a PGraphics object. It should be called before anything is drawn into the object.
 ]]></description>
 
+<related>
+</related>
+
 </root>

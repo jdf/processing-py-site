@@ -22,4 +22,8 @@ println(v)  # Prints "[ 6.0, 8.0, 0.0 ]"
 Set the magnitude of this vector to the value used for the <b>len</b> parameter.
 ]]></description>
 
+<related>
+
+</related>
+
 </root>

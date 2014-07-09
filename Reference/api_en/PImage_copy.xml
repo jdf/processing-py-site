@@ -31,4 +31,9 @@ Copies a region of pixels from one image into another. If the source and destina
 As of release 0149, this function ignores <b>imageMode()</b>.
 ]]></description>
 
+<related>
+alpha()
+blend()
+</related>
+
 </root>

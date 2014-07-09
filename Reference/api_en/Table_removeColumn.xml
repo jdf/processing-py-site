@@ -41,4 +41,8 @@ def setup():
 Use <b>removeColumn()</b> to remove an existing column from a <b>Table</b> object.  The column to be removed may be identified by either its title (a String) or its index value (an int).   <b>removeColumn(0)</b> would remove the first column, <b>removeColumn(1)</b> would remove the second column, and so on.
 ]]></description>
 
+<related>
+addColumn()
+</related>
+
 </root>

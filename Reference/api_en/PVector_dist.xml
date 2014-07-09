@@ -33,4 +33,8 @@ println(d)  # Prints "78.10249328613281"
 Calculates the Euclidean distance between two points (considering a point as a vector object).
 ]]></description>
 
+<related>
+
+</related>
+
 </root>

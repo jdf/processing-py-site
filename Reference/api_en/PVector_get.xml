@@ -30,4 +30,8 @@ def setup():
 Gets a copy of the vector, returns a PVector object.
 ]]></description>
 
+<related>
+
+</related>
+
 </root>

@@ -33,4 +33,7 @@ def draw():
 Finalizes the rendering of a PGraphics object so that it can be shown on screen.
 ]]></description>
 
+<related>
+</related>
+
 </root>

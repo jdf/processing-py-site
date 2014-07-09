@@ -31,4 +31,13 @@ def setup():
 Stores an integer value in the <b>Table</b>'s specified row and column. The row is specified by its ID, while the column may be specified by either its ID or title.
 ]]></description>
 
+<related>
+setFloat()
+setString()
+getInt()
+getFloat()
+getString()
+getStringColumn()
+</related>
+
 </root>

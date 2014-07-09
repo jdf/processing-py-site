@@ -45,4 +45,10 @@ Only files encoded as UTF-8 (or plain ASCII) are parsed properly; the encoding p
 
 <type>class</type>
 
+<related>
+loadXML()
+parseXML()
+saveXML()
+</related>
+
 </root>

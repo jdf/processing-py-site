@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
 
-<name>getContent()</name>
+<name>getFloatContent()</name>
 
 <category>XMLElement</category>
 
@@ -33,5 +33,10 @@ def setup():
 <description><![CDATA[
 Returns the content of an element as a float. If there is no such content, either <b>null</b> or the provided default value is returned.
 ]]></description>
+
+<related>
+getContent()
+getIntContent()
+</related>
 
 </root>

@@ -24,4 +24,8 @@ def setup():
 Calculates and returns a new 2D unit vector from the specified angle value (in radians).
 ]]></description>
 
+<related>
+
+</related>
+
 </root>

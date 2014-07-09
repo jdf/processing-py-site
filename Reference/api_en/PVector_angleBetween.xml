@@ -23,4 +23,8 @@ println(degrees(a))  # Prints "10.304845809936523"
 Calculates and returns the angle (in radians) between two vectors.
 ]]></description>
 
+<related>
+
+</related>
+
 </root>

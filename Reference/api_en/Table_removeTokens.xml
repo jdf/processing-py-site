@@ -44,4 +44,8 @@ Removes any of the specified characters (or "tokens").  The example above remove
 If no column is specified, then the values in all columns and rows are processed.  A specific column may be referenced by either its ID or title.
 ]]></description>
 
+<related>
+trim()
+</related>
+
 </root>
