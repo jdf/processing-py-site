@@ -31,6 +31,15 @@ def draw():
 List containing the values for all the pixels in the image. These values are of the color datatype. This list is the size of the image, meaning if the image is 100 x 100 pixels, there will be 10000 values and if the window is 200 x 300 pixels, there will be 60000 values. The <b>index</b> value defines the position of a value within the list. For example, the statement <b>color b = img.pixels[230]</b> will set the variable <b>b</b> equal to the value at that location in the list. Before accessing this list, the data must loaded with the <b>loadPixels()</b> method. After the list data has been modified, the <b>updatePixels()</b> method must be run to update the changes. Without <b>loadPixels()</b>, running the code may (or will in future releases) result in a NullPointerException.
 ]]></description>
 
+<syntax>
+<c>pimg</c>.pixels
+</syntax>
+
+<parameter>
+<label>pimg</label>
+<description>PImage: any object of type PImage</description>
+</parameter>
+
 <related>
 
 </related>

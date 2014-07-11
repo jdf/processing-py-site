@@ -40,6 +40,9 @@ println(s)
 The <b>print()</b> function writes to the console area, the black rectangle at the bottom of the Processing environment. This function is often helpful for looking at the data a program is producing. Each call to this function creates a new line of output. More than one parameter can be passed into the function by separating them with commas. Alternatively, individual elements can be separated with quotes ("") and joined with the addition operator (+).<br />
 <br/>
 Before Processing 2.1, <b>println()</b> was used to write array data to the console. Now, use <b>printArray()</b> to write array data to the console.
+<br />
+<br />
+NOTE: Unlike Java, Python cannot concatenate data of different types. This means that println(3 + " blind mice") will give an error; instead, write println(str(3) + " blind mice").
 ]]></description>
 
 <related>
