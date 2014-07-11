@@ -23,4 +23,8 @@ else:
 Confirms if a Processing program is "focused," meaning that it is active and will accept mouse or keyboard input. This variable is "True" if it is focused and "False" if not.
 ]]></description>
 
+<related>
+
+</related>
+
 </root>

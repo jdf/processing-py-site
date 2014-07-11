@@ -27,4 +27,10 @@ line(sw, 50, sw, 100)
 Calculates and returns the width of any character or text string.
 ]]></description>
 
+<related>
+loadFont()
+text()
+textFont()
+</related>
+
 </root>

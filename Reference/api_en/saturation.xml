@@ -26,4 +26,13 @@ rect(50, 20, 35, 60)
 Extracts the saturation value from a color.
 ]]></description>
 
+<related>
+red()
+green()
+blue()
+alpha()
+hue()
+brightness()
+</related>
+
 </root>

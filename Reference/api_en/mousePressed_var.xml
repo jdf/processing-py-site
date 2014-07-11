@@ -27,4 +27,18 @@ def draw():
 The <b>mousePressed</b> variable stores whether or not a mouse button is currently being pressed. The value is True when <i>any</i> mouse button is pressed, and False if no button is pressed. The <b>mouseButton</b> variable (see the related reference entry) can be used to determine which button has been pressed.
 ]]></description>
 
+<related>
+mouseX
+mouseY
+pmouseX
+pmouseY
+mousePressed()
+mouseReleased()
+mouseClicked()
+mouseMoved()
+mouseDragged()
+mouseButton
+mouseWheel()
+</related>
+
 </root>

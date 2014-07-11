@@ -59,4 +59,10 @@ for i in range(steps + 1):
 Calculates the tangent of a point on a Bezier curve. There is a good definition of <a href="http://en.wikipedia.org/wiki/Tangent" target="new"><em>tangent</em> on Wikipedia</a>.
 ]]></description>
 
+<related>
+bezier()
+bezierVertex()
+curvePoint()
+</related>
+
 </root>

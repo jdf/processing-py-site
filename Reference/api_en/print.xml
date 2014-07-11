@@ -41,4 +41,10 @@ The <b>print()</b> function writes to the console area, the black rectangle at t
 Using <b>print()</b> on an object will output <b>null</b>, a memory location that may look like "@10be08," or the result of the <b>toString()</b> method from the object that's being printed. Advanced users who want more useful output when calling <b>print()</b> on their own classes can add a <b>toString()</b> method to the class that returns a String.
 ]]></description>
 
+<related> 
+println()
+printArray()
+join()
+</related>
+
 </root>

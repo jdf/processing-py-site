@@ -38,7 +38,13 @@ s.replace(<c>old</c>, <c>new</c>)
 
 <returns></returns>
 
-<related></related>
+<related>
+string_split
+string_join
+string_strip
+string_find
+string_formatting
+</related>
 
 <availability>1.0</availability>
 

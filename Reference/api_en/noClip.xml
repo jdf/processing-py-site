@@ -35,4 +35,6 @@ def draw():
 Disables the clipping previously started by the <b>clip()</b> function.
 ]]></description>
 
+<related></related>
+
 </root>

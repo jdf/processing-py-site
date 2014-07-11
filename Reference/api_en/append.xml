@@ -27,4 +27,9 @@ Expands a list by one element and adds data to the new position. You can store a
 <br/>
 ]]></description>
 
+<related>
+shorten()
+expand()
+</related>
+
 </root>

@@ -34,4 +34,10 @@ println("%.6f : %.8f : %.7f" % (a, c, ac))
 The inverse of <b>cos()</b>, returns the arc cosine of a value. This function expects the values in the range of -1 to 1 and values are returned in the range <b>0</b> to <b>PI (3.1415927)</b>.
 ]]></description>
 
+<related>
+cos()
+asin()
+atan()
+</related>
+
 </root>

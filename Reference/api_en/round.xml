@@ -25,4 +25,9 @@ rz = round(z)  # Sets 'rz' to 10
 Calculates the integer closest to the <b>n</b> parameter. For example, <b>round(133.8)</b> returns the value 134.
 ]]></description>
 
+<related>
+floor()
+ceil()
+</related>
+
 </root>

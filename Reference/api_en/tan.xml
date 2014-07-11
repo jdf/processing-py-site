@@ -23,4 +23,10 @@ for i in range(0, 100, 2):
 Calculates the ratio of the sine and cosine of an angle. This function expects the values of the <b>angle</b> parameter to be provided in radians (values from 0 to PI*2). Values are returned in the range <b>infinity</b> to <b>-infinity</b>.
 ]]></description>
 
+<related>
+cos()
+sin()
+radians()
+</related>
+
 </root>

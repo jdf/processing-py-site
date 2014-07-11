@@ -46,4 +46,12 @@ When specifying both a header and the file type, separate the options with comma
 All files loaded and saved by the Processing API use UTF-8 encoding.
 ]]></description>
 
+<related>
+Table
+saveTable()
+loadBytes()
+loadStrings()
+loadXML()
+</related>
+
 </root>

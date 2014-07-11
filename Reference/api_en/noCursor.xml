@@ -24,4 +24,6 @@ def draw():
 Hides the cursor from view. Will not work when running the program in a web browser or in full screen (Present) mode.
 ]]></description>
 
+<related>cursor()</related>
+
 </root>

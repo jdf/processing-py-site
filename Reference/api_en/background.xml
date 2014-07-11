@@ -38,4 +38,11 @@ An image can also be used as the background for a sketch, although the image's w
 It is not possible to use the transparency <b>alpha</b> parameter with background colors on the main drawing surface. It can only be used along with a <b>PGraphics</b> object and <b>createGraphics()</b>.
 ]]></description>
 
+<related>
+stroke()
+fill()
+tint()
+colorMode()
+</related>
+
 </root>

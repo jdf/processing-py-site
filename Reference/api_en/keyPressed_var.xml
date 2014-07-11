@@ -33,4 +33,11 @@ def draw():
 The Boolean system variable <b>keyPressed</b> is <b>True</b> if any key is pressed and <b>False</b> if no keys are pressed.
 ]]></description>
 
+<related>
+key
+keyCode
+keyPressed
+keyReleased()
+</related>
+
 </root>

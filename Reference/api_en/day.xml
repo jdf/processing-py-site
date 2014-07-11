@@ -33,4 +33,13 @@ def draw():
 Processing communicates with the clock on your computer. The <b>day()</b> function returns the current day as a value from 1 - 31.
 ]]></description>
 
+<related>
+millis()
+second()
+minute()
+hour()
+month()
+year()
+</related>
+
 </root>

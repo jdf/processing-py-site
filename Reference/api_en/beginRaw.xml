@@ -42,4 +42,8 @@ Using <b>hint(ENABLE_DEPTH_SORT)</b> can improve the appearance of 3D geometry d
 See examples in the reference for the <b>PDF</b> and <b>DXF</b> libraries for more information.
 ]]></description>
 
+<related>
+endRaw()
+</related>
+
 </root>

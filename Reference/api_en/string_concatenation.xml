@@ -34,7 +34,14 @@ Concatenate strings with the attention operator +. Multiplying a string by an in
 
 <returns></returns>
 
-<related></related>
+<related>
+string_formatting
+string_find
+string_strip
+string_join
+string_split
+string_replace
+</related>
 
 <availability>1.0</availability>
 

@@ -20,4 +20,9 @@ a = ceil(x) # Sets 'a' to 9
 Calculates the closest int value that is greater than or equal to the value of the parameter. For example, <b>ceil(9.03)</b> returns the value 10.
 ]]></description>
 
+<related>
+floor()
+round()
+</related>
+
 </root>

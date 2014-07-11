@@ -30,4 +30,14 @@ The <b>green()</b> function is easy to use and understand, but it is slower than
 r2 = c >> 8 & 0xFF  # Very fast to calculate</pre>
 ]]></description>
 
+<related>
+red()
+blue()
+alpha()
+hue()
+saturation()
+brightness()
+>> (right shift)
+</related>
+
 </root>

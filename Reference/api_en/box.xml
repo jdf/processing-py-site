@@ -34,4 +34,8 @@ box(40, 20, 50)
 A box is an extruded rectangle. A box with equal dimensions on all sides is a cube.
 ]]></description>
 
+<related>
+sphere()
+</related>
+
 </root>

@@ -50,4 +50,9 @@ The value for the gray parameter must be less than or equal to the current maxim
 The <b>tint()</b> function is also used to control the coloring of textures in 3D. 
 ]]></description>
 
+<related>
+noTint()
+image()
+</related>
+
 </root>

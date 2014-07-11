@@ -36,4 +36,11 @@ sphere(30)
 Adds a directional light. Directional light comes from one direction: it is stronger when hitting a surface squarely, and weaker if it hits at a gentle angle. After hitting a surface, directional light scatters in all directions. Lights need to be included in the <b>draw()</b> to remain persistent in a looping program. Placing them in the <b>setup()</b> of a looping program will cause them to only have an effect the first time through the loop. The <b>v1</b>, <b>v2</b>, and <b>v3</b> parameters are interpreted as either RGB or HSB values, depending on the current color mode. The <b>nx</b>, <b>ny</b>, and <b>nz</b> parameters specify the direction the light is facing. For example, setting <b>ny</b> to -1 will cause the geometry to be lit from below (since the light would be facing directly upward).
 ]]></description>
 
+<related>
+lights()
+ambientLight()
+pointLight()
+spotLight()
+</related>
+
 </root>

@@ -27,4 +27,11 @@ Sets the current font that will be drawn with the <b>text()</b> function. Fonts 
 With the default and PDF renderers, it's also possible to enable the use of native fonts via the command <b>hint(ENABLE_NATIVE_FONTS)</b>. This will produce vector text in both on-screen sketches and PDF output when the vector data is available, such as when the font is still installed, or the font is created dynamically via the <b>createFont()</b> function (rather than with the "Create Font..." tool).
 ]]></description>
 
+<related>
+createFont()
+loadFont()
+PFont
+text()
+</related>
+
 </root>

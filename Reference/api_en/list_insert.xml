@@ -43,7 +43,12 @@ Insert an item at a given position.
 
 <returns></returns>
 
-<related></related>
+<related>
+list_append
+list_pop
+list_reverse
+list_index
+</related>
 
 <availability>1.0</availability>
 

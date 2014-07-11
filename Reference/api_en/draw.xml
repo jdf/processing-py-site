@@ -58,4 +58,13 @@ It is common to call <b>background()</b> near the beginning of the <b>draw()</b>
 There can only be one <b>draw()</b> function for each sketch, and <b>draw()</b> must exist if you want the code to run continuously, or to process events such as <b>mousePressed()</b>. Sometimes, you might have an empty call to <b>draw()</b> in your program, as shown in the second example above. 
 ]]></description>
 
+<related>
+setup()
+loop()
+noLoop()
+redraw()
+frameRate()
+background()
+</related>
+
 </root>

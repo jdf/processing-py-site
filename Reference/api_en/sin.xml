@@ -23,4 +23,10 @@ for i in range(0, 100, 4):
 Calculates the sine of an angle. This function expects the values of the <b>angle</b> parameter to be provided in radians (values from 0 to 6.28). Values are returned in the range -1 to 1.
 ]]></description>
 
+<related>
+cos()
+tan()
+radians()
+</related>
+
 </root>

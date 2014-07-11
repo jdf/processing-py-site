@@ -37,4 +37,8 @@ def keyPressed():
 Complement to <b>beginRaw()</b>; they must always be used together. See the <b>beginRaw()</b> reference for details.
 ]]></description>
 
+<related>
+beginRaw()
+</related>
+
 </root>

@@ -25,4 +25,9 @@ Copies a region of pixels from the display window to another area of the display
 As of release 0149, this function ignores <b>imageMode()</b>.
 ]]></description>
 
+<related>
+alpha()
+blend()
+</related>
+
 </root>

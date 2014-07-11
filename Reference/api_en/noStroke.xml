@@ -20,4 +20,10 @@ rect(30, 20, 55, 55)
 Disables drawing the stroke (outline). If both <b>noStroke()</b> and <b>noFill()</b> are called, nothing will be drawn to the screen.
 ]]></description>
 
+<related>
+stroke()
+fill()
+noFill()
+</related>
+
 </root>

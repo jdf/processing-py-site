@@ -19,4 +19,9 @@ Coming soon...
 Takes a three-dimensional X, Y, Z position and returns the Z value for where it will appear on a (two-dimensional) screen.
 ]]></description>
 
+<related>
+screenX()
+screenY()
+</related>
+
 </root>

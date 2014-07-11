@@ -25,4 +25,14 @@ Objects are always rotated around their relative position to the origin, and pos
 Technically, <b>rotate()</b> multiplies the current transformation matrix by a rotation matrix. This function can be further controlled by <b>pushMatrix()</b> and <b>popMatrix()</b>.
 ]]></description>
 
+<related>
+popMatrix()
+pushMatrix()
+rotateX()
+rotateY()
+rotateZ()
+scale()
+radians()
+</related>
+
 </root>

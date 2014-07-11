@@ -36,4 +36,8 @@ def mousePressed():
 Stops the recording process started by <b>beginRecord()</b> and closes the file.
 ]]></description>
 
+<related>
+beginRecord()
+</related>
+
 </root>

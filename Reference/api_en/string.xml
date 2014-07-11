@@ -37,7 +37,14 @@ Strings are always defined inside either double quotes ("Abc") or single quotes 
 
 <returns></returns>
 
-<related></related>
+<related>
+string_formatting
+string_find
+string_strip
+string_join
+string_split
+string_replace
+</related>
 
 <availability>1.0</availability>
 

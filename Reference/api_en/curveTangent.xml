@@ -31,4 +31,11 @@ for i in range(steps):
 Calculates the tangent of a point on a curve. There's a good definition of <a href="http://en.wikipedia.org/wiki/Tangent" target="new"><em>tangent</em> on Wikipedia</a>.
 ]]></description>
 
+<related>
+curve()
+curveVertex()
+curvePoint()
+bezierTangent()
+</related>
+
 </root>

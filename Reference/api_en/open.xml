@@ -56,4 +56,6 @@ This function behaves differently on each platform. On Windows, the parameters a
 For users familiar with Java, this is not quite the same as Runtime.exec(), because the launcher command is prepended. Instead, the <b>exec(String[])</b> function is a shortcut for Runtime.getRuntime.exec(String[]). 
 ]]></description>
 
+<related></related>
+
 </root>

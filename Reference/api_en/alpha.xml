@@ -25,4 +25,13 @@ rect(50, 15, 35, 70)
 Extracts the alpha value from a color.
 ]]></description>
 
+<related>
+red()
+green()
+blue()
+hue()
+saturation()
+brightness()
+</related>
+
 </root>

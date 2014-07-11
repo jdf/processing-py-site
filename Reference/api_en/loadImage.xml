@@ -65,4 +65,11 @@ The <b>extension</b> parameter is used to determine the image type in cases wher
 Depending on the type of error, a <b>PImage</b> object may still be returned, but the width and height of the image will be set to -1. This happens if bad image data is returned or cannot be decoded properly. Sometimes this happens with image URLs that produce a 403 error or that redirect to a password prompt, because <b>loadImage()</b> will attempt to interpret the HTML as image data.
 ]]></description>
 
+<related>
+PImage
+image()
+imageMode()
+background()
+</related>
+
 </root>

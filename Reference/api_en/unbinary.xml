@@ -24,4 +24,10 @@ println(unbinary(s3))  # Prints "4"
 Converts a string representation of a binary number to its equivalent integer value. For example, <b>unbinary("00001000")</b> will return 8.
 ]]></description>
 
+<related>
+binary()
+hex()
+unhex()
+</related>
+
 </root>

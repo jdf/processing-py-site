@@ -31,4 +31,8 @@ def setup():
 Takes an XML object and converts it to a String, using default formatting rules (includes an XML declaration, line breaks, and two spaces for indents).  These are the same formatting rules used by <b>println()</b> when printing an XML object.  This method produces the same results as using <b>format(2)</b>.
 ]]></description>
 
+<related>
+format()
+</related>
+
 </root>

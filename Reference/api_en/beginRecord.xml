@@ -35,4 +35,8 @@ Opens a new file and all subsequent drawing functions are echoed to this file as
 Note that beginRecord() will only pick up any settings that happen after it has been called. For instance, if you call textFont() before beginRecord(), then that font will not be set for the file that you're recording to. 
 ]]></description>
 
+<related>
+endRecord()
+</related>
+
 </root>

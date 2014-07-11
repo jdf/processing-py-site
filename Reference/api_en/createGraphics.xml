@@ -37,4 +37,8 @@ It's important to call any drawing functions between <b>beginDraw()</b> and <b>e
 Unlike the main drawing surface which is completely opaque, surfaces created with <b>createGraphics()</b> can have transparency. This makes it possible to draw into a graphics and maintain the alpha channel. By using <b>save()</b> to write a PNG or TGA file, the transparency of the graphics object will be honored.
 ]]></description>
 
+<related>
+
+</related>
+
 </root>

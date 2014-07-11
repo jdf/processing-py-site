@@ -41,4 +41,9 @@ Be sure to include all three parameters, specifying only the width and height (b
 Advanced users please note that createImage() should be used instead of the syntax <tt>new PImage()</tt>. 
 ]]></description>
 
+<related>
+PImage
+PGraphics
+</related>
+
 </root>

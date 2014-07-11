@@ -22,4 +22,9 @@ def draw():
 Constrains a value to not exceed a maximum and minimum value.
 ]]></description>
 
+<related>
+max()
+min()
+</related>
+
 </root>

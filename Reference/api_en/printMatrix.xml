@@ -32,4 +32,11 @@ printMatrix()
 Prints the current matrix to the Console (the text window at the bottom of Processing).
 ]]></description>
 
+<related>
+pushMatrix()
+popMatrix()
+resetMatrix()
+applyMatrix()
+</related>
+
 </root>

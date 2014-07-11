@@ -36,7 +36,12 @@ Return the index in the list of the first item whose value is x. It is an error 
 
 <returns></returns>
 
-<related></related>
+<related>
+list_insert
+list_pop
+list_reverse
+list_append
+</related>
 
 <availability>1.0</availability>
 

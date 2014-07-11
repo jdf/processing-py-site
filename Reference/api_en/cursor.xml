@@ -28,4 +28,8 @@ Sets the cursor to a predefined symbol or an image, or makes it visible if alrea
 Setting or hiding the cursor does not generally work with "Present" mode (when running full-screen).
 ]]></description>
 
+<related>
+noCursor()
+</related> 
+
 </root>

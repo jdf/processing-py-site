@@ -36,4 +36,8 @@ By default, noise is computed over 4 octaves with each octave contributing exact
 By changing these parameters, the signal created by the <b>noise()</b> function can be adapted to fit very specific needs and characteristics.
 ]]></description>
 
+<related>
+noise()
+</related>
+
 </root>

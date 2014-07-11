@@ -26,4 +26,8 @@ This function is a convenience over the Java approach that requires you to 1) cr
 If the output filename ends with <b>.gz</b>, the output will be automatically GZIP compressed as it is written.
 ]]></description>
 
+<related>
+createInput()
+</related>
+
 </root>

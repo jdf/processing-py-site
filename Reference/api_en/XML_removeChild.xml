@@ -39,4 +39,8 @@ def setup():
 Removes the specified element.  First use <b>getChild()</b> to get a reference to the desired element.  Then pass that reference to <b>removeChild()</b> to delete it.
 ]]></description>
 
+<related>
+
+</related>
+
 </root>

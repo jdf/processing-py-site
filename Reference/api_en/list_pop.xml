@@ -42,7 +42,12 @@ pop() removes and returns the last element of the list if no index is given, or 
 
 <returns></returns>
 
-<related></related>
+<related>
+list_insert
+list_append
+list_reverse
+list_index
+</related>
 
 <availability>1.0</availability>
 

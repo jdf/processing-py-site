@@ -22,4 +22,8 @@ sphere(28)
 A sphere is a hollow ball made from tessellated triangles.
 ]]></description>
 
+<related>
+sphereDetail()
+</related>
+
 </root>

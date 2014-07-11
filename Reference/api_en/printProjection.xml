@@ -25,4 +25,8 @@ printProjection()
 Prints the current projection matrix to the Console (the text window at the bottom of Processing).
 ]]></description>
 
+<related>
+camera()
+</related>
+
 </root>

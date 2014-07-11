@@ -44,7 +44,14 @@ a.find(<c>sub</c>,<c>start</c>,<c>end</c>)
 
 <returns></returns>
 
-<related></related>
+<related>
+string
+string_formatting
+string_find
+string_string
+string_join
+string_replace
+</related>
 
 <availability>1.0</availability>
 

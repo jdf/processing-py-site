@@ -25,4 +25,6 @@ def draw():
 The system variable <b>frameCount</b> contains the number of frames that have been displayed since the program started. Inside <b>setup()</b> the value is 0, after the first iteration of draw it is 1, etc.
 ]]></description>
 
+<related>frameRate()</related>
+
 </root>

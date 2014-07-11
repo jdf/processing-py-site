@@ -37,4 +37,9 @@ def draw():
 Modifies the quality of forms created with <b>curve()</b> and <b>curveVertex()</b>. The parameter <b>tightness</b> determines how the curve fits to the vertex points. The value 0.0 is the default value for <b>tightness</b> (this value defines the curves to be Catmull-Rom splines) and the value 1.0 connects all the points with straight lines. Values within the range -5.0 and 5.0 will deform the curves but will leave them recognizable and as values increase in magnitude, they will continue to deform.
 ]]></description>
 
+<related>
+curve()
+curveVertex()
+</related>
+
 </root>

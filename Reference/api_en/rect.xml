@@ -43,4 +43,9 @@ To use a different radius value for each corner, include eight parameters. When 
 
 ]]></description>
 
+<related>
+rectMode()
+quad()
+</related>
+
 </root>

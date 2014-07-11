@@ -39,4 +39,9 @@ def draw():
 Takes a three-dimensional X, Y, Z position and returns the Y value for where it will appear on a (two-dimensional) screen.
 ]]></description>
 
+<related>
+screenX()
+screenZ()
+</related>
+
 </root>

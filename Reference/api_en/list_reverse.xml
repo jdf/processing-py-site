@@ -31,7 +31,12 @@ Reverse the elements of a list in place.
 
 <returns></returns>
 
-<related></related>
+<related>
+list_insert
+list_pop
+list_append
+list_index
+</related>
 
 <availability>1.0</availability>
 

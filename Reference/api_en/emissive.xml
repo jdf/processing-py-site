@@ -26,4 +26,10 @@ sphere(30)
 Sets the emissive color of the material used for drawing shapes drawn to the screen. Used in combination with <b>ambient()</b>, <b>specular()</b>, and <b>shininess()</b> in setting the material properties of shapes.
 ]]></description>
 
+<related>
+ambient()
+specular()
+shininess()
+</related>
+
 </root>

@@ -39,4 +39,11 @@ The <b>keyReleased()</b> function is called once every time a key is released. T
 Mouse and keyboard events only work when a program has <b>draw()</b>. Without <b>draw()</b>, the code is only run once and then stops listening for events.
 ]]></description>
 
+<related>
+key
+keyCode
+keyPressed
+keyPressed()
+</related>
+
 </root>

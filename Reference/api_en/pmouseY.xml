@@ -26,4 +26,18 @@ The system variable <b>pmouseY</b> always contains the vertical position of the 
 For more detail on how <b>pmouseY</b> is updated inside of mouse events and <b>draw()</b>, see the reference for <b>pmouseX</b>.
 ]]></description>
 
+<related>
+mouseX
+mouseY
+pmouseX
+mousePressed
+mousePressed()
+mouseReleased()
+mouseClicked()
+mouseMoved()
+mouseDragged()
+mouseButton
+mouseWheel()
+</related>
+
 </root>

@@ -31,4 +31,9 @@ Concatenates two lists. For example, concatenating the list [1, 2, 3] and the li
 When using an array of objects, the data returned from the function must be cast to the object array's data type. For example: <em>SomeClass[] items = (SomeClass[]) concat(array1, array2)</em>.
 ]]></description>
 
+<related> 
+splice()
+arrayCopy()
+</related>
+
 </root>

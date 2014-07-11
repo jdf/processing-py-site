@@ -34,4 +34,12 @@ falloff = 1 / (CONSTANT + d * LINEAR + (d*d) * QUADRATIC)<br/>
 Thinking about an ambient light with a falloff can be tricky. If you want a region of your scene to be lit ambiently with one color and another region to be lit ambiently with another color, you could use an ambient light with location and falloff. You can think of it as a point light that doesn't care which direction a surface is facing.
 ]]></description>
 
+<related>
+lights()
+ambientLight()
+pointLight()
+spotLight()
+lightSpecular()
+</related>
+
 </root>

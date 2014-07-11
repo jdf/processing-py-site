@@ -43,4 +43,11 @@ Because of how operating systems handle key repeats, holding down a key may caus
 Mouse and keyboard events only work when a program has <b>draw()</b>. Without <b>draw()</b>, the code is only run once and then stops listening for events.
 ]]></description>
 
+<related>
+key
+keyCode
+keyPressed
+keyReleased()
+</related>
+
 </root>

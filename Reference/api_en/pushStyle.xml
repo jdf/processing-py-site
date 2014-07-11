@@ -45,4 +45,13 @@ The style information controlled by the following functions are included in the 
 fill(), stroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), imageMode(), rectMode(), ellipseMode(), shapeMode(), colorMode(), textAlign(), textFont(), textMode(), textSize(), textLeading(), emissive(), specular(), shininess(), ambient() 
 ]]></description>
 
+<related>
+popMatrix()
+translate()
+rotate()
+rotateX()
+rotateY()
+rotateZ()
+</related>
+
 </root>

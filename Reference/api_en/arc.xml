@@ -42,4 +42,11 @@ Draws an arc to the screen. Arcs are drawn along the outer edge of an ellipse de
 There are three ways to draw an arc; the rendering technique used is defined by the optional seventh paramter. The three options, depicted in the above examples, are PIE, OPEN, and CHORD. The default mode is the OPEN stroke with a PIE fill.
 ]]></description>
 
+<related>
+ellipse()
+ellipseMode()
+radians()
+degrees()
+</related>
+
 </root>

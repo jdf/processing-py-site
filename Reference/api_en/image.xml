@@ -51,4 +51,13 @@ The <b>img</b> parameter specifies the image to display and by default the <b>a<
 The color of an image may be modified with the <b>tint()</b> function. This function will maintain transparency for GIF and PNG images.
 ]]></description>
 
+<related>
+loadImage()
+PImage
+imageMode()
+tint()
+background()
+alpha()
+</related>
+
 </root>

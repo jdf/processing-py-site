@@ -20,4 +20,9 @@ a = floor(x)# Sets 'a' to 2
 Calculates the closest int value that is less than or equal to the value of the parameter.
 ]]></description>
 
+<related>
+ceil()
+round()
+</related>
+
 </root>

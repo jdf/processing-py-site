@@ -36,4 +36,8 @@ def setup():
 Checks whether or not an element has the specified attribute.  The attribute must be specified as a String, and a Boolean is returned.
 ]]></description>
 
+<related>
+
+</related>
+
 </root>

@@ -35,4 +35,12 @@ Alternatively, the file can be saved to any location on the computer by using an
 All files loaded and saved by the Processing API use UTF-8 encoding.
 ]]></description>
 
+<related>
+Table
+saveTable()
+loadBytes()
+loadStrings()
+loadXML()
+</related>
+
 </root>

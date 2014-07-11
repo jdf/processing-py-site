@@ -29,4 +29,9 @@ rect(66, 20, 20, 60)
 Blends two color values together based on the blending mode given as the <b>MODE</b> parameter. The possible modes are described in the reference for the <b>blend()</b> function.
 ]]></description>
 
+<related>
+blend()
+color()
+</related>
+
 </root>

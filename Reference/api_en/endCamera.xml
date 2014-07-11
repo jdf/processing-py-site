@@ -27,4 +27,8 @@ box(45)
 The <b>beginCamera()</b> and <b>endCamera()</b> functions enable advanced customization of the camera space. Please see the reference for <b>beginCamera()</b> for a description of how the functions are used.
 ]]></description>
 
+<related>
+camera
+</related>
+
 </root>

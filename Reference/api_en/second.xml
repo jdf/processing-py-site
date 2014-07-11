@@ -26,4 +26,13 @@ def draw():
 Processing communicates with the clock on your computer. The <b>second()</b> function returns the current second as a value from 0 - 59.
 ]]></description>
 
+<related>
+millis()
+minute()
+hour()
+day()
+month()
+year()
+</related>
+
 </root>

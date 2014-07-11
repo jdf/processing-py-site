@@ -27,4 +27,10 @@ text(lines, 70, 25)
 Sets the spacing between lines of text in units of pixels. This setting will be used in all subsequent calls to the <b>text()</b> function.  Note, however, that the leading is reset by <b>textSize()</b>. For example, if the leading is set to 20 with <b>textLeading(20)</b>, then if <b>textSize(48)</b> is run at a later point, the leading will be reset to the default for the text size of 48.
 ]]></description>
 
+<related>
+loadFont()
+text()
+textFont()
+</related>
+
 </root>

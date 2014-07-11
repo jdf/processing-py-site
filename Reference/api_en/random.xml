@@ -43,4 +43,9 @@ Generates random numbers. Each time the <b>random()</b> function is called, it r
 If two parameters are specified, the function will return a float with a value between the two values. For example, <b>random(-5, 10.2)</b> returns values starting at -5 and up to (but not including) 10.2. To convert a floating-point random number to an integer, use the <b>int()</b> function.
 ]]></description>
 
+<related>
+randomSeed()
+noise()
+</related>
+
 </root>

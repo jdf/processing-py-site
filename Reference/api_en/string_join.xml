@@ -33,7 +33,14 @@ join() returns a string where elements of a sequence have been joined by a separ
 
 <returns></returns>
 
-<related></related>
+<related>
+string_formatting
+string_find
+string_strip
+string_split
+string_slice
+string_replace
+</related>
 
 <availability>1.0</availability>
 

@@ -33,4 +33,10 @@ Takes a String, parses its contents, and returns an XML object.  If the String d
 If your data already exists as an XML file in the data folder, it is simpler to use <b>loadXML()</b>.
 ]]></description>
 
+<related>
+XML
+loadXML()
+saveXML()
+</related>
+
 </root>

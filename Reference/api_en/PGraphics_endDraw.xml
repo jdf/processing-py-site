@@ -33,6 +33,16 @@ def draw():
 Finalizes the rendering of a PGraphics object so that it can be shown on screen.
 ]]></description>
 
+<syntax>
+<c>graphics</c>.endDraw()
+</syntax>
+
+<parameter>
+<label>graphics</label>
+<description>PGraphics: any object of the type PGraphics</description>
+</parameter>
+
+
 <related>
 </related>
 

@@ -27,4 +27,18 @@ You may find that <b>pmouseX</b> and <b>pmouseY</b> have different values when r
 If you want values relative to the previous frame, use <b>pmouseX</b> and <b>pmouseY</b> inside <b>draw()</b>. If you want continuous response, use <b>pmouseX</b> and <b>pmouseY</b> inside the mouse event functions.
 ]]></description>
 
+<related>
+mouseX
+mouseY
+pmouseY
+mousePressed
+mousePressed()
+mouseReleased()
+mouseClicked()
+mouseMoved()
+mouseDragged()
+mouseButton
+mouseWheel()
+</related>
+
 </root>

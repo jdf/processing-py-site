@@ -45,4 +45,11 @@ The <b>size</b> parameter states the font size you want to generate. The <b>smoo
 This function allows Processing to work with the font natively in the default renderer, so the letters are defined by vector geometry and are rendered quickly. In the <b>P2D</b> and <b>P3D</b> renderers, the function sets the project to render the font as a series of small textures. For instance, when using the default renderer, the actual native version of the font will be employed by the sketch, improving drawing quality and performance. With the <b>P2D</b> and <b>P3D</b> renderers, the bitmapped version will be used to improve speed and appearance, but the results are poor when exporting if the sketch does not include the .otf or .ttf file, and the requested font is not available on the machine running the sketch. 
 ]]></description>
 
+<related>
+PFont
+textFont()
+PGraphics
+loadFont()
+</related>
+
 </root>

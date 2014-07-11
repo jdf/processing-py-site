@@ -34,4 +34,16 @@ The value for the gray parameter must be less than or equal to the current maxim
 When drawing in 2D with the default renderer, you may need <b>hint(ENABLE_STROKE_PURE)</b> to improve drawing quality (at the expense of performance). See the hint() documentation for more details.
 ]]></description>
 
+<related>
+noStroke()
+strokeWeight()
+strokeJoin()
+strokeCap()
+fill()
+noFill()
+tint()
+background()
+colorMode()
+</related>
+
 </root>

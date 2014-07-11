@@ -50,4 +50,12 @@ If there are groups (specified by sets of parentheses) in the regular expression
 The syntax can be found in the reference for Java's <a href="http://download.oracle.com/javase/6/docs/api/">Pattern</a> class. For regular expression syntax, read the <a href="http://download.oracle.com/javase/tutorial/essential/regex/">Java Tutorial</a> on the topic.
 ]]></description>
 
+<related>
+matchAll()
+split()
+splitTokens()
+join()
+trim()
+</related>
+
 </root>

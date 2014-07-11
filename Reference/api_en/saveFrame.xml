@@ -50,4 +50,10 @@ Alternatively, the files can be saved to any location on the computer by using a
 All images saved from the main drawing window will be opaque. To save images without a background, use <b>createGraphics()</b>.
 ]]></description>
 
+<related>
+save()
+createGraphics()
+frameCount
+</related>
+
 </root>

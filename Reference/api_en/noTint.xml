@@ -23,4 +23,9 @@ image(img, 50, 0)
 Removes the current fill value for displaying images and reverts to displaying images with their original hues.
 ]]></description>
 
+<related>
+tint()
+image()
+</related>
+
 </root>

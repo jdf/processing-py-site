@@ -25,4 +25,8 @@ rect(0, 65, c, 10)
 Calculates the square root of a number. The square root of a number is always positive, even though there may be a valid negative root. The square root <b>s</b> of number <b>a</b> is such that <b>s*s = a</b>. It is the opposite of squaring.
 ]]></description>
 
+<related>
+sqrt()
+</related>
+
 </root>

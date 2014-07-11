@@ -36,7 +36,14 @@ a.strip(<c>chars</c>)
 
 <returns></returns>
 
-<related></related>
+<related>
+string
+string_formatting
+string_find
+string_join
+string_split
+string_replace
+</related>
 
 <availability>1.0</availability>
 

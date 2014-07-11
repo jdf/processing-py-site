@@ -29,4 +29,18 @@ The <b>mouseWheel()</b> function returns positive values when the mouse wheel is
 Mouse and keyboard events only work when a program has <b>draw()</b>. Without <b>draw()</b>, the code is only run once and then stops listening for events.
 ]]></description>
 
+<related>
+mouseX
+mouseY
+pmouseX
+pmouseY
+mousePressed
+mousePressed()
+mouseReleased()
+mouseClicked()
+mouseMoved()
+mouseDragged()
+mouseButton
+</related>
+
 </root>

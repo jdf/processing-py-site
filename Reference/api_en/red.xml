@@ -31,4 +31,14 @@ The <b>red()</b> function is easy to use and understand, but it is slower than a
 r2 = c >> 16 & 0xFF  # Very fast to calculate</pre>
 ]]></description>
 
+<related>
+green()
+blue()
+alpha()
+hue()
+saturation()
+brightness()
+>> (right shift)
+</related>
+
 </root>

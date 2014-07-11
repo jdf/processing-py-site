@@ -26,4 +26,10 @@ Converts a byte, char, int, or color to a String containing the equivalent binar
 Note that the maximum number of digits is 32, because an <b>int</b> value can only represent up to 32 bits. Specifying more than 32 digits will have no effect.
 ]]></description>
 
+<related>
+unbinary()
+hex()
+unhex()
+</related>
+
 </root>

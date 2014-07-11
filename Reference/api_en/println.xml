@@ -42,4 +42,9 @@ The <b>print()</b> function writes to the console area, the black rectangle at t
 Before Processing 2.1, <b>println()</b> was used to write array data to the console. Now, use <b>printArray()</b> to write array data to the console.
 ]]></description>
 
+<related>
+print()
+printArray()
+</related>
+
 </root>

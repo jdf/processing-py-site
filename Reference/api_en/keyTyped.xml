@@ -42,4 +42,11 @@ The <b>keyTyped()</b> function is called once every time a key is pressed, but a
 Mouse and keyboard events only work when a program has <b>draw()</b>. Without <b>draw()</b>, the code is only run once and then stops listening for events.
 ]]></description>
 
+<related>
+keyPressed
+key
+keyCode
+keyReleased()
+</related>
+
 </root>

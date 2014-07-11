@@ -23,4 +23,10 @@ for i in range(100):
 Sets the seed value for <b>random()</b>. By default, <b>random()</b> produces different results each time the program is run. Set the <b>seed</b> parameter to a constant to return the same pseudo-random numbers each time the software is run.
 ]]></description>
 
+<related>
+random()
+noise()
+noiseSeed()
+</related>
+
 </root>

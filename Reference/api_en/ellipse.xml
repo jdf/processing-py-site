@@ -19,5 +19,9 @@ ellipse(56, 46, 55, 55)
 Draws an ellipse (oval) to the screen. An ellipse with equal width and height is a circle. By default, the first two parameters set the location, and the third and fourth parameters set the shape's width and height. The origin may be changed with the <b>ellipseMode()</b> function.
 ]]></description>
 
+<related>
+ellipseMode()
+arc()
+</related>
 
 </root>

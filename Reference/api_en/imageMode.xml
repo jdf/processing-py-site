@@ -68,4 +68,11 @@ The default mode is <b>imageMode(CORNER)</b>, which interprets the second and th
 The parameter must be written in ALL CAPS because Processing is a case-sensitive language.
 ]]></description>
 
+<related>
+loadImage()
+PImage
+image()
+background()
+</related>
+
 </root>

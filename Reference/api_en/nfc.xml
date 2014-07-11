@@ -26,4 +26,9 @@ Utility function for formatting numbers into strings and placing appropriate com
 For a non-US locale, this will insert periods instead of commas, or whatever is apprioriate for that region.
 ]]></description>
 
+<related>
+nf()
+nfp()
+</related>
+
 </root>

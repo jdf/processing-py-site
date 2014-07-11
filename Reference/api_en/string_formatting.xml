@@ -35,7 +35,14 @@ Substitute variables in a string using the string format operator % as shown abo
 
 <returns></returns>
 
-<related></related>
+<related>
+string
+string_find
+string_strip
+string_join
+string_slice
+string_replace
+</related>
 
 <availability>1.0</availability>
 

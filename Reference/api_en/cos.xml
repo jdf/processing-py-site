@@ -23,4 +23,10 @@ for i in range(25):
 Calculates the cosine of an angle. This function expects the values of the <b>angle</b> parameter to be provided in radians (values from 0 to PI*2). Values are returned in the range -1 to 1.
 ]]></description>
 
+<related>
+sin()
+tan()
+radians()
+</related>
+
 </root>

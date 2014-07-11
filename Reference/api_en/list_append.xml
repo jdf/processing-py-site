@@ -38,7 +38,12 @@ Add an item to the end of the list.
 
 <returns></returns>
 
-<related></related>
+<related>
+list_insert
+list_pop
+list_reverse
+list_index
+</related>
 
 <availability>1.0</availability>
 

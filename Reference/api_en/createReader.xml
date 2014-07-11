@@ -46,4 +46,8 @@ Creates a <b>BufferedReader</b> object that can be used to read files line-by-li
 Starting with Processing release 0134, all files loaded and saved by the Processing API use UTF-8 encoding. In previous releases, the default encoding for your platform was used, which causes problems when files are moved to other platforms.
 ]]></description>
 
+<related>
+createWriter()
+</related>
+
 </root>

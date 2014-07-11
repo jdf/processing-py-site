@@ -34,4 +34,13 @@ The value for the "gray" parameter must be less than or equal to the current max
 To change the color of an image or a texture, use <b>tint()</b>.
 ]]></description>
 
+<related>
+noFill()
+stroke()
+noStroke()
+tint()
+background()
+colorMode()
+</related>
+
 </root>

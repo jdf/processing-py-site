@@ -32,4 +32,10 @@ Note that the near value must be greater than zero (as the point of the frustum 
 Works like glFrustum, except it wipes out the current perspective matrix rather than multiplying itself with it.
 ]]></description>
 
+<related>
+camera()
+endCamera()
+perspective()
+</related>
+
 </root>

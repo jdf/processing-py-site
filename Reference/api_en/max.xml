@@ -29,4 +29,8 @@ d = max(values)  # Sets 'd' to 362
 Determines the largest value in a sequence of numbers, and then returns that value. <b>max()</b> accepts either two or three <b>float</b> or <b>int</b> values as parameters, or an array of any length.
 ]]></description>
 
+<related>
+min()
+</related>
+
 </root>

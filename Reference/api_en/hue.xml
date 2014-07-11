@@ -26,4 +26,13 @@ rect(50, 20, 35, 60)
 Extracts the hue value from a color.
 ]]></description>
 
+<related>
+red()
+green()
+blue()
+alpha()
+saturation()
+brightness()
+</related>
+
 </root>

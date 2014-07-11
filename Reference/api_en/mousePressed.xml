@@ -34,4 +34,18 @@ The <b>mousePressed()</b> function is called once after every time a mouse butto
 Mouse and keyboard events only work when a program has <b>draw()</b>. Without <b>draw()</b>, the code is only run once and then stops listening for events.
 ]]></description>
 
+<related>
+mouseX
+mouseY
+pmouseX
+pmouseY
+mousePressed
+mouseReleased()
+mouseClicked()
+mouseMoved()
+mouseDragged()
+mouseButton
+mouseWheel()
+</related>
+
 </root>

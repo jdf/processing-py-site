@@ -35,5 +35,12 @@ printMatrix()
 Replaces the current matrix with the identity matrix. The equivalent function in OpenGL is <b>glLoadIdentity()</b>. 
 ]]></description>
 
+<related>
+pushMatrix()
+popMatrix()
+applyMatrix()
+printMatrix()
+</related>
+
 
 </root>

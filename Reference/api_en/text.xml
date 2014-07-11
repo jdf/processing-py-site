@@ -48,4 +48,14 @@ The <b>x2</b> and <b>y2</b> parameters define a rectangular area to display with
 Note that Processing now lets you call <b>text()</b> without first specifying a PFont with <b>textFont()</b>. In that case, a generic sans-serif font will be used instead. (See the third example above.)
 ]]></description>
 
+<related>
+textAlign()
+textFont()
+textMode()
+textSize()
+rectMode()
+fill()
+string
+</related>
+
 </root>

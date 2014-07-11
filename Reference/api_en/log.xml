@@ -26,4 +26,6 @@ def log10(x):
 Calculates the natural logarithm (the base-<i>e</i> logarithm) of a number. This function expects the <b>n</b> parameter to be a value greater than 0.0.
 ]]></description>
 
+<related></related>
+
 </root>
