@@ -165,17 +165,17 @@ Increases the light areas. No parameter is used.
 
 <parameter>
 <label>pimg</label>
-<description>PImage: any object of type PImage</description>
+<description><![CDATA[PImage: any object of type PImage]]></description>
 </parameter>
 
 <parameter>
 <label>kind</label>
-<description>int: Either THRESHOLD, GRAY, OPAQUE, INVERT, POSTERIZE, BLUR, ERODE, or DILATE</description>
+<description><![CDATA[int: Either THRESHOLD, GRAY, OPAQUE, INVERT, POSTERIZE, BLUR, ERODE, or DILATE]]></description>
 </parameter>
 
 <parameter>
 <label>param</label>
-<description>float: unique for each, see above</description>
+<description><![CDATA[float: unique for each, see above]]></description>
 </parameter>
 
 <related>

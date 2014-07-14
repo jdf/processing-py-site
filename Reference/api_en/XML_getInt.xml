@@ -34,6 +34,21 @@ def setup():
 Returns an attribute value of the element as an int. If the <b>defaultValue</b> parameter is specified and the attribute doesn't exist, then <b>defaultValue</b> is returned. If no <b>defaultValue</b> is specified and the attribute doesn't exist, the value 0 is returned.
 ]]></description>
 
+<syntax>
+.getInt(<c>name</c>)
+.getInt(<c>name</c>, <c>defaultValue</c>)
+</syntax>
+
+<parameter>
+<label>name</label>
+<description><![CDATA[String: the non-null full name of the attribute]]></description>
+</parameter>
+
+<parameter>
+<label>defaultValue</label>
+<description><![CDATA[int: the default value of the attribute]]></description>
+</parameter>
+
 <related>
 
 </related>

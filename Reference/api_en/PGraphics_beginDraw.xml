@@ -39,7 +39,7 @@ Sets the default properties for a PGraphics object. It should be called before a
 
 <parameter>
 <label>graphics</label>
-<description>PGraphics: any object of the type PGraphics</description>
+<description><![CDATA[PGraphics: any object of the type PGraphics]]></description>
 </parameter>
 
 <related>

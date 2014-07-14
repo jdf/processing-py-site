@@ -22,6 +22,26 @@ println(v)  # Prints "[ 6.0, 8.0, 0.0 ]"
 Set the magnitude of this vector to the value used for the <b>len</b> parameter.
 ]]></description>
 
+<syntax>
+.setMag(<c>len</c>)
+.setMag(<c>target</c>, <c>len</c>)
+</syntax>
+
+<parameter>
+<label>len</label>
+<description><![CDATA[float: the new length for this vector]]></description>
+</parameter>
+
+<parameter>
+<label>target</label>
+<description><![CDATA[PVector: Set to null to create a new vector]]></description>
+</parameter>
+
+<parameter>
+<label>len</label>
+<description><![CDATA[float: the new length for the new vector]]></description>
+</parameter>
+
 <related>
 
 </related>

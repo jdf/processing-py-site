@@ -46,32 +46,32 @@ Getting the color of a single pixel with <b>get(x, y)</b> is easy, but not as fa
 
 <parameter>
 <label>pimg</label>
-<description>PImage: any object of type PImage</description>
+<description><![CDATA[PImage: any object of type PImage]]></description>
 </parameter>
 
 <parameter>
 <label>x</label>
-<description>int: x-coordinate of the pixel</description>
+<description><![CDATA[int: x-coordinate of the pixel]]></description>
 </parameter>
 
 <parameter>
 <label>y</label>
-<description>int: y-coordinate of the pixel</description>
+<description><![CDATA[int: y-coordinate of the pixel]]></description>
 </parameter>
 
 <parameter>
 <label>w</label>
-<description>int: width of pixel rectangle to get</description>
+<description><![CDATA[int: width of pixel rectangle to get]]></description>
 </parameter>
 
 <parameter>
 <label>h</label>
-<description>int: height of pixel rectangle to get</description>
+<description><![CDATA[int: height of pixel rectangle to get]]></description>
 </parameter>
 
 <related>
 set()
-pixels[]
+pixels
 copy()
 </related>
 

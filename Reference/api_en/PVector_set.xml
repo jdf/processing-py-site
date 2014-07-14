@@ -62,6 +62,48 @@ def setup():
 Sets the x, y, and z component of the vector using three separate variables, the data from a PVector, or the values from a float array.
 ]]></description>
 
+<syntax>
+.set(<c>x</c>, <c>y</c>, <c>z</c>)
+.set(<c>x</c>, <c>y</c>)
+.set(<c>v</c>)
+.set(<c>source</c>)
+</syntax>
+
+<parameter>
+<label>x</label>
+<description><![CDATA[float: the x component of the vector]]></description>
+</parameter>
+
+<parameter>
+<label>y</label>
+<description><![CDATA[float: the y component of the vector]]></description>
+</parameter>
+
+<parameter>
+<label>z</label>
+<description><![CDATA[float: the z component of the vector]]></description>
+</parameter>
+
+<parameter>
+<label>x</label>
+<description><![CDATA[float: the x component of the vector]]></description>
+</parameter>
+
+<parameter>
+<label>y</label>
+<description><![CDATA[float: the y component of the vector]]></description>
+</parameter>
+
+<parameter>
+<label>v</label>
+<description><![CDATA[float: the y component of the vector]]></description>
+</parameter>
+
+<parameter>
+<label>source</label>
+<description><![CDATA[float: list to copy from]]></description>
+</parameter>
+
 <related>
 
 </related>

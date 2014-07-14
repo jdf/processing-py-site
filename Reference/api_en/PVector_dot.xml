@@ -32,6 +32,42 @@ println(d)  # Prints "2200.0"
 Calculates the dot product of two vectors.
 ]]></description>
 
+<syntax>
+.dot(<c>v</c>)
+.dot(<c>x</c>, <c>y</c>, <c>z</c>)
+.dot(<c>v1</c>, <c>v2</c>)
+</syntax>
+
+<parameter>
+<label>v</label>
+<description><![CDATA[PVector: any variable of type PVector]]></description>
+</parameter>
+
+<parameter>
+<label>x</label>
+<description><![CDATA[float: x component of the vector]]></description>
+</parameter>
+
+<parameter>
+<label>y</label>
+<description><![CDATA[float: y component of the vector]]></description>
+</parameter>
+
+<parameter>
+<label>z</label>
+<description><![CDATA[float: z component of the vector]]></description>
+</parameter>
+
+<parameter>
+<label>v1</label>
+<description><![CDATA[PVector: any variable of type PVector]]></description>
+</parameter>
+
+<parameter>
+<label>v2</label>
+<description><![CDATA[PVector: any variable of type PVector]]></description>
+</parameter>
+
 <related>
 
 </related>

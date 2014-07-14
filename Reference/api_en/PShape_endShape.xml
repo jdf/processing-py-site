@@ -36,6 +36,16 @@ def draw():
 This method is used to complete a custom shape created with the <b>createShape()</b> function. It's always and only used with <b>createShape()</b>. 
 ]]></description>
 
+<syntax>
+<c>sh</c>.endShape()
+<c>sh</c>.endShape(mode)
+</syntax>
+
+<parameter>
+<label>sh</label>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
+</parameter>
+
 <related>
 beginShape()
 </related>

@@ -26,6 +26,15 @@ def setup():
 Rotates a vector by the specified angle (2D vectors only), while maintaining the same magnitude.
 ]]></description>
 
+<syntax>
+.rotate(theta)
+</syntax>
+
+<parameter>
+<label>theta</label>
+<description><![CDATA[float: the angle of rotation]]></description>
+</parameter>
+
 <related>
 
 </related>

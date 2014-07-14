@@ -28,6 +28,23 @@ def setup():
 Returns a new 2D unit vector with a random direction.  If you pass in <b>this</b> as an argument, it will use the PApplet's random number generator.
 ]]></description>
 
+<syntax>
+.random2D()
+.random2D(<c>parent</c>)
+.random2D(<c>target</c>)
+.random2D(<c>target</c>, <c>parent</c>)
+</syntax>
+
+<parameter>
+<label>parent</label>
+<description><![CDATA[PApplet: current PApplet instance]]></description>
+</parameter>
+
+<parameter>
+<label>target</label>
+<description><![CDATA[PVector: the target vector (if null, a new vector will be created)]]></description>
+</parameter>
+
 <related>
 random3D()
 </related>

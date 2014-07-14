@@ -40,17 +40,17 @@ Even though a PGraphics is technically a PImage, it is not possible to rescale t
 
 <parameter>
 <label>pimg</label>
-<description>PImage: any object of type PImage</description>
+<description><![CDATA[PImage: any object of type PImage]]></description>
 </parameter>
 
 <parameter>
 <label>w</label>
-<description>int: the resized image width</description>
+<description><![CDATA[int: the resized image width]]></description>
 </parameter>
 
 <parameter>
 <label>h</label>
-<description>int: the resized image height</description>
+<description><![CDATA[int: the resized image height]]></description>
 </parameter>
 
 <related>

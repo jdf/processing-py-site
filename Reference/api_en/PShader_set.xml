@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>PShader</name>
+<name>set()</name>
 
 <category>PShader</category>
 
@@ -32,6 +32,69 @@ def draw():
 <description><![CDATA[
 Sets the uniform variables inside the shader to modify the effect while the program is running.
 ]]></description>
+
+<syntax>
+.set(name, x)
+.set(name, x, y)
+.set(name, x, y, z)
+.set(name, x, y, z, w)
+.set(name, vec)
+.set(name, vec, ncoords)
+.set(name, boolvec, ncoords)
+.set(name, mat)
+.set(name, mat, use3x3)
+.set(name, tex)
+</syntax>
+
+<parameter>
+<label>name</label>
+<description><![CDATA[String: the name of the uniform variable to modify]]></description>
+</parameter>
+
+<parameter>
+<label>x</label>
+<description><![CDATA[boolean, float, or int: first component of the variable to modify]]></description>
+</parameter>
+
+<parameter>
+<label>y</label>
+<description><![CDATA[boolean, float, or int: second component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[2], vec2)]]></description>
+</parameter>
+
+<parameter>
+<label>z</label>
+<description><![CDATA[boolean, float, or int: third component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[3], vec3)]]></description>
+</parameter>
+
+<parameter>
+<label>w</label>
+<description><![CDATA[boolean, float, or int: fourth component of the variable to modify. The variable has to be declared with an array/vector type in the shader (i.e.: int[4], vec4)]]></description>
+</parameter>
+
+<parameter>
+<label>vec</label>
+<description><![CDATA[boolean, float, int, or PVector: modifies all the components of an array/vector uniform variable. PVector can only be used if the type of the variable is vec3.]]></description>
+</parameter>
+
+<parameter>
+<label>ncoords</label>
+<description><![CDATA[int: number of coordinates per element, max 4]]></description>
+</parameter>
+
+<parameter>
+<label>mat</label>
+<description><![CDATA[PMatrix3D, or PMatrix2D: matrix of values]]></description>
+</parameter>
+
+<parameter>
+<label>use3x3</label>
+<description><![CDATA[boolean: enforces the matrix is 3 x 3]]></description>
+</parameter>
+
+<parameter>
+<label>tex</label>
+<description><![CDATA[PImage: sets the sampler uniform variable to read from this image texture]]></description>
+</parameter>
 
 <related>
 

@@ -36,6 +36,17 @@ def draw():
 This method is used to start a custom shape created with the <b>createShape()</b> function. It's always and only used with <b>createShape()</b>. 
 ]]></description>
 
+<syntax>
+beginShape()
+beginShape(<c>kind</c>)
+</syntax>
+
+<parameter>
+<label>kind</label>
+<description><![CDATA[int: Either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP
+]]></description>
+</parameter>
+
 <related>
 endShape()
 </related>

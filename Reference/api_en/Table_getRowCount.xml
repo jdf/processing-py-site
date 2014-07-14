@@ -30,6 +30,10 @@ def setup():
 Returns the total number of rows in a table.
 ]]></description>
 
+<syntax>
+.getRowCount()
+</syntax>
+
 <related>
 getColumnCount()
 </related>

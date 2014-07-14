@@ -29,6 +29,15 @@ def setup():
 Removes a row from a <b>Table</b> object.
 ]]></description>
 
+<syntax>
+.removeRow(row)
+</syntax>
+
+<parameter>
+<label>row</label>
+<description><![CDATA[int: ID number of the row to remove]]></description>
+</parameter>
+
 <related>
 addRow()
 clearRows()

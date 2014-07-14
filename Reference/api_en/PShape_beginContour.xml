@@ -49,6 +49,14 @@ def draw():
 The <b>beginContour()</b> and <b>endContour()</b> methods make it possible to define shapes with other shapes cut out of them. For example, the inside of a letter 'O'. These two functions are always used together, you'll never use one without the other. Between them, define the geometry you want to create. As you'll see when you run the example above, the second smaller shape is cut out of the first larger shape.
 ]]></description>
 
+<syntax><c>sh</c>.beginContour()</syntax>
+
+<parameter>
+<label>sh</label>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
+</parameter>
+
+
 <related>
 endContour()
 </related>

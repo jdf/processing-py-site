@@ -34,6 +34,56 @@ endShape()
 Specifies vertex coordinates for Bezier curves. Each call to <b>bezierVertex()</b> defines the position of two control points and one anchor point of a Bezier curve, adding a new segment to a line or shape. The first time <b>bezierVertex()</b> is used within a <b>beginShape()</b> call, it must be prefaced with a call to <b>vertex()</b> to set the first anchor point. This function must be used between <b>beginShape()</b> and <b>endShape()</b> and only when there is no MODE parameter specified to <b>beginShape()</b>. Using the 3D version requires rendering with P3D (see the Environment reference for more information).
 ]]></description>
 
+<syntax>
+bezierVertex(<c>x2</c>, <c>y2</c>, <c>x3</c>, <c>y3</c>, <c>x4</c>, <c>y4</c>)
+bezierVertex(<c>x2</c>, <c>y2</c>, <c>z2</c>, <c>x3</c>, <c>y3</c>, <c>z3</c>, <c>x4</c>, <c>y4</c>, <c>z4</c>)
+</syntax>
+
+<parameter>
+<label>x2</label>
+<description><![CDATA[float: the x-coordinate of the 1st control point]]></description>
+</parameter>
+
+<parameter>
+<label>y2</label>
+<description><![CDATA[float: the y-coordinate of the 1st control point]]></description>
+</parameter>
+
+<parameter>
+<label>z2</label>
+<description><![CDATA[float: the z-coordinate of the 1st control point]]></description>
+</parameter>
+
+<parameter>
+<label>x3</label>
+<description><![CDATA[float: the x-coordinate of the 2nd control point]]></description>
+</parameter>
+
+<parameter>
+<label>y3</label>
+<description><![CDATA[float: the y-coordinate of the 2nd control point]]></description>
+</parameter>
+
+<parameter>
+<label>z3</label>
+<description><![CDATA[float: the z-coordinate of the 2nd control point]]></description>
+</parameter>
+
+<parameter>
+<label>x4</label>
+<description><![CDATA[float: the x-coordinate of the anchor point]]></description>
+</parameter>
+
+<parameter>
+<label>y4</label>
+<description><![CDATA[float: the y-coordinate of the anchor point]]></description>
+</parameter>
+
+<parameter>
+<label>z4</label>
+<description><![CDATA[float: the z-coordinate of the anchor point]]></description>
+</parameter>
+
 <related>
 curveVertex()
 vertex()

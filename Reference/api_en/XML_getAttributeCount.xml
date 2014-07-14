@@ -36,6 +36,10 @@ def setup():
 Counts the specified element's number of attributes, returned as an int.
 ]]></description>
 
+<syntax>
+.getAttributeCount()
+</syntax>
+
 <related>
 
 </related>

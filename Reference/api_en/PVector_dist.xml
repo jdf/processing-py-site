@@ -33,6 +33,26 @@ println(d)  # Prints "78.10249328613281"
 Calculates the Euclidean distance between two points (considering a point as a vector object).
 ]]></description>
 
+<syntax>
+.dist(v)
+.dist(v1, v2)
+</syntax>
+
+<parameter>
+<label>v</label>
+<description><![CDATA[PVector: the x, y, and z coordinates of a PVector]]></description>
+</parameter>
+
+<parameter>
+<label>v1</label>
+<description><![CDATA[PVector: any variable of type PVector]]></description>
+</parameter>
+
+<parameter>
+<label>v2</label>
+<description><![CDATA[PVector: any variable of type PVector]]></description>
+</parameter>
+
 <related>
 
 </related>

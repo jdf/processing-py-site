@@ -34,6 +34,26 @@ def setup():
 Stores a string value in the <b>TableRow</b>'s specified column. The column may be specified by either its ID or title.
 ]]></description>
 
+<syntax>
+.setString(<c>column</c>, <c>value</c>)
+.setString(<c>columnName</c>, <c>value</c>)
+</syntax>
+
+<parameter>
+<label>column</label>
+<description><![CDATA[int: ID number of the target column]]></description>
+</parameter>
+
+<parameter>
+<label>value</label>
+<description><![CDATA[String: value to assign]]></description>
+</parameter>
+
+<parameter>
+<label>columnName</label>
+<description><![CDATA[String: title of the target column]]></description>
+</parameter>
+
 <related>
 setInt()
 setFloat()

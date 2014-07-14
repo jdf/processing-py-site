@@ -26,6 +26,8 @@ def setup():
 Returns the total number of columns in a table.
 ]]></description>
 
+<syntax>.getColumnCount()</syntax>
+
 <related>
 getRowCount()
 </related>

@@ -38,52 +38,52 @@ pimg.copy(src, sx, sy, sw, sh, dx, dy, dw, dh)
 
 <parameter>
 <label>pimg</label>
-<description>PImage: any object of type PImage</description>
+<description><![CDATA[PImage: any object of type PImage]]></description>
 </parameter>
 
 <parameter>
 <label>sx</label>
-<description>int: X coordinate of the source's upper left corner</description>
+<description><![CDATA[int: X coordinate of the source's upper left corner]]></description>
 </parameter>
 
 <parameter>
 <label>sy</label>
-<description>int: Y coordinate of the source's upper left corner</description>
+<description><![CDATA[int: Y coordinate of the source's upper left corner]]></description>
 </parameter>
 
 <parameter>
 <label>sw</label>
-<description>int: source image width</description>
+<description><![CDATA[int: source image width]]></description>
 </parameter>
 
 <parameter>
 <label>sh</label>
-<description>int: source image height</description>
+<description><![CDATA[int: source image height]]></description>
 </parameter>
 
 <parameter>
 <label>dx</label>
-<description>int: X coordinate of the destination's upper left corner</description>
+<description><![CDATA[int: X coordinate of the destination's upper left corner]]></description>
 </parameter>
 
 <parameter>
 <label>dy</label>
-<description>int: Y coordinate of the destination's upper left corner</description>
+<description><![CDATA[int: Y coordinate of the destination's upper left corner]]></description>
 </parameter>
 
 <parameter>
 <label>dw</label>
-<description>int: destination image width</description>
+<description><![CDATA[int: destination image width]]></description>
 </parameter>
 
 <parameter>
 <label>dh</label>
-<description>int: destination image height</description>
+<description><![CDATA[int: destination image height]]></description>
 </parameter>
 
 <parameter>
 <label>src</label>
-<description>PImage: an image variable referring to the source image.</description>
+<description><![CDATA[PImage: an image variable referring to the source image.]]></description>
 </parameter>
 
 <related>

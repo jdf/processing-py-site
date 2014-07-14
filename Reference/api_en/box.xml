@@ -34,6 +34,31 @@ box(40, 20, 50)
 A box is an extruded rectangle. A box with equal dimensions on all sides is a cube.
 ]]></description>
 
+<syntax>
+box(<c>size</c>)
+box(<c>w</c>, <c>h</c>, <c>d</c>)
+</syntax>
+
+<parameter>
+<label>size</label>
+<description><![CDATA[float: dimension of the box in all dimensions (creates a cube)]]></description>
+</parameter>
+
+<parameter>
+<label>w</label>
+<description><![CDATA[float: dimension of the box in the x-dimension]]></description>
+</parameter>
+
+<parameter>
+<label>h</label>
+<description><![CDATA[float: dimension of the box in the y-dimension]]></description>
+</parameter>
+
+<parameter>
+<label>d</label>
+<description><![CDATA[float: dimension of the box in the z-dimension]]></description>
+</parameter>
+
 <related>
 sphere()
 </related>

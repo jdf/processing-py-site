@@ -39,4 +39,8 @@ def setup():
 Get the names of all of the element's children, and returns the names as an list of Strings.  This is the same as looping through and calling getName() on each child element individually.
 ]]></description>
 
+<syntax>
+.listChildren()
+</syntax>
+
 </root>

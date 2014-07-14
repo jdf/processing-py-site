@@ -22,6 +22,16 @@ println(v)  # Prints "[ 0.4454354, 0.8908708, 0.089087084 ]"
 Normalize the vector to length 1 (make it a unit vector).
 ]]></description>
 
+<syntax>
+.normalize()
+.normalize(target)
+</syntax>
+
+<parameter>
+<label>target</label>
+<description><![CDATA[PVector: Set to null to create a new vector]]></description>
+</parameter>
+
 <related>
 
 </related>

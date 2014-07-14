@@ -30,6 +30,11 @@ def setup():
 Copies the components of the vector and returns the result as a PVector. 
 ]]></description>
 
+<syntax>
+.get()
+.get(target)
+</syntax>
+
 <related>
 
 </related>

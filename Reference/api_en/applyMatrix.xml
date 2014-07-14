@@ -34,6 +34,92 @@ box(50)
 Multiplies the current matrix by the one specified through the parameters. This is very slow because it will try to calculate the inverse of the transform, so avoid it whenever possible. The equivalent function in OpenGL is glMultMatrix().
 ]]></description>
 
+<syntax>
+applyMatrix(source)
+applyMatrix(<c>n00</c>, <c>n01</c>, <c>n02</c>, <c>n10</c>, <c>n11</c>, <c>n12</c>)
+applyMatrix(<c>n00</c>, <c>n01</c>, <c>n02</c>, <c>n03</c>, <c>n10</c>, <c>n11</c>, <c>n12</c>, <c>n13</c>, <c>n20</c>, <c>n21</c>, <c>n22</c>, <c>n23</c>, <c>n30</c>, <c>n31</c>, <c>n32</c>, <c>n33</c>)
+</syntax>
+
+<parameter>
+<label>n00</label>
+<description><![CDATA[float: numbers which define the 4x4 matrix to be multiplied]]></description>
+</parameter>
+
+<parameter>
+<label>n01</label>
+<description><![CDATA[float: numbers which define the 4x4 matrix to be multiplied]]></description>
+</parameter>
+
+<parameter>
+<label>n02</label>
+<description><![CDATA[float: numbers which define the 4x4 matrix to be multiplied]]></description>
+</parameter>
+
+<parameter>
+<label>n10</label>
+<description><![CDATA[float: numbers which define the 4x4 matrix to be multiplied]]></description>
+</parameter>
+
+<parameter>
+<label>n11</label>
+<description><![CDATA[float: numbers which define the 4x4 matrix to be multiplied]]></description>
+</parameter>
+
+<parameter>
+<label>n12</label>
+<description><![CDATA[float: numbers which define the 4x4 matrix to be multiplied]]></description>
+</parameter>
+
+<parameter>
+<label>n03</label>
+<description><![CDATA[float: numbers which define the 4x4 matrix to be multiplied]]></description>
+</parameter>
+
+<parameter>
+<label>n13</label>
+<description><![CDATA[float: numbers which define the 4x4 matrix to be multiplied]]></description>
+</parameter>
+
+<parameter>
+<label>n20</label>
+<description><![CDATA[float: numbers which define the 4x4 matrix to be multiplied]]></description>
+</parameter>
+
+<parameter>
+<label>n21</label>
+<description><![CDATA[float: numbers which define the 4x4 matrix to be multiplied]]></description>
+</parameter>
+
+<parameter>
+<label>n22</label>
+<description><![CDATA[float: numbers which define the 4x4 matrix to be multiplied]]></description>
+</parameter>
+
+<parameter>
+<label>n23</label>
+<description><![CDATA[float: numbers which define the 4x4 matrix to be multiplied]]></description>
+</parameter>
+
+<parameter>
+<label>n30</label>
+<description><![CDATA[float: numbers which define the 4x4 matrix to be multiplied]]></description>
+</parameter>
+
+<parameter>
+<label>n31</label>
+<description><![CDATA[float: numbers which define the 4x4 matrix to be multiplied]]></description>
+</parameter>
+
+<parameter>
+<label>n32</label>
+<description><![CDATA[float: numbers which define the 4x4 matrix to be multiplied]]></description>
+</parameter>
+
+<parameter>
+<label>n33</label>
+<description><![CDATA[float: numbers which define the 4x4 matrix to be multiplied]]></description>
+</parameter>
+
 <related>
 pushMatrix()
 popMatrix()

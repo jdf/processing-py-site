@@ -31,6 +31,31 @@ def setup():
 Stores a float value in the <b>Table</b>'s specified row and column. The row is specified by its ID, while the column may be specified by either its ID or title.
 ]]></description>
 
+<syntax>
+.setFloat(row, column, value)
+.setFloat(row, columnName, value)
+</syntax>
+
+<parameter>
+<label>row</label>
+<description><![CDATA[int: ID number of the target row]]></description>
+</parameter>
+
+<parameter>
+<label>column</label>
+<description><![CDATA[int: ID number of the target column]]></description>
+</parameter>
+
+<parameter>
+<label>value</label>
+<description><![CDATA[float: value to assign]]></description>
+</parameter>
+
+<parameter>
+<label>columnName</label>
+<description><![CDATA[String: title of the target column]]></description>
+</parameter>
+
 <related>
 setInt()
 setString()

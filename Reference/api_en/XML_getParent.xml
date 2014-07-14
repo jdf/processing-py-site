@@ -35,6 +35,10 @@ def setup():
 Gets a copy of the element's parent.  Returns the parent as another XML object.
 ]]></description>
 
+<syntax>
+.getParent()
+</syntax>
+
 <related>
 
 </related>

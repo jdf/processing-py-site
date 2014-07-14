@@ -37,12 +37,12 @@ Saves the image into a file. Images are saved in TIFF, TARGA, JPEG, and PNG form
 
 <parameter>
 <label>pimg</label>
-<description>PImage: any object of type PImage</description>
+<description><![CDATA[PImage: any object of type PImage]]></description>
 </parameter>
 
 <parameter>
 <label>filename</label>
-<description>String: a sequence of letters and numbers</description>
+<description><![CDATA[String: a sequence of letters and numbers]]></description>
 </parameter>
 
 <related>

@@ -24,6 +24,21 @@ def setup():
 Calculates and returns a new 2D unit vector from the specified angle value (in radians).
 ]]></description>
 
+<syntax>
+.fromAngle(<c>angle</c>)
+.fromAngle(<c>angle</c>, <c>target</c>)
+</syntax>
+
+<parameter>
+<label>angle</label>
+<description><![CDATA[float: the angle in radians]]></description>
+</parameter>
+
+<parameter>
+<label>target</label>
+<description><![CDATA[PVector: the target vector (if null, a new vector will be created)]]></description>
+</parameter>
+
 <related>
 
 </related>

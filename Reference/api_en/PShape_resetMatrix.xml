@@ -2,9 +2,6 @@
 <root>
 <name>resetMatrix()</name>
 
-<!-- unsupported_modes>js</unsupported_modes -->
-<!-- js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode -->
-
 <category>PShape</category>
 
 <subcategory>Method</subcategory>
@@ -35,6 +32,10 @@ def mousePressed():
 <description><![CDATA[
 Replaces the current matrix of a shape with the identity matrix. The equivalent function in OpenGL is <b>glLoadIdentity()</b>. 
 ]]></description>
+
+<syntax>
+resetMatrix()
+</syntax>
 
 <related>
 rotate()

@@ -59,8 +59,49 @@ Calculates linear interpolation from one vector to another vector.  (Just like r
 Note that there is one <em>static</em> version of this method, and two <em>non-static</em> versions.  The static version, <b>lerp(v1, v2, amt)</b> is given the two vectors to interpolate and returns a new PVector object.  The static version is used by referencing the PVector class directly.  (See the middle example above.)  The non-static versions, <b>lerp(v, amt)</b> and <b>lerp(x, y, z, amt)</b>, do not return a new PVector, but transform the values of the PVector on which they are called.  These non-static versions function the same way, but the former takes another vector as input, while the latter takes three float values.  (See the top and bottom examples above, respectively.)
 ]]></description>
 
-<related>
+<syntax>
+.lerp(<c>v</c>, <c>amt</c>)
+.lerp(<c>v1</c>, <c>v2</c>, <c>amt</c>)
+.lerp(<c>x</c>, <c>y</c>, <c>z</c>, <c>amt</c>)
+</syntax>
 
+<parameter>
+<label>v</label>
+<description><![CDATA[PVector: the vector to lerp to]]></description>
+</parameter>
+
+<parameter>
+<label>amt</label>
+<description><![CDATA[float: The amount of interpolation; some value between 0.0 (old vector) and 1.0 (new vector). 0.1 is very near the new vector. 0.5 is halfway in between.]]></description>
+</parameter>
+
+<parameter>
+<label>v1</label>
+<description><![CDATA[PVector: the vector to start from]]></description>
+</parameter>
+
+<parameter>
+<label>v2</label>
+<description><![CDATA[PVector: the vector to lerp to]]></description>
+</parameter>
+
+<parameter>
+<label>x</label>
+<description><![CDATA[float: the x component to lerp to]]></description>
+</parameter>
+
+<parameter>
+<label>y</label>
+<description><![CDATA[float: the y component to lerp to]]></description>
+</parameter>
+
+<parameter>
+<label>z</label>
+<description><![CDATA[float: the z component to lerp to]]></description>
+</parameter>
+
+<related>
+lerp()
 </related>
 
 </root>

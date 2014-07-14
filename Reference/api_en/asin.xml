@@ -34,6 +34,15 @@ println("%.7f : %.8f : %.7f" % (a, s, arcsin))
 The inverse of <b>sin()</b>, returns the arc sine of a value. This function expects the values in the range of -1 to 1 and values are returned in the range <b>-PI/2</b> to <b>PI/2</b>.
 ]]></description>
 
+<syntax>
+asin(<c>value</c>)
+</syntax>
+
+<parameter>
+<label>value</label>
+<description><![CDATA[float: the value whose arc sine is to be returned]]></description>
+</parameter>
+
 <related>
 sin()
 acos()

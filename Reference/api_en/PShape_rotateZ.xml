@@ -35,6 +35,20 @@ Shapes are always rotated around the upper-left corner of their bounding box. Po
 This method requires a 3D renderer. You need to use P3D as a third parameter for the <b>size()</b> function as shown in the example above.
 ]]></description>
 
+<syntax>
+<c>sh</c>.rotateZ(<c>angle</c>)
+</syntax>
+
+<parameter>
+<label>sh</label>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
+</parameter>
+
+<parameter>
+<label>angle</label>
+<description><![CDATA[float: angle of rotation specified in radians]]></description>
+</parameter>
+
 <related>
 rotate()
 rotateX()

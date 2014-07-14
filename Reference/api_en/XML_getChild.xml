@@ -34,6 +34,11 @@ def setup():
 Returns the first of the element's children that matches the <b>name</b> parameter.  The name or path is a series of elements and sub-elements, separated by slashes.
 ]]></description>
 
+<syntax>
+.getChild(index)
+.getChild(name)
+</syntax>
+
 <related>
 
 </related>

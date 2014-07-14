@@ -30,6 +30,13 @@ def draw():
 Enables the shape's style data and ignores Processing's current styles. Styles include attributes such as colors, stroke weight, and stroke joints. 
 ]]></description>
 
+<syntax><c>sh</c>.enableStyle()</syntax>
+
+<parameter>
+<label>sh</label>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
+</parameter>
+
 <related>
 disableStyle()
 </related>

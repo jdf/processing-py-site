@@ -38,6 +38,22 @@ def setup():
 Use <b>addColumn()</b> to add a new column to a <b>Table</b> object.  Typically, you will want to specify a title, so the column may be easily referenced later by name.  (If no title is specified, the new column's title will be null.)  A column type may also be specified, in which case all values stored in this column must be of the same type (e.g., Table.INT or Table.FLOAT).  If no type is specified, the default type of STRING is used.
 ]]></description>
 
+<syntax>
+.addColumn()
+.addColumn(<c>title</c>)
+.addColumn(<c>title</c>, <c>type</c>)
+</syntax>
+
+<parameter>
+<label>title</label>
+<description><![CDATA[String: the title to be used for the new column]]></description>
+</parameter>
+
+<parameter>
+<label>type</label>
+<description><![CDATA[int: the type to be used for the new column: INT, LONG, FLOAT, DOUBLE, STRING, or CATEGORY]]></description>
+</parameter>
+
 <related>
 removeColumn()
 </related>

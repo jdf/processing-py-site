@@ -45,6 +45,27 @@ def draw():
 Divides a vector by a scalar.  The version of the method that uses a float acts directly on the vector upon which it is called (as in the first example above), and therefore has no return value.  The versions that receive both a PVector and a float as arugments are static methods, and each returns a new PVector that is the result of the division operation.  Both examples above produce the same visual output.
 ]]></description>
 
+<syntax>
+.div(<c>n</c>)
+.div(<c>v</c>, <c>n</c>)
+.div(<c>v</c>, <c>n</c>, <c>target</c>)
+</syntax>
+
+<parameter>
+<label>n</label>
+<description><![CDATA[float: the number by which to divide the vector]]></description>
+</parameter>
+
+<parameter>
+<label>v</label>
+<description><![CDATA[PVector: the vector to divide by the scalar]]></description>
+</parameter>
+
+<parameter>
+<label>target</label>
+<description><![CDATA[PVector: PVector in which to store the result]]></description>
+</parameter>
+
 <related>
 
 </related>

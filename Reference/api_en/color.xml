@@ -59,6 +59,23 @@ Note that when using hexadecimal notation, it is not necessary to use <b>color()
 More about how colors are stored can be found in the reference for the <a href="color_datatype.html">color</a> datatype.
 ]]></description>
 
+<syntax>
+color(<c>gray</c>)
+color(<c>gray</c>, <c>alpha</c>)
+color(<c>v1</c>, <c>v2</c>, <c>v3</c>)
+color(<c>v1</c>, <c>v2</c>, <c>v3</c>, <c>alpha</c>)
+</syntax>
+
+<parameter>
+<label>gray</label>
+<description><![CDATA[int: number specifying value between white and black]]></description>
+</parameter>
+
+<parameter>
+<label>alpha</label>
+<description><![CDATA[float, or int: relative to current color range]]></description>
+</parameter>
+
 <related>
 
 </related>

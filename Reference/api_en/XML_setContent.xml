@@ -37,6 +37,10 @@ def setup():
 Sets the element's content, which is specified as a String.
 ]]></description>
 
+<syntax>
+.setContent(text)
+</syntax>
+
 <related>
 
 </related>

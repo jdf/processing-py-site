@@ -22,6 +22,10 @@ println(v)  # Prints "[ 2.2271771, 4.4543543, 0.4454354 ]"
 Limit the magnitude of this vector to the value used for the <b>max</b> parameter.
 ]]></description>
 
+<syntax>
+.limit(max)
+</syntax>
+
 <related>
 
 </related>

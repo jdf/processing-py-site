@@ -35,6 +35,10 @@ def mousePressed():
 Clears the pixels within a buffer. This function only works on PGraphics objects created with the <b>createGraphics()</b> function; it won't work with the main display window. Unlike the main graphics context (the display window), pixels in additional graphics areas created with <b>createGraphics()</b> can be entirely or partially transparent. This function clears everything to make all of the pixels 100% transparent. 
 ]]></description>
 
+<syntax>
+clear()
+</syntax>
+
 <related>
 
 </related>

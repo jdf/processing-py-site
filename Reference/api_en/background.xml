@@ -38,6 +38,52 @@ An image can also be used as the background for a sketch, although the image's w
 It is not possible to use the transparency <b>alpha</b> parameter with background colors on the main drawing surface. It can only be used along with a <b>PGraphics</b> object and <b>createGraphics()</b>.
 ]]></description>
 
+<syntax>
+background(<c>rgb</c>)
+background(<c>rgb</c>, <c>alpha</c>)
+background(<c>gray</c>)
+background(<c>gray</c>, <c>alpha</c>)
+background(<c>v1</c>, <c>v2</c>, <c>v3</c>)
+background(<c>v1</c>, <c>v2</c>, <c>v3</c>, <c>alpha</c>)
+background(<c>image</c>)
+</syntax>
+
+<parameter>
+<label>rgb</label>
+<description><![CDATA[int: any value of the color datatype]]></description>
+</parameter>
+
+<parameter>
+<label>alpha</label>
+<description><![CDATA[float: opacity of the background]]></description>
+</parameter>
+
+<parameter>
+<label>gray</label>
+<description><![CDATA[float: specifies a value between white and black]]></description>
+</parameter>
+
+<parameter>
+<label>v1</label>
+<description><![CDATA[float: red or hue value (depending on the current color mode)]]></description>
+</parameter>
+
+<parameter>
+<label>v2</label>
+<description><![CDATA[float: green or saturation value (depending on the current color mode)]]></description>
+</parameter>
+
+<parameter>
+<label>v3</label>
+<description><![CDATA[float: blue or brightness value (depending on the current color mode)]]></description>
+</parameter>
+
+<parameter>
+<label>image</label>
+<description><![CDATA[PImage: PImage to set as background (must be same size as the sketch window)]]></description>
+</parameter>
+
+
 <related>
 stroke()
 fill()

@@ -29,6 +29,15 @@ def draw():
 Sets the resolution at which Beziers display. The default value is 20. This function is only useful when using the <b>P3D</b> renderer; the default <b>P2D</b> renderer does not use this information.
 ]]></description>
 
+<syntax>
+bezierDetail(<c>detail</c>)
+</syntax>
+
+<parameter>
+<label>detail</label>
+<description><![CDATA[int: resolution of the curves]]></description>
+</parameter>
+
 <related>
 curve()
 curveVertex()

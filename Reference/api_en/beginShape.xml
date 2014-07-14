@@ -167,6 +167,11 @@ Transformations such as <b>translate()</b>, <b>rotate()</b>, and <b>scale()</b> 
 The P3D renderer settings allow <b>stroke()</b> and <b>fill()</b> settings to be altered per-vertex, but P2D and the default renderer do not. Settings such as <b>strokeWeight()</b>, <b>strokeCap()</b>, and <b>strokeJoin()</b> cannot be changed while inside a <b>beginShape()</b>/<b>endShape()</b> block with any renderer.
 ]]></description>
 
+<syntax>
+beginShape()
+beginShape(kind)
+</syntax>
+
 <related>
 PShape
 endShape()

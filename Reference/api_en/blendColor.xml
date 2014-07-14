@@ -29,6 +29,25 @@ rect(66, 20, 20, 60)
 Blends two color values together based on the blending mode given as the <b>MODE</b> parameter. The possible modes are described in the reference for the <b>blend()</b> function.
 ]]></description>
 
+<syntax>
+blendColor(c1,c2,MODE)
+</syntax>
+
+<parameter>
+<label>c1</label>
+<description><![CDATA[color: the first color to blend]]></description>
+</parameter>
+
+<parameter>
+<label>c2</label>
+<description><![CDATA[color: the second color to blend]]></description>
+</parameter>
+
+<parameter>
+<label>MODE</label>
+<description><![CDATA[Either BLEND, ADD, SUBTRACT, DARKEST, LIGHTEST, DIFFERENCE, EXCLUSION, MULTIPLY, SCREEN, OVERLAY, HARD_LIGHT, SOFT_LIGHT, DODGE, or BURN]]></description>
+</parameter>
+
 <related>
 blend()
 color()

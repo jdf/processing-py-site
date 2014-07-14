@@ -23,6 +23,10 @@ def setup():
 Calculates the angle of rotation for a vector (2D vectors only).
 ]]></description>
 
+<syntax>
+.heading()
+</syntax>
+
 <related>
 
 </related>

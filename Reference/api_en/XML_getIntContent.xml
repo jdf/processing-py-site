@@ -34,6 +34,16 @@ def setup():
 Returns the content of an element as an int. If there is no such content, either <b>null</b> or the provided default value is returned.
 ]]></description>
 
+<syntax>
+.getIntContent()
+.getIntContent(<c>defaultValue</c>)
+</syntax>
+
+<parameter>
+<label>defaultValue</label>
+<description><![CDATA[int: the default value of the attribute]]></description>
+</parameter>
+
 <related>
 getContent()
 getFloatContent()

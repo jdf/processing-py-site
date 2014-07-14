@@ -44,6 +44,27 @@ Removes any of the specified characters (or "tokens").  The example above remove
 If no column is specified, then the values in all columns and rows are processed.  A specific column may be referenced by either its ID or title.
 ]]></description>
 
+<syntax>
+.removeTokens(<c>tokens</c>)
+.removeTokens(<c>tokens</c>, <c>column</c>)
+.removeTokens(<c>tokens</c>, <c>columnName</c>)
+</syntax>
+
+<parameter>
+<label>tokens</label>
+<description><![CDATA[String: a list of individual characters to be removed]]></description>
+</parameter>
+
+<parameter>
+<label>column</label>
+<description><![CDATA[int: ID number of the column to process]]></description>
+</parameter>
+
+<parameter>
+<label>columnName</label>
+<description><![CDATA[String: title of the column to process]]></description>
+</parameter>
+
 <related>
 trim()
 </related>

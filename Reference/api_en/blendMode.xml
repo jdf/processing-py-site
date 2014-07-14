@@ -63,6 +63,15 @@ REPLACE - the pixels entirely replace the others and don't utilize alpha (transp
 For Processing 2.0, we recommend using <b>blendMode()</b> and not the previous <b>blend()</b> function. However, unlike <b>blend()</b>, the <b>blendMode()</b> function does not support the following: HARD_LIGHT, SOFT_LIGHT, OVERLAY, DODGE, BURN. On older hardware, the LIGHTEST, DARKEST, and DIFFERENCE modes might not be available as well. 
 ]]></description>
 
+<syntax>
+blendMode(<c>mode</c>)
+</syntax>
+
+<parameter>
+<label>mode</label>
+<description><![CDATA[int: the blending mode to use]]></description>
+</parameter>
+
 <related>
 
 </related>

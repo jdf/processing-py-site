@@ -25,6 +25,14 @@ def setup():
 Returns the number of children within the PShape.
 ]]></description>
 
+<syntax><c>sh</c>.getChildCount()</syntax>
+
+<parameter>
+<label>sh</label>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
+</parameter>
+
+
 <related>
 
 </related>

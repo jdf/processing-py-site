@@ -22,6 +22,26 @@ Example to come...
 This is a new reference entry for Processing 2.0. It will be updated shortly. For now, please check the Examples to see how to use this new syntax.
 ]]></description>
 
+<syntax>
+<c>sh</c>.addChild(<c>who</c>)
+<c>sh</c>.addChild(<c>who</c>, <c>idx</c>)
+</syntax>
+
+<parameter>
+<label>sh</label>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
+</parameter>
+
+<parameter>
+<label>who</label>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
+</parameter>
+
+<parameter>
+<label>idx</label>
+<description><![CDATA[int: the layer position in which to insert the new child]]></description>
+</parameter>
+
 <related>
 getChild()
 </related>

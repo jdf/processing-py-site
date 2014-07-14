@@ -36,6 +36,10 @@ def setup():
 Sets the element's name, which is specified as a String.
 ]]></description>
 
+<syntax>
+.setName(newName)
+</syntax>
+
 <related>
 
 </related>

@@ -36,6 +36,10 @@ Certain renderers may or may not seem to require <b>loadPixels()</b> or <b>updat
 Currently, none of the renderers use the additional parameters to <b>updatePixels()</b>, however this may be implemented in the future. 
 ]]></description>
 
+<syntax>
+updatePixels()
+</syntax>
+
 <related>
 
 </related>

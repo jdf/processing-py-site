@@ -37,6 +37,10 @@ def setup():
 Sets the content of an element's attribute as a String.  The first String specifies the attribute name, while the second specifies the new content.
 ]]></description>
 
+<syntax>
+.setString(name, value)
+</syntax>
+
 <related>
 
 </related>

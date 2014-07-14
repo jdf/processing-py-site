@@ -40,6 +40,10 @@ Use the <b>beginContour()</b> and <b>endContour()</b> function to create negativ
 Transformations such as <b>translate()</b>, <b>rotate()</b>, and <b>scale()</b> do not work within a <b>beginContour()</b>/<b>endContour()</b> pair. It is also not possible to use other shapes, such as <b>ellipse()</b> or <b>rect()</b> within.
 ]]></description>
 
+<syntax>
+beginContour()
+</syntax>
+
 <related>
 
 </related>

@@ -25,6 +25,10 @@ rect(50, 15, 35, 70)
 Extracts the alpha value from a color.
 ]]></description>
 
+<syntax>
+alpha(rgb)
+</syntax>
+
 <related>
 red()
 green()

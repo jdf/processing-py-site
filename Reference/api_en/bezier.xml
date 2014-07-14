@@ -36,6 +36,71 @@ bezier(30, 20, 80, 5, 80, 75, 30, 75)
 Draws a Bezier curve on the screen. These curves are defined by a series of anchor and control points. The first two parameters specify the first anchor point and the last two parameters specify the other anchor point. The middle parameters specify the control points which define the shape of the curve. Bezier curves were developed by French engineer Pierre Bezier. Using the 3D version requires rendering with P3D (see the Environment reference for more information).
 ]]></description>
 
+<syntax>
+bezier(<c>x1</c>, <c>y1</c>, <c>x2</c>, <c>y2</c>, <c>x3</c>, <c>y3</c>, <c>x4</c>, <c>y4</c>)
+bezier(<c>x1</c>, <c>y1</c>, <c>z1</c>, <c>x2</c>, <c>y2</c>, <c>z2</c>, <c>x3</c>, <c>y3</c>, <c>z3</c>, <c>x4</c>, <c>y4</c>, <c>z4</c>)
+</syntax>
+
+<parameter>
+<label>x1</label>
+<description><![CDATA[float: coordinates for the first anchor point]]></description>
+</parameter>
+
+<parameter>
+<label>y1</label>
+<description><![CDATA[float: coordinates for the first anchor point]]></description>
+</parameter>
+
+<parameter>
+<label>z1</label>
+<description><![CDATA[float: coordinates for the first anchor point]]></description>
+</parameter>
+
+<parameter>
+<label>x2</label>
+<description><![CDATA[float: coordinates for the first control point]]></description>
+</parameter>
+
+<parameter>
+<label>y2</label>
+<description><![CDATA[float: coordinates for the first control point]]></description>
+</parameter>
+
+<parameter>
+<label>z2</label>
+<description><![CDATA[float: coordinates for the first control point]]></description>
+</parameter>
+
+<parameter>
+<label>x3</label>
+<description><![CDATA[float: coordinates for the second control point]]></description>
+</parameter>
+
+<parameter>
+<label>y3</label>
+<description><![CDATA[float: coordinates for the second control point]]></description>
+</parameter>
+
+<parameter>
+<label>z3</label>
+<description><![CDATA[float: coordinates for the second control point]]></description>
+</parameter>
+
+<parameter>
+<label>x4</label>
+<description><![CDATA[float: coordinates for the second anchor point]]></description>
+</parameter>
+
+<parameter>
+<label>y4</label>
+<description><![CDATA[float: coordinates for the second anchor point]]></description>
+</parameter>
+
+<parameter>
+<label>z4</label>
+<description><![CDATA[float: coordinates for the second anchor point]]></description>
+</parameter>
+
 <related>
 bezierVertex()
 curve()

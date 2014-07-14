@@ -41,6 +41,15 @@ def draw():
 The <b>getVertexCount()</b> method returns the number of vertices that make up a PShape. In the above example, the value 4 is returned by the <b>getVertexCount()</b> method because 4 vertices are defined in <b>setup()</b>.
 ]]></description>
 
+<syntax>
+<c>sh</c>.getVertexCount()
+</syntax>
+
+<parameter>
+<label>sh</label>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
+</parameter>
+
 <related>
 getVertex()
 setVertex()

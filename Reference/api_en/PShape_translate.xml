@@ -32,6 +32,31 @@ Specifies an amount to displace the shape. The <b>x</b> parameter specifies left
 Using this method with the <b>z</b> parameter requires using the P3D parameter in combination with size. 
 ]]></description>
 
+<syntax>
+<c>sh</c>.translate(<c>x</c>, <c>y</c>)
+<c>sh</c>.translate(<c>x</c>, <c>y</c>, <c>z</c>)
+</syntax>
+
+<parameter>
+<label>sh</label>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
+</parameter>
+
+<parameter>
+<label>x</label>
+<description><![CDATA[float: left/right translation]]></description>
+</parameter>
+
+<parameter>
+<label>y</label>
+<description><![CDATA[float: up/down translation]]></description>
+</parameter>
+
+<parameter>
+<label>z</label>
+<description><![CDATA[float: forward/backward translation]]></description>
+</parameter>
+
 <related>
 popMatrix()
 pushMatrix()

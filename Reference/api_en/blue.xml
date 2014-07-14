@@ -30,6 +30,15 @@ The <b>blue()</b> function is easy to use and understand, but it is slower than 
 b2 = c & 0xFF;  # Very fast to calculate</pre>
 ]]></description>
 
+<syntax>
+blue(<c>rgb</c>)
+</syntax>
+
+<parameter>
+<label>rgb</label>
+<description><![CDATA[int: any value of the color datatype]]></description>
+</parameter>
+
 <related>
 red()
 green()

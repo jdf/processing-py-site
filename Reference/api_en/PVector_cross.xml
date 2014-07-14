@@ -23,8 +23,43 @@ println(v3)# Prints "[ -40.0, 60.0, -400.0 ]"
 Calculates and returns a vector composed of the cross product between two vectors.
 ]]></description>
 
-<related>
+<syntax>
+.cross(<c>v</c>)
+.cross(<c>v</c>, <c>target</c>)
+.cross(<c>v1</c>, <c>v2</c>, <c>target</c>)
+</syntax>
 
+<parameter>
+<label>v</label>
+<description><![CDATA[PVector: the vector to calculate the cross product]]></description>
+</parameter>
+
+<parameter>
+<label>v</label>
+<description><![CDATA[PVector: any variable of type PVector]]></description>
+</parameter>
+
+<parameter>
+<label>target</label>
+<description><![CDATA[PVector: PVector to store the result]]></description>
+</parameter>
+
+<parameter>
+<label>v1</label>
+<description><![CDATA[PVector: any variable of type PVector]]></description>
+</parameter>
+
+<parameter>
+<label>v2</label>
+<description><![CDATA[PVector: any variable of type PVector]]></description>
+</parameter>
+
+<parameter>
+<label>target</label>
+<description><![CDATA[PVector: PVector to store the result]]></description>
+</parameter>
+
+<related>
 </related>
 
 </root>

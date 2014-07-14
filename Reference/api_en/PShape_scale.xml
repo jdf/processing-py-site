@@ -32,6 +32,37 @@ Increases or decreases the size of a shape by expanding and contracting vertices
 Using this method with the <b>z</b> parameter requires using the P3D parameter in combination with size. 
 ]]></description>
 
+<syntax>
+<c>sh</c>.scale(<c>s</c>)
+<c>sh</c>.scale(<c>x</c>, <c>y</c>)
+<c>sh</c>.scale(<c>x</c>, <c>y</c>, <c>z</c>)
+</syntax>
+
+<parameter>
+<label>sh</label>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
+</parameter>
+
+<parameter>
+<label>s</label>
+<description><![CDATA[float: percentate to scale the object]]></description>
+</parameter>
+
+<parameter>
+<label>x</label>
+<description><![CDATA[float: percentage to scale the object in the x-axis]]></description>
+</parameter>
+
+<parameter>
+<label>y</label>
+<description><![CDATA[float: percentage to scale the object in the y-axis]]></description>
+</parameter>
+
+<parameter>
+<label>z</label>
+<description><![CDATA[ifloat: percentage to scale the object in the z-axis]]></description>
+</parameter>
+
 <related>
 rotate()
 translate()

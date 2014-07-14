@@ -35,6 +35,21 @@ def setup():
 Retrieves an integer value from the <b>TableRow</b>'s specified column. The column may be specified by either its ID or title.
 ]]></description>
 
+<syntax>
+.getInt(<c>column</c>)
+.getInt(<c>columnName</c>)
+</syntax>
+
+<parameter>
+<label>column</label>
+<description><![CDATA[int: ID number of the column to reference]]></description>
+</parameter>
+
+<parameter>
+<label>columnName</label>
+<description><![CDATA[String: title of the column to reference]]></description>
+</parameter>
+
 <related>
 getFloat()
 getString()

@@ -27,6 +27,10 @@ Expands a list by one element and adds data to the new position. You can store a
 <br/>
 ]]></description>
 
+<syntax>
+.append(s)
+</syntax>
+
 <related>
 shorten()
 expand()

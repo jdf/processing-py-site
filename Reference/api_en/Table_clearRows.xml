@@ -35,6 +35,10 @@ def setup():
 Removes all rows from a <b>Table</b>.  While all rows are removed, columns and column titles are maintained.
 ]]></description>
 
+<syntax>
+.clearRows()
+</syntax>
+
 <related>
 addRow()
 removeRow()

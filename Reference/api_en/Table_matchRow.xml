@@ -34,6 +34,26 @@ def setup():
 Finds the first row in the <b>Table</b> that matches the regular expression provided, and returns a reference to that row.  Even if multiple rows are possible matches, only the first matching row is returned. The column to search may be specified by either its ID or title.
 ]]></description>
 
+<syntax>
+.matchRow(<c>regexp</c>, <c>column</c>)
+.matchRow(<c>regexp</c>, <c>columnName</c>)
+</syntax>
+
+<parameter>
+<label>regexp</label>
+<description><![CDATA[String: the regular expression to match]]></description>
+</parameter>
+
+<parameter>
+<label>column</label>
+<description><![CDATA[int: ID number of the column to search]]></description>
+</parameter>
+
+<parameter>
+<label>columnName</label>
+<description><![CDATA[String: title of the column to search]]></description>
+</parameter>
+
 <related>
 getRow()
 rows()

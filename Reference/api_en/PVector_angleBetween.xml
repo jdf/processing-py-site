@@ -23,6 +23,20 @@ println(degrees(a))  # Prints "10.304845809936523"
 Calculates and returns the angle (in radians) between two vectors.
 ]]></description>
 
+<syntax>
+.angleBetween(<c>v1</c>, <c>v2</c>)
+</syntax>
+
+<parameter>
+<label>v1</label>
+<description><![CDATA[PVector: the x, y, and z components of a PVector]]></description>
+</parameter>
+
+<parameter>
+<label>v2</label>
+<description><![CDATA[PVector: the x, y, and z components of a PVector]]></description>
+</parameter>
+
 <related>
 
 </related>

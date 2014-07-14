@@ -43,6 +43,22 @@ def setup():
 Trims leading and trailing whitespace, such as spaces and tabs, from string table values. If no column is specified, then the values in all columns and rows are trimmed. A specific column may be referenced by either its ID or title.
 ]]></description>
 
+<syntax>
+.trim()
+.trim(<c>column</c>)
+.trim(<c>columnName</c>)
+</syntax>
+
+<parameter>
+<label>column</label>
+<description><![CDATA[int: ID number of the column to trim]]></description>
+</parameter>
+
+<parameter>
+<label>columnName</label>
+<description><![CDATA[String: title of the column to trim]]></description>
+</parameter>
+
 <related>
 removeTokens()
 </related>

@@ -59,6 +59,35 @@ for i in range(steps + 1):
 Calculates the tangent of a point on a Bezier curve. There is a good definition of <a href="http://en.wikipedia.org/wiki/Tangent" target="new"><em>tangent</em> on Wikipedia</a>.
 ]]></description>
 
+<syntax>
+bezierTangent(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>, <c>t</c>)
+</syntax>
+
+<parameter>
+<label>a</label>
+<description><![CDATA[float: coordinate of first point on the curve]]></description>
+</parameter>
+
+<parameter>
+<label>b</label>
+<description><![CDATA[float: coordinate of first control point]]></description>
+</parameter>
+
+<parameter>
+<label>c</label>
+<description><![CDATA[float: coordinate of second control point]]></description>
+</parameter>
+
+<parameter>
+<label>d</label>
+<description><![CDATA[float: coordinate of second point on the curve]]></description>
+</parameter>
+
+<parameter>
+<label>t</label>
+<description><![CDATA[float: value between 0 and 1]]></description>
+</parameter>
+
 <related>
 bezier()
 bezierVertex()

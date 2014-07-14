@@ -31,6 +31,26 @@ def setup():
 Retrieves an integer value from the <b>Table</b>'s specified row and column. The row is specified by its ID, while the column may be specified by either its ID or title.
 ]]></description>
 
+<syntax>
+.getInt(row, column)
+.getInt(row, columnName)
+</syntax>
+
+<parameter>
+<label>row</label>
+<description><![CDATA[int: ID number of the row to reference]]></description>
+</parameter>
+
+<parameter>
+<label>column</label>
+<description><![CDATA[int: ID number of the column to reference]]></description>
+</parameter>
+
+<parameter>
+<label>columnName</label>
+<description><![CDATA[String: title of the column to reference]]></description>
+</parameter>
+
 <related>
 getFloat()
 getString()

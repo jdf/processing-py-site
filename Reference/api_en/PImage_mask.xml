@@ -37,7 +37,7 @@ In addition to using a mask image, an integer array containing the alpha channel
 
 <parameter>
 <label>pimg</label>
-<description>PImage: any object of type PImage</description>
+<description><![CDATA[PImage: any object of type PImage]]></description>
 </parameter>
 
 <related>

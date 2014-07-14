@@ -35,6 +35,10 @@ def setup():
 Gets all of the specified element's attributes, and returns them as a list of Strings.
 ]]></description>
 
+<syntax>
+.listAttributes()
+</syntax>
+
 <related>
 
 </related>

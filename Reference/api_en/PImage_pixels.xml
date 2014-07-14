@@ -37,7 +37,7 @@ List containing the values for all the pixels in the image. These values are of 
 
 <parameter>
 <label>pimg</label>
-<description>PImage: any object of type PImage</description>
+<description><![CDATA[PImage: any object of type PImage]]></description>
 </parameter>
 
 <related>

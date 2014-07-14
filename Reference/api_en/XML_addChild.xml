@@ -44,6 +44,11 @@ Appends a new child to the element.  The child can be specified with either a St
 A reference to the newly created child is returned as an XML object.
 ]]></description>
 
+<syntax>
+.addChild(tag)
+.addChild(child)
+</syntax>
+
 <related>
 
 </related>
