@@ -26,6 +26,15 @@ Saves an image from the display window. Append a file extension to the name of t
 All images saved from the main drawing window will be opaque. To save images without a background, use <b>createGraphics()</b>.
 ]]></description>
 
+<syntax>
+save(<c>filename</c>)
+</syntax>
+
+<parameter>
+<label>filename</label>
+<description><![CDATA[String: any sequence of letters and numbers]]></description>
+</parameter>
+
 <related>
 saveFrame()
 createGraphics()

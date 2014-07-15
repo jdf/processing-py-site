@@ -26,6 +26,47 @@ def draw():
 Draws shapes to the display window. Shapes must be in the sketch's "data" directory to load correctly. Select "Add file..." from the "Sketch" menu to add the shape. Processing currently works with SVG, OBJ, and custom-created shapes. The <b>shape</b> parameter specifies the shape to display and the coordinate parameters define the location of the shape from its upper-left corner. The shape is displayed at its original size unless the <b>c</b> and <b>d</b> parameters specify a different size. The <b>shapeMode()</b> function can be used to change the way these parameters are interpreted.
 ]]></description>
 
+<syntax>
+shape(<c>shape</c>)
+shape(<c>shape</c>, <c>x</c>, <c>y</c>)
+shape(<c>shape</c>, <c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>)
+</syntax>
+
+<parameter>
+<label>shape</label>
+<description><![CDATA[PShape: the shape to display]]></description>
+</parameter>
+
+<parameter>
+<label>x</label>
+<description><![CDATA[float: x-coordinate of the shape]]></description>
+</parameter>
+
+<parameter>
+<label>y</label>
+<description><![CDATA[float: y-coordinate of the shape]]></description>
+</parameter>
+
+<parameter>
+<label>a</label>
+<description><![CDATA[float: x-coordinate of the shape]]></description>
+</parameter>
+
+<parameter>
+<label>b</label>
+<description><![CDATA[float: y-coordinate of the shape]]></description>
+</parameter>
+
+<parameter>
+<label>c</label>
+<description><![CDATA[float: width to display the shape]]></description>
+</parameter>
+
+<parameter>
+<label>d</label>
+<description><![CDATA[float: height to display the shape]]></description>
+</parameter>
+
 <related>
 PShape
 loadShape()

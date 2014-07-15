@@ -36,6 +36,31 @@ println(sf)  # Prints "009.01200"
 Utility function for formatting numbers into strings. There are two versions: one for formatting floats, and one for formatting ints. The values for the <b>digits</b>, <b>left</b>, and <b>right</b> parameters should always be positive integers.<br /><br />As shown in the above example, <b>nf()</b> is used to add zeros to the left and/or right of a number. This is typically for aligning a list of numbers. To <em>remove</em> digits from a floating-point number, use the <b>int()</b>, <b>ceil()</b>, <b>floor()</b>, or <b>round()</b> functions.  
 ]]></description>
 
+<syntax>
+nf(<c>num</c>, <c>digits</c>)
+nf(<c>num</c>, <c>left</c>, <c>right</c>)
+</syntax>
+
+<parameter>
+<label>num</label>
+<description><![CDATA[the number(s) to format]]></description>
+</parameter>
+
+<parameter>
+<label>digits</label>
+<description><![CDATA[int: number of digits to pad with zero]]></description>
+</parameter>
+
+<parameter>
+<label>left</label>
+<description><![CDATA[int: number of digits to the left of the decimal point]]></description>
+</parameter>
+
+<parameter>
+<label>right</label>
+<description><![CDATA[int: number of digits to the right of the decimal point]]></description>
+</parameter>
+
 <related>
 nfs()
 nfp()

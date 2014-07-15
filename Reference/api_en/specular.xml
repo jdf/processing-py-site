@@ -31,6 +31,32 @@ sphere(30)
 Sets the specular color of the materials used for shapes drawn to the screen, which sets the color of highlights. Specular refers to light which bounces off a surface in a preferred direction (rather than bouncing in all directions like a diffuse light). Used in combination with <b>emissive()</b>, <b>ambient()</b>, and <b>shininess()</b> in setting the material properties of shapes.
 ]]></description>
 
+<syntax>
+specular(<c>rgb</c>)
+specular(<c>gray</c>)
+specular(<c>v1</c>, <c>v2</c>, <c>v3</c>)
+</syntax>
+
+<parameter>
+<label>rgb</label>
+<description><![CDATA[int: color to set]]></description>
+</parameter>
+
+<parameter>
+<label>v1</label>
+<description><![CDATA[float: red or hue value (depending on current color mode)]]></description>
+</parameter>
+
+<parameter>
+<label>v2</label>
+<description><![CDATA[float: green or saturation value (depending on current color mode)]]></description>
+</parameter>
+
+<parameter>
+<label>v3</label>
+<description><![CDATA[float: blue or brightness value (depending on current color mode)]]></description>
+</parameter>
+
 <related>
 lightSpecular()
 ambient()

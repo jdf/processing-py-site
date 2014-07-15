@@ -29,7 +29,6 @@ pop() removes and returns the last element of the list if no index is given, or 
 <c>a</c>.pop(<c>i</c>)
 </syntax>
 
-
 <parameter>
 <label>a</label>
 <description>List from which to pop.</description>

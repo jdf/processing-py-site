@@ -76,8 +76,23 @@ color(<c>v1</c>, <c>v2</c>, <c>v3</c>, <c>alpha</c>)
 <description><![CDATA[float, or int: relative to current color range]]></description>
 </parameter>
 
-<related>
+<parameter>
+<label>v1</label>
+<description><![CDATA[float, or int: red or hue values relative to the current color range]]></description>
+</parameter>
 
+<parameter>
+<label>v2</label>
+<description><![CDATA[float, or int: green or saturation values relative to the current color range]]></description>
+</parameter>
+
+<parameter>
+<label>v3</label>
+<description><![CDATA[float, or int: blue or brightness values relative to the current color range]]></description>
+</parameter>
+
+<related>
+colorMode()
 </related>
 
 </root>

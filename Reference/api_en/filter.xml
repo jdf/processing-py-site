@@ -120,6 +120,27 @@ DILATE<br />
 Increases the light areas. No parameter is used.
 ]]></description>
 
+<syntax>
+filter(<c>shader</c>)
+filter(<c>kind</c>)
+filter(<c>kind</c>, <c>param</c>)
+</syntax>
+
+<parameter>
+<label>shader</label>
+<description><![CDATA[PShader: the fragment shader to apply]]></description>
+</parameter>
+
+<parameter>
+<label>kind</label>
+<description><![CDATA[int: Either THRESHOLD, GRAY, OPAQUE, INVERT, POSTERIZE, BLUR, ERODE, or DILATE]]></description>
+</parameter>
+
+<parameter>
+<label>param</label>
+<description><![CDATA[float: unique for each, see above]]></description>
+</parameter>
+
 <related>
 
 </related>

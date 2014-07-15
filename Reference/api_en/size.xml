@@ -67,6 +67,26 @@ The <b>renderer</b> parameter selects which rendering engine to use. For example
 <br/>
 ]]></description>
 
+<syntax>
+size(<c>w</c>,<c>h</c>)
+size(<c>w</c>,<c>h</c>,<c>renderer</c>)
+</syntax>
+
+<parameter>
+<label>w</label>
+<description><![CDATA[int: width of the display window in units of pixels]]></description>
+</parameter>
+
+<parameter>
+<label>h</label>
+<description><![CDATA[int: height of the display window in units of pixels]]></description>
+</parameter>
+
+<parameter>
+<label>renderer</label>
+<description><![CDATA[String: Either P2D, P3D, or PDF]]></description>
+</parameter>
+
 <related>
 width
 height

@@ -34,6 +34,25 @@ Normalizes a number from another range into a value between 0 and 1. Identical t
 Numbers outside of the range are not clamped to 0 and 1, because out-of-range values are often intentional and useful.  (See the second example above.)
 ]]></description>
 
+<syntax>
+norm(<c>value</c>, <c>start</c>, <c>stop</c>)
+</syntax>
+
+<parameter>
+<label>value</label>
+<description><![CDATA[float: the incoming value to be converted]]></description>
+</parameter>
+
+<parameter>
+<label>start</label>
+<description><![CDATA[float: lower bound of the value's current range]]></description>
+</parameter>
+
+<parameter>
+<label>stop</label>
+<description><![CDATA[float: upper bound of the value's current range]]></description>
+</parameter>
+
 <related>
 map()
 lerp()

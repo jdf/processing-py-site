@@ -32,6 +32,16 @@ The <b>level</b> parameter increases the level of smoothness with the P2D and P3
 With the default renderer, <b>smooth(2)</b> is bilinear and <b>smooth(4)</b> is bicubic. Nothing implemented on Android 2D.
 ]]></description>
 
+<syntax>
+smooth()
+smooth(<c>level</c>)
+</syntax>
+
+<parameter>
+<label>level</label>
+<description><![CDATA[int: either 2, 4, or 8]]></description>
+</parameter>
+
 <related>
 noSmooth()
 size() 

@@ -22,6 +22,25 @@ def draw():
 Constrains a value to not exceed a maximum and minimum value.
 ]]></description>
 
+<syntax>
+constrain(<c>amt</c>, <c>low</c>, <c>high</c>)
+</syntax>
+
+<parameter>
+<label>amt</label>
+<description><![CDATA[int, or float: the value to constrain]]></description>
+</parameter>
+
+<parameter>
+<label>low</label>
+<description><![CDATA[int, or float: minimum limit]]></description>
+</parameter>
+
+<parameter>
+<label>high</label>
+<description><![CDATA[int, or float: maximum limit]]></description>
+</parameter>
+
 <related>
 max()
 min()

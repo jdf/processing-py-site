@@ -35,6 +35,26 @@ point(30, 75, -50)
 Draws a point, a coordinate in space at the dimension of one pixel. The first parameter is the horizontal value for the point, the second value is the vertical value for the point, and the optional third value is the depth value. Drawing this shape in 3D with the <b>z</b> parameter requires the P3D parameter in combination with <b>size()</b> as shown in the above example.
 ]]></description>
 
+<syntax>
+point(<c>x</c>, <c>y</c>)
+point(<c>x</c>, <c>y</c>, <c>z</c>)
+</syntax>
+
+<parameter>
+<label>x</label>
+<description><![CDATA[float: x-coordinate of the point]]></description>
+</parameter>
+
+<parameter>
+<label>y</label>
+<description><![CDATA[float: y-coordinate of the point]]></description>
+</parameter>
+
+<parameter>
+<label>z</label>
+<description><![CDATA[float: z-coordinate of the point]]></description>
+</parameter>
+
 <related></related>
 
 </root>

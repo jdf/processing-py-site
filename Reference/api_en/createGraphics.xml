@@ -37,6 +37,32 @@ It's important to call any drawing functions between <b>beginDraw()</b> and <b>e
 Unlike the main drawing surface which is completely opaque, surfaces created with <b>createGraphics()</b> can have transparency. This makes it possible to draw into a graphics and maintain the alpha channel. By using <b>save()</b> to write a PNG or TGA file, the transparency of the graphics object will be honored.
 ]]></description>
 
+<syntax>
+createGraphics(<c>w</c>, <c>h</c>)
+createGraphics(<c>w</c>, <c>h</c>, <c>renderer</c>)
+createGraphics(<c>w</c>, <c>h</c>, <c>renderer</c>, <c>path</c>)
+</syntax>
+
+<parameter>
+<label>w</label>
+<description><![CDATA[int: width in pixels]]></description>
+</parameter>
+
+<parameter>
+<label>h</label>
+<description><![CDATA[int: height in pixels]]></description>
+</parameter>
+
+<parameter>
+<label>renderer</label>
+<description><![CDATA[String: Either P2D, P3D, or PDF]]></description>
+</parameter>
+
+<parameter>
+<label>path</label>
+<description><![CDATA[String: the name of the file (can be an absolute or relative path)]]></description>
+</parameter>
+
 <related>
 
 </related>

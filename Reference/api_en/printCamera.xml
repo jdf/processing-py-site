@@ -25,6 +25,10 @@ printCamera()
 Prints the current camera matrix to the Console (the text window at the bottom of Processing).
 ]]></description>
 
+<syntax>
+printCamera()
+</syntax>
+
 <related>
 camera()
 </related>

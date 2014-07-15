@@ -57,6 +57,21 @@ println(s)
 Sorts an array of numbers from smallest to largest, or puts an array of words in alphabetical order. The original array is not modified; a re-ordered array is returned. The <b>count</b> parameter states the number of elements to sort. For example, if there are 12 elements in an array and <b>count</b> is set to 5, only the first 5 elements in the array will be sorted. <!--As of release 0126, the alphabetical ordering is case insensitive.-->
 ]]></description>
 
+<syntax>
+sort(<c>list</c>)
+sort(<c>list</c>, <c>count</c>)
+</syntax>
+
+<parameter>
+<label>list</label>
+<description><![CDATA[list to sort]]></description>
+</parameter>
+
+<parameter>
+<label>count</label>
+<description><![CDATA[int: number of elements to sort, starting from 0]]></description>
+</parameter>
+
 <related>
 reverse()
 </related>

@@ -46,6 +46,13 @@ The default mode is <b>ellipseMode(CENTER)</b>, which interprets the first two p
 The parameter must be written in ALL CAPS because Processing is a case-sensitive language.
 ]]></description>
 
+<syntax>ellipseMode(<c>mode</c>)</syntax>
+
+<parameter>
+<label>mode</label>
+<description><![CDATA[int: either CENTER, RADIUS, CORNER, or CORNERS]]></description>
+</parameter>
+
 <related>
 ellipse()
 arc()

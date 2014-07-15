@@ -21,6 +21,10 @@ rect(30, 20, 55, 55)
 Disables filling geometry. If both <b>noStroke()</b> and <b>noFill()</b> are called, nothing will be drawn to the screen.
 ]]></description>
 
+<syntax>
+noFill()
+</syntax>
+
 <related>
 fill()
 stroke()

@@ -29,6 +29,15 @@ The <b>mouseWheel()</b> function returns positive values when the mouse wheel is
 Mouse and keyboard events only work when a program has <b>draw()</b>. Without <b>draw()</b>, the code is only run once and then stops listening for events.
 ]]></description>
 
+<syntax>
+mouseWheel(event)
+</syntax>
+
+<parameter>
+<label>event</label>
+<description><![CDATA[MouseEvent: the MouseEvent]]></description>
+</parameter>
+
 <related>
 mouseX
 mouseY

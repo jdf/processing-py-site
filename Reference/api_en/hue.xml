@@ -26,6 +26,15 @@ rect(50, 20, 35, 60)
 Extracts the hue value from a color.
 ]]></description>
 
+<syntax>
+hue(<c>rgb</c>)
+</syntax>
+
+<parameter>
+<label>rgb</label>
+<description><![CDATA[int: any value of the color datatype]]></description>
+</parameter>
+
 <related>
 red()
 green()

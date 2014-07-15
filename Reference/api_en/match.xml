@@ -50,6 +50,20 @@ If there are groups (specified by sets of parentheses) in the regular expression
 The syntax can be found in the reference for Java's <a href="http://download.oracle.com/javase/6/docs/api/">Pattern</a> class. For regular expression syntax, read the <a href="http://download.oracle.com/javase/tutorial/essential/regex/">Java Tutorial</a> on the topic.
 ]]></description>
 
+<syntax>
+match(<c>str</c>, <c>regexp</c>)
+</syntax>
+
+<parameter>
+<label>str</label>
+<description><![CDATA[String: the String to be searched]]></description>
+</parameter>
+
+<parameter>
+<label>regexp</label>
+<description><![CDATA[String: the regexp to be used for matching]]></description>
+</parameter>
+
 <related>
 matchAll()
 split()

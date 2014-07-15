@@ -25,6 +25,56 @@ Copies a region of pixels from the display window to another area of the display
 As of release 0149, this function ignores <b>imageMode()</b>.
 ]]></description>
 
+<syntax>
+copy(<c>sx</c>, <c>sy</c>, <c>sw</c>, <c>sh</c>, <c>dx</c>, <c>dy</c>, <c>dw</c>, <c>dh</c>)
+copy(<c>src</c>, <c>sx</c>, <c>sy</c>, <c>sw</c>, <c>sh</c>, <c>dx</c>, <c>dy</c>, <c>dw</c>, <c>dh</c>)
+</syntax>
+
+<parameter>
+<label>sx</label>
+<description><![CDATA[int: X coordinate of the source's upper left corner]]></description>
+</parameter>
+
+<parameter>
+<label>sy</label>
+<description><![CDATA[int: Y coordinate of the source's upper left corner]]></description>
+</parameter>
+
+<parameter>
+<label>sw</label>
+<description><![CDATA[int: source image width]]></description>
+</parameter>
+
+<parameter>
+<label>sh</label>
+<description><![CDATA[int: source image height]]></description>
+</parameter>
+
+<parameter>
+<label>dx</label>
+<description><![CDATA[int: X coordinate of the destination's upper left corner]]></description>
+</parameter>
+
+<parameter>
+<label>dy</label>
+<description><![CDATA[int: Y coordinate of the destination's upper left corner]]></description>
+</parameter>
+
+<parameter>
+<label>dw</label>
+<description><![CDATA[int: destination image width]]></description>
+</parameter>
+
+<parameter>
+<label>dh</label>
+<description><![CDATA[int: destination image height]]></description>
+</parameter>
+
+<parameter>
+<label>src</label>
+<description><![CDATA[PImage: an image variable referring to the source image.]]></description>
+</parameter>
+
 <related>
 alpha()
 blend()

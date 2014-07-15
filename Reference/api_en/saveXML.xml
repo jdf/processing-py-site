@@ -43,6 +43,21 @@ Alternatively, the file can be saved to any location on the computer by using an
 All files loaded and saved by the Processing API use UTF-8 encoding.
 ]]></description>
 
+<syntax>
+saveXML(<c>xml</c>, <c>filename</c>)
+saveXML(<c>xml</c>, <c>filename</c>, <c>options</c>)
+</syntax>
+
+<parameter>
+<label>xml</label>
+<description><![CDATA[XML: the XML object to save to disk]]></description>
+</parameter>
+
+<parameter>
+<label>filename</label>
+<description><![CDATA[String: name of the file to write to]]></description>
+</parameter>
+
 <related>
 XML
 loadXML()

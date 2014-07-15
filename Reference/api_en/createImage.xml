@@ -41,6 +41,25 @@ Be sure to include all three parameters, specifying only the width and height (b
 Advanced users please note that createImage() should be used instead of the syntax <tt>new PImage()</tt>. 
 ]]></description>
 
+<syntax>
+createImage(<c>w</c>, <c>h</c>, <c>format</c>)
+</syntax>
+
+<parameter>
+<label>w</label>
+<description><![CDATA[int: width in pixels]]></description>
+</parameter>
+
+<parameter>
+<label>h</label>
+<description><![CDATA[int: height in pixels]]></description>
+</parameter>
+
+<parameter>
+<label>format</label>
+<description><![CDATA[int: Either RGB, ARGB, ALPHA (grayscale alpha channel)]]></description>
+</parameter>
+
 <related>
 PImage
 PGraphics

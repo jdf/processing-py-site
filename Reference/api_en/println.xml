@@ -45,6 +45,22 @@ Before Processing 2.1, <b>println()</b> was used to write array data to the cons
 NOTE: Unlike Java, Python cannot concatenate data of different types. This means that println(3 + " blind mice") will give an error; instead, write println(str(3) + " blind mice").
 ]]></description>
 
+<syntax>
+println()
+println(<c>what</c>)
+println(<c>variables</c>)
+</syntax>
+
+<parameter>
+<label>what</label>
+<description><![CDATA[data to print to console]]></description>
+</parameter>
+
+<parameter>
+<label>variables</label>
+<description><![CDATA[list of data, separated by commas]]></description>
+</parameter>
+
 <related>
 print()
 printArray()

@@ -28,6 +28,33 @@ Sets the cursor to a predefined symbol or an image, or makes it visible if alrea
 Setting or hiding the cursor does not generally work with "Present" mode (when running full-screen).
 ]]></description>
 
+<syntax>
+cursor(<c>kind</c>)
+cursor(<c>img</c>)
+cursor(<c>img</c>, <c>x</c>, <c>y</c>)
+cursor()
+</syntax>
+
+<parameter>
+<label>kind</label>
+<description><![CDATA[int: either ARROW, CROSS, HAND, MOVE, TEXT, or WAIT]]></description>
+</parameter>
+
+<parameter>
+<label>img</label>
+<description><![CDATA[PImage: any variable of type PImage]]></description>
+</parameter>
+
+<parameter>
+<label>x</label>
+<description><![CDATA[int: the horizontal active spot of the cursor]]></description>
+</parameter>
+
+<parameter>
+<label>y</label>
+<description><![CDATA[int: the vertical active spot of the cursor]]></description>
+</parameter>
+
 <related>
 noCursor()
 </related> 

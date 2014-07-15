@@ -25,6 +25,16 @@ Objects are always rotated around their relative position to the origin, and pos
 Technically, <b>rotate()</b> multiplies the current transformation matrix by a rotation matrix. This function can be further controlled by <b>pushMatrix()</b> and <b>popMatrix()</b>.
 ]]></description>
 
+<syntax>
+rotate(<c>angle</c>)
+rotate(<c>angle</c>, x, y, z)
+</syntax>
+
+<parameter>
+<label>angle</label>
+<description><![CDATA[float: angle of rotation specified in radians]]></description>
+</parameter>
+
 <related>
 popMatrix()
 pushMatrix()

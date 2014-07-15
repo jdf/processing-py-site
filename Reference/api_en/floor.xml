@@ -20,6 +20,15 @@ a = floor(x)# Sets 'a' to 2
 Calculates the closest int value that is less than or equal to the value of the parameter.
 ]]></description>
 
+<syntax> 
+floor(<c>n</c>)
+</syntax>
+
+<parameter>
+<label>n</label>
+<description><![CDATA[float: number to round down]]></description>
+</parameter>
+
 <related>
 ceil()
 round()

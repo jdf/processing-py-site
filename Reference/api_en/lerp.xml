@@ -47,6 +47,25 @@ for i in range(10):
 Calculates a number between two numbers at a specific increment. The <b>amt</b> parameter is the amount to interpolate between the two values where 0.0 equal to the first point, 0.1 is very near the first point, 0.5 is half-way in between, etc. The lerp function is convenient for creating motion along a straight path and for drawing dotted lines.
 ]]></description>
 
+<syntax>
+lerp(<c>start</c>, <c>stop</c>, <c>amt</c>)
+</syntax>
+
+<parameter>
+<label>start</label>
+<description><![CDATA[float: first value]]></description>
+</parameter>
+
+<parameter>
+<label>stop</label>
+<description><![CDATA[float: second value]]></description>
+</parameter>
+
+<parameter>
+<label>amt</label>
+<description><![CDATA[float: float between 0.0 and 1.0]]></description>
+</parameter>
+
 <related>
 curvePoint()
 bezierPoint()

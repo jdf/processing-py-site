@@ -24,6 +24,20 @@ saveBytes("numbers.dat", nums)
 As the opposite of <b>loadBytes()</b>, this function will write an entire list of bytes to a file. The data is saved in binary format. This file is saved to the sketch's folder, which is opened by selecting "Show Sketch Folder" from the "Sketch" menu. Alternatively, the files can be saved to any location on the computer by using an absolute path (something that starts with / on Unix and Linux, or a drive letter on Windows).
 ]]></description>
 
+<syntax>
+saveBytes(<c>filename</c>, <c>data</c>)
+</syntax>
+
+<parameter>
+<label>filename</label>
+<description><![CDATA[String: name of the file to write to]]></description>
+</parameter>
+
+<parameter>
+<label>data</label>
+<description><![CDATA[list of bytes to be written]]></description>
+</parameter>
+
 <related>
 loadStrings()
 loadBytes()

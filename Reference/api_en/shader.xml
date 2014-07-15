@@ -31,6 +31,21 @@ def draw():
 Applies the shader specified by the parameters. It's compatible with the P2D and P3D renderers, but not with the default renderer.
 ]]></description>
 
+<syntax>
+shader(<c>shader</c>)
+shader(<c>shader</c>, <c>kind</c>)
+</syntax>
+
+<parameter>
+<label>shader</label>
+<description><![CDATA[PShader: name of shader file]]></description>
+</parameter>
+
+<parameter>
+<label>kind</label>
+<description><![CDATA[int: type of shader, either POINTS, LINES, or TRIANGLES]]></description>
+</parameter>
+
 <related></related>
 
 </root>

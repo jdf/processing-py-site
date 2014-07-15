@@ -38,6 +38,54 @@ sphere(30)
 Adds a spot light. Lights need to be included in the <b>draw()</b> to remain persistent in a looping program. Placing them in the <b>setup()</b> of a looping program will cause them to only have an effect the first time through the loop. The <b>v1</b>, <b>v2</b>, and <b>v3</b> parameters are interpreted as either RGB or HSB values, depending on the current color mode. The <b>x</b>, <b>y</b>, and <b>z</b> parameters specify the position of the light and <b>nx</b>, <b>ny</b>, <b>nz</b> specify the direction of light. The <b>angle</b> parameter affects angle of the spotlight cone, while <b>concentration</b> sets the bias of light focusing toward the center of that cone.
 ]]></description>
 
+<syntax>
+spotLight(<c>v1</c>, <c>v2</c>, <c>v3</c>, <c>x</c>, <c>y</c>, <c>z</c>, <c>nx</c>, <c>ny</c>, <c>nz</c>, <c>angle</c>, <c>concentration</c>)
+</syntax>
+
+<parameter>
+<label>v1</label>
+<description><![CDATA[float: red or hue value (depending on current color mode)]]></description>
+</parameter>
+
+<parameter>
+<label>v2</label>
+<description><![CDATA[float: green or saturation value (depending on current color mode)]]></description>
+</parameter>
+
+<parameter>
+<label>v3</label>
+<description><![CDATA[float: blue or brightness value (depending on current color mode)]]></description>
+</parameter>
+
+<parameter>
+<label>x</label>
+<description><![CDATA[float: x-coordinate of the light]]></description>
+</parameter>
+
+<parameter>
+<label>y</label>
+<description><![CDATA[float: y-coordinate of the light]]></description>
+</parameter>
+
+<parameter>
+<label>z</label>
+<description><![CDATA[float: z-coordinate of the light]]></description>
+</parameter>
+
+<parameter>
+<label>nx</label>
+<description><![CDATA[float: direction along the x axis]]></description>
+</parameter>
+
+<parameter>
+<label>ny</label>
+<description><![CDATA[float: direction along the y axis]]></description>
+</parameter>
+
+
+
+
+
 <related>
 lights()
 directionalLight()

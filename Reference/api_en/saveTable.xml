@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>loadTable()</name>
+<name>saveTable()</name>
 
 <category>Input</category>
 
@@ -35,9 +35,29 @@ Alternatively, the file can be saved to any location on the computer by using an
 All files loaded and saved by the Processing API use UTF-8 encoding.
 ]]></description>
 
+<syntax>
+saveTable(<c>table</c>, <c>filename</c>)
+saveTable(<c>table</c>, <c>filename</c>, <c>options</c>)
+</syntax> 
+
+<parameter>
+<label>table</label>
+<description><![CDATA[Table: the Table object to save to a file]]></description>
+</parameter>
+
+<parameter>
+<label>filename</label>
+<description><![CDATA[String: the filename to which the Table should be saved]]></description>
+</parameter>
+
+<parameter>
+<label>options</label>
+<description><![CDATA[String: can be one of "tsv", "csv", "bin", or "html"]]></description>
+</parameter>
+
 <related>
 Table
-saveTable()
+loadTable()
 loadBytes()
 loadStrings()
 loadXML()

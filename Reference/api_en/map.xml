@@ -53,6 +53,35 @@ In the first example above, the number 25 is converted from a value in the range
 As shown in the second example, numbers outside of the range are not clamped to the minimum and maximum parameters values, because out-of-range values are often intentional and useful.
 ]]></description>
 
+<syntax>
+map(<c>value</c>, <c>start1</c>, <c>stop1</c>, <c>start2</c>, <c>stop2</c>)
+</syntax>
+
+<parameter>
+<label>value</label>
+<description><![CDATA[float: the incoming value to be converted]]></description>
+</parameter>
+
+<parameter>
+<label>start1</label>
+<description><![CDATA[float: lower bound of the value's current range]]></description>
+</parameter>
+
+<parameter>
+<label>stop1</label>
+<description><![CDATA[float: upper bound of the value's current range]]></description>
+</parameter>
+
+<parameter>
+<label>start2</label>
+<description><![CDATA[float: lower bound of the value's target range]]></description>
+</parameter>
+
+<parameter>
+<label>stop2</label>
+<description><![CDATA[float: upper bound of the value's target range]]></description>
+</parameter>
+
 <related>
 norm()
 lerp()

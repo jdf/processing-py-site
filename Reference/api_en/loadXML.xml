@@ -35,12 +35,20 @@ def setup():
 ]]></code>
 </example>
 
-
 <description><![CDATA[
 Reads the contents of a file or URL and creates an XML object with its values. If a file is specified, it must be located in the sketch's "data" folder. The filename parameter can also be a URL to a file found online.<br/>
 <br/>
 All files loaded and saved by the Processing API use UTF-8 encoding. If you need to load an XML file that's not in UTF-8 format, see the <a href="http://processing.org/reference/javadoc/core/processing/data/XML.html">developer's reference</a> for the XML object.
 ]]></description>
+
+<syntax>
+loadXML(<c>filename</c>)
+</syntax>
+
+<parameter>
+<label>filename</label>
+<description><![CDATA[String: name of a file in the data folder or a URL.]]></description>
+</parameter>
 
 <related>
 XML

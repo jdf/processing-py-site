@@ -26,6 +26,20 @@ Alternatively, the file can be saved to any location on the computer by using an
 Starting with Processing 1.0, all files loaded and saved by the Processing API use UTF-8 encoding. In earlier releases, the default encoding for your platform was used, which causes problems when files are moved to other platforms.
 ]]></description>
 
+<syntax>
+saveStrings(<c>filename</c>, <c>data</c>)
+</syntax>
+
+<parameter>
+<label>filename</label>
+<description><![CDATA[String: filename for output]]></description>
+</parameter>
+
+<parameter>
+<label>data</label>
+<description><![CDATA[string list to be written]]></description>
+</parameter>
+
 <related>
 loadStrings()
 loadBytes()

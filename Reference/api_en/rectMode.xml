@@ -46,6 +46,14 @@ The default mode is <b>rectMode(CORNER)</b>, which interprets the first two para
 The parameter must be written in ALL CAPS because Processing is a case-sensitive language.
 ]]></description>
 
+<syntax>rectMode(mode)</syntax>
+
+<parameter>
+<label>mode</label>
+<description><![CDATA[int: either CORNER, CORNERS, CENTER, or RADIUS]]></description>
+</parameter>
+
+
 <related>
 rect()
 </related>

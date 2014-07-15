@@ -29,6 +29,25 @@ endShape(CLOSE)
 Sets the current normal vector. Used for drawing three dimensional shapes and surfaces, <b>normal()</b> specifies a vector perpendicular to a shape's surface which, in turn, determines how lighting affects it. Processing attempts to automatically assign normals to shapes, but since that's imperfect, this is a better option when you want more control. This function is identical to <b>glNormal3f()</b> in OpenGL.
 ]]></description>
 
+<syntax>
+normal(<c>nx</c>, <c>ny</c>, <c>nz</c>)
+</syntax>
+
+<parameter>
+<label>nx</label>
+<description><![CDATA[float: x direction]]></description>
+</parameter>
+
+<parameter>
+<label>ny</label>
+<description><![CDATA[float: y direction]]></description>
+</parameter>
+
+<parameter>
+<label>nz</label>
+<description><![CDATA[float: z direction]]></description>
+</parameter>
+
 <related>
 beginShape()
 endShape()

@@ -24,9 +24,8 @@ Allows the program to make a decision about which code to execute. If the <b>tes
 ]]></description>
 
 <syntax>
-if <c>test</c>: { 
+if <c>test</c>: 
   <c>statements</c> 
-} 
 </syntax>
 
 <parameter>

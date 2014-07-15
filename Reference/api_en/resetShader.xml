@@ -34,6 +34,16 @@ def draw():
 Restores the default shaders. Code that runs after <b>resetShader()</b> will not be affected by previously defined shaders.
 ]]></description>
 
+<syntax>
+resetShader()
+resetShader(<c>kind</c>)
+</syntax>
+
+<parameter>
+<label>kind</label>
+<description><![CDATA[int: type of shader, either POINTS, LINES, or TRIANGLES]]></description>
+</parameter>
+
 <related></related>
 
 </root>

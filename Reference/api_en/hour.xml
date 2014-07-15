@@ -26,6 +26,10 @@ def draw():
 Processing communicates with the clock on your computer. The <b>hour()</b> function returns the current hour as a value from 0 - 23.
 ]]></description>
 
+<syntax>
+hour()
+</syntax>
+
 <related>
 millis()
 second()

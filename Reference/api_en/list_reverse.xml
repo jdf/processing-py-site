@@ -22,6 +22,7 @@ Reverse the elements of a list in place.
 ]]></description>
 
 <syntax>
+.reverse()
 </syntax>
 
 <parameter>

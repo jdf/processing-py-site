@@ -41,6 +41,46 @@ endShape()
 Specifies vertex coordinates for quadratic Bezier curves. Each call to <b>quadraticVertex()</b> defines the position of one control points and one anchor point of a Bezier curve, adding a new segment to a line or shape. The first time <b>quadraticVertex()</b> is used within a <b>beginShape()</b> call, it must be prefaced with a call to <b>vertex()</b> to set the first anchor point. This function must be used between <b>beginShape()</b> and <b>endShape()</b> and only when there is no MODE parameter specified to <b>beginShape()</b>. Using the 3D version requires rendering with P3D (see the Environment reference for more information).
 ]]></description>
 
+<syntax>
+quadraticVertex(<c>cx</c>, <c>cy</c>, <c>x3</c>, <c>y3</c>)
+quadraticVertex(<c>cx</c>, <c>cy</c>, <c>cz</c>, <c>x3</c>, <c>y3</c>, <c>z3</c>)
+</syntax>
+
+<parameter>
+<label>cx</label>
+<description><![CDATA[float: the x-coordinate of the control point]]></description>
+</parameter>
+
+<parameter>
+<label>cy</label>
+<description><![CDATA[float: the y-coordinate of the control point]]></description>
+</parameter>
+
+<parameter>
+<label>x3</label>
+<description><![CDATA[float: the x-coordinate of the anchor point]]></description>
+</parameter>
+
+<parameter>
+<label>y3</label>
+<description><![CDATA[float: the x-coordinate of the anchor point]]></description>
+</parameter>
+
+<parameter>
+<label>y3</label>
+<description><![CDATA[float: the y-coordinate of the anchor point]]></description>
+</parameter>
+
+<parameter>
+<label>cz</label>
+<description><![CDATA[float: the z-coordinate of the control point]]></description>
+</parameter>
+
+<parameter>
+<label>z3</label>
+<description><![CDATA[float: the z-coordinate of the anchor point]]></description>
+</parameter>
+
 <related>
 curveVertex()
 vertex()

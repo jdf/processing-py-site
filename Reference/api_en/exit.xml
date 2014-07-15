@@ -27,6 +27,10 @@ Rather than terminating immediately, <b>exit()</b> will cause the sketch to exit
 <br />
 ]]></description>
 
+<syntax>
+exit()
+</syntax>
+
 <related>
 
 </related>

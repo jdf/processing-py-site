@@ -38,6 +38,21 @@ Alternatively, the file maybe be loaded from anywhere on the local computer usin
 If the file is not available or an error occurs, <b>null</b> will be returned and an error message will be printed to the console. The error message does not halt the program, however the null value may cause a NullPointerException if your code does not check whether the value returned is null.<br/>
 ]]></description>
 
+<syntax> 
+loadShader(<c>fragFilename</c>)
+loadShader(<c>fragFilename</c>, <c>vertFilename</c>)
+</syntax>
+
+<parameter>
+<label>fragFilename</label>
+<description><![CDATA[String: name of fragment shader file]]></description>
+</parameter>
+
+<parameter>
+<label>vertFilename</label>
+<description><![CDATA[String: name of vertex shader file]]></description>
+</parameter>
+
 <related></related>
 
 </root>

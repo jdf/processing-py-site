@@ -69,6 +69,10 @@ When <b>noLoop()</b> is used, it's not possible to manipulate or access the scre
 Note that if the sketch is resized, <b>redraw()</b> will be called to update the sketch, even after <b>noLoop()</b> has been specified. Otherwise, the sketch would enter an odd state until <b>loop()</b> was called.
 ]]></description>
 
+<syntax>
+noLoop()
+</syntax>
+
 <related>
 loop()
 redraw()

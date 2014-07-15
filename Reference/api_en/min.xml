@@ -29,6 +29,32 @@ h = min(values)  # Sets 'h' to -3
 Determines the smallest value in a sequence of numbers, and then returns that value. <b>min()</b> accepts either two or three <b>float</b> or <b>int</b> values as parameters, or an array of any length.
 ]]></description>
 
+<syntax>
+min(<c>a</c>, <c>b</c>)
+min(<c>a</c>, <c>b</c>, <c>c</c>)
+min(<c>list</c>)
+</syntax>
+
+<parameter>
+<label>a</label>
+<description><![CDATA[int, or float: first number]]></description>
+</parameter>
+
+<parameter>
+<label>b</label>
+<description><![CDATA[int, or float: second number]]></description>
+</parameter>
+
+<parameter>
+<label>c</label>
+<description><![CDATA[int, or float: third number]]></description>
+</parameter>
+
+<parameter>
+<label>list</label>
+<description><![CDATA[float, or int: list of numbers to compare]]></description>
+</parameter>
+
 <related>
 max()
 </related>

@@ -41,4 +41,13 @@ brightness()
 >> (right shift)
 </related>
 
+<syntax>
+red(<c>rgb</c>)
+</syntax>
+
+<parameter>
+<label>rgb</label>
+<description><![CDATA[int: any value of the color datatype]]></description>
+</parameter>
+
 </root>

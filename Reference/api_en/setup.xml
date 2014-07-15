@@ -33,6 +33,10 @@ it shouldn't be called again after its initial execution. Note: Variables declar
 <b>setup()</b> are not accessible within other functions, including <b>draw()</b>. 
 ]]></description>
 
+<syntax>
+setup()
+</syntax>
+
 <related>
 size()
 loop()

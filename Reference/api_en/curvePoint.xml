@@ -32,6 +32,35 @@ for i in range(steps):
 Evaluates the curve at point <b>t</b> for points <b>a</b>, <b>b</b>, <b>c</b>, <b>d</b>. The parameter <b>t</b> may range from 0 (the start of the curve) and 1 (the end of the curve). <b>a</b> and <b>d</b> are points on the curve, and <b>b</b> and <b>c</b> are the control points. This can be used once with the <b>x</b> coordinates and a second time with the <b>y</b> coordinates to get the location of a curve at <b>t</b>.
 ]]></description>
 
+<syntax>
+curvePoint(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>, <c>t</c>)
+</syntax>
+
+<parameter>
+<label>a</label>
+<description><![CDATA[float: coordinate of first point on the curve]]></description>
+</parameter>
+
+<parameter>
+<label>b</label>
+<description><![CDATA[float: coordinate of second point on the curve]]></description>
+</parameter>
+
+<parameter>
+<label>c</label>
+<description><![CDATA[float: coordinate of third point on the curve]]></description>
+</parameter>
+
+<parameter>
+<label>d</label>
+<description><![CDATA[float: coordinate of fourth point on the curve]]></description>
+</parameter>
+
+<parameter>
+<label>t</label>
+<description><![CDATA[float: value between 0 and 1]]></description>
+</parameter>
+
 <related>
 curve()
 curveVertex()

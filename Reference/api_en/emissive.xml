@@ -26,6 +26,32 @@ sphere(30)
 Sets the emissive color of the material used for drawing shapes drawn to the screen. Used in combination with <b>ambient()</b>, <b>specular()</b>, and <b>shininess()</b> in setting the material properties of shapes.
 ]]></description>
 
+<syntax>
+emissive(<c>rgb</c>)
+emissive(<c>gray</c>)
+emissive(<c>v1</c>, <c>v2</c>, <c>v3</c>)
+</syntax>
+
+<parameter>
+<label>rgb</label>
+<description><![CDATA[int: color to set]]></description>
+</parameter>
+
+<parameter>
+<label>v1</label>
+<description><![CDATA[float: red or hue value (depending on current color mode)]]></description>
+</parameter>
+
+<parameter>
+<label>v2</label>
+<description><![CDATA[float: green or saturation value (depending on current color mode)]]></description>
+</parameter>
+
+<parameter>
+<label>v3</label>
+<description><![CDATA[float: blue or brightness value (depending on current color mode)]]></description>
+</parameter>
+
 <related>
 ambient()
 specular()

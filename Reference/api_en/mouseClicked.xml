@@ -35,6 +35,11 @@ The <b>mouseClicked()</b> function is called <i>after</i> a mouse button has bee
 Mouse and keyboard events only work when a program has <b>draw()</b>. Without <b>draw()</b>, the code is only run once and then stops listening for events.
 ]]></description>
 
+<syntax>
+mouseClicked()
+mouseClicked(event)
+</syntax>
+
 <related>
 mouseX
 mouseY

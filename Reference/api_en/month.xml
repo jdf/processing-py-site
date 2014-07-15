@@ -33,6 +33,10 @@ def draw():
 Processing communicates with the clock on your computer. The <b>month()</b> function returns the current month as a value from 1 - 12.
 ]]></description>
 
+<syntax>
+month()
+</syntax>
+
 <related>
 millis()
 second()

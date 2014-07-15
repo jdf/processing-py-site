@@ -51,6 +51,36 @@ The <b>img</b> parameter specifies the image to display and by default the <b>a<
 The color of an image may be modified with the <b>tint()</b> function. This function will maintain transparency for GIF and PNG images.
 ]]></description>
 
+<syntax>
+image(<c>img</c>, <c>a</c>, <c>b</c>)
+image(<c>img</c>, <c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>)
+</syntax>
+
+<parameter>
+<label>img</label>
+<description><![CDATA[PImage: the image to display]]></description>
+</parameter>
+
+<parameter>
+<label>a</label>
+<description><![CDATA[float: x-coordinate of the image]]></description>
+</parameter>
+
+<parameter>
+<label>b</label>
+<description><![CDATA[float: y-coordinate of the image]]></description>
+</parameter>
+
+<parameter>
+<label>c</label>
+<description><![CDATA[float: width to display the image]]></description>
+</parameter>
+
+<parameter>
+<label>d</label>
+<description><![CDATA[float: height to display the image]]></description>
+</parameter>
+
 <related>
 loadImage()
 PImage

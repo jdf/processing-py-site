@@ -26,6 +26,21 @@ Utility function for formatting numbers into strings and placing appropriate com
 For a non-US locale, this will insert periods instead of commas, or whatever is apprioriate for that region.
 ]]></description>
 
+<syntax>
+nfc(<c>num</c>)
+nfc(<c>num</c>, <c>right</c>)
+</syntax>
+
+<parameter>
+<label>num</label>
+<description><![CDATA[the number(s) to format]]></description>
+</parameter>
+
+<parameter>
+<label>right</label>
+<description><![CDATA[int: number of digits to the right of the decimal point]]></description>
+</parameter>
+
 <related>
 nf()
 nfp()

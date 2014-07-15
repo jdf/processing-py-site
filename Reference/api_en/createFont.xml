@@ -45,6 +45,32 @@ The <b>size</b> parameter states the font size you want to generate. The <b>smoo
 This function allows Processing to work with the font natively in the default renderer, so the letters are defined by vector geometry and are rendered quickly. In the <b>P2D</b> and <b>P3D</b> renderers, the function sets the project to render the font as a series of small textures. For instance, when using the default renderer, the actual native version of the font will be employed by the sketch, improving drawing quality and performance. With the <b>P2D</b> and <b>P3D</b> renderers, the bitmapped version will be used to improve speed and appearance, but the results are poor when exporting if the sketch does not include the .otf or .ttf file, and the requested font is not available on the machine running the sketch. 
 ]]></description>
 
+<syntax>
+createFont(<c>name</c>, <c>size</c>)
+createFont(<c>name</c>, <c>size</c>, <c>smooth</c>)
+createFont(<c>name</c>, <c>size</c>, <c>smooth</c>, <c>charset</c>)
+</syntax>
+
+<parameter>
+<label>name</label>
+<description><![CDATA[String: name of the font to load]]></description>
+</parameter>
+
+<parameter>
+<label>size</label>
+<description><![CDATA[float: point size of the font]]></description>
+</parameter>
+
+<parameter>
+<label>smooth</label>
+<description><![CDATA[boolean: true for an antialiased font, false for aliased]]></description>
+</parameter>
+
+<parameter>
+<label>charset</label>
+<description><![CDATA[char: list containing characters to be generated]]></description>
+</parameter>
+
 <related>
 PFont
 textFont()

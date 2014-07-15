@@ -34,6 +34,21 @@ This function loads images on a separate thread so that your sketch doesn't free
 The <b>extension</b> parameter is used to determine the image type in cases where the image filename does not end with a proper extension. Specify the extension as the second parameter to <b>requestImage()</b>.
 ]]></description>
 
+<syntax>
+requestImage(<c>filename</c>)
+requestImage(<c>filename</c>, <c>extension</c>)
+</syntax>
+
+<parameter>
+<label>filename</label>
+<description><![CDATA[String: name of the file to load, can be .gif, .jpg, .tga, or a handful of other image types depending on your platform]]></description>
+</parameter>
+
+<parameter>
+<label>extension</label>
+<description><![CDATA[String: the type of image to load, for example "png", "gif", "jpg"]]></description>
+</parameter>
+
 <related>
 PImage
 loadImage()

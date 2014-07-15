@@ -46,6 +46,16 @@ When specifying both a header and the file type, separate the options with comma
 All files loaded and saved by the Processing API use UTF-8 encoding.
 ]]></description>
 
+<syntax>
+loadTable(<c>filename</c>)
+loadTable(<c>filename</c>, <c>options</c>)
+</syntax>
+
+<parameter>
+<label>filename</label>
+<description><![CDATA[String: name of a file in the data folder or a URL.]]></description>
+</parameter>
+
 <related>
 Table
 saveTable()

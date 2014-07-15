@@ -39,9 +39,58 @@ Draws a rectangle to the screen. A rectangle is a four-sided shape with every an
 To draw a rounded rectangle, add a fifth parameter, which is used as the radius value for all four corners.<br/>
 <br/>
 To use a different radius value for each corner, include eight parameters. When using eight parameters, the latter four set the radius of the arc at each corner separately, starting with the top-left corner and moving clockwise around the rectangle.
-
-
 ]]></description>
+
+<syntax>
+rect(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>)
+rect(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>, <c>r</c>)
+rect(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>, <c>tl</c>, <c>tr</c>, <c>br</c>, <c>bl</c>)
+</syntax>
+
+<parameter>
+<label>a</label>
+<description><![CDATA[float: x-coordinate of the rectangle by default]]></description>
+</parameter>
+
+<parameter>
+<label>b</label>
+<description><![CDATA[float: y-coordinate of the rectangle by default]]></description>
+</parameter>
+
+<parameter>
+<label>c</label>
+<description><![CDATA[float: width of the rectangle by default]]></description>
+</parameter>
+
+<parameter>
+<label>d</label>
+<description><![CDATA[float: height of the rectangle by default]]></description>
+</parameter>
+
+<parameter>
+<label>r</label>
+<description><![CDATA[float: radii for all four corners]]></description>
+</parameter>
+
+<parameter>
+<label>tl</label>
+<description><![CDATA[float: radius for top-left corner]]></description>
+</parameter>
+
+<parameter>
+<label>tr</label>
+<description><![CDATA[float: radius for top-right corner]]></description>
+</parameter>
+
+<parameter>
+<label>br</label>
+<description><![CDATA[float: radius for bottom-right corner]]></description>
+</parameter>
+
+<parameter>
+<label>bl</label>
+<description><![CDATA[float: radius for bottom-left corner]]></description>
+</parameter>
 
 <related>
 rectMode()

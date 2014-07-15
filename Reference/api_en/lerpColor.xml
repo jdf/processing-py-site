@@ -34,6 +34,25 @@ Calculates a color or colors between two color at a specific increment. The <b>a
 An amount below 0 will be treated as 0. Likewise, amounts above 1 will be capped at 1. This is different from the behavior of lerp(), but necessary because otherwise numbers outside the range will produce strange and unexpected colors.
 ]]></description>
 
+<syntax>
+lerpColor(<c>c1</c>, <c>c2</c>, <c>amt</c>)
+</syntax>
+
+<parameter>
+<label>c1</label>
+<description><![CDATA[int: interpolate from this color]]></description>
+</parameter>
+
+<parameter>
+<label>c2</label>
+<description><![CDATA[int: interpolate to this color]]></description>
+</parameter>
+
+<parameter>
+<label>amt</label>
+<description><![CDATA[float: between 0.0 and 1.0]]></description>
+</parameter>
+
 <related>
 color()
 lerp()

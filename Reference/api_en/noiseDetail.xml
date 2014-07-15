@@ -36,6 +36,21 @@ By default, noise is computed over 4 octaves with each octave contributing exact
 By changing these parameters, the signal created by the <b>noise()</b> function can be adapted to fit very specific needs and characteristics.
 ]]></description>
 
+<syntax>
+noiseDetail(<c>lod</c>)
+noiseDetail(<c>lod</c>, <c>falloff</c>)
+</syntax>
+
+<parameter>
+<label>lod</label>
+<description><![CDATA[int: number of octaves to be used by the noise]]></description>
+</parameter>
+
+<parameter>
+<label>falloff</label>
+<description><![CDATA[float: falloff factor for each octave]]></description>
+</parameter>
+
 <related>
 noise()
 </related>

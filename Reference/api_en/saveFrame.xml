@@ -50,6 +50,16 @@ Alternatively, the files can be saved to any location on the computer by using a
 All images saved from the main drawing window will be opaque. To save images without a background, use <b>createGraphics()</b>.
 ]]></description>
 
+<syntax>
+saveFrame()
+saveFrame(filename)
+</syntax>
+
+<parameter>
+<label>filename</label>
+<description><![CDATA[String: any sequence of letters or numbers that ends with either ".tif", ".tga", ".jpg", or ".png"]]></description>
+</parameter>
+
 <related>
 save()
 createGraphics()

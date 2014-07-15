@@ -33,6 +33,11 @@ The <b>mouseMoved()</b> function is called every time the mouse moves and a mous
 Mouse and keyboard events only work when a program has <b>draw()</b>. Without <b>draw()</b>, the code is only run once and then stops listening for events.
 ]]></description>
 
+<syntax>
+mouseMoved()
+mouseMoved(event)
+</syntax>
+
 <related>
 mouseX
 mouseY

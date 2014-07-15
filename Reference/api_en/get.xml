@@ -38,6 +38,32 @@ If the pixel requested is outside of the image window, black is returned. The nu
 Getting the color of a single pixel with <b>get(x, y)</b> is easy, but not as fast as grabbing the data directly from <b>pixels[]</b>. The equivalent statement to <b>get(x, y)</b> using <b>pixels[]</b> is <b>pixels[y*width+x]</b>. See the reference for <a href="pixels.html">pixels[]</a> for more information.
 ]]></description>
 
+<syntax>
+get(x, y)
+get(x, y, w, h)
+get()
+</syntax>
+
+<parameter>
+<label>x</label>
+<description><![CDATA[int: x-coordinate of the pixel]]></description>
+</parameter>
+
+<parameter>
+<label>y</label>
+<description><![CDATA[int: y-coordinate of the pixel]]></description>
+</parameter>
+
+<parameter>
+<label>w</label>
+<description><![CDATA[int: width of pixel rectangle to get]]></description>
+</parameter>
+
+<parameter>
+<label>h</label>
+<description><![CDATA[int: height of pixel rectangle to get]]></description>
+</parameter>
+
 <related>
 set()
 pixels

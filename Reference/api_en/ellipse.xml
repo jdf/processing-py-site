@@ -19,6 +19,30 @@ ellipse(56, 46, 55, 55)
 Draws an ellipse (oval) to the screen. An ellipse with equal width and height is a circle. By default, the first two parameters set the location, and the third and fourth parameters set the shape's width and height. The origin may be changed with the <b>ellipseMode()</b> function.
 ]]></description>
 
+<syntax>
+ellipse(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>)
+</syntax>
+
+<parameter>
+<label>a</label>
+<description><![CDATA[float: x-coordinate of the ellipse]]></description>
+</parameter>
+
+<parameter>
+<label>b</label>
+<description><![CDATA[float: y-coordinate of the ellipse]]></description>
+</parameter>
+
+<parameter>
+<label>c</label>
+<description><![CDATA[float: width of the ellipse by default]]></description>
+</parameter>
+
+<parameter>
+<label>d</label>
+<description><![CDATA[float: height of the ellipse by default]]></description>
+</parameter>
+
 <related>
 ellipseMode()
 arc()

@@ -27,6 +27,13 @@ Shears a shape around the y-axis the amount specified by the <b>angle</b> parame
 Technically, <b>shearY()</b> multiplies the current transformation matrix by a rotation matrix. This function can be further controlled by the <b>pushMatrix()</b> and <b>popMatrix()</b> functions.
 ]]></description>
 
+<syntax>shearY(<c>angle</c>)</syntax>
+
+<parameter>
+<label>angle</label>
+<description><![CDATA[float: angle of shear specified in radians]]></description>
+</parameter>
+
 <related>
 popMatrix()
 pushMatrix()

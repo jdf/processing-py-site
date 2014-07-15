@@ -22,6 +22,15 @@ sphere(28)
 A sphere is a hollow ball made from tessellated triangles.
 ]]></description>
 
+<syntax>
+sphere(<c>r</c>)
+</syntax>
+
+<parameter>
+<label>r</label>
+<description><![CDATA[float: the radius of the sphere]]></description>
+</parameter>
+
 <related>
 sphereDetail()
 </related>

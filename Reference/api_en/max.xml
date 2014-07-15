@@ -29,6 +29,32 @@ d = max(values)  # Sets 'd' to 362
 Determines the largest value in a sequence of numbers, and then returns that value. <b>max()</b> accepts either two or three <b>float</b> or <b>int</b> values as parameters, or an array of any length.
 ]]></description>
 
+<syntax> 
+max(<c>a</c>, <c>b</c>)
+max(<c>a</c>, <c>b</c>, <c>c</c>)
+max(<c>list</c>)
+</syntax>
+
+<parameter>
+<label>a</label>
+<description><![CDATA[float, or int: first number to compare]]></description>
+</parameter>
+
+<parameter>
+<label>b</label>
+<description><![CDATA[float, or int: second number to compare]]></description>
+</parameter>
+
+<parameter>
+<label>c</label>
+<description><![CDATA[float, or int: third number to compare]]></description>
+</parameter>
+
+<parameter>
+<label>list</label>
+<description><![CDATA[float, or int: list of numbers to compare]]></description>
+</parameter>
+
 <related>
 min()
 </related>

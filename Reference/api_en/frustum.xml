@@ -32,6 +32,40 @@ Note that the near value must be greater than zero (as the point of the frustum 
 Works like glFrustum, except it wipes out the current perspective matrix rather than multiplying itself with it.
 ]]></description>
 
+<syntax>
+frustum(<c>left</c>, <c>right</c>, <c>bottom</c>, <c>top</c>, <c>near</c>, <c>far</c>)
+</syntax>
+
+<parameter>
+<label>left</label>
+<description><![CDATA[float: left coordinate of the clipping plane]]></description>
+</parameter>
+
+<parameter>
+<label>right</label>
+<description><![CDATA[float: right coordinate of the clipping plane]]></description>
+</parameter>
+
+<parameter>
+<label>bottom</label>
+<description><![CDATA[float: bottom coordinate of the clipping plane]]></description>
+</parameter>
+
+<parameter>
+<label>top</label>
+<description><![CDATA[float: top coordinate of the clipping plane]]></description>
+</parameter>
+
+<parameter>
+<label>near</label>
+<description><![CDATA[float: near component of the clipping plane; must be greater than zero]]></description>
+</parameter>
+
+<parameter>
+<label>far</label>
+<description><![CDATA[float: far component of the clipping plane; must be greater than the near value]]></description>
+</parameter>
+
 <related>
 camera()
 endCamera()
