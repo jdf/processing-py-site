@@ -14,8 +14,8 @@
 
 ###Incomplete xml files as of this writing (mostly specific to Python):
    
-string.xml
-string_slice.xml
-list_slice.xml
-list.xml
-[and any others that would be useful for a Python novice]
+- string.xml
+- string_slice.xml
+- list_slice.xml
+- list.xml
+- [and any others that would be useful for a Python novice]
