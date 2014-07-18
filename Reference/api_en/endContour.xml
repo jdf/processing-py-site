@@ -42,7 +42,7 @@ Transformations such as <b>translate()</b>, <b>rotate()</b>, and <b>scale()</b> 
 
 <syntax>
 endContour()
-</sytnax>
+</syntax>
 
 <related>
 

@@ -25,7 +25,7 @@ line(0, 0, x1, y2)
 println(mag(x1, y2))  # Prints "72.8011"
 line(0, 0, x2, y2)
 println(mag(x2, y2))  # Prints "106.30146"
-]></code>
+]]></code>
 </example>
 
 <description><![CDATA[

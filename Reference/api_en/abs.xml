@@ -24,7 +24,7 @@ Calculates the absolute value (magnitude) of a number. The absolute value of a n
 
 <syntax>
 abs(n)
-<syntax>
+</syntax>
 
 <related>
 

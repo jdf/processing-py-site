@@ -39,21 +39,21 @@ range(<c>start</c>, <c>end</c>, <c>increment</c>)
 
 <parameter>
 <label>start</label>
-<description><<![CDATA[
+<description><![CDATA[
 start point of the generated list
 ]]></description>
 </parameter>
 
 <parameter>
 <label>end</label>
-<description><<![CDATA[
+<description><![CDATA[
 end point of the generated list
 ]]></description>
 </parameter>
 
 <parameter>
 <label>increment</label>
-<description><<![CDATA[
+<description><![CDATA[
 value to increment by 
 ]]></description>
 </parameter>

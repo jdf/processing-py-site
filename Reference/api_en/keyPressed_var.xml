@@ -26,7 +26,7 @@ def draw():
         fill(255)
     rect(25, 25, 50, 50)
 
-]></code>
+]]></code>
 </example>
 
 <description><![CDATA[

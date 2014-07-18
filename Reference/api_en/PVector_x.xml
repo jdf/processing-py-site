@@ -22,7 +22,7 @@ def setup():
     println(v.z)  # Prints "40.0"
     v.x = 50.0
     println(v.x)  # Prints "50.0"
-]></code>
+]]></code>
 </example>
 
 <description><![CDATA[
