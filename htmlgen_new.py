@@ -38,6 +38,7 @@ to_update = get_files_to_update(src_dir, target_dir)
 print('%s stale files to be translated' % len(to_update))
 for source_file_name in to_update:
     source_file_path = src_dir + source_file_name
+    print("source file name, path:",source_file_name,source_file_path)
     dest_file_path = target_dir + source_file_name[:-4] + '.html'
     try:
         htmlgen_old.translate_file(source_file_path, dest_file_path)

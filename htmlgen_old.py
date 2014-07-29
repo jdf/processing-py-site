@@ -14,6 +14,7 @@ import os
 import re
 import shutil
 import sys
+import copy
 
 firstexamplehtml = '''<tr class=""><th scope="row">Examples</th><td><div class="example"><img src="images/@picname" alt="example pic" /><pre class="margin">
 @code
@@ -34,14 +35,13 @@ paramshtml = '''<tr class="">
 <td>@paramdescription</td>
 </tr>'''
 
-template = None
+template_source = None
 
 with open ("template/reference_item_template.html", "r") as myfile:
-    template = myfile.read()
+    template_source = myfile.read()
 
 # Replace tags that appear once at most.
-def replaceSingleTags(dom):
-    global template
+def replaceSingleTags(dom, template):
     nameTag = dom.getElementsByTagName('name')
     name = nameTag[0].toxml().replace('<name>','').replace('</name>','')
     descriptionTag = dom.getElementsByTagName('description')
@@ -53,11 +53,11 @@ def replaceSingleTags(dom):
         template = template.replace('@name',name).replace('@description',description).replace('@syntax',syntax)
     else:
         template = template.replace('@name',name).replace('@description',description)
+    return template
       
 
 # Replace tags with example code. 
-def replaceExampleTags(dom):
-    global template
+def replaceExampleTags(dom, template):
     exampleTags = dom.getElementsByTagName('example')
     allExamples = ''
     first = True
@@ -73,11 +73,11 @@ def replaceExampleTags(dom):
             thisExample = exampleshtml.replace('@picname',imageName).replace('@code',code)
         allExamples += thisExample + '\n\n'
     template = template.replace('@examples', allExamples)
+    return template
 
 # Replace tags with parameter descriptions.        
 # TODO combine replaceExampleTags and replaceParamTags
-def replaceParamTags(dom):
-    global template
+def replaceParamTags(dom, template):
     allParameters = ''
     paramTags = dom.getElementsByTagName('parameter')
     if len(paramTags) != 0:
@@ -95,17 +95,19 @@ def replaceParamTags(dom):
             allParameters += thisParam 
         allParameters += '</table></td> </tr>'
         template = template.replace('@parameters', allParameters)        
+    return template
      
 
 def translate_file(s, d):
     with open(s, 'rb') as f:
         xml_file = f.read()
         dom = parseString(xml_file)
+        template = copy.deepcopy(template_source)
         # Get name and description and syntax from XML file and substitute it in HTML file.
-        replaceSingleTags(dom)
+        template = replaceSingleTags(dom, template)
         # Insert examples.
-        replaceExampleTags(dom) 
+        template = replaceExampleTags(dom, template) 
         # Insert parameter descriptions.
-        replaceParamTags(dom)
+        template = replaceParamTags(dom, template)
         with open(d, 'wb') as f:
             f.write(template)
