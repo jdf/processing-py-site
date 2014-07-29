@@ -1,9 +1,9 @@
+#!/usr/bin/python
 # This program generates .html reference pages from corresponding .xml files.
 
 # Run this line to generate html files in a directory called htmlconversions.
 # for file in *.xml; do python htmlgenerator.py $file htmlconversions/${file%.*}_.html; done
 
-#!/usr/bin/python
 
 
 from __future__ import with_statement
@@ -34,25 +34,9 @@ paramshtml = '''<tr class="">
 <td>@paramdescription</td>
 </tr>'''
 
-def usage():
-    print >> sys.stderr, 'Usage: xml2html src.xml dest.html'
-    sys.exit(1)
-
-parser = OptionParser()
-
-(opts, args) = parser.parse_args()
-
-src, dst = args
-
-if len(args) < 2:
-    usage()
-
-if not src.endswith('.xml'):
-    usage()
-
 template = None
 
-with open ("reference_item_template.html", "r") as myfile:
+with open ("Reference/api_en/reference_item_template.html", "r") as myfile:
     template = myfile.read()
 
 # Replace tags that appear once at most.
@@ -125,7 +109,3 @@ def translate_file(s, d):
         replaceParamTags(dom)
         with open(d, 'wb') as f:
             f.write(template)
-
-translate_file(src,dst)
-print(template)
-
