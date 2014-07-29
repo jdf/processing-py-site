@@ -36,7 +36,7 @@ paramshtml = '''<tr class="">
 
 template = None
 
-with open ("Reference/api_en/reference_item_template.html", "r") as myfile:
+with open ("template/reference_item_template.html", "r") as myfile:
     template = myfile.read()
 
 # Replace tags that appear once at most.
