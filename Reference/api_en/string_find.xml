@@ -15,11 +15,18 @@ pet = 'sea snail'
 println(pet.find('a'))       # Prints the index of the 'a' in 'pet': 2.
 println(pet.find('a', 3, 7)) # Prints the index of the second 'a' in 
                              # 'pet': 6.
+
+println(pet.find("snail"))   # Prints 4.
+
+println(pet.find("rock"))    # Prints -1.
 ]]></code>
 </example>
 
 <description><![CDATA[
-Return the lowest index in the string where a substring is found. Optional arguments start and end specify a range to search in. 
+Return the lowest index in the string where a substring is found. Optional
+arguments start and end specify a range to search in. If the substring is not
+found, returns <b>-1</b>.
+
 ]]></description>
 
 <syntax>
@@ -38,7 +45,7 @@ a.find(<c>sub</c>,<c>start</c>,<c>end</c>)
 </parameter>
 
 <parameter>
-<label>start</label>
+<label>end</label>
 <description>end point in search range</description>
 </parameter>
 

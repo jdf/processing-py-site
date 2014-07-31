@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>String Lower</name>
+
+<category>Data</category>
+
+<subcategory>String Methods</subcategory>
+
+<usage></usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+message = 'I AM QUITE ANGRY.'
+polite_message = message.lower()
+println(polite_message) # prints "i am quite angry."
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns a copy of a string, with all uppercase characters converted to
+lowercase.
+]]></description>
+
+<syntax>
+</syntax>
+
+<returns></returns>
+
+<related>
+string
+string_formatting
+string_find
+string_string
+string_join
+string_replace
+</related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof>PYDE</partof>
+
+</root>
