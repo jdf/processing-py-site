@@ -38,100 +38,63 @@
 
             <div id="navigation">
                 <div class="navBar" id="mainnav">
-    <a href="/">Cover</a><br>
-    <a href="/reference/" class="active">Reference</a><br>
-    <a href="/tutorials/">Tutorials</a><br>
-    <a href="/examples/">Examples</a><br>
-    <a href="/overview/">Overview</a><br>
-
-</div>
+                    <a href="/">Cover</a><br/>
+                    <a href="/reference/" class="active">Reference</a><br/>
+                    <a href="/tutorials/">Tutorials</a><br/>
+                    <a href="/examples/">Examples</a><br/>
+                    <a href="/overview/">Overview</a><br/>
+                </div>
             </div>
 
             <!-- ==================================== CONTENT - Headers ============================ -->
             <div class="content">
+                <table cellpadding="0" cellspacing="0" border="0" class="ref-item">
+                    <tr class="name-row">
+                        <th scope="row">Name</th>
+                        <td><h3><name-template/></h3></td>
+                    </tr>
 
-<table cellpadding="0" cellspacing="0" border="0" class="ref-item">
+                    <examples-template/>
 
+                    <tr class="">
+                        <th scope="row">Description</th>
+                        <td>
+                            <description-template/>
+                        </td>
+                    </tr>
 
-    <tr class="name-row">
-        <th scope="row">Name</th>
-
-        <td><h3><name-template/></h3></td>
-    </tr>
-
-    <examples-template/>
-
-        <tr class="">
-        <th scope="row">Description</th>
-        <td>
-    <description-template/>
-</td>
-    </tr>
-
-    <tr class=""><th scope="row">Syntax</th><td><pre>@syntax</pre></td></tr>
+                    <tr class=""><th scope="row">Syntax</th><td><pre><syntax-template/></pre></td></tr>
     
-<!--    <tr class=""><th scope="row">Syntax</th><td><pre>something(<kbd>x1</kbd>) something(<kbd>x1</kbd>, <kbd>y1</kbd>)</pre></td></tr> --!>
 
-<parameters-template/>
+                    <parameters-template/>
 
-    <tr class=""><th scope="row">Returns</th><td class="code">void</td></tr>
-</table>
+                    <tr class=""><th scope="row">Returns</th><td class="code"><returns-template/></td></tr>
+                </table>
 
-Updated on July 1, 2014 11:18:09pm EDT<br /><br />
+                Updated on July 1, 2014 11:18:09pm EDT
+                <br />
+                <br />
 
-<!-- Creative Commons License -->
-
-<div class="license">
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border: none" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
-</div>
-<!--
-
-<?xpacket begin='' id=''?>
-<x:xmpmeta xmlns:x='adobe:ns:meta/'>
-  <rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
-    <rdf:Description rdf:about=''
-             xmlns:xapRights='http://ns.adobe.com/xap/1.0/rights/'>
-      <xapRights:Marked>True</xapRights:Marked>
-    </rdf:Description>
-    <rdf:Description rdf:about=''
-             xmlns:xapRights='http://ns.adobe.com/xap/1.0/rights/'
-             >
-      <xapRights:UsageTerms>
-    <rdf:Alt>
-      <rdf:li xml:lang='x-default' >This work is licensed under a &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.</rdf:li>
-      <rdf:li xml:lang='en' >This work is licensed under a &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.</rdf:li>
-      </rdf:Alt>
-      </xapRights:UsageTerms>
-    </rdf:Description>
-    <rdf:Description rdf:about=''
-      xmlns:cc='http://creativecommons.org/ns#'>
-      <cc:license rdf:resource='http://creativecommons.org/licenses/by-nc-sa/4.0/'/>
-    </rdf:Description>
-
-  </rdf:RDF>
-</x:xmpmeta>
-<?xpacket end='r'?>
-
--->
+                <!-- Creative Commons License -->
+                <div class="license">
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border: none" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+                </div>
 
             </div>
 
             <!-- ==================================== FOOTER ============================ -->
             <div id="footer">
-
                 <div id="copyright">Processing is an open project intiated by <a href="http://benfry.com/">Ben Fry</a> and <a href="http://reas.com">Casey Reas</a>. It is developed by a <a href="http://processing.org/about/people/">small team of volunteers</a>.</div>
                 <div id="colophon">
-
-                    <a href="/copyright.html">&copy; Info</a> \
-
+                    <a href="/copyright.html">© Info</a> 
                     <span>Site hosted by <a href="http://www.mediatemple.net">Media Temple</a>.</span>
-
                 </div>
             </div>
-
         </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="/javascript/jquery-1.9.1.min.js"><\/script>');</script>
+        <script>
+            <![CDATA[window.jQuery || document.write('<script src="/javascript/jquery-1.9.1.min.js"><\/script>');]]>
+        </script>
         <script src="/javascript/site.js" type="text/javascript"></script>
     </body>
 </html>
