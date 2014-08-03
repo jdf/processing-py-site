@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>String Starts With</name>
+
+<category>Data</category>
+
+<subcategory>String Methods</subcategory>
+
+<usage></usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+message = "Now is the winter of our discontent."
+if message.startswith("Now"):
+	println("Made glorious summer by this sun of York.")
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns true if the string begins with the specified substring, and false
+otherwise.
+]]></description>
+
+<syntax>
+a.startswith(<c>sub</c>)
+</syntax>
+
+<parameter>
+<label>sub</label>
+<description>substring to search for</description>
+</parameter>
+
+<returns>boolean</returns>
+
+<related>
+string
+string_formatting
+string_find
+string_string
+string_join
+string_replace
+</related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof>PYDE</partof>
+
+</root>
