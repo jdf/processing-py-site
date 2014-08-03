@@ -23,7 +23,7 @@ println(sa1)
 </example>
 
 <description><![CDATA[
-Expands a list by one element and adds data to the new position. You can store any type inside a list, and you canmake a list that contains different data types.<br/>
+Expands a list by one element and adds data to the new position. You can store any type inside a list, and you can make a list that contains different data types.<br/>
 <br/>
 ]]></description>
 
