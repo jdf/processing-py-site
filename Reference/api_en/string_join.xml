@@ -11,24 +11,39 @@
 <example>
 <image></image>
 <code><![CDATA[
-separator = 'and'              # String to separate sequence items by.
-words = ('this ',' that')      # String to join.
-joined = separator.join(words) # Join items in sequence 'words', separated by 'separator'.
+separator = ' and '            # String to separate sequence items by.
+words = ['this', 'that']       # String to join.
+joined = separator.join(words) # Join items in sequence words,
+                               # separated by 'separator'.
 println(joined)
+
+polyhedra = ["cube", "dodecahedron", "icosahedron"]
+
+# The .join() method is often called on a string literal, without assigning it
+# to a variable first.
+joined = ", ".join(polyhedra)
+
+println(joined) # Prints "cube, dodecahedron, icosahedron"
 ]]></code>
 </example>
 
 <description><![CDATA[
-join() returns a string where elements of a sequence have been joined by a separator.
+Combines a sequence of strings to create a new string, separating each item from the sequence with the content of the string the method is called on.
+
 ]]></description>
 
 <syntax>
-
+	<c>separator</c>.join(<c>sequence</c>)
 </syntax>
 
 <parameter>
-<label></label>
-<description></description>
+<label>separator</label>
+<description><![CDATA[The string to insert between elements of the sequence.]]></description>
+</parameter>
+
+<parameter>
+<label>sequence</label>
+<description><![CDATA[A sequence (e.g., list or tuple) of strings to be joined together.]]></description>
 </parameter>
 
 <returns></returns>

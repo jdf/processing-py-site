@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>String Concatenation</name>
+<name>String Starts With</name>
 
 <category>Data</category>
 
@@ -11,35 +11,35 @@
 <example>
 <image></image>
 <code><![CDATA[
-a = 'a'
-s = a * 3       # Multiplying a string by n duplicates the it n times.
-println(s)      # Prints 'aaa'.
-s += 'b' + 'bb' # String concatenation with the plus sign.
-println(s)      # Prints 'aaabbb'.
+message = "Now is the winter of our discontent."
+if message.startswith("Now"):
+	println("Made glorious summer by this sun of York.")
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-Concatenate strings with the attention operator +. Multiplying a string by an integer n duplicates the string n times. 
+Returns true if the string begins with the specified substring, and false
+otherwise.
 ]]></description>
 
 <syntax>
-
+a.startswith(<c>sub</c>)
 </syntax>
 
 <parameter>
-<label></label>
-<description></description>
+<label>sub</label>
+<description>substring to search for</description>
 </parameter>
 
-<returns></returns>
+<returns>boolean</returns>
 
 <related>
+string
 string_formatting
 string_find
-string_strip
+string_string
 string_join
-string_split
 string_replace
 </related>
 
@@ -48,12 +48,5 @@ string_replace
 <type></type>
 
 <partof>PYDE</partof>
-
-
-
-
-
-
-
 
 </root>

@@ -12,23 +12,102 @@
 <image></image>
 <code><![CDATA[
 str1 = 'CCCP'
-data = ['C', 'C', 'C', 'P']
-str2 = "".join(data) # Join elements of data into one string.
+str2 = "CCCP"
 println(str1)        # Prints 'CCCP'
 println(str2)        # Prints 'CCCP'
 ]]></code>
 </example>
 
+<example>
+<image></image>
+<code><![CDATA[
+# Use a backslash to include quotes inside of a string.
+single_quote = 'This one has \'quotes\''
+double_quote = "This one also has \"quotes\""
+println(single_quote)
+println(double_quote)
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+# Use triple quotes to include text that spans multiple lines.
+wcwilliams = """And you may be sure
+not one leaf will lift itself
+from the ground
+and become fast to a twig again."""
+println(wcwilliams)
+]]></code>
+</example>
+
 <description><![CDATA[
-A string is a sequence of characters. Python's built-in string classes include methods for examining individual characters, comparing strings, searching strings, extracting
+A string is a sequence of characters. Python's built-in string class includes
+methods for searching strings, transforming strings, and checking to see if a
+string has particular characteristics. Strings are defined inside either double
+quotes ("ABC") or single quotes ('ABC').
+<br/><br/>
 
+Because strings are defined between quotation marks, to include such marks
+within the string itself you must use the <b>&#92;</b> (backslash) character.
+(See the second example above.)  This is known as an <em>escape
+	sequence</em>. Other escape sequences include <b>&#92;t</b> for the tab
+character and <b>&#92;n</b> for new line. Because backslash is the escape
+character, to include a single backslash within a string, you must use two
+consecutive backslashes, as in: <b>&#92;&#92;</b>
+<br/><br/>
 
-Strings are always defined inside either double quotes ("Abc") or single quotes ('ABC
+Normally, strings in your program must be written entirely on one line. If you
+want to include a chunk of text in your program that spans multiple lines, you
+can use triple quotes (either <b>"""</b> or <b>'''</b>). (See the third example
+above.)
+<br/><br/>
+
+There are more string methods than those linked from this page. Additional documentation is located online in the <a href="https://docs.python.org/2/library/stdtypes.html#string-methods">official Python documentation</a>.
+
 ]]></description>
 
-<syntax>
+<syntax></syntax>
 
-</syntax>
+<method>
+<mname>find()</mname>
+<mdescription>Find a substring and return its index</mdescription>
+</method>
+
+<method>
+<mname>join()</mname>
+<mdescription>Join a list of strings, using a string as a separator</mdescription>
+</method>
+
+<method>
+<mname>lower()</mname>
+<mdescription>Return a copy of a string with its characters converted to lowercase</mdescription>
+</method>
+
+<method>
+<mname>replace()</mname>
+<mdescription>Return a copy of a string, replacing a given substring with another string</mdescription>
+</method>
+
+<method>
+<mname>split()</mname>
+<mdescription>Break up a string into a list of parts, using a specified delimiter</mdescription>
+</method>
+
+<method>
+<mname>startswith()</mname>
+<mdescription>Check to see if a string begins with a particular substring</mdescription>
+</method>
+
+<method>
+<mname>strip()</mname>
+<mdescription>Return a copy of a string, with whitespace at the beginning and end removed</mdescription>
+</method>
+
+<method>
+<mname>upper()</mname>
+<mdescription>Return a copy of a string with its characters converted to uppercase</mdescription>
+</method>
 
 <parameter>
 <label></label>
