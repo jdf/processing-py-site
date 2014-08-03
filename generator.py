@@ -1,6 +1,6 @@
 #!/usr/bin/python
 from __future__ import with_statement, print_function
-from xml.etree import cElementTree as ET
+from lxml import etree as ET # We need to use lxml because it can handle CDATA tags
 from argparse import ArgumentParser
 
 import os
@@ -9,6 +9,7 @@ import shutil
 import distutils.core
 import sys
 import copy
+import datetime
 
 try:
     import jinja2
@@ -16,9 +17,62 @@ except:
     print("I can't import jinja2 for some reason.")
     print("Please run pip install -r requirements.txt before using generator.py.")
 
-class ReferenceInfo:
+def convert_hypertext(element, toplevel=True):
+    """
+    Recursively creates a string with properly-resolved links and whatnot from an element in an element-tree.
+    Used directly from jinja.
+    """
+    if element.tag == 'br':
+        return '<br />'
+    text = ''
+    if element.tag == 'c':
+        tag = 'kbd'
+    else:
+        tag = element.tag
+    if not toplevel:
+        text += '<{}>'.format(tag)
+    if element.text:
+        text += element.text
+    for child in element:
+        text += convert_hypertext(child, toplevel=False)
+        if child.tail:
+            text += child.tail
+    if not toplevel:
+        text += '</{}>'.format(tag)
+    return text 
+
+def format_code(code):
+    escape_chars = {
+            '\n': '<br />',
+            ' ' : '&nbsp;',
+            '\t': '&nbsp;&nbsp;&nbsp;&nbsp'
+            }
+    return "".join((escape_chars.get(c, c) for c in code))
+
+class ReferenceItem:
+    '''Represents a single page of reference information.'''
     def __init__(self, source_xml):
-        pass#xml = et.element_tree
+        xml = ET.parse(source_xml)
+        if xml.find('name') is not None:
+            self.name = xml.find('name').text
+        if xml.find('type') is not None:
+            self.type = xml.find('type').text
+        if xml.find('example') is not None:
+            self.examples = []
+            for example in xml.iterfind('example'):
+                self.examples.append({'code': format_code(example.find('code').text)}) 
+        if xml.find('description') is not None:
+            self.description = convert_hypertext(xml.find('description'))
+        if xml.find('syntax') is not None:
+            self.syntax = convert_hypertext(xml.find('syntax'))
+        if xml.find('parameter') is not None:
+            self.parameters = []
+            for parameter in xml.iterfind('parameter'):
+                label = parameter.find('label').text
+                description = convert_hypertext(parameter.find('description'))
+                self.parameters.append({'label':label, 'description':description})
+        if xml.find('related') is not None:
+            self.related = xml.find('related').text
 
 def print_header(text):
     print('=== \033[95m{}\033[0m ==='.format(text))
@@ -62,13 +116,16 @@ def build(src_dir='./Reference/api_en/', target_dir='./generated/', template_dir
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir))
     reference_template = env.get_template("reference_item_template.jinja")
 
+    today = datetime.datetime.now().ctime()
+
     for source_file_name in to_update:
         source_file_path = src_dir + source_file_name
-        source_info = ReferenceInfo(source_file_path)
+        source_info = ReferenceItem(source_file_path)
         target_file_path = target_dir + source_file_name[:-4] + '.html'
         with open(target_file_path, 'w') as target_file:
-            target_file.write(reference_template.render(source_info))
-        print("Rendered {} to {}.".format(source_file_path, target_file_path))
+            rendered = reference_template.render(item=source_info, today=today)
+            target_file.write(rendered.encode('utf-8'))
+            print("Rendered {} to {}.".format(source_file_path, target_file_path))
 
     print('Copying static resources...')
     distutils.dir_util.copy_tree('./content', target_dir)
@@ -76,11 +133,13 @@ def build(src_dir='./Reference/api_en/', target_dir='./generated/', template_dir
 
 def test(target_dir='./generated'):
     print_header("Testing")
-    print("Serving on http://localhost:8000")
-    import SimpleHTTPServer, SocketServer, webbrowser
+    import random, SimpleHTTPServer, SocketServer, webbrowser
+    socket = random.randrange(8000, 8999)
+    address = "http://localhost:{}".format(socket)
+    print("Serving on {}".format(address)) 
     os.chdir(target_dir)
-    httpd = SocketServer.TCPServer(("localhost", 8000), SimpleHTTPServer.SimpleHTTPRequestHandler)
-    webbrowser.open("http://localhost:8000")
+    httpd = SocketServer.TCPServer(("localhost", socket), SimpleHTTPServer.SimpleHTTPRequestHandler)
+    webbrowser.open(address)
     httpd.serve_forever()
 
 if __name__ == '__main__':
