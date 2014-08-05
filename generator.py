@@ -1,6 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 from __future__ import with_statement, print_function
-from lxml import etree as ET # We need to use lxml because it can handle CDATA tags
 from argparse import ArgumentParser
 
 import os
@@ -13,9 +12,11 @@ import datetime
 
 try:
     import jinja2
+    from lxml import etree as ET # We need to use lxml because it can handle CDATA tags
 except:
-    print("I can't import jinja2 for some reason.")
+    print("I can't import my dependencies for some reason.")
     print("Please run pip install -r requirements.txt before using generator.py.")
+    sys.exit(1)
 
 def convert_hypertext(element, toplevel=True):
     """
@@ -116,7 +117,8 @@ def build(src_dir='./Reference/api_en/', target_dir='./generated/', template_dir
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir))
     reference_template = env.get_template("reference_item_template.jinja")
 
-    today = datetime.datetime.now().ctime()
+    start = datetime.datetime.now()
+    today = start.ctime()
 
     for source_file_name in to_update:
         source_file_path = src_dir + source_file_name
@@ -130,6 +132,7 @@ def build(src_dir='./Reference/api_en/', target_dir='./generated/', template_dir
     print('Copying static resources...')
     distutils.dir_util.copy_tree('./content', target_dir)
     print('Done.')
+    print('Build took {} seconds'.format((datetime.datetime.now() - start).seconds))
 
 def test(target_dir='./generated'):
     print_header("Testing")
