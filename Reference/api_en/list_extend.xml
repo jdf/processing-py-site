@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>List Index</name>
+<name>List Extend</name>
 
 <category>Data</category>
 
@@ -11,27 +11,31 @@
 <example>
 <image></image>
 <code><![CDATA[
-a = ['a', 'b', 'c']
-println(a.index('b')) # Prints 1
+shopping_list = ['carrot', 'cucumber']
+fruits = ['mango', 'pear']
+println(shopping_list)  # Prints ['carrot', 'cucumber']
+
+shopping_list.extend(fruits)
+println(shopping_list)  # Prints ['carrot', 'cucumber', 'mango', 'pear']
 ]]></code>
 </example>
 
 <description><![CDATA[
-Return the index in the list of the first item whose value is x. Raises a ValueError exception if there is no such item.
+Extends a list by appending all of the elements of another list to the end.
 ]]></description>
 
 <syntax>
-<c>a</c>.index(<c>x</c>)
+<c>a</c>.extend(<c>x</c>)
 </syntax>
 
 <parameter>
 <label>a</label>
-<description>the list to search through</description>
+<description>list to extend</description>
 </parameter>
 
 <parameter>
 <label>x</label>
-<description>the item to search for</description>
+<description>list of items to append to original list</description>
 </parameter>
 
 <returns></returns>
@@ -40,7 +44,7 @@ Return the index in the list of the first item whose value is x. Raises a ValueE
 list_insert
 list_pop
 list_reverse
-list_append
+list_index
 </related>
 
 <availability>1.0</availability>

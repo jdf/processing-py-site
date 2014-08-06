@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>sorted()</name>
+
+<category>Data</category>
+
+<subcategory>List Functions</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+numbers = [3.4, 3.6, 2, 0, 7.1]
+sorted_numbers = sorted(numbers)
+println(sorted_numbers) # Prints [0, 2, 3.4, 3.6, 7.1]
+
+# original list left unchanged
+println(numbers) # Prints [3.4, 3.6, 2, 0, 7.1]
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+animals = ["deer", "elephant", "bear", "aardvark", "cat"]
+sorted_animals = sorted(animals)
+println(sorted_animals) # Prints ['aardvark', 'bear', 'cat', 'deer', 'elephant']
+
+# reverse=True reverses the order of the sort
+rev_animals = sorted(animals, reverse=True)
+println(rev_animals) # Prints ['elephant', 'deer', 'cat', 'bear', 'aardvark']
+
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+# sorted() lets you sort any iterable, not just lists!
+word = "parabolas"
+sorted_word = sorted(word)
+println(sorted_word) # Prints ['a', 'a', 'a', 'b', 'l', 'o', 'p', 'r', 's']
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+# sorted() is, by default, case insensitive
+items = ["Abacus", "abacus", "Zwieback", "zwieback"]
+sorted_items = sorted(items)
+println(sorted_items) # Prints ['Abacus', 'Zwieback', 'abacus', 'zwieback']
+
+# Pass your own function as an argument to sort() to apply a transformation to
+# items before sorting
+def case_insensitive(item):
+  return item.lower()
+sorted_items = sorted(items, key=case_insensitive)
+println(sorted_items) # Prints ['Abacus', 'abacus', 'Zwieback', 'zwieback']
+
+# sort list of strings by their length, using the built-in function len()
+# as the key parameter
+items = ["buffalo", "charcoal", "desk", "egg", "flask"]
+sorted_items = sorted(items, key=len)
+println(sorted_items) # Prints ['egg', 'desk', 'flask', 'buffalo', 'charcoal']
+
+# You can use the "key" parameter and the "reverse" parameter in the same
+# call to sort!
+sorted_items = sorted(items, key=len, reverse=True)
+println(sorted_items) # Prints ['charcoal', 'buffalo', 'flask', 'desk', 'egg']
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns a sorted copy of the given list (or other iterable). Like the
+<b>sort()</b> method of the list object, it can take an optional <b>key</b>
+parameter to specify a function that should be evaluated for each item in the
+list before sorting that item. The optional parameter <b>reverse</b>, if set
+to <b>True</b>, causes <b>sorted()</b> to perform its sorting operation in
+reverse order. <br/><br/>
+
+The <b>sorted()</b> function differs from a list object's <b>sort()</b> method
+in two important ways. First, it returns a copy of the sorted list, leaving the
+original list intact (instead of sorting the list in-place). Second,
+<b>sorted()</b> works with any iterable (e.g., strings, tuples, dictionaries),
+not just lists.
+<br/><br/>
+
+For more information and examples, consult the <a href="https://wiki.python.org/moin/HowTo/Sorting/">Sorting Mini-HOWTO</a> on the <a href="https://wiki.python.org/moin/FrontPage">Python Wiki</a>.
+]]></description>
+
+<syntax>
+sorted(<c>iterable</c>)
+sorted(<c>iterable</c>, reverse=True)
+sorted(<c>iterable</c>, key=<c>fn</c>)
+</syntax>
+
+<parameter>
+<label>list</label>
+<description><![CDATA[list to sort]]></description>
+</parameter>
+
+<parameter>
+<label>count</label>
+<description><![CDATA[int: number of elements to sort, starting from 0]]></description>
+</parameter>
+
+<related>
+reverse()
+</related>
+
+</root>

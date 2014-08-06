@@ -2,24 +2,24 @@
 <root>
 <name>List Insert</name>
 
-<category></category>
+<category>Data</category>
 
-<subcategory></subcategory>
+<subcategory>List methods</subcategory>
 
 <usage></usage>
 
 <example>
 <image></image>
 <code><![CDATA[
-a = ['b', 'c', 'd']
-println(a) # Prints ['b', 'c', 'd']
-a.insert(0, 'a')
-println(a) # Prints ['a', 'b', 'c', 'd']
+letters = ['b', 'c', 'd']
+println(letters) # Prints ['b', 'c', 'd']
+letters.insert(0, 'a')
+println(letters) # Prints ['a', 'b', 'c', 'd']
 ]]></code>
 </example>
 
 <description><![CDATA[
-Insert an item at a given position.
+Insert an item into a list at a given index.
 ]]></description>
 
 <syntax>

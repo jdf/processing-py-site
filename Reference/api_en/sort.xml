@@ -11,7 +11,7 @@
 <example>
 <image></image>
 <code><![CDATA[
-float[] a = 3.4, 3.6, 2, 0, 7.1 
+a = [3.4, 3.6, 2, 0, 7.1]
 a = sort(a)
 println(a)
 # Prints the contents of the sorted array:
@@ -26,7 +26,7 @@ println(a)
 <example>
 <image></image>
 <code><![CDATA[
-String[] s = "deer", "elephant", "bear", "aardvark", "cat" 
+s = ["deer", "elephant", "bear", "aardvark", "cat"]
 s = sort(s)
 println(s)
 # Prints the contents of the sorted array:
@@ -41,7 +41,7 @@ println(s)
 <example>
 <image></image>
 <code><![CDATA[
-String[] s = "deer", "elephant", "bear", "aardvark", "cat" 
+s = ["deer", "elephant", "bear", "aardvark", "cat" ]
 s = sort(s, 3)
 println(s)
 # Prints the contents of the array, with the first 3 elements sorted:
