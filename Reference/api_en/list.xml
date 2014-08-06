@@ -1,33 +1,94 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>List</name>
+<name>list()</name>
 
-<category></category>
+<category>Data</category>
 
-<subcategory></subcategory>
+<subcategory>Conversion</subcategory>
 
 <usage></usage>
 
 <example>
 <image></image>
 <code><![CDATA[
+# Converting a string to a list gives a list with one element per character
+alphabet = "abcdefg"
+letter_list = list(alphabet)
+println(letter_list) # Prints ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+# Converting a dictionary to a list gives a list of the dictionary's keys
+lettermap = {'a': 1, 'b': 2, 'c': 3}
+println(list(lettermap)) # Prints ['a', 'b', 'c']
+                         # (possibly in a different order)
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+# Call list() with another list as an argument to make a copy of the list
+inventory = ['lamp', 'skeleton key', 'train ticket']
+inventory_copy = list(inventory) # Copy the list
+println(inventory_copy) # Prints ['lamp', 'skeleton key', 'train ticket']
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+
+# Use list() to convert Python "iterators" to lists
+letters = "abcdefg"
+reversed_letters = reversed(letters)
+println(reversed_letters) # Prints &lt;reversediterator object at 0x2&gt;---
+                          # not what we want!
+
+# convert iterator to a list so we can access arbitrary elements, or
+# all elements at once
+reversed_letters_list = list(reversed_letters)
+println(reversed_letters_list) # Prints ['g', 'f', 'e', 'd', 'c', 'b', 'a']
+
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+# list() without arguments returns an empty list
+empty = list()
+println(empty) # prints []
 ]]></code>
 </example>
 
 <description><![CDATA[
 
+Takes an "iterable" object as a parameter and returns a list of items in the
+object. (An "iterable" object is an object that can be looped over, such as a
+list, string, dictionary, set or tuple; <a href="https://docs.python.org/2/glossary.html#term-iterable">more information here</a>.) This function is useful
+for converting a string to list of individual characters, for making copies
+of existing lists, and for making empty lists.<br/><br/>
+
+This function is also useful for converting Python iterators (returned from,
+e.g., <b>reversed()</b> or the dictionary object's <b>iteritems()</b>) and
+converting them to lists.
+
 ]]></description>
 
 <syntax>
-
+list(<c>x</c>)
 </syntax>
 
 <parameter>
-<label></label>
-<description></description>
+<label>x</label>
+<description>iterable to convert to a list</description>
 </parameter>
 
-<returns></returns>
+<returns>list</returns>
 
 <related></related>
 
@@ -36,12 +97,5 @@
 <type></type>
 
 <partof></partof>
-
-
-
-
-
-
-
 
 </root>

@@ -18,11 +18,10 @@ println(a) # Prints [3, 2, 1]
 </example>
 
 <description><![CDATA[
-Reverse the elements of a list in place. 
+Reverse the elements of a list in place.
 ]]></description>
 
 <syntax>
-.reverse()
 </syntax>
 
 <parameter>

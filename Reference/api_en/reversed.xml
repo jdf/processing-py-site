@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>reversed()</name>
+
+<category>Data</category>
+
+<subcategory>List Functions</subcategory>
+
+<usage></usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+numbers = [1, 2, 3]
+reversed_numbers = reversed(numbers)
+for num in reversed_numbers:
+  println(num)
+# Prints:
+# 3
+# 2
+# 1
+
+# Meanwhile, the original list has not been modified:
+println(numbers) # Prints [1, 2, 3]
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+# The reversed() function returns an iterator by default. Use list() to
+# convert the iterator to a list.
+numbers = [1, 2, 3]
+reversed_numbers = reversed(numbers)
+reversed_list = list(reversed_numbers)
+println(reversed_list) # Prints [3, 2, 1]
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+# reversed() can reverse any iterable, not just lists
+word = "orderly"
+reversed_word = reversed(word)
+reversed_list = list(reversed_word)
+println(reversed_list) # Prints ['y', 'l', 'r', 'e', 'd', 'r', 'o']
+]]></code>
+</example>
+
+<description><![CDATA[
+Return an iterator that will produce the elements of the given list (or other
+iterable) reverse order. This function differs from the list object's
+<b>reverse()</b> method in that it does not modify the list in-place. It can
+also take as a parameter any iterable (e.g., a string, dictionary, or tuple),
+not just a list (as shown in the string example above).<br/><br/>
+
+Because <b>reversed()</b> returns an iterator, you normally need to iterate
+over its result in a <b>for</b> loop (as shown in the first example above).
+You can use the <b>list()</b> function to get the entire reversed iterable in
+one go.
+
+]]></description>
+
+<syntax>
+	reversed(<c>x</c>)
+</syntax>
+
+<parameter>
+<label>x</label>
+<description>The iterable (list, string, dictionary, etc.) to reverse</description>
+</parameter>
+
+<returns></returns>
+
+<related>
+	list_reverse
+	list_sort
+	list
+	sorted
+</related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof>PYDE</partof>
+
+</root>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>List Pop</name>
+<name>List Remove</name>
 
 <category>Data</category>
 
@@ -11,33 +11,30 @@
 <example>
 <image></image>
 <code><![CDATA[
-a = [1, 2, 3, 4]
-println(a)
-a.pop()    # Removes the last element of the list.
-println(a) # Prints: [1, 2, 3]
-a.pop(1)   # Remove the element at index 1 of the list. 
-println(a) # Prints: [1, 3]
+inventory = ["lamp", "skeleton key", "mystic orb"]
+println(inventory) # Prints ["lamp", "skeleton key", "mystic orb"]
+inventory.remove("skeleton key")
+println(inventory) # Prints ["lamp", "mystic orb"]
 ]]></code>
 </example>
 
 <description><![CDATA[
-This method removes and returns an element of the list from the given index. If
-no index is given, the last element is removed and returned.
+Removes the given item from the list. Raises a ValueError exception if the
+item isn't found.
 ]]></description>
 
 <syntax>
-<c>a</c>.pop()
-<c>a</c>.pop(<c>i</c>)
+<c>a</c>.remove(<c>i</c>)
 </syntax>
 
 <parameter>
 <label>a</label>
-<description>List from which to pop.</description>
+<description>List from which to remove an item.</description>
 </parameter>
 
 <parameter>
 <label>i</label>
-<description>Index of element to pop.</description>
+<description>The item to remove.</description>
 </parameter>
 
 <returns></returns>

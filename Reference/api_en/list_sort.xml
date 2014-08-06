@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>List Sort</name>
+
+<category>Data</category>
+
+<subcategory>List Methods</subcategory>
+
+<usage></usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+numbers = [10.6, -14, 1000, 3, 7]
+numbers.sort()
+println(numbers) # Prints [-14, 3, 7, 10.6, 1000]
+
+inventory = ["wallet", "mummy wrap", "ancient map", "crowbar"]
+inventory.sort()
+println(inventory) # Prints ['ancient map', 'crowbar', 'mummy wrap', 'wallet']
+
+# Use reverse=True to sort list in reverse
+inventory.sort(reverse=True)
+println(inventory) # Prints ['wallet', 'mummy wrap', 'crowbar', 'ancient map']
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+# sort() is, by default, case insensitive
+items = ["Abacus", "abacus", "Zwieback", "zwieback"]
+items.sort()
+println(items) # Prints ['Abacus', 'Zwieback', 'abacus', 'zwieback']
+
+# Pass a function as an argument to sort() to apply a transformation to
+# items before sorting
+def case_insensitive(item):
+  return item.lower()
+items.sort(key=case_insensitive)
+println(items) # Prints ['Abacus', 'abacus', 'Zwieback', 'zwieback']
+
+# sort list of strings by their length, using the built-in function len()
+# as the key parameter
+items = ["buffalo", "charcoal", "desk", "egg", "flask"]
+items.sort(key=len)
+println(items) # Prints ['egg', 'desk', 'flask', 'buffalo', 'charcoal']
+
+# You can use the "key" parameter and the "reverse" parameter in the same
+# call to sort!
+items.sort(key=len, reverse=True)
+println(items) # Prints ['charcoal', 'buffalo', 'flask', 'desk', 'egg']
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Sort the elements of a list in place. Numbers are sorted by their value, and
+strings are sorted in (case-sensitive) alphabetical order. If the keyword
+argument <b>reverse</b> is given and set to <b>True</b>, the list is sorted in
+reverse.
+<br/><br/>
+
+An optional keyword parameter <b>key</b> specifies a function that will be
+called for each item of the list before comparing it in the sorting process.
+This function takes a single parameter and should return the value that Python
+should use for the specified value when sorting the list. You can use this
+functionality to easily build (as in the example above) a case-insensitive
+sort.
+
+]]></description>
+
+<syntax>
+<c>a</c>.sort()
+</syntax>
+
+<syntax>
+<c>a</c>.sort(reverse=True)
+</syntax>
+
+<syntax>
+<c>a</c>.reverse(key=<c>fn</c>)
+</syntax>
+
+<parameter>
+<label>a</label>
+<description>the list to sort</description>
+</parameter>
+
+<parameter>
+<label>fn</label>
+<description>a function, called automatically for each list element</description>
+</parameter>
+
+<returns></returns>
+
+<related>
+list_insert
+list_pop
+list_append
+list_index
+sorted
+</related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof>PYDE</partof>
+
+</root>
