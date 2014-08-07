@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from __future__ import with_statement, print_function
+from __future__ import division, with_statement, print_function
 from argparse import ArgumentParser
 
 import os
@@ -176,7 +176,8 @@ def build(src_dir='./Reference/api_en/', target_dir='./generated/', template_dir
     print('Copying static resources...')
     distutils.dir_util.copy_tree('./content', target_dir)
     print('Done.')
-    print('Build took {} seconds'.format((datetime.datetime.now() - start).seconds))
+    timedelta = datetime.datetime.now() - start
+    print('Build took {} seconds'.format(timedelta.seconds + timedelta.microseconds/1000000))
 
 def test(target_dir='./generated'):
     print_header("Testing")
