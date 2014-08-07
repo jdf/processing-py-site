@@ -12,7 +12,8 @@ import datetime
 
 try:
     import jinja2
-    from lxml import etree as ET # We need to use lxml because it can handle CDATA tags
+    import lxml.html
+    from lxml import etree # We need to use lxml because it can handle CDATA tags
 except:
     print("I can't import my dependencies for some reason.")
     print("Please run pip install -r requirements.txt before using generator.py.")
@@ -54,17 +55,12 @@ def convert_hypertext(element, toplevel=True):
     return text 
 
 def format_code(code):
-    escape_chars = {
-            '\n': '<br />',
-            ' ' : '&nbsp;',
-            '\t': '&nbsp;&nbsp;&nbsp;&nbsp'
-            }
-    return "".join((escape_chars.get(c, c) for c in code))
+    return '\n' + code.strip()
 
 class ReferenceItem:
     '''Represents a single page of reference information.'''
     def __init__(self, source_xml):
-        xml = ET.parse(source_xml)
+        xml = etree.parse(source_xml)
         if xml.find('name') is not None:
             self.name = xml.find('name').text
         if xml.find('type') is not None:
@@ -136,20 +132,29 @@ def build(src_dir='./Reference/api_en/', target_dir='./generated/', template_dir
     
     print('%s stale files to be translated' % len(to_update))
 
-    env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir))
+    env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), trim_blocks='true')
     reference_template = env.get_template("reference_item_template.jinja")
 
     start = datetime.datetime.now()
     today = start.ctime()
 
+    whitespace = re.compile(r'^\s+$')
+
     for source_file_name in to_update:
         source_file_path = src_dir + source_file_name
-        source_info = ReferenceItem(source_file_path)
         target_file_path = target_dir + source_file_name[:-4] + '.html'
+        print("Rendering {} to {}...".format(source_file_path, target_file_path))
+        source_info = ReferenceItem(source_file_path)
         with open(target_file_path, 'w') as target_file:
             rendered = reference_template.render(item=source_info, today=today)
-            target_file.write(rendered.encode('utf-8'))
-            print("Rendered {} to {}.".format(source_file_path, target_file_path))
+            rendered_tree = lxml.html.fromstring(rendered)
+            for element in rendered_tree.iter():
+                if element.text is not None and whitespace.match(element.text):
+                    element.text = None
+                if element.tail is not None and whitespace.match(element.tail):
+                    element.tail = None
+            target_file.write(lxml.html.tostring(rendered_tree, encoding='unicode').encode('utf-8'))
+            print("Success.")
 
     print('Copying static resources...')
     distutils.dir_util.copy_tree('./content', target_dir)
