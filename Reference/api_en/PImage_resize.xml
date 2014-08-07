@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>PImage_resize_0.png</image>
+<image />
 <code><![CDATA[
 jelly = loadImage("jelly.jpg")
 image(jelly, 0, 0)
@@ -19,7 +19,7 @@ image(jelly, 0, 0)
 </example>
 
 <example>
-<image>PImage_resize_1.png</image>
+<image />
 <code><![CDATA[
 jelly = loadImage("jelly.jpg")
 image(jelly, 0, 0)

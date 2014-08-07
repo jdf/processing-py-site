@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 xoff = 0.0
 
@@ -22,7 +22,7 @@ def draw():
 </example>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 noiseScale = 0.02
 def draw():

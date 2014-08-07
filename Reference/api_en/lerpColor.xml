@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>lerpColor_.png</image>
+<image />
 <code><![CDATA[
 stroke(255)
 background(51)

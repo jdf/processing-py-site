@@ -9,7 +9,6 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 e = 50 * 5  # Sets 'e' to 250
 f = e * 5   # Sets 'f' to 1250

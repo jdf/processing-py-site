@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 numbers = [3.4, 3.6, 2, 0, 7.1]
 sorted_numbers = sorted(numbers)
@@ -21,7 +20,6 @@ println(numbers) # Prints [3.4, 3.6, 2, 0, 7.1]
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 animals = ["deer", "elephant", "bear", "aardvark", "cat"]
 sorted_animals = sorted(animals)
@@ -35,7 +33,6 @@ println(rev_animals) # Prints ['elephant', 'deer', 'cat', 'bear', 'aardvark']
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 # sorted() lets you sort any iterable, not just lists!
 word = "parabolas"
@@ -45,7 +42,6 @@ println(sorted_word) # Prints ['a', 'a', 'a', 'b', 'l', 'o', 'p', 'r', 's']
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 # sorted() is, by default, case insensitive
 items = ["Abacus", "abacus", "Zwieback", "zwieback"]

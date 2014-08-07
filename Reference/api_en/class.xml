@@ -10,7 +10,7 @@
 <usage>Web &amp; Application</usage>
     
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 class HLine:
   def __init__(self, y, s):

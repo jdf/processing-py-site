@@ -9,7 +9,6 @@
 <usage></usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 message = 'Alfa bravo charlie delta'
 uppercase_message = message.upper()

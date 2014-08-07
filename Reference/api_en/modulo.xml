@@ -9,7 +9,6 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 a = 5 % 4          # Sets 'a' to 1
 b = 125 % 100      # Sets 'b' to 25
@@ -19,7 +18,7 @@ d = 30.0 % 33.0    # Sets 'd' to 30.0
 </example>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 a = 0
 def draw():

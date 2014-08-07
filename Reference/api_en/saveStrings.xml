@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 words = "apple bear cat dog"
 list = split(words, ' ')

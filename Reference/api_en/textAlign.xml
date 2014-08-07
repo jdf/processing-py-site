@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>textAlign_0.png</image>
+<image />
 <code><![CDATA[
 background(0)
 textSize(16)
@@ -23,7 +23,7 @@ text("IJKL", 50, 70)
 </example>
 
 <example>
-<image>textAlign_1.png</image>
+<image />
 <code><![CDATA[
 background(0)
 stroke(153)

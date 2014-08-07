@@ -9,7 +9,7 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 m = 8 >> 3   # In binary: 1000 to 1
 println(m)   # Prints "1"
@@ -23,7 +23,7 @@ println(p)   # Prints "13"
 </example>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 # Using "right shift" as a faster technique than red(), green(), and blue()
 argb = color(204, 204, 51, 255)

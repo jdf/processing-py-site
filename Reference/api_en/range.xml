@@ -9,7 +9,6 @@
 <usage></usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 for i in range(5):
     println(range(i)) 

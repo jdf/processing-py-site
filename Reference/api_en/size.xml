@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>size_0.png</image>
+<image />
 <code><![CDATA[
 size(200, 100)
 background(153)
@@ -18,7 +18,7 @@ line(0, 0, width, height)
 </example>
 
 <example>
-<image>size_1.png</image>
+<image />
 <code><![CDATA[
 def setup(): 
     size(320, 240)
@@ -30,7 +30,7 @@ def draw():
 </example>
 
 <example>
-<image>size_2.png</image>
+<image />
 <code><![CDATA[
 size(150, 200, P3D) # Specify P3D renderer
 background(153)

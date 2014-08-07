@@ -7,7 +7,7 @@
 <type></type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 noiseVal = 0
 noiseScale = 0.02

@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 i = 500000
 si = nfc(i)

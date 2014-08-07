@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>textFont_.png</image>
+<image />
 <code><![CDATA[
 # The font "AndaleMono-48.vlw"" must be located in the 
 # current sketch's "data" directory to load successfully

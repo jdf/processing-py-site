@@ -9,7 +9,7 @@
 <type>variable</type>
 
 <example>
-<image>height.png</image>
+<image />
 <code><![CDATA[
 noStroke()
 background(0)

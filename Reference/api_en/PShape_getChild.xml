@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>PShape_getChild_.png</image>
+<image />
 <code><![CDATA[
 states = None 
 ohio = None

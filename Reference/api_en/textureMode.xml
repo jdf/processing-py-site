@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>textureMode_0.png</image>
+<image />
 <code><![CDATA[
 size(100, 100, P3D)
 noStroke()
@@ -26,7 +26,7 @@ endShape()
 </example>
 
 <example>
-<image>textureMode_1.png</image>
+<image />
 <code><![CDATA[
 size(100, 100, P3D)
 noStroke()

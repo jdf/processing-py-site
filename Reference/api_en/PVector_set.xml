@@ -10,7 +10,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 v = None
 
@@ -25,7 +24,6 @@ def setup():
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 v1 = None
 v2 = None
@@ -42,7 +40,6 @@ def setup():
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 v = None
 vvv = [20.0, 30.0, 40.0]

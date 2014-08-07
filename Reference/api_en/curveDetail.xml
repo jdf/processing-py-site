@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>curveDetail_.png</image>
+<image />
 <code><![CDATA[
 def setup():
     size(100, 100, P3D)

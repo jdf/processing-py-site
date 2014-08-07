@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>alpha_.png</image>
+<image />
 <code><![CDATA[
 noStroke()
 c = color(0, 126, 255, 102)

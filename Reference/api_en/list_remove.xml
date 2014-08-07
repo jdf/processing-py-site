@@ -9,7 +9,6 @@
 <usage></usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 inventory = ["lamp", "skeleton key", "mystic orb"]
 println(inventory) # Prints ["lamp", "skeleton key", "mystic orb"]

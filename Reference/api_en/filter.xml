@@ -10,7 +10,7 @@
 <type></type>
 
 <example>
-<image>filter_0_threshold.png</image>
+<image />
 <code><![CDATA[
 img = loadImage("apples.jpg")
 image(img, 0, 0)
@@ -19,7 +19,7 @@ filter(THRESHOLD)
 </example>
 
 <example>
-<image>filter_1_gray.png</image>
+<image />
 <code><![CDATA[
 img = loadImage("apples.jpg")
 image(img, 0, 0)
@@ -28,7 +28,7 @@ filter(GRAY)
 </example>
 
 <example>
-<image>filter_2_invert.png</image>
+<image />
 <code><![CDATA[
 img = loadImage("apples.jpg")
 image(img, 0, 0)
@@ -37,7 +37,7 @@ filter(INVERT)
 </example>
 
 <example>
-<image>filter_3_posterize.png</image>
+<image />
 <code><![CDATA[
 img = loadImage("apples.jpg")
 image(img, 0, 0)
@@ -46,7 +46,7 @@ filter(POSTERIZE, 4)
 </example>
 
 <example>
-<image>filter_4_blur.png</image>
+<image />
 <code><![CDATA[
 img = loadImage("apples.jpg")
 image(img, 0, 0)
@@ -55,7 +55,7 @@ filter(BLUR, 6)
 </example>
 
 <example>
-<image>filter_5_erode.png</image>
+<image />
 <code><![CDATA[
 img = loadImage("apples.jpg")
 image(img, 0, 0)
@@ -64,7 +64,7 @@ filter(ERODE)
 </example>
 
 <example>
-<image>filter_6_dilate.png</image>
+<image />
 <code><![CDATA[
 img = loadImage("apples.jpg")
 image(img, 0, 0)
@@ -73,7 +73,7 @@ filter(DILATE)
 </example>
 
 <example>
-<image>filter_4_blur.png</image>
+<image />
 <code><![CDATA[
 blur = None
 

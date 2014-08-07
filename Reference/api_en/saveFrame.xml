@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 x = 0
 def draw():
@@ -25,7 +25,7 @@ def draw():
 </example>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 x = 0
 def draw():

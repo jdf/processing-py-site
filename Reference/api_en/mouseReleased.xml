@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 # Click within the image to change 
 # the value of the rectangle

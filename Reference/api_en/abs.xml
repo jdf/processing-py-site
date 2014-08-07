@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 a = abs(153)# Sets 'a' to 153
 b = abs(-15)# Sets 'b' to 15

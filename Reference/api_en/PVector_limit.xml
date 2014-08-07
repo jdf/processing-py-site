@@ -10,7 +10,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 v = PVector(10, 20, 2)
 v.limit(5)

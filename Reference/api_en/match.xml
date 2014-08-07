@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 s = "Inside a tag, you will find &lttag&gtcontent&lt/tag&gt."
 m = match(s, "&lttag&gt(.*?)&lt/tag&gt")
@@ -20,7 +19,6 @@ println("Found '%s' inside the tag" % m[1])
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 s1 = "Have you ever heard of a thing called fluoridation. "
 s1 += "Fluoridation of water?"

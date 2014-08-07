@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>randomGaussian_0.png</image>
+<image />
 <code><![CDATA[
 for y in range(100): 
     x = randomGaussian() * 15
@@ -19,7 +19,7 @@ for y in range(100):
 
 
 <example>
-<image>randomGaussian_1.png</image>
+<image />
 <code><![CDATA[
 distribution = [0.0] * 360
 

@@ -12,7 +12,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 def setup():
     selectInput("Select a file to process:", "fileSelected")

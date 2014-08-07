@@ -10,7 +10,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 # Non-static (lerp on a specific vector)
 current = None
@@ -25,7 +24,6 @@ def setup():
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 # Static (return a vector)
 start = None
@@ -41,7 +39,7 @@ def setup():
 </example>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 # Non-static (lerp on a specific vector)
 PVector v

@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>textLeading_.png</image>
+<image />
 <code><![CDATA[
 # Text to display. The "&#92n" is a "line" character
 lines = "L1\nL2\nL3"

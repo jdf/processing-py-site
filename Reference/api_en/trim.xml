@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 s1 = "        Somerville MA "
 println(s1)# Prints "        Somerville MA "

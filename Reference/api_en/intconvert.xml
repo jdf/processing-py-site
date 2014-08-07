@@ -7,7 +7,6 @@
 <subcategory>Conversion</subcategory>
 
 <example>
-<image></image>
 <code><![CDATA[
 f = 65.0
 i = int(f)

@@ -9,7 +9,7 @@
 <usage></usage>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 def setup():
     stroke(0, 0, 255)

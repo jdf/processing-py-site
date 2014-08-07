@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>saturation_.png</image>
+<image />
 <code><![CDATA[
 noStroke()
 colorMode(HSB, 255)

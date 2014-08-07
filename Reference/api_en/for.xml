@@ -9,7 +9,7 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image>for_0.png</image>
+<image />
 <code><![CDATA[
 for i in range(40):
     line(30, i, 80, i)
@@ -17,7 +17,7 @@ for i in range(40):
 </example>
 
 <example>
-<image>for_1.png</image>
+<image />
 <code><![CDATA[
 for i in range(0, 80, 5):
     line(30, i, 80, i)
@@ -25,7 +25,7 @@ for i in range(0, 80, 5):
 </example>
 
 <example>
-<image>for_2.png</image>
+<image />
 <code><![CDATA[
 for i in range(40, 80, 5):
     line(30, i, 80, i)
@@ -33,7 +33,7 @@ for i in range(40, 80, 5):
 </example>
 
 <example>
-<image>for_3.png</image>
+<image />
 <code><![CDATA[
 # Nested for() loops can be used to
 # generate two-dimensional patterns
@@ -44,7 +44,7 @@ for i in range(30, 80, 5):
 </example>
 
 <example>
-<image>blank.png</image>
+<image />
 <code><![CDATA[
 nums = [5, 4, 3, 2, 1]
 for i in nums:

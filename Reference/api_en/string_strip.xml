@@ -9,7 +9,6 @@
 <usage></usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 a = '              ...here...             '
 # If no arguments are given strip() removes leading and trailing whitespace.

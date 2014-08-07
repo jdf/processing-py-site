@@ -9,7 +9,6 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 PrintWriter output
 def setup(): 
@@ -66,6 +65,5 @@ createWriter()
 <type>Object</type>
 
 <partof>PDE</partof>
-
 
 </root>

@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 # The following short CSV file called "mammals.csv" is parsed
 # in the code below. It must be in the project's "data" folder.

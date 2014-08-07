@@ -9,7 +9,6 @@
 <usage></usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 pet = 'sea snail'
 println(pet.find('a'))       # Prints the index of the 'a' in 'pet': 2.

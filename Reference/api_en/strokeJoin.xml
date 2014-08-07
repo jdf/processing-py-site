@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>strokeJoin_0.png</image>
+<image />
 <code><![CDATA[
 noFill()
 strokeWeight(10.0)
@@ -23,7 +23,7 @@ endShape()
 </example>
 
 <example>
-<image>strokeJoin_1.png</image>
+<image />
 <code><![CDATA[
 noFill()
 strokeWeight(10.0)
@@ -37,7 +37,7 @@ endShape()
 </example>
 
 <example>
-<image>strokeJoin_2.png</image>
+<image />
 <code><![CDATA[
 noFill()
 strokeWeight(10.0)

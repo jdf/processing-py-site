@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 a = [3.4, 3.6, 2, 0, 7.1]
 a = sort(a)
@@ -24,7 +23,6 @@ println(a)
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 s = ["deer", "elephant", "bear", "aardvark", "cat"]
 s = sort(s)
@@ -39,7 +37,6 @@ println(s)
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 s = ["deer", "elephant", "bear", "aardvark", "cat" ]
 s = sort(s, 3)

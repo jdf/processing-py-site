@@ -7,7 +7,7 @@
 <subcategory></subcategory>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 pos = 0
 

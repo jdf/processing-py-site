@@ -9,7 +9,7 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image>logicalAND.png</image>
+<image />
 <code><![CDATA[
 for i in range(5, 95, 5):
     if 35 < i < 60:

@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>sphere_.png</image>
+<image />
 <code><![CDATA[
 noStroke()
 lights()

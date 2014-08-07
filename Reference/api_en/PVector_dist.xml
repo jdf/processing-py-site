@@ -10,7 +10,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 v1 = PVector(10, 20, 0)
 v2 = PVector(60, 80, 0)
@@ -20,7 +19,6 @@ println(d)  # Prints "78.10249328613281"
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 v1 = PVector(10, 20, 0)
 v2 = PVector(60, 80, 0)

@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>colorMode_0.png</image>
+<image />
 <code><![CDATA[
 noStroke()
 colorMode(RGB, 100)
@@ -21,7 +21,7 @@ for i in range(100):
 </example>
 
 <example>
-<image>colorMode_1.png</image>
+<image />
 <code><![CDATA[
 noStroke()
 colorMode(HSB, 100)
@@ -33,7 +33,7 @@ for i in range(100):
 </example>
 
 <example>
-<image>colorMode_2.png</image>
+<image />
 <code><![CDATA[
 # If the color is defined here, it won't be 
 # affected by the colorMode() in setup(). 

@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 data = "&ltmammals&gt&ltanimal&gtGoat&lt/animal&gt&lt/mammals&gt"
 def setup(): 

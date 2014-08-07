@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>rotateX_0.png</image>
+<image />
 <code><![CDATA[
 size(100, 100, P3D)
 translate(width/2, height/2)
@@ -19,7 +19,7 @@ rect(-26, -26, 52, 52)
 </example>
 
 <example>
-<image>rotateX_1.png</image>
+<image />
 <code><![CDATA[
 size(100, 100, P3D)
 translate(width/2, height/2)

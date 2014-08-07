@@ -8,8 +8,6 @@
 
 <type>variable</type>
 
-<type>variable</type>
-
 <example>
 <code><![CDATA[
 size(displayWidth, displayHeight)

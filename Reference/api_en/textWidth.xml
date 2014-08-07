@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>textWidth_.png</image>
+<image />
 <code><![CDATA[
 textSize(28)
 c = 'T'

@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 for i in range(100): 
     r = random(50)
@@ -19,7 +19,7 @@ for i in range(100):
 </example>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 for i in range(100): 
     r = random(-50, 50)
@@ -28,7 +28,7 @@ for i in range(100):
 </example>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 # Get a random element from an array
 words = "apple", "bear", "cat", "dog"

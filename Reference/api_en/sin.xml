@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>sin_.png</image>
+<image />
 <code><![CDATA[
 a = 0.0
 inc = TWO_PI/25.0

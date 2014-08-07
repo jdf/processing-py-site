@@ -7,7 +7,7 @@
 <type></type>
 
 <example>
-<image>copy_.png</image>
+<image />
 <code><![CDATA[
 img = loadImage("eames.jpg")
 image(img, 0, 0, width, height)

@@ -9,7 +9,7 @@
 <type>p5function</type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 def setup(): 
     size(100, 100)

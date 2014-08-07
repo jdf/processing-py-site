@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>rotate_.png</image>
+<image />
 <code><![CDATA[
 translate(width/2, height/2)
 rotate(PI/3.0)

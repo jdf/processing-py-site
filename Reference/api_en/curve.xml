@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>curve_.png</image>
+<image />
 <code><![CDATA[
 noFill()
 stroke(255, 102, 0)

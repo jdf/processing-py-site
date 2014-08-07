@@ -9,7 +9,7 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image>if_.png</image>
+<image />
 <code><![CDATA[
 for i in range(5, height, 5):
     stroke(255)     # Set the color to white

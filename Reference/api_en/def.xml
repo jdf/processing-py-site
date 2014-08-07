@@ -9,7 +9,7 @@
 <usage></usage>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 def tinySquare(x, y): # Use "def" to define a function tinySquare.
     squareSize = 10

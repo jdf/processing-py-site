@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 # Sets the background gray value based on the distance 
 # of the mouse from the center of the screen

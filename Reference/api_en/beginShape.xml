@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>beginShape_0.png</image>
+<image />
 <code><![CDATA[
 beginShape()
 vertex(30, 20)
@@ -21,7 +21,7 @@ endShape(CLOSE)
 </example>
 
 <example>
-<image>beginShape_1.png</image>
+<image />
 <code><![CDATA[
 beginShape(POINTS)
 vertex(30, 20)
@@ -33,7 +33,7 @@ endShape()
 </example>
 
 <example>
-<image>beginShape_2.png</image>
+<image />
 <code><![CDATA[
 beginShape(LINES)
 vertex(30, 20)
@@ -45,7 +45,7 @@ endShape()
 </example>
 
 <example>
-<image>beginShape_3.png</image>
+<image />
 <code><![CDATA[
 noFill()
 beginShape()
@@ -58,7 +58,7 @@ endShape()
 </example>
 
 <example>
-<image>beginShape_4.png</image>
+<image />
 <code><![CDATA[
 noFill()
 beginShape()
@@ -71,7 +71,7 @@ endShape(CLOSE)
 </example>
 
 <example>
-<image>beginShape_5.png</image>
+<image />
 <code><![CDATA[
 beginShape(TRIANGLES)
 vertex(30, 75)
@@ -85,7 +85,7 @@ endShape()
 </example>
 
 <example>
-<image>beginShape_6.png</image>
+<image />
 <code><![CDATA[
 beginShape(TRIANGLE_STRIP)
 vertex(30, 75)
@@ -100,7 +100,7 @@ endShape()
 </example>
 
 <example>
-<image>beginShape_7.png</image>
+<image />
 <code><![CDATA[
 beginShape(TRIANGLE_FAN)
 vertex(57.5, 50)
@@ -114,7 +114,7 @@ endShape()
 </example>
 
 <example>
-<image>beginShape_8.png</image>
+<image />
 <code><![CDATA[
 beginShape(QUADS)
 vertex(30, 20)
@@ -130,7 +130,7 @@ endShape()
 </example>
 
 <example>
-<image>beginShape_9.png</image>
+<image />
 <code><![CDATA[
 beginShape(QUAD_STRIP)
 vertex(30, 20)
@@ -146,7 +146,7 @@ endShape()
 </example>
 
 <example>
-<image>beginShape_10.png</image>
+<image />
 <code><![CDATA[
 beginShape()
 vertex(20, 20)

@@ -11,7 +11,7 @@
 <type></type>
 
 <example>
-<image>PImage.png</image>
+<image />
 <code><![CDATA[
 photo = None
 

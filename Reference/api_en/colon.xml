@@ -9,7 +9,7 @@
 <usage></usage>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 def setup():  # A colon declares the start of an indented block.
     size(150, 150)

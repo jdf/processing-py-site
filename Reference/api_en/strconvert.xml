@@ -8,7 +8,6 @@
 <subcategory>Conversion</subcategory>
 
 <example>
-<image></image>
 <code><![CDATA[
 b = False
 y = -28

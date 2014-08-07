@@ -7,7 +7,6 @@
 <subcategory>Conversion</subcategory>
 
 <example>
-<image></image>
 <code><![CDATA[
 i = 65
 f = float(i)

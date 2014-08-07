@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 x = 8.22
 a = ceil(x) # Sets 'a' to 9

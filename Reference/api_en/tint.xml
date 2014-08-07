@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>tint_0.png</image>
+<image />
 <code><![CDATA[
 img = loadImage("laDefense.jpg")
 image(img, 0, 0)
@@ -19,7 +19,7 @@ image(img, 50, 0)
 </example>
 
 <example>
-<image>tint_1.png</image>
+<image />
 <code><![CDATA[
 img = loadImage("laDefense.jpg")
 image(img, 0, 0)
@@ -29,7 +29,7 @@ image(img, 50, 0)
 </example>
 
 <example>
-<image>tint_2.png</image>
+<image />
 <code><![CDATA[
 img = loadImage("laDefense.jpg")
 image(img, 0, 0)

@@ -11,7 +11,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 value = 20
 n = norm(value, 0, 50)
@@ -20,7 +19,6 @@ println(n)  # Prints "0.4000000059604645"
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 value = -10
 n = norm(value, 0, 100)

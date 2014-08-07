@@ -10,7 +10,6 @@
 <type>method</type>
 
 <example>
-<image></image>
 <code><![CDATA[
 Table table
 def setup(): 

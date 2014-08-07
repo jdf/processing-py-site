@@ -10,7 +10,7 @@
 <type></type>
 
 <example>
-<image>PImage_updatePixels_.png</image>
+<image />
 <code><![CDATA[
 myImage = None
 

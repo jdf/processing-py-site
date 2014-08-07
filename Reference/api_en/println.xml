@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 s = "The size is "
 w = 1920
@@ -23,7 +22,6 @@ println(w, "x", h)
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 print("begin- ")
 f = 0.3

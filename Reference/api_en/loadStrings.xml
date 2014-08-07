@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 lines = loadStrings("list.txt")
 println("there are %i lines" % len(lines))
@@ -19,7 +18,6 @@ for i in range(len(lines)):
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 lines = loadStrings("http://processing.org/about/index.html")
 println("there are %i lines" % len(lines))

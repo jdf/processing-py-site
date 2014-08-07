@@ -13,7 +13,6 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 PrintWriter output
 def setup(): 

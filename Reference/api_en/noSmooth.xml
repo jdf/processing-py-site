@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>noSmooth_.png</image>
+<image />
 <code><![CDATA[
 background(0)
 noStroke()

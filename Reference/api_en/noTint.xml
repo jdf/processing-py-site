@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>noTint_.png</image>
+<image />
 <code><![CDATA[
 img = loadImage("laDefense.jpg")
 tint(0, 153, 204)# Tint blue

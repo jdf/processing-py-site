@@ -9,7 +9,6 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 a = 23     # Declare variable 'a' and assign it the value 23
 b = -256   # Declare variable 'b' and assign it the value -256

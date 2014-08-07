@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 a = pow( 1, 3)# Sets 'a' to 1*1*1 = 1
 b = pow( 3, 5)# Sets 'b' to 3*3*3*3*3 = 243

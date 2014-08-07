@@ -9,7 +9,7 @@
 <usage></usage>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 limeGreen = color(152, 250, 144) # Define global variable 'limeGreen'
 

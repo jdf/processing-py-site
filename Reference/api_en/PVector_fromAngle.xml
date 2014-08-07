@@ -10,7 +10,7 @@
 <type></type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 v = None
 

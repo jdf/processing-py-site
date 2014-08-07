@@ -9,7 +9,7 @@
 <usage></usage>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 numbers = [1, 2, 3]
 reversed_numbers = reversed(numbers)
@@ -26,7 +26,7 @@ println(numbers) # Prints [1, 2, 3]
 </example>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 # The reversed() function returns an iterator by default. Use list() to
 # convert the iterator to a list.
@@ -38,7 +38,7 @@ println(reversed_list) # Prints [3, 2, 1]
 </example>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 # reversed() can reverse any iterable, not just lists
 word = "orderly"

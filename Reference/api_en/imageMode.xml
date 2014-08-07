@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>imageMode_0.png</image>
+<image />
 <code><![CDATA[
 img = None
 
@@ -25,7 +25,7 @@ def draw():
 </example>
 
 <example>
-<image>imageMode_1.png</image>
+<image />
 <code><![CDATA[
 img = None
 
@@ -41,7 +41,7 @@ def draw():
 </example>
 
 <example>
-<image>imageMode_2.png</image>
+<image />
 <code><![CDATA[
 img = None
 

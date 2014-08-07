@@ -10,7 +10,6 @@
 <type>method</type>
 
 <example>
-<image></image>
 <code><![CDATA[
 def setup():
     table = Table()
@@ -24,7 +23,6 @@ def setup():
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 def setup():
     table = Table()

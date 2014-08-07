@@ -10,7 +10,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 v = PVector(3, 4, 0)
 v.setMag(10)

@@ -9,7 +9,6 @@
 <usage></usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 shopping_list = ['carrot', 'cucumber']
 fruits = ['mango', 'pear']

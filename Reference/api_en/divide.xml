@@ -9,7 +9,6 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 g = 50 / 5  # Assigns 10 to 'g'
 h = g / 5  # Assigns 2 to 'h'

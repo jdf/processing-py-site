@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>loadFont_.png</image>
+<image />
 <code><![CDATA[
 # The font must be located in the sketch's
 # "data" directory to load successfully

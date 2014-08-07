@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>point_0.png</image>
+<image />
 <code><![CDATA[
 noSmooth()
 point(30, 20)
@@ -20,7 +20,7 @@ point(30, 75)
 </example>
 
 <example>
-<image>point_1.png</image>
+<image />
 <code><![CDATA[
 size(100, 100, P3D)
 noSmooth()

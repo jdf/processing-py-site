@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>textSize_.png</image>
+<image />
 <code><![CDATA[
 background(0)
 fill(255)

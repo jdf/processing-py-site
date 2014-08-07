@@ -12,7 +12,7 @@
 <type></type>
 
 <example>
-<image>shearX_.png</image>
+<image />
 <code><![CDATA[
 size(100, 100)
 translate(width/4, height/4)

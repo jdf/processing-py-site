@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>translate_0.png</image>
+<image />
 <code><![CDATA[
 translate(30, 20)
 rect(0, 0, 55, 55)
@@ -17,7 +17,7 @@ rect(0, 0, 55, 55)
 </example>
 
 <example>
-<image>translate_1.png</image>
+<image />
 <code><![CDATA[
 # Translating in 3D requires P3D
 # as the parameter to size()
@@ -30,7 +30,7 @@ rect(0, 0, 55, 55)
 </example>
 
 <example>
-<image>translate_2.png</image>
+<image />
 <code><![CDATA[
 rect(0, 0, 55, 55)  # Draw rect at original 0,0
 translate(30, 20)

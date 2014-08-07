@@ -9,7 +9,7 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image>while_.png</image>
+<image />
 <code><![CDATA[
 i = 0
 while i < 80:

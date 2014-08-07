@@ -9,7 +9,7 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image>else0.png</image>
+<image />
 <code><![CDATA[
 for i in range(5, 95, 5): 
     if i < 35:
@@ -20,7 +20,7 @@ for i in range(5, 95, 5):
 </example>
 
 <example>
-<image>else1.png</image>
+<image />
 <code><![CDATA[
 for i in range(5, 95, 5): 
     if i < 35:

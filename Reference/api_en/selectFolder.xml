@@ -12,7 +12,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 def setup():
     selectFolder("Select a folder to process:", "folderSelected")

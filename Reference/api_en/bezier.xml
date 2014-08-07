@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>bezier_0.png</image>
+<image />
 <code><![CDATA[
 noFill()
 stroke(255, 102, 0)
@@ -21,7 +21,7 @@ bezier(85, 20, 10, 10, 90, 90, 15, 80)
 </example>
 
 <example>
-<image>bezier_1.png</image>
+<image />
 <code><![CDATA[
 noFill()
 stroke(255, 102, 0)

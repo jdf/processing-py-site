@@ -12,7 +12,7 @@
 <type></type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 square = None  # The PShape object
 
@@ -30,7 +30,7 @@ def draw():
 </example>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 s = None  # The PShape object
 
@@ -54,7 +54,7 @@ def draw():
 </example>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 s = None
 
@@ -77,7 +77,7 @@ def draw():
 </example>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 alien = None
 

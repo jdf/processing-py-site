@@ -9,7 +9,6 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 a = 1.5387 # Declare variable 'a' and assign it the value 1.5387
 b = -2.984 # Declare variable 'b' and assign it the value -2.984
@@ -18,7 +17,6 @@ c = a + b  # Declare variable 'c' and assign it the sum of 'a' and 'b'
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 f = 0
 for i in range(100000):

@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 line(20, 20, 80, 80)
 # Saves a TIFF file named "diagonal.tif"

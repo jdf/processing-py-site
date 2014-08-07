@@ -12,7 +12,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 def setup(): 
     size(200, 200)
@@ -29,7 +28,6 @@ def mousePressed():
 
 
 <example>
-<image></image>
 <code><![CDATA[
 def setup(): 
     size(200, 200)

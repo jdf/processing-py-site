@@ -12,7 +12,7 @@
 <type></type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 PShader edges
 PImage img

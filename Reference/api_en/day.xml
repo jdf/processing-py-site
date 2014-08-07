@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 def setup():
     metaBold = loadFont("fonts/Meta-Bold.vlw.gz")

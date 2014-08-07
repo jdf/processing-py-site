@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>strokeCap_.png</image>
+<image />
 <code><![CDATA[
 strokeWeight(12.0)
 strokeCap(ROUND)

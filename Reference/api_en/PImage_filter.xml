@@ -10,7 +10,7 @@
 <type></type>
 
 <example>
-<image>PImage_filter_0_threshold.png</image>
+<image />
 <code><![CDATA[
 img1 = None
 img2 = None
@@ -29,7 +29,7 @@ def draw():
 </example>
 
 <example>
-<image>PImage_filter_1_gray.png</image>
+<image />
 <code><![CDATA[
 img1 = None
 img2 = None
@@ -46,7 +46,7 @@ def draw():
 </example>
 
 <example>
-<image>PImage_filter_2_invert.png</image>
+<image />
 <code><![CDATA[
 img1 = None
 img2 = None
@@ -63,7 +63,7 @@ def draw():
 </example>
 
 <example>
-<image>PImage_filter_3_posterize.png</image>
+<image />
 <code><![CDATA[
 img1 = None
 img2 = None
@@ -80,7 +80,7 @@ def draw():
 </example>
 
 <example>
-<image>PImage_filter_4_blur.png</image>
+<image />
 <code><![CDATA[
 img1 = None
 img2 = None
@@ -97,7 +97,7 @@ def draw():
 </example>
 
 <example>
-<image>PImage_filter_5_erode.png</image>
+<image />
 <code><![CDATA[
 img1 = None
 img2 = None
@@ -114,7 +114,7 @@ def draw():
 </example>
 
 <example>
-<image>PImage_filter_6_dilate.png</image>
+<image />
 <code><![CDATA[
 img1 = None
 img2 = None

@@ -68,7 +68,7 @@ class ReferenceItem:
         if xml.find('example') is not None:
             self.examples = []
             for example in xml.iterfind('example'):
-                self.examples.append({'code': format_code(example.find('code').text)}) 
+                self.examples.append({'code': format_code(example.find('code').text), 'image':example.find('image') is not None}) 
         if xml.find('description') is not None:
             self.description = convert_hypertext(xml.find('description'))
         if xml.find('syntax') is not None:

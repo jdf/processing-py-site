@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>textAscent_.png</image>
+<image />
 <code><![CDATA[
 base = height * 0.75
 scalar = 0.8  # Different for each font

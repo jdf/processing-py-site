@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>pushMatrix_.png</image>
+<image />
 <code><![CDATA[
 fill(255)
 rect(0, 0, 50, 50)# White rectangle

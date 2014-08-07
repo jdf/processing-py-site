@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 a = PI/3
 t = tan(a)
@@ -20,7 +19,6 @@ println("%.7f : %.7f : %.7f" % (a, t, at))
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 a = PI + PI/3.0
 t = tan(a)

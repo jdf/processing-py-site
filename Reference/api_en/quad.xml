@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>quad_.png</image>
+<image />
 <code><![CDATA[
 quad(38, 31, 86, 20, 69, 63, 30, 76)
 ]]></code>

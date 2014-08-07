@@ -12,7 +12,7 @@
 <type></type>
 
 <example>
-<image>beginContour_0.png</image>
+<image />
 <code><![CDATA[
 size(100, 100, P2D)
 translate(50, 50)

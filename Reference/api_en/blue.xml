@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>blue_.png</image>
+<image />
 <code><![CDATA[
 c = color(175, 100, 220) # Define color 'c'
 fill(c) # Use color variable 'c' as fill color

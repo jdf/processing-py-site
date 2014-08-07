@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>PShape_disableStyle_.png</image>
+<image />
 <code><![CDATA[
 s = None
 

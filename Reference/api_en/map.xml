@@ -11,7 +11,7 @@
 <type></type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 size(200, 200)
 value = 25
@@ -21,7 +21,7 @@ ellipse(m, 200, 10, 10)
 </example>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 value = 110
 m = map(value, 0, 100, -20, -10)
@@ -30,7 +30,7 @@ println(m)# Prints "-9.0"
 </example>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 def setup(): 
     size(200, 200)

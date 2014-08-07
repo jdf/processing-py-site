@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>scale_0.png</image>
+<image />
 <code><![CDATA[
 rect(30, 20, 50, 50)
 scale(0.5)
@@ -18,7 +18,7 @@ rect(30, 20, 50, 50)
 </example>
 
 <example>
-<image>scale_1.png</image>
+<image />
 <code><![CDATA[
 rect(30, 20, 50, 50)
 scale(0.5, 1.3)
@@ -27,7 +27,7 @@ rect(30, 20, 50, 50)
 </example>
 
 <example>
-<image>scale_2.png</image>
+<image />
 <code><![CDATA[
 # Scaling in 3D requires P3D
 # as a parameter to size()

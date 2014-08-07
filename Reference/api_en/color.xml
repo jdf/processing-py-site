@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>color_0.png</image>
+<image />
 <code><![CDATA[
 c = color(255, 204, 0) # Define color 'c'
 fill(c) # Use color variable 'c' as fill color
@@ -19,7 +19,7 @@ rect(30, 20, 55, 55) # Draw rectangle
 </example>
 
 <example>
-<image>color_1.png</image>
+<image />
 <code><![CDATA[
 c = color(255, 204, 0) # Define color 'c'
 fill(c) # Use color variable 'c' as fill color
@@ -34,7 +34,7 @@ ellipse(75, 75, 80, 80) # Draw right circle
 </example>
 
 <example>
-<image>color_2.png</image>
+<image />
 <code><![CDATA[
 noStroke() # Don't draw a stroke around shapes
 # If no colorMode is specified, then the

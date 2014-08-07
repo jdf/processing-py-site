@@ -10,7 +10,7 @@
 <!-- js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode -->
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 deform = None
 tex = None

@@ -9,7 +9,7 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 # Comma used to separate a list of variable declarations
 a, b, c = 20, 30, 80

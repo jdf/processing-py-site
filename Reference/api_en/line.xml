@@ -9,14 +9,14 @@
 <type></type>
 
 <example>
-<image>line_0.png</image>
+<image />
 <code><![CDATA[
 line(30, 20, 85, 75)
 ]]></code>
 </example>
 
 <example>
-<image>line_1.png</image>
+<image />
 <code><![CDATA[
 line(30, 20, 85, 20)
 stroke(126)
@@ -27,7 +27,7 @@ line(85, 75, 30, 75)
 </example>
 
 <example>
-<image>line_2.png</image>
+<image />
 <code><![CDATA[
 # Drawing lines in 3D requires P3D
 # as a parameter to size()

@@ -9,7 +9,7 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image>logicalOR.png</image>
+<image />
 <code><![CDATA[
 for i in range(5, 95, 5):
     if (i < 35) or (i > 60):

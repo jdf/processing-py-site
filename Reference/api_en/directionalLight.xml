@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>directionalLight_0.png</image>
+<image />
 <code><![CDATA[
 size(100, 100, P3D)
 background(0)
@@ -21,7 +21,7 @@ sphere(30)
 </example>
 
 <example>
-<image>directionalLight_1.png</image>
+<image />
 <code><![CDATA[
 size(100, 100, P3D)
 background(0)

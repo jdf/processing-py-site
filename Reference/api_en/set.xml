@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>set_0.png</image>
+<image />
 <code><![CDATA[
 black = color(0)
 set(30, 20, black)
@@ -20,7 +20,7 @@ set(30, 75, black)
 </example>
 
 <example>
-<image>set_1.png</image>
+<image />
 <code><![CDATA[
 for i in range(30, width-15): 
     for j in range(20, height-25): 
@@ -30,7 +30,7 @@ for i in range(30, width-15):
 </example>
 
 <example>
-<image>set_2.png</image>
+<image />
 <code><![CDATA[
 size(100, 100)
 myImage = loadImage("apples.jpg")

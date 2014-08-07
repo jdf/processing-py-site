@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>PImage_pixels.png</image>
+<image />
 <code><![CDATA[
 tower = None 
 

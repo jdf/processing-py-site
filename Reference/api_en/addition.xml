@@ -9,7 +9,6 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 a = 50 + 5  # Sets 'a' to 55
 b = a + 5  # Sets 'b' to 60
@@ -17,7 +16,6 @@ b = a + 5  # Sets 'b' to 60
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 s1 = "Chernenko"
 s2 = "Brezhnev"
@@ -29,7 +27,6 @@ println(sc2)  # Prints "Chernenko, Andropov, Brezhnev"
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 s1 = "Gorbachev"
 i = 1987

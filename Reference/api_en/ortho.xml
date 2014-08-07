@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>ortho_.png</image>
+<image />
 <code><![CDATA[
 size(100, 100, P3D)
 noFill()

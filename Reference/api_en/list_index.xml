@@ -9,7 +9,6 @@
 <usage></usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 a = ['a', 'b', 'c']
 println(a.index('b')) # Prints 1

@@ -9,7 +9,7 @@
 <type>variable</type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 # Click on the image to give it focus,
 # and then press any key.

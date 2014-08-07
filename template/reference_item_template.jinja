@@ -24,7 +24,11 @@
     {% if item.examples %}
         <tr class=""><th scope="row">Examples</th><td>
         {% for example in item.examples %}
-            <div class="example"><img /><pre class='margin'>
+            <div class="example">
+            {% if example.image %}
+                <img />
+            {% endif %}
+            <pre class='margin'>
                 {{ example.code }}
             </div></pre>
         {% endfor %}

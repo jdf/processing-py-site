@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 # Open a file and read its binary data
 b = loadBytes("something.dat")

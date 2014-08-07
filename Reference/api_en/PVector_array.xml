@@ -10,7 +10,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 PVector v = PVector(10.0, 20.0, 30.0)
 float[] f = v.array()

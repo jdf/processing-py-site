@@ -9,7 +9,6 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 c = 50 - 5  # Sets 'c' to 45
 d = c - 5  # Sets 'd' to 40
@@ -18,7 +17,6 @@ e = d - 60  # Sets 'e' to -20
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 a = 5  # Sets 'a' to 5
 b = -a  # Sets 'b' to -5

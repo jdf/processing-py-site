@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 a = PI
 c = cos(a)
@@ -20,7 +19,6 @@ println("%.7f : %.1f : %.7f" % (a, c, ac))
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 a = PI + PI/4.0
 c = cos(a)

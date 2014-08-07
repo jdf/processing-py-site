@@ -5,7 +5,7 @@
 <type></type>
 
 <example>
-<image>arc_.png</image>
+<image />
 <code><![CDATA[
 arc(50, 55, 50, 50, 0, HALF_PI)
 noFill()
@@ -16,21 +16,21 @@ arc(50, 55, 80, 80, PI+QUARTER_PI, TWO_PI)
 </example>
 
 <example>
-<image>arc_2.png</image>
+<image />
 <code><![CDATA[
 arc(50, 50, 80, 80, 0, PI+QUARTER_PI, OPEN)
 ]]></code>
 </example>
 
 <example>
-<image>arc_3.png</image>
+<image />
 <code><![CDATA[
 arc(50, 50, 80, 80, 0, PI+QUARTER_PI, CHORD)
 ]]></code>
 </example>
 
 <example>
-<image>arc_4.png</image>
+<image />
 <code><![CDATA[
 arc(50, 50, 80, 80, 0, PI+QUARTER_PI, PIE)
 ]]></code>

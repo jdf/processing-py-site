@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>perspective_.png</image>
+<image />
 <code><![CDATA[
 # Re-creates the default perspective
 size(100, 100, P3D)

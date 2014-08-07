@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 x = 2.88
 a = floor(x)# Sets 'a' to 2

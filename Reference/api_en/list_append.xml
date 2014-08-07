@@ -9,7 +9,6 @@
 <usage></usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 a = ['carrot', 'cucumber']
 println(a)  # Prints ['carrot', 'cucumber']

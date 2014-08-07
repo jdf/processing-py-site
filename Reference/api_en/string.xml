@@ -9,7 +9,6 @@
 <usage></usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 str1 = 'CCCP'
 str2 = "CCCP"
@@ -19,7 +18,6 @@ println(str2)        # Prints 'CCCP'
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 # Use a backslash to include quotes inside of a string.
 single_quote = 'This one has \'quotes\''
@@ -30,7 +28,6 @@ println(double_quote)
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 # Use triple quotes to include text that spans multiple lines.
 wcwilliams = """And you may be sure

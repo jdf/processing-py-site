@@ -9,7 +9,6 @@
 <usage></usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 # Converting a string to a list gives a list with one element per character
 alphabet = "abcdefg"
@@ -19,7 +18,6 @@ println(letter_list) # Prints ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 # Converting a dictionary to a list gives a list of the dictionary's keys
 lettermap = {'a': 1, 'b': 2, 'c': 3}
@@ -29,7 +27,6 @@ println(list(lettermap)) # Prints ['a', 'b', 'c']
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 # Call list() with another list as an argument to make a copy of the list
 inventory = ['lamp', 'skeleton key', 'train ticket']
@@ -39,7 +36,6 @@ println(inventory_copy) # Prints ['lamp', 'skeleton key', 'train ticket']
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 
 # Use list() to convert Python "iterators" to lists
@@ -57,7 +53,6 @@ println(reversed_letters_list) # Prints ['g', 'f', 'e', 'd', 'c', 'b', 'a']
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 # list() without arguments returns an empty list
 empty = list()

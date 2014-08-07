@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>bezierVertex_0.png</image>
+<image />
 <code><![CDATA[
 noFill()
 beginShape()
@@ -20,7 +20,7 @@ endShape()
 </example>
 
 <example>
-<image>bezierVertex_1.png</image>
+<image />
 <code><![CDATA[
 beginShape()
 vertex(30, 20)

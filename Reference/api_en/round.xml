@@ -10,7 +10,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 x = 9.2
 rx = round(x)  # Sets 'rx' to 9

@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>PI.png</image>
+<image />
 <code><![CDATA[
 x = width/2
 y = height/2

@@ -10,7 +10,7 @@
 <type></type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 c = color(255, 204, 0)
 println(c)             # Prints "-13312"

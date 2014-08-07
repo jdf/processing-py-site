@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>ellipseMode_0.png</image>
+<image />
 <code><![CDATA[
 ellipseMode(RADIUS)  # Set ellipseMode to RADIUS
 fill(255)  # Set fill to white
@@ -21,7 +21,7 @@ ellipse(50, 50, 30, 30)  # Draw gray ellipse using CENTER mode
 </example>
 
 <example>
-<image>ellipseMode_1.png</image>
+<image />
 <code><![CDATA[
 ellipseMode(CORNER)  # Set ellipseMode is CORNER
 fill(255)  # Set fill to white

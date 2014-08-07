@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 a = PI/3
 s = sin(a)
@@ -20,7 +20,7 @@ println("%.7f : %.8f : %.7f" % (a, s, arcsin))
 </example>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 a = PI + PI/3.0
 s = sin(a)

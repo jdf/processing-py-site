@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>blendColor_.png</image>
+<image />
 <code><![CDATA[
 orange = color(204, 102, 0)
 blue = color(0, 102, 153)

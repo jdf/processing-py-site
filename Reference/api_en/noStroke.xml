@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>noStroke_.png</image>
+<image />
 <code><![CDATA[
 noStroke()
 rect(30, 20, 55, 55)

@@ -9,7 +9,7 @@
 <type>variable</type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 # Click within the image and press
 # the left and right mouse buttons to
@@ -26,7 +26,7 @@ def draw():
 </example>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 # Click within the image and press
 # the left and right mouse buttons to 

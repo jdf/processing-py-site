@@ -10,7 +10,7 @@
 <usage>Web &amp; Application</usage>
     
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 a = 207    # In binary: 11001111
 b = 61     # In binary: 00111101
@@ -20,7 +20,7 @@ println(c) # Prints "13", the decimal equivalent to 00001101
 </example>
     
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 argb = color(204, 204, 51, 255)
 # The sytax "& 0xFF" compares the binary

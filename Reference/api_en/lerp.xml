@@ -11,7 +11,7 @@
 <type></type>
 
 <example>
-<image>lerp_0.png</image>
+<image />
 <code><![CDATA[
 a = 20
 b = 80
@@ -29,7 +29,7 @@ endShape()
 </example>
 
 <example>
-<image>lerp_1.png</image>
+<image />
 <code><![CDATA[
 x1 = 15
 y1 = 10

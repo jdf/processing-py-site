@@ -9,7 +9,6 @@
 <usage></usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 message = 'I AM QUITE ANGRY.'
 polite_message = message.lower()

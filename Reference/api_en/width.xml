@@ -11,7 +11,7 @@
 <type>variable</type>
 
 <example>
-<image>width.png</image>
+<image />
 <code><![CDATA[
 noStroke()
 background(0)

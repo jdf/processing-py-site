@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>PImage_get_0.png</image>
+<image />
 <code><![CDATA[
 mountains = loadImage("rockies.jpg")
 background(mountains)
@@ -21,7 +21,7 @@ rect(25, 25, 50, 50)
 </example>
 
 <example>
-<image>PImage_get_1.png</image>
+<image />
 <code><![CDATA[
 mountains = loadImage("rockies.jpg")
 background(mountains)

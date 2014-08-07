@@ -9,7 +9,6 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 val = 30
 
@@ -26,7 +25,6 @@ def timestwo(dVal):
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 vals = [10, 20, 30]
 
@@ -43,7 +41,6 @@ def timestwo(dVals):
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 def draw(): 
     background(204)

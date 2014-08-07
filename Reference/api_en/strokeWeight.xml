@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>strokeWeight_.png</image>
+<image />
 <code><![CDATA[
 strokeWeight(1)  # Default
 line(20, 20, 80, 20)

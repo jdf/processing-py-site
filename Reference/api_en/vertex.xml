@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>vertex_0.png</image>
+<image />
 <code><![CDATA[
 beginShape(POINTS)
 vertex(30, 20)
@@ -21,7 +21,7 @@ endShape()
 </example>
 
 <example>
-<image>vertex_1.png</image>
+<image />
 <code><![CDATA[
 # Drawing vertices in 3D requires P3D
 # as a parameter to size()
@@ -36,7 +36,7 @@ endShape()
 </example>
 
 <example>
-<image>vertex_2.png</image>
+<image />
 <code><![CDATA[
 size(100, 100, P3D)
 img = loadImage("laDefense.jpg")

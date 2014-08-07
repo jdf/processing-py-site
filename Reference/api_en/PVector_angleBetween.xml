@@ -10,7 +10,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 v1 = PVector(10, 20)
 v2 = PVector(60, 80)

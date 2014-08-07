@@ -9,7 +9,7 @@
 <type>p5function</type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 # Drag (click and hold) your mouse across the 
 # image to change the value of the rectangle

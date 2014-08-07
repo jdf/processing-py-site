@@ -9,7 +9,7 @@
 <type>p5function</type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 yPos = 0.0
 
@@ -29,7 +29,7 @@ def draw():  # draw() loops forever, until stopped
 </example>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 def setup():
     size(200, 200)

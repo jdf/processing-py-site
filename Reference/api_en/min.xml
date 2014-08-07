@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 d = min(5, 9)  # Sets 'd' to 5
 e = min(-4, -12)  # Sets 'e' to -12
@@ -18,7 +17,6 @@ f = min(12.3, 230.24)  # Sets 'f' to 12.3
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 values = 5, 1, 2, -3  # Create an array of ints
 h = min(values)  # Sets 'h' to -3

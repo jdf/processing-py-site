@@ -9,7 +9,6 @@
 <type></type>
 
 <example>
-<image></image>
 <code><![CDATA[
 sa1 = ["OH", "NY", "CA"]
 sa1.append("MA")

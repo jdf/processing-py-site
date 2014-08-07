@@ -10,7 +10,7 @@
 <type></type>
 
 <example>
-<image>blend_0_add.png</image>
+<image />
 <code><![CDATA[
 background(loadImage("rockies.jpg"))
 img = loadImage("bricks.jpg")
@@ -20,7 +20,7 @@ blend(img, 0, 0, 33, 100, 67, 0, 33, 100, ADD)
 </example>
 
 <example>
-<image>blend_1_subtract.png</image>
+<image />
 <code><![CDATA[
 background(loadImage("rockies.jpg"))
 img = loadImage("bricks.jpg")
@@ -30,7 +30,7 @@ blend(img, 0, 0, 33, 100, 67, 0, 33, 100, SUBTRACT)
 </example>
 
 <example>
-<image>blend_2_darkest.png</image>
+<image />
 <code><![CDATA[
 background(loadImage("rockies.jpg"))
 img = loadImage("bricks.jpg")
@@ -40,7 +40,7 @@ blend(img, 0, 0, 33, 100, 67, 0, 33, 100, DARKEST)
 </example>
 
 <example>
-<image>blend_3_lightest.png</image>
+<image />
 <code><![CDATA[
 background(loadImage("rockies.jpg"))
 img = loadImage("bricks.jpg")

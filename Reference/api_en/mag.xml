@@ -11,7 +11,7 @@
 <type></type>
 
 <example>
-<image>mag_.png</image>
+<image />
 <code><![CDATA[
 x1 = 20
 x2 = 80

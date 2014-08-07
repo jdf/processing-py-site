@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>createImage_0.png</image>
+<image />
 <code><![CDATA[
 img = createImage(66, 66, RGB)
 img.loadPixels()
@@ -21,7 +21,7 @@ image(img, 17, 17)
 </example>
 
 <example>
-<image>createImage_1.png</image>
+<image />
 <code><![CDATA[
 img = createImage(66, 66, ARGB)
 img.loadPixels()

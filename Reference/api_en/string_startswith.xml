@@ -9,7 +9,6 @@
 <usage></usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 message = "Now is the winter of our discontent."
 if message.startswith("Now"):

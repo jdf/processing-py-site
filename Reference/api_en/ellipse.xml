@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>ellipse_.png</image>
+<image />
 <code><![CDATA[
 ellipse(56, 46, 55, 55)
 ]]></code>

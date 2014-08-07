@@ -9,7 +9,7 @@
 <type>variable</type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 def draw():
     background(204)

@@ -9,7 +9,6 @@
 <usage></usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 numbers = [10.6, -14, 1000, 3, 7]
 numbers.sort()
@@ -26,7 +25,6 @@ println(inventory) # Prints ['wallet', 'mummy wrap', 'crowbar', 'ancient map']
 </example>
 
 <example>
-<image></image>
 <code><![CDATA[
 # sort() is, by default, case insensitive
 items = ["Abacus", "abacus", "Zwieback", "zwieback"]

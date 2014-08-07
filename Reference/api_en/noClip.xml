@@ -13,7 +13,7 @@
 <type></type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 def setup():
     size(200, 200)

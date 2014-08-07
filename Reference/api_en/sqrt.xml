@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>sqrt_.png</image>
+<image />
 <code><![CDATA[
 noStroke()
 a = sqrt(6561)  # Sets 'a' to 81

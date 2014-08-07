@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>popStyle_0.png</image>
+<image />
 <code><![CDATA[
 ellipse(0, 50, 33, 33)  # Left circle
 pushStyle()  # Start a style
@@ -22,7 +22,7 @@ ellipse(100, 50, 33, 33)  # Right circle
 </example>
 
 <example>
-<image>popStyle_1.png</image>
+<image />
 <code><![CDATA[
 ellipse(0, 50, 33, 33)  # Left circle
 pushStyle()  # Start a style

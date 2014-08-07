@@ -10,7 +10,7 @@
 <type></type>
 
 <example>
-<image>PImage_mask_.png</image>
+<image />
 <code><![CDATA[
 PImage photo, maskImage
 def setup(): 

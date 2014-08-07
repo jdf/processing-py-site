@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>hue_.png</image>
+<image />
 <code><![CDATA[
 noStroke()
 colorMode(HSB, 255)

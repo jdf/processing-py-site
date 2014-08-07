@@ -9,7 +9,6 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 m = 1 << 3  # In binary: 1 to 1000
 println(m)  # Prints "8"
@@ -23,7 +22,7 @@ println(p)  # Prints "26"
 </example>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 # Packs four 8 bit numbers into one 32 bit number
 a = 255     # Binary: 00000000000000000000000011111111

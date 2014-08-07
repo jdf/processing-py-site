@@ -9,7 +9,7 @@
 <type>variable</type>
 
 <example>
-<image></image>
+<image />
 <code><![CDATA[
 if (focused) # or "if (focused == True)"
     ellipse(25, 25, 50, 50)

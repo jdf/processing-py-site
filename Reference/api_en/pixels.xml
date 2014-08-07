@@ -9,7 +9,7 @@
 <type>variable</type>
 
 <example>
-<image>pixels.png</image>
+<image />
 <code><![CDATA[
 pink = color(255, 102, 204)
 loadPixels()
