@@ -29,7 +29,7 @@ printCamera()
 </syntax>
 
 <related>
-camera()
+<ref target="camera">camera()</ref>
 </related>
 
 </root>

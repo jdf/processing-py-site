@@ -35,7 +35,7 @@ Takes an XML object and converts it to a String, using default formatting rules 
 </syntax>
 
 <related>
-format()
+<ref target="XML_format">format()</ref>
 </related>
 
 </root>

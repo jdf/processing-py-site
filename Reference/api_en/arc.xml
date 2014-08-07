@@ -78,10 +78,10 @@ arc(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>, <c>start</c>, <c>stop</c>, <c>mode</
 </parameter>
 
 <related>
-ellipse()
-ellipseMode()
-radians()
-degrees()
+<ref target="ellipse">ellipse()</ref>
+<ref target="ellipseMode">ellipseMode()</ref>
+<ref target="radians">radians()</ref>
+<ref target="degrees">degrees()</ref>
 </related>
 
 </root>

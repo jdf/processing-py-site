@@ -27,12 +27,12 @@ lowercase.
 <returns></returns>
 
 <related>
-string
-string_formatting
-string_find
-string_string
-string_join
-string_replace
+<ref target="string">str</ref>
+<ref target="string_formatting">str.format()</ref>
+<ref target="string_find">str.find()</ref>
+<ref target="string_strip">str.strip()</ref>
+<ref target="string_join">str.join()</ref>
+<ref target="string_replaces">str.replace()</ref>
 </related>
 
 <availability>1.0</availability>

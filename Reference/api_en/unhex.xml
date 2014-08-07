@@ -23,9 +23,9 @@ Converts a String representation of a hexadecimal number to its equivalent integ
 ]]></description>
 
 <related>
-hex()
-binary()
-unbinary()
+<ref target="hex">hex()</ref>
+<ref target="binary">binary()</ref>
+<ref target="unbinary">unbinary()</ref>
 </related>
 
 </root>

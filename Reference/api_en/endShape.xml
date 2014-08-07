@@ -40,8 +40,8 @@ endShape(mode)
 </parameter>
 
 <related>
-PShape
-beginShape()
+<ref target="PShape">PShape</ref>
+<ref target="PShape_beginShape">beginShape()</ref>
 </related>
 
 </root>

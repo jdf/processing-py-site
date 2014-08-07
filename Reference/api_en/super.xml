@@ -40,8 +40,7 @@ Keyword used to reference the superclass of a subclass.
 <returns></returns>
 
 <related>
-class
-extends
+<ref target="class">class</ref>
 </related>
 
 <availability>1.0</availability>

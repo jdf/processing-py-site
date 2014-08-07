@@ -43,8 +43,8 @@ smooth(<c>level</c>)
 </parameter>
 
 <related>
-noSmooth()
-size() 
+<ref target="noSmooth">noSmooth()</ref>
+<ref target="size">size()</ref>
 </related>
 
 </root>

@@ -76,7 +76,7 @@ If indent is set to 0 or greater, then the String is returned with line breaks, 
 </parameter>
 
 <related>
-toString()
+<ref target="XML_toString">toString()</ref>
 </related>
 
 </root>

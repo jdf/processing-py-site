@@ -44,8 +44,8 @@ Defines if textures repeat or draw once within a texture map. The two parameters
 ]]></description>
 
 <related>
-texture()
-textureMode()
+<ref target="texture">texture()</ref>
+<ref target="textureMode">textureMode()</ref>
 </related>
 
 </root>

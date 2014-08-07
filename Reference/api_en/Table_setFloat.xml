@@ -56,12 +56,12 @@ Stores a float value in the <b>Table</b>'s specified row and column. The row is 
 </parameter>
 
 <related>
-setInt()
-setString()
-getInt()
-getFloat()
-getString()
-getStringColumn()
+<ref target="XML_setInt">setInt()</ref>
+<ref target="XML_setString">setString()</ref>
+<ref target="XML_getInt">getInt()</ref>
+<ref target="XML_getFloat">getFloat()</ref>
+<ref target="XML_getString">getString()</ref>
+<ref target="Table_getStringColumn">getStringColumn()</ref>
 </related>
 
 </root>

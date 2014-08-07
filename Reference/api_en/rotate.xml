@@ -36,13 +36,13 @@ rotate(<c>angle</c>, x, y, z)
 </parameter>
 
 <related>
-popMatrix()
-pushMatrix()
-rotateX()
-rotateY()
-rotateZ()
-scale()
-radians()
+<ref target="popMatrix">popMatrix()</ref>
+<ref target="pushMatrix">pushMatrix()</ref>
+<ref target="rotateX">rotateX()</ref>
+<ref target="rotateY">rotateY()</ref>
+<ref target="rotateZ">rotateZ()</ref>
+<ref target="scale">scale()</ref>
+<ref target="radians">radians()</ref>
 </related>
 
 </root>

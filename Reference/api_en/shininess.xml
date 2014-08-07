@@ -43,9 +43,9 @@ shininess(<c>shine</c>)
 </parameter>
 
 <related>
-emissive()
-ambient()
-specular()
+<ref target="emissive">emissive()</ref>
+<ref target="ambient">ambient()</ref>
+<ref target="specular">specular()</ref>
 </related>
 
 </root>

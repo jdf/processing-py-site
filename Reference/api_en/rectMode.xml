@@ -55,7 +55,7 @@ The parameter must be written in ALL CAPS because Processing is a case-sensitive
 
 
 <related>
-rect()
+<ref target="rect">rect()</ref>
 </related>
 
 </root>

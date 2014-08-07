@@ -28,6 +28,8 @@ Hides the cursor from view. Will not work when running the program in a web brow
 noCursor()
 </syntax>
 
-<related>cursor()</related>
+<related>
+<ref target="cursor">cursor()</ref>
+</related>
 
 </root>

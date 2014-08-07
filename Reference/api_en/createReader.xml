@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>createReader()</name>
+
+<category></category>
+
+<subcategory></subcategory>
+
+<description><![CDATA[
+Creates a BufferedReader object that can be used to read files line-by-line as individual String objects. This is the complement to the createWriter() function. 
+
+Starting with Processing release 0134, all files loaded and saved by the Processing API use UTF-8 encoding. In previous releases, the default encoding for your platform was used, which causes problems when files are moved to other platforms.
+]]></description>
+
+<syntax>
+createReader(<c>filename</c>)
+</syntax>
+
+<parameter>
+<label>filename</label>
+<description>Name of the file to be opened</description>
+</parameter>
+
+<returns>BufferedReader</returns>
+
+<related>
+<ref target="createWriter">createWriter()</ref>
+</related>
+
+<availability>1.0</availability>
+
+</root>

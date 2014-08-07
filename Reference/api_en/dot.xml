@@ -64,7 +64,7 @@ Provides access to an object's methods and data. An object is one instance of a 
 <returns></returns>
 
 <related>
-Object
+<ref target="Object">Object</ref>
 </related>
 
 <availability>1.0</availability>

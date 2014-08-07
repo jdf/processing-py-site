@@ -26,7 +26,7 @@ Squares a number (multiplies a number by itself). The result is always a positiv
 ]]></description>
 
 <related>
-sqrt()
+<ref target="sqrt">sqrt()</ref>
 </related>
 
 </root>

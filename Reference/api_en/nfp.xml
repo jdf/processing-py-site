@@ -62,9 +62,9 @@ nfp(<c>num</c>, <c>left</c>, <c>right</c>)
 </parameter>
 
 <related>
-nf()
-nfs()
-nfc()
+<ref target="nf">nf()</ref>
+<ref target="nfs">nfs()</ref>
+<ref target="nfc">nfc()</ref>
 </related>
 
 </root>

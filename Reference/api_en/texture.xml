@@ -31,11 +31,11 @@ When textures are in use, the fill color is ignored. Instead, use <b>tint()</b> 
 ]]></description>
 
 <related>
-textureMode()
-textureWrap()
-beginShape()
-endShape()
-vertex()
+<ref target="textureMode">textureMode()</ref>
+<ref target="textureWrap">textureWrap()</ref>
+<ref target="PShape_beginShape">beginShape()</ref>
+<ref target="PShape_endShape">endShape()</ref>
+<ref target="vertex">vertex()</ref>
 </related>
 
 </root>

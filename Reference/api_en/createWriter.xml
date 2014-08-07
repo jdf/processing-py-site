@@ -35,7 +35,7 @@ Starting with Processing release 0134, all files loaded and saved by the Process
 ]]></description>
 
 <related>
-createReader()
+<ref target="createReader">createReader()</ref>
 </related>
 
 </root>

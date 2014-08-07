@@ -40,10 +40,10 @@ Extends a list by appending all of the elements of another list to the end.
 <returns></returns>
 
 <related>
-list_insert
-list_pop
-list_reverse
-list_index
+<ref target="list_insert"></ref>
+<ref target="list_pop"></ref>
+<ref target="list_reverse"></ref>
+<ref target="list_index"></ref>
 </related>
 
 <availability>1.0</availability>

@@ -38,10 +38,10 @@ noiseSeed(<c>seed</c>)
 </parameter>
 
 <related>
-noise()
-noiseDetail()
-random()
-randomSeed()
+<ref target="noise">noise()</ref>
+<ref target="noiseDetail">noiseDetail()</ref>
+<ref target="random">random()</ref>
+<ref target="randomSeed">randomSeed()</ref>
 </related>
 
 </root>

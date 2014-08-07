@@ -38,8 +38,8 @@ Removes a row from a <b>Table</b> object.
 </parameter>
 
 <related>
-addRow()
-clearRows()
+<ref target="Table_addRow">addRow()</ref>
+<ref target="Table_clearRows">clearRows()</ref>
 </related>
 
 </root>

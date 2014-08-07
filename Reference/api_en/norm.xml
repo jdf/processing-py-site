@@ -52,8 +52,8 @@ norm(<c>value</c>, <c>start</c>, <c>stop</c>)
 </parameter>
 
 <related>
-map()
-lerp()
+<ref target="map">map()</ref>
+<ref target="PVector_lerp">lerp()</ref>
 </related>
 
 </root>

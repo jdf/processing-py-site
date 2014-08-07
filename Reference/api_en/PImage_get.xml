@@ -70,9 +70,9 @@ Getting the color of a single pixel with <b>get(x, y)</b> is easy, but not as fa
 </parameter>
 
 <related>
-set()
-pixels
-copy()
+<ref target="set">set()</ref>
+<ref target="pixels">pixels</ref>
+<ref target="PVector_copy">copy()</ref>
 </related>
 
 </root>

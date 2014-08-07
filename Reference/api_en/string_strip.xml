@@ -36,12 +36,12 @@ a.strip(<c>chars</c>)
 <returns></returns>
 
 <related>
-string
-string_formatting
-string_find
-string_join
-string_split
-string_replace
+<ref target="string">str</ref>
+<ref target="string_formatting">str.format()</ref>
+<ref target="string_find">str.find()</ref>
+<ref target="string_join">str.join()</ref>
+<ref target="string_split">str.split()</ref>
+<ref target="string_replace">str.replace()</ref>
 </related>
 
 <availability>1.0</availability>

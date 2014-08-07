@@ -55,9 +55,9 @@ Sets the style of the joints which connect line segments. These joints are eithe
 ]]></description>
 
 <related>
-stroke()
-strokeWeight()
-strokeCap()
+<ref target="stroke">stroke()</ref>
+<ref target="strokeWeight">strokeWeight()</ref>
+<ref target="strokeCap">strokeCap()</ref>
 </related>
 
 </root>

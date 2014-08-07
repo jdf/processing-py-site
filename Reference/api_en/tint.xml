@@ -51,8 +51,8 @@ The <b>tint()</b> function is also used to control the coloring of textures in 3
 ]]></description>
 
 <related>
-noTint()
-image()
+<ref target="noTint">noTint()</ref>
+<ref target="image">image()</ref>
 </related>
 
 </root>

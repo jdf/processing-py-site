@@ -54,8 +54,8 @@ The parameter must be written in ALL CAPS because Processing is a case-sensitive
 </parameter>
 
 <related>
-ellipse()
-arc()
+<ref target="ellipse">ellipse()</ref>
+<ref target="arc">arc()</ref>
 </related>
 
 </root>

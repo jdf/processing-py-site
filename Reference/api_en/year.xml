@@ -34,12 +34,12 @@ Processing communicates with the clock on your computer. The <b>year()</b> funct
 ]]></description>
 
 <related>
-millis()
-second()
-minute()
-hour()
-day()
-month()
+<ref target="millis">millis()</ref>
+<ref target="second">second()</ref>
+<ref target="minute">minute()</ref>
+<ref target="hour">hour()</ref>
+<ref target="day">day()</ref>
+<ref target="month">month()</ref>
 </related>
 
 </root>

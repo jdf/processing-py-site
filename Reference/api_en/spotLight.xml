@@ -87,10 +87,10 @@ spotLight(<c>v1</c>, <c>v2</c>, <c>v3</c>, <c>x</c>, <c>y</c>, <c>z</c>, <c>nx</
 
 
 <related>
-lights()
-directionalLight()
-pointLight()
-ambientLight()
+<ref target="lights">lights()</ref>
+<ref target="directionalLight">directionalLight()</ref>
+<ref target="pointLight">pointLight()</ref>
+<ref target="ambientLight">ambientLight()</ref>
 </related>
 
 </root>

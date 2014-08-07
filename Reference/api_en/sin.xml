@@ -33,9 +33,9 @@ sin(<c>angle</c>)
 </parameter>
 
 <related>
-cos()
-tan()
-radians()
+<ref target="cos">cos()</ref>
+<ref target="tan">tan()</ref>
+<ref target="radians">radians()</ref>
 </related>
 
 </root>

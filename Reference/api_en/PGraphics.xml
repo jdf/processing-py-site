@@ -33,7 +33,7 @@ Main graphics and rendering context, as well as the base API implementation for 
 ]]></description>
 
 <related>
-createGraphics()
+<ref target="createGraphics">createGraphics()</ref>
 </related>
 
 </root>

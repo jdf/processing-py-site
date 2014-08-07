@@ -28,8 +28,6 @@ Removes whitespace characters from the beginning and end of a String. In additio
 ]]></description>
 
 <related>
-split()
-join()
 </related>
 
 </root>

@@ -49,9 +49,9 @@ normal(<c>nx</c>, <c>ny</c>, <c>nz</c>)
 </parameter>
 
 <related>
-beginShape()
-endShape()
-lights()
+<ref target="PShape_beginShape">beginShape()</ref>
+<ref target="PShape_endShape">endShape()</ref>
+<ref target="lights">lights()</ref>
 </related>
 
 </root>

@@ -63,12 +63,12 @@ draw()
 </syntax>
 
 <related>
-setup()
-loop()
-noLoop()
-redraw()
-frameRate()
-background()
+<ref target="setup">setup()</ref>
+<ref target="loop">loop()</ref>
+<ref target="noLoop">noLoop()</ref>
+<ref target="redraw">redraw()</ref>
+<ref target="frameRate">frameRate()</ref>
+<ref target="background">background()</ref>
 </related>
 
 </root>

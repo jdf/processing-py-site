@@ -41,7 +41,7 @@ endRecord()
 </syntax>
 
 <related>
-beginRecord()
+<ref target="beginRecord">beginRecord()</ref>
 </related>
 
 </root>

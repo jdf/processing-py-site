@@ -73,13 +73,13 @@ scale(<c>x</c>, <c>y</c>, <c>z</c>)
 </parameter>
 
 <related>
-pushMatrix()
-popMatrix()
-translate()
-rotate()
-rotateX()
-rotateY()
-rotateZ()
+<ref target="pushMatrix">pushMatrix()</ref>
+<ref target="popMatrix">popMatrix()</ref>
+<ref target="translate">translate()</ref>
+<ref target="rotate">rotate()</ref>
+<ref target="rotateX">rotateX()</ref>
+<ref target="rotateY">rotateY()</ref>
+<ref target="rotateZ">rotateZ()</ref>
 </related>
 
 </root>

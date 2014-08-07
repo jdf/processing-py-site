@@ -56,11 +56,11 @@ loadTable(<c>filename</c>, <c>options</c>)
 </parameter>
 
 <related>
-Table
-saveTable()
-loadBytes()
-loadStrings()
-loadXML()
+<ref target="Table">Table</ref>
+<ref target="saveTable">saveTable()</ref>
+<ref target="loadBytes">loadBytes()</ref>
+<ref target="loadStrings">loadStrings()</ref>
+<ref target="loadXML">loadXML()</ref>
 </related>
 
 </root>

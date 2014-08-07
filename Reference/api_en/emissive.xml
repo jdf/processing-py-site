@@ -53,9 +53,9 @@ emissive(<c>v1</c>, <c>v2</c>, <c>v3</c>)
 </parameter>
 
 <related>
-ambient()
-specular()
-shininess()
+<ref target="ambient">ambient()</ref>
+<ref target="specular">specular()</ref>
+<ref target="shininess">shininess()</ref>
 </related>
 
 </root>

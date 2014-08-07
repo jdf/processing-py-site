@@ -39,8 +39,8 @@ Removes all rows from a <b>Table</b>.  While all rows are removed, columns and c
 </syntax>
 
 <related>
-addRow()
-removeRow()
+<ref target="Table_addRow">addRow()</ref>
+<ref target="Table_removeRow">removeRow()</ref>
 </related>
 
 </root>

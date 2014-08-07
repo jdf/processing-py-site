@@ -34,10 +34,10 @@ The Boolean system variable <b>keyPressed</b> is <b>True</b> if any key is press
 ]]></description>
 
 <related>
-key
-keyCode
-keyPressed
-keyReleased()
+<ref target="key">key</ref>
+<ref target="keyCode">keyCode</ref>
+<ref target="keyPressed_var">keyPressed</ref>
+<ref target="keyReleased">keyReleased()</ref>
 </related>
 
 </root>

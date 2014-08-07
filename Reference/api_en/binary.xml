@@ -42,9 +42,9 @@ binary(<c>value</c>, <c>digits</c>)
 </parameter>
 
 <related>
-unbinary()
-hex()
-unhex()
+<ref target="unbinary">unbinary()</ref>
+<ref target="hex">hex()</ref>
+<ref target="unhex">unhex()</ref>
 </related>
 
 </root>

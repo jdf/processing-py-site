@@ -54,11 +54,11 @@ Finds the first row in the <b>Table</b> that contains the value provided, and re
 </parameter>
 
 <related>
-getRow()
-rows()
-findRows()
-matchRow()
-matchRows()
+<ref target="Table_getRow">getRow()</ref>
+<ref target="Table_rows">rows()</ref>
+<ref target="Table_findRows">findRows()</ref>
+<ref target="Table_matchRow">matchRow()</ref>
+<ref target="Table_matchRows">matchRows()</ref>
 </related>
 
 </root>

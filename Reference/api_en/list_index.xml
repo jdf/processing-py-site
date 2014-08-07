@@ -36,10 +36,10 @@ Return the index in the list of the first item whose value is x. Raises a ValueE
 <returns></returns>
 
 <related>
-list_insert
-list_pop
-list_reverse
-list_append
+<ref target="list_insert">List Insert</ref>
+<ref target="list_pop">List Pop</ref>
+<ref target="list_reverse">List Reverse</ref>
+<ref target="list_append">List Append</ref>
 </related>
 
 <availability>1.0</availability>

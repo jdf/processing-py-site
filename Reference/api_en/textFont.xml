@@ -28,10 +28,10 @@ With the default and PDF renderers, it's also possible to enable the use of nati
 ]]></description>
 
 <related>
-createFont()
-loadFont()
-PFont
-text()
+<ref target="createFont">createFont()</ref>
+<ref target="loadFont">loadFont()</ref>
+<ref target="PFont">PFont</ref>
+<ref target="text">text()</ref>
 </related>
 
 </root>

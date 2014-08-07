@@ -52,7 +52,7 @@ noiseDetail(<c>lod</c>, <c>falloff</c>)
 </parameter>
 
 <related>
-noise()
+<ref target="noise">noise()</ref>
 </related>
 
 </root>

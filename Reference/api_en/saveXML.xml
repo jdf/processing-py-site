@@ -58,9 +58,9 @@ saveXML(<c>xml</c>, <c>filename</c>, <c>options</c>)
 </parameter>
 
 <related>
-XML
-loadXML()
-parseXML()
+<ref target="XML">XML</ref>
+<ref target="loadXML">loadXML()</ref>
+<ref target="parseXML">parseXML()</ref>
 </related>
 
 </root>

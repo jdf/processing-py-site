@@ -37,9 +37,9 @@ not<c>expression</c>
 <returns></returns>
 
 <related>
-or (logical OR)
-and (logical AND)
-if
+<ref target="logicalOR">or (logical OR)</ref>
+<ref target="logicalAND">and (logical AND)</ref>
+<ref target="if">if</ref>
 </related>
 
 <availability>1.0</availability>

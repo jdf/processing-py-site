@@ -60,10 +60,10 @@ createFont(<c>name</c>, <c>size</c>, <c>smooth</c>, <c>charset</c>)
 </parameter>
 
 <related>
-PFont
-textFont()
-PGraphics
-loadFont()
+<ref target="PFont">PFont</ref>
+<ref target="textFont">textFont()</ref>
+<ref target="PGraphics">PGraphics</ref>
+<ref target="loadFont">loadFont()</ref>
 </related>
 
 </root>

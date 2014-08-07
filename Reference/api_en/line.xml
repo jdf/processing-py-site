@@ -84,10 +84,10 @@ line(<c>x1</c>, <c>y1</c>, <c>z1</c>, <c>x2</c>, <c>y2</c>, <c>z2</c>)
 </parameter>
 
 <related>
-strokeWeight()
-strokeJoin()
-strokeCap()
-beginShape()
+<ref target="strokeWeight">strokeWeight()</ref>
+<ref target="strokeJoin">strokeJoin()</ref>
+<ref target="strokeCap">strokeCap()</ref>
+<ref target="PShape_beginShape">beginShape()</ref>
 </related>
 
 </root>

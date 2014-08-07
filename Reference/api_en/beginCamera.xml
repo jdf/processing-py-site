@@ -34,12 +34,12 @@ beginCamera()
 </syntax>
 
 <related>
-camera()
-endCamera()
-applyMatrix()
-resetMatrix()
-translate()
-scale()
+<ref target="camera">camera()</ref>
+<ref target="endCamera">endCamera()</ref>
+<ref target="applyMatrix">applyMatrix()</ref>
+<ref target="resetMatrix">resetMatrix()</ref>
+<ref target="translate">translate()</ref>
+<ref target="scale">scale()</ref>
 </related>
 
 </root>

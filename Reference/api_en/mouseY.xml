@@ -24,17 +24,17 @@ Note that Processing can only track the mouse position when the pointer is over 
 ]]></description>
 
 <related>
-mouseX
-pmouseX
-pmouseY
-mousePressed
-mousePressed()
-mouseReleased()
-mouseClicked()
-mouseMoved()
-mouseDragged()
-mouseButton
-mouseWheel()
+<ref target="mouseX">mouseX</ref>
+<ref target="pmouseX">pmouseX</ref>
+<ref target="pmouseY">pmouseY</ref>
+<ref target="mousePressed_var">mousePressed</ref>
+<ref target="mousePressed">mousePressed()</ref>
+<ref target="mouseReleased">mouseReleased()</ref>
+<ref target="mouseClicked">mouseClicked()</ref>
+<ref target="mouseMoved">mouseMoved()</ref>
+<ref target="mouseDragged">mouseDragged()</ref>
+<ref target="mouseButton">mouseButton</ref>
+<ref target="mouseWheel">mouseWheel()</ref>
 </related>
 
 </root>

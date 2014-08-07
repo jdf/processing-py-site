@@ -56,8 +56,8 @@ Adds two values or concatenates string values. As a mathematical operator, it ca
 <returns></returns>
 
 <related>
-+= (add assign)
-- (minus)
+<ref target="addassign">+= (add assign)</ref>
+<ref target="minus">- (minus)</ref>
 </related>
 
 <availability>1.0</availability>

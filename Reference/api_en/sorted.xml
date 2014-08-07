@@ -104,7 +104,7 @@ sorted(<c>iterable</c>, key=<c>fn</c>)
 </parameter>
 
 <related>
-reverse()
+<ref target="list_reverse">reverse()</ref>
 </related>
 
 </root>

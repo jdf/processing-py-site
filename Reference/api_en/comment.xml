@@ -34,7 +34,7 @@ Explanatory notes embedded within the code. Comments are used to remind yourself
 <returns></returns>
 
 <related>
-''' ''' (multiline comment)
+<ref target="multilinecomment">''' ''' (multiline comment)</ref>
 </related>
 
 <availability>1.0</availability>

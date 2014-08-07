@@ -25,8 +25,8 @@ System variable that stores the width of the display window. This value is set b
 ]]></description>
 
 <related>
-height
-size()
+<ref target="PShape_height">height</ref>
+<ref target="size">size()</ref>
 </related>
 
 </root>

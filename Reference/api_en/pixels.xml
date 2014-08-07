@@ -26,11 +26,11 @@ Before accessing this list, the data must loaded with the <b>loadPixels()</b> fu
 ]]></description>
 
 <related>
-loadPixels()
-updatePixels()
-get()
-set()
-PImage
+<ref target="PImage_loadPixels">loadPixels()</ref>
+<ref target="updatePixels">updatePixels()</ref>
+<ref target="PVector_get">get()</ref>
+<ref target="set">set()</ref>
+<ref target="PImage">PImage</ref>
 </related>
 
 </root>

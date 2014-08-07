@@ -24,7 +24,7 @@ The width of the PShape document.
 ]]></description>
 
 <related>
-height
+<ref target="PShape_height">height</ref>
 </related>
 
 </root>

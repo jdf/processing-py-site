@@ -48,12 +48,12 @@ Shapes are always rotated around the upper-left corner of their bounding box. Po
 </parameter>
 
 <related>
-rotateX()
-rotateY()
-rotateZ()
-scale()
-translate()
-resetMatrix()
+<ref target="rotateX">rotateX()</ref>
+<ref target="rotateY">rotateY()</ref>
+<ref target="rotateZ">rotateZ()</ref>
+<ref target="scale">scale()</ref>
+<ref target="translate">translate()</ref>
+<ref target="resetMatrix">resetMatrix()</ref>
 </related>
 
 </root>

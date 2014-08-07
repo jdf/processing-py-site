@@ -38,9 +38,9 @@ parseXML(xmlString, options)
 </syntax>
 
 <related>
-XML
-loadXML()
-saveXML()
+<ref target="XML">XML</ref>
+<ref target="loadXML">loadXML()</ref>
+<ref target="saveXML">saveXML()</ref>
 </related>
 
 </root>

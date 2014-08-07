@@ -51,7 +51,7 @@ sphereDetail(<c>ures</c>, <c>vres</c>)
 </parameter>
 
 <related>
-sphere()
+<ref target="sphere">sphere()</ref>
 </related>
 
 </root>

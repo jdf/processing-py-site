@@ -43,7 +43,6 @@ Removes the specified element.  First use <b>getChild()</b> to get a reference t
 </syntax>
 
 <related>
-
 </related>
 
 </root>

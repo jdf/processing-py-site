@@ -48,7 +48,7 @@ The default visibility of a shape is usually controlled by whatever program crea
 </parameter>
 
 <related>
-isVisible()
+<ref target="PShape_isVisible">isVisible()</ref>
 </related>
 
 </root>

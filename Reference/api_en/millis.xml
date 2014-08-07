@@ -28,12 +28,12 @@ millis()
 </syntax>
 
 <related>
-second()
-minute()
-hour()
-day()
-month()
-year()
+<ref target="second">second()</ref>
+<ref target="minute">minute()</ref>
+<ref target="hour">hour()</ref>
+<ref target="day">day()</ref>
+<ref target="month">month()</ref>
+<ref target="year">year()</ref>
 </related>
 
 </root>

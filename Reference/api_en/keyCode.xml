@@ -37,10 +37,10 @@ The keys included in the ASCII specification (BACKSPACE, TAB, ENTER, RETURN, ESC
 ]]></description>
 
 <related>
-key
-keyPressed
-keyPressed()
-keyReleased()
+<ref target="key">key</ref>
+<ref target="keyPressed_var">keyPressed</ref>
+<ref target="keyPressed">keyPressed()</ref>
+<ref target="keyReleased">keyReleased()</ref>
 </related>
 
 </root>

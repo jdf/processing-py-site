@@ -41,8 +41,8 @@ Use <b>addRow()</b> to add a new row of data to a <b>Table</b> object.  By defau
 </parameter>
 
 <related>
-removeRow()
-clearRows()
+<ref target="Table_removeRow">removeRow()</ref>
+<ref target="Table_clearRows">clearRows()</ref>
 </related>
 
 </root>

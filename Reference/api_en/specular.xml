@@ -58,10 +58,10 @@ specular(<c>v1</c>, <c>v2</c>, <c>v3</c>)
 </parameter>
 
 <related>
-lightSpecular()
-ambient()
-emissive()
-shininess()
+<ref target="lightSpecular">lightSpecular()</ref>
+<ref target="ambient">ambient()</ref>
+<ref target="emissive">emissive()</ref>
+<ref target="shininess">shininess()</ref>
 </related>
 
 </root>

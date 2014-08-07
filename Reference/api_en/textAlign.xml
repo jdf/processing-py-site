@@ -51,9 +51,9 @@ The vertical alignment is based on the value of <b>textAscent()</b>, which many 
 ]]></description>
 
 <related>
-loadFont()
-PFont
-text()
+<ref target="loadFont">loadFont()</ref>
+<ref target="PFont">PFont</ref>
+<ref target="text">text()</ref>
 </related>
 
 </root>

@@ -81,10 +81,10 @@ loadImage(<c>filename</c>, <c>extension</c>)
 </parameter>
 
 <related>
-PImage
-image()
-imageMode()
-background()
+<ref target="PImage">PImage</ref>
+<ref target="image">image()</ref>
+<ref target="imageMode">imageMode()</ref>
+<ref target="background">background()</ref>
 </related>
 
 </root>

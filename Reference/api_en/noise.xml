@@ -66,9 +66,9 @@ noise(<c>x</c>, <c>y</c>, <c>z</c>)
 </parameter>
 
 <related>
-noiseSeed()
-noiseDetail()
-random()
+<ref target="noiseSeed">noiseSeed()</ref>
+<ref target="noiseDetail">noiseDetail()</ref>
+<ref target="random">random()</ref>
 </related>
 
 </root>

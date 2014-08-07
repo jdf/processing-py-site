@@ -76,8 +76,8 @@ copy(<c>src</c>, <c>sx</c>, <c>sy</c>, <c>sw</c>, <c>sh</c>, <c>dx</c>, <c>dy</c
 </parameter>
 
 <related>
-alpha()
-blend()
+<ref target="alpha">alpha()</ref>
+<ref target="PImage_blend">blend()</ref>
 </related>
 
 </root>

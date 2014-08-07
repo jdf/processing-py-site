@@ -57,11 +57,11 @@ Finds the rows in the <b>Table</b> that match the regular expression provided, a
 </parameter>
 
 <related>
-getRow()
-rows()
-findRow()
-findRows()
-matchRow()
+<ref target="Table_getRow">getRow()</ref>
+<ref target="Table_rows">rows()</ref>
+<ref target="Table_findRow">findRow()</ref>
+<ref target="Table_findRows">findRows()</ref>
+<ref target="Table_matchRow">matchRow()</ref>
 </related>
 
 </root>

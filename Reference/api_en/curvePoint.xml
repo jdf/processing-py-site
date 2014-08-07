@@ -62,9 +62,9 @@ curvePoint(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>, <c>t</c>)
 </parameter>
 
 <related>
-curve()
-curveVertex()
-bezierPoint()
+<ref target="curve">curve()</ref>
+<ref target="curveVertex">curveVertex()</ref>
+<ref target="bezierPoint">bezierPoint()</ref>
 </related>
 
 </root>

@@ -99,7 +99,7 @@ Note that there is one <em>static</em> version of this method, and two <em>non-s
 </parameter>
 
 <related>
-lerp()
+<ref target="PVector_lerp">lerp()</ref>
 </related>
 
 </root>

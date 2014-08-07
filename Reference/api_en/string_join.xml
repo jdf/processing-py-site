@@ -48,12 +48,12 @@ Combines a sequence of strings to create a new string, separating each item from
 <returns></returns>
 
 <related>
-string_formatting
-string_find
-string_strip
-string_split
-string_slice
-string_replace
+<ref target="string_formatting">str.format()</ref>
+<ref target="string_find">str.find()</ref>
+<ref target="string_strip">str.strip()</ref>
+<ref target="string_split">str.split()</ref>
+<ref target="string_slice">String Slices</ref>
+<ref target="string_replace">str.replace</ref>
 </related>
 
 <availability>1.0</availability>

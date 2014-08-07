@@ -48,7 +48,7 @@ beginShape(<c>kind</c>)
 </parameter>
 
 <related>
-endShape()
+<ref target="PShape_endShape">endShape()</ref>
 </related>
 
 </root>

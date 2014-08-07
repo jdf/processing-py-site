@@ -54,7 +54,7 @@ Use <b>addColumn()</b> to add a new column to a <b>Table</b> object.  Typically,
 </parameter>
 
 <related>
-removeColumn()
+<ref target="Table_removeColumn">removeColumn()</ref>
 </related>
 
 </root>

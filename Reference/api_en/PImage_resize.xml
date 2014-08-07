@@ -54,7 +54,7 @@ Even though a PGraphics is technically a PImage, it is not possible to rescale t
 </parameter>
 
 <related>
-get()
+<ref target="PVector_get">get()</ref>
 </related>
 
 </root>

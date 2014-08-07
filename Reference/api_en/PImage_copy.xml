@@ -87,8 +87,8 @@ pimg.copy(src, sx, sy, sw, sh, dx, dy, dw, dh)
 </parameter>
 
 <related>
-alpha()
-blend()
+<ref target="alpha">alpha()</ref>
+<ref target="PImage_blend">blend()</ref>
 </related>
 
 </root>

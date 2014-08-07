@@ -42,9 +42,9 @@ loop()
 </syntax>
 
 <related>
-noLoop()
-redraw()
-draw()
+<ref target="noLoop">noLoop()</ref>
+<ref target="redraw">redraw()</ref>
+<ref target="draw">draw()</ref>
 </related>
 
 </root>

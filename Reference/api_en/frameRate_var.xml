@@ -25,7 +25,7 @@ The system variable <b>frameRate</b> contains the approximate frame rate of a ru
 ]]></description>
 
 <related>
-frameRate()
+<ref target="frameRate">frameRate()</ref>
 </related>
 
 </root>

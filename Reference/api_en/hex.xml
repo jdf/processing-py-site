@@ -34,9 +34,9 @@ Note that the maximum number of digits is 8, because an <b>int</b> value can onl
 ]]></description>
 
 <related>
-unhex()
-binary()
-unbinary()
+<ref target="unhex">unhex()</ref>
+<ref target="binary">binary()</ref>
+<ref target="unbinary">unbinary()</ref>
 </related>
 
 </root>

@@ -89,9 +89,9 @@ bezierTangent(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>, <c>t</c>)
 </parameter>
 
 <related>
-bezier()
-bezierVertex()
-curvePoint()
+<ref target="bezier">bezier()</ref>
+<ref target="bezierVertex">bezierVertex()</ref>
+<ref target="curvePoint">curvePoint()</ref>
 </related>
 
 </root>

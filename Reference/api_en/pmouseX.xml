@@ -28,17 +28,17 @@ If you want values relative to the previous frame, use <b>pmouseX</b> and <b>pmo
 ]]></description>
 
 <related>
-mouseX
-mouseY
-pmouseY
-mousePressed
-mousePressed()
-mouseReleased()
-mouseClicked()
-mouseMoved()
-mouseDragged()
-mouseButton
-mouseWheel()
+<ref target="mouseX">mouseX</ref>
+<ref target="mouseY">mouseY</ref>
+<ref target="pmouseY">pmouseY</ref>
+<ref target="mousePressed_var">mousePressed</ref>
+<ref target="mousePressed">mousePressed()</ref>
+<ref target="mouseReleased">mouseReleased()</ref>
+<ref target="mouseClicked">mouseClicked()</ref>
+<ref target="mouseMoved">mouseMoved()</ref>
+<ref target="mouseDragged">mouseDragged()</ref>
+<ref target="mouseButton">mouseButton</ref>
+<ref target="mouseWheel">mouseWheel()</ref>
 </related>
 
 </root>

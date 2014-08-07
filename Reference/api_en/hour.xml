@@ -31,12 +31,12 @@ hour()
 </syntax>
 
 <related>
-millis()
-second()
-minute()
-day()
-month()
-year()
+<ref target="millis">millis()</ref>
+<ref target="second">second()</ref>
+<ref target="minute">minute()</ref>
+<ref target="day">day()</ref>
+<ref target="month">month()</ref>
+<ref target="year">year()</ref>
 </related>
 
 </root>

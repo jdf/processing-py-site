@@ -41,9 +41,9 @@ Compares two expressions and returns <b>True</b> only if both evaluate to <b>Tru
 <returns></returns>
 
 <related>
-or (logical OR)
-not (logical NOT)
-if
+<ref target="logicalOR">or (logical OR)</ref>
+<ref target="logicalNOT">not (logical NOT)</ref>
+<ref target="if">if</ref>
 </related>
 
 <availability>1.0</availability>

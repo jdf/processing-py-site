@@ -51,12 +51,12 @@ Retrieves a String value from the <b>Table</b>'s specified row and column. The r
 </parameter>
 
 <related>
-getInt()
-getFloat()
-getStringColumn()
-setInt()
-setFloat()
-setString()
+<ref target="XML_getInt">getInt()</ref>
+<ref target="XML_getFloat">getFloat()</ref>
+<ref target="Table_getStringColumn">getStringColumn()</ref>
+<ref target="XML_setInt">setInt()</ref>
+<ref target="XML_setFloat">setFloat()</ref>
+<ref target="XML_setString">setString()</ref>
 </related>
 
 </root>

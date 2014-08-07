@@ -54,11 +54,11 @@ Finds the first row in the <b>Table</b> that matches the regular expression prov
 </parameter>
 
 <related>
-getRow()
-rows()
-findRow()
-findRows()
-matchRows()
+<ref target="Table_getRow">getRow()</ref>
+<ref target="Table_rows">rows()</ref>
+<ref target="Table_findRow">findRow()</ref>
+<ref target="Table_findRows">findRows()</ref>
+<ref target="Table_matchRows">matchRows()</ref>
 </related>
 
 </root>

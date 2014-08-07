@@ -58,13 +58,13 @@ Using this method with the <b>z</b> parameter requires using the P3D parameter i
 </parameter>
 
 <related>
-popMatrix()
-pushMatrix()
-rotate()
-rotateX()
-rotateY()
-rotateZ()
-scale()
+<ref target="popMatrix">popMatrix()</ref>
+<ref target="pushMatrix">pushMatrix()</ref>
+<ref target="rotate">rotate()</ref>
+<ref target="rotateX">rotateX()</ref>
+<ref target="rotateY">rotateY()</ref>
+<ref target="rotateZ">rotateZ()</ref>
+<ref target="scale">scale()</ref>
 </related>
 
 </root>

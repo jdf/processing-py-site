@@ -44,8 +44,8 @@ ellipse(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>)
 </parameter>
 
 <related>
-ellipseMode()
-arc()
+<ref target="ellipseMode">ellipseMode()</ref>
+<ref target="arc">arc()</ref>
 </related>
 
 </root>

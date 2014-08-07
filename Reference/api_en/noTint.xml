@@ -28,8 +28,8 @@ noTint()
 </syntax>
 
 <related>
-tint()
-image()
+<ref target="tint">tint()</ref>
+<ref target="image">image()</ref>
 </related>
 
 </root>

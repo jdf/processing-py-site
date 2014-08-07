@@ -24,7 +24,7 @@ PFont is the font class for Processing. To create a font to use with Processing,
 ]]></description>
 
 <related>
-loadFont()
+<ref target="loadFont">loadFont()</ref>
 </related>
 
 </root>

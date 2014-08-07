@@ -24,9 +24,9 @@ Calculates the ratio of the sine and cosine of an angle. This function expects t
 ]]></description>
 
 <related>
-cos()
-sin()
-radians()
+<ref target="cos">cos()</ref>
+<ref target="sin">sin()</ref>
+<ref target="radians">radians()</ref>
 </related>
 
 </root>

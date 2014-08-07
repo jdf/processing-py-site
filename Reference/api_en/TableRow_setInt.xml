@@ -59,12 +59,12 @@ Stores an integer value in the <b>TableRow</b>'s specified column. The column ma
 </parameter>
 
 <related>
-setFloat()
-setString()
-getInt()
-getFloat()
-getString()
-getStringColumn()
+<ref target="XML_setFloat">setFloat()</ref>
+<ref target="XML_setString">setString()</ref>
+<ref target="XML_getInt">getInt()</ref>
+<ref target="XML_getFloat">getFloat()</ref>
+<ref target="XML_getString">getString()</ref>
+<ref target="Table_getStringColumn">getStringColumn()</ref>
 </related>
 
 

@@ -82,12 +82,12 @@ image(<c>img</c>, <c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>)
 </parameter>
 
 <related>
-loadImage()
-PImage
-imageMode()
-tint()
-background()
-alpha()
+<ref target="loadImage">loadImage()</ref>
+<ref target="PImage">PImage</ref>
+<ref target="imageMode">imageMode()</ref>
+<ref target="tint">tint()</ref>
+<ref target="background">background()</ref>
+<ref target="alpha">alpha()</ref>
 </related>
 
 </root>

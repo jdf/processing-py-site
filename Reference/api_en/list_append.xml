@@ -38,10 +38,10 @@ Add an item to the end of the list.
 <returns></returns>
 
 <related>
-list_insert
-list_pop
-list_reverse
-list_index
+<ref target="list_insert">list.insert()</ref>
+<ref target="list_pop">list.pop()</ref>
+<ref target="list_reverse">list.reverse()</ref>
+<ref target="list_index">List Indexing</ref>
 </related>
 
 <availability>1.0</availability>

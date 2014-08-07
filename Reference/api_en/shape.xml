@@ -68,9 +68,9 @@ shape(<c>shape</c>, <c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>)
 </parameter>
 
 <related>
-PShape
-loadShape()
-shapeMode()
+<ref target="PShape">PShape</ref>
+<ref target="loadShape">loadShape()</ref>
+<ref target="shapeMode">shapeMode()</ref>
 </related>
 
 </root>

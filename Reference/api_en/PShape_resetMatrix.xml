@@ -38,9 +38,9 @@ resetMatrix()
 </syntax>
 
 <related>
-rotate()
-scale()
-translate()
+<ref target="rotate">rotate()</ref>
+<ref target="scale">scale()</ref>
+<ref target="translate">translate()</ref>
 </related>
 
 </root>

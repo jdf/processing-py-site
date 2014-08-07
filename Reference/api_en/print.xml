@@ -54,10 +54,8 @@ print(<c>variables</c>)
 <description><![CDATA[list of data]]></description>
 </parameter>
 
-<related> 
-println()
-printArray()
-join()
+<related>
+<ref target="PrintWriter_println">println()</ref>
 </related>
 
 </root>

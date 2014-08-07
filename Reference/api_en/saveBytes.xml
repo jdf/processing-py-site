@@ -38,9 +38,9 @@ saveBytes(<c>filename</c>, <c>data</c>)
 </parameter>
 
 <related>
-loadStrings()
-loadBytes()
-saveStrings()
+<ref target="loadStrings">loadStrings()</ref>
+<ref target="loadBytes">loadBytes()</ref>
+<ref target="saveStrings">saveStrings()</ref>
 </related>
 
 </root>

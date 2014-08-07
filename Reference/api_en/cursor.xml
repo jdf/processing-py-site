@@ -55,7 +55,7 @@ cursor()
 </parameter>
 
 <related>
-noCursor()
+<ref target="noCursor">noCursor()</ref>
 </related> 
 
 </root>

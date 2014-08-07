@@ -33,9 +33,9 @@ randomSeed(<c>seed</c>)
 </parameter>
 
 <related>
-random()
-noise()
-noiseSeed()
+<ref target="random">random()</ref>
+<ref target="noise">noise()</ref>
+<ref target="noiseSeed">noiseSeed()</ref>
 </related>
 
 </root>

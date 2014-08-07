@@ -88,8 +88,8 @@ size(<c>w</c>,<c>h</c>,<c>renderer</c>)
 </parameter>
 
 <related>
-width
-height
+<ref target="width">width</ref>
+<ref target="PShape_height">height</ref>
 </related>
 
 </root>

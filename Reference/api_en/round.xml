@@ -34,8 +34,8 @@ round(<c>n</c>)
 </parameter>
 
 <related>
-floor()
-ceil()
+<ref target="floor">floor()</ref>
+<ref target="ceil">ceil()</ref>
 </related>
 
 </root>

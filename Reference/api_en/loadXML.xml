@@ -50,12 +50,12 @@ loadXML(<c>filename</c>)
 </parameter>
 
 <related>
-XML
-parseXML()
-saveXML()
-loadBytes()
-loadStrings()
-loadTable()
+<ref target="XML">XML</ref>
+<ref target="parseXML">parseXML()</ref>
+<ref target="saveXML">saveXML()</ref>
+<ref target="loadBytes">loadBytes()</ref>
+<ref target="loadStrings">loadStrings()</ref>
+<ref target="loadTable">loadTable()</ref>
 </related>
 
 </root>

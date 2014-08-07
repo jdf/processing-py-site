@@ -35,12 +35,12 @@ Substitute variables in a string using the string format operator % as shown abo
 <returns></returns>
 
 <related>
-string
-string_find
-string_strip
-string_join
-string_slice
-string_replace
+<ref target="string">string</ref>
+<ref target="string_find"></ref>
+<ref target="string_strip"></ref>
+<ref target="string_join"></ref>
+<ref target="string_slice"></ref>
+<ref target="string_replace"></ref>
 </related>
 
 <availability>1.0</availability>

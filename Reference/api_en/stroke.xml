@@ -35,15 +35,15 @@ When drawing in 2D with the default renderer, you may need <b>hint(ENABLE_STROKE
 ]]></description>
 
 <related>
-noStroke()
-strokeWeight()
-strokeJoin()
-strokeCap()
-fill()
-noFill()
-tint()
-background()
-colorMode()
+<ref target="noStroke">noStroke()</ref>
+<ref target="strokeWeight">strokeWeight()</ref>
+<ref target="strokeJoin">strokeJoin()</ref>
+<ref target="strokeCap">strokeCap()</ref>
+<ref target="fill">fill()</ref>
+<ref target="noFill">noFill()</ref>
+<ref target="tint">tint()</ref>
+<ref target="background">background()</ref>
+<ref target="colorMode">colorMode()</ref>
 </related>
 
 </root>

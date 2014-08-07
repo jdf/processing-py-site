@@ -102,8 +102,8 @@ bezier(<c>x1</c>, <c>y1</c>, <c>z1</c>, <c>x2</c>, <c>y2</c>, <c>z2</c>, <c>x3</
 </parameter>
 
 <related>
-bezierVertex()
-curve()
+<ref target="bezierVertex">bezierVertex()</ref>
+<ref target="curve">curve()</ref>
 </related>
 
 </root>

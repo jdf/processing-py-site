@@ -37,12 +37,12 @@ shearX(<c>angle</c>)
 </parameter>
 
 <related>
-popMatrix()
-pushMatrix()
-shearY()
-scale()
-translate()
-radians()
+<ref target="popMatrix">popMatrix()</ref>
+<ref target="pushMatrix">pushMatrix()</ref>
+<ref target="shearY">shearY()</ref>
+<ref target="scale">scale()</ref>
+<ref target="translate">translate()</ref>
+<ref target="radians">radians()</ref>
 </related>
 
 </root>

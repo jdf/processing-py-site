@@ -65,7 +65,7 @@ If no column is specified, then the values in all columns and rows are processed
 </parameter>
 
 <related>
-trim()
+<ref target="trim">trim()</ref>
 </related>
 
 </root>

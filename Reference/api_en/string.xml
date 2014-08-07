@@ -115,12 +115,12 @@ There are more string methods than those linked from this page. Additional docum
 </method>
 
 <related>
-string_formatting
-string_find
-string_strip
-string_join
-string_split
-string_replace
+<ref target="string_formatting">String Formatting</ref>
+<ref target="string_find">String Find</ref>
+<ref target="string_strip">String Strip</ref>
+<ref target="string_join">String Join</ref>
+<ref target="string_split">String Split</ref>
+<ref target="string_replace">String Replace</ref>
 </related>
 
 <availability>1.0</availability>
@@ -128,12 +128,5 @@ string_replace
 <type></type>
 
 <partof></partof>
-
-
-
-
-
-
-
 
 </root>

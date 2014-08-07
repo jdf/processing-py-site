@@ -38,11 +38,11 @@ Tests if the value on the left is larger than the value on the right or if the v
 <returns></returns>
 
 <related>
-&gt; (greater than)
-&lt; (less than)
-&lt;= (less than or equal to)
-== (equality)
-!= (inequality)
+<ref target="greaterthan">&gt; (greater than)</ref>
+<ref target="lessthan">&lt; (less than)</ref>
+<ref target="lessthanorequalto">&lt;= (less than or equal to)</ref>
+<ref target="equality">== (equality)</ref>
+<ref target="inequality">!= (inequality)</ref>
 </related>
 
 <availability>1.0</availability>

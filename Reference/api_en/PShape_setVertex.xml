@@ -78,8 +78,8 @@ The <b>setVertex()</b> method defines the coordinates of the vertex point locate
 </parameter>
 
 <related>
-getVertex()
-getVertexCount()
+<ref target="PShape_getVertex">getVertex()</ref>
+<ref target="PShape_getVertexCount">getVertexCount()</ref>
 </related>
 
 </root>

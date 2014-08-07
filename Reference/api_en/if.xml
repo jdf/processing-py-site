@@ -41,7 +41,7 @@ if <c>test</c>:
 <returns></returns>
 
 <related>
-else
+<ref target="else">else</ref>
 </related>
 
 <availability>1.0</availability>

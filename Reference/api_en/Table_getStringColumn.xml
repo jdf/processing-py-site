@@ -53,12 +53,12 @@ Retrieves all values in the specified column, and returns them as a string list.
 </parameter>
 
 <related>
-getInt()
-getFloat()
-getString()
-setInt()
-setFloat()
-setString()
+<ref target="XML_getInt">getInt()</ref>
+<ref target="XML_getFloat">getFloat()</ref>
+<ref target="XML_getString">getString()</ref>
+<ref target="XML_setInt">setInt()</ref>
+<ref target="XML_setFloat">setFloat()</ref>
+<ref target="XML_setString">setString()</ref>
 </related>
 
 </root>

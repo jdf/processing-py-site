@@ -37,8 +37,8 @@ Combines division with assignment. The expression <b>a /= b</b> is equivalent to
 <returns></returns>
 
 <related>
-= (assign)
-/ (divide)
+<ref target="assign">= (assign)</ref>
+<ref target="divide">/ (divide)</ref>
 </related>
 
 <availability>1.0</availability>

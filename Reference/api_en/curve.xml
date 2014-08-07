@@ -91,9 +91,9 @@ curve(<c>x1</c>, <c>y1</c>, <c>z1</c>, <c>x2</c>, <c>y2</c>, <c>z2</c>, <c>x3</c
 </parameter>
 
 <related>
-curveVertex()
-curveTightness()
-bezier()
+<ref target="curveVertex">curveVertex()</ref>
+<ref target="curveTightness">curveTightness()</ref>
+<ref target="bezier">bezier()</ref>
 </related>
 
 </root>

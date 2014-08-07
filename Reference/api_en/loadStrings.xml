@@ -47,8 +47,8 @@ loadStrings(<c>reader</c>)
 </parameter>
 
 <related>
-PShape
-createShape()
+<ref target="PShape">PShape</ref>
+<ref target="createShape">createShape()</ref>
 </related>
 
 </root>

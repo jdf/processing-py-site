@@ -41,9 +41,9 @@ loadFont(<c>filename</c>)
 </parameter>
 
 <related>
-PFont
-textFont()
-creatFont()
+<ref target="PFont">PFont</ref>
+<ref target="textFont">textFont()</ref>
+<ref target="createFont">creatFont()</ref>
 </related>
 
 </root>

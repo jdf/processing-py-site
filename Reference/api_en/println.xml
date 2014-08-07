@@ -60,8 +60,7 @@ println(<c>variables</c>)
 </parameter>
 
 <related>
-print()
-printArray()
+<ref target="PrintWriter_print">print()</ref>
 </related>
 
 </root>

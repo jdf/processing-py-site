@@ -31,11 +31,11 @@ The <b>textMode(SHAPE)</b> option in <b>P3D</b> can be combined with <b>beginRaw
 ]]></description>
 
 <related>
-loadFont()
-text()
-textFont()
-beginRaw()
-createFont()
+<ref target="loadFont">loadFont()</ref>
+<ref target="text">text()</ref>
+<ref target="textFont">textFont()</ref>
+<ref target="beginRaw">beginRaw()</ref>
+<ref target="createFont">createFont()</ref>
 </related>
 
 </root>

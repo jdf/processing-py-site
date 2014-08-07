@@ -36,8 +36,8 @@ save(<c>filename</c>)
 </parameter>
 
 <related>
-saveFrame()
-createGraphics()
+<ref target="saveFrame">saveFrame()</ref>
+<ref target="createGraphics">createGraphics()</ref>
 </related>
 
 </root>

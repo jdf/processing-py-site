@@ -83,8 +83,8 @@ map(<c>value</c>, <c>start1</c>, <c>stop1</c>, <c>start2</c>, <c>stop2</c>)
 </parameter>
 
 <related>
-norm()
-lerp()
+<ref target="norm">norm()</ref>
+<ref target="PVector_lerp">lerp()</ref>
 </related>
 
 </root>

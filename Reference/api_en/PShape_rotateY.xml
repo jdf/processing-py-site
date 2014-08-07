@@ -50,12 +50,12 @@ This method requires a 3D renderer. You need to use P3D as a third parameter for
 </parameter>
 
 <related>
-rotate()
-rotateX()
-rotateZ()
-scale()
-translate()
-resetMatrix()
+<ref target="rotate">rotate()</ref>
+<ref target="rotateX">rotateX()</ref>
+<ref target="rotateZ">rotateZ()</ref>
+<ref target="scale">scale()</ref>
+<ref target="translate">translate()</ref>
+<ref target="resetMatrix">resetMatrix()</ref>
 </related>
 
 </root>

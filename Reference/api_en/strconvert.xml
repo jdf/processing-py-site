@@ -29,12 +29,12 @@ Returns the string representation of primitive datatypes and arrays. For example
 ]]></description>
 
 <related>
-string
-string_formatting
-string_find
-string_strip
-string_join
-string_replace
+<ref target="string">string</ref>
+<ref target="string_formatting"></ref>
+<ref target="string_find"></ref>
+<ref target="string_strip"></ref>
+<ref target="string_join"></ref>
+<ref target="string_replace"></ref>
 </related>
 
 </root>

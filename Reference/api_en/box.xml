@@ -60,7 +60,7 @@ box(<c>w</c>, <c>h</c>, <c>d</c>)
 </parameter>
 
 <related>
-sphere()
+<ref target="sphere">sphere()</ref>
 </related>
 
 </root>

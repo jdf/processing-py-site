@@ -92,7 +92,7 @@ color(<c>v1</c>, <c>v2</c>, <c>v3</c>, <c>alpha</c>)
 </parameter>
 
 <related>
-colorMode()
+<ref target="colorMode">colorMode()</ref>
 </related>
 
 </root>

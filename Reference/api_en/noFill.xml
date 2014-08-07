@@ -25,9 +25,9 @@ noFill()
 </syntax>
 
 <related>
-fill()
-stroke()
-noStroke()
+<ref target="fill">fill()</ref>
+<ref target="stroke">stroke()</ref>
+<ref target="noStroke">noStroke()</ref>
 </related>
 
 </root>

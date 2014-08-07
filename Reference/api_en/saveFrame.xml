@@ -61,9 +61,9 @@ saveFrame(filename)
 </parameter>
 
 <related>
-save()
-createGraphics()
-frameCount
+<ref target="save">save()</ref>
+<ref target="createGraphics">createGraphics()</ref>
+<ref target="frameCount">frameCount</ref>
 </related>
 
 </root>

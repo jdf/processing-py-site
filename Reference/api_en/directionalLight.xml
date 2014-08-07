@@ -71,10 +71,10 @@ directionalLight(<c>v1</c>, <c>v2</c>, <c>v3</c>, <c>nx</c>, <c>ny</c>, <c>nz</c
 </parameter>
 
 <related>
-lights()
-ambientLight()
-pointLight()
-spotLight()
+<ref target="lights">lights()</ref>
+<ref target="ambientLight">ambientLight()</ref>
+<ref target="pointLight">pointLight()</ref>
+<ref target="spotLight">spotLight()</ref>
 </related>
 
 </root>

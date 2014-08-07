@@ -43,11 +43,11 @@ Gets all rows from the table.  Returns an iterator, so <b>for</b> must be used t
 </syntax>
 
 <related>
-getRow()
-findRow()
-findRows()
-matchRow()
-matchRows()
+<ref target="Table_getRow">getRow()</ref>
+<ref target="Table_findRow">findRow()</ref>
+<ref target="Table_findRows">findRows()</ref>
+<ref target="Table_matchRow">matchRow()</ref>
+<ref target="Table_matchRows">matchRows()</ref>
 </related>
 
 </root>

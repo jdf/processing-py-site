@@ -51,8 +51,8 @@ The <b>getVertexCount()</b> method returns the number of vertices that make up a
 </parameter>
 
 <related>
-getVertex()
-setVertex()
+<ref target="PShape_getVertex">getVertex()</ref>
+<ref target="PShape_setVertex">setVertex()</ref>
 </related>
 
 </root>

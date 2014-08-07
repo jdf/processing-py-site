@@ -64,12 +64,12 @@ This function is also used to map a texture onto geometry. The <b>texture()</b> 
 ]]></description>
 
 <related>
-beginShape()
-endShape()
-bezierVertex()
-quadraticVertex()
-curveVertex()
-texture()
+<ref target="PShape_beginShape">beginShape()</ref>
+<ref target="PShape_endShape">endShape()</ref>
+<ref target="bezierVertex">bezierVertex()</ref>
+<ref target="quadraticVertex">quadraticVertex()</ref>
+<ref target="curveVertex">curveVertex()</ref>
+<ref target="texture">texture()</ref>
 </related>
 
 </root>

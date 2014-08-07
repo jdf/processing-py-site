@@ -71,8 +71,8 @@ modelZ(<c>x</c>, <c>y</c>, <c>z</c>)
 </parameter>
 
 <related>
-modelX()
-modelY()
+<ref target="modelX">modelX()</ref>
+<ref target="modelY">modelY()</ref>
 </related>
 
 </root>

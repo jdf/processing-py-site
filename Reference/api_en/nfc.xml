@@ -41,8 +41,8 @@ nfc(<c>num</c>, <c>right</c>)
 </parameter>
 
 <related>
-nf()
-nfp()
+<ref target="nf">nf()</ref>
+<ref target="nfp">nfp()</ref>
 </related>
 
 </root>

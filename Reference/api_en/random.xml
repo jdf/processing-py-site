@@ -59,8 +59,8 @@ random(<c>low</c>, <c>high</c>)
 </parameter>
 
 <related>
-randomSeed()
-noise()
+<ref target="randomSeed">randomSeed()</ref>
+<ref target="noise">noise()</ref>
 </related>
 
 </root>

@@ -26,10 +26,10 @@ Sets the style for rendering line endings. These ends are either squared, extend
 ]]></description>
 
 <related>
-stroke()
-strokeWeight()
-strokeJoin()
-size()
+<ref target="stroke">stroke()</ref>
+<ref target="strokeWeight">strokeWeight()</ref>
+<ref target="strokeJoin">strokeJoin()</ref>
+<ref target="size">size()</ref>
 </related>
 
 </root>

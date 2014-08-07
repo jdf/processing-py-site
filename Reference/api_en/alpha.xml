@@ -30,12 +30,12 @@ alpha(rgb)
 </syntax>
 
 <related>
-red()
-green()
-blue()
-hue()
-saturation()
-brightness()
+<ref target="red">red()</ref>
+<ref target="green">green()</ref>
+<ref target="blue">blue()</ref>
+<ref target="hue">hue()</ref>
+<ref target="saturation">saturation()</ref>
+<ref target="brightness">brightness()</ref>
 </related>
 
 </root>

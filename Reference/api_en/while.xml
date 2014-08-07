@@ -42,7 +42,7 @@ while <c>expression</c>:
 <returns></returns>
 
 <related>
-for
+<ref target="for">for</ref>
 </related>
 
 <availability>1.0</availability>

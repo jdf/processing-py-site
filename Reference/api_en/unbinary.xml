@@ -24,9 +24,9 @@ Converts a string representation of a binary number to its equivalent integer va
 ]]></description>
 
 <related>
-binary()
-hex()
-unhex()
+<ref target="binary">binary()</ref>
+<ref target="hex">hex()</ref>
+<ref target="unhex">unhex()</ref>
 </related>
 
 </root>

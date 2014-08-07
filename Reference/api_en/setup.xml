@@ -38,10 +38,10 @@ setup()
 </syntax>
 
 <related>
-size()
-loop()
-noLoop()
-draw()
+<ref target="size">size()</ref>
+<ref target="loop">loop()</ref>
+<ref target="noLoop">noLoop()</ref>
+<ref target="draw">draw()</ref>
 </related>
 
 </root>

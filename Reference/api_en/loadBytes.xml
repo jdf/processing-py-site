@@ -45,9 +45,9 @@ loadBytes(<c>filename</c>)
 </parameter>
 
 <related>
-loadStrings()
-saveStrings()
-saveBytes()
+<ref target="loadStrings">loadStrings()</ref>
+<ref target="saveStrings">saveStrings()</ref>
+<ref target="saveBytes">saveBytes()</ref>
 </related>
 
 </root>

@@ -51,7 +51,7 @@ beginRecord(<c>renderer</c>, <c>filename</c>)
 
 
 <related>
-endRecord()
+<ref target="endRecord">endRecord()</ref>
 </related>
 
 </root>

@@ -34,10 +34,10 @@ For non-ASCII keys, use the <b>keyCode</b> variable. The keys included in the AS
 ]]></description>
 
 <related>
-keyCode
-keyPressed
-keyPressed()
-keyReleased()
+<ref target="keyCode">keyCode</ref>
+<ref target="keyPressed_var">keyPressed</ref>
+<ref target="keyPressed">keyPressed()</ref>
+<ref target="keyReleased">keyReleased()</ref>
 </related>
 
 </root>

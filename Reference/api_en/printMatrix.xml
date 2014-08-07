@@ -36,10 +36,10 @@ printMatrix()
 </syntax>
 
 <related>
-pushMatrix()
-popMatrix()
-resetMatrix()
-applyMatrix()
+<ref target="pushMatrix">pushMatrix()</ref>
+<ref target="popMatrix">popMatrix()</ref>
+<ref target="resetMatrix">resetMatrix()</ref>
+<ref target="applyMatrix">applyMatrix()</ref>
 </related>
 
 </root>

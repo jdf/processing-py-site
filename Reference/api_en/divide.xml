@@ -36,8 +36,8 @@ Divides the value of the first parameter by the value of the second parameter. T
 <returns></returns>
 
 <related>
-* (multiply)
-% (modulo)
+<ref target="multiply">* (multiply)</ref>
+<ref target="modulo">% (modulo)</ref>
 </related>
 
 <availability>1.0</availability>

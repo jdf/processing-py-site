@@ -52,7 +52,7 @@ The <b>beginContour()</b> and <b>endContour()</b> methods make it possible to de
 <syntax>endContour()</syntax>
 
 <related>
-beginContour()
+<ref target="PShape_beginContour">beginContour()</ref>
 </related>
 
 </root>

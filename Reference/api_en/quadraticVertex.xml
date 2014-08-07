@@ -82,10 +82,10 @@ quadraticVertex(<c>cx</c>, <c>cy</c>, <c>cz</c>, <c>x3</c>, <c>y3</c>, <c>z3</c>
 </parameter>
 
 <related>
-curveVertex()
-vertex()
-bezierVertex()
-bezier()
+<ref target="curveVertex">curveVertex()</ref>
+<ref target="vertex">vertex()</ref>
+<ref target="bezierVertex">bezierVertex()</ref>
+<ref target="bezier">bezier()</ref>
 </related>
 
 </root>

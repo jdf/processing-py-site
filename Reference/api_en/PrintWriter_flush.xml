@@ -44,7 +44,8 @@ Flushes the <b>PrintWriter</b> object. This is necessary to ensure all remaining
 
 <returns></returns>
 
-<related></related>
+<related>
+</related>
 
 <availability>1.0</availability>
 

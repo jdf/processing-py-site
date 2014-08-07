@@ -48,8 +48,8 @@ randomGaussian()
 </syntax>
 
 <related>
-random()
-noise()
+<ref target="random">random()</ref>
+<ref target="noise">noise()</ref>
 </related>
 
 </root>

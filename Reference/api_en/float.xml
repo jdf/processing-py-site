@@ -52,7 +52,7 @@ Floats are not precise, so avoid adding small values (such as 0.0001), as these 
 <returns></returns>
 
 <related>
-int
+<ref target="int">int</ref>
 </related>
 
 <availability>1.0</availability>

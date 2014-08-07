@@ -61,10 +61,10 @@ curveTangent(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>, <c>t</c>)
 </parameter>
 
 <related>
-curve()
-curveVertex()
-curvePoint()
-bezierTangent()
+<ref target="curve">curve()</ref>
+<ref target="curveVertex">curveVertex()</ref>
+<ref target="curvePoint">curvePoint()</ref>
+<ref target="bezierTangent">bezierTangent()</ref>
 </related>
 
 </root>

@@ -64,9 +64,9 @@ Using this method with the <b>z</b> parameter requires using the P3D parameter i
 </parameter>
 
 <related>
-rotate()
-translate()
-resetMatrix()
+<ref target="rotate">rotate()</ref>
+<ref target="translate">translate()</ref>
+<ref target="resetMatrix">resetMatrix()</ref>
 </related>
 
 </root>

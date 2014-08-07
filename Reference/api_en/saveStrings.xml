@@ -40,9 +40,9 @@ saveStrings(<c>filename</c>, <c>data</c>)
 </parameter>
 
 <related>
-loadStrings()
-loadBytes()
-saveBytes()
+<ref target="loadStrings">loadStrings()</ref>
+<ref target="loadBytes">loadBytes()</ref>
+<ref target="saveBytes">saveBytes()</ref>
 </related>
 
 </root>

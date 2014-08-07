@@ -30,8 +30,8 @@ Currently, while none of the renderers use the additional parameters to <b>updat
 ]]></description>
 
 <related>
-loadPixels
-pixels
+<ref target="loadPixels">loadPixels</ref>
+<ref target="pixels">pixels</ref>
 </related>
 
 </root>

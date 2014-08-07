@@ -42,7 +42,7 @@ endRaw()
 </syntax>
 
 <related>
-beginRaw()
+<ref target="beginRaw">beginRaw()</ref>
 </related>
 
 </root>

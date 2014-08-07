@@ -49,8 +49,8 @@ Retrieves a float value from the <b>TableRow</b>'s specified column. The column 
 </parameter>
 
 <related>
-getInt()
-getString()
+<ref target="XML_getInt">getInt()</ref>
+<ref target="XML_getString">getString()</ref>
 </related>
 
 </root>

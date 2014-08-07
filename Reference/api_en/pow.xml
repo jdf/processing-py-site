@@ -33,6 +33,8 @@ Facilitates exponential expressions. The <b>pow()</b> function is an efficient w
 <description><![CDATA[float: power by which to raise the base]]></description>
 </parameter>
 
-<related>sqrt()</related>
+<related>
+<ref target="sqrt">sqrt()</ref>
+</related>
 
 </root>

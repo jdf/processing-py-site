@@ -49,13 +49,13 @@ Note that Processing now lets you call <b>text()</b> without first specifying a 
 ]]></description>
 
 <related>
-textAlign()
-textFont()
-textMode()
-textSize()
-rectMode()
-fill()
-string
+<ref target="textAlign">textAlign()</ref>
+<ref target="textFont">textFont()</ref>
+<ref target="textMode">textMode()</ref>
+<ref target="textSize">textSize()</ref>
+<ref target="rectMode">rectMode()</ref>
+<ref target="fill">fill()</ref>
+<ref target="string">string</ref>
 </related>
 
 </root>

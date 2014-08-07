@@ -54,8 +54,8 @@ lerpColor(<c>c1</c>, <c>c2</c>, <c>amt</c>)
 </parameter>
 
 <related>
-color()
-lerp()
+<ref target="color">color()</ref>
+<ref target="PVector_lerp">lerp()</ref>
 </related>
 
 </root>

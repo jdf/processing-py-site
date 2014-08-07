@@ -54,12 +54,12 @@ Stores a string value in the <b>TableRow</b>'s specified column. The column may 
 </parameter>
 
 <related>
-setInt()
-setFloat()
-getInt()
-getFloat()
-getString()
-getStringColumn()
+<ref target="XML_setInt">setInt()</ref>
+<ref target="XML_setFloat">setFloat()</ref>
+<ref target="XML_getInt">getInt()</ref>
+<ref target="XML_getFloat">getFloat()</ref>
+<ref target="XML_getString">getString()</ref>
+<ref target="Table_getStringColumn">getStringColumn()</ref>
 </related>
 
 </root>

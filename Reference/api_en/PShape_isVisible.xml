@@ -45,7 +45,7 @@ sh.isVisible()
 </parameter>
 
 <related>
-setVisible()
+<ref target="PShape_setVisible">setVisible()</ref>
 </related>
 
 </root>

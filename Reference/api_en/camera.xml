@@ -78,8 +78,8 @@ camera(<c>eyeX</c>, <c>eyeY</c>, <c>eyeZ</c>, <c>centerX</c>, <c>centerY</c>, <c
 </parameter>
 
 <related>
-endCamera()
-frustum()
+<ref target="endCamera">endCamera()</ref>
+<ref target="frustum">frustum()</ref>
 </related>
 
 </root>

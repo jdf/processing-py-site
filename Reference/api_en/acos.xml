@@ -43,9 +43,9 @@ acos(<c>value</c>)
 
 
 <related>
-cos()
-asin()
-atan()
+<ref target="cos">cos()</ref>
+<ref target="asin">asin()</ref>
+<ref target="atan">atan()</ref>
 </related>
 
 </root>

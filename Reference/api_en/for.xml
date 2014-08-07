@@ -90,7 +90,7 @@ for <c>var</c> in <c>iterable</c>:
 <returns></returns>
 
 <related>
-while
+<ref target="while">while</ref>
 </related>
 
 <availability>1.0</availability>

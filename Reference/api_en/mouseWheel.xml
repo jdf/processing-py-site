@@ -39,17 +39,17 @@ mouseWheel(event)
 </parameter>
 
 <related>
-mouseX
-mouseY
-pmouseX
-pmouseY
-mousePressed
-mousePressed()
-mouseReleased()
-mouseClicked()
-mouseMoved()
-mouseDragged()
-mouseButton
+<ref target="mouseX">mouseX</ref>
+<ref target="mouseY">mouseY</ref>
+<ref target="pmouseX">pmouseX</ref>
+<ref target="pmouseY">pmouseY</ref>
+<ref target="mousePressed_var">mousePressed</ref>
+<ref target="mousePressed">mousePressed()</ref>
+<ref target="mouseReleased">mouseReleased()</ref>
+<ref target="mouseClicked">mouseClicked()</ref>
+<ref target="mouseMoved">mouseMoved()</ref>
+<ref target="mouseDragged">mouseDragged()</ref>
+<ref target="mouseButton">mouseButton</ref>
 </related>
 
 </root>

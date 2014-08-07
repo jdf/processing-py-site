@@ -36,8 +36,8 @@ Combines subtraction with assignment. The expression <b>a -= b</b> is equivalent
 <returns></returns>
 
 <related>
-+= (add assign)
-- (minus)
+<ref target="addassign">+= (add assign)</ref>
+<ref target="minus">- (minus)</ref>
 </related>
 
 <availability>1.0</availability>

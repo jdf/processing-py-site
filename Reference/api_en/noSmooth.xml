@@ -33,7 +33,7 @@ noSmooth()
 </syntax>
 
 <related>
-smooth()
+<ref target="smooth">smooth()</ref>
 </related>
 
 </root>

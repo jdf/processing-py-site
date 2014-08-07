@@ -27,13 +27,13 @@ uppercase.
 <returns></returns>
 
 <related>
-string
-string_formatting
-string_find
-string_string
-string_join
-string_replace
-string_lower
+<ref target="string">str</ref>
+<ref target="string_formatting"></ref>
+<ref target="string_find"></ref>
+<ref target="string_string"></ref>
+<ref target="string_join"></ref>
+<ref target="string_replace"></ref>
+<ref target="string_lower"></ref>
 </related>
 
 <availability>1.0</availability>

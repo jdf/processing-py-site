@@ -50,8 +50,8 @@ requestImage(<c>filename</c>, <c>extension</c>)
 </parameter>
 
 <related>
-PImage
-loadImage()
+<ref target="PImage">PImage</ref>
+<ref target="loadImage">loadImage()</ref>
 </related>
 
 </root>

@@ -46,6 +46,7 @@ shader(<c>shader</c>, <c>kind</c>)
 <description><![CDATA[int: type of shader, either POINTS, LINES, or TRIANGLES]]></description>
 </parameter>
 
-<related></related>
+<related>
+</related>
 
 </root>

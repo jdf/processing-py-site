@@ -76,10 +76,10 @@ The parameter must be written in ALL CAPS because Processing is a case-sensitive
 </parameter>
 
 <related>
-loadImage()
-PImage
-image()
-background()
+<ref target="loadImage">loadImage()</ref>
+<ref target="PImage">PImage</ref>
+<ref target="image">image()</ref>
+<ref target="background">background()</ref>
 </related>
 
 </root>

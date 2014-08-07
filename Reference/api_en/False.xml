@@ -29,8 +29,8 @@ Reserved word representing the logical value "False". Only variables of type <b>
 <returns></returns>
 
 <related>
-True
-Boolean
+<ref target="True">True</ref>
+<ref target="Boolean">Boolean</ref>
 </related>
 
 <availability>1.0</availability>

@@ -39,8 +39,8 @@ screenZ(<c>x</c>, <c>y</c>, <c>z</c>)
 </parameter>
 
 <related>
-screenX()
-screenY()
+<ref target="screenX">screenX()</ref>
+<ref target="screenY">screenY()</ref>
 </related>
 
 </root>

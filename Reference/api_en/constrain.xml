@@ -42,8 +42,8 @@ constrain(<c>amt</c>, <c>low</c>, <c>high</c>)
 </parameter>
 
 <related>
-max()
-min()
+<ref target="max">max()</ref>
+<ref target="min">min()</ref>
 </related>
 
 </root>

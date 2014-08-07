@@ -38,9 +38,9 @@ def setup():
 <type>class</type>
 
 <related>
-loadTable()
-saveTable()
-TableRow
+<ref target="loadTable">loadTable()</ref>
+<ref target="saveTable">saveTable()</ref>
+<ref target="TableRow">TableRow</ref>
 </related>
 
 </root>

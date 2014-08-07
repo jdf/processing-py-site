@@ -45,10 +45,10 @@ keyReleased(event)
 </syntax>
 
 <related>
-key
-keyCode
-keyPressed
-keyPressed()
+<ref target="key">key</ref>
+<ref target="keyCode">keyCode</ref>
+<ref target="keyPressed_var">keyPressed</ref>
+<ref target="keyPressed">keyPressed()</ref>
 </related>
 
 </root>

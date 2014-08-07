@@ -59,7 +59,7 @@ Trims leading and trailing whitespace, such as spaces and tabs, from string tabl
 </parameter>
 
 <related>
-removeTokens()
+<ref target="Table_removeTokens">removeTokens()</ref>
 </related>
 
 </root>

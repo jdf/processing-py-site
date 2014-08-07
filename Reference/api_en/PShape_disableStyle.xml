@@ -39,7 +39,7 @@ Disables the shape's style data and uses Processing's current styles. Styles inc
 
 
 <related>
-endShape()
+<ref target="PShape_endShape">endShape()</ref>
 </related>
 
 </root>

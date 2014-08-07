@@ -39,7 +39,7 @@ atan2(<c>y</c>, <c>x</c>)
 </parameter>
 
 <related>
-tan()
+<ref target="tan">tan()</ref>
 </related>
 
 </root>

@@ -67,10 +67,10 @@ lerp(<c>start</c>, <c>stop</c>, <c>amt</c>)
 </parameter>
 
 <related>
-curvePoint()
-bezierPoint()
-lerp()
-lerpColor()
+<ref target="curvePoint">curvePoint()</ref>
+<ref target="bezierPoint">bezierPoint()</ref>
+<ref target="PVector_lerp">lerp()</ref>
+<ref target="lerpColor">lerpColor()</ref>
 </related>
 
 </root>

@@ -29,8 +29,8 @@ ceil(<c>n</c>)
 </parameter>
 
 <related>
-floor()
-round()
+<ref target="floor">floor()</ref>
+<ref target="round">round()</ref>
 </related>
 
 </root>

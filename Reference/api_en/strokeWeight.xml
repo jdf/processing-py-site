@@ -25,9 +25,9 @@ Sets the width of the stroke used for lines, points, and the border around shape
 ]]></description>
 
 <related>
-stroke()
-strokeJoin()
-strokeCap()
+<ref target="stroke">stroke()</ref>
+<ref target="strokeJoin">strokeJoin()</ref>
+<ref target="strokeCap">strokeCap()</ref>
 </related>
 
 </root>

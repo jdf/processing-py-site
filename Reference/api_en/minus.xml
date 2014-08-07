@@ -46,9 +46,8 @@ Subtracts one value from another and may also be used to negate a value. As a su
 <returns></returns>
 
 <related>
--- (decrement)
--= (subtract assign)
-+ (add)
+<ref target="subtractassign">-= (subtract assign)</ref>
+<ref target="addition">+ (add)</ref>
 </related>
 
 <availability>1.0</availability>

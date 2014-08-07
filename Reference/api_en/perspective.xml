@@ -54,6 +54,7 @@ perspective(<c>fovy</c>, <c>aspect</c>, <c>zNear</c>, <c>zFar</c>)
 <description><![CDATA[float: z-position of farthest clipping plane]]></description>
 </parameter>
 
-<related></related>
+<related>
+</related>
 
 </root>

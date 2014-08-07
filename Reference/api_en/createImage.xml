@@ -61,8 +61,8 @@ createImage(<c>w</c>, <c>h</c>, <c>format</c>)
 </parameter>
 
 <related>
-PImage
-PGraphics
+<ref target="PImage">PImage</ref>
+<ref target="PGraphics">PGraphics</ref>
 </related>
 
 </root>

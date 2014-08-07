@@ -70,7 +70,7 @@ sort(<c>list</c>, <c>count</c>)
 </parameter>
 
 <related>
-reverse()
+<ref target="list_reverse">reverse()</ref>
 </related>
 
 </root>

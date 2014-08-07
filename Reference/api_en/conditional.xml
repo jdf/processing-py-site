@@ -54,8 +54,8 @@ is equivalent to this structure: <br />
 <returns>Variable, dependent on the datatype of the expressions</returns>
 
 <related>
-if
-else
+<ref target="if">if</ref>
+<ref target="else">else</ref>
 </related>
 
 <availability>1.0</availability>

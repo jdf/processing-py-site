@@ -55,7 +55,7 @@ Use <b>removeColumn()</b> to remove an existing column from a <b>Table</b> objec
 </parameter>
 
 <related>
-addColumn()
+<ref target="Table_addColumn">addColumn()</ref>
 </related>
 
 </root>

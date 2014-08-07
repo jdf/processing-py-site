@@ -74,9 +74,9 @@ noLoop()
 </syntax>
 
 <related>
-loop()
-redraw()
-draw()
+<ref target="loop">loop()</ref>
+<ref target="redraw">redraw()</ref>
+<ref target="draw">draw()</ref>
 </related>
 
 </root>

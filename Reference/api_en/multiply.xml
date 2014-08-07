@@ -36,8 +36,8 @@ Multiplies the values of the two parameters. Multiplication is equivalent to a s
 <returns></returns>
 
 <related>
-+ (add)
-/ (divide)
+<ref target="addition">+ (add)</ref>
+<ref target="divide">/ (divide)</ref>
 </related>
 
 <availability>1.0</availability>

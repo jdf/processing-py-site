@@ -28,9 +28,9 @@ Sets the spacing between lines of text in units of pixels. This setting will be 
 ]]></description>
 
 <related>
-loadFont()
-text()
-textFont()
+<ref target="loadFont">loadFont()</ref>
+<ref target="text">text()</ref>
+<ref target="textFont">textFont()</ref>
 </related>
 
 </root>

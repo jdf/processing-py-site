@@ -50,8 +50,8 @@ Retrieves an integer value from the <b>TableRow</b>'s specified column. The colu
 </parameter>
 
 <related>
-getFloat()
-getString()
+<ref target="XML_getFloat">getFloat()</ref>
+<ref target="XML_getString">getString()</ref>
 </related>
 
 </root>

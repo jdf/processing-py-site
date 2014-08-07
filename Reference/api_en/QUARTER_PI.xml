@@ -26,10 +26,10 @@ QUARTER_PI is a mathematical constant with the value 0.7853982. It is one quarte
 ]]></description>
 
 <related>
-PI
-TWO_PI
-TAU
-HALF_PI
+<ref target="PI">PI</ref>
+<ref target="TWO_PI">TWO_PI</ref>
+<ref target="TAU">TAU</ref>
+<ref target="HALF_PI">HALF_PI</ref>
 </related>
 
 </root>

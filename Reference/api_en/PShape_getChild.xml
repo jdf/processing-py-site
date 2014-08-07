@@ -53,7 +53,7 @@ Extracts a child shape from a parent shape. Specify the name of the shape with t
 </parameter>
 
 <related>
-addChild()
+<ref target="XML_addChild">addChild()</ref>
 </related>
 
 </root>

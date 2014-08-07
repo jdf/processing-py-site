@@ -27,8 +27,8 @@ Ends the execution of a structure such as <b>for</b>, or <b>while</b> and jumps 
 <returns></returns>
 
 <related>
-for
-while
+<ref target="for">for</ref>
+<ref target="while">while</ref>
 </related>
 
 <availability>1.0</availability>

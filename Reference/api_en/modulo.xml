@@ -53,7 +53,7 @@ Modulo is extremely useful for keeping numbers within a boundary such as keeping
 <returns>int or float</returns>
 
 <related>
-/ (divide)
+<ref target="divide">/ (divide)</ref>
 </related>
 
 <availability>1.0</availability>

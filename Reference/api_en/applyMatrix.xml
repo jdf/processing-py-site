@@ -121,10 +121,10 @@ applyMatrix(<c>n00</c>, <c>n01</c>, <c>n02</c>, <c>n03</c>, <c>n10</c>, <c>n11</
 </parameter>
 
 <related>
-pushMatrix()
-popMatrix()
-resetMatrix()
-printMatrix()
+<ref target="pushMatrix">pushMatrix()</ref>
+<ref target="popMatrix">popMatrix()</ref>
+<ref target="resetMatrix">resetMatrix()</ref>
+<ref target="printMatrix">printMatrix()</ref>
 </related>
 
 </root>

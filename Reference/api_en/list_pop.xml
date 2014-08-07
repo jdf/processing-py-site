@@ -42,10 +42,10 @@ no index is given, the last element is removed and returned.
 <returns></returns>
 
 <related>
-list_insert
-list_append
-list_reverse
-list_index
+<ref target="list_insert">List Insert</ref>
+<ref target="list_append">List Append</ref>
+<ref target="list_reverse">List Reverse</ref>
+<ref target="list_index">List Index</ref>
 </related>
 
 <availability>1.0</availability>

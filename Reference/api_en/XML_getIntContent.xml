@@ -44,8 +44,8 @@ Returns the content of an element as an int. If there is no such content, either
 </parameter>
 
 <related>
-getContent()
-getFloatContent()
+<ref target="XML_getContent">getContent()</ref>
+<ref target="XML_getFloatContent">getFloatContent()</ref>
 </related>
 
 </root>

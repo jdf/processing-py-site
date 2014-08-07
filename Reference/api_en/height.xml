@@ -23,8 +23,8 @@ System variable that stores the height of the display window. This value is set 
 ]]></description>
 
 <related>
-width
-size()
+<ref target="width">width</ref>
+<ref target="size">size()</ref>
 </related>
 
 </root>

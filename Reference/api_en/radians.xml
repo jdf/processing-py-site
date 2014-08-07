@@ -30,7 +30,7 @@ radians(<c>degrees</c>)
 </parameter>
 
 <related>
-degrees()
+<ref target="degrees">degrees()</ref>
 </related>
 
 </root>

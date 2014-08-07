@@ -48,12 +48,12 @@ curveVertex(<c>x</c>, <c>y</c>, <c>z</c>)
 </parameter>
 
 <related>
-curve()
-beginShape()
-endShape()
-vertex()
-bezier()
-quadraticVertex()
+<ref target="curve">curve()</ref>
+<ref target="PShape_beginShape">beginShape()</ref>
+<ref target="PShape_endShape">endShape()</ref>
+<ref target="vertex">vertex()</ref>
+<ref target="bezier">bezier()</ref>
+<ref target="quadraticVertex">quadraticVertex()</ref>
 </related>
 
 </root>

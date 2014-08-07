@@ -44,9 +44,9 @@ asin(<c>value</c>)
 </parameter>
 
 <related>
-sin()
-acos()
-atan()
+<ref target="sin">sin()</ref>
+<ref target="acos">acos()</ref>
+<ref target="atan">atan()</ref>
 </related>
 
 </root>

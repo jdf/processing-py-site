@@ -49,8 +49,8 @@ With <b>IMAGE</b>, if an image is 100 x 200 pixels, mapping the image onto the e
 ]]></description>
 
 <related>
-texture()
-textureWrap()
+<ref target="texture">texture()</ref>
+<ref target="textureWrap">textureWrap()</ref>
 </related>
 
 </root>

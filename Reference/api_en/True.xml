@@ -29,8 +29,8 @@ Reserved word representing the logical value "True".
 <returns></returns>
 
 <related>
-False
-Boolean
+<ref target="False">False</ref>
+<ref target="Boolean">Boolean</ref>
 </related>
 
 <availability>1.0</availability>
@@ -40,8 +40,8 @@ Boolean
 <partof>PYDE</partof>
 
 <related>
-false
-boolean
+<ref target="False">False</ref>
+<ref target="Boolean">Boolean</ref>
 </related>
 
 </root>

@@ -62,8 +62,8 @@ The <b>getVertex()</b> method returns a PVector with the coordinates of the vert
 </parameter>
 
 <related>
-setVertex()
-getVertexCount()
+<ref target="PShape_setVertex">setVertex()</ref>
+<ref target="PShape_getVertexCount">getVertexCount()</ref>
 </related>
 
 </root>

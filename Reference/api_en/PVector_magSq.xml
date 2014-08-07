@@ -25,7 +25,7 @@ Calculates the magnitude (length) of the vector, squared.  This method is often 
 ]]></description>
 
 <related>
-mag()
+<ref target="PVector_mag">mag()</ref>
 </related>
 
 </root>

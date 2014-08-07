@@ -39,8 +39,8 @@ Returns the content of an element as a float. If there is no such content, eithe
 </syntax>
 
 <related>
-getContent()
-getIntContent()
+<ref target="XML_getContent">getContent()</ref>
+<ref target="XML_getIntContent">getIntContent()</ref>
 </related>
 
 </root>

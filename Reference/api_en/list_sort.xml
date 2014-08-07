@@ -93,11 +93,11 @@ sort.
 <returns></returns>
 
 <related>
-list_insert
-list_pop
-list_append
-list_index
-sorted
+<ref target="list_insert"></ref>
+<ref target="list_pop"></ref>
+<ref target="list_append"></ref>
+<ref target="list_index"></ref>
+<ref target="sorted"></ref>
 </related>
 
 <availability>1.0</availability>

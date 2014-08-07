@@ -85,10 +85,10 @@ background(<c>image</c>)
 
 
 <related>
-stroke()
-fill()
-tint()
-colorMode()
+<ref target="stroke">stroke()</ref>
+<ref target="fill">fill()</ref>
+<ref target="tint">tint()</ref>
+<ref target="colorMode">colorMode()</ref>
 </related>
 
 </root>

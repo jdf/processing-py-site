@@ -37,9 +37,9 @@ To create a new image, use the <b>createImage()</b> function. Do not use the syn
 ]]></description>
 
 <related>
-loadImage()
-imageMode()
-createImage()
+<ref target="loadImage">loadImage()</ref>
+<ref target="imageMode">imageMode()</ref>
+<ref target="createImage">createImage()</ref>
 </related>
 
 </root>

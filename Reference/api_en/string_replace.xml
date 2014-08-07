@@ -38,11 +38,11 @@ s.replace(<c>old</c>, <c>new</c>)
 <returns></returns>
 
 <related>
-string_split
-string_join
-string_strip
-string_find
-string_formatting
+<ref target="string_split">str.split()</ref>
+<ref target="string_join">str.join()</ref>
+<ref target="string_strip">str.split()</ref>
+<ref target="string_find">str.find()</ref>
+<ref target="string_formatting">str.format()</ref>
 </related>
 
 <availability>1.0</availability>

@@ -47,11 +47,8 @@ matchAll(<c>str</c>, <c>regexp</c>)
 </parameter>
 
 <related>
-match()
-split()
-splitTokens()
-join()
-trim()
+<ref target="match">match()</ref>
+<ref target="trim">trim()</ref>
 </related>
 
 </root>

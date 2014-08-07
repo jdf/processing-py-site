@@ -26,7 +26,7 @@ Calculates the square root of a number. The square root of a number is always po
 ]]></description>
 
 <related>
-sqrt()
+<ref target="sqrt">sqrt()</ref>
 </related>
 
 </root>

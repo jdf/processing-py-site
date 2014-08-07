@@ -49,9 +49,9 @@ curveDetail(<c>detail</c>)
 </parameter>
 
 <related>
-curve()
-curveVertex()
-curveTightness()
+<ref target="curve">curve()</ref>
+<ref target="curveVertex">curveVertex()</ref>
+<ref target="curveTightness">curveTightness()</ref>
 </related>
 
 </root>

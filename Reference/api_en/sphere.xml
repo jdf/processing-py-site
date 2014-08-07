@@ -32,7 +32,7 @@ sphere(<c>r</c>)
 </parameter>
 
 <related>
-sphereDetail()
+<ref target="sphereDetail">sphereDetail()</ref>
 </related>
 
 </root>

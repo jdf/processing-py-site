@@ -54,7 +54,7 @@ max(<c>list</c>)
 </parameter>
 
 <related>
-min()
+<ref target="min">min()</ref>
 </related>
 
 </root>

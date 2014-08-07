@@ -40,13 +40,13 @@ blue(<c>rgb</c>)
 </parameter>
 
 <related>
-red()
-green()
-alpha()
-hue()
-saturation()
-brightness()
->> (right shift)
+<ref target="red">red()</ref>
+<ref target="green">green()</ref>
+<ref target="alpha">alpha()</ref>
+<ref target="hue">hue()</ref>
+<ref target="saturation">saturation()</ref>
+<ref target="brightness">brightness()</ref>
+<ref target="rightshift">>> (right shift)</ref>
 </related>
 
 </root>

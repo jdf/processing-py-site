@@ -94,9 +94,9 @@ colorMode(<c>mode</c>, <c>max1</c>, <c>max2</c>, <c>max3</c>, <c>maxA</c>)
 </parameter>
 
 <related>
-background()
-fill()
-stroke()
+<ref target="background">background()</ref>
+<ref target="fill">fill()</ref>
+<ref target="stroke">stroke()</ref>
 </related>
 
 </root>

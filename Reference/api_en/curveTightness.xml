@@ -47,8 +47,8 @@ curveTightness(<c>tightness</c>)
 </parameter>
 
 <related>
-curve()
-curveVertex()
+<ref target="curve">curve()</ref>
+<ref target="curveVertex">curveVertex()</ref>
 </related>
 
 </root>

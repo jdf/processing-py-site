@@ -67,9 +67,9 @@ frustum(<c>left</c>, <c>right</c>, <c>bottom</c>, <c>top</c>, <c>near</c>, <c>fa
 </parameter>
 
 <related>
-camera()
-endCamera()
-perspective()
+<ref target="camera">camera()</ref>
+<ref target="endCamera">endCamera()</ref>
+<ref target="perspective">perspective()</ref>
 </related>
 
 </root>

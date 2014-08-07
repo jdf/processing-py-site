@@ -43,10 +43,10 @@ Insert an item into a list at a given index.
 <returns></returns>
 
 <related>
-list_append
-list_pop
-list_reverse
-list_index
+<ref target="list_append"></ref>
+<ref target="list_pop"></ref>
+<ref target="list_reverse"></ref>
+<ref target="list_index"></ref>
 </related>
 
 <availability>1.0</availability>

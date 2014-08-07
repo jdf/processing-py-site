@@ -40,11 +40,11 @@ Returns a reference to the specified <b>TableRow</b>.  The reference can then be
 </syntax>
 
 <related>
-rows()
-findRow()
-findRows()
-matchRow()
-matchRows()
+<ref target="Table_rows">rows()</ref>
+<ref target="Table_findRow">findRow()</ref>
+<ref target="Table_findRows">findRows()</ref>
+<ref target="Table_matchRow">matchRow()</ref>
+<ref target="Table_matchRows">matchRows()</ref>
 </related>
 
 </root>

@@ -34,7 +34,7 @@ Returns the total number of rows in a table.
 </syntax>
 
 <related>
-getColumnCount()
+<ref target="Table_getColumnCount">getColumnCount()</ref>
 </related>
 
 </root>

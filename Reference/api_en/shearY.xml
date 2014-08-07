@@ -35,12 +35,12 @@ Technically, <b>shearY()</b> multiplies the current transformation matrix by a r
 </parameter>
 
 <related>
-popMatrix()
-pushMatrix()
-shearX()
-scale()
-translate()
-radians()
+<ref target="popMatrix">popMatrix()</ref>
+<ref target="pushMatrix">pushMatrix()</ref>
+<ref target="shearX">shearX()</ref>
+<ref target="scale">scale()</ref>
+<ref target="translate">translate()</ref>
+<ref target="radians">radians()</ref>
 </related>
 
 </root>

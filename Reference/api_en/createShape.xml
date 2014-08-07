@@ -115,9 +115,9 @@ When a shape is first created inside the <b>beingShape()</b> and <b>endShape()</
 ]]></description>
 
 <related>
-PShape
-endShape()
-loadShape()
+<ref target="PShape">PShape</ref>
+<ref target="PShape_endShape">endShape()</ref>
+<ref target="loadShape">loadShape()</ref>
 </related>
 
 </root>

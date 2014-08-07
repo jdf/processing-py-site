@@ -49,8 +49,8 @@ blendColor(c1,c2,MODE)
 </parameter>
 
 <related>
-blend()
-color()
+<ref target="PImage_blend">blend()</ref>
+<ref target="color">color()</ref>
 </related>
 
 </root>
