@@ -39,7 +39,5 @@ Sets the element's name, which is specified as a String.
 .setName(newName)
 </syntax>
 
-<related>
-</related>
 
 </root>

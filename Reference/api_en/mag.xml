@@ -36,8 +36,6 @@ Calculates the magnitude (or length) of a vector. A vector is a direction in spa
 .mag()
 </syntax>
 
-<related>
-<ref target="PVector_magSq">magSq()</ref>
-</related>
+<related>PVector_magSq</related>
 
 </root>

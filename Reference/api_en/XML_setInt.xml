@@ -40,7 +40,5 @@ Sets the content of an element's attribute as an int.  A String specifies the at
 .setInt(name, value)
 </syntax>
 
-<related>
-</related>
 
 </root>

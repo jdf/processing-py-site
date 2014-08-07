@@ -61,10 +61,8 @@ nfp(<c>num</c>, <c>left</c>, <c>right</c>)
 <description><![CDATA[int: the number of digits to the right of the decimal point]]></description>
 </parameter>
 
-<related>
-<ref target="nf">nf()</ref>
-<ref target="nfs">nfs()</ref>
-<ref target="nfc">nfc()</ref>
-</related>
+<related>nf</related>
+<related>nfs</related>
+<related>nfc</related>
 
 </root>

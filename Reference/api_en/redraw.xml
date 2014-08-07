@@ -37,11 +37,9 @@ The <b>redraw()</b> function does not work properly when called inside <b>draw()
 
 <syntax>redraw()</syntax>
 
-<related>
-<ref target="draw">draw()</ref>
-<ref target="loop">loop()</ref>
-<ref target="noLoop">noLoop()</ref>
-<ref target="frameRate">frameRate()</ref>
-</related>
+<related>draw</related>
+<related>loop</related>
+<related>noLoop</related>
+<related>frameRate</related>
 
 </root>

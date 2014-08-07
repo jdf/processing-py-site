@@ -29,9 +29,7 @@ Certain renderers may or may not seem to require <b>loadPixels()</b> or <b>updat
 Currently, while none of the renderers use the additional parameters to <b>updatePixels()</b>, this may be implemented in the future.
 ]]></description>
 
-<related>
-<ref target="loadPixels">loadPixels</ref>
-<ref target="pixels">pixels</ref>
-</related>
+<related>loadPixels</related>
+<related>pixels</related>
 
 </root>

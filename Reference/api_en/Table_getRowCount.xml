@@ -33,8 +33,6 @@ Returns the total number of rows in a table.
 .getRowCount()
 </syntax>
 
-<related>
-<ref target="Table_getColumnCount">getColumnCount()</ref>
-</related>
+<related>Table_getColumnCount</related>
 
 </root>

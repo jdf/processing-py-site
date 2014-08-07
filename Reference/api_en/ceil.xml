@@ -28,9 +28,7 @@ ceil(<c>n</c>)
 <description><![CDATA[float: number to round up]]></description>
 </parameter>
 
-<related>
-<ref target="floor">floor()</ref>
-<ref target="round">round()</ref>
-</related>
+<related>floor</related>
+<related>round</related>
 
 </root>

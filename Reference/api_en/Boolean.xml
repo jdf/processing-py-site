@@ -41,10 +41,8 @@ Datatype for the Boolean values <b>True</b> and <b>False</b>. It is common to us
 
 <returns></returns>
 
-<related>
-<ref target="True">True</ref>
-<ref target="False">False</ref>
-</related>
+<related>True</related>
+<related>False</related>
 
 <availability>1.0</availability>
 

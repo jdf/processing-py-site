@@ -39,14 +39,12 @@ blue(<c>rgb</c>)
 <description><![CDATA[int: any value of the color datatype]]></description>
 </parameter>
 
-<related>
-<ref target="red">red()</ref>
-<ref target="green">green()</ref>
-<ref target="alpha">alpha()</ref>
-<ref target="hue">hue()</ref>
-<ref target="saturation">saturation()</ref>
-<ref target="brightness">brightness()</ref>
-<ref target="rightshift">>> (right shift)</ref>
-</related>
+<related>red</related>
+<related>green</related>
+<related>alpha</related>
+<related>hue</related>
+<related>saturation</related>
+<related>brightness</related>
+<related>rightshift</related>
 
 </root>

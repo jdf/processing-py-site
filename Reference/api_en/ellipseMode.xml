@@ -53,9 +53,7 @@ The parameter must be written in ALL CAPS because Processing is a case-sensitive
 <description><![CDATA[int: either CENTER, RADIUS, CORNER, or CORNERS]]></description>
 </parameter>
 
-<related>
-<ref target="ellipse">ellipse()</ref>
-<ref target="arc">arc()</ref>
-</related>
+<related>ellipse</related>
+<related>arc</related>
 
 </root>

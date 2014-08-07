@@ -44,9 +44,7 @@ Returns a new 3D unit vector with a random direction.  If you pass in <b>this</b
 <description><![CDATA[PVector: the target vector (if null, a new vector will be created)]]></description>
 </parameter>
 
-<related>
-<ref target="PVector_random2D">random2D()</ref>
-</related>
+<related>PVector_random2D</related>
 
 
 </root>

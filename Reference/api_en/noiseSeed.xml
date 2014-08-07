@@ -37,11 +37,9 @@ noiseSeed(<c>seed</c>)
 <description><![CDATA[int: seed value]]></description>
 </parameter>
 
-<related>
-<ref target="noise">noise()</ref>
-<ref target="noiseDetail">noiseDetail()</ref>
-<ref target="random">random()</ref>
-<ref target="randomSeed">randomSeed()</ref>
-</related>
+<related>noise</related>
+<related>noiseDetail</related>
+<related>random</related>
+<related>randomSeed</related>
 
 </root>

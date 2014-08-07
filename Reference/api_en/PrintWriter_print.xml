@@ -50,8 +50,6 @@ Writes data to a <b>PrintWriter</b> object stream.
 
 <returns></returns>
 
-<related>
-</related>
 
 <availability>1.0</availability>
 

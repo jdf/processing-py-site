@@ -25,7 +25,5 @@ Limit the magnitude of this vector to the value used for the <b>max</b> paramete
 .limit(max)
 </syntax>
 
-<related>
-</related>
 
 </root>

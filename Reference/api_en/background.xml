@@ -84,11 +84,9 @@ background(<c>image</c>)
 </parameter>
 
 
-<related>
-<ref target="stroke">stroke()</ref>
-<ref target="fill">fill()</ref>
-<ref target="tint">tint()</ref>
-<ref target="colorMode">colorMode()</ref>
-</related>
+<related>stroke</related>
+<related>fill</related>
+<related>tint</related>
+<related>colorMode</related>
 
 </root>

@@ -40,7 +40,5 @@ Sets the element's content, which is specified as a String.
 .setContent(text)
 </syntax>
 
-<related>
-</related>
 
 </root>

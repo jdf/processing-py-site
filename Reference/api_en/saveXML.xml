@@ -57,10 +57,8 @@ saveXML(<c>xml</c>, <c>filename</c>, <c>options</c>)
 <description><![CDATA[String: name of the file to write to]]></description>
 </parameter>
 
-<related>
-<ref target="XML">XML</ref>
-<ref target="loadXML">loadXML()</ref>
-<ref target="parseXML">parseXML()</ref>
-</related>
+<related>XML</related>
+<related>loadXML</related>
+<related>parseXML</related>
 
 </root>

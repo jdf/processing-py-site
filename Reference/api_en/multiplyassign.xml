@@ -36,10 +36,8 @@ Combines multiplication with assignment. The expression <b>a *= b</b> is equival
 
 <returns></returns>
 
-<related>
-<ref target="assign">= (assign)</ref>
-<ref target="multiply">* (multiply)</ref>
-</related>
+<related>assign</related>
+<related>multiply</related>
 
 <availability>1.0</availability>
 

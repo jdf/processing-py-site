@@ -56,9 +56,7 @@ Allows characters to print to a text-output stream. A new PrintWriter object is 
 
 <constructor></constructor>
 
-<related>
-<ref target="createWriter">createWriter()</ref>
-</related>
+<related>createWriter</related>
 
 <availability>1.0</availability>
 

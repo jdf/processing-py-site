@@ -37,11 +37,9 @@ it shouldn't be called again after its initial execution. Note: Variables declar
 setup()
 </syntax>
 
-<related>
-<ref target="size">size()</ref>
-<ref target="loop">loop()</ref>
-<ref target="noLoop">noLoop()</ref>
-<ref target="draw">draw()</ref>
-</related>
+<related>size</related>
+<related>loop</related>
+<related>noLoop</related>
+<related>draw</related>
 
 </root>

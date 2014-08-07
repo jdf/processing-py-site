@@ -75,8 +75,6 @@ If indent is set to 0 or greater, then the String is returned with line breaks, 
 <description><![CDATA[int: -1 for a single line (and no declaration), >= 0 for indents and newlines]]></description>
 </parameter>
 
-<related>
-<ref target="XML_toString">toString()</ref>
-</related>
+<related>XML_toString</related>
 
 </root>

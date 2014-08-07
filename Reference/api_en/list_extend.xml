@@ -39,12 +39,10 @@ Extends a list by appending all of the elements of another list to the end.
 
 <returns></returns>
 
-<related>
-<ref target="list_insert"></ref>
-<ref target="list_pop"></ref>
-<ref target="list_reverse"></ref>
-<ref target="list_index"></ref>
-</related>
+<related>list_insert</related>
+<related>list_pop</related>
+<related>list_reverse</related>
+<related>list_index</related>
 
 <availability>1.0</availability>
 

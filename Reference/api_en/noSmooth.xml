@@ -32,8 +32,6 @@ Draws all geometry with jagged (aliased) edges.  Note that <b>smooth()</b> is ac
 noSmooth()
 </syntax>
 
-<related>
-<ref target="smooth">smooth()</ref>
-</related>
+<related>smooth</related>
 
 </root>

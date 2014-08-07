@@ -53,12 +53,10 @@ Finds the first row in the <b>Table</b> that matches the regular expression prov
 <description><![CDATA[String: title of the column to search]]></description>
 </parameter>
 
-<related>
-<ref target="Table_getRow">getRow()</ref>
-<ref target="Table_rows">rows()</ref>
-<ref target="Table_findRow">findRow()</ref>
-<ref target="Table_findRows">findRows()</ref>
-<ref target="Table_matchRows">matchRows()</ref>
-</related>
+<related>Table_getRow</related>
+<related>Table_rows</related>
+<related>Table_findRow</related>
+<related>Table_findRows</related>
+<related>Table_matchRows</related>
 
 </root>

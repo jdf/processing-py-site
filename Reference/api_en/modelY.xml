@@ -70,9 +70,7 @@ modelY(<c>x</c>, <c>y</c>, <c>z</c>)
 <description><![CDATA[float: 3D z-coordinate to be mapped]]></description>
 </parameter>
 
-<related>
-<ref target="modelX">modelX()</ref>
-<ref target="modelZ">modelZ()</ref>
-</related>
+<related>modelX</related>
+<related>modelZ</related>
 
 </root>

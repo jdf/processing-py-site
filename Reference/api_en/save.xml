@@ -35,9 +35,7 @@ save(<c>filename</c>)
 <description><![CDATA[String: any sequence of letters and numbers]]></description>
 </parameter>
 
-<related>
-<ref target="saveFrame">saveFrame()</ref>
-<ref target="createGraphics">createGraphics()</ref>
-</related>
+<related>saveFrame</related>
+<related>createGraphics</related>
 
 </root>

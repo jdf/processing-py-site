@@ -38,10 +38,8 @@ shapeMode(<c>mode</c>)
 <description><![CDATA[int: either CORNER, CORNERS, CENTER]]></description>
 </parameter>
 
-<related>
-<ref target="PShape">PShape</ref>
-<ref target="shape">shape()</ref>
-<ref target="rectMode">rectMode()</ref>
-</related>
+<related>PShape</related>
+<related>shape</related>
+<related>rectMode</related>
 
 </root>

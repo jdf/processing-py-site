@@ -31,8 +31,6 @@ sphere(<c>r</c>)
 <description><![CDATA[float: the radius of the sphere]]></description>
 </parameter>
 
-<related>
-<ref target="sphereDetail">sphereDetail()</ref>
-</related>
+<related>sphereDetail</related>
 
 </root>

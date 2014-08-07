@@ -35,10 +35,8 @@ Assigns a value to a variable. The "=" sign does not mean "equals", but is used 
 
 <returns></returns>
 
-<related>
-<ref target="addassign">+= (add assign)</ref>
-<ref target="subtractassign">-= (subtract assign)</ref>
-</related>
+<related>addassign</related>
+<related>subtractassign</related>
 
 <availability>1.0</availability>
 

@@ -47,9 +47,7 @@ Returns a float from a random series of numbers having a mean of 0 and standard 
 randomGaussian()
 </syntax>
 
-<related>
-<ref target="random">random()</ref>
-<ref target="noise">noise()</ref>
-</related>
+<related>random</related>
+<related>noise</related>
 
 </root>

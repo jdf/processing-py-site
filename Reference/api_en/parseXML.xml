@@ -37,10 +37,8 @@ parseXML(xmlString)
 parseXML(xmlString, options)
 </syntax>
 
-<related>
-<ref target="XML">XML</ref>
-<ref target="loadXML">loadXML()</ref>
-<ref target="saveXML">saveXML()</ref>
-</related>
+<related>XML</related>
+<related>loadXML</related>
+<related>saveXML</related>
 
 </root>

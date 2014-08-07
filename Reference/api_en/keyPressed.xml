@@ -48,11 +48,9 @@ keyPressed()
 keyPressed(event)
 </syntax>
 
-<related>
-<ref target="key">key</ref>
-<ref target="keyCode">keyCode</ref>
-<ref target="keyPressed_var">keyPressed</ref>
-<ref target="keyReleased">keyReleased()</ref>
-</related>
+<related>key</related>
+<related>keyCode</related>
+<related>keyPressed_var</related>
+<related>keyReleased</related>
 
 </root>

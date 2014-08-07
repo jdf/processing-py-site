@@ -46,9 +46,7 @@ loadStrings(<c>reader</c>)
 <description><![CDATA[String: name of the file or url to load]]></description>
 </parameter>
 
-<related>
-<ref target="PShape">PShape</ref>
-<ref target="createShape">createShape()</ref>
-</related>
+<related>PShape</related>
+<related>createShape</related>
 
 </root>

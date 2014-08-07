@@ -39,7 +39,5 @@ Limits the rendering to the boundaries of a rectangle defined by the parameters.
 clear()
 </syntax>
 
-<related>
-</related>
 
 </root>

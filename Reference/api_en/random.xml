@@ -58,9 +58,7 @@ random(<c>low</c>, <c>high</c>)
 <description><![CDATA[float: upper limit]]></description>
 </parameter>
 
-<related>
-<ref target="randomSeed">randomSeed()</ref>
-<ref target="noise">noise()</ref>
-</related>
+<related>randomSeed</related>
+<related>noise</related>
 
 </root>

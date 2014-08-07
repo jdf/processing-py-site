@@ -40,8 +40,6 @@ Sets the content of an element's attribute as a float.  A String specifies the a
 .setFloat(name, value)
 </syntax>
 
-<related>
-</related>
 
 </root>
 

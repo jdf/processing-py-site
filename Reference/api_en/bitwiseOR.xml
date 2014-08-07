@@ -61,10 +61,8 @@ To see the binary representation of a number, use the <b>binary()</b> function w
 
 <returns></returns>
 
-<related>
-<ref target="bitwiseAND">&amp; (bitwise AND)</ref>
-<ref target="binary">binary()</ref>
-</related>
+<related>bitwiseAND</related>
+<related>binary</related>
 
 <availability>1.0</availability>
 

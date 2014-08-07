@@ -24,10 +24,8 @@ Disables drawing the stroke (outline). If both <b>noStroke()</b> and <b>noFill()
 noStroke()
 </syntax>
 
-<related>
-<ref target="stroke">stroke()</ref>
-<ref target="fill">fill()</ref>
-<ref target="noFill">noFill()</ref>
-</related>
+<related>stroke</related>
+<related>fill</related>
+<related>noFill</related>
 
 </root>

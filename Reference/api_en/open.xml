@@ -69,7 +69,5 @@ open(<c>argv</c>)
 <description><![CDATA[list of commands passed to the command line]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

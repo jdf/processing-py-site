@@ -31,13 +31,11 @@ Pushes the current transformation matrix onto the matrix stack. Understanding <b
 pushMatrix()
 </syntax>
 
-<related>
-<ref target="popMatrix">popMatrix()</ref>
-<ref target="translate">translate()</ref>
-<ref target="rotate">rotate()</ref>
-<ref target="rotateX">rotateX()</ref>
-<ref target="rotateY">rotateY()</ref>
-<ref target="rotateZ">rotateZ()</ref>
-</related>
+<related>popMatrix</related>
+<related>translate</related>
+<related>rotate</related>
+<related>rotateX</related>
+<related>rotateY</related>
+<related>rotateZ</related>
 
 </root>

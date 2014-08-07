@@ -41,10 +41,8 @@ binary(<c>value</c>, <c>digits</c>)
 <description><![CDATA[int: number of digits to return]]></description>
 </parameter>
 
-<related>
-<ref target="unbinary">unbinary()</ref>
-<ref target="hex">hex()</ref>
-<ref target="unhex">unhex()</ref>
-</related>
+<related>unbinary</related>
+<related>hex</related>
+<related>unhex</related>
 
 </root>

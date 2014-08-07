@@ -62,11 +62,9 @@ match(<c>str</c>, <c>regexp</c>)
 <description><![CDATA[String: the regexp to be used for matching]]></description>
 </parameter>
 
-<related>
-<ref target="matchAll">matchAll()</ref>
-<ref target="string_split">split()</ref>
-<ref target="string_join">join()</ref>
-<ref target="trim">trim()</ref>
-</related>
+<related>matchAll</related>
+<related>string_split</related>
+<related>string_join</related>
+<related>trim</related>
 
 </root>

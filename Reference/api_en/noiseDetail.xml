@@ -51,8 +51,6 @@ noiseDetail(<c>lod</c>, <c>falloff</c>)
 <description><![CDATA[float: falloff factor for each octave]]></description>
 </parameter>
 
-<related>
-<ref target="noise">noise()</ref>
-</related>
+<related>noise</related>
 
 </root>

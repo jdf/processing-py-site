@@ -77,9 +77,7 @@ camera(<c>eyeX</c>, <c>eyeY</c>, <c>eyeZ</c>, <c>centerX</c>, <c>centerY</c>, <c
 <description><![CDATA[float: usually 0.0, 1.0, or -1.0]]></description>
 </parameter>
 
-<related>
-<ref target="endCamera">endCamera()</ref>
-<ref target="frustum">frustum()</ref>
-</related>
+<related>endCamera</related>
+<related>frustum</related>
 
 </root>

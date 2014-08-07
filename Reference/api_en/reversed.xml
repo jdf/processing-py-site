@@ -73,12 +73,10 @@ one go.
 
 <returns></returns>
 
-<related>
-<ref target="list_reverse">List Reverse</ref>
-<ref target="list_sort">List Sort</ref>
-<ref target="list">List</ref>
-<ref target="sorted">sorted()</ref>
-</related>
+<related>list_reverse</related>
+<related>list_sort</related>
+<related>list</related>
+<related>sorted</related>
 
 <availability>1.0</availability>
 

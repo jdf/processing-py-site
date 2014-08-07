@@ -26,14 +26,12 @@ lowercase.
 
 <returns></returns>
 
-<related>
-<ref target="string">str</ref>
-<ref target="string_formatting">str.format()</ref>
-<ref target="string_find">str.find()</ref>
-<ref target="string_strip">str.strip()</ref>
-<ref target="string_join">str.join()</ref>
-<ref target="string_replaces">str.replace()</ref>
-</related>
+<related>string</related>
+<related>string_formatting</related>
+<related>string_find</related>
+<related>string_strip</related>
+<related>string_join</related>
+<related>string_replace</related>
 
 <availability>1.0</availability>
 

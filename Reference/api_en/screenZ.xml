@@ -38,9 +38,7 @@ screenZ(<c>x</c>, <c>y</c>, <c>z</c>)
 <description><![CDATA[float: 3D z-coordinate to be mapped]]></description>
 </parameter>
 
-<related>
-<ref target="screenX">screenX()</ref>
-<ref target="screenY">screenY()</ref>
-</related>
+<related>screenX</related>
+<related>screenY</related>
 
 </root>

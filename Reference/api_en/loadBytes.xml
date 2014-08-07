@@ -44,10 +44,8 @@ loadBytes(<c>filename</c>)
 <description><![CDATA[String: name of a file in the data folder or a URL.]]></description>
 </parameter>
 
-<related>
-<ref target="loadStrings">loadStrings()</ref>
-<ref target="saveStrings">saveStrings()</ref>
-<ref target="saveBytes">saveBytes()</ref>
-</related>
+<related>loadStrings</related>
+<related>saveStrings</related>
+<related>saveBytes</related>
 
 </root>

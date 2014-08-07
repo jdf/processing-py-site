@@ -63,7 +63,5 @@ createGraphics(<c>w</c>, <c>h</c>, <c>renderer</c>, <c>path</c>)
 <description><![CDATA[String: the name of the file (can be an absolute or relative path)]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

@@ -52,8 +52,6 @@ Extracts a child shape from a parent shape. Specify the name of the shape with t
 <description><![CDATA[String: the name of the shape to get]]></description>
 </parameter>
 
-<related>
-<ref target="XML_addChild">addChild()</ref>
-</related>
+<related>XML_addChild</related>
 
 </root>

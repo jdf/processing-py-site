@@ -38,9 +38,7 @@ Returns the content of an element as a float. If there is no such content, eithe
 .getFloatContent(defaultValue)
 </syntax>
 
-<related>
-<ref target="XML_getContent">getContent()</ref>
-<ref target="XML_getIntContent">getIntContent()</ref>
-</related>
+<related>XML_getContent</related>
+<related>XML_getIntContent</related>
 
 </root>

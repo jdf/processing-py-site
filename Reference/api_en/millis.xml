@@ -27,13 +27,11 @@ Returns the number of milliseconds (thousandths of a second) since starting the 
 millis()
 </syntax>
 
-<related>
-<ref target="second">second()</ref>
-<ref target="minute">minute()</ref>
-<ref target="hour">hour()</ref>
-<ref target="day">day()</ref>
-<ref target="month">month()</ref>
-<ref target="year">year()</ref>
-</related>
+<related>second</related>
+<related>minute</related>
+<related>hour</related>
+<related>day</related>
+<related>month</related>
+<related>year</related>
 
 </root>

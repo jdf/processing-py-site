@@ -41,10 +41,8 @@ By default, Processing loops through <b>draw()</b> continuously, executing the c
 loop()
 </syntax>
 
-<related>
-<ref target="noLoop">noLoop()</ref>
-<ref target="redraw">redraw()</ref>
-<ref target="draw">draw()</ref>
-</related>
+<related>noLoop</related>
+<related>redraw</related>
+<related>draw</related>
 
 </root>

@@ -36,8 +36,6 @@ value1, ..., valueN
 
 <returns></returns>
 
-<related>
-</related>
 
 <availability>1.0</availability>
 
@@ -45,7 +43,5 @@ value1, ..., valueN
 
 <partof>PYDE</partof>
 
-<related>
-</related>
 
 </root>

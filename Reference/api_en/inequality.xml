@@ -37,13 +37,11 @@ Determines if one expression is not equivalent to another.
 
 <returns></returns>
 
-<related>
-<ref target="greaterthan">&gt; (greater than)</ref>
-<ref target="lessthan">&lt; (less than)</ref>
-<ref target="greaterthanorequalto">&gt;= (greater than or equal to)</ref>
-<ref target="lessthanorequalto">&lt;= (less than or equal to)</ref>
-<ref target="equality">== (equality)</ref>
-</related>
+<related>greaterthan</related>
+<related>lessthan</related>
+<related>greaterthanorequalto</related>
+<related>lessthanorequalto</related>
+<related>equality</related>
 
 <availability>1.0</availability>
 

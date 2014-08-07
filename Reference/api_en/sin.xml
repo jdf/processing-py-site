@@ -32,10 +32,8 @@ sin(<c>angle</c>)
 <description><![CDATA[float: an angle in radians]]></description>
 </parameter>
 
-<related>
-<ref target="cos">cos()</ref>
-<ref target="tan">tan()</ref>
-<ref target="radians">radians()</ref>
-</related>
+<related>cos</related>
+<related>tan</related>
+<related>radians</related>
 
 </root>

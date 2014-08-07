@@ -33,13 +33,11 @@ The <b>beginCamera()</b> and <b>endCamera()</b> functions enable advanced custom
 beginCamera()
 </syntax>
 
-<related>
-<ref target="camera">camera()</ref>
-<ref target="endCamera">endCamera()</ref>
-<ref target="applyMatrix">applyMatrix()</ref>
-<ref target="resetMatrix">resetMatrix()</ref>
-<ref target="translate">translate()</ref>
-<ref target="scale">scale()</ref>
-</related>
+<related>camera</related>
+<related>endCamera</related>
+<related>applyMatrix</related>
+<related>resetMatrix</related>
+<related>translate</related>
+<related>scale</related>
 
 </root>

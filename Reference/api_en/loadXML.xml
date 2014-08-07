@@ -49,13 +49,11 @@ loadXML(<c>filename</c>)
 <description><![CDATA[String: name of a file in the data folder or a URL.]]></description>
 </parameter>
 
-<related>
-<ref target="XML">XML</ref>
-<ref target="parseXML">parseXML()</ref>
-<ref target="saveXML">saveXML()</ref>
-<ref target="loadBytes">loadBytes()</ref>
-<ref target="loadStrings">loadStrings()</ref>
-<ref target="loadTable">loadTable()</ref>
-</related>
+<related>XML</related>
+<related>parseXML</related>
+<related>saveXML</related>
+<related>loadBytes</related>
+<related>loadStrings</related>
+<related>loadTable</related>
 
 </root>

@@ -31,7 +31,5 @@ Normalize the vector to length 1 (make it a unit vector).
 <description><![CDATA[PVector: Set to null to create a new vector]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

@@ -28,8 +28,6 @@ Prints the current camera matrix to the Console (the text window at the bottom o
 printCamera()
 </syntax>
 
-<related>
-<ref target="camera">camera()</ref>
-</related>
+<related>camera</related>
 
 </root>

@@ -172,12 +172,10 @@ beginShape()
 beginShape(kind)
 </syntax>
 
-<related>
-<ref target="PShape">PShape</ref>
-<ref target="PShape_endShape">endShape()</ref>
-<ref target="vertex">vertex()</ref>
-<ref target="curveVertex">curveVertex()</ref>
-<ref target="bezierVertex">bezierVertex()</ref>
-</related>
+<related>PShape</related>
+<related>PShape_endShape</related>
+<related>vertex</related>
+<related>curveVertex</related>
+<related>bezierVertex</related>
 
 </root>

@@ -39,7 +39,5 @@ Clears the pixels within a buffer. This function only works on PGraphics objects
 clear()
 </syntax>
 
-<related>
-</related>
 
 </root>

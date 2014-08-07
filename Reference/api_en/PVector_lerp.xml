@@ -98,8 +98,6 @@ Note that there is one <em>static</em> version of this method, and two <em>non-s
 <description><![CDATA[float: the z component to lerp to]]></description>
 </parameter>
 
-<related>
-<ref target="PVector_lerp">lerp()</ref>
-</related>
+<related>PVector_lerp</related>
 
 </root>

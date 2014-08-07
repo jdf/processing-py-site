@@ -42,12 +42,10 @@ Insert an item into a list at a given index.
 
 <returns></returns>
 
-<related>
-<ref target="list_append"></ref>
-<ref target="list_pop"></ref>
-<ref target="list_reverse"></ref>
-<ref target="list_index"></ref>
-</related>
+<related>list_append</related>
+<related>list_pop</related>
+<related>list_reverse</related>
+<related>list_index</related>
 
 <availability>1.0</availability>
 

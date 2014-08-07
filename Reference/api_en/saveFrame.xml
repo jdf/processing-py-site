@@ -60,10 +60,8 @@ saveFrame(filename)
 <description><![CDATA[String: any sequence of letters or numbers that ends with either ".tif", ".tga", ".jpg", or ".png"]]></description>
 </parameter>
 
-<related>
-<ref target="save">save()</ref>
-<ref target="createGraphics">createGraphics()</ref>
-<ref target="frameCount">frameCount</ref>
-</related>
+<related>save</related>
+<related>createGraphics</related>
+<related>frameCount</related>
 
 </root>

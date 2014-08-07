@@ -43,9 +43,7 @@ Returns the content of an element as an int. If there is no such content, either
 <description><![CDATA[int: the default value of the attribute]]></description>
 </parameter>
 
-<related>
-<ref target="XML_getContent">getContent()</ref>
-<ref target="XML_getFloatContent">getFloatContent()</ref>
-</related>
+<related>XML_getContent</related>
+<related>XML_getFloatContent</related>
 
 </root>

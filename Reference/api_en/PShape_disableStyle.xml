@@ -38,8 +38,6 @@ Disables the shape's style data and uses Processing's current styles. Styles inc
 </parameter>
 
 
-<related>
-<ref target="PShape_endShape">endShape()</ref>
-</related>
+<related>PShape_endShape</related>
 
 </root>

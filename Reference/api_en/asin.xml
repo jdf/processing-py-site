@@ -43,10 +43,8 @@ asin(<c>value</c>)
 <description><![CDATA[float: the value whose arc sine is to be returned]]></description>
 </parameter>
 
-<related>
-<ref target="sin">sin()</ref>
-<ref target="acos">acos()</ref>
-<ref target="atan">atan()</ref>
-</related>
+<related>sin</related>
+<related>acos</related>
+<related>atan</related>
 
 </root>

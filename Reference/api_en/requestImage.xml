@@ -49,9 +49,7 @@ requestImage(<c>filename</c>, <c>extension</c>)
 <description><![CDATA[String: the type of image to load, for example "png", "gif", "jpg"]]></description>
 </parameter>
 
-<related>
-<ref target="PImage">PImage</ref>
-<ref target="loadImage">loadImage()</ref>
-</related>
+<related>PImage</related>
+<related>loadImage</related>
 
 </root>

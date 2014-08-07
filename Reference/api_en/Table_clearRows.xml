@@ -38,9 +38,7 @@ Removes all rows from a <b>Table</b>.  While all rows are removed, columns and c
 .clearRows()
 </syntax>
 
-<related>
-<ref target="Table_addRow">addRow()</ref>
-<ref target="Table_removeRow">removeRow()</ref>
-</related>
+<related>Table_addRow</related>
+<related>Table_removeRow</related>
 
 </root>

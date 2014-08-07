@@ -37,10 +37,8 @@ def setup():
 
 <type>class</type>
 
-<related>
-<ref target="loadTable">loadTable()</ref>
-<ref target="saveTable">saveTable()</ref>
-<ref target="TableRow">TableRow</ref>
-</related>
+<related>loadTable</related>
+<related>saveTable</related>
+<related>TableRow</related>
 
 </root>

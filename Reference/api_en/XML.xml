@@ -44,10 +44,8 @@ Only files encoded as UTF-8 (or plain ASCII) are parsed properly; the encoding p
 
 <type>class</type>
 
-<related>
-<ref target="loadXML">loadXML()</ref>
-<ref target="parseXML">parseXML()</ref>
-<ref target="saveXML">saveXML()</ref>
-</related>
+<related>loadXML</related>
+<related>parseXML</related>
+<related>saveXML</related>
 
 </root>

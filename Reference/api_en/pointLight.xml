@@ -58,11 +58,9 @@ pointLight(<c>v1</c>, <c>v2</c>, <c>v3</c>, <c>x</c>, <c>y</c>, <c>z</c>)
 <description><![CDATA[float: z-coordinate of the light]]></description>
 </parameter>
 
-<related>
-<ref target="lights">lights()</ref>
-<ref target="directionalLight">directionalLight()</ref>
-<ref target="ambientLight">ambientLight()</ref>
-<ref target="spotLight">spotLight()</ref>
-</related>
+<related>lights</related>
+<related>directionalLight</related>
+<related>ambientLight</related>
+<related>spotLight</related>
 
 </root>

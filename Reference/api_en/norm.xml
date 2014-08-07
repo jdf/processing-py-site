@@ -51,9 +51,7 @@ norm(<c>value</c>, <c>start</c>, <c>stop</c>)
 <description><![CDATA[float: upper bound of the value's current range]]></description>
 </parameter>
 
-<related>
-<ref target="map">map()</ref>
-<ref target="PVector_lerp">lerp()</ref>
-</related>
+<related>map</related>
+<related>PVector_lerp</related>
 
 </root>

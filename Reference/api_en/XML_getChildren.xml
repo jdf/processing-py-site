@@ -46,7 +46,5 @@ Returns all of the element's children as an array of XML objects. When the <b>na
 <description><![CDATA[String: element name or path/to/element]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

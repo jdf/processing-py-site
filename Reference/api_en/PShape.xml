@@ -48,10 +48,8 @@ The <b>PShape</b> object contains a group of methods that can operate on the sha
 
 <type>class</type>
 
-<related>
-<ref target="loadShape">loadShape()</ref>
-<ref target="createShape">createShape()</ref>
-<ref target="shapeMode">shapeMode()</ref>
-</related>
+<related>loadShape</related>
+<related>createShape</related>
+<related>shapeMode</related>
 
 </root>

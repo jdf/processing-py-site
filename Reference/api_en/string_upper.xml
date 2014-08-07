@@ -26,15 +26,13 @@ uppercase.
 
 <returns></returns>
 
-<related>
-<ref target="string">str</ref>
-<ref target="string_formatting"></ref>
-<ref target="string_find"></ref>
-<ref target="string_string"></ref>
-<ref target="string_join"></ref>
-<ref target="string_replace"></ref>
-<ref target="string_lower"></ref>
-</related>
+<related>string</related>
+<related>string_formatting</related>
+<related>string_find</related>
+<related>string_strip</related>
+<related>string_join</related>
+<related>string_replace</related>
+<related>string_lower</related>
 
 <availability>1.0</availability>
 

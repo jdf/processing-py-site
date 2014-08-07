@@ -43,9 +43,7 @@ ellipse(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>)
 <description><![CDATA[float: height of the ellipse by default]]></description>
 </parameter>
 
-<related>
-<ref target="ellipseMode">ellipseMode()</ref>
-<ref target="arc">arc()</ref>
-</related>
+<related>ellipseMode</related>
+<related>arc</related>
 
 </root>

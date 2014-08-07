@@ -42,10 +42,8 @@ atan(<c>value</c>)
 </parameter>
 
 
-<related>
-<ref target="tan">tan()</ref>
-<ref target="asin">asin()</ref>
-<ref target="acos">acos()</ref>
-</related>
+<related>tan</related>
+<related>asin</related>
+<related>acos</related>
 
 </root>

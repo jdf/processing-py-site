@@ -27,8 +27,6 @@ Returns the total number of columns in a table.
 
 <syntax>.getColumnCount()</syntax>
 
-<related>
-<ref target="Table_getRowCount">getRowCount()</ref>
-</related>
+<related>Table_getRowCount</related>
 
 </root>

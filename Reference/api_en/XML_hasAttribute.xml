@@ -39,7 +39,5 @@ Checks whether or not an element has the specified attribute.  The attribute mus
 .hasAttribute(name)
 </syntax>
 
-<related>
-</related>
 
 </root>

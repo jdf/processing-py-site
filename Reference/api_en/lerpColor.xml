@@ -53,9 +53,7 @@ lerpColor(<c>c1</c>, <c>c2</c>, <c>amt</c>)
 <description><![CDATA[float: between 0.0 and 1.0]]></description>
 </parameter>
 
-<related>
-<ref target="color">color()</ref>
-<ref target="PVector_lerp">lerp()</ref>
-</related>
+<related>color</related>
+<related>PVector_lerp</related>
 
 </root>

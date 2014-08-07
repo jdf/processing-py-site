@@ -29,8 +29,6 @@ radians(<c>degrees</c>)
 <description><![CDATA[float: degree value to convert to radians]]></description>
 </parameter>
 
-<related>
-<ref target="degrees">degrees()</ref>
-</related>
+<related>degrees</related>
 
 </root>

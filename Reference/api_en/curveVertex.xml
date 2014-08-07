@@ -47,13 +47,11 @@ curveVertex(<c>x</c>, <c>y</c>, <c>z</c>)
 <description><![CDATA[float: the z-coordinate of the vertex]]></description>
 </parameter>
 
-<related>
-<ref target="curve">curve()</ref>
-<ref target="PShape_beginShape">beginShape()</ref>
-<ref target="PShape_endShape">endShape()</ref>
-<ref target="vertex">vertex()</ref>
-<ref target="bezier">bezier()</ref>
-<ref target="quadraticVertex">quadraticVertex()</ref>
-</related>
+<related>curve</related>
+<related>PShape_beginShape</related>
+<related>PShape_endShape</related>
+<related>vertex</related>
+<related>bezier</related>
+<related>quadraticVertex</related>
 
 </root>

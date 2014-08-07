@@ -44,8 +44,6 @@ sh.isVisible()
 <description><![CDATA[PShape: any variable of type PShape]]></description>
 </parameter>
 
-<related>
-<ref target="PShape_setVisible">setVisible()</ref>
-</related>
+<related>PShape_setVisible</related>
 
 </root>

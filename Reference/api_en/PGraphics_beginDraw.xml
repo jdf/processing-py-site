@@ -42,7 +42,5 @@ Sets the default properties for a PGraphics object. It should be called before a
 <description><![CDATA[PGraphics: any object of the type PGraphics]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

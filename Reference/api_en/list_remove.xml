@@ -38,12 +38,10 @@ item isn't found.
 
 <returns></returns>
 
-<related>
-<ref target="list_insert">List Insert</ref>
-<ref target="list_append">List Append</ref>
-<ref target="list_reverse">List Reverse</ref>
-<ref target="list_index">List Index</ref>
-</related>
+<related>list_insert</related>
+<related>list_append</related>
+<related>list_reverse</related>
+<related>list_index</related>
 
 <availability>1.0</availability>
 

@@ -30,12 +30,10 @@ Sets the way text draws to the screen, either as texture maps or as vector geome
 The <b>textMode(SHAPE)</b> option in <b>P3D</b> can be combined with <b>beginRaw()</b> to write vector-accurate text to 2D and 3D output files, for instance <b>DXF</b> or <b>PDF</b>. The <b>SHAPE</b> mode is not currently optimized for <b>P3D</b>, so if recording shape data, use <b>textMode(MODEL)</b> until you're ready to capture the geometry with <b>beginRaw()</b>.
 ]]></description>
 
-<related>
-<ref target="loadFont">loadFont()</ref>
-<ref target="text">text()</ref>
-<ref target="textFont">textFont()</ref>
-<ref target="beginRaw">beginRaw()</ref>
-<ref target="createFont">createFont()</ref>
-</related>
+<related>loadFont</related>
+<related>text</related>
+<related>textFont</related>
+<related>beginRaw</related>
+<related>createFont</related>
 
 </root>

@@ -54,8 +54,6 @@ cursor()
 <description><![CDATA[int: the vertical active spot of the cursor]]></description>
 </parameter>
 
-<related>
-<ref target="noCursor">noCursor()</ref>
-</related> 
+<related>noCursor</related>
 
 </root>

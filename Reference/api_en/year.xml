@@ -33,13 +33,11 @@ def draw():
 Processing communicates with the clock on your computer. The <b>year()</b> function returns the current year as an integer (2003, 2004, 2005, etc).
 ]]></description>
 
-<related>
-<ref target="millis">millis()</ref>
-<ref target="second">second()</ref>
-<ref target="minute">minute()</ref>
-<ref target="hour">hour()</ref>
-<ref target="day">day()</ref>
-<ref target="month">month()</ref>
-</related>
+<related>millis</related>
+<related>second</related>
+<related>minute</related>
+<related>hour</related>
+<related>day</related>
+<related>month</related>
 
 </root>

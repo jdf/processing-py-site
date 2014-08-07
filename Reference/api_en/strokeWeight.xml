@@ -24,10 +24,8 @@ line(20, 70, 80, 70)
 Sets the width of the stroke used for lines, points, and the border around shapes. All widths are set in units of pixels.
 ]]></description>
 
-<related>
-<ref target="stroke">stroke()</ref>
-<ref target="strokeJoin">strokeJoin()</ref>
-<ref target="strokeCap">strokeCap()</ref>
-</related>
+<related>stroke</related>
+<related>strokeJoin</related>
+<related>strokeCap</related>
 
 </root>

@@ -35,11 +35,9 @@ Prints the current matrix to the Console (the text window at the bottom of Proce
 printMatrix()
 </syntax>
 
-<related>
-<ref target="pushMatrix">pushMatrix()</ref>
-<ref target="popMatrix">popMatrix()</ref>
-<ref target="resetMatrix">resetMatrix()</ref>
-<ref target="applyMatrix">applyMatrix()</ref>
-</related>
+<related>pushMatrix</related>
+<related>popMatrix</related>
+<related>resetMatrix</related>
+<related>applyMatrix</related>
 
 </root>

@@ -96,7 +96,5 @@ Sets the uniform variables inside the shader to modify the effect while the prog
 <description><![CDATA[PImage: sets the sampler uniform variable to read from this image texture]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

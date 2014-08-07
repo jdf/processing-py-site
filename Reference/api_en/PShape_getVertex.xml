@@ -61,9 +61,7 @@ The <b>getVertex()</b> method returns a PVector with the coordinates of the vert
 <description><![CDATA[PVector: PVector to assign the data to]]></description>
 </parameter>
 
-<related>
-<ref target="PShape_setVertex">setVertex()</ref>
-<ref target="PShape_getVertexCount">getVertexCount()</ref>
-</related>
+<related>PShape_setVertex</related>
+<related>PShape_getVertexCount</related>
 
 </root>

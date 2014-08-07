@@ -40,9 +40,7 @@ Use <b>addRow()</b> to add a new row of data to a <b>Table</b> object.  By defau
 <description><![CDATA[TableRow: a reference to the original row to be duplicated]]></description>
 </parameter>
 
-<related>
-<ref target="Table_removeRow">removeRow()</ref>
-<ref target="Table_clearRows">clearRows()</ref>
-</related>
+<related>Table_removeRow</related>
+<related>Table_clearRows</related>
 
 </root>

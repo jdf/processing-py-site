@@ -86,9 +86,7 @@ pimg.copy(src, sx, sy, sw, sh, dx, dy, dw, dh)
 <description><![CDATA[PImage: an image variable referring to the source image.]]></description>
 </parameter>
 
-<related>
-<ref target="alpha">alpha()</ref>
-<ref target="PImage_blend">blend()</ref>
-</related>
+<related>alpha</related>
+<related>PImage_blend</related>
 
 </root>

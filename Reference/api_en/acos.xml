@@ -42,10 +42,8 @@ acos(<c>value</c>)
 </parameter>
 
 
-<related>
-<ref target="cos">cos()</ref>
-<ref target="asin">asin()</ref>
-<ref target="atan">atan()</ref>
-</related>
+<related>cos</related>
+<related>asin</related>
+<related>atan</related>
 
 </root>

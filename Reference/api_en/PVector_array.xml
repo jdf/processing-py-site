@@ -27,7 +27,5 @@ Return a representation of this vector as a float array. This is only for tempor
 .array()
 </syntax>
 
-<related>
-</related>
 
 </root>

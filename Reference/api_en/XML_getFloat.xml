@@ -38,7 +38,5 @@ Returns an attribute value of the element as a float. If the <b>defaultValue</b>
 .getFloat(name, defaultValue)
 </syntax>
 
-<related>
-</related>
 
 </root>

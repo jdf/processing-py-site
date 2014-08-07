@@ -48,10 +48,8 @@ normal(<c>nx</c>, <c>ny</c>, <c>nz</c>)
 <description><![CDATA[float: z direction]]></description>
 </parameter>
 
-<related>
-<ref target="PShape_beginShape">beginShape()</ref>
-<ref target="PShape_endShape">endShape()</ref>
-<ref target="lights">lights()</ref>
-</related>
+<related>PShape_beginShape</related>
+<related>PShape_endShape</related>
+<related>lights</related>
 
 </root>

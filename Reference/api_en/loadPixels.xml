@@ -29,9 +29,7 @@ Certain renderers may or may not seem to require <b>loadPixels()</b> or <b>updat
 
 <syntax>loadPixels()</syntax>
 
-<related>
-<ref target="pixels">pixels</ref>
-<ref target="updatePixels"></ref>
-</related>
+<related>pixels</related>
+<related>updatePixels</related>
 
 </root>

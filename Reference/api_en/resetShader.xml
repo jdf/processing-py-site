@@ -44,7 +44,5 @@ resetShader(<c>kind</c>)
 <description><![CDATA[int: type of shader, either POINTS, LINES, or TRIANGLES]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

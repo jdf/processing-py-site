@@ -29,8 +29,6 @@ Calculates the magnitude (length) of the vector and returns the result as a floa
 .mag()
 </syntax>
 
-<related>
-<ref target="PVector_magSq">magSq()</ref>
-</related>
+<related>PVector_magSq</related>
 
 </root>

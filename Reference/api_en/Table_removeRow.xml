@@ -37,9 +37,7 @@ Removes a row from a <b>Table</b> object.
 <description><![CDATA[int: ID number of the row to remove]]></description>
 </parameter>
 
-<related>
-<ref target="Table_addRow">addRow()</ref>
-<ref target="Table_clearRows">clearRows()</ref>
-</related>
+<related>Table_addRow</related>
+<related>Table_clearRows</related>
 
 </root>

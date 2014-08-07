@@ -60,11 +60,9 @@ curveTangent(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>, <c>t</c>)
 <description><![CDATA[float: value between 0 and 1]]></description>
 </parameter>
 
-<related>
-<ref target="curve">curve()</ref>
-<ref target="curveVertex">curveVertex()</ref>
-<ref target="curvePoint">curvePoint()</ref>
-<ref target="bezierTangent">bezierTangent()</ref>
-</related>
+<related>curve</related>
+<related>curveVertex</related>
+<related>curvePoint</related>
+<related>bezierTangent</related>
 
 </root>

@@ -51,7 +51,5 @@ Calculates the Euclidean distance between two points (considering a point as a v
 <description><![CDATA[PVector: any variable of type PVector]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

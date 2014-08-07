@@ -47,13 +47,11 @@ Shapes are always rotated around the upper-left corner of their bounding box. Po
 <description><![CDATA[float: angle of rotation specified in radians]]></description>
 </parameter>
 
-<related>
-<ref target="rotateX">rotateX()</ref>
-<ref target="rotateY">rotateY()</ref>
-<ref target="rotateZ">rotateZ()</ref>
-<ref target="scale">scale()</ref>
-<ref target="translate">translate()</ref>
-<ref target="resetMatrix">resetMatrix()</ref>
-</related>
+<related>rotateX</related>
+<related>rotateY</related>
+<related>rotateZ</related>
+<related>scale</related>
+<related>translate</related>
+<related>resetMatrix</related>
 
 </root>

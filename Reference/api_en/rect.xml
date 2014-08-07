@@ -92,9 +92,7 @@ rect(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>, <c>tl</c>, <c>tr</c>, <c>br</c>, <c
 <description><![CDATA[float: radius for bottom-left corner]]></description>
 </parameter>
 
-<related>
-<ref target="rectMode">rectMode()</ref>
-<ref target="quad">quad()</ref>
-</related>
+<related>rectMode</related>
+<related>quad</related>
 
 </root>

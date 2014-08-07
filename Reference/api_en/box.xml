@@ -59,8 +59,6 @@ box(<c>w</c>, <c>h</c>, <c>d</c>)
 <description><![CDATA[float: dimension of the box in the z-dimension]]></description>
 </parameter>
 
-<related>
-<ref target="sphere">sphere()</ref>
-</related>
+<related>sphere</related>
 
 </root>

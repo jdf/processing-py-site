@@ -36,9 +36,7 @@ Datatype for integers, numbers without a decimal point. Integers can be as large
 
 <returns></returns>
 
-<related>
-<ref target="float">float</ref>
-</related>
+<related>float</related>
 
 <availability>1.0</availability>
 

@@ -40,7 +40,5 @@ Currently, none of the renderers use the additional parameters to <b>updatePixel
 updatePixels()
 </syntax>
 
-<related>
-</related>
 
 </root>

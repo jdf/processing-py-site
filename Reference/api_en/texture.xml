@@ -30,12 +30,10 @@ Sets a texture to be applied to vertex points. The <b>texture()</b> function mus
 When textures are in use, the fill color is ignored. Instead, use <b>tint()</b> to specify the color of the texture as it is applied to the shape.
 ]]></description>
 
-<related>
-<ref target="textureMode">textureMode()</ref>
-<ref target="textureWrap">textureWrap()</ref>
-<ref target="PShape_beginShape">beginShape()</ref>
-<ref target="PShape_endShape">endShape()</ref>
-<ref target="vertex">vertex()</ref>
-</related>
+<related>textureMode</related>
+<related>textureWrap</related>
+<related>PShape_beginShape</related>
+<related>PShape_endShape</related>
+<related>vertex</related>
 
 </root>

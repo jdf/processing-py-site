@@ -33,9 +33,7 @@ round(<c>n</c>)
 <description><![CDATA[float: number to round]]></description>
 </parameter>
 
-<related>
-<ref target="floor">floor()</ref>
-<ref target="ceil">ceil()</ref>
-</related>
+<related>floor</related>
+<related>ceil</related>
 
 </root>

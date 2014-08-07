@@ -36,7 +36,5 @@ Calculates and returns the angle (in radians) between two vectors.
 <description><![CDATA[PVector: the x, y, and z components of a PVector]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

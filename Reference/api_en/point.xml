@@ -55,7 +55,5 @@ point(<c>x</c>, <c>y</c>, <c>z</c>)
 <description><![CDATA[float: z-coordinate of the point]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

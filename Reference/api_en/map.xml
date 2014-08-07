@@ -82,9 +82,7 @@ map(<c>value</c>, <c>start1</c>, <c>stop1</c>, <c>start2</c>, <c>stop2</c>)
 <description><![CDATA[float: upper bound of the value's target range]]></description>
 </parameter>
 
-<related>
-<ref target="norm">norm()</ref>
-<ref target="PVector_lerp">lerp()</ref>
-</related>
+<related>norm</related>
+<related>PVector_lerp</related>
 
 </root>

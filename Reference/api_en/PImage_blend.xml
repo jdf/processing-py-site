@@ -149,10 +149,8 @@ blend(<c>src</c>, <c>sx</c>, <c>sy</c>, <c>sw</c>, <c>sh</c>, <c>dx</c>, <c>dy</
 ]]></description>
 </parameter>
 
-<related>
-<ref target="alpha">alpha()</ref>
-<ref target="PVector_copy">copy()</ref>
-</related>
+<related>alpha</related>
+<related>PVector_copy</related>
 
 
 </root>

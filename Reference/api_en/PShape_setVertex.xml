@@ -77,9 +77,7 @@ The <b>setVertex()</b> method defines the coordinates of the vertex point locate
 <description><![CDATA[PVector: the PVector to define the x, y, z coordinates]]></description>
 </parameter>
 
-<related>
-<ref target="PShape_getVertex">getVertex()</ref>
-<ref target="PShape_getVertexCount">getVertexCount()</ref>
-</related>
+<related>PShape_getVertex</related>
+<related>PShape_getVertexCount</related>
 
 </root>

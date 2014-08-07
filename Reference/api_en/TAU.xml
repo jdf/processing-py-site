@@ -25,11 +25,9 @@ arc(x, y, d-60, d-60, 0, TAU)
 TAU is an alias for TWO_PI, a mathematical constant with the value 6.28318530717958647693. It is twice the ratio of the circumference of a circle to its diameter. It is useful in combination with the trigonometric functions <b>sin()</b> and <b>cos()</b>.
 ]]></description>
 
-<related>
-<ref target="PI">PI</ref>
-<ref target="TWO_PI">TWO_PI</ref>
-<ref target="HALF_PI">HALF_PI</ref>
-<ref target="QUARTER_PI">QUARTER_PI</ref>
-</related>
+<related>PI</related>
+<related>TWO_PI</related>
+<related>HALF_PI</related>
+<related>QUARTER_PI</related>
 
 </root>

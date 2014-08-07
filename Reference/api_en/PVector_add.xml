@@ -110,7 +110,5 @@ Adds x, y, and z components to a vector, adds one vector to another, or adds two
 <description><![CDATA[PVector: the target vector (if null, a new vector will be created)]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

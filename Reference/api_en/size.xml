@@ -87,9 +87,7 @@ size(<c>w</c>,<c>h</c>,<c>renderer</c>)
 <description><![CDATA[String: Either P2D, P3D, or PDF]]></description>
 </parameter>
 
-<related>
-<ref target="width">width</ref>
-<ref target="PShape_height">height</ref>
-</related>
+<related>width</related>
+<related>PShape_height</related>
 
 </root>

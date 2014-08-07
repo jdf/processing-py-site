@@ -60,10 +60,8 @@ To see the binary representation of a number, use the <b>binary()</b> function w
     
 <returns></returns>
 
-<related>
-<ref target="bitwiseOR">| (bitwise OR)</ref>
-<ref target="binary">binary()</ref>
-</related>
+<related>bitwiseOR</related>
+<related>binary</related>
 
 <availability>1.0</availability>
 

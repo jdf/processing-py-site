@@ -29,10 +29,8 @@ When run inside of a <b>for</b> or <b>while</b>, it skips the remainder of the b
 
 <returns></returns>
 
-<related>
-<ref target="for">for</ref>
-<ref target="while">while</ref>
-</related>
+<related>for</related>
+<related>while</related>
 
 <availability>1.0</availability>
 

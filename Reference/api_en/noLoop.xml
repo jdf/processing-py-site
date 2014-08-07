@@ -73,10 +73,8 @@ Note that if the sketch is resized, <b>redraw()</b> will be called to update the
 noLoop()
 </syntax>
 
-<related>
-<ref target="loop">loop()</ref>
-<ref target="redraw">redraw()</ref>
-<ref target="draw">draw()</ref>
-</related>
+<related>loop</related>
+<related>redraw</related>
+<related>draw</related>
 
 </root>

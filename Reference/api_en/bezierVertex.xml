@@ -84,11 +84,9 @@ bezierVertex(<c>x2</c>, <c>y2</c>, <c>z2</c>, <c>x3</c>, <c>y3</c>, <c>z3</c>, <
 <description><![CDATA[float: the z-coordinate of the anchor point]]></description>
 </parameter>
 
-<related>
-<ref target="curveVertex">curveVertex()</ref>
-<ref target="vertex">vertex()</ref>
-<ref target="quadraticVertex">quadraticVertex()</ref>
-<ref target="bezier">bezier()</ref>
-</related> 
+<related>curveVertex</related>
+<related>vertex</related>
+<related>quadraticVertex</related>
+<related>bezier</related>
 
 </root>

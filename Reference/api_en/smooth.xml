@@ -42,9 +42,7 @@ smooth(<c>level</c>)
 <description><![CDATA[int: either 2, 4, or 8]]></description>
 </parameter>
 
-<related>
-<ref target="noSmooth">noSmooth()</ref>
-<ref target="size">size()</ref>
-</related>
+<related>noSmooth</related>
+<related>size</related>
 
 </root>

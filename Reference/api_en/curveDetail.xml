@@ -48,10 +48,8 @@ curveDetail(<c>detail</c>)
 <description><![CDATA[int: resolution of the curves]]></description>
 </parameter>
 
-<related>
-<ref target="curve">curve()</ref>
-<ref target="curveVertex">curveVertex()</ref>
-<ref target="curveTightness">curveTightness()</ref>
-</related>
+<related>curve</related>
+<related>curveVertex</related>
+<related>curveTightness</related>
 
 </root>

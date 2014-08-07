@@ -38,9 +38,7 @@ Returns the content of an element. If there is no such content, <b>null</b> is r
 .getContent(defaultValue)
 </syntax>
 
-<related>
-<ref target="XML_getIntContent">getIntContent()</ref>
-<ref target="XML_getFloatContent">getFloatContent()</ref>
-</related>
+<related>XML_getIntContent</related>
+<related>XML_getFloatContent</related>
 
 </root>

@@ -46,9 +46,7 @@ matchAll(<c>str</c>, <c>regexp</c>)
 <description><![CDATA[String: the regexp to be used for matching]]></description>
 </parameter>
 
-<related>
-<ref target="match">match()</ref>
-<ref target="trim">trim()</ref>
-</related>
+<related>match</related>
+<related>trim</related>
 
 </root>

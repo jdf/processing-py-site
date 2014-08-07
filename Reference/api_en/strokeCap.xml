@@ -25,11 +25,9 @@ line(20, 70, 80, 70)
 Sets the style for rendering line endings. These ends are either squared, extended, or rounded, each of which specified with the corresponding parameters: SQUARE, PROJECT, and ROUND. The default cap is ROUND.
 ]]></description>
 
-<related>
-<ref target="stroke">stroke()</ref>
-<ref target="strokeWeight">strokeWeight()</ref>
-<ref target="strokeJoin">strokeJoin()</ref>
-<ref target="size">size()</ref>
-</related>
+<related>stroke</related>
+<related>strokeWeight</related>
+<related>strokeJoin</related>
+<related>size</related>
 
 </root>

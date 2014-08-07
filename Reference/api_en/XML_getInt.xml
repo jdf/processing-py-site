@@ -48,7 +48,5 @@ Returns an attribute value of the element as an int. If the <b>defaultValue</b> 
 <description><![CDATA[int: the default value of the attribute]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

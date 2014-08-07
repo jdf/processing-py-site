@@ -66,11 +66,9 @@ lerp(<c>start</c>, <c>stop</c>, <c>amt</c>)
 <description><![CDATA[float: float between 0.0 and 1.0]]></description>
 </parameter>
 
-<related>
-<ref target="curvePoint">curvePoint()</ref>
-<ref target="bezierPoint">bezierPoint()</ref>
-<ref target="PVector_lerp">lerp()</ref>
-<ref target="lerpColor">lerpColor()</ref>
-</related>
+<related>curvePoint</related>
+<related>bezierPoint</related>
+<related>PVector_lerp</related>
+<related>lerpColor</related>
 
 </root>

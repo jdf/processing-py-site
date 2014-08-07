@@ -67,10 +67,8 @@ shape(<c>shape</c>, <c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>)
 <description><![CDATA[float: height to display the shape]]></description>
 </parameter>
 
-<related>
-<ref target="PShape">PShape</ref>
-<ref target="loadShape">loadShape()</ref>
-<ref target="shapeMode">shapeMode()</ref>
-</related>
+<related>PShape</related>
+<related>loadShape</related>
+<related>shapeMode</related>
 
 </root>

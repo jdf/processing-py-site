@@ -31,8 +31,6 @@ The <b>beginCamera()</b> and <b>endCamera()</b> functions enable advanced custom
 endCamera()
 </syntax>
 
-<related>
-<ref target="camera">camera()</ref>
-</related>
+<related>camera</related>
 
 </root>

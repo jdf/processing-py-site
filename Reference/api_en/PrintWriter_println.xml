@@ -49,8 +49,6 @@ Writes data to a <b>PrintWriter</b> object stream and then starts a new line.
 
 <returns></returns>
 
-<related>
-</related>
 
 <availability>1.0</availability>
 

@@ -22,7 +22,5 @@ println('\n'.join(fontList)) # Print a line-separated list of fonts installed on
 Gets a list of the fonts installed on the system. The data is returned as a String list. This list provides the names of each font for input into <b>createFont()</b>, which allows Processing to dynamically format fonts.
 ]]></description>
 
-<related>
-</related>
 
 </root>

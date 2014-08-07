@@ -34,7 +34,5 @@ Copies the components of the vector and returns the result as a PVector.
 .get(target)
 </syntax>
 
-<related>
-</related>
 
 </root>

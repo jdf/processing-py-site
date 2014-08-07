@@ -120,7 +120,5 @@ Subtracts x, y, and z components from a vector, subtracts one vector from anothe
 <description><![CDATA[PVector: PVector in which to store the result]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

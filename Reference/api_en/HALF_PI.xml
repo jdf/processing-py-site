@@ -25,11 +25,9 @@ arc(x, y, d-60, d-60, 0, TWO_PI)
 HALF_PI is a mathematical constant with the value 1.57079632679489661923. It is half the ratio of the circumference of a circle to its diameter. It is useful in combination with the trigonometric functions <b>sin()</b> and <b>cos()</b>. 
 ]]></description>
 
-<related>
-<ref target="PI"></ref>
-<ref target="TWO_PI"></ref>
-<ref target="TAU"></ref>
-<ref target="QUARTER_PI"></ref>
-</related>
+<related>PI</related>
+<related>TWO_PI</related>
+<related>TAU</related>
+<related>QUARTER_PI</related>
 
 </root>

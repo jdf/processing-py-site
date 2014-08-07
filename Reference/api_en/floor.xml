@@ -28,9 +28,7 @@ floor(<c>n</c>)
 <description><![CDATA[float: number to round down]]></description>
 </parameter>
 
-<related>
-<ref target="ceil">ceil()</ref>
-<ref target="round">round()</ref>
-</related>
+<related>ceil</related>
+<related>round</related>
 
 </root>

@@ -38,7 +38,5 @@ Gets all of the specified element's attributes, and returns them as a list of St
 .listAttributes()
 </syntax>
 
-<related>
-</related>
 
 </root>

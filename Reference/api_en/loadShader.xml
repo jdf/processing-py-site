@@ -53,7 +53,5 @@ loadShader(<c>fragFilename</c>, <c>vertFilename</c>)
 <description><![CDATA[String: name of vertex shader file]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

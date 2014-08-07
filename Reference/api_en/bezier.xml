@@ -101,9 +101,7 @@ bezier(<c>x1</c>, <c>y1</c>, <c>z1</c>, <c>x2</c>, <c>y2</c>, <c>z2</c>, <c>x3</
 <description><![CDATA[float: coordinates for the second anchor point]]></description>
 </parameter>
 
-<related>
-<ref target="bezierVertex">bezierVertex()</ref>
-<ref target="curve">curve()</ref>
-</related>
+<related>bezierVertex</related>
+<related>curve</related>
 
 </root>

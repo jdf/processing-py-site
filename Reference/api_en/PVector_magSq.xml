@@ -24,8 +24,6 @@ def setup():
 Calculates the magnitude (length) of the vector, squared.  This method is often used to improve performance since, unlike <b>mag()</b>, it does not require a <b>sqrt()</b> operation.
 ]]></description>
 
-<related>
-<ref target="PVector_mag">mag()</ref>
-</related>
+<related>PVector_mag</related>
 
 </root>

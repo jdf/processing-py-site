@@ -48,7 +48,5 @@ A reference to the newly created child is returned as an XML object.
 .addChild(child)
 </syntax>
 
-<related>
-</related>
 
 </root>

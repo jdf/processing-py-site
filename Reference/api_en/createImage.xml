@@ -60,9 +60,7 @@ createImage(<c>w</c>, <c>h</c>, <c>format</c>)
 <description><![CDATA[int: Either RGB, ARGB, ALPHA (grayscale alpha channel)]]></description>
 </parameter>
 
-<related>
-<ref target="PImage">PImage</ref>
-<ref target="PGraphics">PGraphics</ref>
-</related>
+<related>PImage</related>
+<related>PGraphics</related>
 
 </root>

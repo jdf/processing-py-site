@@ -144,9 +144,7 @@ blend(<c>src</c>, <c>sx</c>, <c>sy</c>, <c>sw</c>, <c>sh</c>, <c>dx</c>, <c>dy</
 <description><![CDATA[int: Either BLEND, ADD, SUBTRACT, LIGHTEST, DARKEST, DIFFERENCE, EXCLUSION, MULTIPLY, SCREEN, OVERLAY, HARD_LIGHT, SOFT_LIGHT, DODGE, BURN]]></description>
 </parameter>
 
-<related>
-<ref target="alpha">alpha()</ref>
-<ref target="PVector_copy">copy()</ref>
-</related>
+<related>alpha</related>
+<related>PVector_copy</related>
 
 </root>

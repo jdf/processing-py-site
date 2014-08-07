@@ -49,12 +49,9 @@ Sets the default ambient light, directional light, falloff, and specular values.
 
 <syntax>lights()</syntax>
 
-<related>
-<ref target="ambientLight">ambientLight()</ref>
-<ref target="directionalLight">directionalLight()</ref>
-<ref target="pointLight">pointLight()</ref>
-<ref target="spotLight">spotLight()</ref>
-<ref target="?????">noLights()</ref>
-</related>
+<related>ambientLight</related>
+<related>directionalLight</related>
+<related>pointLight</related>
+<related>spotLight</related>
 
 </root>

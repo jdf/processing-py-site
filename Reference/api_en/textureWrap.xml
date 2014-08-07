@@ -43,9 +43,7 @@ def draw():
 Defines if textures repeat or draw once within a texture map. The two parameters are CLAMP (the default behavior) and REPEAT. This function only works with the P2D and P3D renderers.
 ]]></description>
 
-<related>
-<ref target="texture">texture()</ref>
-<ref target="textureMode">textureMode()</ref>
-</related>
+<related>texture</related>
+<related>textureMode</related>
 
 </root>

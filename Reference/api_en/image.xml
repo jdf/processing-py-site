@@ -81,13 +81,11 @@ image(<c>img</c>, <c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>)
 <description><![CDATA[float: height to display the image]]></description>
 </parameter>
 
-<related>
-<ref target="loadImage">loadImage()</ref>
-<ref target="PImage">PImage</ref>
-<ref target="imageMode">imageMode()</ref>
-<ref target="tint">tint()</ref>
-<ref target="background">background()</ref>
-<ref target="alpha">alpha()</ref>
-</related>
+<related>loadImage</related>
+<related>PImage</related>
+<related>imageMode</related>
+<related>tint</related>
+<related>background</related>
+<related>alpha</related>
 
 </root>

@@ -38,7 +38,5 @@ Returns the first of the element's children that matches the <b>name</b> paramet
 .getChild(name)
 </syntax>
 
-<related>
-</related>
 
 </root>

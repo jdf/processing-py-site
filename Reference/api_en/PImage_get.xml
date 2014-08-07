@@ -69,10 +69,8 @@ Getting the color of a single pixel with <b>get(x, y)</b> is easy, but not as fa
 <description><![CDATA[int: height of pixel rectangle to get]]></description>
 </parameter>
 
-<related>
-<ref target="set">set()</ref>
-<ref target="pixels">pixels</ref>
-<ref target="PVector_copy">copy()</ref>
-</related>
+<related>set</related>
+<related>pixels</related>
+<related>PVector_copy</related>
 
 </root>

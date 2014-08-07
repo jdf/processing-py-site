@@ -46,14 +46,12 @@ Specifies an amount to displace objects within the display window. The <b>x</b> 
 Transformations are cumulative and apply to everything that happens after and subsequent calls to the function accumulates the effect. For example, calling <b>translate(50, 0)</b> and then <b>translate(20, 0)</b> is the same as <b>translate(70, 0)</b>. If <b>translate()</b> is called within <b>draw()</b>, the transformation is reset when the loop begins again. This function can be further controlled by using <b>pushMatrix()</b> and <b>popMatrix()</b>.
 ]]></description>
 
-<related>
-<ref target="popMatrix">popMatrix()</ref>
-<ref target="pushMatrix">pushMatrix()</ref>
-<ref target="rotate">rotate()</ref>
-<ref target="rotateX">rotateX()</ref>
-<ref target="rotateY">rotateY()</ref>
-<ref target="rotateZ">rotateZ()</ref>
-<ref target="scale">scale()</ref>
-</related>
+<related>popMatrix</related>
+<related>pushMatrix</related>
+<related>rotate</related>
+<related>rotateX</related>
+<related>rotateY</related>
+<related>rotateZ</related>
+<related>scale</related>
 
 </root>

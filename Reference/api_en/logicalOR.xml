@@ -37,11 +37,9 @@ Compares two expressions and returns <b>True</b> if one or both evaluate to <b>T
 
 <returns></returns>
 
-<related>
-<ref target="logicalAND">and (logical AND)</ref>
-<ref target="logicalNOT">not (logical NOT)</ref>
-<ref target="if">if</ref>
-</related>
+<related>logicalAND</related>
+<related>logicalNOT</related>
+<related>if</related>
 
 <availability>1.0</availability>
 

@@ -28,7 +28,5 @@ def setup():
 The z component of the vector. This field (variable) can be used to both get and set the value (see above example.)
 ]]></description>
 
-<related>
-</related>
 
 </root>

@@ -24,8 +24,6 @@ def draw():
 The system variable <b>frameRate</b> contains the approximate frame rate of a running sketch. The initial value is 10 fps and is updated with each frame. The value is averaged over several frames, and so will only be accurate after the draw function has run 5-10 times.
 ]]></description>
 
-<related>
-<ref target="frameRate">frameRate()</ref>
-</related>
+<related>frameRate</related>
 
 </root>

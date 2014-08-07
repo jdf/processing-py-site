@@ -40,9 +40,7 @@ if <c>test</c>:
 
 <returns></returns>
 
-<related>
-<ref target="else">else</ref>
-</related>
+<related>else</related>
 
 <availability>1.0</availability>
 

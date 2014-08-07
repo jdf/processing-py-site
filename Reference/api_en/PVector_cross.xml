@@ -58,7 +58,5 @@ Calculates and returns a vector composed of the cross product between two vector
 <description><![CDATA[PVector: PVector to store the result]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

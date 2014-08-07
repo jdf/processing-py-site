@@ -53,13 +53,11 @@ Stores a string value in the <b>TableRow</b>'s specified column. The column may 
 <description><![CDATA[String: title of the target column]]></description>
 </parameter>
 
-<related>
-<ref target="XML_setInt">setInt()</ref>
-<ref target="XML_setFloat">setFloat()</ref>
-<ref target="XML_getInt">getInt()</ref>
-<ref target="XML_getFloat">getFloat()</ref>
-<ref target="XML_getString">getString()</ref>
-<ref target="Table_getStringColumn">getStringColumn()</ref>
-</related>
+<related>XML_setInt</related>
+<related>XML_setFloat</related>
+<related>XML_getInt</related>
+<related>XML_getFloat</related>
+<related>XML_getString</related>
+<related>Table_getStringColumn</related>
 
 </root>

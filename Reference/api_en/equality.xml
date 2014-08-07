@@ -37,13 +37,11 @@ Determines if two values are equivalent. The equality operator is different from
 
 <returns></returns>
 
-<related>
-<ref target="greaterthan">&gt; (greater than)</ref>
-<ref target="lessthan">&lt; (less than)</ref>
-<ref target="greaterthanorequalto">&gt;= (greater than or equal to)</ref>
-<ref target="lessthanorequalto">&lt;= (less than or equal to)</ref>
-<ref target="inequality">!= (inequality)</ref>
-</related>
+<related>greaterthan</related>
+<related>lessthan</related>
+<related>greaterthanorequalto</related>
+<related>lessthanorequalto</related>
+<related>inequality</related>
 
 <availability>1.0</availability>
 

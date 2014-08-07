@@ -37,10 +37,8 @@ saveBytes(<c>filename</c>, <c>data</c>)
 <description><![CDATA[list of bytes to be written]]></description>
 </parameter>
 
-<related>
-<ref target="loadStrings">loadStrings()</ref>
-<ref target="loadBytes">loadBytes()</ref>
-<ref target="saveStrings">saveStrings()</ref>
-</related>
+<related>loadStrings</related>
+<related>loadBytes</related>
+<related>saveStrings</related>
 
 </root>

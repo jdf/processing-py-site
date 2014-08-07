@@ -39,9 +39,7 @@ endShape(mode)
 <description><![CDATA[int: use CLOSE to close the shape]]></description>
 </parameter>
 
-<related>
-<ref target="PShape">PShape</ref>
-<ref target="PShape_beginShape">beginShape()</ref>
-</related>
+<related>PShape</related>
+<related>PShape_beginShape</related>
 
 </root>

@@ -23,18 +23,16 @@ The system variable <b>mouseX</b> always contains the current horizontal coordin
 Note that Processing can only track the mouse position when the pointer is over the current window. The default value of <b>mouseX</b> is <b>0</b>, so <b>0</b> will be returned until the mouse moves in front of the sketch window. (This typically happens when a sketch is first run.)  Once the mouse moves away from the window, <b>mouseX</b> will continue to report its most recent position.
 ]]></description>
 
-<related>
-<ref target="mouseY">mouseY</ref>
-<ref target="pmouseX">pmouseX</ref>
-<ref target="pmouseY">pmouseY</ref>
-<ref target="mousePressed_var">mousePressed</ref>
-<ref target="mousePressed">mousePressed()</ref>
-<ref target="mouseReleased">mouseReleased()</ref>
-<ref target="mouseClicked">mouseClicked()</ref>
-<ref target="mouseMoved">mouseMoved()</ref>
-<ref target="mouseDragged">mouseDragged()</ref>
-<ref target="mouseButton">mouseButton</ref>
-<ref target="mouseWheel">mouseWheel()</ref>
-</related>
+<related>mouseY</related>
+<related>pmouseX</related>
+<related>pmouseY</related>
+<related>mousePressed_var</related>
+<related>mousePressed</related>
+<related>mouseReleased</related>
+<related>mouseClicked</related>
+<related>mouseMoved</related>
+<related>mouseDragged</related>
+<related>mouseButton</related>
+<related>mouseWheel</related>
 
 </root>

@@ -30,13 +30,11 @@ Processing communicates with the clock on your computer. The <b>second()</b> fun
 second()
 </syntax>
 
-<related>
-<ref target="millis">millis()</ref>
-<ref target="minute">minute()</ref>
-<ref target="hour">hour()</ref>
-<ref target="day">day()</ref>
-<ref target="month">month()</ref>
-<ref target="year">year()</ref>
-</related>
+<related>millis</related>
+<related>minute</related>
+<related>hour</related>
+<related>day</related>
+<related>month</related>
+<related>year</related>
 
 </root>

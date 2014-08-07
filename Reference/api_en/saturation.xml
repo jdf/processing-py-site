@@ -36,13 +36,11 @@ saturation(<c>rgb</c>)
 </parameter>
 
 
-<related>
-<ref target="red">red()</ref>
-<ref target="green">green()</ref>
-<ref target="blue">blue()</ref>
-<ref target="alpha">alpha()</ref>
-<ref target="hue">hue()</ref>
-<ref target="brightness">brightness()</ref>
-</related>
+<related>red</related>
+<related>green</related>
+<related>blue</related>
+<related>alpha</related>
+<related>hue</related>
+<related>brightness</related>
 
 </root>

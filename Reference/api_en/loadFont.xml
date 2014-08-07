@@ -40,10 +40,8 @@ loadFont(<c>filename</c>)
 <description><![CDATA[String: name of the font to load]]></description>
 </parameter>
 
-<related>
-<ref target="PFont">PFont</ref>
-<ref target="textFont">textFont()</ref>
-<ref target="createFont">creatFont()</ref>
-</related>
+<related>PFont</related>
+<related>textFont</related>
+<related>createFont</related>
 
 </root>

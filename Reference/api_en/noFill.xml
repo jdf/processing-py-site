@@ -24,10 +24,8 @@ Disables filling geometry. If both <b>noStroke()</b> and <b>noFill()</b> are cal
 noFill()
 </syntax>
 
-<related>
-<ref target="fill">fill()</ref>
-<ref target="stroke">stroke()</ref>
-<ref target="noStroke">noStroke()</ref>
-</related>
+<related>fill</related>
+<related>stroke</related>
+<related>noStroke</related>
 
 </root>

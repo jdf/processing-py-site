@@ -40,8 +40,6 @@ Stops the recording process started by <b>beginRecord()</b> and closes the file.
 endRecord()
 </syntax>
 
-<related>
-<ref target="beginRecord">beginRecord()</ref>
-</related>
+<related>beginRecord</related>
 
 </root>

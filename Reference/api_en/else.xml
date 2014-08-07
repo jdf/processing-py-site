@@ -62,9 +62,7 @@ else:
 
 <returns></returns>
 
-<related>
-<ref target="if">if</ref>
-</related>
+<related>if</related>
 
 <availability>1.0</availability>
 
@@ -72,8 +70,6 @@ else:
 
 <partof>PYDE</partof>
 
-<related>
-<ref target="if">if</ref>
-</related>
+<related>if</related>
 
 </root>

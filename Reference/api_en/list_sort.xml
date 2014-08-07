@@ -92,13 +92,11 @@ sort.
 
 <returns></returns>
 
-<related>
-<ref target="list_insert"></ref>
-<ref target="list_pop"></ref>
-<ref target="list_append"></ref>
-<ref target="list_index"></ref>
-<ref target="sorted"></ref>
-</related>
+<related>list_insert</related>
+<related>list_pop</related>
+<related>list_append</related>
+<related>list_index</related>
+<related>sorted</related>
 
 <availability>1.0</availability>
 

@@ -48,9 +48,7 @@ Retrieves a String value from the <b>TableRow</b>'s specified column. The column
 <description><![CDATA[String: title of the column to reference]]></description>
 </parameter>
 
-<related>
-<ref target="XML_getInt">getInt()</ref>
-<ref target="XML_getFloat">getFloat()</ref>
-</related>
+<related>XML_getInt</related>
+<related>XML_getFloat</related>
 
 </root>

@@ -34,8 +34,6 @@ Takes an XML object and converts it to a String, using default formatting rules 
 .toString()
 </syntax>
 
-<related>
-<ref target="XML_format">format()</ref>
-</related>
+<related>XML_format</related>
 
 </root>

@@ -27,9 +27,7 @@ Removes the current fill value for displaying images and reverts to displaying i
 noTint()
 </syntax>
 
-<related>
-<ref target="tint">tint()</ref>
-<ref target="image">image()</ref>
-</related>
+<related>tint</related>
+<related>image</related>
 
 </root>

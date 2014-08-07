@@ -58,9 +58,7 @@ Objects are instances of classes. A class is a grouping of related methods (func
 
 <returns></returns>
 
-<related>
-<ref target="class">class</ref>
-</related>
+<related>class</related>
 
 <availability>1.0</availability>
 

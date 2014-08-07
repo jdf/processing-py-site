@@ -21,7 +21,5 @@ rect(55, 10, tiles.width, tiles.height)
 The width of the image in units of pixels.
 ]]></description>
 
-<related>
-</related>
 
 </root>

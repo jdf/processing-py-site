@@ -63,10 +63,8 @@ Using this method with the <b>z</b> parameter requires using the P3D parameter i
 <description><![CDATA[ifloat: percentage to scale the object in the z-axis]]></description>
 </parameter>
 
-<related>
-<ref target="rotate">rotate()</ref>
-<ref target="translate">translate()</ref>
-<ref target="resetMatrix">resetMatrix()</ref>
-</related>
+<related>rotate</related>
+<related>translate</related>
+<related>resetMatrix</related>
 
 </root>

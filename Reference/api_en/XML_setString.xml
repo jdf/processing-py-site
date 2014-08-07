@@ -40,7 +40,5 @@ Sets the content of an element's attribute as a String.  The first String specif
 .setString(name, value)
 </syntax>
 
-<related>
-</related>
 
 </root>

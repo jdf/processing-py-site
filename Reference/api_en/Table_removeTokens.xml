@@ -64,8 +64,6 @@ If no column is specified, then the values in all columns and rows are processed
 <description><![CDATA[String: title of the column to process]]></description>
 </parameter>
 
-<related>
-<ref target="trim">trim()</ref>
-</related>
+<related>trim</related>
 
 </root>

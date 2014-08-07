@@ -34,14 +34,11 @@ Substitute variables in a string using the string format operator % as shown abo
 
 <returns></returns>
 
-<related>
-<ref target="string">string</ref>
-<ref target="string_find"></ref>
-<ref target="string_strip"></ref>
-<ref target="string_join"></ref>
-<ref target="string_slice"></ref>
-<ref target="string_replace"></ref>
-</related>
+<related>string</related>
+<related>string_find</related>
+<related>string_strip</related>
+<related>string_join</related>
+<related>string_replace</related>
 
 <availability>1.0</availability>
 

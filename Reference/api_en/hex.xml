@@ -33,10 +33,8 @@ Converts a byte, char, int, or color to a String containing the equivalent hexad
 Note that the maximum number of digits is 8, because an <b>int</b> value can only represent up to 32 bits. Specifying more than 8 digits will not increase the length of the string further.
 ]]></description>
 
-<related>
-<ref target="unhex">unhex()</ref>
-<ref target="binary">binary()</ref>
-<ref target="unbinary">unbinary()</ref>
-</related>
+<related>unhex</related>
+<related>binary</related>
+<related>unbinary</related>
 
 </root>

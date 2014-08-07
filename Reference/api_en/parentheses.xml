@@ -42,9 +42,7 @@ Grouping and containing expressions and parameters. Parentheses have multiple fu
 
 <returns></returns>
 
-<related>
-<ref target="comma">, (comma)</ref>
-</related>
+<related>comma</related>
 
 <availability>1.0</availability>
 

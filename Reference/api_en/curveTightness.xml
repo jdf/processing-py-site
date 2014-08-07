@@ -46,9 +46,7 @@ curveTightness(<c>tightness</c>)
 <description><![CDATA[float: amount of deformation from the original vertices]]></description>
 </parameter>
 
-<related>
-<ref target="curve">curve()</ref>
-<ref target="curveVertex">curveVertex()</ref>
-</related>
+<related>curve</related>
+<related>curveVertex</related>
 
 </root>

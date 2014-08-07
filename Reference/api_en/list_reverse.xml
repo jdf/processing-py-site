@@ -30,12 +30,10 @@ Reverse the elements of a list in place.
 
 <returns></returns>
 
-<related>
-<ref target="list_insert">list.insert()</ref>
-<ref target="list_pop">list.pop()</ref>
-<ref target="list_append">list.append()</ref>
-<ref target="list_index">List Indexing</ref>
-</related>
+<related>list_insert</related>
+<related>list_pop</related>
+<related>list_append</related>
+<related>list_index</related>
 
 <availability>1.0</availability>
 

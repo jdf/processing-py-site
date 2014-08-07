@@ -36,14 +36,12 @@ A <b>TableRow</b> object represents a single row of data values, stored in colum
 
 <type>class</type>
 
-<related>
-<ref target="Table">Table</ref>
-<ref target="Table_addRow">addRow()</ref>
-<ref target="Table_removeRow">removeRow()</ref>
-<ref target="Table_clearRows">clearRows()</ref>
-<ref target="Table_getRow">getRow()</ref>
-<ref target="Table_rows">rows()</ref>
-</related>
+<related>Table</related>
+<related>Table_addRow</related>
+<related>Table_removeRow</related>
+<related>Table_clearRows</related>
+<related>Table_getRow</related>
+<related>Table_rows</related>
 
 
 </root>

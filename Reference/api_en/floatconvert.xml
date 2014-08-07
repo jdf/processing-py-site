@@ -18,7 +18,5 @@ println("%d : %.1f"% (i, f)) # Prints "65 : 65.0"
 Converts an int to its floating point representation.
 ]]></description>
 
-<related>
-</related>
 
 </root>

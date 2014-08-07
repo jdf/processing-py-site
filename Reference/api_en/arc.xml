@@ -77,11 +77,9 @@ arc(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>, <c>start</c>, <c>stop</c>, <c>mode</
 <description><![CDATA[float: angle to stop the arc, specified in radians]]></description>
 </parameter>
 
-<related>
-<ref target="ellipse">ellipse()</ref>
-<ref target="ellipseMode">ellipseMode()</ref>
-<ref target="radians">radians()</ref>
-<ref target="degrees">degrees()</ref>
-</related>
+<related>ellipse</related>
+<related>ellipseMode</related>
+<related>radians</related>
+<related>degrees</related>
 
 </root>

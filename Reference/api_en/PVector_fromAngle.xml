@@ -39,7 +39,5 @@ Calculates and returns a new 2D unit vector from the specified angle value (in r
 <description><![CDATA[PVector: the target vector (if null, a new vector will be created)]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

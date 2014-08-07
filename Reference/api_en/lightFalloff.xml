@@ -53,12 +53,10 @@ lightFalloff(<c>constant</c>, <c>linear</c>, <c>quadratic</c>)
 <description><![CDATA[float: quadratic value for determining falloff]]></description>
 </parameter>
 
-<related>
-<ref target="lights">lights()</ref>
-<ref target="ambientLight">ambientLight()</ref>
-<ref target="pointLight">pointLight()</ref>
-<ref target="spotLight">spotLight()</ref>
-<ref target="lightSpecular">lightSpecular()</ref>
-</related>
+<related>lights</related>
+<related>ambientLight</related>
+<related>pointLight</related>
+<related>spotLight</related>
+<related>lightSpecular</related>
 
 </root>

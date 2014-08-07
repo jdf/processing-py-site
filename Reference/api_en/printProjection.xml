@@ -28,8 +28,6 @@ Prints the current projection matrix to the Console (the text window at the bott
 printProjection()
 </syntax>
 
-<related>
-<ref target="camera">camera()</ref>
-</related>
+<related>camera</related>
 
 </root>

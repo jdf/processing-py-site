@@ -42,7 +42,5 @@ Removes the specified element.  First use <b>getChild()</b> to get a reference t
 .removeChild(kid)
 </syntax>
 
-<related>
-</related>
 
 </root>

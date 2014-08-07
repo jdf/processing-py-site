@@ -80,11 +80,9 @@ loadImage(<c>filename</c>, <c>extension</c>)
 <description><![CDATA[String: type of image to load, for example "png", "gif", "jpg"]]></description>
 </parameter>
 
-<related>
-<ref target="PImage">PImage</ref>
-<ref target="image">image()</ref>
-<ref target="imageMode">imageMode()</ref>
-<ref target="background">background()</ref>
-</related>
+<related>PImage</related>
+<related>image</related>
+<related>imageMode</related>
+<related>background</related>
 
 </root>

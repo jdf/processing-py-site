@@ -50,8 +50,6 @@ sphereDetail(<c>ures</c>, <c>vres</c>)
 <description><![CDATA[int: number of segments used latitudinally from top to bottom]]></description>
 </parameter>
 
-<related>
-<ref target="sphere">sphere()</ref>
-</related>
+<related>sphere</related>
 
 </root>

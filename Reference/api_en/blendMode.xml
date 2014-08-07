@@ -72,6 +72,4 @@ blendMode(<c>mode</c>)
 <description><![CDATA[int: the blending mode to use]]></description>
 </parameter>
 
-<related>
-</related>
 </root>

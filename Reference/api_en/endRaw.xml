@@ -41,8 +41,6 @@ Complement to <b>beginRaw()</b>; they must always be used together. See the <b>b
 endRaw()
 </syntax>
 
-<related>
-<ref target="beginRaw">beginRaw()</ref>
-</related>
+<related>beginRaw</related>
 
 </root>

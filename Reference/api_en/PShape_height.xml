@@ -25,8 +25,6 @@ def setup():
 The height of the PShape document.
 ]]></description>
 
-<related>
-<ref target="width">width</ref>
-</related>
+<related>width</related>
 
 </root>

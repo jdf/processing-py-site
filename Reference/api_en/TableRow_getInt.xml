@@ -49,9 +49,7 @@ Retrieves an integer value from the <b>TableRow</b>'s specified column. The colu
 <description><![CDATA[String: title of the column to reference]]></description>
 </parameter>
 
-<related>
-<ref target="XML_getFloat">getFloat()</ref>
-<ref target="XML_getString">getString()</ref>
-</related>
+<related>XML_getFloat</related>
+<related>XML_getString</related>
 
 </root>

@@ -22,10 +22,8 @@ rect(30, 20, 55, 55)
 Converts a String representation of a hexadecimal number to its equivalent integer value.
 ]]></description>
 
-<related>
-<ref target="hex">hex()</ref>
-<ref target="binary">binary()</ref>
-<ref target="unbinary">unbinary()</ref>
-</related>
+<related>hex</related>
+<related>binary</related>
+<related>unbinary</related>
 
 </root>

@@ -56,8 +56,6 @@ beginRaw(<c>renderer</c>, <c>filename</c>)
 <description><![CDATA[String: filename for output]]></description>
 </parameter>
 
-<related>
-<ref target="endRaw">endRaw()</ref>
-</related>
+<related>endRaw</related>
 
 </root>

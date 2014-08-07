@@ -54,12 +54,10 @@ saveTable(<c>table</c>, <c>filename</c>, <c>options</c>)
 <description><![CDATA[String: can be one of "tsv", "csv", "bin", or "html"]]></description>
 </parameter>
 
-<related>
-<ref target="Table">Table</ref>
-<ref target="loadTable">loadTable()</ref>
-<ref target="loadBytes">loadBytes()</ref>
-<ref target="loadStrings">loadStrings()</ref>
-<ref target="loadXML">loadXML()</ref>
-</related>
+<related>Table</related>
+<related>loadTable</related>
+<related>loadBytes</related>
+<related>loadStrings</related>
+<related>loadXML</related>
 
 </root>

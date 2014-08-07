@@ -57,11 +57,9 @@ specular(<c>v1</c>, <c>v2</c>, <c>v3</c>)
 <description><![CDATA[float: blue or brightness value (depending on current color mode)]]></description>
 </parameter>
 
-<related>
-<ref target="lightSpecular">lightSpecular()</ref>
-<ref target="ambient">ambient()</ref>
-<ref target="emissive">emissive()</ref>
-<ref target="shininess">shininess()</ref>
-</related>
+<related>lightSpecular</related>
+<related>ambient</related>
+<related>emissive</related>
+<related>shininess</related>
 
 </root>

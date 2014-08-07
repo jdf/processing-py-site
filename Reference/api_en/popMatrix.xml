@@ -31,8 +31,6 @@ Pops the current transformation matrix off the matrix stack. Understanding pushi
 popMatrix()
 </syntax>
 
-<related>
-<ref target="pushMatrix">pushMatrix()</ref>
-</related>
+<related>pushMatrix</related>
 
 </root>

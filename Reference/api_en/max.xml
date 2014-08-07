@@ -53,8 +53,6 @@ max(<c>list</c>)
 <description><![CDATA[float, or int: list of numbers to compare]]></description>
 </parameter>
 
-<related>
-<ref target="min">min()</ref>
-</related>
+<related>min</related>
 
 </root>

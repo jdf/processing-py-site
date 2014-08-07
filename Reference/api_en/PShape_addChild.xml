@@ -42,8 +42,6 @@ This is a new reference entry for Processing 2.0. It will be updated shortly. Fo
 <description><![CDATA[int: the layer position in which to insert the new child]]></description>
 </parameter>
 
-<related>
-<ref target="XML_getChild">getChild()</ref>
-</related>
+<related>XML_getChild</related>
 
 </root>

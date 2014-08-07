@@ -101,7 +101,5 @@ Sets the x, y, and z component of the vector using three separate variables, the
 <description><![CDATA[float: list to copy from]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

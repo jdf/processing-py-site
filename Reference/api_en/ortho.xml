@@ -61,7 +61,5 @@ ortho(<c>left</c>, <c>right</c>, <c>bottom</c>, <c>top</c>, <c>near</c>, <c>far<
 <description><![CDATA[float: maximum distance from the origin away from the viewer]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

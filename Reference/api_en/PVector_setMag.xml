@@ -41,7 +41,5 @@ Set the magnitude of this vector to the value used for the <b>len</b> parameter.
 <description><![CDATA[float: the new length for the new vector]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

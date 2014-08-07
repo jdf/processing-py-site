@@ -46,8 +46,6 @@ This method is used to complete a custom shape created with the <b>createShape()
 <description><![CDATA[PShape: any variable of type PShape]]></description>
 </parameter>
 
-<related>
-<ref target="PShape_beginShape">beginShape()</ref>
-</related>
+<related>PShape_beginShape</related>
 
 </root>

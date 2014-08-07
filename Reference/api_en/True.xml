@@ -28,10 +28,8 @@ Reserved word representing the logical value "True".
 
 <returns></returns>
 
-<related>
-<ref target="False">False</ref>
-<ref target="Boolean">Boolean</ref>
-</related>
+<related>False</related>
+<related>Boolean</related>
 
 <availability>1.0</availability>
 
@@ -39,9 +37,7 @@ Reserved word representing the logical value "True".
 
 <partof>PYDE</partof>
 
-<related>
-<ref target="False">False</ref>
-<ref target="Boolean">Boolean</ref>
-</related>
+<related>False</related>
+<related>Boolean</related>
 
 </root>

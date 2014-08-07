@@ -31,10 +31,8 @@ http://wiki.processing.org/w/Font_handling_in_JavaScript_mode
 Sets the current font size. This size will be used in all subsequent calls to the <b>text()</b> function. Font size is measured in units of pixels.
 ]]></description>
 
-<related>
-<ref target="loadFont">loadFont()</ref>
-<ref target="text">text()</ref>
-<ref target="textFont">textFont()</ref>
-</related>
+<related>loadFont</related>
+<related>text</related>
+<related>textFont</related>
 
 </root>

@@ -83,11 +83,9 @@ line(<c>x1</c>, <c>y1</c>, <c>z1</c>, <c>x2</c>, <c>y2</c>, <c>z2</c>)
 <description><![CDATA[float: z-coordinate of the second point]]></description>
 </parameter>
 
-<related>
-<ref target="strokeWeight">strokeWeight()</ref>
-<ref target="strokeJoin">strokeJoin()</ref>
-<ref target="strokeCap">strokeCap()</ref>
-<ref target="PShape_beginShape">beginShape()</ref>
-</related>
+<related>strokeWeight</related>
+<related>strokeJoin</related>
+<related>strokeCap</related>
+<related>PShape_beginShape</related>
 
 </root>

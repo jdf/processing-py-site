@@ -39,7 +39,5 @@ Counts the specified element's number of attributes, returned as an int.
 .getAttributeCount()
 </syntax>
 
-<related>
-</related>
 
 </root>

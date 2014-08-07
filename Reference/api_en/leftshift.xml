@@ -59,9 +59,7 @@ Shifts bits to the left. The number to the left of the operator is shifted the n
 
 <returns></returns>
 
-<related>
-<ref target="rightshift">&gt;&gt; (right shift)</ref>
-</related>
+<related>rightshift</related>
 
 <availability>1.0</availability>
 

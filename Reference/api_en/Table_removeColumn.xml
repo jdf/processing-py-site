@@ -54,8 +54,6 @@ Use <b>removeColumn()</b> to remove an existing column from a <b>Table</b> objec
 <description><![CDATA[int: the index number of the column to be removed]]></description>
 </parameter>
 
-<related>
-<ref target="Table_addColumn">addColumn()</ref>
-</related>
+<related>Table_addColumn</related>
 
 </root>

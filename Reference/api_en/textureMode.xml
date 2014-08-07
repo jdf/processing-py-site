@@ -48,9 +48,7 @@ Sets the coordinate space for texture mapping. The default mode is <b>IMAGE</b>,
 With <b>IMAGE</b>, if an image is 100 x 200 pixels, mapping the image onto the entire size of a quad would require the points (0,0) (100, 0) (100,200) (0,200). The same mapping in <b>NORMAL</b> is (0,0) (1,0) (1,1) (0,1).
 ]]></description>
 
-<related>
-<ref target="texture">texture()</ref>
-<ref target="textureWrap">textureWrap()</ref>
-</related>
+<related>texture</related>
+<related>textureWrap</related>
 
 </root>

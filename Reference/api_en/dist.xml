@@ -62,7 +62,5 @@ dist(<c>x1</c>, <c>y1</c>, <c>z1</c>, <c>x2</c>, <c>y2</c>, <c>z2</c>)
 <description><![CDATA[float: z-coordinate of the second point]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

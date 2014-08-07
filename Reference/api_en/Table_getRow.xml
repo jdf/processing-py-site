@@ -39,12 +39,10 @@ Returns a reference to the specified <b>TableRow</b>.  The reference can then be
 .getRow(row)
 </syntax>
 
-<related>
-<ref target="Table_rows">rows()</ref>
-<ref target="Table_findRow">findRow()</ref>
-<ref target="Table_findRows">findRows()</ref>
-<ref target="Table_matchRow">matchRow()</ref>
-<ref target="Table_matchRows">matchRows()</ref>
-</related>
+<related>Table_rows</related>
+<related>Table_findRow</related>
+<related>Table_findRows</related>
+<related>Table_matchRow</related>
+<related>Table_matchRows</related>
 
 </root>

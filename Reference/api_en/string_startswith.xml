@@ -33,14 +33,12 @@ a.startswith(<c>sub</c>)
 
 <returns>boolean</returns>
 
-<related>
-<ref target="string">str</ref>
-<ref target="string_formatting">String Formatting</ref>
-<ref target="string_find">String Find</ref>
-<ref target="string_strip">String Split</ref>
-<ref target="string_join">String Join</ref>
-<ref target="string_replace">String Replace</ref>
-</related>
+<related>string</related>
+<related>string_formatting</related>
+<related>string_find</related>
+<related>string_strip</related>
+<related>string_join</related>
+<related>string_replace</related>
 
 <availability>1.0</availability>
 

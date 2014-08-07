@@ -65,10 +65,8 @@ noise(<c>x</c>, <c>y</c>, <c>z</c>)
 <description><![CDATA[float: z-coordinate in noise space]]></description>
 </parameter>
 
-<related>
-<ref target="noiseSeed">noiseSeed()</ref>
-<ref target="noiseDetail">noiseDetail()</ref>
-<ref target="random">random()</ref>
-</related>
+<related>noiseSeed</related>
+<related>noiseDetail</related>
+<related>random</related>
 
 </root>

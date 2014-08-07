@@ -23,9 +23,7 @@ createReader(<c>filename</c>)
 
 <returns>BufferedReader</returns>
 
-<related>
-<ref target="createWriter">createWriter()</ref>
-</related>
+<related>createWriter</related>
 
 <availability>1.0</availability>
 

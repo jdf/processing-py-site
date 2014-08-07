@@ -35,14 +35,12 @@ rotate(<c>angle</c>, x, y, z)
 <description><![CDATA[float: angle of rotation specified in radians]]></description>
 </parameter>
 
-<related>
-<ref target="popMatrix">popMatrix()</ref>
-<ref target="pushMatrix">pushMatrix()</ref>
-<ref target="rotateX">rotateX()</ref>
-<ref target="rotateY">rotateY()</ref>
-<ref target="rotateZ">rotateZ()</ref>
-<ref target="scale">scale()</ref>
-<ref target="radians">radians()</ref>
-</related>
+<related>popMatrix</related>
+<related>pushMatrix</related>
+<related>rotateX</related>
+<related>rotateY</related>
+<related>rotateZ</related>
+<related>scale</related>
+<related>radians</related>
 
 </root>

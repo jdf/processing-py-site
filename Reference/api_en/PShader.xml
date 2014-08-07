@@ -36,8 +36,6 @@ This class encapsulates a GLSL shader program, including a vertex and a fragment
 
 <returns></returns>
 
-<related>
-</related>
 
 <availability>1.0</availability>
 

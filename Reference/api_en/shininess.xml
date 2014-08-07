@@ -42,10 +42,8 @@ shininess(<c>shine</c>)
 <description><![CDATA[float: degree of shininess]]></description>
 </parameter>
 
-<related>
-<ref target="emissive">emissive()</ref>
-<ref target="ambient">ambient()</ref>
-<ref target="specular">specular()</ref>
-</related>
+<related>emissive</related>
+<related>ambient</related>
+<related>specular</related>
 
 </root>

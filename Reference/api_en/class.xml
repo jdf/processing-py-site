@@ -59,9 +59,7 @@ class <c>ClassName</c>:
     
 <returns></returns>
 
-<related>
-<ref target="Object">Object</ref>
-</related>
+<related>Object</related>
 
 <availability>1.0</availability>
 

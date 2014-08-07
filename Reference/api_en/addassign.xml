@@ -40,11 +40,9 @@ Combines addition with assignment for numbers, concatenation with assignment for
 
 <returns></returns>
 
-<related>
-<ref target="assign">= (assign)</ref>
-<ref target="addition">+ (add)</ref>
-<ref target="subtractassign">-= (subtract assign)</ref>
-</related>
+<related>assign</related>
+<related>addition</related>
+<related>subtractassign</related>
 
 <availability>1.0</availability>
 

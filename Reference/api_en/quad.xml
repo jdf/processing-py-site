@@ -63,7 +63,5 @@ quad(<c>x1</c>, <c>y1</c>, <c>x2</c>, <c>y2</c>, <c>x3</c>, <c>y3</c>, <c>x4</c>
 <description><![CDATA[float: y-coordinate of the fourth corner]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

@@ -39,9 +39,7 @@ Keyword used to reference the superclass of a subclass.
 
 <returns></returns>
 
-<related>
-<ref target="class">class</ref>
-</related>
+<related>class</related>
 
 <availability>1.0</availability>
 

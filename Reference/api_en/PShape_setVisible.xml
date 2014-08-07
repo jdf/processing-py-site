@@ -47,8 +47,6 @@ The default visibility of a shape is usually controlled by whatever program crea
 <description><![CDATA[boolean: "false" makes the shape invisible and "true" makes it visible]]></description>
 </parameter>
 
-<related>
-<ref target="PShape_isVisible">isVisible()</ref>
-</related>
+<related>PShape_isVisible</related>
 
 </root>

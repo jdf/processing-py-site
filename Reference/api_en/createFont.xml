@@ -59,11 +59,9 @@ createFont(<c>name</c>, <c>size</c>, <c>smooth</c>, <c>charset</c>)
 <description><![CDATA[char: list containing characters to be generated]]></description>
 </parameter>
 
-<related>
-<ref target="PFont">PFont</ref>
-<ref target="textFont">textFont()</ref>
-<ref target="PGraphics">PGraphics</ref>
-<ref target="loadFont">loadFont()</ref>
-</related>
+<related>PFont</related>
+<related>textFont</related>
+<related>PGraphics</related>
+<related>loadFont</related>
 
 </root>

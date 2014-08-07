@@ -93,10 +93,8 @@ colorMode(<c>mode</c>, <c>max1</c>, <c>max2</c>, <c>max3</c>, <c>maxA</c>)
 <description><![CDATA[float: range for the alpha]]></description>
 </parameter>
 
-<related>
-<ref target="background">background()</ref>
-<ref target="fill">fill()</ref>
-<ref target="stroke">stroke()</ref>
-</related>
+<related>background</related>
+<related>fill</related>
+<related>stroke</related>
 
 </root>

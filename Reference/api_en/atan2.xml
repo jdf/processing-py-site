@@ -38,8 +38,6 @@ atan2(<c>y</c>, <c>x</c>)
 <description><![CDATA[float: x-coordinate of the point]]></description>
 </parameter>
 
-<related>
-<ref target="tan">tan()</ref>
-</related>
+<related>tan</related>
 
 </root>

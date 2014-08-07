@@ -58,8 +58,6 @@ Trims leading and trailing whitespace, such as spaces and tabs, from string tabl
 <description><![CDATA[String: title of the column to trim]]></description>
 </parameter>
 
-<related>
-<ref target="Table_removeTokens">removeTokens()</ref>
-</related>
+<related>Table_removeTokens</related>
 
 </root>

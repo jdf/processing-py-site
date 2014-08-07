@@ -90,10 +90,8 @@ curve(<c>x1</c>, <c>y1</c>, <c>z1</c>, <c>x2</c>, <c>y2</c>, <c>z2</c>, <c>x3</c
 <description><![CDATA[float: coordinates for the ending control point]]></description>
 </parameter>
 
-<related>
-<ref target="curveVertex">curveVertex()</ref>
-<ref target="curveTightness">curveTightness()</ref>
-<ref target="bezier">bezier()</ref>
-</related>
+<related>curveVertex</related>
+<related>curveTightness</related>
+<related>bezier</related>
 
 </root>

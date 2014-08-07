@@ -14,9 +14,7 @@ Disable all lighting. Lighting is turned off by default and enabled with the lig
 noLights()
 </syntax>
 
-<related>
-<ref target="lights">lights()</ref>
-</related>
+<related>lights</related>
 
 <availability>1.0</availability>
 

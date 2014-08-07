@@ -37,14 +37,12 @@ frameRate(<c>fps</c>)
 <description><![CDATA[float: number of desired frames per second]]></description>
 </parameter>
 
-<related>
-<ref target="frameRate_var">frameRate</ref>
-<ref target="frameCount">frameCount</ref>
-<ref target="setup">setup()</ref>
-<ref target="draw">draw()</ref>
-<ref target="loop">loop()</ref>
-<ref target="noLoop">noLoop()</ref>
-<ref target="redraw">redraw()</ref>
-</related>
+<related>frameRate_var</related>
+<related>frameCount</related>
+<related>setup</related>
+<related>draw</related>
+<related>loop</related>
+<related>noLoop</related>
+<related>redraw</related>
 
 </root>

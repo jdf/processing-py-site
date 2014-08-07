@@ -103,8 +103,6 @@ sorted(<c>iterable</c>, key=<c>fn</c>)
 <description><![CDATA[int: number of elements to sort, starting from 0]]></description>
 </parameter>
 
-<related>
-<ref target="list_reverse">reverse()</ref>
-</related>
+<related>list_reverse</related>
 
 </root>

@@ -41,9 +41,7 @@ constrain(<c>amt</c>, <c>low</c>, <c>high</c>)
 <description><![CDATA[int, or float: maximum limit]]></description>
 </parameter>
 
-<related>
-<ref target="max">max()</ref>
-<ref target="min">min()</ref>
-</related>
+<related>max</related>
+<related>min</related>
 
 </root>

@@ -73,13 +73,11 @@ fill(<c>v1</c>, <c>v2</c>, <c>v3</c>, <c>alpha</c>)
 <description><![CDATA[float: blue or brightness value (depending on current color mode)]]></description>
 </parameter>
 
-<related>
-<ref target="noFill">noFill()</ref>
-<ref target="stroke">stroke()</ref>
-<ref target="noStroke">noStroke()</ref>
-<ref target="tint">tint()</ref>
-<ref target="background">background()</ref>
-<ref target="colorMode">colorMode()</ref>
-</related>
+<related>noFill</related>
+<related>stroke</related>
+<related>noStroke</related>
+<related>tint</related>
+<related>background</related>
+<related>colorMode</related>
 
 </root>

@@ -59,8 +59,6 @@ println(<c>variables</c>)
 <description><![CDATA[list of data, separated by commas]]></description>
 </parameter>
 
-<related>
-<ref target="PrintWriter_print">print()</ref>
-</related>
+<related>PrintWriter_print</related>
 
 </root>

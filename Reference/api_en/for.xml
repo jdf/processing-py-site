@@ -89,9 +89,7 @@ for <c>var</c> in <c>iterable</c>:
 
 <returns></returns>
 
-<related>
-<ref target="while">while</ref>
-</related>
+<related>while</related>
 
 <availability>1.0</availability>
 

@@ -53,8 +53,6 @@ Even though a PGraphics is technically a PImage, it is not possible to rescale t
 <description><![CDATA[int: the resized image height]]></description>
 </parameter>
 
-<related>
-<ref target="PVector_get">get()</ref>
-</related>
+<related>PVector_get</related>
 
 </root>

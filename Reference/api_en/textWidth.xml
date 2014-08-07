@@ -27,10 +27,8 @@ line(sw, 50, sw, 100)
 Calculates and returns the width of any character or text string.
 ]]></description>
 
-<related>
-<ref target="loadFont">loadFont()</ref>
-<ref target="text">text()</ref>
-<ref target="textFont">textFont()</ref>
-</related>
+<related>loadFont</related>
+<related>text</related>
+<related>textFont</related>
 
 </root>

@@ -66,10 +66,8 @@ frustum(<c>left</c>, <c>right</c>, <c>bottom</c>, <c>top</c>, <c>near</c>, <c>fa
 <description><![CDATA[float: far component of the clipping plane; must be greater than the near value]]></description>
 </parameter>
 
-<related>
-<ref target="camera">camera()</ref>
-<ref target="endCamera">endCamera()</ref>
-<ref target="perspective">perspective()</ref>
-</related>
+<related>camera</related>
+<related>endCamera</related>
+<related>perspective</related>
 
 </root>

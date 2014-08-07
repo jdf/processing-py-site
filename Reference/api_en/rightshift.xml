@@ -58,9 +58,7 @@ Bit shifting is helpful when using the <b>color</b> data type. A right shift can
 
 <returns></returns>
 
-<related>
-<ref target="leftshift">&lt;&lt; (left shift)</ref>
-</related>
+<related>leftshift</related>
 
 <availability>1.0</availability>
 

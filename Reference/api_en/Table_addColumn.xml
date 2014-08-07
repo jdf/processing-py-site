@@ -53,8 +53,6 @@ Use <b>addColumn()</b> to add a new column to a <b>Table</b> object.  Typically,
 <description><![CDATA[int: the type to be used for the new column: INT, LONG, FLOAT, DOUBLE, STRING, or CATEGORY]]></description>
 </parameter>
 
-<related>
-<ref target="Table_removeColumn">removeColumn()</ref>
-</related>
+<related>Table_removeColumn</related>
 
 </root>

@@ -38,7 +38,5 @@ Returns an attribute value of the element as a String. If the <b>defaultValue</b
 .getString(name, defaultValue)
 </syntax>
 
-<related>
-</related>
 
 </root>

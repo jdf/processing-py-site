@@ -114,14 +114,12 @@ There are more string methods than those linked from this page. Additional docum
 <ref>string_upper</ref>
 </method>
 
-<related>
-<ref target="string_formatting">String Formatting</ref>
-<ref target="string_find">String Find</ref>
-<ref target="string_strip">String Strip</ref>
-<ref target="string_join">String Join</ref>
-<ref target="string_split">String Split</ref>
-<ref target="string_replace">String Replace</ref>
-</related>
+<related>string_formatting</related>
+<related>string_find</related>
+<related>string_strip</related>
+<related>string_join</related>
+<related>string_split</related>
+<related>string_replace</related>
 
 <availability>1.0</availability>
 

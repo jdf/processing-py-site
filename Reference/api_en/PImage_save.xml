@@ -45,7 +45,5 @@ Saves the image into a file. Images are saved in TIFF, TARGA, JPEG, and PNG form
 <description><![CDATA[String: a sequence of letters and numbers]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>

@@ -61,9 +61,7 @@ loadShape(<c>filename</c>, <c>options</c>)
 <description><![CDATA[String: name of file to load, can be .svg or .obj]]></description>
 </parameter>
 
-<related>
-<ref target="PShape">PShape</ref>
-<ref target="createShape">createShape()</ref>
-</related>
+<related>PShape</related>
+<related>createShape</related>
 
 </root>

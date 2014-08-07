@@ -50,9 +50,7 @@ The <b>getVertexCount()</b> method returns the number of vertices that make up a
 <description><![CDATA[PShape: any variable of type PShape]]></description>
 </parameter>
 
-<related>
-<ref target="PShape_getVertex">getVertex()</ref>
-<ref target="PShape_setVertex">setVertex()</ref>
-</related>
+<related>PShape_getVertex</related>
+<related>PShape_setVertex</related>
 
 </root>

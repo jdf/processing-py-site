@@ -46,8 +46,6 @@ The <b>pushStyle()</b> function saves the current style settings and <b>popStyle
 popStyle()
 </syntax>
 
-<related>
-<ref target="pushStyle">pushStyle()</ref>
-</related>
+<related>pushStyle</related>
 
 </root>

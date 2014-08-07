@@ -38,7 +38,5 @@ Certain renderers may or may not seem to require <b>loadPixels()</b> or <b>updat
 loadPixels()
 </syntax>
 
-<related>
-</related>
 
 </root>

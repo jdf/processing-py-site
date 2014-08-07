@@ -50,8 +50,6 @@ beginRecord(<c>renderer</c>, <c>filename</c>)
 </parameter>
 
 
-<related>
-<ref target="endRecord">endRecord()</ref>
-</related>
+<related>endRecord</related>
 
 </root>

@@ -68,7 +68,5 @@ Calculates the dot product of two vectors.
 <description><![CDATA[PVector: any variable of type PVector]]></description>
 </parameter>
 
-<related>
-</related>
 
 </root>
