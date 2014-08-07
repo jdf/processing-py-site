@@ -2,9 +2,6 @@
 <root>
 <name>PrintWriter</name>
 
-<!-- unsupported_modes>js</unsupported_modes -->
-<!-- js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode -->
-
 <category>Output</category>
 
 <subcategory>Files</subcategory>
@@ -35,28 +32,30 @@ Allows characters to print to a text-output stream. A new PrintWriter object is 
 <syntax></syntax>
 
 <method>
-<mname>print()</mname>
-<mdescription>Adds data to the stream</mdescription>
+<label>print()</label>
+<description>Adds data to the stream</description>
+<ref>PrintWriter_print</ref>
 </method>
 
 <method>
-<mname>println()</mname>
-<mdescription>Adds data to the stream and starts a new line</mdescription>
+<label>println()</label>
+<description>Adds data to the stream and starts a new line</description>
+<ref>PrintWriter_println</ref>
 </method>
 
 <method>
-<mname>flush()</mname>
-<mdescription>Flushes the stream</mdescription>
+<label>flush()</label>
+<description>Flushes the stream</description>
+<ref>PrintWriter_flush</ref>
 </method>
 
 <method>
-<mname>close()</mname>
-<mdescription>Closes the stream</mdescription>
+<label>close()</label>
+<description>Closes the stream</description>
+<ref>PrintWriter_close</ref>
 </method>
 
-<constructor> </constructor>
-
-<returns></returns>
+<constructor></constructor>
 
 <related>
 createWriter()

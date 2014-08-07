@@ -18,18 +18,29 @@ except:
     print("Please run pip install -r requirements.txt before using generator.py.")
     sys.exit(1)
 
+def create_link(name):
+    return name + '.html' # We might change this later
+
 def convert_hypertext(element, toplevel=True):
     """
     Recursively creates a string with properly-resolved links and whatnot from an element in an element-tree.
     Used directly from jinja.
     """
+    # Tags we don't need to recurse on
     if element.tag == 'br':
         return '<br />'
+    if element.tag == 'ref':
+        return '<a href="{0}">{1}</a>'.format(create_link(element.attrib['target']), element.text)
+
+    # If we need to change the output tag name
     text = ''
     if element.tag == 'c':
         tag = 'kbd'
     else:
         tag = element.tag
+
+    # Only add outer tags if we're not at the top level of the tree -
+    # we don't want <description> and friends in our html
     if not toplevel:
         text += '<{}>'.format(tag)
     if element.text:
@@ -72,6 +83,17 @@ class ReferenceItem:
                 label = parameter.find('label').text
                 description = convert_hypertext(parameter.find('description'))
                 self.parameters.append({'label':label, 'description':description})
+        if xml.find('method') is not None:
+            self.methods = []
+            for method in xml.iterfind('method'):
+                label = method.find('label').text
+                description = convert_hypertext(method.find('description'))
+                ref = create_link(method.find('ref').text)
+                self.methods.append({'label':label, 'description':description, 'ref':ref})
+        if xml.find('constructor') is not None:
+            self.constructors = []
+            for constructor in xml.iterfind('constructor'):
+                self.constructors.append(constructor.text)
         if xml.find('related') is not None:
             self.related = xml.find('related').text
 

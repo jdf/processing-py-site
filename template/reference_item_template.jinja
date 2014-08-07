@@ -53,6 +53,22 @@
     {% if item.returns %}
     <tr class=""><th scope="row">Returns</th><td class="code">{{ item.returns }}</td></tr>
     {% endif %}
+
+    {% if item.constructors %}
+        <tr><th scope="row">Constructors</th><td class="code">
+            {% for constructor in item.constructors %}
+                {{ constructor }} <br />
+            {% endfor %}
+        </td></tr>
+    {% endif %}
+
+    {% if item.methods %}
+        <tr><th scope="row">Methods</th><td><table cellpadding="0" cellspacing="0" border="0">
+        {% for method in item.methods %}
+        <tr><th scope="row" class="code"><a href="{{ method.ref }}">{{ method.label }}</a></th><td>{{ method.description }}</td></tr>
+        {% endfor %}
+        </table></tr>
+    {% endif %}
 </table>
 
 Updated on {{ today }}.

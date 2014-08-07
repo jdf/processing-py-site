@@ -70,51 +70,52 @@ There are more string methods than those linked from this page. Additional docum
 <syntax></syntax>
 
 <method>
-<mname>find()</mname>
-<mdescription>Find a substring and return its index</mdescription>
+<label>find()</label>
+<description>Find a substring and return its index</description>
+<ref>string_find</ref>
 </method>
 
 <method>
-<mname>join()</mname>
-<mdescription>Join a list of strings, using a string as a separator</mdescription>
+<label>join()</label>
+<description>Join a list of strings, using a string as a separator</description>
+<ref>string_joing</ref>
 </method>
 
 <method>
-<mname>lower()</mname>
-<mdescription>Return a copy of a string with its characters converted to lowercase</mdescription>
+<label>lower()</label>
+<description>Return a copy of a string with its characters converted to lowercase</description>
+<ref>string_lower</ref>
 </method>
 
 <method>
-<mname>replace()</mname>
-<mdescription>Return a copy of a string, replacing a given substring with another string</mdescription>
+<label>replace()</label>
+<description>Return a copy of a string, replacing a given substring with another string</description>
+<ref>string_replace</ref>
 </method>
 
 <method>
-<mname>split()</mname>
-<mdescription>Break up a string into a list of parts, using a specified delimiter</mdescription>
+<label>split()</label>
+<description>Break up a string into a list of parts, using a specified delimiter</description>
+<ref>string_split</ref>
 </method>
 
 <method>
-<mname>startswith()</mname>
-<mdescription>Check to see if a string begins with a particular substring</mdescription>
+<label>startswith()</label>
+<description>Check to see if a string begins with a particular substring</description>
+<ref>string_startswith</ref>
 </method>
 
 <method>
-<mname>strip()</mname>
-<mdescription>Return a copy of a string, with whitespace at the beginning and end removed</mdescription>
+<label>strip()</label>
+<description>Return a copy of a string, with whitespace at the beginning and end removed</description>
+<ref>string_strip</ref>
 </method>
 
 <method>
-<mname>upper()</mname>
-<mdescription>Return a copy of a string with its characters converted to uppercase</mdescription>
+<label>upper()</label>
+<description>Return a copy of a string with its characters converted to uppercase</description>
+<ref>string_upper</ref>
 </method>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns></returns>
 
 <related>
 string_formatting
