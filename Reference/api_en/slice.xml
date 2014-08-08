@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>Slice</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+
+# Retrieve a single item from a list with a given index
+elements = ["H", "He", "Li", "B", "C", "N", "O", "F", "Ne"]
+println(elements[2]) # Prints 'Li'
+
+# Use a colon inside the index brackets to get a "slice" of the list, returned
+# as a list.
+element_slice = elements[1:5] # from index 0 up to (not including) index 5
+println(element_slice) # Prints ['He', 'Li', 'B', 'C']
+
+# If a number is not specified at the beginning of the range, it's assumed to
+# be 0 (or the beginning of the list).
+element_slice = elements[:3] # get the first three elements
+println(element_slice) # Prints ['H', 'He', 'Li']
+
+# If a number is not specified at the end of the range, the slice will extend
+# to the end of the list.
+element_slice = elements[6:] # from index 6 to the end of the list
+println(element_slice) # Prints ['O', 'F', 'Ne']
+
+# Without either a first number or a second number, the slice extends from
+# the beginning of the list to the end of the list, effectively making a copy.
+element_slice = elements[:]
+println(element_slice) # Prints ['H', 'He', 'Li', 'B', 'C', 'N', 'O', 'F', 'Ne']
+
+# Negative indexes can be used for either element of the range.
+element_slice = elements[-2:] # last two elements of the list
+println(element_slice) # Prints ['F', 'Ne']
+
+element_slice = elements[-5:-2] # 5 elements from end to 2 elements from end
+println(element_slice) # Prints ['C', 'N', 'O']
+
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+
+# You can use slice syntax with strings as well:
+message = "Now is the winter of our discontent"
+println(message[:10]) # Prints 'Now is the'
+println(message[11:20]) # Prints 'winter of'
+println(message[-7:]) # Prints 'content'
+
+]]></code>
+</example>
+
+<description><![CDATA[
+
+Python's index bracket syntax allows you to easily write expressions that
+evaluate to a section, or "slice," of a list. The syntax for getting a slice
+of a list looks very similar to the syntax for getting a single item, except
+instead of putting a single number inside the square brackets, you put two
+numbers, separated by a colon, indicating where the slice should start and
+end.<br/><br/>
+
+For example, the expression <b>x[n:m]</b> evaluates to a list that contains
+items from index <b>n</b> up to (but not including) index <b>m</b> from a
+list <b>x</b>. If <b>n</b> is omitted, it's assumed to be 0, and the slice will
+begin at the beginning of the list. If <b>m</b> is omitted, the slice will end
+at the end of the list. <br/><br/>
+
+When slice indexes are negative, they follow the same rules for negative
+indexes in general (see <ref target="indexbrackets">index brackets</ref> for
+more information).<br/><br/>
+
+Slice syntax works with strings as well, and is a convenient way to extract
+substrings by numerical index.
+
+]]></description>
+
+<syntax>
+	<c>sequence</c>[<c>begin</c>:<c>end</c>]
+</syntax>
+
+<parameter>
+<label>sequence</label>
+<description><![CDATA[a list, string or other sequence]]></description>
+</parameter>
+
+<parameter>
+<label>begin</label>
+<description><![CDATA[the integer index at which to begin the slice]]></description>
+</parameter>
+
+<parameter>
+<label>end</label>
+<description><![CDATA[the integer index at which to end the slice]]></description>
+</parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Operator</type>
+
+<partof>PDE</partof>
+
+
+</root>
