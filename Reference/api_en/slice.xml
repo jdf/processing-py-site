@@ -79,7 +79,7 @@ indexes in general (see <ref target="indexbrackets">index brackets</ref> for
 more information).<br/><br/>
 
 Slice syntax works with strings as well, and is a convenient way to extract
-substrings by numerical index.
+substrings by numerical index. <br/><br/>
 
 ]]></description>
 
