@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>[] (Index brackets)</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+
+# Retrieve a single item from a list with a given index
+elements = ["H", "He", "Li", "B", "C", "N", "O", "F", "Ne"]
+println(elements[3]) # Prints 'B'
+
+# Negative indexes can be used, and count from the end of the list.
+println(elements[-2]) # Prints 'F'
+
+# Assign a new value to an existing element of a list:
+elements[4] = 'Si'
+println(elements) # Prints ['H', 'He', 'Li', 'B', 'Si', 'N', 'O', 'F', 'Ne']
+
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+
+# You can use index brackets with strings as well, to access individual
+# characters by index:
+message = "Now is the winter of our discontent"
+println(message[0]) # Prints 'N'
+println(message[-1]) # Prints 't'
+println(message[11]) # Prints 'w'
+
+]]></code>
+</example>
+
+<description><![CDATA[
+
+Index brackets are used to write expressions that evaluate to a single item
+within a sequence (such as a list or a string).<br/><br/>
+
+For lists and other mutable sequences (but not strings), you can overwrite a
+value at a particular index using the assignment operator (<b>=</b>).<br/><br/>
+
+Negative numbers inside of index brackets cause Python to start counting
+from the end of the sequence, instead of from the beginning. For example,
+the expression <b>x[-1]</b> evaluates to the last item of list <b>x</b>,
+<b>x[-2]</b> evaluates to the second-to-last item of list <b>x</b>, and
+so forth.<br/><br/>
+
+Specifying an index beyond the bounds of the sequence raises an
+<b>IndexError</b> exception.<br/><br/>
+
+]]></description>
+
+<syntax>
+	<c>sequence</c>[<c>index</c>]
+	<c>sequence</c>[<c>index</c>] = <c>expr</c>
+</syntax>
+
+<parameter>
+<label>sequence</label>
+<description><![CDATA[a list, string or other sequence]]></description>
+</parameter>
+
+<parameter>
+<label>index</label>
+<description><![CDATA[an integer index]]></description>
+</parameter>
+
+<parameter>
+<label>expr</label>
+<description><![CDATA[an expression, the result of which will be assigned to the given index in the sequence]]></description>
+</parameter>
+
+<returns></returns>
+
+<related>slice</related>
+
+<availability>1.0</availability>
+
+<type>Operator</type>
+
+<partof>PDE</partof>
+
+
+</root>
