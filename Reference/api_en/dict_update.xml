@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>update()</name>
+
+<category>Data</category>
+
+<subcategory>Dictionary Methods</subcategory>
+
+<usage></usage>
+
+<example>
+<image />
+<code><![CDATA[
+
+element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
+additional_elements = {'B': 'boron', 'C': 'carbon', 'N': 'nitrogen'}
+
+println(len(element_names)) # Prints 3
+
+# "Update" original dictionary with new values
+element_names.update(additional_elements)
+
+println(len(element_names)) # Prints 6
+println(element_names['N']) # Prints "Nitrogen"
+
+# Updating with an existing key will overwrite the value for that key!
+wrong_elements_oh_no = {'H': 'Happiness'}
+element_names.update(wrong_elements_oh_no)
+
+println(element_names['H']) # Prints "Happiness"
+
+]]></code>
+</example>
+
+<description><![CDATA[
+"Updates" a dictionary with the contents of a second dictionary. Any key/value
+pairs present in the second dictionary will be added to the first. If the
+second dictionary contains a key present in the first dictionary, its value
+will be overwritten with the value from the second dictionary.
+]]></description>
+
+<syntax>
+	<c>dict1</c>.update(<c>dict2</c>)
+</syntax>
+
+<parameter>
+<label>dict1</label>
+<description><![CDATA[The dictionary to be updated.]]></description>
+</parameter>
+
+<parameter>
+<label>dict2</label>
+<description><![CDATA[The source dictionary for the update, where new key/value pairs will be drawn from.]]></description>
+</parameter>
+
+<returns></returns>
+
+<related>dictionary</related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof></partof>
+
+
+
+
+
+
+
+
+</root>
+

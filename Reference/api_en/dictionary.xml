@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>Dictionary</name>
+
+<category>Data</category>
+
+<subcategory>Composite</subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image />
+<code><![CDATA[
+# Create a new dictionary
+element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
+
+# Add another key/value pair to the dictionary
+element_names['Be'] = 'beryllium'
+element_names['B'] = 'boron'
+element_names['C'] = 'carbon'
+
+# Loop over elements of dictionary. Note that key/value pairs are returned in
+# an arbitrary order!
+for k, v in element_names.iteritems():
+	println("symbol: " + k + "; name: " + v)
+
+# Get an individual value by key
+println(element_names['He']) # Prints 'helium'
+
+# Delete an item from a dictionary
+del element_names['C']
+
+# Keys don't have to be strings! They can be of any (hashable) type. Values
+# can also be of any type.
+number_map = {1: [0.5, 1.0, 2.0], 2: [10.0, 15.0, 20.0], 3: [50.0, 75.0, 100.0]}
+println(number_map[2]) # Prints [10.0, 15.0, 20.0]
+
+]]></code>
+</example>
+
+<description><![CDATA[
+A dictionary is a Python data structure that stores a number of values,
+referenced by key. It's similar to a list, except values are accessed by keys
+of arbitrary types (usually strings), instead of with sequential integer
+indexes. Python's dictionary type is similar to "Maps" in Java, associative
+arrays in PHP, or hashes in Perl.<br/><br/>
+
+In Python, dictionary values can be of any type (and types can vary from one
+key/value pair to the next in the same dictionary). Keys can be of any type, as
+long as that type is "hashable" (see <a
+href="https://docs.python.org/2/glossary.html#term-hashable">the Python
+glossary</a> for more information).<br/><br/>
+
+Note that while Python remembers all key/value pairs added to a dictionary, it
+does not remember the <i>order</i> in which key/value pairs were added.  As a
+consequence, when iterating over key/value pairs in a dictionary (with, e.g.,
+the <b>iteritems()</b> method shown in the example above), the key/value pairs
+will come back in an arbitrary order, which may vary from one execution of your
+program to the next.<br/><br/>
+
+]]></description>
+
+<syntax>
+
+</syntax>
+
+<parameter>
+<label></label>
+<description></description>
+</parameter>
+
+<returns></returns>
+
+<method>
+<label>keys()</label>
+<description>Return a list of all keys in a dictionary.</description>
+<ref>dict_keys</ref>
+</method>
+
+<method>
+<label>items()</label>
+<description>Return a list of all key/value pairs in a dictionary (as tuples).</description>
+<ref>dict_items</ref>
+</method>
+
+<method>
+<label>iteritems()</label>
+<description>Return an iterator, allowing easy and efficient means of iterating over a dictionary's key/value pairs.</description>
+<ref>dict_iteritems</ref>
+</method>
+
+<method>
+<label>values()</label>
+<description>Return a list of a dictionary's values.</description>
+<ref>dict_values</ref>
+</method>
+
+<method>
+<label>update()</label>
+<description>Update a dictionary in place, adding or updating key/value pairs from a second dictionary.</description>
+<ref>dict_update</ref>
+</method>
+
+<related>curlybraces</related>
+<related>indexbrackets</related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof></partof>
+
+</root>

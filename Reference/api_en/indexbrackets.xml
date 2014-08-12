@@ -11,9 +11,10 @@
 <example>
 <image></image>
 <code><![CDATA[
-
-# Retrieve a single item from a list with a given index
+# Create a list literal
 elements = ["H", "He", "Li", "B", "C", "N", "O", "F", "Ne"]
+
+# Retrieve a single item from the list with a given index
 println(elements[3]) # Prints 'B'
 
 # Negative indexes can be used, and count from the end of the list.
@@ -40,10 +41,29 @@ println(message[11]) # Prints 'w'
 ]]></code>
 </example>
 
+<example>
+<image></image>
+<code><![CDATA[
+
+# Index brackets are used to retrieve the value for a given key from a
+# dictionary
+element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
+println(element_names['He']) # Prints 'helium'
+
+# Overwrite the value of an element, or add a new key/value pair, by assigning
+# to the key:
+element_names['Be'] = 'beryllium'
+println(element_names['Be']) # Prints 'beryllium'
+
+]]></code>
+</example>
+
 <description><![CDATA[
 
-Index brackets are used to write expressions that evaluate to a single item
-within a sequence (such as a list or a string).<br/><br/>
+Index brackets (<b>[]</b>) have many uses in Python. First, they are used to
+define "list literals," allowing you to declare a list and its contents in your
+program. Index brackets are also used to write expressions that evaluate to a
+single item within a list, or a single character in a string.<br/><br/>
 
 For lists and other mutable sequences (but not strings), you can overwrite a
 value at a particular index using the assignment operator (<b>=</b>).<br/><br/>
@@ -54,15 +74,31 @@ the expression <b>x[-1]</b> evaluates to the last item of list <b>x</b>,
 <b>x[-2]</b> evaluates to the second-to-last item of list <b>x</b>, and
 so forth.<br/><br/>
 
+Finally, index brackets are used to retrieve or set the value for a given key
+in a dictionary. For example, the expression <b>x[a]</b> evaluates to
+whatever the value for key <b>a</b> is in dictionary <b>x</b>. The
+statement <b>x[a] = b</b> will set the value for key <b>a</b> in dictionary
+<b>x</b> to a new value <b>b</b> (overwriting any existing value).<br/><br/>
+
 Specifying an index beyond the bounds of the sequence raises an
-<b>IndexError</b> exception.<br/><br/>
+<b>IndexError</b> exception. Attempting to retrieve the value for a
+key that does not exist in a dictionary raises a <b>KeyError</b> exception.
+<br/><br/>
 
 ]]></description>
 
 <syntax>
+	[<c>elem0, ..., elemN</c>]
 	<c>sequence</c>[<c>index</c>]
 	<c>sequence</c>[<c>index</c>] = <c>expr</c>
+	<c>dict</c>[<c>key</c>]
+	<c>dict</c>[<c>key</c>] = <c>value</c>
 </syntax>
+
+<parameter>
+<label>elem0, ..., elemN</label>
+<description><![CDATA[list of elements, separated by commas, used to initialize a list]]></description>
+</parameter>
 
 <parameter>
 <label>sequence</label>
@@ -79,9 +115,25 @@ Specifying an index beyond the bounds of the sequence raises an
 <description><![CDATA[an expression, the result of which will be assigned to the given index in the sequence]]></description>
 </parameter>
 
+<parameter>
+<label>dict</label>
+<description><![CDATA[a dictionary]]></description>
+</parameter>
+
+<parameter>
+<label>key</label>
+<description><![CDATA[the key whose value you want to retrieve]]></description>
+</parameter>
+
+<parameter>
+<label>value</label>
+<description><![CDATA[a new value for the given key]]></description>
+</parameter>
+
 <returns></returns>
 
 <related>slice</related>
+<related>curlybraces</related>
 
 <availability>1.0</availability>
 
