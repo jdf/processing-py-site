@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>items()</name>
+
+<category>Data</category>
+
+<subcategory>Dictionary Methods</subcategory>
+
+<usage></usage>
+
+<example>
+<image />
+<code><![CDATA[
+
+element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
+element_items = element_names.items()
+
+# Prints [('Li', 'lithium'), ('H', 'hydrogen'), ('He', 'helium')]
+println(element_items)
+
+# Iterate over each item of the dictionary:
+for k, val in element_names.items():
+	println("The name of element " + k + " is " + val)
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns the key/value pairs present in the dictionary, in the form of a
+list of tuples. For large dictionaries, consider using
+<b><ref target="dict_iteritems.xml">iteritems()</ref></b> instead, which returns
+an iterator.<br/><br/>
+
+Note that because of the nature of the dictionary data structure, key/value
+pairs returned from <b>items()</b> will be in arbitrary order (not necessarily
+the order they appeared in when the dictionary was defined).
+]]></description>
+
+<syntax>
+	<c>dict</c>.items()
+</syntax>
+
+<parameter>
+<label>dict</label>
+<description><![CDATA[The dictionary whose items will be returned.]]></description>
+</parameter>
+
+<returns>list</returns>
+
+<related>dictionary</related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof></partof>
+
+
+
+
+
+
+
+
+</root>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>values()</name>
+
+<category>Data</category>
+
+<subcategory>Dictionary Methods</subcategory>
+
+<usage></usage>
+
+<example>
+<image />
+<code><![CDATA[
+
+element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
+element_values = element_names.values()
+println(element_values) # Prints ['lithium', 'hydrogen', 'helium']
+
+# Check to see if a given value is in the dictionary
+if 'hydrogen' in element_names.values():
+	println("found hydrogen!")
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns a list of all values in the dictionary (without reference to their
+keys).<br/><br/>
+
+Note that because of the nature of the dictionary data structure, 
+the return value of <b>values()</b> will be in arbitrary order.
+]]></description>
+
+<syntax>
+	<c>dict</c>.values()
+</syntax>
+
+<parameter>
+<label>dict</label>
+<description><![CDATA[The dictionary whose values will be returned.]]></description>
+</parameter>
+
+<returns>list</returns>
+
+<related>dictionary</related>
+<related>dict_keys</related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof></partof>
+
+
+
+
+
+
+
+
+</root>

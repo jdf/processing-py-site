@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>iteritems()</name>
+
+<category>Data</category>
+
+<subcategory>Dictionary Methods</subcategory>
+
+<usage></usage>
+
+<example>
+<image />
+<code><![CDATA[
+
+element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
+
+# Iterate over each item of the dictionary:
+for k, val in element_names.iteritems():
+	println("The name of element " + k + " is " + val)
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns tuples of the key/value pairs present in the specified dictionary, in
+the form of an iterator. This iterator is primarily useful as a means of
+iterating over every key/value pair in a dictionary in a <b>for</b> loop, as
+shown in the example above.<br/><br/>
+
+The <b>iteritems()</b> method is more memory-efficient than the <b>items()</b>
+method, as it returns each item in succession, instead of reproducing the
+entire dictionary as a list in memory.<br/><br/>
+
+Note that because of the nature of the dictionary data structure, key/value
+pairs returned from <b>iteritems()</b> will be in arbitrary order (not
+necessarily the order they appeared in when the dictionary was defined).
+]]></description>
+
+<syntax>
+	<c>dict</c>.iteritems()
+</syntax>
+
+<parameter>
+<label>dict</label>
+<description><![CDATA[The dictionary to be iterated over.]]></description>
+</parameter>
+
+<returns>iterator</returns>
+
+<related>dictionary</related>
+<related>dict_items</related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof></partof>
+
+
+
+
+
+
+
+
+</root>

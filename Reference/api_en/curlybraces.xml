@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>{} (Curly braces)</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+# Initialize a new dictionary with the given key/value pairs
+element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
+
+# Curly braces with nothing inside creates an empty dictionary
+nothing_here = {}
+]]></code>
+</example>
+
+<description><![CDATA[
+Curly braces are used to define "dictionary literals," giving you the ability
+to declare a dictionary and its contents inside your program. A dictionary
+literal consists of a series of key/value pairs, written with a colon
+(<b>:</b>) between them, and with each of the key/value pairs separated from
+one other with commas.
+]]></description>
+
+<syntax>
+	{<c>key0: val0, ..., keyN: valN</c>}
+</syntax>
+
+<parameter>
+<label>key0: val0, ..., keyN: valN</label>
+<description><![CDATA[a sequence of key/value pairs]]></description>
+</parameter>
+
+<returns></returns>
+
+<related>indexbrackets</related>
+
+<availability>1.0</availability>
+
+<type>Operator</type>
+
+<partof>PDE</partof>
+
+
+</root>

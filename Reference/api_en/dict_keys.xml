@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>keys()</name>
+
+<category>Data</category>
+
+<subcategory>Dictionary Methods</subcategory>
+
+<usage></usage>
+
+<example>
+<image />
+<code><![CDATA[
+
+element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
+element_keys = element_names.keys()
+println(element_keys) # Prints ['Li', 'H', 'He']
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns a list of keys in the given dictionary.
+]]></description>
+
+<syntax>
+	<c>dict</c>.keys()
+</syntax>
+
+<parameter>
+<label>dict</label>
+<description><![CDATA[The dictionary whose keys will be returned.]]></description>
+</parameter>
+
+<returns>list</returns>
+
+<related>dictionary</related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof></partof>
+
+
+
+
+
+
+
+
+</root>
