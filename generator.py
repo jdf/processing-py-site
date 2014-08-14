@@ -19,6 +19,15 @@ except:
     print("Please run pip install -r requirements.txt before using generator.py.")
     sys.exit(1)
 
+def print_header(text):
+    print('=== \033[95m{}\033[0m ==='.format(text))
+
+def print_error(text):
+    print('\033[91m{}\033[0m'.format(text))
+
+def print_warning(text):
+    print('\033[91m{}\033[0m'.format(text))
+
 def create_link(name):
     return name + '.html' # We might change this later
 
@@ -61,19 +70,30 @@ def make_convert_hypertext(names_dict):
 def format_code(code):
     return '\n' + code.strip()
 
+def get_element_text(element):
+    '''Get element.text, supplying the empty string if element.text is None'''
+    text = element.text
+    if text is None:
+        print_warning("Warning: Element '{}' has no text".format(element.tag))
+        text = ''
+    return text
+
 class ReferenceItem:
     '''Represents a single page of reference information.'''
     def __init__(self, source_xml):
         print("Parsing", source_xml)
         xml = etree.parse(source_xml)
         if xml.find('name') is not None:
-            self.name = xml.find('name').text
+            self.name = get_element_text(xml.find('name'))
         if xml.find('type') is not None:
-            self.type = xml.find('type').text
+            self.type = get_element_text(xml.find('type'))
         if xml.find('example') is not None:
             self.examples = []
             for example in xml.iterfind('example'):
-                self.examples.append({'code': format_code(example.find('code').text), 'image':example.find('image') is not None}) 
+                self.examples.append({'code': format_code(get_element_text(example.find('code'))), 'image':example.find('image') is not None}) 
+
+        # We store plain xml-elements for some children so that we can use convert_hypertext on them at generation time.
+        # This is necessary because all ReferenceItems have to be parsed before links can be resolved.
         if xml.find('description') is not None:
             self.description = xml.find('description')
         if xml.find('syntax') is not None:
@@ -81,24 +101,24 @@ class ReferenceItem:
         if xml.find('parameter') is not None:
             self.parameters = []
             for parameter in xml.iterfind('parameter'):
-                label = parameter.find('label').text
+                label = get_element_text(parameter.find('label'))
                 description = parameter.find('description')
                 self.parameters.append({'label':label, 'description':description})
         if xml.find('method') is not None:
             self.methods = []
             for method in xml.iterfind('method'):
-                label = method.find('label').text
+                label = get_element_text(method.find('label'))
                 description = method.find('description')
-                ref = create_link(method.find('ref').text)
+                ref = create_link(get_element_text(method.find('ref')))
                 self.methods.append({'label':label, 'description':description, 'ref':ref})
         if xml.find('constructor') is not None:
             self.constructors = []
             for constructor in xml.iterfind('constructor'):
-                self.constructors.append(constructor.text)
+                self.constructors.append(get_element_text(constructor))
         if xml.find('related') is not None:
             self.relateds = []
             for related in xml.iterfind('related'):
-                self.relateds.append(related.text)
+                self.relateds.append(get_element_text(related))
 
 def print_header(text):
     print('=== \033[95m{}\033[0m ==='.format(text))
@@ -113,7 +133,7 @@ def get_flat_names_to_update(src_dir, target_dir, all):
             src_f = src_dir + f
             if not f.endswith('.xml'):
                 return False
-            target_f = '%s/%s.html' % (target_dir, f[:-4])
+            target_f = '{}/{}.html'.format(target_dir, f[:-4])
             if not os.path.exists(target_f):
                 return True
             return os.path.getmtime(src_f) > os.path.getmtime(target_f)
@@ -141,13 +161,14 @@ def build(src_dir='./Reference/api_en/', target_dir='./generated/', template_dir
         if not filename.endswith('.xml'):
             continue
         items_dict[filename[:-4]] = ReferenceItem(src_dir + filename)
+    items_dict[''] = items_dict['blank'] # Special case, for blank links
     convert_hypertext = make_convert_hypertext(items_dict)
 
     to_update = get_flat_names_to_update(src_dir, target_dir, all)
     if one:
         to_update = to_update[0:1]
  
-    print('%s stale files to be translated' % len(to_update))
+    print('{} stale files to be translated'.format(len(to_update)))
 
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), trim_blocks='true')
     reference_template = env.get_template("reference_item_template.jinja")
