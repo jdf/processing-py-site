@@ -5,6 +5,11 @@ import argparse
 import re
 import traceback
 
+import jarray
+import java.lang
+import java.util
+import java.io
+
 '''Jython script to generate a set of images. Writes output images to stdout and debug messages to stderr.'''
 
 def debug(text):
@@ -23,7 +28,7 @@ def output_failure(filename):
     debug_error()
 
 try:
-    import jycessing.Runner, jycessing.RunnableSketch
+    import jycessing.Runner, jycessing.RunnableSketch, jycessing.StreamPrinter
 except:
     debug("I can't import the Java code I need to run sketches.")
     debug("Note: don't run this file directly; just use generator.py.")
@@ -41,13 +46,45 @@ save({outputname})
 '''
 
 class ExampleImageGenSketch(jycessing.RunnableSketch):
-    def __init__(self, filename, source, outputdir):
+    def __init__(self, filename, source, srcdir, outputdir):
         self.filename = filename
         self.outputname = re.sub(r'$([^.]*)\.py^', r'\1\.png', filename)
+        self.srcdir = srcdir
         self.outputdir = outputdir
         self.source = source + export_image_postlude.format(outputname=self.outputname)
+
     def gen_image(self):
-        return 'nope.png'
+        out_printer = jycessing.StreamPrinter(java.lang.System.err)
+        jycessing.Runner.runSketchBlocking(self, out_printer, out_printer)
+        return self.outputname
+
+    # Functions to satisfy interface:
+    def getMainFile(self):
+        return java.io.File(self.filename)
+
+    def getMainCode(self):
+        return self.source
+
+    def getHomeDirectory(self):
+        return java.io.File(self.srcdir)
+
+    def getPathEntries(self):
+        entries = java.util.ArrayList()
+        entries.add(java.io.File(self.srcdir))
+        return entries
+
+    def getPAppletArguments(self):
+        return jarray.array([self.filename], java.lang.String)
+    
+    def getLibraryDirectories(self):
+        dirs = java.util.ArrayList()
+        return dirs # TODO what else should we have here?
+
+    def getLibraryPolicy(self):
+        return jycessing.Runner.LibraryPolicy.PROMISCUOUS
+
+    def shouldRun(self):
+        return 1
 
 def gen(source_dir, target_dir):
     debug('Building from: {}'.format(source_dir))
@@ -59,7 +96,7 @@ def gen(source_dir, target_dir):
         try:
             with open(filename) as f:
                 content = f.read()
-            sketch = ExampleImageGenSketch(filename, content, target_dir)
+            sketch = ExampleImageGenSketch(filename, content, source_dir, target_dir)
             result = sketch.gen_image()
             output_success(filename, result)
         except:
