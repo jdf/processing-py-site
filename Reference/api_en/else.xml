@@ -12,7 +12,7 @@
 <image />
 <code><![CDATA[
 for i in range(5, 95, 5): 
-    if i < 35:
+    if i &lt; 35:
         line(30, i, 80, i)
     else:
         line(20, i, 90, i)
@@ -23,9 +23,9 @@ for i in range(5, 95, 5):
 <image />
 <code><![CDATA[
 for i in range(5, 95, 5): 
-    if i < 35:
+    if i &lt; 35:
         line(30, i, 80, i)
-    elif i < 65:
+    elif i &lt; 65:
         line(20, i, 90, i)
     else:
         line(0, i, 100, i)
@@ -44,7 +44,7 @@ else:
 
 if <c>expression</c>:
   <c>statements</c> 
-else if <c>expression</c>:
+elif <c>expression</c>:
   <c>statements</c> 
 else:
   <c>statements</c> 

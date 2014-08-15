@@ -11,31 +11,56 @@
 
 <example>
 <code><![CDATA[
-# This example is a code fragment
-# it will not compile on its own.
-# Create the DragDrop subclass from(object):
-# the Button class. Button becomes
-# the superclass of(object): DragDrop.
-class DragDrop(object): extends Button 
-    xoff, yoff
-    DragDrop(x, y) 
-        # Runs the superclass' constructor
-        super(x, y)
-    
-    def press(mx, my): 
-        # Runs the superclass' press() method
-        super.press()
-        xoff = mx
-        yoff = my
-    
+class Robot(object):
+  def speak(self):
+    println("BZZT BOOP BEEP")
+
+class RoboFeline(Robot):
+  def speak(self):
+    super(RoboFeline, self).speak()
+    println("MEOW PURR PURR")
+
+kitty = RoboFeline()
+kitty.speak()
+# Prints:
+# BZZT BOOP BEEP
+# MEOW PURR PURR
+]]></code>
+</example>
+
+<example>
+<code><![CDATA[
+class Animal(object):
+  def __init__(self):
+    self.leg_count = 6
+
+class Grasshopper(Animal):
+  def __init__(self):
+    # call the __init__ method of parent class
+    super(Grasshopper, self).__init__()
+
+hopsalot = Grasshopper()
+println(hopsalot.leg_count) # Prints 6
 ]]></code>
 </example>
 
 <description><![CDATA[
-Keyword used to reference the superclass of a subclass.
+The <b>super()</b> function allows you to call a method defined in a parent
+class. Invoke the function with two parameters: the name of the class the
+method is defined in, and <b>self</b>. <a
+href="https://docs.python.org/2/library/functions.html#super">See the
+official Python documentation</a> for more details.
+
 ]]></description>
 
-<syntax></syntax>
+<syntax>
+super(<c>class</c>, self)
+</syntax>
+
+<parameter>
+<label>class</label>
+<description>The class in which the method is defined</description>
+</parameter>
 
 <returns></returns>
 

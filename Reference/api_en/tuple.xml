@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>Tuple</name>
+
+<category>Data</category>
+
+<subcategory>Composite</subcategory>
+
+<usage></usage>
+
+<example>
+<code><![CDATA[
+# Define a tuple with parentheses
+colors = ('Red', 'Blue', 'Green')
+
+# Iterate over tuple with for loop
+for item in colors:
+  print item
+
+# Get an item from a tuple by index
+println(colors[2]) # Prints: Green
+
+# Results in a type error: tuples can't be changed once created!
+colors[2] = "chartreuse"
+]]></code>
+</example>
+
+<example>
+<code><![CDATA[
+# Convert a list to a tuple with tuple()
+rocky = ['Mercury', 'Venus', 'Earth', 'Mars']
+rocky_tuple = tuple(planets)
+
+# Convert a tuple to a list with list()
+giants = ('Jupiter', 'Saturn', 'Uranus', 'Neptune')
+giant_list = list(giants)
+]]></code>
+</example>
+
+<example>
+<code><![CDATA[
+# Create a single-item tuple (comma needed after first item)
+one_item = ('So lonely',)
+]]></code>
+</example>
+
+<description><![CDATA[
+Tuples are one of Python's basic composite data types, along with lists
+and dictionaries. A tuple is a lot like a list, in that it consists of a
+sequence of elements that can be accessed by index. However, unlike a list,
+a tuple can't be modified after it's created. (Tuples can't be assigned to
+by index, nor do they have an <b>append()</b> method.)<br/><br/>
+
+You can convert a list to a tuple using the <b>tuple()</b> function, or
+convert a tuple to a list using <b>list()</b>.<br/><br/>
+
+Because tuples have a fixed size, Python can make some optimizations behind the
+scenes regarding how they're stored in memory. For this reason, tuples can be
+marginally faster and more efficient than lists in some applications. Because
+tuples are immutable (i.e., they can't be changed after creation), they are
+also "hashable" and can be used as keys in dictionaries.<br/><br/>
+
+When writing a tuple literal that has only one element, you need to put a
+comma after that element. (Otherwise, Python will interpret the parentheses
+as "grouping" a single expression for the purposes of controlling the order
+of execution.)
+
+]]></description>
+
+<related>list</related>
+<related>dictionary</related>
+<related>indexbrackets</related>
+<related>parentheses</related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof></partof>
+
+
+
+
+
+
+
+
+</root>
