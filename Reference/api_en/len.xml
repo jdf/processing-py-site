@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>len()</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage></usage>
+
+<example>
+<image />
+<code><![CDATA[
+message = "It was the best of strings, it was the worst of strings."
+println(len(message)) # Prints 56
+
+items = ["gorgonzola", "mozzarella", "edam", "gouda"]
+println(len(items)) # Prints 4
+
+capitals = {'NY': 'Albany', 'CA': 'Sacramento', 'FL': 'Tallahassee'}
+println(len(capitals)) # Prints 3
+]]></code>
+</example>
+
+<description><![CDATA[
+
+Returns the length of its parameter. The meaning of "length" varies from one
+type to the next. For strings, <b>len()</b> returns the number of
+characters in the string. For dictionaries, it returns the number of keys
+in the dictionary. For other sequences and collections (like
+lists, tuples and sets), it returns the number of items in the sequence or
+collection.
+
+]]></description>
+
+<syntax>
+len(<c>a</c>)
+</syntax>
+
+<parameter>
+<label>a</label>
+<description>the object (usually a string, list or dictionary) whose length you want to determine</description>
+</parameter>
+
+<returns>int</returns>
+
+<related>list</related>
+<related>string</related>
+<related>dictionary</related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof></partof>
+
+
+
+
+
+
+
+
+</root>

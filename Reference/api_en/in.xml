@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>in</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage></usage>
+
+<example>
+<image />
+<code><![CDATA[
+
+# Check if a given substring is present in a string
+message = "Now is the winter of our discontent."
+println("winter" in message) # Prints 'True'
+
+# Check if an item is present in a list
+data = [17, 24, 32, 912, 403]
+println(17 in data) # Prints 'True'
+
+# Check if a key is present in a dictionary
+elements = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
+println('He' in elements) # Prints 'True'
+
+# Note: The "in" operator doesn't check for *values* in dictionaries!
+println('hydrogen' in elements) # Prints 'False'
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns <b>True</b> if a given value is in a string, list or dictionary, and
+<b>False</b> otherwise.<br/><br/>
+
+The <b>in</b> operator works slightly differently for different types. When
+used with strings, it checks if a substring is found within another string.
+When used with lists or tuples, it checks if a given value is found inside the
+list or tuple.  When used with dictionaries, it checks to see if a particular
+key is present in the dictionary.<br/><br/>
+
+(Note that the use of the keyword <b>in</b> as an operator is separate from
+and unrelated to its use in the syntax of <b>for</b> loops and list
+comprehensions.)
+
+]]></description>
+
+<syntax>
+	<c>i</c> in <c>a</c>
+</syntax>
+
+<parameter>
+<label>i</label>
+<description>The item whose presence to check for.</description>
+</parameter>
+
+<parameter>
+<label>a</label>
+<description>The object (e.g., string, list, dictionary) to search inside.</description>
+</parameter>
+
+<returns>Boolean</returns>
+
+<related>list</related>
+<related>string</related>
+<related>dictionary</related>
+
+<availability>1.0</availability>
+
+<type></type>
+
+<partof></partof>
+
+
+
+
+
+
+
+
+</root>

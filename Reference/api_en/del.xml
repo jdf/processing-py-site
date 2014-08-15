@@ -15,11 +15,17 @@ println(a) # Prints: [1,2,3]
 del a[0]   # Delete the list member at index 0. 
 println(a) # Prints: [2, 3]
 del a      # Delete the variable 'a'
+
+b = {'a': 1, 'b': 2, 'c': 3}
+println('a' in b) # Prints 'True'
+
+del b['a']
+println('a' in b) # Prints 'False'
 ]]></code>
 </example>
 
 <description><![CDATA[
-Remove an item from a list given its index, or delete entire variables. 
+Remove an item from a list given its index, or a key/value pair from a dictionary. The <b>del</b> keyword can also delete an entire variable.
 ]]></description>
 
 <syntax>
@@ -27,17 +33,18 @@ del <c>a</c>
 </syntax>
 
 <syntax>
+del <c>a</c>
 del <c>a[<c>i</c>]</c>
 </syntax>
 
 <parameter>
 <label>a</label>
-<description>list to delete from or variable to delete</description>
+<description>list or dictionary to delete from, or variable to delete</description>
 </parameter>
 
 <parameter>
 <label>i</label>
-<description>index of list member to delete</description>
+<description>index of list member or key of key/value pair to delete</description>
 </parameter>
 
 <returns></returns>
