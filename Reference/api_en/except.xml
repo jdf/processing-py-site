@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>catch</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<code><![CDATA[
+element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
+
+try:
+  println(element_names['Zz'])
+except KeyError as e:
+  println("caught KeyError: " + e.message) # Prints 'caught KeyError: Zz'
+]]></code>
+</example>
+
+<description><![CDATA[
+The <b>except</b> keyword is used with <b>try</b> to handle exceptions. When an
+exception is thrown inside a <b>try</b> block, the code inside the
+<b>except</b> block with a matching exception class name is run. If an
+<b>as</b> clause is given, the exception itself will be available inside this
+class as an object with the specified temporary name. Most exception objects
+have an attribute <b>message</b>, which can be accessed to further explain the
+condition that caused the exception to be raised.
+]]></description>
+
+<syntax>
+try:
+  tryStatements
+except <c>exception</c> as <c>tmpName</c>:
+  exceptStatements
+</syntax>
+
+<parameter>
+<label>tryStatements</label>
+<description><![CDATA[if this code throws an exception, then the code in "except" is run]]></description>
+</parameter>
+
+<parameter>
+<label>exception</label>
+<description><![CDATA[the exception that was thrown]]></description>
+</parameter>
+
+<parameter>
+<label>tmpName</label>
+<description><![CDATA[a temporary name for the exception (available in exception-handling block)]]></description>
+</parameter>
+
+<parameter>
+<label>exceptStatements</label>
+<description><![CDATA[code that handles the exception]]></description>
+</parameter>
+
+<returns></returns>
+
+
+<availability>1.0</availability>
+
+<type>Keyword</type>
+
+<partof>PDE</partof>
+
+
+</root>
