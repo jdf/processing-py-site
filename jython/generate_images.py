@@ -13,57 +13,49 @@ import java.io
 '''Jython script to generate a set of images. Writes output images to stdout and debug messages to stderr.'''
 
 def debug(text):
-    print('\033[32mDebug: {}\033[0m'.format(text), file=sys.stderr)
+    print('\033[32m{}\033[0m'.format(text))
+
+def debug_problem(text):
+    print('\033[31m{}\033[0m'.format(text))
 
 def debug_error():
-    for line in traceback.format_exc().splitlines():
-        print('\033[31m{}\033[0m'.format(line), file=sys.stderr)
+    for line in traceback.format_exc().splitlines()[0:10]:
+        debug_problem(line)
 
-def output_success(filename, result):
-    print('SUCCESS:{}:{}'.format(filename, result), file=sys.stdout)
+def output_running(workitem):
+    print(':RUNNING:{}'.format(workitem['name']))
 
-def output_failure(filename):
-    print('FAILURE:{}'.format(filename), file=sys.stdout)
-    debug('While running {}:'.format(filename))
-    debug_error()
+def output_success(workitem):
+    print(':SUCCESS:')
+
+def output_failure(workitem):
+    print(':FAILURE:')
 
 try:
     import jycessing.Runner, jycessing.RunnableSketch, jycessing.StreamPrinter
 except:
-    debug("I can't import the Java code I need to run sketches.")
-    debug("Note: don't run this file directly; just use generator.py.")
+    debug_problem("I can't import the Java code I need to run sketches.")
+    debug_problem("Note: don't run this file directly; just use generator.py.")
     sys.exit(1) 
 
-export_image_postlude = r'''
-loadPixels()
-defaultColor = color(204, 204, 204)
-for pixel in pixels:
-    if pixel != defaultColor:
-        break
-    else:
-        raise Exception('All pixels default color - this example is pointless!')
-save({outputname})
-'''
-
 class ExampleImageGenSketch(jycessing.RunnableSketch):
-    def __init__(self, filename, source, srcdir, outputdir):
-        self.filename = filename
-        self.outputname = re.sub(r'$([^.]*)\.py^', r'\1\.png', filename)
-        self.srcdir = srcdir
-        self.outputdir = outputdir
-        self.source = source + export_image_postlude.format(outputname=self.outputname)
+    def __init__(self, workitem):
+        self.scriptfile = workitem['scriptfile']
+        self.imagefile= workitem['imagefile']
+        self.srcdir = os.path.dirname(self.scriptfile)
+        self.code = workitem['code']
 
     def gen_image(self):
-        out_printer = jycessing.StreamPrinter(java.lang.System.err)
-        jycessing.Runner.runSketchBlocking(self, out_printer, out_printer)
-        return self.outputname
+        out_printer = jycessing.StreamPrinter(java.lang.System.out)
+        err_printer = jycessing.StreamPrinter(java.lang.System.err)
+        jycessing.Runner.runSketchBlocking(self, out_printer, err_printer)
 
     # Functions to satisfy interface:
     def getMainFile(self):
-        return java.io.File(self.filename)
+        return java.io.File(self.scriptfile)
 
     def getMainCode(self):
-        return self.source
+        return self.code
 
     def getHomeDirectory(self):
         return java.io.File(self.srcdir)
@@ -74,7 +66,7 @@ class ExampleImageGenSketch(jycessing.RunnableSketch):
         return entries
 
     def getPAppletArguments(self):
-        return jarray.array([self.filename], java.lang.String)
+        return jarray.array([self.scriptfile], java.lang.String)
     
     def getLibraryDirectories(self):
         dirs = java.util.ArrayList()
@@ -86,29 +78,36 @@ class ExampleImageGenSketch(jycessing.RunnableSketch):
     def shouldRun(self):
         return 1
 
-def gen(source_dir, target_dir):
-    debug('Building from: {}'.format(source_dir))
-    for filename in os.listdir(source_dir):
-        if not filename.endswith('.py'):
-            continue
-        filename = os.path.join(source_dir, filename)
-        debug('Processing file: {}'.format(filename))
+def gen(workitems):
+    for workitem in workitems:
+        output_running(workitem)
         try:
-            with open(filename) as f:
-                content = f.read()
-            sketch = ExampleImageGenSketch(filename, content, source_dir, target_dir)
-            result = sketch.gen_image()
-            output_success(filename, result)
+            with open(workitem['scriptfile']) as f:
+                workitem['code'] = f.read()
+            sketch = ExampleImageGenSketch(workitem)
+            sketch.gen_image()
+            output_success(workitem)
+        except jycessing.PythonSketchError, e:
+            if "NullPointerException" in e.getMessage():
+                debug_problem("NullPointerException - {} is probably dynamic-mode; fix that, please.".format(workitem['name']))
+            else:
+                debug_error()
+            output_failure(workitem)
         except:
-            output_failure(filename)
+            debug_error()
+            output_failure(workitem)
 
 if __name__ == '__main__':
+    debug('Image process started.')
     parser = argparse.ArgumentParser(description='Build a set of images.') 
-    parser.add_argument('source_dir')
-    parser.add_argument('target_dir')
+    parser.add_argument('--todo', nargs='+', type=str)
     args = parser.parse_args()
     try:
-       gen(args.source_dir, args.target_dir)
+        workitems = []
+        for obj in args.todo:
+            name, scriptfile, imagefile = obj.split(':')
+            workitems.append({'name':name, 'scriptfile':scriptfile, 'imagefile':imagefile})
+        gen(workitems)
     except:
         debug_error()
         sys.exit(1)

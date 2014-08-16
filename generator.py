@@ -30,6 +30,9 @@ def print_error(text):
     print('\033[31m{}\033[0m'.format(text))
 
 def print_warning(text):
+    print('\033[33m{}\033[0m'.format(text))
+
+def print_success(text):
     print('\033[32m{}\033[0m'.format(text))
 
 def create_link(name):
@@ -124,73 +127,88 @@ class ReferenceItem:
             for related in xml.iterfind('related'):
                 self.relateds.append(get_element_text(related))
 
-def make_jython_command(processing_py_dir):
-    dist_dir = os.path.join(processing_py_dir, 'dist')
-    if not os.path.exists(dist_dir):
-       raise IOError("{} does not exist. Please run 'ant make-all-distributions' in the processing.py dir to make something I can use.".format(dist_dir))
-    import platform
-    system = platform.system()
-    if 'Darwin' in system:
-        system_string = 'macosx'
-    elif 'Linux' in system:
-        arch, _ = platform.architecture()
-        if '64' in arch:
-            system_string = 'linux64'
-        else:
-            system_string = 'linux32'
-    elif 'Java' in system:
-        raise RuntimeError('Please run generator.py with python rather than jython.')
-    elif 'Windows' in system:
-        raise RuntimeError('Building (examples) is not supported on Windows.')
-    else:
-        raise RuntimeError("Don't know what system we're on.")
-
-    # Find most-recent processing.py distribution folder for current platform
-    platform_dist_dir = sorted(filter(lambda f: f.endswith(system_string), os.listdir(dist_dir)))[0]
-    platform_dist_dir = os.path.join(dist_dir, platform_dist_dir)
-    javabin = os.path.join(platform_dist_dir, 'jre', 'bin', 'java')
-    jars = filter(lambda f: f.endswith('.jar'), os.listdir(platform_dist_dir))
-    classpath = ''
-    for jar in jars:
-        classpath += os.path.join(platform_dist_dir, jar) + ':'
-    classpath = classpath[:-1]
-    return [javabin, '-cp', classpath, 'org.python.util.jython']
-
 class JythonImageProcess:
-    success_re = re.compile(r'^SUCCESS:([^:]+):(.+)$')
-    failure_re = re.compile(r'^FAILURE:(.+)$')
-
+    running_re = re.compile(r'^:RUNNING:(.+)$')
+    success_re = re.compile(r'^:SUCCESS:$')
+    failure_re = re.compile(r'^:FAILURE:$')
+     
     @staticmethod
-    def consume_communication(fd, desc, generated):
-        for line in iter(fd.readline, ''):
+    def make_jython_command(processing_py_dir):
+        dist_dir = os.path.join(processing_py_dir, 'dist')
+        if not os.path.exists(dist_dir):
+           raise IOError("{} does not exist. Please run 'ant make-all-distributions' in the processing.py dir to make something I can use.".format(dist_dir))
+        import platform
+        system = platform.system()
+        if 'Darwin' in system:
+            system_string = 'macosx'
+        elif 'Linux' in system:
+            arch, _ = platform.architecture()
+            if '64' in arch:
+                system_string = 'linux64'
+            else:
+                system_string = 'linux32'
+        elif 'Java' in system:
+            raise RuntimeError('Please run generator.py with python rather than jython.')
+        elif 'Windows' in system:
+            raise RuntimeError('Building (examples) is not supported on Windows.')
+        else:
+            raise RuntimeError("Don't know what system we're on.")
+
+        # Find most-recent processing.py distribution folder for current platform
+        platform_dist_dir = sorted(filter(lambda f: f.endswith(system_string), os.listdir(dist_dir)))[0]
+        platform_dist_dir = os.path.join(dist_dir, platform_dist_dir)
+        javabin = os.path.join(platform_dist_dir, 'jre', 'bin', 'java')
+        jars = filter(lambda f: f.endswith('.jar'), os.listdir(platform_dist_dir))
+        classpath = ''
+        for jar in jars:
+            classpath += os.path.join(platform_dist_dir, jar) + ':'
+        classpath = classpath[:-1]
+        return [javabin, '-cp', classpath, 'org.python.util.jython'] 
+    
+    @staticmethod
+    def create_args(p5py_dir, jython_dir, workitems):
+        command = JythonImageProcess.make_jython_command(p5py_dir)
+        jython_script = os.path.join(jython_dir, 'generate_images.py')
+        if not os.path.exists(jython_script):
+            raise IOError("Can't find jython script to run...")
+        command += [jython_script]
+        command += ['--todo'] + ['{}:{}:{}'.format(ex['name'], ex['scriptfile'], ex['imagefile']) for ex in workitems.itervalues()]
+        return command
+
+    def __init__(self, p5py_dir, jython_dir, workitems):
+        self.current = None
+        self.generated = {}
+        self.failed = {}
+        self.workitems = workitems
+        args = JythonImageProcess.create_args(p5py_dir, jython_dir, workitems)
+        self.popen = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, bufsize=1) # line-buffered
+        self.comthread = threading.Thread(target=self.consume_communication, args=())
+        self.comthread.start()
+
+    def consume_communication(self):
+        for line in iter(self.popen.stdout.readline, ''):
+            running = JythonImageProcess.running_re.match(line)
+            if running:
+                self.current = self.workitems[running.group(1)]
+                print("{} ... RUNNING: {}".format(self.desc, self.current['name']))
+                continue
             success = JythonImageProcess.success_re.match(line)
             if success:
-                print("{} ... SUCCESS: {} -> {}".format(desc, success.group(1), success.group(2)))
-                generated.add(success.group(2))
+                print("{} ... SUCCESS: ".format(self.desc), end='')
+                print_success("{} -> {}".format(self.current['name'], self.current['imagefile']))
+                self.generated[self.current['name']] = self.current
+                self.current = None
                 continue
             failure = JythonImageProcess.failure_re.match(line)
             if failure:
-                print_error("{} ... FAILURE: {}".format(desc, failure.group(1)))
+                print("{} ... FAILURE: ".format(self.desc), end='')
+                print_error(self.current['name'])
+                self.failed[self.current['name']] = self.current
+                self.current = None
                 continue
-            print_error("{} ... Failed to parse output: {}".format(desc, line))
-    
-    @staticmethod
-    def consume_debug(fd, desc):
-        for line in iter(fd.readline, ''):
-            print("{} ... {}".format(desc, line), end='')
+            # Not a success or failure, must be debug messages
+            print("{} ... DEBUG: {}".format(self.desc, line), end='')
 
-    def __init__(self, p5py_dir, jython_dir, examples_dir, target_dir):
-        self.generated = set()
-        jython_script = os.path.join(jython_dir, 'generate_images.py')
-        if not os.path.exists(jython_script):
-            raise IOError("{} doesn't exist; can't generate images.")
-        args = make_jython_command(p5py_dir) + [jython_script, examples_dir, target_dir]
-        self.popen = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, bufsize=1) # line-buffered
-        self.comthread = threading.Thread(target=JythonImageProcess.consume_communication, args=(self.popen.stdout, self.desc(), self.generated))
-        self.comthread.start()
-        self.debugthread = threading.Thread(target=JythonImageProcess.consume_debug, args=(self.popen.stderr, self.desc()))
-        self.debugthread.start()
- 
     def is_complete(self):
         return self.popen.poll() != None
 
@@ -202,8 +220,9 @@ class JythonImageProcess:
         for line in self.err_blob:
             print("{}: {}".format(self.desc(), line))
 
+    @property
     def desc(self):
-        return self.popen.pid
+        return 'Image Process'
 
 # A flat name is the name of the file, sans .xml
 def get_flat_names_to_update(reference_dir, target_dir, all):
@@ -253,63 +272,72 @@ def render_templates(items_dict, to_update, src_dir, reference_dir, target_dir):
             target_file.write(lxml.html.tostring(rendered_tree, encoding='unicode').encode('utf-8'))
             print('success')
 
-def generate_images(items_dict, to_update, src_dir, target_dir, p5py_dir, worker_processes=4):
-    examples = set()
-    for name in to_update:
-        try:
-            item = items_dict[name]
-            for number, example in enumerate(item.examples):
-                examples.add((name + str(number), example['code']))
-        except AttributeError:
-            pass
-    if len(examples) == 0:
-        print("Skipping image generation, no examples to parse") 
-        return
-    if len(examples) < worker_processes:
-        worker_processes = 1
+export_image_postlude = r'''
+save('{imagefile}')
+exit()
+'''
 
-    # Some simple, probably uneven work distribution
-    workloads = []
-    for _ in range(worker_processes):
-        workloads.append(set())
-    workload_index = 0
-    for example in examples:
-        workloads[workload_index].add(example)
-        workload_index = (workload_index + 1) % worker_processes
-    
-    workload_dirs = set()
-    for workload in workloads:
-        workload_dir = tempfile.mkdtemp(prefix='processing-py-site-build')
-        for example in workload:
-            name, source = example
-            with open(os.path.join(workload_dir, name + '.py'), 'w') as f:
-                f.write(source)
-        workload_dirs.add(workload_dir)
+class MagicDict(dict):
+    def __delitem__(self, key):
+        print("Removing", key)
+        super(MagicDict, self).__delitem__(key)
 
+def generate_images(items_dict, to_update, src_dir, target_dir, p5py_dir):
+    workitems   = MagicDict() # Examples to run
+    work_dir   = tempfile.mkdtemp(prefix='processing-py-site-build')
     jython_dir = os.path.join(src_dir, 'jython')
     if not os.path.exists(jython_dir):
         raise IOError("{} doesn't exist; can't generate images.".format(jython_dir))
 
-    processes = set()
-    for workload_dir in workload_dirs:
-        processes.add(JythonImageProcess(p5py_dir, jython_dir, workload_dir, target_dir))
+    for name in to_update:
+        try:
+            item = items_dict[name]
+            for number, example in enumerate(item.examples):
+                workitem = {}
+                workitem['name'] = name + str(number)
+                workitem['scriptfile'] = os.path.join(work_dir, workitem['name'] + '.py')
+                workitem['imagefile'] = os.path.join(target_dir, workitem['name'] + '.png')
+                workitem['code']= example['code'] + export_image_postlude.format(imagefile=workitem['imagefile'])
+                with open(workitem['scriptfile'], 'w') as f:
+                    f.write(workitem['code'])
+                workitems[workitem['name']] = workitem # We store workitems by name; a little redundant, but handy
+        except AttributeError:
+            # item has no examples
+            pass
 
-    generated = set()
+    if len(workitems) == 0:
+        print("Skipping image generation, everything up to date") 
+        return
 
-    while processes:
-        for process in processes.copy():
-            if process.is_complete():
-                if process.exited_well():
-                    print("Process {} terminated successfully.".format(process.desc()))
-                else:
-                    print_error("Process {} terminated unsuccessfully.".format(process.desc()))
-                generated &= process.generated
-                processes.remove(process)
+    process = None
+    generated = {}
+    failed = {}
+
+    while workitems:
+        if not process:
+            print("Starting image process")
+            process = JythonImageProcess(p5py_dir, jython_dir, workitems)
+
+        if process.is_complete():
+            if process.exited_well():
+                print("{} terminated successfully.".format(process.desc))
+            else:
+                print_error("{} terminated unsuccessfully.".format(process.desc))
+                if process.current:
+                    process.failed[process.current['name']] = process.current
+            for workitem in process.generated.itervalues():
+                generated[workitem['name']] = workitem
+                del workitems[workitem['name']]
+            for example in process.failed.itervalues():
+                failed[workitem['name']] = example
+                del workitems[workitem['name']]
+            process = None
+
         time.sleep(0.2)
 
     print("Generated images:")
-    for image in generated:
-        print("    ", image)
+    for workitem in generated.itervalues():
+        print("    ", workitem['imagefile'])
 
 def build(src_dir='.', target_dir='./generated/', p5py_dir='../processing.py', all=False, one=False, images=True):
     print_header("Building content")
@@ -341,7 +369,7 @@ def build(src_dir='.', target_dir='./generated/', p5py_dir='../processing.py', a
     print('{} stale files to be updated'.format(len(to_update)))
     
     if images:
-        generate_images(items_dict, to_update, src_dir, target_dir, p5py_dir, worker_processes=4)
+        generate_images(items_dict, to_update, src_dir, os.path.join(target_dir, 'img'), p5py_dir)
 
     render_templates(items_dict, to_update, src_dir, reference_dir, target_dir)
     
