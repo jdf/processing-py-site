@@ -23,11 +23,9 @@ try:
 except:
     bootstrapped = False
 
-
 src_dir='.'
 target_dir='./generated/'
 reference_dir='./Reference/api_en/'
-
 
 def print_header(text):
     print('=== \033[35m{}\033[0m ==='.format(text))
@@ -134,7 +132,34 @@ class ReferenceItem:
             text = ''
         return text
 
+def render_templates(items_dict, to_update, src_dir, reference_dir, target_dir):
+    template_dir = os.path.join(src_dir, 'template')
+    env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), trim_blocks='true')
+    reference_template = env.get_template("reference_item_template.jinja")
+    convert_hypertext = make_convert_hypertext(items_dict)
 
+    env.globals['items_dict'] = items_dict
+    env.globals['convert_hypertext'] = convert_hypertext
+    env.globals['create_link'] = create_link
+    env.globals['hasattr'] = hasattr
+
+    whitespace = re.compile(r'^\s+$')
+
+    for flat_name in to_update:
+        source_file_path = os.path.join(reference_dir, flat_name + '.xml')
+        target_file_path = os.path.join(target_dir, flat_name + '.html')
+        print("Rendering {} to {}... ".format(source_file_path, target_file_path), end='')
+        source_item = items_dict[flat_name]
+        with open(target_file_path, 'w') as target_file:
+            rendered = reference_template.render(item=source_item, today=datetime.datetime.now().ctime())
+            rendered_tree = lxml.html.fromstring(rendered)
+            for element in rendered_tree.iter():
+                if element.text is not None and whitespace.match(element.text):
+                    element.text = None
+                if element.tail is not None and whitespace.match(element.tail):
+                    element.tail = None
+            target_file.write(lxml.html.tostring(rendered_tree, encoding='unicode').encode('utf-8'))
+            print_success('success!')
 
 def check_p5py_platform():
     import platform
@@ -239,64 +264,6 @@ class JythonImageProcess:
     def desc(self):
         return 'Image Process'
 
-# A flat name is the name of the file, sans .xml
-def get_flat_names_to_update(all, random, files):
-
-    if files:
-        # print_error() returns None, which is falsy, and so can be used to filter!
-        # ...this is silly
-        files = filter(lambda f: f if f.endswith('.xml') else print_error('"{}" is not a valid xml file!'.format(f)), files)
-        return map(lambda f: os.path.basename(f)[:-4], files)
-
-    if random:
-        return [map(lambda f: f[:-4], filter(lambda f: f.endswith('.xml'), os.listdir(reference_dir)))[0]]
-
-    if not all:
-        def should_be_updated(f):
-            src_f = os.path.join(reference_dir, f)
-            if not f.endswith('.xml'):
-                return False
-            target_f = os.path.join(target_dir, f[:-4] + '.html')
-            if not os.path.exists(target_f):
-                return True
-            return os.path.getmtime(src_f) > os.path.getmtime(target_f)
-        
-        files = filter(should_be_updated, os.listdir(reference_dir))
-    else:
-        files = filter(lambda f: f.endswith('.xml'), os.listdir(reference_dir))
-
-    files = map(lambda f: f[:-4], files)
-    return files
-
-def render_templates(items_dict, to_update, src_dir, reference_dir, target_dir):
-    template_dir = os.path.join(src_dir, 'template')
-    env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), trim_blocks='true')
-    reference_template = env.get_template("reference_item_template.jinja")
-    convert_hypertext = make_convert_hypertext(items_dict)
-
-    env.globals['items_dict'] = items_dict
-    env.globals['convert_hypertext'] = convert_hypertext
-    env.globals['create_link'] = create_link
-    env.globals['hasattr'] = hasattr
-
-    whitespace = re.compile(r'^\s+$')
-
-    for flat_name in to_update:
-        source_file_path = os.path.join(reference_dir, flat_name + '.xml')
-        target_file_path = os.path.join(target_dir, flat_name + '.html')
-        print("Rendering {} to {}... ".format(source_file_path, target_file_path), end='')
-        source_item = items_dict[flat_name]
-        with open(target_file_path, 'w') as target_file:
-            rendered = reference_template.render(item=source_item, today=datetime.datetime.now().ctime())
-            rendered_tree = lxml.html.fromstring(rendered)
-            for element in rendered_tree.iter():
-                if element.text is not None and whitespace.match(element.text):
-                    element.text = None
-                if element.tail is not None and whitespace.match(element.tail):
-                    element.tail = None
-            target_file.write(lxml.html.tostring(rendered_tree, encoding='unicode').encode('utf-8'))
-            print_success('success!')
-
 export_image_postlude = r'''
 save('{imagefile}')
 exit()
@@ -388,7 +355,6 @@ def find_images(items_dict, to_update, img_dir):
                         os.remove(example_path)
         except AttributeError:
             pass
-
 
 def build(images, to_update):
     if not to_update:
@@ -537,6 +503,35 @@ def bootstrap(force, dryrun, update):
         sys.exit(1)
 
     print_success('Dependencies good to go!')
+
+# A flat name is the name of the file, sans .xml
+def get_flat_names_to_update(all, random, files):
+
+    if files:
+        # print_error() returns None, which is falsy, and so can be used to filter!
+        # ...this is silly
+        files = filter(lambda f: f if f.endswith('.xml') else print_error('"{}" is not a valid xml file!'.format(f)), files)
+        return map(lambda f: os.path.basename(f)[:-4], files)
+
+    if random:
+        return [map(lambda f: f[:-4], filter(lambda f: f.endswith('.xml'), os.listdir(reference_dir)))[0]]
+
+    if not all:
+        def should_be_updated(f):
+            src_f = os.path.join(reference_dir, f)
+            if not f.endswith('.xml'):
+                return False
+            target_f = os.path.join(target_dir, f[:-4] + '.html')
+            if not os.path.exists(target_f):
+                return True
+            return os.path.getmtime(src_f) > os.path.getmtime(target_f)
+        
+        files = filter(should_be_updated, os.listdir(reference_dir))
+    else:
+        files = filter(lambda f: f.endswith('.xml'), os.listdir(reference_dir))
+
+    files = map(lambda f: f[:-4], files)
+    return files
 
 if __name__ == '__main__':
     class DefaultHelpParser(ArgumentParser):
