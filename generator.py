@@ -358,7 +358,7 @@ def find_images(items_dict, to_update, img_dir):
 
 def build(images, to_update):
     if not to_update:
-        print_error('Nothing to do.')
+        print_success('Nothing to do.')
         sys.exit(0)
     print_header("Building content")
     
@@ -447,7 +447,7 @@ def bootstrap(force, dryrun, update):
     print_success('All necessary commands supported!')
     
     print('Installing python requirements')
-    if not call(['pip', 'install', '-r', 'requirements.txt']):
+    if not call(['pip', 'install', '-r', 'requirements.txt', '--user']):
         print_error("Couldn't install! Oh no!")
         sys.exit(1) 
 
@@ -544,8 +544,8 @@ if __name__ == '__main__':
     parser = DefaultHelpParser(description='Management script for py.processing.org')
     subparsers = parser.add_subparsers(dest='command')
     build_parser = subparsers.add_parser('build', description='Build web pages from reference source')
-    build_type = build_parser.add_mutually_exclusive_group(required=True)
-    build_type.add_argument('--all', action='store_true', help='Build all pages and examples')
+    build_type = build_parser.add_mutually_exclusive_group()
+    build_type.add_argument('--all', action='store_true', help='Build all pages')
     build_type.add_argument('--random', action='store_true', help='Build an arbitrary file (for testing purposes)')
     build_type.add_argument('--files', nargs='+', help='Build a specific set of files')
     build_parser.add_argument('--images', action='store_true', help="Run and save example sketches")
@@ -568,7 +568,7 @@ if __name__ == '__main__':
         print_error("Please bootstrap, I can't load libraries I need.")
 
     if args.command == 'build':
-        build(images=args.images or args.all, to_update=get_flat_names_to_update(all=args.all, random=args.random, files=args.files))
+        build(images=args.images, to_update=get_flat_names_to_update(all=args.all, random=args.random, files=args.files))
     elif args.command == 'test':
         test()
     elif args.command == 'bootstrap':

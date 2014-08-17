@@ -8,7 +8,7 @@ Install requirements:
 ```
 To build all content:
 ```sh
-./generator.py build --all
+./generator.py build --all --images
 ```
 To test the site in a local server
 ```sh
