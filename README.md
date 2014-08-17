@@ -4,7 +4,7 @@ Repository for py.processing.org.
 
 Install requirements:
 ```sh
-pip install -r requirements.txt
+./generator.py bootstrap
 ```
 To build all content:
 ```sh
