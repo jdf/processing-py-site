@@ -26,11 +26,15 @@
         {% for example in item.examples %}
             <div class="example">
             {% if example.image %}
-                <img />
+                <img src="{{example.image}}"/>
             {% endif %}
             <pre class='margin'>
                 {{ example.code }}
             </div></pre>
+            {% if example.broken %}
+                {# This will get their attention #}
+                <h2 style="color:red;">THIS EXAMPLE IS BROKEN</h2>
+            {% endif %}
         {% endfor %}
         </tr>
     {% endif %}

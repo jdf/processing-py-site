@@ -14,14 +14,20 @@ import sys
 import copy
 import time, datetime
 
+bootstrapped = True
+
 try:
     import jinja2
     import lxml.html
     from lxml import etree # We need to use lxml because it can handle CDATA tags
 except:
-    print("I can't import my dependencies for some reason.")
-    print("Please run pip install -r requirements.txt before using generator.py.")
-    sys.exit(1)
+    bootstrapped = False
+
+
+src_dir='.'
+target_dir='./generated/'
+reference_dir='./Reference/api_en/'
+
 
 def print_header(text):
     print('=== \033[35m{}\033[0m ==='.format(text))
@@ -77,28 +83,21 @@ def make_convert_hypertext(names_dict):
 def format_code(code):
     return '\n' + code.strip()
 
-def get_element_text(element):
-    '''Get element.text, supplying the empty string if element.text is None'''
-    text = element.text
-    if text is None:
-        print_warning("Warning: Element '{}' has no text".format(element.tag))
-        text = ''
-    return text
-
 class ReferenceItem:
     '''Represents a single page of reference information.'''
     def __init__(self, source_xml):
-        print("Parsing", source_xml)
+        self.source_xml = source_xml
         xml = etree.parse(source_xml)
         if xml.find('name') is not None:
-            self.name = get_element_text(xml.find('name'))
+            self.name = self.get_element_text(xml.find('name'))
         if xml.find('type') is not None:
-            self.type = get_element_text(xml.find('type'))
+            self.type = self.get_element_text(xml.find('type'))
         if xml.find('example') is not None:
             self.examples = []
+            # Note: 'image' starts out as a flag representing whether this example wants an image or not.
+            # It is later transformed into the url of the image we've generated.
             for example in xml.iterfind('example'):
-                self.examples.append({'code': format_code(get_element_text(example.find('code'))), 'image':example.find('image') is not None}) 
-
+                self.examples.append({'code': format_code(self.get_element_text(example.find('code'))), 'image':example.find('noimage') is None})
         # We store plain xml-elements for some children so that we can use convert_hypertext on them at generation time.
         # This is necessary because all ReferenceItems have to be parsed before links can be resolved.
         if xml.find('description') is not None:
@@ -108,24 +107,53 @@ class ReferenceItem:
         if xml.find('parameter') is not None:
             self.parameters = []
             for parameter in xml.iterfind('parameter'):
-                label = get_element_text(parameter.find('label'))
+                label = self.get_element_text(parameter.find('label'))
                 description = parameter.find('description')
                 self.parameters.append({'label':label, 'description':description})
         if xml.find('method') is not None:
             self.methods = []
             for method in xml.iterfind('method'):
-                label = get_element_text(method.find('label'))
+                label = self.get_element_text(method.find('label'))
                 description = method.find('description')
-                ref = create_link(get_element_text(method.find('ref')))
+                ref = create_link(self.get_element_text(method.find('ref')))
                 self.methods.append({'label':label, 'description':description, 'ref':ref})
         if xml.find('constructor') is not None:
             self.constructors = []
             for constructor in xml.iterfind('constructor'):
-                self.constructors.append(get_element_text(constructor))
+                self.constructors.append(self.get_element_text(constructor))
         if xml.find('related') is not None:
             self.relateds = []
             for related in xml.iterfind('related'):
-                self.relateds.append(get_element_text(related))
+                self.relateds.append(self.get_element_text(related))
+
+    def get_element_text(self, element):
+        '''Get element.text, supplying the empty string if element.text is None. Take filename so we can point to errors.'''
+        text = element.text
+        if text is None:
+            print_warning("Warning: Element '{}' from '{}' has no text".format(element.tag, self.source_xml))
+            text = ''
+        return text
+
+
+
+def check_p5py_platform():
+    import platform
+    system = platform.system()
+    if 'Darwin' in system:
+        system_string = 'macosx'
+    elif 'Linux' in system:
+        arch, _ = platform.architecture()
+        if '64' in arch:
+            system_string = 'linux64'
+        else:
+            system_string = 'linux32'
+    elif 'Java' in system:
+        raise RuntimeError('Please run generator.py with python rather than jython.')
+    elif 'Windows' in system:
+        raise RuntimeError('Building (examples) is not supported on Windows.')
+    else:
+        raise RuntimeError("Don't know what system we're on.")
+    return system_string
 
 class JythonImageProcess:
     running_re = re.compile(r'^:RUNNING:(.+)$')
@@ -136,23 +164,9 @@ class JythonImageProcess:
     def make_jython_command(processing_py_dir):
         dist_dir = os.path.join(processing_py_dir, 'dist')
         if not os.path.exists(dist_dir):
-           raise IOError("{} does not exist. Please run 'ant make-all-distributions' in the processing.py dir to make something I can use.".format(dist_dir))
-        import platform
-        system = platform.system()
-        if 'Darwin' in system:
-            system_string = 'macosx'
-        elif 'Linux' in system:
-            arch, _ = platform.architecture()
-            if '64' in arch:
-                system_string = 'linux64'
-            else:
-                system_string = 'linux32'
-        elif 'Java' in system:
-            raise RuntimeError('Please run generator.py with python rather than jython.')
-        elif 'Windows' in system:
-            raise RuntimeError('Building (examples) is not supported on Windows.')
-        else:
-            raise RuntimeError("Don't know what system we're on.")
+           raise IOError("{} does not exist. Please bootstrap.".format(dist_dir))
+        
+        system_string = check_p5py_platform()
 
         # Find most-recent processing.py distribution folder for current platform
         platform_dist_dir = sorted(filter(lambda f: f.endswith(system_string), os.listdir(dist_dir)))[0]
@@ -225,7 +239,17 @@ class JythonImageProcess:
         return 'Image Process'
 
 # A flat name is the name of the file, sans .xml
-def get_flat_names_to_update(reference_dir, target_dir, all):
+def get_flat_names_to_update(all, random, files):
+
+    if files:
+        # print_error() returns None, which is falsy, and so can be used to filter!
+        # ...this is silly
+        files = filter(lambda f: f if f.endswith('.xml') else print_error('"{}" is not a valid xml file!'.format(f)), files)
+        return map(lambda f: os.path.basename(f)[:-4], files)
+
+    if random:
+        return [map(lambda f: f[:-4], filter(lambda f: f.endswith('.xml'), os.listdir(reference_dir)))[0]]
+
     if not all:
         def should_be_updated(f):
             src_f = os.path.join(reference_dir, f)
@@ -270,20 +294,15 @@ def render_templates(items_dict, to_update, src_dir, reference_dir, target_dir):
                 if element.tail is not None and whitespace.match(element.tail):
                     element.tail = None
             target_file.write(lxml.html.tostring(rendered_tree, encoding='unicode').encode('utf-8'))
-            print('success')
+            print_success('success!')
 
 export_image_postlude = r'''
 save('{imagefile}')
 exit()
 '''
 
-class MagicDict(dict):
-    def __delitem__(self, key):
-        print("Removing", key)
-        super(MagicDict, self).__delitem__(key)
-
 def generate_images(items_dict, to_update, src_dir, target_dir, p5py_dir):
-    workitems   = MagicDict() # Examples to run
+    workitems  = {} # Examples to run
     work_dir   = tempfile.mkdtemp(prefix='processing-py-site-build')
     jython_dir = os.path.join(src_dir, 'jython')
     if not os.path.exists(jython_dir):
@@ -328,8 +347,8 @@ def generate_images(items_dict, to_update, src_dir, target_dir, p5py_dir):
             for workitem in process.generated.itervalues():
                 generated[workitem['name']] = workitem
                 del workitems[workitem['name']]
-            for example in process.failed.itervalues():
-                failed[workitem['name']] = example
+            for workitem in process.failed.itervalues():
+                failed[workitem['name']] = workitem
                 del workitems[workitem['name']]
             process = None
 
@@ -339,15 +358,47 @@ def generate_images(items_dict, to_update, src_dir, target_dir, p5py_dir):
     for workitem in generated.itervalues():
         print("    ", workitem['imagefile'])
 
-def build(src_dir='.', target_dir='./generated/', p5py_dir='../processing.py', all=False, one=False, images=True):
+    print("Failed examples:")
+    for workitem in failed.itervalues():
+        print("    ", workitem['name'])
+    
+    print("Done rendering examples.")
+
+def find_images(items_dict, to_update, img_dir):
+    for name in to_update:
+        try:
+            item = items_dict[name]
+            for number, example in enumerate(item.examples):
+                example_filename = name + str(number) + '.png'
+                example_path = os.path.join(img_dir, example_filename)
+                if example['image']:
+                    if os.path.exists(example_path):
+                        # UPDATE THIS if the image directory changes!
+                        example['image'] = '/img/{}'.format(example_filename)
+                    else:
+                        # We want an image, but we don't have one. hm.
+                        del example['image']
+                        example['broken'] = True
+                else:
+                    if os.path.exists(example_path):
+                        # So, we run all example sketches as a kind of unit-test, and they all save images,
+                        # but some of those images don't actually need to be drawn. This is one of those
+                        # images.
+                        os.remove(example_path)
+        except AttributeError:
+            pass
+
+
+def build(images, to_update):
+    if not to_update:
+        print_error('Nothing to do.')
+        sys.exit(0)
     print_header("Building content")
     
     reference_dir = os.path.join(src_dir, 'Reference', 'api_en')
     content_dir = os.path.join(src_dir, 'content')
     start = datetime.datetime.now()
 
-    if one:
-        shutil.rmtree(target_dir)
     if not os.path.exists(target_dir):
         os.makedirs(target_dir)
     if not os.path.exists(reference_dir):
@@ -362,14 +413,13 @@ def build(src_dir='.', target_dir='./generated/', p5py_dir='../processing.py', a
         items_dict[filename[:-4]] = ReferenceItem(os.path.join(reference_dir, filename))
     items_dict[''] = items_dict['blank'] # Special case, for blank links
 
-    to_update = get_flat_names_to_update(reference_dir, target_dir, all)
-    if one:
-        to_update = to_update[0:1]
- 
-    print('{} stale files to be updated'.format(len(to_update)))
+    print_success('{} stale files to be updated'.format(len(to_update)))
     
+    img_dir = os.path.join(target_dir, 'img')
+
     if images:
-        generate_images(items_dict, to_update, src_dir, os.path.join(target_dir, 'img'), p5py_dir)
+        generate_images(items_dict, to_update, src_dir, os.path.join(target_dir, 'img'), os.path.join(depends_dir, 'processing.py'))
+    find_images(items_dict, to_update, img_dir)
 
     render_templates(items_dict, to_update, src_dir, reference_dir, target_dir)
     
@@ -379,7 +429,7 @@ def build(src_dir='.', target_dir='./generated/', p5py_dir='../processing.py', a
     timedelta = datetime.datetime.now() - start
     print('Build took {} seconds'.format(timedelta.seconds + timedelta.microseconds/1000000))
 
-def test(target_dir='./generated'):
+def test():
     print_header("Testing")
     import random, SimpleHTTPServer, SocketServer, webbrowser
     socket = random.randrange(8000, 8999)
@@ -389,6 +439,103 @@ def test(target_dir='./generated'):
     httpd = SocketServer.TCPServer(("localhost", socket), SimpleHTTPServer.SimpleHTTPRequestHandler)
     webbrowser.open(address)
     httpd.serve_forever()
+
+def bootstrap(force, dryrun, update):
+    if force and os.path.exists(depends_dir):
+        shutil.rmtree(depends_dir)
+
+    if dryrun:
+        def call(cmd, *args, **kwargs):
+            print_warning(' '.join(cmd))
+            return True
+    else:
+        def call(cmd, *args, **kwargs):
+            print_warning(' '.join(cmd))
+            try:
+                return subprocess.call(cmd, *args, **kwargs) == 0 
+            except:
+                return False
+
+    print_header('Bootstrapping')
+    print_warning('(This may take a while.)')
+    print('Verifying command requirements...')
+    failures = []
+    verifiables = [
+            ['pip', '-V'],
+            ['java','-version'],
+            ['javac', '-version'],
+            ['ant', '-version'],
+            ['git', '--version']
+            ]
+    for cmd in verifiables:
+        if not call(cmd):
+            failures.append(cmd[0])
+
+    if failures:
+        print_error('Please install/make available the following commands for your platform:')
+        for failure in failures:
+            print_error('     ' + failure)
+        sys.exit(1)
+
+    print_success('All necessary commands supported!')
+    
+    print('Installing python requirements')
+    if not call(['pip', 'install', '-r', 'requirements.txt']):
+        print_error("Couldn't install! Oh no!")
+        sys.exit(1) 
+
+    if not os.path.exists(depends_dir):
+        print('Creating "{}"'.format(depends_dir))
+        os.makedirs(depends_dir)
+
+    print('Checking git dependencies...')
+
+    # (repo, url, tag)
+    git_repos = [
+            ('processing', 'https://github.com/processing/processing.git', 'processing-0227-2.2.1'),
+            ('processing-video', 'https://github.com/processing/processing-video.git', None),
+            ('processing.py', 'https://github.com/jdf/processing.py.git', None)
+            ]
+
+    for repo, url, tag in git_repos:
+        repo_path = os.path.join(depends_dir, repo)
+        if not os.path.exists(repo_path):
+            print('Cloning {}...'.format(repo))
+            if tag:
+                cmd = ['git', 'clone', '--depth', '1', '--branch', tag, url, repo_path]
+            else:
+                cmd = ['git', 'clone', '--depth', '1', url, repo_path]
+            if not call(cmd):
+                print_error('Failed to clone! Oh no!')
+                sys.exit(1)
+
+    if update:
+        print('Updating dependency repos')
+        for repo, url, tag in git_repos: # All guaranteed to exist by now!
+            if tag:
+                continue # We've checked out a specific tag, no need to update
+            repo_path = os.path.join(depends_dir, repo)
+            if not call(['git', '--git-dir={}'.format(os.path.join(repo_path, '.git')), '--work-tree={}'.format(repo_path), 'pull']):
+                print_error('Failed to pull! Oh no!')
+                sys.exit(1)
+
+        print('Cleaning dependencies')
+        if not call(['ant', '-buildfile', os.path.join(depends_dir, 'processing.py', 'build.xml'), 'clean']):
+            print_error('Clean unsuccessful!')
+            sys.exit(1)
+    print('Building dependencies')
+
+    # Do these separately to avoid a bug in processing.py/build.xml
+    if not call(['ant', '-buildfile', os.path.join(depends_dir, 'processing.py', 'build.xml'), 'build-processing']):
+        print_error('Processing build unsuccessful!')
+        sys.exit(1)
+
+    if not call(['ant', '-buildfile', os.path.join(depends_dir, 'processing.py', 'build.xml'),
+        '-Dplatform={}'.format(check_p5py_platform()), 'make-distribution']):
+        print_error('Processing.py build unsuccessful!')
+        sys.exit(1)
+
+    print_success('Dependencies good to go!')
 
 if __name__ == '__main__':
     class DefaultHelpParser(ArgumentParser):
@@ -401,13 +548,34 @@ if __name__ == '__main__':
     parser = DefaultHelpParser(description='Management script for py.processing.org')
     subparsers = parser.add_subparsers(dest='command')
     build_parser = subparsers.add_parser('build', description='Build web pages from reference source')
-    build_parser.add_argument('--all', action='store_true', help='Rebuild fresh pages as well as stale ones')
-    build_parser.add_argument('--one', action='store_true', help='Build only one file (for testing purposes)')
-    build_parser.add_argument('--noimages', action='store_true', help="Don't run any example sketches")
-    build_parser.add_argument('--p5py', default='../processing.py', help='Set location of processing.py installation')
+    build_type = build_parser.add_mutually_exclusive_group(required=True)
+    build_type.add_argument('--all', action='store_true', help='Build all pages and examples')
+    build_type.add_argument('--random', action='store_true', help='Build an arbitrary file (for testing purposes)')
+    build_type.add_argument('--files', nargs='+', help='Build a specific set of files')
+    build_parser.add_argument('--images', action='store_true', help="Run and save example sketches")
     test_parser = subparsers.add_parser('test', description='Test locally')
+    bootstrap_parser=subparsers.add_parser('bootstrap', description='Verify/download requirements of generator.py')
+    bootstrap_parser.add_argument('--force', action='store_true', help='Re-bootstrap even if everything is installed')
+    bootstrap_parser.add_argument('--update', action='store_true', help='Update dependencies')
+    bootstrap_parser.add_argument('--dryrun', action='store_true', help='Print actions but do not perform them')
+    clean_parser = subparsers.add_parser('clean', description='Clean generated stuff')
     args = parser.parse_args()
+
+    proper_dir = os.path.dirname(os.path.realpath(__file__))
+    if not os.path.samefile(os.path.realpath(os.getcwd()), proper_dir):
+        print_warning('Changing to proper working directory: {}'.format(proper_dir))
+        os.chdir(proper_dir)
+
+    depends_dir = os.path.realpath('./depends')
+
+    if not bootstrapped and args.command != 'bootstrap':
+        print_error("Please bootstrap, I can't load libraries I need.")
+
     if args.command == 'build':
-        build(all=args.all, one=args.one, images=not args.noimages)
+        build(images=args.images or args.all, to_update=get_flat_names_to_update(all=args.all, random=args.random, files=args.files))
     elif args.command == 'test':
         test()
+    elif args.command == 'bootstrap':
+        bootstrap(force=args.force, dryrun=args.dryrun, update=args.update)
+    elif args.command == 'clean':
+        shutil.rmtree(target_dir)
