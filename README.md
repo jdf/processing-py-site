@@ -1,4 +1,4 @@
-# Processing Py Site
+# Processing Py Site [![How are we doing?](https://travis-ci.org/kazimuth/processing-py-site.svg)](https://travis-ci.org/kazimuth/processing-py-site)
 
 Repository for py.processing.org.
 
