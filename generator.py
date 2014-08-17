@@ -270,6 +270,7 @@ exit()
 '''
 
 def generate_images(items_dict, to_update, src_dir, target_dir, p5py_dir):
+    '''Generate images from examples and return the number of failures.'''
     workitems  = {} # Examples to run
     work_dir   = tempfile.mkdtemp(prefix='processing-py-site-build')
     jython_dir = os.path.join(src_dir, 'jython')
@@ -331,6 +332,7 @@ def generate_images(items_dict, to_update, src_dir, target_dir, p5py_dir):
         print("    ", workitem['name'])
     
     print("Done rendering examples.")
+    return len(failed)
 
 def find_images(items_dict, to_update, img_dir):
     for name in to_update:
@@ -361,10 +363,11 @@ def build(images, to_update):
         print_success('Nothing to do.')
         sys.exit(0)
     print_header("Building content")
-    
+
     reference_dir = os.path.join(src_dir, 'Reference', 'api_en')
     content_dir = os.path.join(src_dir, 'content')
     start = datetime.datetime.now()
+    failures = 0
 
     if not os.path.exists(target_dir):
         os.makedirs(target_dir)
@@ -385,7 +388,7 @@ def build(images, to_update):
     img_dir = os.path.join(target_dir, 'img')
 
     if images:
-        generate_images(items_dict, to_update, src_dir, os.path.join(target_dir, 'img'), os.path.join(depends_dir, 'processing.py'))
+        failures += generate_images(items_dict, to_update, src_dir, os.path.join(target_dir, 'img'), os.path.join(depends_dir, 'processing.py'))
     find_images(items_dict, to_update, img_dir)
 
     render_templates(items_dict, to_update, src_dir, reference_dir, target_dir)
@@ -395,6 +398,9 @@ def build(images, to_update):
     print('Done.')
     timedelta = datetime.datetime.now() - start
     print('Build took {} seconds'.format(timedelta.seconds + timedelta.microseconds/1000000))
+    if failures:
+        print_error('{} failures'.format(failures))
+        sys.exit(1)
 
 def test():
     print_header("Testing")

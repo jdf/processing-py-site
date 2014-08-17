@@ -1,0 +1,13 @@
+env: DISPLAY=:99.0 # from p5py
+
+language: java # say it's Java so we can use the jdk
+
+jdk: oraclejdk7
+
+before_install:
+    - sudo apt-get update
+    - sudo apt-get install python python-pip git
+    - ./generator.py bootstrap
+    - "sh -e /etc/init.d/xvfb start" # from p5py
+
+script: ./generator.py build --all
