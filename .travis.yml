@@ -10,4 +10,4 @@ before_install:
     - ./generator.py bootstrap
     - "sh -e /etc/init.d/xvfb start" # from p5py
 
-script: ./generator.py build --all
+script: ./generator.py build --all --images
