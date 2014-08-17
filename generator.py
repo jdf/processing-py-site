@@ -156,6 +156,7 @@ def check_p5py_platform():
     return system_string
 
 class JythonImageProcess:
+    '''Class to manage communicating with a remote process. We could eventually have multiple instances going at once.'''
     running_re = re.compile(r'^:RUNNING:(.+)$')
     success_re = re.compile(r'^:SUCCESS:$')
     failure_re = re.compile(r'^:FAILURE:$')

@@ -10,7 +10,7 @@ import java.lang
 import java.util
 import java.io
 
-'''Jython script to generate a set of images. Writes output images to stdout and debug messages to stderr.'''
+'''Jython script to generate a set of images.'''
 
 def debug(text):
     print('\033[32m{}\033[0m'.format(text))
