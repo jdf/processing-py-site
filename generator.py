@@ -24,8 +24,24 @@ except:
     bootstrapped = False
 
 src_dir='.'
-target_dir='./generated/'
-reference_dir='./Reference/api_en/'
+target_dir=os.path.join(src_dir, 'generated/')
+
+# Names to use in links
+canon_reference_dir = '/reference/'
+canon_tutorials_dir = '/tutorials/'
+canon_cover_dir = '/'
+canon_overview_dir = '/overview/'
+canon_examples_dir = '/examples/'
+
+# Names to use during file manipulation
+target_reference_dir = target_dir + canon_reference_dir
+target_tutorials_dir = target_dir + canon_tutorials_dir
+target_cover_dir     = target_dir + canon_cover_dir
+target_overview_dir  = target_dir + canon_overview_dir
+target_examples_dir  = target_dir + canon_examples_dir
+reference_dir='Reference/api_en/'
+tutorials_dir='Tutorials/'
+
 
 def print_header(text):
     print('=== \033[35m{}\033[0m ==='.format(text))
@@ -39,47 +55,24 @@ def print_warning(text):
 def print_success(text):
     print('\033[32m{}\033[0m'.format(text))
 
-def create_link(name):
-    return name + '.html' # We might change this later
-
-def make_convert_hypertext(names_dict):
-    """
-    Create a function to convert etree.Elements into properly-formatted HTML.
-    The function is used directly from jinja.
-    """
-    def convert_hypertext(element, _toplevel=True):
-        # Tags we don't need to recurse on
-        if element.tag == 'br':
-            return '<br />'
-        if element.tag == 'ref':
-            target = element.text
-            name = names_dict[target] # Look up the proper name for this page in the names dictionary
-            return '<a href="{0}">{1}</a>'.format(create_link(target), name)
-
-        # If we need to change the output tag name
-        text = ''
-        if element.tag == 'c':
-            tag = 'kbd'
+def check_p5py_platform():
+    import platform
+    system = platform.system()
+    if 'Darwin' in system:
+        system_string = 'macosx'
+    elif 'Linux' in system:
+        arch, _ = platform.architecture()
+        if '64' in arch:
+            system_string = 'linux64'
         else:
-            tag = element.tag
-
-        # Only add outer tags if we're not at the top level of the tree -
-        # we don't want <description> and friends in our html
-        if not _toplevel:
-            text += '<{}>'.format(tag)
-        if element.text:
-            text += element.text
-        for child in element:
-            text += convert_hypertext(child, _toplevel=False)
-            if child.tail:
-                text += child.tail
-        if not _toplevel:
-            text += '</{}>'.format(tag)
-        return text 
-    return convert_hypertext
-
-def format_code(code):
-    return '\n' + code.strip()
+            system_string = 'linux32'
+    elif 'Java' in system:
+        raise RuntimeError('Please run generator.py with python rather than jython.')
+    elif 'Windows' in system:
+        raise RuntimeError('Building (examples) is not supported on Windows.')
+    else:
+        raise RuntimeError("Don't know what system we're on.")
+    return system_string
 
 class ReferenceItem:
     '''Represents a single page of reference information.'''
@@ -113,7 +106,7 @@ class ReferenceItem:
             for method in xml.iterfind('method'):
                 label = self.get_element_text(method.find('label'))
                 description = method.find('description')
-                ref = create_link(self.get_element_text(method.find('ref')))
+                ref = create_ref_link(self.get_element_text(method.find('ref')))
                 self.methods.append({'label':label, 'description':description, 'ref':ref})
         if xml.find('constructor') is not None:
             self.constructors = []
@@ -131,54 +124,6 @@ class ReferenceItem:
             print_warning("Warning: Element '{}' from '{}' has no text".format(element.tag, self.source_xml))
             text = ''
         return text
-
-def render_templates(items_dict, to_update, src_dir, reference_dir, target_dir):
-    template_dir = os.path.join(src_dir, 'template')
-    env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), trim_blocks='true')
-    reference_template = env.get_template("reference_item_template.jinja")
-    convert_hypertext = make_convert_hypertext(items_dict)
-
-    env.globals['items_dict'] = items_dict
-    env.globals['convert_hypertext'] = convert_hypertext
-    env.globals['create_link'] = create_link
-    env.globals['hasattr'] = hasattr
-
-    whitespace = re.compile(r'^\s+$')
-
-    for flat_name in to_update:
-        source_file_path = os.path.join(reference_dir, flat_name + '.xml')
-        target_file_path = os.path.join(target_dir, flat_name + '.html')
-        print("Rendering {} to {}... ".format(source_file_path, target_file_path), end='')
-        source_item = items_dict[flat_name]
-        with open(target_file_path, 'w') as target_file:
-            rendered = reference_template.render(item=source_item, today=datetime.datetime.now().ctime())
-            rendered_tree = lxml.html.fromstring(rendered)
-            for element in rendered_tree.iter():
-                if element.text is not None and whitespace.match(element.text):
-                    element.text = None
-                if element.tail is not None and whitespace.match(element.tail):
-                    element.tail = None
-            target_file.write(lxml.html.tostring(rendered_tree, encoding='unicode').encode('utf-8'))
-            print_success('success!')
-
-def check_p5py_platform():
-    import platform
-    system = platform.system()
-    if 'Darwin' in system:
-        system_string = 'macosx'
-    elif 'Linux' in system:
-        arch, _ = platform.architecture()
-        if '64' in arch:
-            system_string = 'linux64'
-        else:
-            system_string = 'linux32'
-    elif 'Java' in system:
-        raise RuntimeError('Please run generator.py with python rather than jython.')
-    elif 'Windows' in system:
-        raise RuntimeError('Building (examples) is not supported on Windows.')
-    else:
-        raise RuntimeError("Don't know what system we're on.")
-    return system_string
 
 class JythonImageProcess:
     '''Class to manage communicating with a remote process. We could eventually have multiple instances going at once.'''
@@ -269,7 +214,7 @@ save('{imagefile}')
 exit()
 '''
 
-def generate_images(items_dict, to_update, src_dir, target_dir, p5py_dir):
+def generate_images(items_dict, to_update, src_dir, p5py_dir, target_image_dir):
     '''Generate images from examples and return the number of failures.'''
     workitems  = {} # Examples to run
     work_dir   = tempfile.mkdtemp(prefix='processing-py-site-build')
@@ -284,7 +229,7 @@ def generate_images(items_dict, to_update, src_dir, target_dir, p5py_dir):
                 workitem = {}
                 workitem['name'] = name + str(number)
                 workitem['scriptfile'] = os.path.join(work_dir, workitem['name'] + '.py')
-                workitem['imagefile'] = os.path.join(target_dir, workitem['name'] + '.png')
+                workitem['imagefile'] = os.path.join(target_image_dir, workitem['name'] + '.png')
                 workitem['code']= example['code'] + export_image_postlude.format(imagefile=workitem['imagefile'])
                 with open(workitem['scriptfile'], 'w') as f:
                     f.write(workitem['code'])
@@ -344,7 +289,7 @@ def find_images(items_dict, to_update, img_dir):
                 if example['image']:
                     if os.path.exists(example_path):
                         # UPDATE THIS if the image directory changes!
-                        example['image'] = '/img/{}'.format(example_filename)
+                        example['image'] = canon_reference_dir + 'imgs/' + example_filename
                     else:
                         # We want an image, but we don't have one. hm.
                         del example['image']
@@ -358,23 +303,59 @@ def find_images(items_dict, to_update, img_dir):
         except AttributeError:
             pass
 
-def build(images, to_update):
+def make_convert_hypertext(names_dict):
+    """
+    Create a function to convert etree.Elements from our source xml into properly-formatted HTML.
+    The function is used directly from jinja.
+    """
+    def convert_hypertext(element, _toplevel=True):
+        if _toplevel:
+            element = copy.deepcopy(element)
+            text = ''
+
+        if element.tag == 'ref':
+            element.tag = 'a'
+            name = names_dict[target] # Look up the proper name for this page in the names dictionary
+            element.attib['href'] = create_ref_link(target)
+            element.text = name
+        elif element.tag == 'c':
+            element.tag = 'kbd'
+
+        for child in element:
+            convert_hypertext(child, _toplevel=False)
+            if _toplevel:
+                # We don't just do this at the top level because we need to skip the top-level tags
+                text += lxml.html.tostring(child)
+                if child.tail:
+                    text += child.tail
+
+        if _toplevel:
+            return text
+
+    return convert_hypertext
+
+def format_code(code):
+    return '\n' + code.strip()
+
+def clean_html(html):
+    whitespace = re.compile(r'^\s+$')
+    html_tree = lxml.html.fromstring(html)
+    for element in html_tree.iter():
+        if element.text is not None and whitespace.match(element.text):
+            element.text = None
+        if element.tail is not None and whitespace.match(element.tail):
+            element.tail = None
+    return lxml.html.tostring(html_tree, encoding='ascii')
+
+def create_ref_link(name):
+    return canon_reference_dir + name + '.html' # We might change this later
+
+def build_reference(reference_dir, to_update, env, build_images):
+    print('Building reference')
     if not to_update:
         print_success('Nothing to do.')
-        sys.exit(0)
-    print_header("Building content")
-
-    reference_dir = os.path.join(src_dir, 'Reference', 'api_en')
-    content_dir = os.path.join(src_dir, 'content')
-    start = datetime.datetime.now()
+        return 0 
     failures = 0
-
-    if not os.path.exists(target_dir):
-        os.makedirs(target_dir)
-    if not os.path.exists(reference_dir):
-        print('Go to the root of the repo for now, please')
-        sys.exit(1)
-
     # Dictionary from flat names to ReferenceItems
     items_dict = {}
     for filename in os.listdir(reference_dir):
@@ -384,15 +365,103 @@ def build(images, to_update):
     items_dict[''] = items_dict['blank'] # Special case, for blank links
 
     print_success('{} stale files to be updated'.format(len(to_update)))
-    
-    img_dir = os.path.join(target_dir, 'img')
 
-    if images:
-        failures += generate_images(items_dict, to_update, src_dir, os.path.join(target_dir, 'img'), os.path.join(depends_dir, 'processing.py'))
-    find_images(items_dict, to_update, img_dir)
+    target_img_dir = os.path.join(target_reference_dir, 'imgs')
+    if not os.path.exists(target_reference_dir):
+        os.makedirs(target_reference_dir)
+    if not os.path.exists(target_img_dir):
+        os.makedirs(target_img_dir)
 
-    render_templates(items_dict, to_update, src_dir, reference_dir, target_dir)
+    if build_images:
+        failures += generate_images(items_dict, to_update, src_dir, os.path.join(depends_dir, 'processing.py'), target_img_dir)
+    find_images(items_dict, to_update, target_img_dir)
+
+    reference_template = env.get_template("reference_item_template.jinja")
+    convert_hypertext = make_convert_hypertext(items_dict)
+
+    env.globals['items_dict'] = items_dict
+    env.globals['convert_hypertext'] = convert_hypertext
+    env.globals['create_ref_link'] = create_ref_link
+    env.globals['hasattr'] = hasattr
+
+    for flat_name in to_update:
+        source_file_path = os.path.join(reference_dir, flat_name + '.xml')
+        target_file_path = os.path.join(target_reference_dir, flat_name + '.html')
+        print("Rendering {} to {}... ".format(source_file_path, target_file_path), end='')
+        source_item = items_dict[flat_name]
+        with open(target_file_path, 'w') as target_file:
+            rendered = reference_template.render(item=source_item, today=datetime.datetime.now().ctime())
+            target_file.write(clean_html(rendered))
+            print_success('success!')
+    return failures
+ 
+def build_tutorials(env):
+    print('Building tutorials')
+    item_template = env.get_template('tutorial_item_template.jinja')
+    index_template = env.get_template('tutorial_index_template.jinja')
+    index_data = etree.parse(os.path.join(tutorials_dir, 'tutorials.xml'))
+    tutorials = []
+    for tutorial_element in index_data.iterfind('tutorial'):
+        tutorial = {}
+        tutorial['folder'] = tutorial_element.text
+        tutorial['url'] = canon_tutorials_dir + tutorial['folder']
+        print('Handling tutorial {}...'.format(tutorial['folder']), end='')
+        tutorial_data = etree.parse(os.path.join(tutorials_dir, tutorial['folder'], 'tutorial.xml'))
+        tutorial['image'] = os.path.join(tutorial['folder'], 'imgs', tutorial_data.find('image').text)
+        tutorial['title'] = tutorial_data.find('title').text
+        tutorial['blurb'] = tutorial_data.find('blurb')
+        # I want to use convert_hypertext on the examples so they can use things like 'ref';
+        # we can use lxml.html to parse the html into an element-tree!
+        # Note that even though the index.html files don't have <html> or <body> tags, lxml.html automatically creates nodes for them.
+        content = lxml.html.parse(os.path.join(tutorials_dir, tutorial['folder'], 'index.html'))
+        tutorial['content'] = content.getroot().find('body')
+        target_tutorial_dir = os.path.join(target_tutorials_dir, tutorial['folder'])
+        if not os.path.exists(target_tutorial_dir):
+            os.makedirs(target_tutorial_dir)
+        with open(os.path.join(target_tutorial_dir, 'index.html'), 'w') as target_file:
+            target_file.write(clean_html(item_template.render(tutorial=tutorial)))
+        target_img_dir = os.path.join(target_tutorial_dir, 'imgs')
+        if os.path.exists(target_img_dir):
+            shutil.rmtree(target_img_dir)
+        shutil.copytree(os.path.join(tutorials_dir, tutorial['folder'], 'imgs'), target_img_dir)
+        tutorials.append(tutorial)
+        print_success('success!')
+    print('Building tutorial index page...', end='')
+    with open(os.path.join(target_tutorials_dir, 'index.html'), 'w') as target_file:
+        target_file.write(clean_html(index_template.render(tutorials=tutorials)))
+    print_success('success!')
+
+def build_examples(env):
+    pass
+
+def build_cover(env):
+    pass
+
+def build_overview(env):
+    pass
+
+def build(build_images, to_update):
+    print_header("Building content")
+
+    reference_dir = os.path.join(src_dir, 'Reference', 'api_en')
+    tutorials_dir = os.path.join(src_dir, 'Tutorials')
+    content_dir = os.path.join(src_dir, 'content')
+    template_dir = os.path.join(src_dir, 'template')
     
+    start = datetime.datetime.now()
+    failures = 0
+
+    if not os.path.exists(target_dir):
+        os.makedirs(target_dir)
+    if not os.path.exists(reference_dir):
+        print_error("Can't find {}; please don't change the format of the repo on me.".format(reference_dir))
+        sys.exit(1)
+
+    env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), trim_blocks='true')
+    
+    failures += build_reference(reference_dir, to_update, env, build_images)
+    build_tutorials(env)
+       
     print('Copying static resources...')
     distutils.dir_util.copy_tree('./content', target_dir)
     print('Done.')
@@ -574,7 +643,7 @@ if __name__ == '__main__':
         print_error("Please bootstrap, I can't load libraries I need.")
 
     if args.command == 'build':
-        build(images=args.images, to_update=get_flat_names_to_update(all=args.all, random=args.random, files=args.files))
+        build(build_images=args.images, to_update=get_flat_names_to_update(all=args.all, random=args.random, files=args.files))
     elif args.command == 'test':
         test()
     elif args.command == 'bootstrap':

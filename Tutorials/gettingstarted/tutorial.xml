@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<image>gettingstarted.gif</image>
+<title>Getting Started</title>
+<blurb>
+    <p>Welcome to Processing! This tutorial covers the basics of writing Python code.</p>
+    <p>Level: Beginner</p>
+</blurb>
+</root>
