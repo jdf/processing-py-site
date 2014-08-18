@@ -1,0 +1,277 @@
+<h1>Processing Overview</h1>
+	
+<p>
+<table width="656">
+  <tr>
+   	<td>
+
+	<p class="license">This tutorial is for Processing 2+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>. This tutorial is adapted from the book, <a href="http://www.processing.org/learning/books/#fry">Visualizing Data</a> by Ben Fry, O'Reilly 2007. Copyright &copy; 2008 Ben Fry. All rights reserved.</p>
+	
+	<p>&nbsp;</p>
+	
+<p>Processing is a simple programming environment that was created to make it easier to develop visually oriented applications with an emphasis on animation and providing users with instant feedback through interaction. The developers wanted a means to &ldquo;sketch&rdquo; ideas in code. As its capabilities have expanded over the past decade, Processing has come to be used for more advanced production-level work in addition to its sketching role. Originally built as a domain-specific extension to Java targeted towards artists and designers, Processing has evolved into a full-blown design and prototyping tool used for large-scale installation work, motion graphics, and complex data visualization.<br />
+  <br />
+  Python Mode for Processing is an extension to Processing, allowing you to write Processing programs in the Python programming language (instead of the Java-like Processing programming language). Program elements in Processing are fairly simple, regardless of which language you're learning to program in. If you're familiar with Python, it's best to forget that Processing has anything to do with it for a while, until you get the hang of how the API works.<br />
+<br />
+The latest version of Processing can be downloaded at <a href="http://processing.org/download"><em>http://processing.org/download</em></a><br />
+<br />
+</em>An important goal for the project was to make this type of programming accessible to a wider audience. For this reason, Processing is free to download, free to use, and open source. But projects developed using the Processing environment and core libraries can be used for any purpose. This model is identical to GCC, the GNU Compiler Collection. GCC and its associated libraries (e.g. libc) are open source under the GNU Public License (GPL), which stipulates that changes to the code must be made available. However, programs created with GCC (examples too numerous to mention) are not themselves required to be open source.<br />
+
+<br />
+Python Mode for Processing consists of:</p>
+<ul><li>The Processing Development Environment (PDE). This is the software that runs when you double-click the Processing icon. The PDE is an Integrated Development Environment (IDE) with a minimalist set of features designed as a simple introduction to programming or for testing one-off ideas.
+    <li>A collection of functions (also referred to as commands or methods) that make up the &ldquo;core&rdquo; programming interface, or API, as well as several libraries that support more advanced features such as sending data over a network, reading live images from a webcam, and saving complex imagery in PDF format.
+	  <li>The Python Mode add-on, which makes it possible to write programs in Python that look and behave like Processing programs and have access the Processing API.
+    <li>An active online community, based at <a href="http://processing.org"><em>http://processing.org</em></a>.</ul>
+
+  
+    <br />For this reason, references to &ldquo;Processing&rdquo; can be somewhat ambiguous. Are we talking about the API, the language, the development environment, or the web site? We'll be careful in this text when referring to each.  </p>
+
+	
+<h3>Sketching with Processing</h3>
+	
+	<p>
+	A Processing program is called a <em>sketch</em>. The idea is to make programming feel more like scripting, and adopt the process of scripting to quickly write code. Sketches are stored in the <em>sketchbook</em>, a folder that's used as the default location for saving all of your projects. Sketches that are stored in the sketchbook can be accessed from File &rarr; Sketchbook. Alternatively, File &rarr; Open... can be used to open a sketch from elsewhere on the system.<br />
+	<br />
+	Advanced programmers need not use the PDE, and may instead choose to use its libraries with the Python environment of choice. However, if you're just getting started, it's recommended that you use the PDE for your first few projects to gain familiarity with the way things are done. To better address our target audience, the conceptual model (how programs work, how interfaces are built, and how files are handled) is somewhat different from other programming environments. <br />
+	</p>
+
+<h3>Hello world</h3>
+
+    <p>The Processing equivalent of a &quot;Hello World&quot; program is simply to draw a line:
+    <br />
+		<pre>
+<span style="color: #006699;">line</span>(15, 25, 70, 90)
+</pre>
+    <br />   
+Enter this example and press the Run button, which is an icon that looks like the Play button from any audio or video device. Your code will appear in a new window, with a gray background and a black line from coordinate (15, 25) to (70, 90). The (0, 0) coordinate is the upper left-hand corner of the display window. Building on this program to change the size of the display window and set the background color, type in the code below:<br />
+    <br />
+		<pre>
+<span style="color: #006699;">size</span>(400, 400)
+<span style="color: #006699;">background</span>(192, 64, 0)
+<span style="color: #006699;">stroke</span>(255)
+<span style="color: #006699;">line</span>(150, 25, 270, 350)
+
+</pre>
+      <br />
+      This version sets the window size to 400 x 400 pixels, sets the background to an orange-red, and draws the line in white, by setting the stroke color to 255. By default, colors are specified in the range 0 to 255. Other variations of the parameters to the <tt>stroke()</tt> function provide alternate results:<br />
+
+			<br />
+<pre>
+stroke(255)               # sets the stroke color to white
+stroke(255, 255, 255)     # identical to the line above
+stroke(255, 128, 0)       # bright orange (red 255, green 128, blue 0)
+stroke("#FF8000")         # bright orange as a web color
+stroke(255, 128, 0, 128)  # bright orange with 50% transparency
+</pre>		
+	  <br />
+The same alternatives work for the <tt>fill()</tt> function, which sets the fill color, and the <tt>background()</tt> function, which clears the display window. Like all Processing functions that affect drawing properties, the fill and stroke colors affect all geometry drawn to the screen until the next fill and stroke functions.
+<br />
+<br />
+</p>
+
+	  <h3>Hello mouse</h3>
+      
+	  <p>A program written as a list of statements (like the previous examples) is called a <em>static</em> sketch. In a static sketch, a series of functions are used to perform tasks or create a single image without any animation or interaction. Interactive programs are drawn as a series of frames, which you can create by adding functions titled <tt>setup()</tt> and <tt>draw()</tt> as shown in the code below. These are built-in functions that are called automatically.<br />
+
+<br />
+<pre>
+<span style="color: #33997E;">def</span> <span style="color: #006699;"><b>setup</b></span>():
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">size</span>(400, 400)
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(255)
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">background</span>(192, 64, 0)
+
+<span style="color: #33997E;">def</span> <span style="color: #006699;"><b>draw</b></span>():
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">line</span>(150, 25, <span style="color: #D94A7A;">mouseX</span>, <span style="color: #D94A7A;">mouseY</span>)
+</pre>
+		<br />
+ The <tt>setup()</tt> block runs once, and the <tt>draw()</tt> block runs repeatedly. As such, <tt>setup()</tt> can be used for any initialization; in this case, setting the screen size, making the background orange, and setting the stroke color to white. The <tt>draw()</tt> block is used to handle animation. The <tt>size()</tt> function must always be the first line inside <tt>setup()</tt>.<br />
+
+ <br />
+        Because the <tt>background()</tt> function is used only once, the screen will fill with lines as the mouse is moved. To draw just a single line that follows the mouse, move the <tt>background()</tt> function to the <tt>draw()</tt> function, which will clear the display window (filling it with orange) each time <tt>draw()</tt> runs.<br />
+
+<br />
+<pre>
+<span style="color: #33997E;">def</span> <span style="color: #006699;"><b>setup</b></span>():
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">size</span>(400, 400)
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(255)
+
+<span style="color: #33997E;">def</span> <span style="color: #006699;"><b>draw</b></span>():
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">background</span>(192, 64, 0)
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">line</span>(150, 25, <span style="color: #D94A7A;">mouseX</span>, <span style="color: #D94A7A;">mouseY</span>)
+</pre>
+		<br />
+        Static programs are most commonly used for extremely simple examples, or for scripts that run in a linear fashion and then exit. For instance, a static program might start, draw a page to a PDF file, and exit.<br />
+        <br />
+Most programs will use the <tt>setup()</tt> and <tt>draw()</tt> blocks. More advanced mouse handling can also be introduced; for instance, the <tt>mousePressed()</tt> function will be called whenever the mouse is pressed. In the following example, when the mouse is pressed, the screen is cleared via the <tt>background()</tt> function:<br />
+
+<br />
+<pre>
+<span style="color: #33997E;">def</span> <span style="color: #006699;"><b>setup</b></span>():
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">size</span>(400, 400)
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(255)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="color: #33997E;">def</span> <span style="color: #006699;"><b>draw</b></span>():
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">line</span>(150, 25, <span style="color: #D94A7A;">mouseX</span>, <span style="color: #D94A7A;">mouseY</span>)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="color: #33997E;">def</span> <span style="color: #D94A7A;">mousePressed</span>():
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">background</span>(192, 64, 0)
+</pre>
+<br />
+<!--More about static versus active mode programs can be found in the Programming Modes section of the reference, which can be viewed from Help &rarr; Environment, or online at <a href="http://processing.org/reference/environment/"><em>http://processing.org/reference/environment</em></a><br />-->
+      </p>
+		
+<!-- commenting out for now		
+		<h3>Exporting and distributing your work</h3>
+		
+		
+		<p>One of the most significant features of the Processing environment is its ability to bundle your sketch into an application with just one click. Select File &rarr; Export Application to package your current sketch as an application. This will bundle your sketch as an application for Windows, Mac OS X, or Linux depending on which operating system you're exporting from. The application folders are overwritten whenever you export&mdash;make a copy or remove them from the sketch folder before making changes to the contents of the folder. Alternatively, you can turn off the automatic file erasure in the Preferences.<br />
+	  <br />
+        More about the export features can be found in the reference at <a href="http://processing.org/reference/environment/#Export"><em>http://processing.org/reference/environment/#Export</em></a><br />
+      </p>
+-->
+      
+		<h3>Creating images from your work</h3>
+		
+		<p>If you don't want to distribute the actual project, you might want to create images of its output instead. Images are saved with the <tt>saveFrame()</tt> function. Adding <tt>saveFrame()</tt> at the end of <tt>draw()</tt> will produce a numbered sequence of TIFF-format images of the program's output, named <em>screen-0001.tif</em>, <em>screen-0002.tif</em>, and so on. A new file will be saved each time <tt>draw()</tt> runs &mdash; watch out, this can quickly fill your sketch folder with hundreds of files. You can also specify your own name and file type for the file to be saved with a function like:
+		<pre>saveFrame(&quot;output.png&quot;)</pre>
+
+		<br />
+          To do the same for a numbered sequence, use # (hash marks) where the numbers should be placed:<br />
+          <br />
+          <pre>saveFrame(&quot;output-####.png&quot;)</pre>
+          <br />
+          For high quality output, you can write geometry to PDF files instead of the screen, as described in the later section about the <tt>size()</tt> function.<br />
+
+      </p>
+      
+		<h3>Examples and reference</h3>
+
+		<p>While many programmers learn to code in school, others teach themselves and learn on their own. Learning on your own involves looking at lots of other code: running, altering, breaking, and enhancing it until you can reshape it into something new. With this learning model in mind, the Processing software download includes hundreds of examples that demonstrate different features of the environment and API.<br />
+		  <br />
+		  The examples can be accessed from the File &rarr; Examples menu. They're grouped into categories based on their function (such as Motion, Typography, and Image) or the libraries they use (PDF, Network, and Video). <br />
+          <br />
+					Find an interesting topic in the list and try an example. You'll see functions that are familiar, e.g. <tt>stroke()</tt>, <tt>line()</tt>, and <tt>background()</tt>, as well as others that have not yet been covered. <!-- FIXME: include this again after reference works in IDE
+					To see how a function works, select its name, and then right-click and choose Find in Reference from the pop-up menu (Find in Reference can also be found beneath the Help menu). This will open the reference for that function in your default web browser.<br />
+          <br />
+					In addition to a description of the function's syntax, each reference page includes an example that uses the function. The reference examples are much shorter (usually four or five lines apiece) and easier to follow than the longer code examples. <br />-->
+      </p>
+      
+      
+		<h3>More about size()</h3>
+		
+		<p>The <tt>size()</tt> function sets the global variables width and height. For objects whose size is dependent on the screen, always use the width and height variables instead of a number. This prevents problems when the size() line is altered.
+		<pre>
+<span style="color: #006699;">size</span>(400, 400)
+
+<span style="color: #666666;">#&nbsp;The&nbsp;wrong&nbsp;way&nbsp;to&nbsp;specify&nbsp;the&nbsp;middle&nbsp;of&nbsp;the&nbsp;screen</span>
+<span style="color: #006699;">ellipse</span>(200, 200, 50, 50); 
+
+<span style="color: #666666;">#&nbsp;Always&nbsp;the&nbsp;middle,&nbsp;no&nbsp;matter&nbsp;how&nbsp;the&nbsp;size()&nbsp;line&nbsp;changes</span>
+<span style="color: #006699;">ellipse</span>(<span style="color: #D94A7A;">width</span>/2, <span style="color: #D94A7A;">height</span>/2, 50, 50);
+</pre>
+        <br />
+        In the earlier examples, the <tt>size()</tt> function specified only a width and height for the window to be created. An optional parameter to the <tt>size()</tt> function specifies how graphics are rendered. A renderer handles how the Processing API is implemented for a particular output function (whether the screen, or a screen driven by a high-end graphics card, or a PDF file). The default renderer does an excellent job with high-quality 2D vector graphics, but at the expense of speed. In particular, working with pixels directly is slow. Several other renderers are included with Processing, each having a unique function. At the risk of getting too far into the specifics, here's a description of the other possible drawing modes to use with Processing. <br />
+
+        <br />
+<pre>size(400, 400, P2D)</pre>
+<br />
+        The P2D renderer uses OpenGL for faster rendering of two-dimensional graphics, while using Processing's simpler graphics APIs and the Processing development environment's easy application export.<br />
+<br />
+
+<pre>size(400, 400, P3D)</pre>
+<br />
+        The P3D renderer also uses OpenGL for faster rendering. It can draw three-dimensional objects and two-dimensional object in space as well as lighting, texture, and materials.<br />
+        <br />
+        
+<pre>size(400, 400, PDF, &quot;output.pdf&quot;)</pre>
+<br />
+        The PDF renderer draws all geometry to a file instead of the screen. To use PDF, in addition to altering your size() function, you must select Import Library, then PDF from the Sketch menu. This is a cousin of the default renderer, but instead writes directly to PDF files. <br />
+        <br />
+      </p>
+      
+      
+      <h3>Loading and displaying data</h3>
+      
+      
+      <p>One of the unique aspects of the Processing API is the way files are handled. The <tt>loadImage()</tt> and <tt>loadStrings()</tt> functions each expect to find a file inside a folder named <em>data</em>, which is a subdirectory of the sketch folder. <br />
+
+<br />
+
+        File handling functions include <tt>loadStrings()</tt>, which reads a text file into an array of String objects, and <tt>loadImage()</tt> which reads an image into a PImage object, the container for image data in Processing. <br />
+<br />
+
+<pre>
+<span style="color: #666666;">#&nbsp;Examples&nbsp;of&nbsp;loading&nbsp;a&nbsp;text&nbsp;file&nbsp;and&nbsp;a&nbsp;JPEG&nbsp;image</span>
+<span style="color: #666666;">#&nbsp;from&nbsp;the&nbsp;data&nbsp;folder&nbsp;of&nbsp;a&nbsp;sketch.</span>
+lines&nbsp;=&nbsp;<span style="color: #006699;">loadStrings</span>(<span style="color: #7D4793;">&quot;something.txt&quot;</span>)
+img&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;picture.jpg&quot;</span>)
+</pre>
+<br />
+
+The <tt>loadStrings()</tt> function returns an array of Python string objects, which is assigned to a variable named <tt>lines</tt>; it will presumably be used later in the program under this name. The reason <tt>loadStrings</tt> creates an array is that it splits the <em>something.txt</em> file into its individual lines. The following function returns a <tt>PImage</tt> object, which is assigned to a variable named <tt>img</tt>.<br />
+
+        <br />
+To add a file to the data folder of a Processing sketch, use the Sketch &rarr; Add File menu option, or drag the file into the editor window of the PDE. The data folder will be created if it does not exist already. <br />
+<br />
+        To view the contents of the sketch folder, use the Sketch &rarr; Show Sketch Folder menu option. This opens the sketch window in your operating system's file browser. <br />
+      </p>
+      
+      
+      <h3>Libraries add new features</h3>
+      
+      <p>A <em>library</em> is a collection of code in a specified format that makes it easy to use within Processing. Libraries have been important to the growth of the project, because they let developers make new features accessible to users without needing to make them part of the core Processing API.<br />
+        <br />
+        Several core libraries come with Processing. These can be seen in the Libraries section of the online reference (also available from the Help menu from within the PDE.) These libraries can be seen at <a href="http://processing.org/reference/libraries/"><em>http://processing.org/reference/libraries/</em></a><br />
+        <br />
+        One example is the PDF Export library. This library makes it possible to write PDF files directly from Processing. These vector graphics files can be scaled to any size and output at very high resolutions.<br />
+
+        <br />
+        To use the PDF library in a Python Mode project, choose Sketch &rarr; Import Library &rarr; pdf. This will add the following line to the top of the sketch:
+      <pre>add_library('pdf')</pre>
+      <br />
+      This line instructs Processing to use the indicated library when running the sketch.<br />
+
+        <br />
+        Now that the PDF library is imported, you may use it to create a file. For instance, the following line of code creates a new PDF file named <em>lines.pdf</em> that you can draw to.<br />
+        <br />
+        <pre>beginRecord(PDF, "lines.pdf")</pre>
+        <br />
+
+        Each drawing function such as <tt>line()</tt> and <tt>ellipse()</tt> will now draw to the screen as well as to the PDF.<br />
+        <br />
+        Other libraries provide features such as reading images from a camera, sending and receiving MIDI and OSC commands, sophisticated 3D camera control, and access to MySQL databases.<br />
+
+      </p>
+      
+      <h3>Sketching and scripting</h3>
+      
+      <p>Processing sketches are made up of one or more tabs, with each tab representing a piece of code. The environment is designed around projects that are a few pages of code, and often three to five tabs in total. This covers a significant number of projects developed to test and prototype ideas, often before embedding them into a larger project or building a more robust application for broader deployment.<br />
+        <br />
+
+        Processing assembles our experience in building software of this kind (sketches of interactive works or data-driven visualization) and simplifies the parts that we felt should be easier, such as getting started quickly, and insulating new users from issues like those associated with setting up complicated programming frameworks. <br />
+      </p>
+      
+      <h3>Don't start by trying to build a cathedral</h3>
+      
+      <p>If you're already familiar with programming, it's important to understand how Processing differs from other development environments and languages. The Processing project encourages a style of work that builds code quickly, understanding that either the code will be used as a quick sketch, or ideas are being tested before developing a final project. This could be misconstrued as software engineering heresy. Perhaps we're not far from &ldquo;hacking,&rdquo; but this is more appropriate for the roles in which Processing is used. Why force students or casual programmers to learn about graphics contexts, threading, and event handling functions before they can show something on the screen that interacts with the mouse? The same goes for advanced developers: why should they always need to start with the same two pages of code whenever they begin a project?<br />
+        <br />
+        In another scenario, the ability to try things out quickly is a far higher priority than sophisticated code structure. Usually you don't know what the outcome will be, so you might build something one week to try an initial hypothesis, and build something new the next based on what was learned in the first week. To this end, remember the following considerations as you begin writing code with Processing:
+
+<ul><li>Be careful about creating unnecessary structures in your code. As you learn about encapsulating your code into classes, it's tempting to make ever-smaller classes, because data can always be distilled further. Do you need classes at the level of molecules, atoms, or quarks? Just because atoms go smaller doesn't mean that we need to work at a lower level of abstraction. If a class is half a page, does it make sense to have six additional subclasses that are each half a page long? Could the same thing be accomplished with a single class that is a page and a half in total?
+        <li>Consider the scale of the project. It's not always necessary to build enterprise-level software on the first day. Explore first: figure out the minimum code necessary to help answer your questions and satisfy your curiosity.
+</ul>
+        The argument is not to avoid continually rewriting, but rather to delay engineering work until it's appropriate. The threshold for where to begin engineering a piece of software is much later than for traditional programming projects because there is a kind of <em>art</em> to the early process of quick iteration.<br />
+        <br />
+Of course, once things are working, avoid the urge to rewrite for its own sake. A rewrite should be used when addressing a completely different problem. If you've managed to hit the nail on the head, you should refactor to clean up function names and class interactions. But a full rewrite of already finished code is almost always a bad idea, no matter how &quot;ugly&quot; it may seem.<br />
+
+	<p>&nbsp;</p>
+	
+  <p class="license">This tutorial is for Processing 2+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>. This tutorial is adapted from the book, <a href="http://www.processing.org/learning/books/#fry">Visualizing Data</a> by Ben Fry, O'Reilly 2007. Copyright &copy; 2008 Ben Fry. All rights reserved.</p>
+	
+
+    </td>
+  </tr>
+</table>
+</p>
+
