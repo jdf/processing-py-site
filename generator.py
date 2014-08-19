@@ -516,13 +516,14 @@ def bootstrap(force, dryrun, update):
 
     for javabin in ['java', 'javac']:
         print_warning(javabin + ' -version')
-        process = subprocess.Popen([javabin, '-version'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        out, err = process.communicate()
-        print(out, end='')
-        print(err, end='')
-        if '1.7' not in out and '1.7' not in err:
-            print_error('Please install an oracle jdk >= 1.7')
-            sys.exit(1)
+        if not dryrun:
+            process = subprocess.Popen([javabin, '-version'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            out, err = process.communicate()
+            print(out, end='')
+            print(err, end='')
+            if '1.7' not in out and '1.7' not in err:
+                print_error('Please install an oracle jdk 1.7')
+                sys.exit(1)
 
     print_success('All necessary commands supported!')
     
