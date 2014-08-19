@@ -42,7 +42,6 @@ target_examples_dir  = target_dir + canon_examples_dir
 reference_dir='Reference/api_en/'
 tutorials_dir='Tutorials/'
 
-
 def print_header(text):
     print('=== \033[35m{}\033[0m ==='.format(text))
 
@@ -311,7 +310,7 @@ def make_convert_hypertext(names_dict):
     def convert_hypertext(element, _toplevel=True):
         if _toplevel:
             element = copy.deepcopy(element)
-            text = ''
+            text = element.text or ''
 
         if element.tag == 'ref':
             element.tag = 'a'
@@ -326,8 +325,6 @@ def make_convert_hypertext(names_dict):
             if _toplevel:
                 # We don't just do this at the top level because we need to skip the top-level tags
                 text += lxml.html.tostring(child)
-                if child.tail:
-                    text += child.tail
 
         if _toplevel:
             return text
