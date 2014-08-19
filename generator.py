@@ -501,8 +501,6 @@ def bootstrap(force, dryrun, update):
     failures = []
     verifiables = [
             ['pip', '-V'],
-            ['java','-version'],
-            ['javac', '-version'],
             ['ant', '-version'],
             ['git', '--version']
             ]
@@ -515,6 +513,16 @@ def bootstrap(force, dryrun, update):
         for failure in failures:
             print_error('     ' + failure)
         sys.exit(1)
+
+    for javabin in ['java', 'javac']:
+        print_warning(javabin + ' -version')
+        process = subprocess.Popen([javabin, '-version'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        out, err = process.communicate()
+        print(out, end='')
+        print(err, end='')
+        if '1.7' not in out and '1.7' not in err:
+            print_error('Please install an oracle jdk >= 1.7')
+            sys.exit(1)
 
     print_success('All necessary commands supported!')
     
