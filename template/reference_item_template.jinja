@@ -46,7 +46,7 @@
         </td>
     </tr>
 
-    {% if hasattr(item, 'syntax') %} {# To keep lxml from yelling at us about unstable APIs #}
+    {% if item.syntax is not none %} {# To keep lxml from yelling at us about unstable APIs #}
         <tr class=""><th scope="row">Syntax</th><td><pre>{{ convert_hypertext(item.syntax) }}</pre></td></tr>
     {% endif %}
 
