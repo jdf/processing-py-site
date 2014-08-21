@@ -10,6 +10,7 @@
 
 <example>
 <image />
+<notest />
 <code><![CDATA[
 def setup():
     metaBold = loadFont("fonts/Meta-Bold.vlw.gz")

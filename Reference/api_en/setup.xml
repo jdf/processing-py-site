@@ -10,6 +10,7 @@
 
 <example>
 <image />
+<notest />
 <code><![CDATA[
 a = 0
 

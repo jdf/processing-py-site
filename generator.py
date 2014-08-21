@@ -103,7 +103,8 @@ class ReferenceItem:
         for example in xml.iterfind('example'):
             self.examples.append({
                 'code':   format_code(self.get_element_text(example.find('code'))),
-                'image':  example.find('noimage') is None
+                'image':  example.find('image') is not None,
+                'run':    example.find('notest') is None
                 })
  
         self.parameters = []
@@ -235,6 +236,9 @@ def generate_images(items_dict, to_update, src_dir, p5py_dir, target_image_dir):
     for name in to_update:
         item = items_dict[name]
         for number, example in enumerate(item.examples):
+            if not example['run']:
+                # This is an interactive sketch we can't run; ignore it
+                continue
             workitem = {}
             workitem['name'] = name + str(number)
             workitem['scriptfile'] = os.path.join(work_dir, workitem['name'] + '.py')
@@ -246,7 +250,7 @@ def generate_images(items_dict, to_update, src_dir, p5py_dir, target_image_dir):
 
     if len(workitems) == 0:
         print("Skipping image generation, everything up to date") 
-        return
+        return 0
 
     process = None
     generated = {}

@@ -9,6 +9,7 @@
 <type>p5function</type>
 
 <example>
+<notest />
 <image />
 <code><![CDATA[
 def setup(): 

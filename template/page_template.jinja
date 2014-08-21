@@ -1,4 +1,5 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html> 
     <head>
         <title>{% block title %}{% endblock %}</title>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -15,7 +16,7 @@
         <div id="container">
             {% block header %}
             <div id="header">
-                <a href="/" title="Back to the Processing cover."><div class="processing-logo no-cover" alt="Processing cover"></div></a>
+                <a href="/" title="Back to the Processing cover." class="processing-logo no-cover"></a>
                 <form name="search" method="get" action="http://www.google.com/search">
                        <p><input type="hidden" name="as_sitesearch" value="processing.org" />
                        <input type="text" name="as_q" value="" size="20" class="text" />
