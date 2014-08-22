@@ -12,6 +12,7 @@ import shutil
 import distutils.core
 import sys
 import copy
+import cgi
 import time, datetime
 
 bootstrapped = True
@@ -340,7 +341,7 @@ def make_convert_hypertext(names_dict):
     return convert_hypertext
 
 def format_code(code):
-    return '\n' + code.strip()
+    return '\n' + cgi.escape(code.strip())
 
 def clean_html(html):
     whitespace = re.compile(r'^\s+$')
