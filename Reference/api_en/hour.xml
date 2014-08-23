@@ -10,6 +10,7 @@
 
 <example>
 <image />
+<notest />
 <code><![CDATA[
 background(204)
 s = second()# Values from 0 - 59

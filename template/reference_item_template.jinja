@@ -25,12 +25,11 @@
         <tr class=""><th scope="row">Examples</th><td>
         {% for example in item.examples %}
             <div class="example">
-            {% if example.image %}
+                {%- if example.image %} {# weird spacing here to avoid creating spaces in <pre> #}
                 <img src="{{example.image}}"/>
-            {% endif %}
-            <pre class='margin'>
-                {{ example.code }}
-            </div></pre>
+                <pre class='margin'/>{%- else %}
+                <pre>{%- endif %}{{ example.code }}</pre>
+            </div>
             {% if example.broken %}
                 {# This will get their attention #}
                 <h2 style="color:red;">THIS EXAMPLE IS BROKEN</h2>
@@ -46,7 +45,7 @@
         </td>
     </tr>
 
-    {% if hasattr(item, 'syntax') %} {# To keep lxml from yelling at us about unstable APIs #}
+    {% if item.syntax is not none %} {# To keep lxml from yelling at us about unstable APIs #}
         <tr class=""><th scope="row">Syntax</th><td><pre>{{ convert_hypertext(item.syntax) }}</pre></td></tr>
     {% endif %}
 

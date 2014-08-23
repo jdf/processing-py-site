@@ -10,6 +10,7 @@
 
 <example>
 <image />
+<notest />
 <code><![CDATA[
 def setup(): 
     frameRate(30)

@@ -12,6 +12,7 @@ import shutil
 import distutils.core
 import sys
 import copy
+import cgi
 import time, datetime
 
 bootstrapped = True
@@ -78,43 +79,55 @@ class ReferenceItem:
     def __init__(self, source_xml):
         self.source_xml = source_xml
         xml = etree.parse(source_xml)
+
+        self.name = None
         if xml.find('name') is not None:
             self.name = self.get_element_text(xml.find('name'))
+
+        self.type = None
         if xml.find('type') is not None:
             self.type = self.get_element_text(xml.find('type'))
-        if xml.find('example') is not None:
-            self.examples = []
-            # Note: 'image' starts out as a flag representing whether this example wants an image or not.
-            # It is later transformed into the url of the image we've generated.
-            for example in xml.iterfind('example'):
-                self.examples.append({'code': format_code(self.get_element_text(example.find('code'))), 'image':example.find('noimage') is None})
-        # We store plain xml-elements for some children so that we can use convert_hypertext on them at generation time.
-        # This is necessary because all ReferenceItems have to be parsed before links can be resolved.
+        
+        self.description = None
         if xml.find('description') is not None:
             self.description = xml.find('description')
+
+        self.syntax = None
         if xml.find('syntax') is not None:
             self.syntax = xml.find('syntax')
-        if xml.find('parameter') is not None:
-            self.parameters = []
-            for parameter in xml.iterfind('parameter'):
-                label = self.get_element_text(parameter.find('label'))
-                description = parameter.find('description')
-                self.parameters.append({'label':label, 'description':description})
-        if xml.find('method') is not None:
-            self.methods = []
-            for method in xml.iterfind('method'):
-                label = self.get_element_text(method.find('label'))
-                description = method.find('description')
-                ref = create_ref_link(self.get_element_text(method.find('ref')))
-                self.methods.append({'label':label, 'description':description, 'ref':ref})
-        if xml.find('constructor') is not None:
-            self.constructors = []
-            for constructor in xml.iterfind('constructor'):
-                self.constructors.append(self.get_element_text(constructor))
-        if xml.find('related') is not None:
-            self.relateds = []
-            for related in xml.iterfind('related'):
-                self.relateds.append(self.get_element_text(related))
+
+        # We store plain xml-elements for some children so that we can use convert_hypertext on them at generation time.
+        # This is necessary because all ReferenceItems have to be parsed before links can be resolved.
+        self.examples = []
+        # Note: 'image' starts out as a flag representing whether this example wants an image or not.
+        # It is later transformed into the url of the image we've generated.
+        for example in xml.iterfind('example'):
+            self.examples.append({
+                'code':   format_code(self.get_element_text(example.find('code'))),
+                'image':  example.find('image') is not None,
+                'run':    example.find('notest') is None
+                })
+ 
+        self.parameters = []
+        for parameter in xml.iterfind('parameter'):
+            label = self.get_element_text(parameter.find('label'))
+            description = parameter.find('description')
+            self.parameters.append({'label':label, 'description':description})
+        
+        self.methods = []
+        for method in xml.iterfind('method'):
+            label = self.get_element_text(method.find('label'))
+            description = method.find('description')
+            ref = create_ref_link(self.get_element_text(method.find('ref')))
+            self.methods.append({'label':label, 'description':description, 'ref':ref})
+
+        self.constructors = []
+        for constructor in xml.iterfind('constructor'):
+            self.constructors.append(self.get_element_text(constructor))
+
+        self.relateds = []
+        for related in xml.iterfind('related'):
+            self.relateds.append(self.get_element_text(related))
 
     def get_element_text(self, element):
         '''Get element.text, supplying the empty string if element.text is None. Take filename so we can point to errors.'''
@@ -222,24 +235,23 @@ def generate_images(items_dict, to_update, src_dir, p5py_dir, target_image_dir):
         raise IOError("{} doesn't exist; can't generate images.".format(jython_dir))
 
     for name in to_update:
-        try:
-            item = items_dict[name]
-            for number, example in enumerate(item.examples):
-                workitem = {}
-                workitem['name'] = name + str(number)
-                workitem['scriptfile'] = os.path.join(work_dir, workitem['name'] + '.py')
-                workitem['imagefile'] = os.path.join(target_image_dir, workitem['name'] + '.png')
-                workitem['code']= example['code'] + export_image_postlude.format(imagefile=workitem['imagefile'])
-                with open(workitem['scriptfile'], 'w') as f:
-                    f.write(workitem['code'])
-                workitems[workitem['name']] = workitem # We store workitems by name; a little redundant, but handy
-        except AttributeError:
-            # item has no examples
-            pass
+        item = items_dict[name]
+        for number, example in enumerate(item.examples):
+            if not example['run']:
+                # This is an interactive sketch we can't run; ignore it
+                continue
+            workitem = {}
+            workitem['name'] = name + str(number)
+            workitem['scriptfile'] = os.path.join(work_dir, workitem['name'] + '.py')
+            workitem['imagefile'] = os.path.join(target_image_dir, workitem['name'] + '.png')
+            workitem['code']= example['code'] + export_image_postlude.format(imagefile=workitem['imagefile'])
+            with open(workitem['scriptfile'], 'w') as f:
+                f.write(workitem['code'])
+            workitems[workitem['name']] = workitem # We store workitems by name; a little redundant, but handy
 
     if len(workitems) == 0:
         print("Skipping image generation, everything up to date") 
-        return
+        return 0
 
     process = None
     generated = {}
@@ -280,27 +292,24 @@ def generate_images(items_dict, to_update, src_dir, p5py_dir, target_image_dir):
 
 def find_images(items_dict, to_update, img_dir):
     for name in to_update:
-        try:
-            item = items_dict[name]
-            for number, example in enumerate(item.examples):
-                example_filename = name + str(number) + '.png'
-                example_path = os.path.join(img_dir, example_filename)
-                if example['image']:
-                    if os.path.exists(example_path):
-                        # UPDATE THIS if the image directory changes!
-                        example['image'] = canon_reference_dir + 'imgs/' + example_filename
-                    else:
-                        # We want an image, but we don't have one. hm.
-                        del example['image']
-                        example['broken'] = True
+        item = items_dict[name]
+        for number, example in enumerate(item.examples):
+            example_filename = name + str(number) + '.png'
+            example_path = os.path.join(img_dir, example_filename)
+            if example['image']:
+                if os.path.exists(example_path):
+                    # UPDATE THIS if the image directory changes!
+                    example['image'] = canon_reference_dir + 'imgs/' + example_filename
                 else:
-                    if os.path.exists(example_path):
-                        # So, we run all example sketches as a kind of unit-test, and they all save images,
-                        # but some of those images don't actually need to be drawn. This is one of those
-                        # images.
-                        os.remove(example_path)
-        except AttributeError:
-            pass
+                    # We want an image, but we don't have one. hm.
+                    del example['image']
+                    example['broken'] = True
+            else:
+                if os.path.exists(example_path):
+                    # So, we run all example sketches as a kind of unit-test, and they all save images,
+                    # but some of those images don't actually need to be drawn. This is one of those
+                    # images.
+                    os.remove(example_path)
 
 def make_convert_hypertext(names_dict):
     """
@@ -332,7 +341,7 @@ def make_convert_hypertext(names_dict):
     return convert_hypertext
 
 def format_code(code):
-    return '\n' + code.strip()
+    return '\n' + cgi.escape(code.strip())
 
 def clean_html(html):
     whitespace = re.compile(r'^\s+$')
@@ -402,7 +411,7 @@ def build_tutorials(env):
         tutorial = {}
         tutorial['folder'] = tutorial_element.text
         tutorial['url'] = canon_tutorials_dir + tutorial['folder']
-        print('Handling tutorial {}...'.format(tutorial['folder']), end='')
+        print('Handling tutorial {}... '.format(tutorial['folder']), end='')
         tutorial_data = etree.parse(os.path.join(tutorials_dir, tutorial['folder'], 'tutorial.xml'))
         tutorial['image'] = os.path.join(tutorial['folder'], 'imgs', tutorial_data.find('image').text)
         tutorial['title'] = tutorial_data.find('title').text
@@ -423,7 +432,7 @@ def build_tutorials(env):
         shutil.copytree(os.path.join(tutorials_dir, tutorial['folder'], 'imgs'), target_img_dir)
         tutorials.append(tutorial)
         print_success('success!')
-    print('Building tutorial index page...', end='')
+    print('Building tutorial index page... ', end='')
     with open(os.path.join(target_tutorials_dir, 'index.html'), 'w') as target_file:
         target_file.write(clean_html(index_template.render(tutorials=tutorials)))
     print_success('success!')
