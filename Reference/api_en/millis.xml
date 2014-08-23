@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image />
+<noimage />
 <code><![CDATA[
 def draw(): 
     m = millis()

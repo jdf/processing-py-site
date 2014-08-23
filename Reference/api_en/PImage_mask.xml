@@ -12,15 +12,13 @@
 <example>
 <image />
 <code><![CDATA[
-PImage photo, maskImage
-def setup(): 
-    size(100, 100)
-    photo = loadImage("test.jpg")
-    maskImage = loadImage("mask.jpg")
-    photo.mask(maskImage)
-def draw(): 
-    image(photo, 0, 0)
-    image(photo, width/4, 0)
+size(120, 120)
+photo = loadImage("rockies.jpg")
+maskImage = loadImage("mask.jpg")
+photo.mask(maskImage)
+
+image(photo, 0, 0)
+image(photo, width/4, height/4)
 ]]></code>
 </example>
 

@@ -12,7 +12,8 @@
 <type></type>
 
 <example>
-<image />
+<noimage />
+<notest />
 <code><![CDATA[
 add_library('pdf')
 

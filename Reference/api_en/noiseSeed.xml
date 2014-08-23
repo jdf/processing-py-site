@@ -12,15 +12,12 @@
 <image />
 <code><![CDATA[
 xoff = 0.0
-
-def setup(): 
-    noiseSeed(0)
-    stroke(0, 10)
-
-def draw(): 
-    xoff = xoff + .01
-    n = noise(xoff) * width
-    line(n, 0, n, height)
+noiseSeed(0)
+stroke(0, 10)
+for i in range(1000):
+  xoff = xoff + .01
+  n = noise(xoff) * width
+  line(n, 0, n, height)
 ]]></code>
 </example>
 

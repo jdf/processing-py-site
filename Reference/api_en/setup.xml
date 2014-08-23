@@ -9,19 +9,22 @@
 <type>p5function</type>
 
 <example>
-<image />
+<noimage />
+<notest />
 <code><![CDATA[
 a = 0
 
 def setup(): 
-    size(200, 200)
-    background(0)
-    noStroke()
-    fill(102)
+	size(200, 200)
+	background(0)
+	noStroke()
+	fill(102)
 
-def draw(): 
-    a += 1 % width
-    rect(a, 10, 2, 80)
+def draw():
+	background(0)
+	a = (a + 1) % width
+	rect(a, 10, 2, 80)
+
 ]]></code>
 </example>
 

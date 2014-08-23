@@ -33,7 +33,8 @@ for i in range(100):
 </example>
 
 <example>
-<image />
+<noimage />
+<notest />
 <code><![CDATA[
 # If the color is defined here, it won't be 
 # affected by the colorMode() in setup(). 

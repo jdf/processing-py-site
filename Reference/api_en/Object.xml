@@ -11,30 +11,22 @@
 <example>
 <image />
 <code><![CDATA[
-class HLine(object):
+class HLine(object):  # Class definition
+  def __init__(self, ypos, stroke_color):  # Object constructor
+    self.ypos = ypos
+    self.stroke_color = stroke_color
 
-    def __init__(self, y, s):
-        self.ypos = y
-        self.speed = s
+  def display(self):  # Display method
+    stroke(self.stroke_color)
+    line(0, self.ypos, width, self.ypos)
 
-    def update(self):
-        self.ypos += self.speed
-        if self.ypos > width:
-            self.ypos = 0
-        line(0, self.ypos, width, self.ypos)
+# Declare and construct two objects (h1 and h2) of the class HLine(object):
+h1 = HLine(20, 0)
+h2 = HLine(50, 255)
 
-# Declare and construct two objects (h1, h2) from the class HLine(object):
-h1 = HLine(20, 2.0)
-h2 = HLine(50, 2.5)
-
-def setup():
-    size(200, 200)
-    frameRate(30)
-
-def draw():
-    background(204)
-    h1.update()
-    h2.update()
+background(127)
+h1.display()
+h2.display()
 ]]></code>
 </example>
 

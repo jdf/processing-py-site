@@ -10,44 +10,32 @@
 <type></type>
 
 <example>
+	<noimage />
 <code><![CDATA[
-# Non-static (lerp on a specific vector)
-current = None
-target = None
-
-def setup(): 
-    current = PVector(0.0, 0.0)
-    target = PVector(100.0, 100.0)
-    current.lerp(target, 0.5)
-    println(current)# Prints "[ 50.0, 50.0, 0.0 ]"
+current = PVector(0.0, 0.0)
+target = PVector(100.0, 100.0)
+current.lerp(target, 0.5)
+println(current)# Prints "[ 50.0, 50.0, 0.0 ]"
 ]]></code>
 </example>
 
 <example>
+	<noimage />
+	<notest />
 <code><![CDATA[
-# Static (return a vector)
-start = None
-end = None
-middle = None
-
-def setup():
-    start = PVector(0.0, 0.0)
-    end = PVector(100.0, 100.0)
-    middle = PVector.lerp(start, end, 0.5)
-    println(middle)  # Prints "[ 50.0, 50.0, 0.0 ]"
+start = PVector(0.0, 0.0)
+end = PVector(100.0, 100.0)
+middle = PVector.lerp(start, end, 0.5)
+println(middle)  # Prints "[ 50.0, 50.0, 0.0 ]"
 ]]></code>
 </example>
 
 <example>
-<image />
+<noimage />
 <code><![CDATA[
-# Non-static (lerp on a specific vector)
-PVector v
-def setup(): 
-    v = PVector(0.0, 0.0)
-def draw(): 
-    v.lerp(mouseX, mouseY, 0.0, 0.1)
-    ellipse(v.x, v.y, 20, 20)
+v = PVector(0.0, 0.0)
+v.lerp(25, 30, 0, 0.1)
+println(v) # Prints "[ 2.5, 3.0, 0.0 ]"
 ]]></code>
 </example>
 

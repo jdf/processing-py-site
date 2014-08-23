@@ -20,10 +20,9 @@
 #     &ltanimal id=&quot1&quotspecies=&quotPanthera pardus&quot&gtLeopard&lt/animal&gt
 #     &ltanimal id=&quot2&quotspecies=&quotEquus zebra&quot&gtZebra&lt/animal&gt
 # &lt/mammals&gt
-def setup(): 
-    xml = loadXML("mammals.xml")
-    firstChild = xml.getChild("animal")
-    println('\n'.join(firstChild.listAttributes())) # Print line-separated list items  
+xml = loadXML("mammals.xml")
+firstChild = xml.getChild("animal")
+println('\n'.join(firstChild.listAttributes())) # Print line-separated list items  
 # Sketch prints:
 # [0] "id"
 # [1] "species"

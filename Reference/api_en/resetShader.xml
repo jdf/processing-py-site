@@ -14,19 +14,14 @@
 <example>
 <image />
 <code><![CDATA[
-edges = None
-img = None
+size(100, 100, P2D)
+img = loadImage("apples.jpg")
+edges = loadShader("blur.glsl")
 
-def setup():
-    size(640, 360, P2D)
-    img = loadImage("leaves.jpg")
-    edges = loadShader("edges.glsl")
-
-def draw():
-    shader(edges)
-    image(img, 0, 0)
-    resetShader()
-    image(img, width / 2, 0)
+shader(edges)
+image(img, 0, 0)
+resetShader()
+image(img, width / 2, 0)
 ]]></code>
 </example>
 

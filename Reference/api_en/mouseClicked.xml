@@ -9,7 +9,8 @@
 <type>p5function</type>
 
 <example>
-<image />
+<noimage />
+<notest />
 <code><![CDATA[
 # Click within the image to change 
 # the value of the rectangle after

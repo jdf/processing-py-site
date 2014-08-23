@@ -11,19 +11,14 @@
 <example>
 <image />
 <code><![CDATA[
-tower = None
-
-def setup(): 
-    size(100, 100)
-    tower = loadImage("tower.jpg")
-    black = color(0)
-    tower.set(30, 20, black)
-    tower.set(85, 20, black)
-    tower.set(85, 75, black)
-    tower.set(30, 75, black)
-
-def draw(): 
-    image(tower, 0, 0)
+size(100, 100)
+rockies = loadImage("rockies.jpg")
+black = color(0)
+rockies.set(30, 20, black)
+rockies.set(85, 20, black)
+rockies.set(85, 75, black)
+rockies.set(30, 75, black)
+image(rockies, 0, 0)
 ]]></code>
 </example>
 

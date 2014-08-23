@@ -10,14 +10,11 @@
 <type></type>
 
 <example>
+	<noimage />
 <code><![CDATA[
-v = None
-
-def setup(): 
-    size(100, 100)
-    v = PVector(20.0, 30.0, 40.0)
-    m = v.mag()
-    println(m)  # Prints "53.851646423339844"
+v = PVector(20.0, 30.0, 40.0)
+m = v.mag()
+println(m)  # Prints "53.851646423339844"
 ]]></code>
 </example>
 

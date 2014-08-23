@@ -9,6 +9,8 @@
 <usage></usage>
 
 <example>
+	<notest />
+	<noimage />
 <code><![CDATA[
 # Define a tuple with parentheses
 colors = ('Red', 'Blue', 'Green')
@@ -26,10 +28,11 @@ colors[2] = "chartreuse"
 </example>
 
 <example>
+	<noimage />
 <code><![CDATA[
 # Convert a list to a tuple with tuple()
 rocky = ['Mercury', 'Venus', 'Earth', 'Mars']
-rocky_tuple = tuple(planets)
+rocky_tuple = tuple(rocky)
 
 # Convert a tuple to a list with list()
 giants = ('Jupiter', 'Saturn', 'Uranus', 'Neptune')
@@ -38,6 +41,7 @@ giant_list = list(giants)
 </example>
 
 <example>
+	<noimage />
 <code><![CDATA[
 # Create a single-item tuple (comma needed after first item)
 one_item = ('So lonely',)

@@ -11,32 +11,22 @@
 <example>
 <image />
 <code><![CDATA[
-s = None
-
-def setup(): 
-    size(100, 100)
-    # The file "bot.svg" must be in the data folder
-    # of the current sketch to load successfully
-    s = loadShape("bot.svg")
-
-def draw(): 
-    shape(s, 10, 10, 80, 80)
+size(100, 100)
+# The file "apple.svg" must be in the data folder
+# of the current sketch to load successfully
+s = loadShape("apple.svg")
+shape(s, 10, 10, 80, 80)
 ]]></code>
 </example>
 
 <example>
 <image />
 <code><![CDATA[
-square = None  # The PShape object
-
-def setup(): 
-    size(100, 100, P2D)
-    # Creating the PShape as a square. The corner 
-    # is 0,0 so that the center is at 40,40 
-    square = createShape(RECT, 0, 0, 80, 80)
-
-def draw(): 
-    shape(square, 10, 10)
+size(100, 100, P2D)
+# Creating the PShape as a square. The corner 
+# is 0,0 so that the center is at 40,40 
+square = createShape(RECT, 0, 0, 80, 80)
+shape(square, 10, 10)
 ]]></code>
 </example>
 

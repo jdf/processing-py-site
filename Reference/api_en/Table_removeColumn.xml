@@ -10,28 +10,28 @@
 <type>method</type>
 
 <example>
+	<noimage />
 <code><![CDATA[
-def setup():
-    table = Table()
-    table.addColumn("id")
-    table.addColumn("species")
-    table.addColumn("name")
-    println(table.getColumnCount())  # Prints 3
-    table.removeColumn("id")         # Reference by title
-    println(table.getColumnCount())  # Prints 2
+table = Table()
+table.addColumn("id")
+table.addColumn("species")
+table.addColumn("name")
+println(table.getColumnCount())  # Prints 3
+table.removeColumn("id")         # Reference by title
+println(table.getColumnCount())  # Prints 2
 ]]></code>
 </example>
 
 <example>
+	<noimage />
 <code><![CDATA[
-def setup():
-    table = Table()
-    table.addColumn("id")
-    table.addColumn("species")
-    table.addColumn("name")
-    println(table.getColumnCount())  # Prints 3
-    table.removeColumn(0)            # Reference by ID
-    println(table.getColumnCount())  # Prints 2
+table = Table()
+table.addColumn("id")
+table.addColumn("species")
+table.addColumn("name")
+println(table.getColumnCount())  # Prints 3
+table.removeColumn(0)            # Reference by ID
+println(table.getColumnCount())  # Prints 2
 ]]></code>
 </example>
 

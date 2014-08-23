@@ -12,19 +12,13 @@
 <example>
 <image />
 <code><![CDATA[
-myImage = None
-
-def setup():
-    size(100, 100)
-    halfImage = width * height / 2
-    myImage = loadImage("apples.jpg")
-    myImage.loadPixels()
-    for i in range(halfImage):
-        myImage.pixels[i + halfImage] = myImage.pixels[i]
-    myImage.updatePixels()
-
-def draw():
-    image(myImage, 0, 0)
+halfImage = width * height / 2
+myImage = loadImage("apples.jpg")
+myImage.loadPixels()
+for i in range(halfImage):
+  myImage.pixels[i + halfImage] = myImage.pixels[i]
+myImage.updatePixels()
+image(myImage, 0, 0)
 ]]></code>
 </example>
 

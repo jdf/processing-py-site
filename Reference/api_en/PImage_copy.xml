@@ -12,16 +12,12 @@
 <example>
 <image />
 <code><![CDATA[
-apples = None
+size(100, 100)
+apples = loadImage("apples.jpg")
+x = width/2
+apples.copy(x, 0, x, height, 0, 0, x, height)
 
-def setup(): 
-    size(100, 100)
-    apples = loadImage("apples.jpg")
-    x = width/2
-    apples.copy(x, 0, x, height, 0, 0, x, height)
-
-def draw(): 
-    image(apples, 0, 0)
+image(apples, 0, 0)
 ]]></code>
 </example>
 

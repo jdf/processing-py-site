@@ -12,29 +12,22 @@
 <example>
 <image />
 <code><![CDATA[
-class HLine:
-  def __init__(self, y, s):
-    self.ypos = y 
-    self.speed = s
-    
-  def update(self):
-    self.ypos += self.speed
-    if self.ypos > height:
-      self.ypos = 0
+class HLine(object):  # Class definition
+  def __init__(self, ypos, stroke_color):  # Object constructor
+    self.ypos = ypos
+    self.stroke_color = stroke_color
+
+  def display(self):  # Display method
+    stroke(self.stroke_color)
     line(0, self.ypos, width, self.ypos)
 
-# Declare and construct two objects (h1, h2) from the class HLine 
-h1 = HLine(20, 2.0)
-h2 = HLine(50, 2.5)
- 
-def setup():
-  size(200, 200)
-  frameRate(30)
+# Declare and construct two objects (h1 and h2) of the class HLine(object):
+h1 = HLine(20, 0)
+h2 = HLine(50, 255)
 
-def draw():
-  background(204)
-  h1.update() 
-  h2.update()
+background(127)
+h1.display()
+h2.display()
 ]]></code>
 </example>
     
@@ -43,7 +36,7 @@ Keyword used to indicate the declaration of a class. A class is a composite of f
 ]]></description>
 
 <syntax>
-class <c>ClassName</c>:
+class <c>ClassName</c>(object):
   <c>statements</c>
 </syntax>
     
@@ -54,7 +47,7 @@ class <c>ClassName</c>:
     
 <parameter>
     <label>statements</label>
-    <description><![CDATA[any valid statements]]></description>
+    <description><![CDATA[List of statements]]></description>
 </parameter>
     
 <returns></returns>

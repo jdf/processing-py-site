@@ -7,19 +7,43 @@
 <subcategory>Conversion</subcategory>
 
 <example>
-<code><![CDATA[
-f = 65.0
-i = int(f)
-println(f + " : " + i)# Prints "65.0 : 65"
-char c = 'E'
-i = int(c)
-println(c + " : " + i)# Prints "E : 69"
+	<noimage />
+	<code><![CDATA[
+# Convert floating point number             
+f = 65.8                                 
+i = int(f)                                  
+println(f) # Prints 65
+																						
+# Convert from string                       
+s = "1234"                                  
+i = int(s)                                  
+println(i) # Prints 1234
+																						
+# Convert from string with base             
+s = "1234"                                  
+i = int(s, 16) # base 16 (hexidecimal)   
+println(i) # Prints "4660" 
 ]]></code>
 </example>
 
 <description><![CDATA[
-Converts a primitive datatype, string, or array to its integer representation.
+Converts a non-integer type (such as a floating-point number or string) to its integer representation. 
 ]]></description>
+
+<syntax>
+	int(<c>value</c>)<br/>
+	int(<c>value</c>, <c>base</c>)
+</syntax>
+
+<parameter>
+<label>value</label>
+<description><![CDATA[the value to convert to an integer]]></description>
+</parameter>
+
+<parameter>
+<label>base</label>
+<description><![CDATA[if <b>value</b> is a string, the base to perform the conversion in]]></description>
+</parameter>
 
 
 </root>

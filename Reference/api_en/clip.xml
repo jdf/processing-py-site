@@ -15,19 +15,14 @@
 <example>
 <image />
 <code><![CDATA[
-def setup(): 
-    size(200, 200)
-    noFill()
-    imageMode(CENTER)
+size(200, 200)
+noFill()
+imageMode(CORNER)
 
-def draw(): 
-    background(204)
-    if mousePressed:
-        clip(mouseX, mouseY, 50, 50)
-    else:
-        noClip()
-    line(0, 0, width, height)
-    line(0, height, width, 0)
+background(204)
+clip(25, 25, 125, 125)
+line(0, 0, width, height)
+line(0, height, width, 0)
 ]]></code>
 </example>
 

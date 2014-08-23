@@ -10,13 +10,11 @@
 <type></type>
 
 <example>
+	<noimage />
 <code><![CDATA[
-v = None
-
-def setup(): 
-    v = PVector(20.0, 30.0, 40.0)
-    m = v.magSq()
-    println(m)  # Prints "2900.0"
+v = PVector(20.0, 30.0, 40.0)
+m = v.magSq()
+println(m)  # Prints "2900.0"
 ]]></code>
 </example>
 
