@@ -71,6 +71,5 @@ Getting the color of a single pixel with <b>get(x, y)</b> is easy, but not as fa
 
 <related>set</related>
 <related>pixels</related>
-<related>PVector_copy</related>
 
 </root>

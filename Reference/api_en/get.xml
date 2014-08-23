@@ -66,6 +66,5 @@ get()
 
 <related>set</related>
 <related>pixels</related>
-<related>PVector_copy</related>
 
 </root>

@@ -62,6 +62,5 @@ Setting the color of a single pixel with <b>set(x, y)</b> is easy, but not as fa
 
 <related>PVector_get</related>
 <related>pixels</related>
-<related>PVector_copy</related>
 
 </root>

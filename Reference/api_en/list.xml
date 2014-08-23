@@ -41,7 +41,7 @@ println(inventory_copy) # Prints ['lamp', 'skeleton key', 'train ticket']
 # Use list() to convert Python "iterators" to lists
 letters = "abcdefg"
 reversed_letters = reversed(letters)
-println(reversed_letters) # Prints &lt;reversediterator object at 0x2&gt;---
+println(reversed_letters) # Prints <reversediterator object at 0x2>---
                           # not what we want!
 
 # convert iterator to a list so we can access arbitrary elements, or

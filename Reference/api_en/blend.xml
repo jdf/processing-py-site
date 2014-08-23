@@ -145,6 +145,5 @@ blend(<c>src</c>, <c>sx</c>, <c>sy</c>, <c>sw</c>, <c>sh</c>, <c>dx</c>, <c>dy</
 </parameter>
 
 <related>alpha</related>
-<related>PVector_copy</related>
 
 </root>

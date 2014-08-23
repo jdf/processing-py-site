@@ -10,8 +10,8 @@
 
 <example>
 <code><![CDATA[
-s = "Inside a tag, you will find &lttag&gtcontent&lt/tag&gt."
-m = match(s, "&lttag&gt(.*?)&lt/tag&gt")
+s = "Inside a tag, you will find <tag>content</tag>."
+m = match(s, "<tag>(.*?)</tag>")
 println("Found '%s' inside the tag" % m[1])
 # Prints to the console:
 # "Found 'content' inside the tag."
