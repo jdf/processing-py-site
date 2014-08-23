@@ -10,23 +10,23 @@
 <type>method</type>
 
 <example>
+	<noimage />
 <code><![CDATA[
-def setup():
-    table = Table()
-    table.addColumn("name")
-    table.addColumn("type")
-    newRow = table.addRow()
-    newRow.setString("name", "Lion")
-    newRow.setString("type", "Mammal")
-    newRow = table.addRow()
-    newRow.setString("name", "Snake")
-    newRow.setString("type", "Reptile")
-    newRow = table.addRow()
-    newRow.setString("name", "Mosquito")
-    newRow.setString("type", "Insect")
-    println(table.getRowCount())  # Prints 3
-    table.clearRows()
-    println(table.getRowCount())  # Prints 0
+table = Table()
+table.addColumn("name")
+table.addColumn("type")
+newRow = table.addRow()
+newRow.setString("name", "Lion")
+newRow.setString("type", "Mammal")
+newRow = table.addRow()
+newRow.setString("name", "Snake")
+newRow.setString("type", "Reptile")
+newRow = table.addRow()
+newRow.setString("name", "Mosquito")
+newRow.setString("type", "Insect")
+println(table.getRowCount())  # Prints 3
+table.clearRows()
+println(table.getRowCount())  # Prints 0
 ]]></code>
 </example>
 

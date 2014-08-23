@@ -17,15 +17,13 @@
 # 0,Capra hircus,Goat
 # 1,Panthera pardus,Leopard
 # 2,Equus zebra,Zebra
-def setup():
-
-    table = loadTable("mammals.csv", "header")
-    println("%i total rows in table" % (table.getRowCount()))
-    for row in table.rows():
-        id = row.getInt("id")
-        species = row.getString("species")
-        name = row.getString("name")
-        println(name + " (" + species + ") has an ID of " + id)
+table = loadTable("mammals.csv", "header")
+println("%i total rows in table" % (table.getRowCount()))
+for row in table.rows():
+  mammal_id = row.getInt("id")
+  species = row.getString("species")
+  name = row.getString("name")
+  println(name + " (" + species + ") has an ID of " + str(mammal_id))
 
 # Sketch prints:
 # 3 total rows in table

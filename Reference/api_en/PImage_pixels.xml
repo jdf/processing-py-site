@@ -11,19 +11,15 @@
 <example>
 <image />
 <code><![CDATA[
-tower = None 
+size(100, 100)
+rockies = loadImage("rockies.jpg")
+dimension = rockies.width * rockies.height
+rockies.loadPixels()
+for i in range(0, dimension, 2): 
+  rockies.pixels[i] = color(0, 0, 0)
+rockies.updatePixels()
 
-def setup(): 
-    size(100, 100)
-    tower = loadImage("tower.jpg")
-    dimension = tower.width * tower.height
-    tower.loadPixels()
-    for i in range(0, dimension, 2): 
-        tower.pixels[i] = color(0, 0, 0)
-    tower.updatePixels()
-
-def draw(): 
-    image(tower, 0, 0)
+image(rockies, 0, 0)
 ]]></code>
 </example>
 

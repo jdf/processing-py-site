@@ -12,19 +12,17 @@
 <type></type>
 
 <example>
-<image />
+<noimage />
+<notest />
 <code><![CDATA[
 add_library('pdf')
-
 
 def setup():
     size(400, 400)
     beginRaw(PDF, "raw.pdf")
 
-
 def draw():
     line(pmouseX, pmouseY, mouseX, mouseY)
-
 
 def keyPressed():
     if key == ' ':

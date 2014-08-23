@@ -10,7 +10,7 @@
 
 <example>
 <notest />
-<image />
+<noimage />
 <code><![CDATA[
 def setup(): 
     size(200, 200)
@@ -22,7 +22,8 @@ def draw():
 </example>
 
 <example>
-<image />
+	<notest />
+<noimage />
 <code><![CDATA[
 x = 0.0
 
@@ -45,7 +46,8 @@ def mouseReleased():
 </example>
 
 <example>
-<image />
+	<notest />
+<noimage />
 <code><![CDATA[
 someMode = False
 

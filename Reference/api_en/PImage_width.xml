@@ -11,9 +11,10 @@
 <example>
 <image />
 <code><![CDATA[
-tiles = loadImage("tiles.jpg")
-image(tiles, 20, 10)
-rect(55, 10, tiles.width, tiles.height)
+size(100, 120)
+bricks = loadImage("bricks.jpg")
+image(bricks, 10, 10)
+rect(50, 10, bricks.width, bricks.height)
 ]]></code>
 </example>
 

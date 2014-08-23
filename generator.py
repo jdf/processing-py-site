@@ -103,7 +103,7 @@ class ReferenceItem:
         # It is later transformed into the url of the image we've generated.
         for example in xml.iterfind('example'):
             self.examples.append({
-                'code':   format_code(self.get_element_text(example.find('code'))),
+                'code':   self.get_element_text(example.find('code')),
                 'image':  example.find('image') is not None,
                 'run':    example.find('notest') is None
                 })
@@ -339,9 +339,6 @@ def make_convert_hypertext(names_dict):
             return text
 
     return convert_hypertext
-
-def format_code(code):
-    return '\n' + cgi.escape(code.strip())
 
 def clean_html(html):
     whitespace = re.compile(r'^\s+$')

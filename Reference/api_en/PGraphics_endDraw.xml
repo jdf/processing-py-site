@@ -12,20 +12,15 @@
 <example>
 <image />
 <code><![CDATA[
-pg = None
+size(100, 100, P2D)
+pg = createGraphics(80, 80, P2D)
+pg.beginDraw()
+pg.background(102)
+pg.stroke(255)
+pg.line(20, 20, 80, 80)
+pg.endDraw()
 
-def setup(): 
-    size(100, 100, P2D)
-    pg = createGraphics(80, 80, P2D)
-    pg.beginDraw()
-    pg.background(102)
-    pg.stroke(255)
-    pg.line(20, 20, 80, 80)
-    pg.endDraw()
-    noLoop()
-
-def draw(): 
-    image(pg, 10, 10)
+image(pg, 10, 10)
 ]]></code>
 </example>
 

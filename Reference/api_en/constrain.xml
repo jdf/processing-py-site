@@ -9,12 +9,11 @@
 <type></type>
 
 <example>
-<image />
+<noimage />
 <code><![CDATA[
-def draw(): 
-    background(204)
-    mx = constrain(mouseX, 30, 70)
-    rect(mx-10, 40, 20, 20)
+println(constrain(55, 30, 70)) # Prints "55"
+println(constrain(100, 30, 70)) # Prints "70"
+println(constrain(-15, 30, 70)) # Prints "30"
 ]]></code>
 </example>
 

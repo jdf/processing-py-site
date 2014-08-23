@@ -73,8 +73,6 @@ set(<c>x</c>, <c>y</c>, <c>img</c>)
 <description><![CDATA[PImage: image to copy into the original image]]></description>
 </parameter>
 
-<related>PVector_get</related>
 <related>pixels</related>
-<related>PVector_copy</related>
 
 </root>

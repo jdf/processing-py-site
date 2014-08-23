@@ -7,14 +7,13 @@
 <subcategory></subcategory>
 
 <example>
-<image />
+<noimage />
 <notest />
 <code><![CDATA[
 pos = 0
 
 def setup():
     frameRate(4)
-
 
 def draw():
     background(204)

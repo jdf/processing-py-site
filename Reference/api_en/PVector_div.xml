@@ -12,32 +12,21 @@
 <example>
 <image />
 <code><![CDATA[
-v = None
+v = PVector(30, 60, 0)
 
-def setup(): 
-    noLoop()
-    v = PVector(30, 60, 0)
-
-def draw(): 
-    ellipse(v.x, v.y, 12, 12)
-    v.div(6)
-    ellipse(v.x, v.y, 24, 24)
+ellipse(v.x, v.y, 12, 12)
+v.div(6)
+ellipse(v.x, v.y, 24, 24)
 ]]></code>
 </example>
 
 <example>
 <image />
 <code><![CDATA[
-v1 = None
-
-def setup(): 
-    noLoop()
-    v1 = PVector(30, 60, 0)
-
-def draw(): 
-    ellipse(v1.x, v1.y, 12, 12)
-    v2 = PVector.div(v1, 6)
-    ellipse(v2.x, v2.y, 24, 24)
+v1 = PVector(30, 60, 0)
+ellipse(v1.x, v1.y, 12, 12)
+v2 = PVector.div(v1, 6)
+ellipse(v2.x, v2.y, 24, 24)
 ]]></code>
 </example>
 

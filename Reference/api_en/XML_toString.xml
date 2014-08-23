@@ -10,19 +10,18 @@
 <type></type>
 
 <example>
+	<noimage />
 <code><![CDATA[
-data = "&ltmammals&gt&ltanimal&gtGoat&lt/animal&gt&lt/mammals&gt"
-def setup(): 
-    XML xml = parseXML(data)
-    
-    #Format with line breaks, XML declaration, and 2-space indentation
-    s = xml.toString()
-    println(s)
+xml = loadXML("mammals.xml")
+# Format with line breaks, XML declaration, and 2-space indentation
+s = xml.toString()
+println(s)
 # Sketch prints:
-#&lt?xml version=&quot1.0&quotencoding=&quotUTF-8&quot?&gt
-#&ltmammals&gt
-#    &ltanimal&gtGoat&lt/animal&gt
-#&lt/mammals&gt
+# &lt;mammals&gt;
+#   &lt;animal id="0" species="Capra hircus"&gt;Goat&lt;/animal&gt;
+#   &lt;animal id="1" species="Panthera pardus"&gt;Leopard&lt;/animal&gt;
+#   &lt;animal id="2" species="Equus zebra"&gt;Zebra&lt;/animal&gt;
+# &lt;/mammals&gt;
 ]]></code>
 </example>
 

@@ -9,20 +9,22 @@
 <type></type>
 
 <example>
+	<noimage />
 <code><![CDATA[
 lines = loadStrings("list.txt")
 println("there are %i lines" % len(lines))
-for i in range(len(lines)):
-    println(lines[i])
+for line in lines:
+    println(line)
 ]]></code>
 </example>
 
 <example>
+	<noimage />
 <code><![CDATA[
 lines = loadStrings("http://processing.org/about/index.html")
 println("there are %i lines" % len(lines))
-for i in range(len(lines)):
-    println(lines[i])
+for line in lines:
+    println(line)
 ]]></code>
 </example>
 

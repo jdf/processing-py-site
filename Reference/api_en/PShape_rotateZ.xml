@@ -11,19 +11,12 @@
 <example>
 <image />
 <code><![CDATA[
-s = None
-
-def setup(): 
-    size(100, 100, P3D)
-    s = loadShape("ohio.svg")
-
-def draw(): 
-    background(204)
-    shape(s)
-
-def mousePressed(): 
-    # Rotate the shape around the z-axis each time the mouse is pressed
-    s.rotateZ(0.1)
+size(100, 100, P3D)
+s = loadShape("apple.svg")
+background(204)
+# rotate 30 degrees
+s.rotateZ(radians(30.0))
+shape(s)
 ]]></code>
 </example>
 

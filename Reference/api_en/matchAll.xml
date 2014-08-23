@@ -10,9 +10,9 @@
 
 <example>
 <code><![CDATA[
-s = "Inside tags, you will find &lttag&gtmultiple&lt/tag&gt"
-             s += "&lttag&gtpieces&lt/tag&gtof &lttag&gtcontent&lt/tag&gt."
-m = matchAll(s, "&lttag&gt(.*?)&lt/tag&gt")
+s = "Inside tags, you will find <tag>multiple</tag>"
+s += "<tag>pieces</tag>of <tag>content</tag>."
+m = matchAll(s, "<tag>(.*?)</tag>")
 for i in range(len(m)): 
     println("Found '" + m[i][1] + "' inside a tag.")
 # Prints to the console:

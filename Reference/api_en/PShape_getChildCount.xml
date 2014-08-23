@@ -9,15 +9,12 @@
 <type></type>
 
 <example>
-<image />
+<noimage />
 <code><![CDATA[
-states = None
-
-def setup(): 
-    size(100, 100)
-    states = loadShape("tristate.svg")
-    count = states.getChildCount()
-    println(count)
+size(100, 100)
+states = loadShape("apple.svg")
+count = states.getChildCount()
+println(count)
 ]]></code>
 </example>
 

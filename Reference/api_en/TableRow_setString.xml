@@ -10,22 +10,22 @@
 <type>method</type>
 
 <example>
+<noimage />
 <code><![CDATA[
-def setup():
-    table = Table()
+table = Table()
 
-    table.addColumn("number", Table.INT)
-    table.addColumn("mass", Table.FLOAT)
-    table.addColumn("name", Table.STRING)
+table.addColumn("number", Table.INT)
+table.addColumn("mass", Table.FLOAT)
+table.addColumn("name", Table.STRING)
 
-    row = table.addRow()
-    row.setInt("number", 8)
-    row.setFloat("mass", 15.9994)
-    row.setString("name", "Oxygen")
+row = table.addRow()
+row.setInt("number", 8)
+row.setFloat("mass", 15.9994)
+row.setString("name", "Oxygen")
 
-    println(row.getInt("number"))  # Prints 8
-    println(nf(row.getFloat("mass"), 2, 4))  # Prints 15.9994
-    println(row.getString("name"))  # Prints "Oxygen
+println(row.getInt("number"))  # Prints 8
+println(nf(row.getFloat("mass"), 2, 4))  # Prints 15.9994
+println(row.getString("name"))  # Prints "Oxygen
 ]]></code>
 </example>
 

@@ -11,48 +11,27 @@
 <example>
 <image />
 <code><![CDATA[
-img = None
-
-
-def setup():
-    img = loadImage("laDefense.jpg")
-
-
-def draw():
-    imageMode(CORNER)
-    image(img, 10, 10, 50, 50)  # Draw image using CORNER mode
+img = loadImage("laDefense.jpg")
+imageMode(CORNER)
+image(img, 10, 10, 50, 50)  # Draw image using CORNER mode
 ]]></code>
 </example>
 
 <example>
 <image />
 <code><![CDATA[
-img = None
-
-
-def setup():
-    img = loadImage("laDefense.jpg")
-
-
-def draw():
-    imageMode(CORNERS)
-    image(img, 10, 10, 90, 40)  # Draw image using CORNERS mode
+img = loadImage("laDefense.jpg")
+imageMode(CORNERS)
+image(img, 10, 10, 90, 40)  # Draw image using CORNERS mode
 ]]></code>
 </example>
 
 <example>
 <image />
 <code><![CDATA[
-img = None
-
-
-def setup():
-    img = loadImage("laDefense.jpg")
-
-
-def draw():
-    imageMode(CENTER)
-    image(img, 50, 50, 80, 80)  # Draw image using CENTER mode
+img = loadImage("laDefense.jpg")
+imageMode(CENTER)
+image(img, 50, 50, 80, 80)  # Draw image using CENTER mode
 ]]></code>
 </example>
 

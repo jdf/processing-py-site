@@ -10,6 +10,7 @@
 <type></type>
 
 <example>
+	<noimage />
 <code><![CDATA[
 # The following short XML file called "mammals.xml" is parsed 
 # in the code below. It must be in the project's "data" folder.
@@ -20,11 +21,10 @@
 #     &ltanimal id=&quot1&quotspecies=&quotPanthera pardus&quot&gtLeopard&lt/animal&gt
 #     &ltanimal id=&quot2&quotspecies=&quotEquus zebra&quot&gtZebra&lt/animal&gt
 # &lt/mammals&gt
-def setup(): 
-    xml = loadXML("mammals.xml")
-    println(xml.getName())
-    xml.setName("fish")
-    println(xml.getName())
+xml = loadXML("mammals.xml")
+println(xml.getName())
+xml.setName("fish")
+println(xml.getName())
 # Sketch prints:
 # mammals
 # fish

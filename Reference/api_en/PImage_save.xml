@@ -9,20 +9,20 @@
 <type></type>
 
 <example>
-<image />
+<noimage />
 <code><![CDATA[
-PImage tower = loadImage("tower.jpg")
-tower.save("outputImage.jpg")
+apples = loadImage("apples.jpg")
+apples.save("outputImage.jpg")
 ]]></code>
 </example>
 
 <example>
-<image />
+<noimage />
 <code><![CDATA[
 size(100, 100)
-PImage tower = loadImage("tower.jpg")
-PImage newImage = createImage(100, 100, RGB)
-newImage = tower.get()
+apples = loadImage("apples.jpg")
+newImage = createImage(100, 100, RGB)
+newImage = apples.get()
 newImage.save("outputImage.jpg")
 ]]></code>
 </example>

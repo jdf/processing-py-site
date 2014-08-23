@@ -9,7 +9,7 @@
 <type>variable</type>
 
 <example>
-<image />
+<noimage />
 <notest />
 <code><![CDATA[
 def setup():

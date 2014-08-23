@@ -12,10 +12,8 @@
 <example>
 <image />
 <code><![CDATA[
-v = None
-def setup():
-    v = PVector(10.0, 20.0)
-    println(v.heading())  # Prints "1.1071487665176392"
+v = PVector(10.0, 20.0)
+println(v.heading())  # Prints "1.1071487665176392"
 ]]></code>
 </example>
 

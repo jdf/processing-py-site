@@ -14,17 +14,14 @@
 
 <example>
 <code><![CDATA[
-PrintWriter output
-def setup(): 
-    # Create a file in the sketch directory
-    output = createWriter("positions.txt")
-def draw(): 
-    point(mouseX, mouseY)
-    output.println(mouseX)# Write the coordinate to the file
-def keyPressed(): 
-    output.flush()# Writes the remaining data to the file
-    output.close()# Finishes the file
-    exit()# Stops the program
+# Create a file in the sketch directory
+output = createWriter("positions.txt")
+output.println(10)
+output.println(20)
+output.println(30)
+output.println(40)
+output.flush() # Writes the remaining data to the file
+output.close() # Finishes the file
 ]]></code>
 </example>
 

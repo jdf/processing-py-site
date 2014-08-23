@@ -9,18 +9,22 @@
 <type>p5function</type>
 
 <example>
+<noimage />
 <notest />
-<image />
 <code><![CDATA[
+background_color = 127
+
 def setup(): 
     size(100, 100)
 
 def draw(): 
-    pass 
+    background(background_color)
 
-def mouseWheel(MouseEvent event): 
+def mouseWheel(event): 
     e = event.getCount()
-    println(e)
+    background_color += event.getCount()
+    # keep value in range
+    background_color = background_color % 255
 ]]></code>
 </example>
 

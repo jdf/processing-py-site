@@ -14,26 +14,26 @@
 <example>
 <image />
 <code><![CDATA[
-s = None
+size(50, 300, P2D)
+background(255)
+s = createShape()
+s.beginShape()
+s.vertex(0, 0)
+s.vertex(30, 0)
+s.vertex(30, 30)
+s.vertex(0, 30)
+s.endShape(CLOSE)
 
-def setup(): 
-    size(100, 100, P2D)
-    s = createShape()
-    s.beginShape()
-    s.vertex(0, 0)
-    s.vertex(60, 0)
-    s.vertex(60, 60)
-    s.vertex(0, 60)
-    s.endShape(CLOSE)
-
-def draw(): 
-    translate(20, 20)
-    for i in range(s.getVertexCount()): 
-        v = s.getVertex(i)
-        v.x += random(-1, 1)
-        v.y += random(-1, 1)
-        s.setVertex(i, v)
+for loopcount in range(6):
+  pushMatrix()
+  translate(10, 10 + loopcount * height/6)
+  for vertex_index in range(s.getVertexCount()): 
+    v = s.getVertex(vertex_index)
+    v.x += random(-2, 2)
+    v.y += random(-2, 2)
+    s.setVertex(vertex_index, v)
     shape(s)
+  popMatrix()
 ]]></code>
 </example>
 

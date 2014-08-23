@@ -27,8 +27,8 @@
             <div class="example">
                 {%- if example.image %} {# weird spacing here to avoid creating spaces in <pre> #}
                 <img src="{{example.image}}"/>
-                <pre class='margin'/>{%- else %}
-                <pre>{%- endif %}{{ example.code }}</pre>
+                <pre class='margin'>{%- else %}
+                <pre>{%- endif %}{{ example.code|e }}</pre>
             </div>
             {% if example.broken %}
                 {# This will get their attention #}

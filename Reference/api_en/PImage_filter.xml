@@ -12,121 +12,86 @@
 <example>
 <image />
 <code><![CDATA[
-img1 = None
-img2 = None
+size(100, 100)
+img1 = loadImage("apples.jpg")
+img2 = loadImage("apples.jpg")
+img1.filter(THRESHOLD, 0.3)
+img2.filter(THRESHOLD, 0.7)
 
-def setup(): 
-    size(100, 100)
-    img1 = loadImage("apples.jpg")
-    img2 = loadImage("apples.jpg")
-    img1.filter(THRESHOLD, 0.3)
-    img2.filter(THRESHOLD, 0.7)
-
-def draw(): 
-    image(img1, 0, 0)
-    image(img2, width/2, 0)
+image(img1, 0, 0)
+image(img2, width/2, 0)
 ]]></code>
 </example>
 
 <example>
 <image />
 <code><![CDATA[
-img1 = None
-img2 = None
+img1 = loadImage("apples.jpg")
+img2 = loadImage("apples.jpg")
+img2.filter(GRAY)
 
-def setup(): 
-    img1 = loadImage("apples.jpg")
-    img2 = loadImage("apples.jpg")
-    img2.filter(GRAY)
-
-def draw(): 
-    image(img1, 0, 0)
-    image(img2, width/2, 0)
+image(img1, 0, 0)
+image(img2, width/2, 0)
 ]]></code>
 </example>
 
 <example>
 <image />
 <code><![CDATA[
-img1 = None
-img2 = None
+img1 = loadImage("apples.jpg")
+img2 = loadImage("apples.jpg")
+img2.filter(INVERT)
 
-def setup(): 
-    img1 = loadImage("apples.jpg")
-    img2 = loadImage("apples.jpg")
-    img2.filter(INVERT)
-
-def draw(): 
-    image(img1, 0, 0)
-    image(img2, width/2, 0)
+image(img1, 0, 0)
+image(img2, width/2, 0)
 ]]></code>
 </example>
 
 <example>
 <image />
 <code><![CDATA[
-img1 = None
-img2 = None
+img1 = loadImage("apples.jpg")
+img2 = loadImage("apples.jpg")
+img2.filter(POSTERIZE, 4)
 
-def setup(): 
-    img1 = loadImage("apples.jpg")
-    img2 = loadImage("apples.jpg")
-    img2.filter(POSTERIZE, 4)
-
-def draw(): 
-    image(img1, 0, 0)
-    image(img2, width/2, 0)
+image(img1, 0, 0)
+image(img2, width/2, 0)
 ]]></code>
 </example>
 
 <example>
 <image />
 <code><![CDATA[
-img1 = None
-img2 = None
+img1 = loadImage("apples.jpg")
+img2 = loadImage("apples.jpg")
+img2.filter(BLUR, 6)
 
-def setup(): 
-    img1 = loadImage("apples.jpg")
-    img2 = loadImage("apples.jpg")
-    img2.filter(BLUR, 6)
-
-def draw(): 
-    image(img1, 0, 0)
-    image(img2, width/2, 0)
+image(img1, 0, 0)
+image(img2, width/2, 0)
 ]]></code>
 </example>
 
 <example>
 <image />
 <code><![CDATA[
-img1 = None
-img2 = None
+img1 = loadImage("apples.jpg")
+img2 = loadImage("apples.jpg")
+img2.filter(ERODE)
 
-def setup(): 
-    img1 = loadImage("apples.jpg")
-    img2 = loadImage("apples.jpg")
-    img2.filter(ERODE)
-
-def draw(): 
-    image(img1, 0, 0)
-    image(img2, width/2, 0)
+image(img1, 0, 0)
+image(img2, width/2, 0)
 ]]></code>
 </example>
 
 <example>
 <image />
 <code><![CDATA[
-img1 = None
-img2 = None
+img1 = loadImage("apples.jpg")
+img2 = loadImage("apples.jpg")
+img2.filter(DILATE)
 
-def setup(): 
-    img1 = loadImage("apples.jpg")
-    img2 = loadImage("apples.jpg")
-    img2.filter(DILATE)
-
-def draw(): 
-    image(img1, 0, 0)
-    image(img2, width/2, 0)
+image(img1, 0, 0)
+image(img2, width/2, 0)
 ]]></code>
 </example>
 

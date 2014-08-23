@@ -9,24 +9,14 @@
 <type></type>
 
 <example>
-<image />
-<notest />
+<noimage />
 <code><![CDATA[
-def setup():
-    metaBold = loadFont("fonts/Meta-Bold.vlw.gz")
-    textFont(metaBold, 44)
-    noLoop()
-
-def draw():
-    d = day()    # Values from 1 - 31
-    m = month()  # Values from 1 - 12
-    y = year()   # 2003, 2004, 2005, etc.
-    s = str(d)
-    text(s, 10, 28)
-    s = str(m)
-    text(s, 10, 56)
-    s = str(y)
-    text(s, 10, 84)
+d = day()  # Values from 1 - 31
+m = month()  # Values from 1 - 12
+y = year()  # 2003, 2004, 2005, etc.
+println(d)
+println(m)
+println(y)
 ]]></code>
 </example>
 

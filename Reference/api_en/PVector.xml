@@ -11,19 +11,13 @@
 <example>
 <image />
 <code><![CDATA[
-v1 = None
-v2 = None
+v1 = PVector(40, 20)
+v2 = PVector(25, 50)
 
-def setup(): 
-    noLoop()
-    v1 = PVector(40, 20)
-    v2 = PVector(25, 50)
-
-def draw(): 
-    ellipse(v1.x, v1.y, 12, 12)
-    ellipse(v2.x, v2.y, 12, 12)
-    v2.add(v1)
-    ellipse(v2.x, v2.y, 24, 24)
+ellipse(v1.x, v1.y, 12, 12)
+ellipse(v2.x, v2.y, 12, 12)
+v2.add(v1)
+ellipse(v2.x, v2.y, 24, 24)
 ]]></code>
 </example>
 

@@ -9,8 +9,8 @@
 <type>variable</type>
 
 <example>
+<noimage />
 <notest />
-<image />
 <code><![CDATA[
 def draw():
     background(204)
