@@ -2,9 +2,9 @@
 <root>
 <name>createReader()</name>
 
-<category></category>
+<category>Input</category>
 
-<subcategory></subcategory>
+<subcategory>Files</subcategory>
 
 <description><![CDATA[
 Creates a BufferedReader object that can be used to read files line-by-line as individual String objects. This is the complement to the createWriter() function. 

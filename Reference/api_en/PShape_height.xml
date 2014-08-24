@@ -4,20 +4,17 @@
 
 <category>PShape</category>
 
-<subcategory>field</subcategory>
+<subcategory>Field</subcategory>
 
 <type></type>
 
 <example>
 <image />
 <code><![CDATA[
-s = None
-
-def setup(): 
-    # The file "bot.svg" must be in the data folder
-    # of the current sketch to load successfully
-    s = loadShape("bot.svg")
-    println(s.height)# Prints "281.0", the height of the shape
+# The file "bot.svg" must be in the data folder
+# of the current sketch to load successfully
+s = loadShape("bot.svg")
+println(s.height)# Prints "281.0", the height of the shape
 ]]></code>
 </example>
 
