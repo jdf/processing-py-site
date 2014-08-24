@@ -563,13 +563,29 @@ def build_tutorials(env):
     print_success('success!')
 
 def build_examples(env):
-    pass
+    print("building examples")
+    if not os.path.exists(target_examples_dir):
+        os.makedirs(target_examples_dir)
+    examples_template = env.get_template('examples_index.jinja')
+    with open(os.path.join(target_examples_dir, 'index.html'), 'w') as tfile:
+        tfile.write(clean_html(examples_template.render()))
+    print_success('success!')
 
 def build_cover(env):
-    pass
+    print("building cover")
+    cover_template = env.get_template('cover.jinja')
+    with open(os.path.join('generated', 'index.html'), 'w') as tfile:
+        tfile.write(clean_html(cover_template.render()))
+    print_success('success!')
 
 def build_overview(env):
-    pass
+    print("building overview")
+    if not os.path.exists(target_overview_dir):
+        os.makedirs(target_overview_dir)
+    overview_template = env.get_template('overview.jinja')
+    with open(os.path.join(target_overview_dir, 'index.html'), 'w') as tfile:
+        tfile.write(clean_html(overview_template.render()))
+    print_success('success!')
 
 def build(build_images, to_update):
     print_header("Building content")
@@ -593,6 +609,9 @@ def build(build_images, to_update):
     failures += build_reference(reference_dir, to_update, env, build_images)
     build_tutorials(env)
     build_reference_index(reference_dir, env)
+    build_cover(env)
+    build_overview(env)
+    build_examples(env)
        
     print('Copying static resources...')
     distutils.dir_util.copy_tree('./content', target_dir)
