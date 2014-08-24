@@ -96,6 +96,14 @@ class ReferenceItem:
         if xml.find('syntax') is not None:
             self.syntax = xml.find('syntax')
 
+        self.category = None
+        if xml.find('category') is not None:
+            self.category = self.get_element_text(xml.find('category'))
+
+        self.subcategory = None
+        if xml.find('subcategory') is not None:
+            self.subcategory = self.get_element_text(xml.find('subcategory'))
+
         # We store plain xml-elements for some children so that we can use convert_hypertext on them at generation time.
         # This is necessary because all ReferenceItems have to be parsed before links can be resolved.
         self.examples = []
@@ -398,6 +406,120 @@ def build_reference(reference_dir, to_update, env, build_images):
             print_success('success!')
     return failures
  
+def build_reference_index(reference_dir, env):
+    import re
+    print('Building reference index')
+    # skip putting some items in the reference, as needed
+    to_skip_patterns = [
+        r'^PShape.*',
+        r'^PrintWriter.*',
+        r'^Table.*',
+        r'^XML.*'
+    ]
+    reference_items = list()
+    for filename in os.listdir(reference_dir):
+        if not filename.endswith('.xml'): continue
+        item = ReferenceItem(os.path.join(reference_dir,filename))
+        item.flatname = os.path.basename(filename)[:-4]
+        if any([re.search(pattern, item.flatname) for pattern in to_skip_patterns]):
+            print("skipping %s" % filename)
+            continue
+        reference_items.append(item)
+    categories = dict()
+    for item in reference_items:
+        path = (item.category, getattr(item, 'subcategory', ""))
+        if path == ('', ''): continue
+        # Fields and Methods aren't included in the index
+        if path[1] in ('Method', 'Field'): continue
+        if path not in categories:
+            categories[path] = list()
+        categories[path].append(item)
+    category_order = [
+        ('Structure', ''),
+        ('Environment', ''),
+        ('Data', 'Primitive'),
+        ('Data', 'Composite'),
+        ('Data', 'Conversion'),
+        ('Data', 'Dictionary Methods'),
+        ('Data', 'List Methods'),
+        ('Data', 'String Methods'),
+        ('Data', 'List Functions'),
+        ('Data', 'String Functions'),
+        ('Data', 'Array Functions'),
+        ('Control', 'Relational Operators'),
+        ('Control', 'Iteration'),
+        ('Control', 'Conditionals'),
+        ('Control', 'Logical Operators'),
+        ('Shape', ''),
+        ('Shape', '2D Primitives'),
+        ('Shape', 'Curves'),
+        ('Shape', '3D Primitives'),
+        ('Shape', 'Attributes'),
+        ('Shape', 'Vertex'),
+        ('Shape', 'Loading & Displaying'),
+        ('Input', 'Mouse'),
+        ('Input', 'Keyboard'),
+        ('Input', 'Files'),
+        ('Input', 'Time & Date'),
+        ('Output', 'Text Area'),
+        ('Output', 'Image'),
+        ('Output', 'Files'),
+        ('Transform', ''),
+        ('Lights, Camera', 'Lights'),
+        ('Lights, Camera', 'Camera'),
+        ('Lights, Camera', 'Coordinates'),
+        ('Lights, Camera', 'Material Properties'),
+        ('Color', 'Setting'),
+        ('Color', 'Creating & Reading'),
+        ('Image', ''),
+        ('Image', 'Loading & Displaying'),
+        ('Image', 'Textures'),
+        ('Image', 'Pixels'),
+        ('Rendering', ''),
+        ('Rendering', 'Shaders'),
+        ('Typography', ''),
+        ('Typography', 'Loading & Displaying'),
+        ('Typography', 'Attributes'),
+        ('Typography', 'Metrics'),
+        ('Math', ''),
+        ('Math', 'Operators'),
+        ('Math', 'Bitwise Operators'),
+        ('Math', 'Calculation'),
+        ('Math', 'Trigonometry'),
+        ('Math', 'Random'),
+        ('Constants', ''),
+    ]
+    assert set(category_order) == set(categories.keys()), \
+            "category order and category keys are different. " + \
+            str(set(category_order) - set(categories.keys())) + " *** " + \
+            str(set(categories.keys()) - set(category_order))
+    elements = list()
+    current_cat = None
+    current_subcat = None
+    for path in category_order:
+        cat, subcat = path
+        if cat != current_cat:
+            if current_cat is not None:
+                elements.append({'type': 'end-category', 'content': None})
+            elements.append({'type': 'start-category', 'content': cat})
+            current_cat = cat
+        if subcat != current_subcat:
+            if current_subcat is not None:
+                elements.append({'type': 'end-subcategory', 'content': None})
+            elements.append({'type': 'start-subcategory', 'content': subcat})
+            current_subcat = subcat
+        elements.append({'type': 'start-list', 'content': None})
+        for item in sorted(categories[path], key=lambda x: x.name):
+            elements.append({'type': 'link', 'content': item})
+        elements.append({'type': 'end-list', 'content': None})
+    elements.append({'type': 'end-subcategory', 'content': None})
+    elements.append({'type': 'end-category', 'content': None})
+
+    index_template = env.get_template('reference_index_template.jinja')
+    with open(os.path.join('generated/reference', 'index.html'), 'w') as tfile:
+        tfile.write(clean_html(index_template.render(elements=elements)))
+    print_success('success!')
+
 def build_tutorials(env):
     print('Building tutorials')
     item_template = env.get_template('tutorial_item_template.jinja')
@@ -464,6 +586,7 @@ def build(build_images, to_update):
     
     failures += build_reference(reference_dir, to_update, env, build_images)
     build_tutorials(env)
+    build_reference_index(reference_dir, env)
        
     print('Copying static resources...')
     distutils.dir_util.copy_tree('./content', target_dir)

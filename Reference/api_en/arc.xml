@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
 <name>arc()</name>
+<category>Shape</category>
+<subcategory>2D Primitives</subcategory>
 
 <type></type>
 
