@@ -9,17 +9,9 @@
 <type></type>
 
 <example>
+<noimage />
 <code><![CDATA[
-color c = #ffcc00
-println(c)# Prints "-13312"
-println(hex(c))# Prints "FFFFCC00"
-println(hex(c, 6))# Prints "FFCC00"
-]]></code>
-</example>
-
-<example>
-<code><![CDATA[
-color c = color(255, 204, 0)
+c = color(255, 204, 0)
 println(c)# Prints "-13312"
 println(hex(c))# Prints "FFFFCC00"
 println(hex(c, 6))# Prints "FFCC00"
@@ -28,7 +20,7 @@ println(hex(c, 6))# Prints "FFCC00"
 
 
 <description><![CDATA[
-Converts a byte, char, int, or color to a String containing the equivalent hexadecimal notation. For example, the color value produced by <b>color(0, 102, 153)</b> will convert to the String value "FF006699". This function can help make your geeky debugging sessions much happier.<br/>
+Converts a color to a String containing the equivalent hexadecimal notation. For example, the color value produced by <b>color(0, 102, 153)</b> will convert to the String value "FF006699". This function can help make your geeky debugging sessions much happier.<br/>
 <br/>
 Note that the maximum number of digits is 8, because an <b>int</b> value can only represent up to 32 bits. Specifying more than 8 digits will not increase the length of the string further.
 ]]></description>

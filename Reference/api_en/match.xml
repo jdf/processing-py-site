@@ -65,6 +65,5 @@ match(<c>str</c>, <c>regexp</c>)
 <related>matchAll</related>
 <related>string_split</related>
 <related>string_join</related>
-<related>trim</related>
 
 </root>

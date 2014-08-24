@@ -17,7 +17,8 @@ image(img, 0, 0)
 </example>
 
 <example>
-<image />
+<noimage />
+<notest />
 <code><![CDATA[
 img = None
 
@@ -31,7 +32,8 @@ def draw():
 
 
 <example>
-<image />
+<noimage />
+<notest />
 <code><![CDATA[
 webImg = None
 

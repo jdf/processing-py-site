@@ -12,19 +12,17 @@
 <type></type>
 
 <example>
-<image />
+<noimage />
+<notest />
 <code><![CDATA[
 add_library('pdf')
-
 
 def setup():
     size(400, 400)
     beginRecord(PDF, "everything.pdf")
 
-
 def draw():
     ellipse(mouseX, mouseY, 10, 10)
-
 
 def mousePressed():
     endRecord()

@@ -9,13 +9,16 @@
 <type>variable</type>
 
 <example>
-<image />
+<noimage />
+<notest />
 <code><![CDATA[
-if (focused) # or "if (focused == True)"
-    ellipse(25, 25, 50, 50)
-else:
-    line(0, 0, 100, 100)
-    line(100, 0, 0, 100)
+def draw():
+    background(255)
+    if focused: # or "if (focused == True)"
+        ellipse(25, 25, 50, 50)
+    else:
+        line(0, 0, 100, 100)
+        line(100, 0, 0, 100)
 ]]></code>
 </example>
 

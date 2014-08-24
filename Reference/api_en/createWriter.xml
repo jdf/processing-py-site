@@ -12,19 +12,16 @@
 <type></type>
 
 <example>
-<image />
+<noimage />
 <code><![CDATA[
-PrintWriter output
-def setup(): 
-    # Create a file in the sketch directory
-    output = createWriter("positions.txt")
-def draw(): 
-    point(mouseX, mouseY)
-    output.println(mouseX + "\t" + mouseY)# Write the coordinate to the file
-def keyPressed(): 
-    output.flush()# Writes the remaining data to the file
-    output.close()# Finishes the file
-    exit()# Stops the program
+# Create a file in the sketch directory
+output = createWriter("positions.txt")
+numbers = [17, 34, 190, 4, 18, 12]
+for item in numbers:
+    output.println(item) # Write the datum to the file
+output.flush()# Writes the remaining data to the file
+output.close()# Finishes the file
+exit()# Stops the program
 ]]></code>
 </example>
 

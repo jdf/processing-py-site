@@ -414,7 +414,14 @@ def build_reference_index(reference_dir, env):
         r'^PShape.*',
         r'^PrintWriter.*',
         r'^Table.*',
-        r'^XML.*'
+        r'^XML.*',
+        r'^beginRecord$',
+        r'^endRecord$',
+        r'^loadXML$',
+        r'^parseXML$',
+        r'^loadTable$',
+        r'^saveXML$',
+        r'^saveTable$',
     ]
     reference_items = list()
     for filename in os.listdir(reference_dir):
@@ -445,7 +452,6 @@ def build_reference_index(reference_dir, env):
         ('Data', 'String Methods'),
         ('Data', 'List Functions'),
         ('Data', 'String Functions'),
-        ('Data', 'Array Functions'),
         ('Control', 'Relational Operators'),
         ('Control', 'Iteration'),
         ('Control', 'Conditionals'),

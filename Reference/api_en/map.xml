@@ -30,7 +30,8 @@ println(m)# Prints "-9.0"
 </example>
 
 <example>
-<image />
+<noimage />
+<notest />
 <code><![CDATA[
 def setup(): 
     size(200, 200)

@@ -11,16 +11,9 @@
 <example>
 <image />
 <code><![CDATA[
-img = None
-
-
-def setup():
-    # Images must be in the "data" directory to load correctly
-    img = loadImage("laDefense.jpg")
-
-
-def draw():
-    image(img, 0, 0)
+# Images must be in the "data" directory to load correctly
+img = loadImage("laDefense.jpg")
+image(img, 0, 0)
 ]]></code>
 </example>
 
@@ -28,17 +21,10 @@ def draw():
 <example>
 <image />
 <code><![CDATA[
-img = None
-
-
-def setup():
-    # Images must be in the "data" directory to load correctly
-    img = loadImage("laDefense.jpg")
-
-
-def draw():
-    image(img, 0, 0)
-    image(img, 0, 0, width / 2, height / 2)
+# Images must be in the "data" directory to load correctly
+img = loadImage("laDefense.jpg")
+image(img, 0, 0)
+image(img, 0, 0, width / 2, height / 2)
 ]]></code>
 </example>
 

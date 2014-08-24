@@ -12,16 +12,13 @@
 <example>
 <image />
 <code><![CDATA[
-# Move the mouse left and right to see the curve change
-def setup():
-    size(100, 100)
-    noFill()
-
-
-def draw():
-    background(204)
-    t = map(mouseX, 0, width, -5, 5)
-    curveTightness(t)
+size(100, 400)
+noFill()
+background(204)
+for i in range(6):
+    curveTightness(-5 + (i*2))
+    pushMatrix()
+    translate(0, i*60)
     beginShape()
     curveVertex(10, 26)
     curveVertex(10, 26)
@@ -30,6 +27,7 @@ def draw():
     curveVertex(25, 65)
     curveVertex(25, 65)
     endShape()
+    popMatrix()
 ]]></code>
 </example>
 

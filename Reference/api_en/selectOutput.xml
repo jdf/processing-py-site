@@ -12,6 +12,8 @@
 <type></type>
 
 <example>
+	<noimage />
+	<notest />
 <code><![CDATA[
 def setup():
     selectOutput("Select a file to write to:", "fileSelected")

@@ -19,11 +19,10 @@
   <animal id="1" species="Panthera pardus">Leopard</animal>
   <animal id="2" species="Equus zebra">Zebra</animal>
 </mammals>'''
-def setup():
-    xml = loadXML("mammals.xml")
-    firstChild = xml.getChild("animal")
-    xml.removeChild(firstChild)
-    saveXML(xml, "subset.xml")
+xml = loadXML("mammals.xml")
+firstChild = xml.getChild("animal")
+xml.removeChild(firstChild)
+saveXML(xml, "subset.xml")
 # Sketch saves the following to a file called "subset.xml":
 '''<?xml version="1.0" encoding="UTF-8"?>
 <mammals>

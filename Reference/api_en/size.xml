@@ -18,7 +18,8 @@ line(0, 0, width, height)
 </example>
 
 <example>
-<image />
+<noimage />
+<notest />
 <code><![CDATA[
 def setup(): 
     size(320, 240)

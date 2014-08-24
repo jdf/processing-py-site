@@ -47,6 +47,5 @@ matchAll(<c>str</c>, <c>regexp</c>)
 </parameter>
 
 <related>match</related>
-<related>trim</related>
 
 </root>

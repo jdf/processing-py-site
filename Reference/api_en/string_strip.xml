@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>String Strip</name>
+<name>.strip()</name>
 
 <category>Data</category>
 

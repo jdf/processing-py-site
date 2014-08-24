@@ -11,37 +11,13 @@
 <example>
 <image />
 <code><![CDATA[
-s = None
-
-def setup():
-    size(100, 100)
-    # The file "bot.svg" must be in the data folder
-    # of the current sketch to load successfully
-    s = loadShape("bot.svg")
-
-def draw():
-    shape(s, 10, 10, 80, 80)
+size(100, 100)
+# The file "apple.svg" must be in the data folder
+# of the current sketch to load successfully
+s = loadShape("apple.svg")
+shape(s, 10, 10, 80, 80)
 ]]></code>
 </example>
-
-<example>
-<image />
-<code><![CDATA[
-s = None
-
-def setup(): 
-    size(100, 100, P3D)
-    # The file "bot.obj" must be in the data folder
-    # of the current sketch to load successfully
-    s = loadShape("bot.obj")
-
-def draw(): 
-    background(204)
-    translate(width/2, height/2)
-    shape(s, 0, 0)
-]]></code>
-</example>
-
 
 <description><![CDATA[
 Loads geometry into a variable of type <b>PShape</b>. SVG and OBJ files may be loaded. To load correctly, the file must be located in the data directory of the current sketch. In most cases, <b>loadShape()</b> should be used inside <b>setup()</b> because loading shapes inside <b>draw()</b> will reduce the speed of a sketch.<br />

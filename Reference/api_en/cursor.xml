@@ -9,6 +9,8 @@
 <type></type>
 
 <example>
+	<noimage />
+	<notest />
 <code><![CDATA[
 # Move the mouse left and right across the image
 # to see the cursor change from a cross to a hand

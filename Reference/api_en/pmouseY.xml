@@ -9,7 +9,8 @@
 <type>variable</type>
 
 <example>
-<image />
+<noimage />
+<notest />
 <code><![CDATA[
 # Move the mouse quickly to see the difference
 # between the current and previous position

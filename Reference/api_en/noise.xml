@@ -12,17 +12,17 @@
 <image />
 <code><![CDATA[
 xoff = 0.0
-
-def draw(): 
-    background(204)
-    xoff = xoff + .01
-    n = noise(xoff) * width
-    line(n, 0, n, height)
+background(204)
+for i in range(1000):
+  xoff = xoff + .01
+  n = noise(xoff) * width
+  line(n, 0, n, height)
 ]]></code>
 </example>
 
 <example>
-<image />
+<noimage />
+<notest />
 <code><![CDATA[
 noiseScale = 0.02
 def draw():
