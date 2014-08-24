@@ -407,12 +407,23 @@ def build_reference(reference_dir, to_update, env, build_images):
     return failures
  
 def build_reference_index(reference_dir, env):
+    import re
     print('Building reference index')
+    # skip putting some items in the reference, as needed
+    to_skip_patterns = [
+        r'^PShape.*',
+        r'^PrintWriter.*',
+        r'^Table.*',
+        r'^XML.*'
+    ]
     reference_items = list()
     for filename in os.listdir(reference_dir):
         if not filename.endswith('.xml'): continue
         item = ReferenceItem(os.path.join(reference_dir,filename))
         item.flatname = os.path.basename(filename)[:-4]
+        if any([re.search(pattern, item.flatname) for pattern in to_skip_patterns]):
+            print("skipping %s" % filename)
+            continue
         reference_items.append(item)
     categories = dict()
     for item in reference_items:
