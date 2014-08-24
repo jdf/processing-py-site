@@ -10,6 +10,7 @@
 
 <example>
 <noimage />
+<notest />
 <code><![CDATA[
 bigImage = None
 

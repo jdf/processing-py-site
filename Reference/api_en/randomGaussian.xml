@@ -19,7 +19,8 @@ for y in range(100):
 
 
 <example>
-<image />
+<noimage />
+<notest />
 <code><![CDATA[
 distribution = [0.0] * 360
 

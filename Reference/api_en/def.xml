@@ -13,19 +13,17 @@
 <code><![CDATA[
 def tinySquare(x, y): # Use "def" to define a function tinySquare.
     squareSize = 10
-    rect(x, y, 10, 10)
+    rect(x, y, squareSize, squareSize) 
 
-def setup():
-    rectMode(CENTER)
+rectMode(CENTER)
 
-def draw():
-    background(0)
-    tinySquare(mouseX, mouseY)
+background(0)
+tinySquare(width/2, height/2)
 ]]></code>
 </example>
 
 <description><![CDATA[
-The keyword def introduces a function definition. It is followed by a function name, and a paranthesized list of formal parameters.  
+    The keyword <b>def</b> introduces a function definition. It is followed by a function name, and a paranthesized list of parameters.  
 ]]></description>
 
 <syntax>

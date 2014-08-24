@@ -11,17 +11,13 @@
 <example>
 <image />
 <code><![CDATA[
-bot = None
+size(100, 100)
+apple = loadShape("apple.svg")
 
-def setup(): 
-    size(100, 100)
-    bot = loadShape("bot.svg")
-
-def draw(): 
-    shapeMode(CENTER)
-    shape(bot, 35, 35, 50, 50)
-    shapeMode(CORNER)
-    shape(bot, 35, 35, 50, 50)
+shapeMode(CENTER)
+shape(apple, 35, 35, 50, 50)
+shapeMode(CORNER)
+shape(apple, 35, 35, 50, 50)
 ]]></code>
 </example>
 

@@ -9,15 +9,16 @@
 <type></type>
 
 <example>
+	<noimage />
+	<notest />
 <code><![CDATA[
-data = "&ltmammals&gt&ltanimal&gtGoat&lt/animal&gt&lt/mammals&gt"
-def setup(): 
-    XML xml = parseXML(data)
-    if xml == null:
-        println("XML could not be parsed.")
-    else:
-        XML firstChild = xml.getChild("animal")
-        println(firstChild.getContent())
+data = "<mammals><animal>Goat</animal></mammals>"
+xml = parseXML(data)
+if xml == None:
+  println("XML could not be parsed.")
+else:
+  firstChild = xml.getChild("animal")
+  println(firstChild.getContent())
     
 # Sketch prints:
 # Goat

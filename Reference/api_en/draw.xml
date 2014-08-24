@@ -9,16 +9,14 @@
 <type>p5function</type>
 
 <example>
-<image />
+<noimage />
 <notest />
 <code><![CDATA[
 yPos = 0.0
 
-
 def setup():  # setup() runs once
     size(200, 200)
     frameRate(30)
-
 
 def draw():  # draw() loops forever, until stopped
     background(204)
@@ -30,14 +28,14 @@ def draw():  # draw() loops forever, until stopped
 </example>
 
 <example>
-<image />
+<noimage />
+<notest />
 <code><![CDATA[
 def setup():
     size(200, 200)
 # Although empty here, draw() is needed so
 # the sketch can process user input events
 # (mouse presses in this case).
-
 
 def draw():
     pass

@@ -11,18 +11,17 @@
 <example>
 <image />
 <code><![CDATA[
-def setup(): 
-    size(100, 100, P3D)
+size(100, 400, P3D)
 
-def draw(): 
-    background(200)
-    stroke(255, 50)
-    translate(50, 50, 0)
-    rotateX(mouseY * 0.05)
-    rotateY(mouseX * 0.05)
-    fill(mouseX * 2, 0, 160)
-    sphereDetail(mouseX / 4)
-    sphere(40)
+background(200)
+stroke(255, 50)
+for i in range(5):
+  pushMatrix()
+  translate(50, 50 + (i*75), 0)
+  fill(i * 30, 0, 160)
+  sphereDetail(i * 5)
+  sphere(30)
+  popMatrix()
 ]]></code>
 </example>
 

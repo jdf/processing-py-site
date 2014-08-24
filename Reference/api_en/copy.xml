@@ -9,7 +9,7 @@
 <example>
 <image />
 <code><![CDATA[
-img = loadImage("eames.jpg")
+img = loadImage("apples.jpg")
 image(img, 0, 0, width, height)
 copy(7, 22, 10, 10, 35, 25, 50, 50)
 stroke(255)

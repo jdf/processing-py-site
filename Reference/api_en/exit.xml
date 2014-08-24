@@ -9,11 +9,11 @@
 <type></type>
 
 <example>
-<image />
+<noimage />
+<notest />
 <code><![CDATA[
 def draw():
     line(mouseX, mouseY, 50, 50)
-
 
 def mousePressed():
     exit()

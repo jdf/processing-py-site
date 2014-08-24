@@ -11,11 +11,11 @@
 <example>
 <image />
 <code><![CDATA[
-# The font "AndaleMono-48.vlw"" must be located in the 
+# The font "LetterGothicStd-32.vlw" must be located in the 
 # current sketch's "data" directory to load successfully
-mono = loadFont("AndaleMono-48.vlw")
+f = loadFont("LetterGothicStd-32.vlw")
 background(0)
-textFont(mono)
+textFont(f)
 text("word", 12, 60)
 ]]></code>
 </example>

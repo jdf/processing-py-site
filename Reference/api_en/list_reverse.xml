@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>reverse()</name>
+<name>.reverse()</name>
 
 <category>Data</category>
 
@@ -9,6 +9,7 @@
 <usage></usage>
 
 <example>
+	<noimage />
 <code><![CDATA[
 a = [1, 2, 3]
 a.reverse()

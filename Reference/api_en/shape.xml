@@ -11,13 +11,8 @@
 <example>
 <image />
 <code><![CDATA[
-s = None
-
-def setup(): 
-    s = loadShape("bot.svg")
-
-def draw(): 
-    shape(s, 10, 10, 80, 80)
+s = loadShape("apple.svg")
+shape(s, 10, 10, 80, 80)
 ]]></code>
 </example>
 

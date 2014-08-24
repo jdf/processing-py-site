@@ -11,17 +11,14 @@
 <example>
 <image />
 <code><![CDATA[
-myFont = None 
-
-def setup(): 
-    size(200, 200)
-    # Uncomment the following two lines to see the available fonts 
-    #fontList = PFont.list()
-    #println(fontList)
-    myFont = createFont("Georgia", 32)
-    textFont(myFont)
-    textAlign(CENTER, CENTER)
-    text("!@#$%", width/2, height/2)
+size(100, 100)
+# Uncomment the following two lines to see the available fonts 
+#fontList = PFont.list()
+#println(fontList)
+myFont = createFont("Georgia", 16)
+textFont(myFont)
+textAlign(CENTER, CENTER)
+text("!@#$%", width/2, height/2)
 ]]></code>
 </example>
 

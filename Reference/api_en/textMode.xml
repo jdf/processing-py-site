@@ -9,18 +9,17 @@
 <type></type>
 
 <example>
-<image />
+<noimage />
+<notest />
 <code><![CDATA[
 add_library('pdf')
 
-def setup(): 
-    size(500, 500, PDF, "TypeDemo.pdf")
-    textMode(SHAPE)
-    textSize(180)
+size(500, 500, PDF, "TypeDemo.pdf")
+textMode(SHAPE)
+textSize(180)
 
-def draw(): 
-    text("ABC", 75, 350)
-    exit() # Quit the program
+text("ABC", 75, 350)
+exit() # Quit the program
 ]]></code>
 </example>
 
