@@ -39,7 +39,7 @@ Allows characters to print to a text-output stream. A new PrintWriter object is 
 <method>
 <label>println()</label>
 <description>Adds data to the stream and starts a new line</description>
-<ref>PrintWriter_print</ref>
+<ref>PrintWriter_println</ref>
 </method>
 
 <method>
