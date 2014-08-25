@@ -2,3 +2,10 @@
 **/*.pyc
 generated/**
 depends/**
+cross.tga
+diagonal.tif
+nouns.txt
+numbers.dat
+outputImage.jpg
+positions.txt
+subset.xml
