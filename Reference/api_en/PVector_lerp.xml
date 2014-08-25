@@ -15,7 +15,7 @@
 current = PVector(0.0, 0.0)
 target = PVector(100.0, 100.0)
 current.lerp(target, 0.5)
-println(current)# Prints "[ 50.0, 50.0, 0.0 ]"
+print(current)# Prints "[ 50.0, 50.0, 0.0 ]"
 ]]></code>
 </example>
 
@@ -26,7 +26,7 @@ println(current)# Prints "[ 50.0, 50.0, 0.0 ]"
 start = PVector(0.0, 0.0)
 end = PVector(100.0, 100.0)
 middle = PVector.lerp(start, end, 0.5)
-println(middle)  # Prints "[ 50.0, 50.0, 0.0 ]"
+print(middle)  # Prints "[ 50.0, 50.0, 0.0 ]"
 ]]></code>
 </example>
 
@@ -35,7 +35,7 @@ println(middle)  # Prints "[ 50.0, 50.0, 0.0 ]"
 <code><![CDATA[
 v = PVector(0.0, 0.0)
 v.lerp(25, 30, 0, 0.1)
-println(v) # Prints "[ 2.5, 3.0, 0.0 ]"
+print(v) # Prints "[ 2.5, 3.0, 0.0 ]"
 ]]></code>
 </example>
 

@@ -23,7 +23,7 @@
 # &lt;/mammals&gt;
 xml = loadXML("mammals.xml")
 firstChild = xml.getChild("animal")
-println(firstChild.getAttributeCount())
+print(firstChild.getAttributeCount())
 # Sketch prints:
 # 2
 ]]></code>

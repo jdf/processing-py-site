@@ -14,7 +14,7 @@ a = PI
 c = cos(a)
 ac = acos(c)
 # Prints "3.1415927 : -1.0 : 3.1415927"
-println("%.7f : %.1f : %.7f" % (a, c, ac))
+print("%.7f : %.1f : %.7f" % (a, c, ac))
 ]]></code>
 </example>
 
@@ -24,7 +24,7 @@ a = PI + PI/4.0
 c = cos(a)
 ac = acos(c)
 # Prints "3.926991 : -0.70710665 : 2.3561943"
-println("%.6f : %.8f : %.7f" % (a, c, ac))
+print("%.6f : %.8f : %.7f" % (a, c, ac))
 ]]></code>
 </example>
 

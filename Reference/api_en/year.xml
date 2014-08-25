@@ -14,9 +14,9 @@
 d = day()  # Values from 1 - 31
 m = month()  # Values from 1 - 12
 y = year()  # 2003, 2004, 2005, etc.
-println(d)
-println(m)
-println(y)
+print(d)
+print(m)
+print(y)
 ]]></code>
 </example>
 

@@ -22,7 +22,7 @@
 # &lt/mammals&gt
 def setup():
     xml = loadXML("mammals.xml")
-    println(xml.getName())
+    print(xml.getName())
 # Sketch prints:
 # mammals
 ]]></code>

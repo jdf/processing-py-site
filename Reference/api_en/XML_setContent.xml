@@ -23,9 +23,9 @@
 def setup():
     xml = loadXML("mammals.xml")
     firstChild = xml.getChild("animal")
-    println(firstChild.getContent())
+    print(firstChild.getContent())
     firstChild.setContent("Mountain Goat")
-    println(firstChild.getContent())
+    print(firstChild.getContent())
 # Sketch prints:
 # Goat
 # Mountain Goat

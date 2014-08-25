@@ -11,16 +11,16 @@
 <example>
 <code><![CDATA[
 a = [1,2,3]
-println(a) # Prints: [1,2,3]
+print(a) # Prints: [1,2,3]
 del a[0]   # Delete the list member at index 0. 
-println(a) # Prints: [2, 3]
+print(a) # Prints: [2, 3]
 del a      # Delete the variable 'a'
 
 b = {'a': 1, 'b': 2, 'c': 3}
-println('a' in b) # Prints 'True'
+print('a' in b) # Prints 'True'
 
 del b['a']
-println('a' in b) # Prints 'False'
+print('a' in b) # Prints 'False'
 ]]></code>
 </example>
 

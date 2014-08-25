@@ -22,9 +22,9 @@
 #     &ltanimal id=&quot2&quotspecies=&quotEquus zebra&quot&gtZebra&lt/animal&gt
 # &lt/mammals&gt
 xml = loadXML("mammals.xml")
-println(xml.getName())
+print(xml.getName())
 xml.setName("fish")
-println(xml.getName())
+print(xml.getName())
 # Sketch prints:
 # mammals
 # fish

@@ -25,7 +25,7 @@ def setup():
     newRow.setString("name", "Mosquito")
     newRow.setString("type", "Insect")
     result = table.matchRow("R.*", "type")
-    println(result.getString("name"))  # Prints "Snake"
+    print(result.getString("name"))  # Prints "Snake"
 ]]></code>
 </example>
 

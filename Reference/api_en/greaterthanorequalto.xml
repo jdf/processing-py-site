@@ -13,7 +13,7 @@
 a = 23
 b = 23
 if a >= b:
-    println("variable a is greater or equal to variable b ")
+    print("variable a is greater or equal to variable b ")
 ]]></code>
 </example>
 

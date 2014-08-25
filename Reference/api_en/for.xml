@@ -48,7 +48,7 @@ for i in range(30, 80, 5):
 <code><![CDATA[
 nums = [5, 4, 3, 2, 1]
 for i in nums:
-    println(i)
+    print(i)
 ]]></code>
 </example>
 

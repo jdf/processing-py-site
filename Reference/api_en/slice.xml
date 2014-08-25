@@ -14,34 +14,34 @@
 
 # Retrieve a single item from a list with a given index
 elements = ["H", "He", "Li", "B", "C", "N", "O", "F", "Ne"]
-println(elements[2]) # Prints 'Li'
+print(elements[2]) # Prints 'Li'
 
 # Use a colon inside the index brackets to get a "slice" of the list, returned
 # as a list.
 element_slice = elements[1:5] # from index 0 up to (not including) index 5
-println(element_slice) # Prints ['He', 'Li', 'B', 'C']
+print(element_slice) # Prints ['He', 'Li', 'B', 'C']
 
 # If a number is not specified at the beginning of the range, it's assumed to
 # be 0 (or the beginning of the list).
 element_slice = elements[:3] # get the first three elements
-println(element_slice) # Prints ['H', 'He', 'Li']
+print(element_slice) # Prints ['H', 'He', 'Li']
 
 # If a number is not specified at the end of the range, the slice will extend
 # to the end of the list.
 element_slice = elements[6:] # from index 6 to the end of the list
-println(element_slice) # Prints ['O', 'F', 'Ne']
+print(element_slice) # Prints ['O', 'F', 'Ne']
 
 # Without either a first number or a second number, the slice extends from
 # the beginning of the list to the end of the list, effectively making a copy.
 element_slice = elements[:]
-println(element_slice) # Prints ['H', 'He', 'Li', 'B', 'C', 'N', 'O', 'F', 'Ne']
+print(element_slice) # Prints ['H', 'He', 'Li', 'B', 'C', 'N', 'O', 'F', 'Ne']
 
 # Negative indexes can be used for either element of the range.
 element_slice = elements[-2:] # last two elements of the list
-println(element_slice) # Prints ['F', 'Ne']
+print(element_slice) # Prints ['F', 'Ne']
 
 element_slice = elements[-5:-2] # 5 elements from end to 2 elements from end
-println(element_slice) # Prints ['C', 'N', 'O']
+print(element_slice) # Prints ['C', 'N', 'O']
 
 ]]></code>
 </example>
@@ -52,9 +52,9 @@ println(element_slice) # Prints ['C', 'N', 'O']
 
 # You can use slice syntax with strings as well:
 message = "Now is the winter of our discontent"
-println(message[:10]) # Prints 'Now is the'
-println(message[11:20]) # Prints 'winter of'
-println(message[-7:]) # Prints 'content'
+print(message[:10]) # Prints 'Now is the'
+print(message[11:20]) # Prints 'winter of'
+print(message[-7:]) # Prints 'content'
 
 ]]></code>
 </example>

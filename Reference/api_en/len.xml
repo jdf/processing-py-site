@@ -12,13 +12,13 @@
 <image />
 <code><![CDATA[
 message = "It was the best of strings, it was the worst of strings."
-println(len(message)) # Prints 56
+print(len(message)) # Prints 56
 
 items = ["gorgonzola", "mozzarella", "edam", "gouda"]
-println(len(items)) # Prints 4
+print(len(items)) # Prints 4
 
 capitals = {'NY': 'Albany', 'CA': 'Sacramento', 'FL': 'Tallahassee'}
-println(len(capitals)) # Prints 3
+print(len(capitals)) # Prints 3
 ]]></code>
 </example>
 

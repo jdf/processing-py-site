@@ -23,9 +23,9 @@
 def setup(): 
     xml = loadXML("mammals.xml")
     firstChild = xml.getChild("animal")
-    println(firstChild.getString("species"))
+    print(firstChild.getString("species"))
     firstChild.setString("species", "Jamides zebra")
-    println(firstChild.getString("species"))
+    print(firstChild.getString("species"))
 # Sketch prints:
 # Capra hircus
 # Jamides zebra

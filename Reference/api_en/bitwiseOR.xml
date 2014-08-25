@@ -15,7 +15,7 @@
 a = 205  # In binary: 11001101
 b = 45  # In binary: 00101101
 c = a | b  # In binary: 11101101
-println(c)  # Prints "237", the decimal equivalent to 11101101
+print(c)  # Prints "237", the decimal equivalent to 11101101
 ]]></code>
 </example>
 
@@ -41,7 +41,7 @@ Compares each corresponding bit in the binary representation of the values. For 
   --------
   11011110  # 222</pre>
 <br />
-To see the binary representation of a number, use the <b>binary()</b> function with <b>println()</b>.
+To see the binary representation of a number, use the <b>binary()</b> function with <b>print()</b>.
 ]]></description>
 
 <syntax>

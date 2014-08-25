@@ -24,9 +24,9 @@ def setup():
     newRow = table.addRow()
     newRow.setString("name", "    $Mosquito , ")
     newRow.setString("type", ",,,Insect")
-    println('\n'.join(table.getStringColumn("name")))
+    print('\n'.join(table.getStringColumn("name")))
     table.removeTokens(",$ ")
-    println('\n'.join(table.getStringColumn("name")))
+    print('\n'.join(table.getStringColumn("name")))
 # Sketch prints:
 # [0] "     $Lion    ,"
 # [1] "$Snake    "

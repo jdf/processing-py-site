@@ -20,7 +20,7 @@ for item in colors:
   print item
 
 # Get an item from a tuple by index
-println(colors[2]) # Prints: Green
+print(colors[2]) # Prints: Green
 
 # Results in a type error: tuples can't be changed once created!
 colors[2] = "chartreuse"

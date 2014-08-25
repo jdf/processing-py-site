@@ -14,7 +14,7 @@ s = "Inside tags, you will find <tag>multiple</tag>"
 s += "<tag>pieces</tag>of <tag>content</tag>."
 m = matchAll(s, "<tag>(.*?)</tag>")
 for i in range(len(m)): 
-    println("Found '" + m[i][1] + "' inside a tag.")
+    print("Found '" + m[i][1] + "' inside a tag.")
 # Prints to the console:
 # "Found 'multiple' inside a tag."
 # "Found 'pieces' inside a tag."

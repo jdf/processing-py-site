@@ -12,7 +12,7 @@
 <code><![CDATA[
 message = 'I AM QUITE ANGRY.'
 polite_message = message.lower()
-println(polite_message) # prints "i am quite angry."
+print(polite_message) # prints "i am quite angry."
 ]]></code>
 </example>
 

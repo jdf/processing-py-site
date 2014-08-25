@@ -14,14 +14,14 @@
 numbers = [1, 2, 3]
 reversed_numbers = reversed(numbers)
 for num in reversed_numbers:
-  println(num)
+  print(num)
 # Prints:
 # 3
 # 2
 # 1
 
 # Meanwhile, the original list has not been modified:
-println(numbers) # Prints [1, 2, 3]
+print(numbers) # Prints [1, 2, 3]
 ]]></code>
 </example>
 
@@ -33,7 +33,7 @@ println(numbers) # Prints [1, 2, 3]
 numbers = [1, 2, 3]
 reversed_numbers = reversed(numbers)
 reversed_list = list(reversed_numbers)
-println(reversed_list) # Prints [3, 2, 1]
+print(reversed_list) # Prints [3, 2, 1]
 ]]></code>
 </example>
 
@@ -44,7 +44,7 @@ println(reversed_list) # Prints [3, 2, 1]
 word = "orderly"
 reversed_word = reversed(word)
 reversed_list = list(reversed_word)
-println(reversed_list) # Prints ['y', 'l', 'r', 'e', 'd', 'r', 'o']
+print(reversed_list) # Prints ['y', 'l', 'r', 'e', 'd', 'r', 'o']
 ]]></code>
 </example>
 

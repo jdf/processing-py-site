@@ -13,9 +13,9 @@
 element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
 
 try:
-  println(element_names['Zz'])
+  print(element_names['Zz'])
 except KeyError as e:
-  println("caught KeyError: " + e.message) # Prints 'caught KeyError: Zz'
+  print("caught KeyError: " + e.message) # Prints 'caught KeyError: Zz'
 ]]></code>
 </example>
 

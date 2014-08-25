@@ -24,7 +24,7 @@ def setup():
     xml = loadXML("mammals.xml")
     children = xml.getChildren("animal")
     parent = children[1].getParent()
-    println(parent.getName())
+    print(parent.getName())
 # Sketch prints:
 # mammals
 ]]></code>

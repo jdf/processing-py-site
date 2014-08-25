@@ -11,9 +11,9 @@
 <example>
 <code><![CDATA[
 letters = ['b', 'c', 'd']
-println(letters) # Prints ['b', 'c', 'd']
+print(letters) # Prints ['b', 'c', 'd']
 letters.insert(0, 'a')
-println(letters) # Prints ['a', 'b', 'c', 'd']
+print(letters) # Prints ['a', 'b', 'c', 'd']
 ]]></code>
 </example>
 

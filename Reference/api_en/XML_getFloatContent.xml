@@ -23,7 +23,7 @@
 def setup():
     xml = loadXML("positions.xml")
     firstChild = xml.getChild("position")
-    println(firstChild.getFloatContent())
+    print(firstChild.getFloatContent())
 # Sketch prints:
 # 128.11099243164062
 ]]></code>

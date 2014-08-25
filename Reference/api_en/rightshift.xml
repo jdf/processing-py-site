@@ -12,13 +12,13 @@
 <image />
 <code><![CDATA[
 m = 8 >> 3   # In binary: 1000 to 1
-println(m)   # Prints "1"
+print(m)   # Prints "1"
 n = 256 >> 6 # In binary: 100000000 to 100
-println(n)   # Prints "4"
+print(n)   # Prints "4"
 o = 16 >> 3  # In binary: 10000 to 10
-println(o)   # Prints "2"
+print(o)   # Prints "2"
 p = 26 >> 1  # In binary: 11010 to 1101
-println(p)   # Prints "13"
+print(p)   # Prints "13"
 ]]></code>
 </example>
 

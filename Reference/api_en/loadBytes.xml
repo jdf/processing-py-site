@@ -17,13 +17,13 @@ b = loadBytes("something.dat")
 for i in range(len(b)):
     # Every tenth number, start a line
     if (i % 10) == 0:
-        println("")
+        print("")
 
     # bytes are from -128 to 127, this converts to 0 to 255
     a = b[i] & 0xff
     print("%i " % (a))
 # Print a blank line at the end
-println("")
+print("")
 ]]></code>
 </example>
 

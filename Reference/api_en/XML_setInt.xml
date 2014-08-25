@@ -23,9 +23,9 @@
 def setup(): 
     xml = loadXML("mammals.xml")
     firstChild = xml.getChild("animal")
-    println(firstChild.getInt("id"))
+    print(firstChild.getInt("id"))
     firstChild.setInt("id", 55555)
-    println(firstChild.getInt("id"))
+    print(firstChild.getInt("id"))
 # Sketch prints:
 # 0
 # 55555

@@ -23,7 +23,7 @@
 def setup():
     xml = loadXML("mammals.xml")
     firstChild = xml.getChild("animal")
-    println(firstChild.getFloat("id"))
+    print(firstChild.getFloat("id"))
 # Sketch prints:
 # 0.0
 ]]></code>

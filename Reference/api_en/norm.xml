@@ -14,7 +14,7 @@
 <code><![CDATA[
 value = 20
 n = norm(value, 0, 50)
-println(n)  # Prints "0.4000000059604645"
+print(n)  # Prints "0.4000000059604645"
 ]]></code>
 </example>
 
@@ -22,7 +22,7 @@ println(n)  # Prints "0.4000000059604645"
 <code><![CDATA[
 value = -10
 n = norm(value, 0, 100)
-println(n)  # Prints "-0.10000000149011612"
+print(n)  # Prints "-0.10000000149011612"
 ]]></code>
 </example>
 

@@ -11,9 +11,9 @@
 <example>
 <code><![CDATA[
 a = ['carrot', 'cucumber']
-println(a)  # Prints ['carrot', 'cucumber']
+print(a)  # Prints ['carrot', 'cucumber']
 a.append('cabbage')
-println(a)  # Prints ['carrot', 'cucumber', 'cabbage']
+print(a)  # Prints ['carrot', 'cucumber', 'cabbage']
 ]]></code>
 </example>
 

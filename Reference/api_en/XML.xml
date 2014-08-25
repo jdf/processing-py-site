@@ -27,7 +27,7 @@ for i in range(len(children)):
   id = children[i].getInt("id")
   coloring = children[i].getString("species")
   name = children[i].getContent()
-  println("%d, %s, %s" % (id, coloring, name))
+  print("%d, %s, %s" % (id, coloring, name))
 # Sketch prints:
 # 0, Capra hircus, Goat
 # 1, Panthera pardus, Leopard

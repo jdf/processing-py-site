@@ -23,7 +23,7 @@ for i in range(100):
 <code><![CDATA[
 for i in range(100): 
     r = random(-50, 50)
-    println(r)
+    print(r)
 ]]></code>
 </example>
 
@@ -33,7 +33,7 @@ for i in range(100):
 # Get a random element from an array
 words = "apple", "bear", "cat", "dog"
 index = int(random(len(words)))  # Same as int(random(4))
-println(words[index])  # Prints one of the four words
+print(words[index])  # Prints one of the four words
 ]]></code>
 </example>
 

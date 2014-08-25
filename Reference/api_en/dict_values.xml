@@ -14,11 +14,11 @@
 
 element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
 element_values = element_names.values()
-println(element_values) # Prints ['lithium', 'hydrogen', 'helium']
+print(element_values) # Prints ['lithium', 'hydrogen', 'helium']
 
 # Check to see if a given value is in the dictionary
 if 'hydrogen' in element_names.values():
-	println("found hydrogen!")
+	print("found hydrogen!")
 
 ]]></code>
 </example>

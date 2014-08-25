@@ -12,7 +12,7 @@
 <code><![CDATA[
 rad = PI/4
 deg = degrees(rad)
-println("%.3f radians is %d degrees" % (rad, deg))
+print("%.3f radians is %d degrees" % (rad, deg))
 ]]></code>
 </example>
 

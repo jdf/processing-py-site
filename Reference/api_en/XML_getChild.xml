@@ -23,7 +23,7 @@
 def setup(): 
     xml = loadXML("mammals.xml")
     firstChild = xml.getChild("animal")
-    println(firstChild.getContent())
+    print(firstChild.getContent())
 # Sketch prints:
 # Goat
 ]]></code>

@@ -11,9 +11,9 @@
 <example>
 <code><![CDATA[
 inventory = ["lamp", "skeleton key", "mystic orb"]
-println(inventory) # Prints ["lamp", "skeleton key", "mystic orb"]
+print(inventory) # Prints ["lamp", "skeleton key", "mystic orb"]
 inventory.remove("skeleton key")
-println(inventory) # Prints ["lamp", "mystic orb"]
+print(inventory) # Prints ["lamp", "mystic orb"]
 ]]></code>
 </example>
 

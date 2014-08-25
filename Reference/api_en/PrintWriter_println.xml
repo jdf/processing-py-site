@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
 
-<name>println()</name>
+<name>print()</name>
 
 <!-- unsupported_modes>js</unsupported_modes -->
 <!-- js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode -->
@@ -20,7 +20,7 @@ def setup():
     output = createWriter("positions.txt")
 def draw(): 
     point(mouseX, mouseY)
-    output.println(mouseX)# Write the coordinate to the file
+    output.print(mouseX)# Write the coordinate to the file
 def keyPressed(): 
     output.flush()# Writes the remaining data to the file
     output.close()# Finishes the file
@@ -33,7 +33,7 @@ Writes data to a <b>PrintWriter</b> object stream and then starts a new line.
 ]]></description>
 
 <syntax>
-<c>pw</c>.println(<c>data</c>)
+<c>pw</c>.print(<c>data</c>)
 </syntax>
 
 <parameter>

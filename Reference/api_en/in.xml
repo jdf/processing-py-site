@@ -14,18 +14,18 @@
 
 # Check if a given substring is present in a string
 message = "Now is the winter of our discontent."
-println("winter" in message) # Prints 'True'
+print("winter" in message) # Prints 'True'
 
 # Check if an item is present in a list
 data = [17, 24, 32, 912, 403]
-println(17 in data) # Prints 'True'
+print(17 in data) # Prints 'True'
 
 # Check if a key is present in a dictionary
 elements = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
-println('He' in elements) # Prints 'True'
+print('He' in elements) # Prints 'True'
 
 # Note: The "in" operator doesn't check for *values* in dictionaries!
-println('hydrogen' in elements) # Prints 'False'
+print('hydrogen' in elements) # Prints 'False'
 
 ]]></code>
 </example>

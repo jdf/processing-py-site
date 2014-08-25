@@ -14,7 +14,7 @@
 
 element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
 element_keys = element_names.keys()
-println(element_keys) # Prints ['Li', 'H', 'He']
+print(element_keys) # Prints ['Li', 'H', 'He']
 
 ]]></code>
 </example>

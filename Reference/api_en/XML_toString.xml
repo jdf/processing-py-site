@@ -15,7 +15,7 @@
 xml = loadXML("mammals.xml")
 # Format with line breaks, XML declaration, and 2-space indentation
 s = xml.toString()
-println(s)
+print(s)
 # Sketch prints:
 # &lt;mammals&gt;
 #   &lt;animal id="0" species="Capra hircus"&gt;Goat&lt;/animal&gt;
@@ -26,7 +26,7 @@ println(s)
 </example>
 
 <description><![CDATA[
-Takes an XML object and converts it to a String, using default formatting rules (includes an XML declaration, line breaks, and two spaces for indents).  These are the same formatting rules used by <b>println()</b> when printing an XML object.  This method produces the same results as using <b>format(2)</b>.
+Takes an XML object and converts it to a String, using default formatting rules (includes an XML declaration, line breaks, and two spaces for indents).  These are the same formatting rules used by <b>print()</b> when printing an XML object.  This method produces the same results as using <b>format(2)</b>.
 ]]></description>
 
 <syntax>

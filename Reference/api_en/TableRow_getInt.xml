@@ -24,9 +24,9 @@ def setup():
     row.setFloat("mass", 15.9994)
     row.setString("name", "Oxygen")
     
-    println(row.getInt("number"))# Prints 8
-    println(row.getFloat("mass"))# Prints 15.9994
-    println(row.getString("name"))# Prints "Oxygen
+    print(row.getInt("number"))# Prints 8
+    print(row.getFloat("mass"))# Prints 15.9994
+    print(row.getString("name"))# Prints "Oxygen
 ]]></code>
 </example>
 

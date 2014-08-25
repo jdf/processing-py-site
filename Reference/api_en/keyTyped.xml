@@ -20,15 +20,15 @@ def draw():  # Empty draw() needed to keep the program running
 
 
 def keyPressed():
-    println("pressed %s %d" % (key, keyCode))
+    print("pressed %s %d" % (key, keyCode))
 
 
 def keyTyped():
-    println("typed %s %d" % (key, keyCode))
+    print("typed %s %d" % (key, keyCode))
 
 
 def keyReleased():
-    println("released %s %d" % (key, keyCode))
+    print("released %s %d" % (key, keyCode))
 ]]></code>
 </example>
 

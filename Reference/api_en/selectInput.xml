@@ -20,9 +20,9 @@ def setup():
 
 def fileSelected(selection):
     if selection == None:
-        println("Window was closed or the user hit cancel.")
+        print("Window was closed or the user hit cancel.")
     else:
-        println("User selected " + selection.getAbsolutePath())
+        print("User selected " + selection.getAbsolutePath())
 ]]></code>
 </example>
 

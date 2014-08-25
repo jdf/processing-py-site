@@ -12,7 +12,7 @@
 <image />
 <code><![CDATA[
 s = loadShape("bot.svg")
-println(s.width) # Prints "281.0", the width of the shape
+print(s.width) # Prints "281.0", the width of the shape
 ]]></code>
 </example>
 

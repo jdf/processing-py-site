@@ -21,8 +21,8 @@ s1 = "Chernenko"
 s2 = "Brezhnev"
 sc1 = s1 + s2
 sc2 = s1 + ", Andropov, " + s2
-println(sc1)  # Prints "ChernenkoBrezhnev"
-println(sc2)  # Prints "Chernenko, Andropov, Brezhnev"
+print(sc1)  # Prints "ChernenkoBrezhnev"
+print(sc2)  # Prints "Chernenko, Andropov, Brezhnev"
 ]]></code>
 </example>
 
@@ -31,7 +31,7 @@ println(sc2)  # Prints "Chernenko, Andropov, Brezhnev"
 s1 = "Gorbachev"
 i = 1987
 sc1 = s1 + str(i)
-println(sc1)  # Prints "Gorbachev1987"
+print(sc1)  # Prints "Gorbachev1987"
 ]]></code>
 </example>
 

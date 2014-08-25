@@ -25,7 +25,7 @@ ellipse(m, 200, 10, 10)
 <code><![CDATA[
 value = 110
 m = map(value, 0, 100, -20, -10)
-println(m)# Prints "-9.0"
+print(m)# Prints "-9.0"
 ]]></code>
 </example>
 

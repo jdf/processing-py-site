@@ -22,10 +22,10 @@ element_names['C'] = 'carbon'
 # Loop over elements of dictionary. Note that key/value pairs
 # are returned in an arbitrary order!
 for k, v in element_names.iteritems():
-	println("symbol: " + k + "; name: " + v)
+	print("symbol: " + k + "; name: " + v)
 
 # Get an individual value by key
-println(element_names['He']) # Prints 'helium'
+print(element_names['He']) # Prints 'helium'
 
 # Delete an item from a dictionary
 del element_names['C']
@@ -37,7 +37,7 @@ number_map = {
   2: [10.0, 15.0, 20.0],
   3: [50.0, 75.0, 100.0]
 }
-println(number_map[2]) # Prints [10.0, 15.0, 20.0]
+print(number_map[2]) # Prints [10.0, 15.0, 20.0]
 
 ]]></code>
 </example>

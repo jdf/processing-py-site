@@ -16,10 +16,10 @@
 <code><![CDATA[
 # Create a file in the sketch directory
 output = createWriter("positions.txt")
-output.println(10)
-output.println(20)
-output.println(30)
-output.println(40)
+output.print(10)
+output.print(20)
+output.print(30)
+output.print(40)
 output.flush() # Writes the remaining data to the file
 output.close() # Finishes the file
 ]]></code>

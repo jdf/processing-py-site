@@ -14,7 +14,7 @@
 v1 = PVector(10, 20, 2)
 v2 = PVector(60, 80, 6)
 v3 = v1.cross(v2)
-println(v3)# Prints "[ -40.0, 60.0, -400.0 ]"
+print(v3)# Prints "[ -40.0, 60.0, -400.0 ]"
 ]]></code>
 </example>
 

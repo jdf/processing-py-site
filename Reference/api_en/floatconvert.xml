@@ -10,7 +10,7 @@
 <code><![CDATA[
 i = 65
 f = float(i)
-println("%d : %.1f"% (i, f)) # Prints "65 : 65.0"
+print("%d : %.1f"% (i, f)) # Prints "65 : 65.0"
 ]]></code>
 </example>
 
