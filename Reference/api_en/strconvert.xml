@@ -20,7 +20,7 @@ sc = str(c)
 sf = str(f)
 si = str(i)
 sb = sb + sy + sc + sf + si
-println(sb)  # Prints 'False-28R-32.61024'
+print(sb)  # Prints 'False-28R-32.61024'
 ]]></code>
 </example>
 

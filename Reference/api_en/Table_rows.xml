@@ -25,7 +25,7 @@ def setup():
     newRow.setString("name", "Mosquito")
     newRow.setString("type", "Insect")
     for row in table.rows():
-        println(row.getString("name") + ": " + row.getString("type"))
+        print(row.getString("name") + ": " + row.getString("type"))
 
 # Sketch prints:
 # Lion: Mammal

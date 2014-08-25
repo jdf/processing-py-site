@@ -22,7 +22,7 @@
 # &lt/mammals&gt
 def setup():
     xml = loadXML("mammals.xml")
-    println('\n'.join(xml.listChildren()))  # Prints line-separated list items
+    print('\n'.join(xml.listChildren()))  # Prints line-separated list items
 # Sketch prints:
 # [0] "#text"
 # [1] "animal"

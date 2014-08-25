@@ -11,9 +11,9 @@
 <example>
 <code><![CDATA[
 word = "cake"
-println(word)  # Prints cake
+print(word)  # Prints cake
 word = word.replace('c', 'm')
-println(word)  # Prints make
+print(word)  # Prints make
 ]]></code>
 </example>
 

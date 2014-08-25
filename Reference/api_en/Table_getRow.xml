@@ -25,9 +25,9 @@ def setup():
     newRow.setString("name", "Mosquito")
     newRow.setString("type", "Insect")
     row = table.getRow(2)
-    println(row.getString("name"))  # Prints "Mosquito"
+    print(row.getString("name"))  # Prints "Mosquito"
     row.setString("name", "Ladybug")
-    println(row.getString("name"))  # Prints "Ladybug"
+    print(row.getString("name"))  # Prints "Ladybug"
 ]]></code>
 </example>
 

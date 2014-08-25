@@ -18,11 +18,11 @@ def setup():
     newRow = table.addRow()
     newRow.setString("name", "Lion")
     newRow.setString("type", "Mammal")
-    println(table.getRowCount())  # Prints 1
+    print(table.getRowCount())  # Prints 1
     table.addRow()                # Creates a blank row
-    println(table.getRowCount())  # Prints 2
+    print(table.getRowCount())  # Prints 2
     table.addRow(newRow)          # Duplicates newRow
-    println(table.getRowCount())  # Prints 3
+    print(table.getRowCount())  # Prints 3
 ]]></code>
 </example>
 

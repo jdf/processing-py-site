@@ -15,14 +15,14 @@
 elements = ["H", "He", "Li", "B", "C", "N", "O", "F", "Ne"]
 
 # Retrieve a single item from the list with a given index
-println(elements[3]) # Prints 'B'
+print(elements[3]) # Prints 'B'
 
 # Negative indexes can be used, and count from the end of the list.
-println(elements[-2]) # Prints 'F'
+print(elements[-2]) # Prints 'F'
 
 # Assign a new value to an existing element of a list:
 elements[4] = 'Si'
-println(elements) # Prints ['H', 'He', 'Li', 'B', 'Si', 'N', 'O', 'F', 'Ne']
+print(elements) # Prints ['H', 'He', 'Li', 'B', 'Si', 'N', 'O', 'F', 'Ne']
 
 ]]></code>
 </example>
@@ -34,9 +34,9 @@ println(elements) # Prints ['H', 'He', 'Li', 'B', 'Si', 'N', 'O', 'F', 'Ne']
 # You can use index brackets with strings as well, to access individual
 # characters by index:
 message = "Now is the winter of our discontent"
-println(message[0]) # Prints 'N'
-println(message[-1]) # Prints 't'
-println(message[11]) # Prints 'w'
+print(message[0]) # Prints 'N'
+print(message[-1]) # Prints 't'
+print(message[11]) # Prints 'w'
 
 ]]></code>
 </example>
@@ -48,12 +48,12 @@ println(message[11]) # Prints 'w'
 # Index brackets are used to retrieve the value for a given key from a
 # dictionary
 element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
-println(element_names['He']) # Prints 'helium'
+print(element_names['He']) # Prints 'helium'
 
 # Overwrite the value of an element, or add a new key/value pair, by assigning
 # to the key:
 element_names['Be'] = 'beryllium'
-println(element_names['Be']) # Prints 'beryllium'
+print(element_names['Be']) # Prints 'beryllium'
 
 ]]></code>
 </example>

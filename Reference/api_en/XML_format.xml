@@ -27,16 +27,16 @@ def setup():
     
     #Format without line breaks and no indentation
     s = xml.format(-1)
-    println(s)
-    println("")# Blank line
+    print(s)
+    print("")# Blank line
     
     #Format with line breaks and no indentation
     s = xml.format(0)
-    println(s)
+    print(s)
     
     #Format with line breaks and 5 spaces of indentation
     s = xml.format(5)
-    println(s)
+    print(s)
 # Sketch prints:
 #&ltmammals&gt&ltanimal id=&quot0&quotspecies=&quotCapra hircus&quot&gtGoat&lt/animal&gt
 #    &ltanimal id=&quot1&quotspecies=&quotPanthera pardus&quot&gtLeopard&lt/animal&gt

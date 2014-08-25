@@ -12,7 +12,7 @@
 <code><![CDATA[
 deg = 45.0
 rad = radians(deg)
-println("%.1f degrees is %.2f radians" % (deg, rad))
+print("%.1f degrees is %.2f radians" % (deg, rad))
 ]]></code>
 </example>
 

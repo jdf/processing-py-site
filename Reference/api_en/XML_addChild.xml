@@ -24,7 +24,7 @@
 xml = loadXML("mammals.xml")
 newChild = xml.addChild("animal")
 newChild.setContent("bloodhound")
-println(xml)
+print(xml)
 # Sketch prints:
 # &lt;mammals&gt;
 #     &lt;animal id="0" species="Capra hircus"&gt;Goat&lt;/animal&gt;

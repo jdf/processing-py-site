@@ -11,9 +11,9 @@
 <example>
 <noimage />
 <code><![CDATA[
-println(constrain(55, 30, 70)) # Prints "55"
-println(constrain(100, 30, 70)) # Prints "70"
-println(constrain(-15, 30, 70)) # Prints "30"
+print(constrain(55, 30, 70)) # Prints "55"
+print(constrain(100, 30, 70)) # Prints "70"
+print(constrain(-15, 30, 70)) # Prints "30"
 ]]></code>
 </example>
 

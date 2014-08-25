@@ -12,10 +12,10 @@
 <code><![CDATA[
 numbers = [3.4, 3.6, 2, 0, 7.1]
 sorted_numbers = sorted(numbers)
-println(sorted_numbers) # Prints [0, 2, 3.4, 3.6, 7.1]
+print(sorted_numbers) # Prints [0, 2, 3.4, 3.6, 7.1]
 
 # original list left unchanged
-println(numbers) # Prints [3.4, 3.6, 2, 0, 7.1]
+print(numbers) # Prints [3.4, 3.6, 2, 0, 7.1]
 ]]></code>
 </example>
 
@@ -23,11 +23,11 @@ println(numbers) # Prints [3.4, 3.6, 2, 0, 7.1]
 <code><![CDATA[
 animals = ["deer", "elephant", "bear", "aardvark", "cat"]
 sorted_animals = sorted(animals)
-println(sorted_animals) # Prints ['aardvark', 'bear', 'cat', 'deer', 'elephant']
+print(sorted_animals) # Prints ['aardvark', 'bear', 'cat', 'deer', 'elephant']
 
 # reverse=True reverses the order of the sort
 rev_animals = sorted(animals, reverse=True)
-println(rev_animals) # Prints ['elephant', 'deer', 'cat', 'bear', 'aardvark']
+print(rev_animals) # Prints ['elephant', 'deer', 'cat', 'bear', 'aardvark']
 
 ]]></code>
 </example>
@@ -37,7 +37,7 @@ println(rev_animals) # Prints ['elephant', 'deer', 'cat', 'bear', 'aardvark']
 # sorted() lets you sort any iterable, not just lists!
 word = "parabolas"
 sorted_word = sorted(word)
-println(sorted_word) # Prints ['a', 'a', 'a', 'b', 'l', 'o', 'p', 'r', 's']
+print(sorted_word) # Prints ['a', 'a', 'a', 'b', 'l', 'o', 'p', 'r', 's']
 ]]></code>
 </example>
 
@@ -46,25 +46,25 @@ println(sorted_word) # Prints ['a', 'a', 'a', 'b', 'l', 'o', 'p', 'r', 's']
 # sorted() is, by default, case insensitive
 items = ["Abacus", "abacus", "Zwieback", "zwieback"]
 sorted_items = sorted(items)
-println(sorted_items) # Prints ['Abacus', 'Zwieback', 'abacus', 'zwieback']
+print(sorted_items) # Prints ['Abacus', 'Zwieback', 'abacus', 'zwieback']
 
 # Pass your own function as an argument to sort() to apply a transformation to
 # items before sorting
 def case_insensitive(item):
   return item.lower()
 sorted_items = sorted(items, key=case_insensitive)
-println(sorted_items) # Prints ['Abacus', 'abacus', 'Zwieback', 'zwieback']
+print(sorted_items) # Prints ['Abacus', 'abacus', 'Zwieback', 'zwieback']
 
 # sort list of strings by their length, using the built-in function len()
 # as the key parameter
 items = ["buffalo", "charcoal", "desk", "egg", "flask"]
 sorted_items = sorted(items, key=len)
-println(sorted_items) # Prints ['egg', 'desk', 'flask', 'buffalo', 'charcoal']
+print(sorted_items) # Prints ['egg', 'desk', 'flask', 'buffalo', 'charcoal']
 
 # You can use the "key" parameter and the "reverse" parameter in the same
 # call to sort!
 sorted_items = sorted(items, key=len, reverse=True)
-println(sorted_items) # Prints ['charcoal', 'buffalo', 'flask', 'desk', 'egg']
+print(sorted_items) # Prints ['charcoal', 'buffalo', 'flask', 'desk', 'egg']
 
 ]]></code>
 </example>

@@ -16,7 +16,7 @@ def exclaim(s, count):  # A colon declares the start of an indented block.
 
 # Any statements followed by indented lines should end with a colon.
 for i in range(1, 6):  # And here
-  println(exclaim("Python", i))
+  print(exclaim("Python", i))
 ]]></code>
 </example>
 
@@ -25,7 +25,7 @@ for i in range(1, 6):  # And here
 <code><![CDATA[
 # Separates key/value pairs
 element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
-println(element_names['H'])
+print(element_names['H'])
 ]]></code>
 </example>
 

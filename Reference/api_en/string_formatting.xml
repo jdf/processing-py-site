@@ -15,7 +15,7 @@ animal = 'turtle'
 weight = 317.5
 # Format string to include animal, age, and weight to one digit after the decimal point.
 s = ("This %s is %i years old, and weighs %.1f pounds." % (animal, age, weight))
-println(s)
+print(s)
 ]]></code>
 </example>
 

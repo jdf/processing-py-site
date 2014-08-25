@@ -23,8 +23,8 @@
 def setup(): 
     xml = loadXML("mammals.xml")
     firstChild = xml.getChild("animal")
-    println(firstChild.hasAttribute("species"))
-    println(firstChild.hasAttribute("color"))
+    print(firstChild.hasAttribute("species"))
+    print(firstChild.hasAttribute("color"))
 # Sketch prints:
 # True
 # False 

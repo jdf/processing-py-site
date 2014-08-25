@@ -14,7 +14,7 @@ a = PI/3
 t = tan(a)
 at = atan(t)
 # Prints "1.0471976 : 1.7320509 : 1.0471976"
-println("%.7f : %.7f : %.7f" % (a, t, at))
+print("%.7f : %.7f : %.7f" % (a, t, at))
 ]]></code>
 </example>
 
@@ -24,7 +24,7 @@ a = PI + PI/3.0
 t = tan(a)
 at = atan(t)
 # Prints "4.1887903 : 1.7320513 : 1.0471977"
-println("%.7f : %.7f : %.7f" % (a, t, at))
+print("%.7f : %.7f : %.7f" % (a, t, at))
 ]]></code>
 </example>
 

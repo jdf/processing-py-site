@@ -14,21 +14,21 @@ a = 200
 b = -40
 c = 90
 sa = nfs(a, 10)
-println(sa)  # Prints " 0000000200"
+print(sa)  # Prints " 0000000200"
 sb = nfs(b, 5)
-println(sb)  # Prints "-00040"
+print(sb)  # Prints "-00040"
 sc = nfs(c, 3)
-println(sc)  # Prints " 090"
+print(sc)  # Prints " 090"
 
 d = -200.94
 e = 40.2
 f = -9.012
 sd = nfs(d, 10, 4)
-println(sd)  # Prints "-0000000200.9400"
+print(sd)  # Prints "-0000000200.9400"
 se = nfs(e, 5, 3)
-println(se)  # Prints " 00040.200"
+print(se)  # Prints " 00040.200"
 sf = nfs(f, 3, 5)
-println(sf)  # Prints "-009.01200"
+print(sf)  # Prints "-009.01200"
 ]]></code>
 </example>
 

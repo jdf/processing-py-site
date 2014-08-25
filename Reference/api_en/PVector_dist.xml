@@ -14,7 +14,7 @@
 v1 = PVector(10, 20, 0)
 v2 = PVector(60, 80, 0)
 d = v1.dist(v2)
-println(d)  # Prints "78.10249328613281"
+print(d)  # Prints "78.10249328613281"
 ]]></code>
 </example>
 
@@ -23,7 +23,7 @@ println(d)  # Prints "78.10249328613281"
 v1 = PVector(10, 20, 0)
 v2 = PVector(60, 80, 0)
 d = PVector.dist(v1, v2)
-println(d)  # Prints "78.10249328613281"
+print(d)  # Prints "78.10249328613281"
 ]]></code>
 </example>
 

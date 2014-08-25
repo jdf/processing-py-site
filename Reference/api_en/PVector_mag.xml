@@ -14,7 +14,7 @@
 <code><![CDATA[
 v = PVector(20.0, 30.0, 40.0)
 m = v.mag()
-println(m)  # Prints "53.851646423339844"
+print(m)  # Prints "53.851646423339844"
 ]]></code>
 </example>
 

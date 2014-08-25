@@ -13,12 +13,12 @@
 <code><![CDATA[
 class Robot(object):
   def speak(self):
-    println("BZZT BOOP BEEP")
+    print("BZZT BOOP BEEP")
 
 class RoboFeline(Robot):
   def speak(self):
     super(RoboFeline, self).speak()
-    println("MEOW PURR PURR")
+    print("MEOW PURR PURR")
 
 kitty = RoboFeline()
 kitty.speak()
@@ -40,7 +40,7 @@ class Grasshopper(Animal):
     super(Grasshopper, self).__init__()
 
 hopsalot = Grasshopper()
-println(hopsalot.leg_count) # Prints 6
+print(hopsalot.leg_count) # Prints 6
 ]]></code>
 </example>
 

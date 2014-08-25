@@ -14,7 +14,7 @@
 size(100, 100)
 # Uncomment the following two lines to see the available fonts 
 #fontList = PFont.list()
-#println(fontList)
+#print(fontList)
 myFont = createFont("Georgia", 16)
 textFont(myFont)
 textAlign(CENTER, CENTER)

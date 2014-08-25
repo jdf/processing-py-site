@@ -12,8 +12,8 @@
 <code><![CDATA[
 str1 = 'CCCP'
 str2 = "CCCP"
-println(str1)        # Prints 'CCCP'
-println(str2)        # Prints 'CCCP'
+print(str1)        # Prints 'CCCP'
+print(str2)        # Prints 'CCCP'
 ]]></code>
 </example>
 
@@ -22,8 +22,8 @@ println(str2)        # Prints 'CCCP'
 # Use a backslash to include quotes inside of a string.
 single_quote = 'This one has \'quotes\''
 double_quote = "This one also has \"quotes\""
-println(single_quote)
-println(double_quote)
+print(single_quote)
+print(double_quote)
 ]]></code>
 </example>
 
@@ -34,7 +34,7 @@ wcwilliams = """And you may be sure
 not one leaf will lift itself
 from the ground
 and become fast to a twig again."""
-println(wcwilliams)
+print(wcwilliams)
 ]]></code>
 </example>
 

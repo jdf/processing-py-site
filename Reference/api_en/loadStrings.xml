@@ -12,9 +12,9 @@
 	<noimage />
 <code><![CDATA[
 lines = loadStrings("list.txt")
-println("there are %i lines" % len(lines))
+print("there are %i lines" % len(lines))
 for line in lines:
-    println(line)
+    print(line)
 ]]></code>
 </example>
 
@@ -22,9 +22,9 @@ for line in lines:
 	<noimage />
 <code><![CDATA[
 lines = loadStrings("http://processing.org/about/index.html")
-println("there are %i lines" % len(lines))
+print("there are %i lines" % len(lines))
 for line in lines:
-    println(line)
+    print(line)
 ]]></code>
 </example>
 

@@ -11,7 +11,7 @@
 <example>
 <code><![CDATA[
 v1 = exp(1.0)
-println(v1)# Prints "2.7182817459106445"
+print(v1)# Prints "2.7182817459106445"
 ]]></code>
 </example>
 

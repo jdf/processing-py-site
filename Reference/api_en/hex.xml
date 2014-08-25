@@ -12,9 +12,9 @@
 <noimage />
 <code><![CDATA[
 c = color(255, 204, 0)
-println(c)# Prints "-13312"
-println(hex(c))# Prints "FFFFCC00"
-println(hex(c, 6))# Prints "FFCC00"
+print(c)# Prints "-13312"
+print(hex(c))# Prints "FFFFCC00"
+print(hex(c, 6))# Prints "FFCC00"
 ]]></code>
 </example>
 

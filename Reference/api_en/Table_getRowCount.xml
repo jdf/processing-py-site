@@ -15,13 +15,13 @@ def setup():
     table = Table()
     table.addColumn("name")
     table.addColumn("type")
-    println(table.getRowCount())  # Prints 0
+    print(table.getRowCount())  # Prints 0
     newRow = table.addRow()
     newRow.setString("name", "Lion")
     newRow.setString("type", "Mammal")
-    println(table.getRowCount())  # Prints 1
+    print(table.getRowCount())  # Prints 1
     table.addRow()                # Creates a blank row
-    println(table.getRowCount())  # Prints 2
+    print(table.getRowCount())  # Prints 2
 ]]></code>
 </example>
 

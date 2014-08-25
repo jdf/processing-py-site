@@ -11,13 +11,13 @@
 <example>
 <code><![CDATA[
 pet = 'sea snail'
-println(pet.find('a'))       # Prints the index of the 'a' in 'pet': 2.
-println(pet.find('a', 3, 7)) # Prints the index of the second 'a' in 
+print(pet.find('a'))       # Prints the index of the 'a' in 'pet': 2.
+print(pet.find('a', 3, 7)) # Prints the index of the second 'a' in 
                              # 'pet': 6.
 
-println(pet.find("snail"))   # Prints 4.
+print(pet.find("snail"))   # Prints 4.
 
-println(pet.find("rock"))    # Prints -1.
+print(pet.find("rock"))    # Prints -1.
 ]]></code>
 </example>
 

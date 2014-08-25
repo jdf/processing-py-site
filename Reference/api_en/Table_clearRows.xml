@@ -24,9 +24,9 @@ newRow.setString("type", "Reptile")
 newRow = table.addRow()
 newRow.setString("name", "Mosquito")
 newRow.setString("type", "Insect")
-println(table.getRowCount())  # Prints 3
+print(table.getRowCount())  # Prints 3
 table.clearRows()
-println(table.getRowCount())  # Prints 0
+print(table.getRowCount())  # Prints 0
 ]]></code>
 </example>
 

@@ -24,7 +24,7 @@
 xml = loadXML("mammals.xml")
 animals = xml.getChildren("animal")
 for i in range(len(animals)):
-  println(animals[i].getContent())
+  print(animals[i].getContent())
 # Sketch prints:
 # Goat
 # Leopard

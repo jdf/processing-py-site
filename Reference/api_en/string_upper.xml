@@ -12,7 +12,7 @@
 <code><![CDATA[
 message = 'Alfa bravo charlie delta'
 uppercase_message = message.upper()
-println(uppercase_message) # prints "ALFA BRAVO CHARLIE DELTA"
+print(uppercase_message) # prints "ALFA BRAVO CHARLIE DELTA"
 ]]></code>
 </example>
 

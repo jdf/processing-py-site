@@ -13,9 +13,9 @@
 a = '              ...here...             '
 # If no arguments are given strip() removes leading and trailing whitespace.
 a = a.strip()
-println(a)             # Prints '...here...'
+print(a)             # Prints '...here...'
 aNoDots = a.strip('.') # Removes leading and trailing instances of '.'.
-println(aNoDots)       # Prints 'here'
+print(aNoDots)       # Prints 'here'
 ]]></code>
 </example>
 

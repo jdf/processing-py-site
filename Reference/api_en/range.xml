@@ -11,7 +11,7 @@
 <example>
 <code><![CDATA[
 for i in range(5):
-    println(range(i)) 
+    print(range(i)) 
 
 '''
 The above prints:

@@ -23,7 +23,7 @@
 def setup():
     xml = loadXML("mammals.xml")
     firstChild = xml.getChild("animal")
-    println(firstChild.getString("species"))
+    print(firstChild.getString("species"))
 # Sketch prints:
 # Capra hircus
 ]]></code>

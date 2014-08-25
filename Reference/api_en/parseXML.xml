@@ -15,10 +15,10 @@
 data = "<mammals><animal>Goat</animal></mammals>"
 xml = parseXML(data)
 if xml == None:
-  println("XML could not be parsed.")
+  print("XML could not be parsed.")
 else:
   firstChild = xml.getChild("animal")
-  println(firstChild.getContent())
+  print(firstChild.getContent())
     
 # Sketch prints:
 # Goat

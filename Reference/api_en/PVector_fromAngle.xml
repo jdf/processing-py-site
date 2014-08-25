@@ -13,7 +13,7 @@
 <image />
 <code><![CDATA[
 v = PVector.fromAngle(0.01)
-println(v)  # Prints "[ 0.99995, 0.009999833, 0.0 ]"
+print(v)  # Prints "[ 0.99995, 0.009999833, 0.0 ]"
 ]]></code>
 </example>
 

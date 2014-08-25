@@ -12,17 +12,17 @@
 # Convert floating point number             
 f = 65.8                                 
 i = int(f)                                  
-println(f) # Prints 65
+print(f) # Prints 65
 																						
 # Convert from string                       
 s = "1234"                                  
 i = int(s)                                  
-println(i) # Prints 1234
+print(i) # Prints 1234
 																						
 # Convert from string with base             
 s = "1234"                                  
 i = int(s, 16) # base 16 (hexidecimal)   
-println(i) # Prints "4660" 
+print(i) # Prints "4660" 
 ]]></code>
 </example>
 

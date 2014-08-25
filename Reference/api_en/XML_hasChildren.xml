@@ -22,7 +22,7 @@
 # &lt/mammals&gt
 def setup(): 
     xml = loadXML("mammals.xml")
-    println(xml.hasChildren())
+    print(xml.hasChildren())
 # Sketch prints:
 # True
 ]]></code>

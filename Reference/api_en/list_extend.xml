@@ -12,10 +12,10 @@
 <code><![CDATA[
 shopping_list = ['carrot', 'cucumber']
 fruits = ['mango', 'pear']
-println(shopping_list)  # Prints ['carrot', 'cucumber']
+print(shopping_list)  # Prints ['carrot', 'cucumber']
 
 shopping_list.extend(fruits)
-println(shopping_list)  # Prints ['carrot', 'cucumber', 'mango', 'pear']
+print(shopping_list)  # Prints ['carrot', 'cucumber', 'mango', 'pear']
 ]]></code>
 </example>
 

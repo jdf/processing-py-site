@@ -17,7 +17,7 @@ def setup():
 
 def draw():
     line(0, 0, width, height)
-    println(frameCount)
+    print(frameCount)
 ]]></code>
 </example>
 

@@ -14,7 +14,7 @@
 v1 = PVector(10, 20)
 v2 = PVector(60, 80)
 a = PVector.angleBetween(v1, v2)
-println(degrees(a))  # Prints "10.304845809936523"
+print(degrees(a))  # Prints "10.304845809936523"
 ]]></code>
 </example>
 

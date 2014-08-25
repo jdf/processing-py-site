@@ -14,7 +14,7 @@ separator = ' and '            # String to separate sequence items by.
 words = ['this', 'that']       # String to join.
 joined = separator.join(words) # Join items in sequence words,
                                # separated by 'separator'.
-println(joined)
+print(joined)
 
 polyhedra = ["cube", "dodecahedron", "icosahedron"]
 
@@ -22,7 +22,7 @@ polyhedra = ["cube", "dodecahedron", "icosahedron"]
 # to a variable first.
 joined = ", ".join(polyhedra)
 
-println(joined) # Prints "cube, dodecahedron, icosahedron"
+print(joined) # Prints "cube, dodecahedron, icosahedron"
 ]]></code>
 </example>
 

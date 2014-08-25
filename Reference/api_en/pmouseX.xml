@@ -17,7 +17,7 @@
 def draw(): 
     background(204)
     line(mouseX, 20, pmouseX, 80)
-    println("%d : %d" % (mouseX, pmouseY))
+    print("%d : %d" % (mouseX, pmouseY))
 ]]></code>
 </example>
 

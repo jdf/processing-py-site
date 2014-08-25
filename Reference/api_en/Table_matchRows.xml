@@ -28,7 +28,7 @@ def setup():
     newRow.setString("name", "Lizard")
     newRow.setString("type", "Reptile")
     for row in table.matchRows("R.*", "type"):
-        println(row.getString("name") + ": " + row.getString("type"))
+        print(row.getString("name") + ": " + row.getString("type"))
 ]]></code>
 </example>
 

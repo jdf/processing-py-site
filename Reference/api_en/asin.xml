@@ -15,7 +15,7 @@ a = PI/3
 s = sin(a)
 arcsin = asin(s)
 # Prints "1.0471976 : 0.86602545 : 1.0471976"
-println("%.7f : %.8f : %.7f" % (a, s, arcsin))
+print("%.7f : %.8f : %.7f" % (a, s, arcsin))
 ]]></code>
 </example>
 
@@ -26,7 +26,7 @@ a = PI + PI/3.0
 s = sin(a)
 arcsin = asin(s)
 # Prints "4.1887903 : -0.86602545 : -1.0471976"
-println("%.7f : %.8f : %.7f" % (a, s, arcsin))
+print("%.7f : %.8f : %.7f" % (a, s, arcsin))
 ]]></code>
 </example>
 

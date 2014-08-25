@@ -24,7 +24,7 @@
 xml = loadXML("mammals.xml")
 firstChild = xml.getChild("animal")
 xml.removeChild(firstChild)
-println(xml)
+print(xml)
 # Sketch prints:
 # &lt;mammals&gt;
 #     &lt;animal id="1" species="Panthera pardus"&gt;Leopard&lt;/animal&gt;

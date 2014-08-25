@@ -18,7 +18,7 @@ def timestwo(dVal):
     return dVal  # Returns an int of 60, in this case
 
 t = timestwo(30)
-println(t)
+print(t)
 
 ]]></code>
 </example>
@@ -32,7 +32,7 @@ def timestwo(dVals):
     return dVals  # Returns a list of 3 ints: 20, 40, 60
 
 t = timestwo([10, 20, 30])
-println(t)
+print(t)
 ]]></code>
 </example>
 

@@ -16,9 +16,9 @@ table = Table()
 table.addColumn("id")
 table.addColumn("species")
 table.addColumn("name")
-println(table.getColumnCount())  # Prints 3
+print(table.getColumnCount())  # Prints 3
 table.removeColumn("id")         # Reference by title
-println(table.getColumnCount())  # Prints 2
+print(table.getColumnCount())  # Prints 2
 ]]></code>
 </example>
 
@@ -29,9 +29,9 @@ table = Table()
 table.addColumn("id")
 table.addColumn("species")
 table.addColumn("name")
-println(table.getColumnCount())  # Prints 3
+print(table.getColumnCount())  # Prints 3
 table.removeColumn(0)            # Reference by ID
-println(table.getColumnCount())  # Prints 2
+print(table.getColumnCount())  # Prints 2
 ]]></code>
 </example>
 

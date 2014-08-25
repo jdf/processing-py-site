@@ -14,7 +14,7 @@
 <code><![CDATA[
 v = PVector(10, 20, 0)
 d = v.dot(60, 80, 0)
-println(d)  # Prints "2200.0"
+print(d)  # Prints "2200.0"
 ]]></code>
 </example>
 
@@ -24,7 +24,7 @@ println(d)  # Prints "2200.0"
 v1 = PVector(10, 20, 0)
 v2 = PVector(60, 80, 0)
 d = v1.dot(v2)
-println(d)  # Prints "2200.0"
+print(d)  # Prints "2200.0"
 ]]></code>
 </example>
 

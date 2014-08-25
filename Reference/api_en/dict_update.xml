@@ -15,19 +15,19 @@
 element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
 additional_elements = {'B': 'boron', 'C': 'carbon', 'N': 'nitrogen'}
 
-println(len(element_names)) # Prints 3
+print(len(element_names)) # Prints 3
 
 # "Update" original dictionary with new values
 element_names.update(additional_elements)
 
-println(len(element_names)) # Prints 6
-println(element_names['N']) # Prints "Nitrogen"
+print(len(element_names)) # Prints 6
+print(element_names['N']) # Prints "Nitrogen"
 
 # Updating with an existing key will overwrite the value for that key!
 wrong_elements_oh_no = {'H': 'Happiness'}
 element_names.update(wrong_elements_oh_no)
 
-println(element_names['H']) # Prints "Happiness"
+print(element_names['H']) # Prints "Happiness"
 
 ]]></code>
 </example>

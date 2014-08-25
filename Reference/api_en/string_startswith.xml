@@ -12,7 +12,7 @@
 <code><![CDATA[
 message = "Now is the winter of our discontent."
 if message.startswith("Now"):
-	println("Made glorious summer by this sun of York.")
+	print("Made glorious summer by this sun of York.")
 
 ]]></code>
 </example>

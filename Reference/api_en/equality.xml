@@ -13,7 +13,7 @@
 a = 23
 b = 23
 if a == b:
-    println("variables a and b are equal")
+    print("variables a and b are equal")
 ]]></code>
 </example>
 

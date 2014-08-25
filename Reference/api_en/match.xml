@@ -12,7 +12,7 @@
 <code><![CDATA[
 s = "Inside a tag, you will find <tag>content</tag>."
 m = match(s, "<tag>(.*?)</tag>")
-println("Found '%s' inside the tag" % m[1])
+print("Found '%s' inside the tag" % m[1])
 # Prints to the console:
 # "Found 'content' inside the tag."
 ]]></code>
@@ -26,15 +26,15 @@ s2 = "Uh? Yes, I-I have heard of that, Jack, yes. Yes."
 m1 = match(s1, "fluoridation")
 if m1 != None:  # If not none, then a match was found
     # This will print to the console, since a match was found.
-    println("Found a match in '" + s1 + "'")
+    print("Found a match in '" + s1 + "'")
 else:
-    println("No match found in '" + s1 + "'")
+    print("No match found in '" + s1 + "'")
 m2 = match(s2, "fluoridation")
 if m2 != None:
-    println("Found a match in '" + s2 + "'")
+    print("Found a match in '" + s2 + "'")
 else:
     # This will print to the console, since no match was found.
-    println("No match found in '" + s2 + "'")
+    print("No match found in '" + s2 + "'")
 ]]></code>
 </example>
 

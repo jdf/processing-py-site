@@ -16,8 +16,8 @@ def log10(x):
     return (log(x) / log(10))
 
 i = 12
-println(log(i))
-println(log10(i))
+print(log(i))
+print(log10(i))
 ]]></code>
 </example>
 

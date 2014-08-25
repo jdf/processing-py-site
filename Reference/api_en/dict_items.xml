@@ -16,11 +16,11 @@ element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
 element_items = element_names.items()
 
 # Prints [('Li', 'lithium'), ('H', 'hydrogen'), ('He', 'helium')]
-println(element_items)
+print(element_items)
 
 # Iterate over each item of the dictionary:
 for k, val in element_names.items():
-	println("The name of element " + k + " is " + val)
+	print("The name of element " + k + " is " + val)
 
 ]]></code>
 </example>
