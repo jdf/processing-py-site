@@ -349,13 +349,7 @@ def make_convert_hypertext(names_dict):
     return convert_hypertext
 
 def clean_html(html):
-    whitespace = re.compile(r'^\s+$')
     html_tree = lxml.html.fromstring(html)
-    for element in html_tree.iter():
-        if element.text is not None and whitespace.match(element.text):
-            element.text = None
-        if element.tail is not None and whitespace.match(element.tail):
-            element.tail = None
     return lxml.html.tostring(html_tree, encoding='ascii')
 
 def create_ref_link(name):
