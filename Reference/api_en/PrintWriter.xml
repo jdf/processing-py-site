@@ -16,7 +16,7 @@ def setup():
     output = createWriter("positions.txt")
 def draw(): 
     point(mouseX, mouseY)
-    output.print(mouseX)# Write the coordinate to the file
+    output.println(mouseX)# Write the coordinate to the file
 def keyPressed(): 
     output.flush()# Writes the remaining data to the file
     output.close()# Finishes the file
@@ -37,7 +37,7 @@ Allows characters to print to a text-output stream. A new PrintWriter object is 
 </method>
 
 <method>
-<label>print()</label>
+<label>println()</label>
 <description>Adds data to the stream and starts a new line</description>
 <ref>PrintWriter_print</ref>
 </method>
