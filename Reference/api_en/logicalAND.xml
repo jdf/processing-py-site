@@ -6,26 +6,46 @@
 
 <subcategory>Logical Operators</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image />
 <code><![CDATA[
-for i in range(5, 95, 5):
-    if 35 < i < 60:
-        stroke(0)    # Set color to black
+k = 0
+for y in range(5, 95, 5):
+    k += 1    
+    if y > 45 and k % 2 == 0:
+        # Set color to red for every other line
+        # for all y > 45.
+        stroke(color(255, 0, 0))
     else:
-        stroke(255)  # Set color to white
-    line(30, i, 80, i)
+        stroke(0)    # Set color to black
+    line(30, y, 80, y)
 ]]></code>
 </example>
 
 <description><![CDATA[
-Compares two expressions and returns <b>True</b> only if both evaluate to <b>True</b>. Returns <b>False</b> if one or both evaluate to <b>False</b>. The following list shows all possible combinations:<br /><br /><tt>True &amp;&amp; False   # Evaluates False because the second is False <br />False &amp;&amp; True   # Evaluates False because the first is False <br />True &amp;&amp; True    # Evaluates True because both are True <br />False &amp;&amp; False  # Evaluates False because both are False</tt>
+<p>Compares two expressions and evaluates to <b>True</b> only if both evaluate to <b>True</b>. Returns <b>False</b> if one or both evaluate to <b>False</b>. The following list shows all possible combinations:
+<pre>
+True &amp;&amp; False   # Evaluates False because the second is False
+False &amp;&amp; True   # Evaluates False because the first is False
+True &amp;&amp; True    # Evaluates True because both are True
+False &amp;&amp; False  # Evaluates False because both are False
+</pre>
+<p>The "and" operator is <i>short-circuiting</i>; it will not bother to evaluate its
+second expression of the first is False. That means, in the following example, that
+<tt>DoSomething</tt> is never called:
+<pre>
+def DoSomething():
+    print "I did something!"
+    return True
+
+x = False
+if x and DoSomething():
+    print "This cannot happen."
+</pre>
 ]]></description>
 
 <syntax>
-<c>expression1</c> &amp;&amp; <c>expression2</c>
+<c>expression1</c> and <c>expression2</c>
 </syntax>
 
 <parameter>
