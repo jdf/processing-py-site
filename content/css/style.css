@@ -304,19 +304,16 @@ p { font-size			: 1em; 		}
 
 pre {  
 	font-family			: monaco, "Courier New", Courier, monospace; 
-	font-size			: 11px; 
 	line-height			: normal; color: #000000;
 }
 
 tt {  
 	font-family			: monaco, "Courier New", Courier, monospace; 
-	font-size			: 11px; 
 	line-height			: normal; color: #000000;
 }
 
 code, .code, kbd {  
 	font-family			: monaco, "Courier New", Courier, monospace; 
-	font-size			: 11px; 
 	line-height			: normal; color: #000000;
 }
 
