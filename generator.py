@@ -31,14 +31,12 @@ target_dir=os.path.join(src_dir, 'generated/')
 canon_reference_dir = '/reference/'
 canon_tutorials_dir = '/tutorials/'
 canon_cover_dir = '/'
-canon_overview_dir = '/overview/'
 canon_examples_dir = '/examples/'
 
 # Names to use during file manipulation
 target_reference_dir = target_dir + canon_reference_dir
 target_tutorials_dir = target_dir + canon_tutorials_dir
 target_cover_dir     = target_dir + canon_cover_dir
-target_overview_dir  = target_dir + canon_overview_dir
 target_examples_dir  = target_dir + canon_examples_dir
 reference_dir='Reference/api_en/'
 tutorials_dir='Tutorials/'
@@ -186,6 +184,7 @@ class JythonImageProcess:
         self.failed = {}
         self.workitems = workitems
         args = JythonImageProcess.create_args(p5py_dir, jython_dir, workitems)
+        print(args, file=sys.stderr)
         self.popen = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, bufsize=1) # line-buffered
         self.comthread = threading.Thread(target=self.consume_communication, args=())
         self.comthread.start()
@@ -572,15 +571,6 @@ def build_cover(env):
         tfile.write(clean_html(cover_template.render()))
     print_success('success!')
 
-def build_overview(env):
-    print("building overview")
-    if not os.path.exists(target_overview_dir):
-        os.makedirs(target_overview_dir)
-    overview_template = env.get_template('overview.jinja')
-    with open(os.path.join(target_overview_dir, 'index.html'), 'w') as tfile:
-        tfile.write(clean_html(overview_template.render()))
-    print_success('success!')
-
 def build(build_images, to_update):
     print_header("Building content")
 
@@ -604,7 +594,6 @@ def build(build_images, to_update):
     build_tutorials(env)
     build_reference_index(reference_dir, env)
     build_cover(env)
-    build_overview(env)
     build_examples(env)
        
     print('Copying static resources...')
