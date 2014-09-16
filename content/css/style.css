@@ -1245,3 +1245,4 @@ ul.nostyle { margin: 0; padding: 0; list-style: none outside; }
 #FAQ h5 a { float: left; margin-left: -30px; }
 */
 
+.navBar a.bug { color: red; }
