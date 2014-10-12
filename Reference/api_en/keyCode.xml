@@ -21,6 +21,7 @@ def draw():
 
 
 def keyPressed():
+	global fillVal
     if key == CODED:
         if keyCode == UP:
             fillVal = 255

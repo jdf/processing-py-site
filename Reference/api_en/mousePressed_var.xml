@@ -16,7 +16,7 @@
 # the value of the rectangle
 
 def draw(): 
-    if mousePressed == True:
+    if mousePressed:
         fill(0)
     else:
         fill(255)

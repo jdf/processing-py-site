@@ -13,11 +13,9 @@
 <noimage />
 <notest />
 <code><![CDATA[
-deform = None
-tex = None
-
 def setup(): 
     size(640, 360, P2D)
+    global tex, deform
     tex = loadImage("tex1.jpg")
     deform = loadShader("deform.glsl")
     deform.set("resolution", float(width), float(height))

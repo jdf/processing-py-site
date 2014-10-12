@@ -8,11 +8,12 @@
 
 <usage>Web &amp; Application</usage>
 
+<!-- TODO(feinberg): Rplace this with pythonic io -->
 <example>
 <code><![CDATA[
-PrintWriter output
 def setup(): 
     # Create a file in the sketch directory
+    global output
     output = createWriter("positions.txt")
 def draw(): 
     point(mouseX, mouseY)

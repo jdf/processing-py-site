@@ -11,10 +11,9 @@
 <example>
 <image />
 <code><![CDATA[
-s = None
-
 def setup(): 
     size(100, 100, P3D)
+    global s
     s = loadShape("ohio.svg")
 
 def draw(): 

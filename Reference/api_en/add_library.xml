@@ -14,12 +14,10 @@
 <code><![CDATA[
 add_library('pdf')
 
-def setup():
-    size(displayWidth, displayHeight, PDF, "i_am_a_pdf.pdf")
+size(displayWidth, displayHeight, PDF, "i_am_a_pdf.pdf")
 
-def draw():
-    line(0, 0, width, height)
-    line(0, height, width, 0)
+line(0, 0, width, height)
+line(0, height, width, 0)
 ]]></code>
 </example>
 

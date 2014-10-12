@@ -11,14 +11,11 @@
 <example>
 	<noimage />
 <code><![CDATA[
-# The first 'int' in the function declaration
-# specifies the type of data to be returned.
 def timestwo(dVal):
-    dVal = dVal * 2
-    return dVal  # Returns an int of 60, in this case
+    return dVal  * 2
 
 t = timestwo(30)
-print(t)
+print(t) # 60
 
 ]]></code>
 </example>
@@ -27,12 +24,10 @@ print(t)
 	<noimage />
 <code><![CDATA[
 def timestwo(dVals):
-    for i in range(len(dVals)):
-        dVals[i] = dVals[i] * 2
-    return dVals  # Returns a list of 3 ints: 20, 40, 60
+    return [x * 2 for x in dVals]
 
 t = timestwo([10, 20, 30])
-print(t)
+print(t)  # [20, 40, 60]
 ]]></code>
 </example>
 
@@ -44,7 +39,7 @@ def draw():
     background(204)
     line(0, 0, width, height)
     if mousePressed:
-        return# Break out of draw(), skipping the line statement below
+        return  # Break out of draw(), skipping the line statement below
     line(0, height, width, 0)# Executed only if mouse is not pressed
 ]]></code>
 </example>

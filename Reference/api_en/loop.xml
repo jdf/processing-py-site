@@ -20,6 +20,7 @@ def setup():
 
 def draw():
     background(204)
+    global x
     x = x + .1
     if x > width:
         x = 0

@@ -11,12 +11,11 @@
 <example>
 <image />
 <code><![CDATA[
-s = None
-
 def setup(): 
     size(100, 100)
     # The file "bot.svg" must be in the data folder
     # of the current sketch to load successfully 
+    global s
     s = loadShape("bot.svg")
 
 def draw(): 

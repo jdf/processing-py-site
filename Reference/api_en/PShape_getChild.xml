@@ -11,20 +11,16 @@
 <example>
 <image />
 <code><![CDATA[
-states = None 
-ohio = None
+size(100, 100)
 
-def setup(): 
-    size(100, 100)
-    states = loadShape("tristate.svg")
-    ohio = states.getChild("OH")
-    ohio.disableStyle()
+states = loadShape("tristate.svg")
+ohio = states.getChild("OH")
+ohio.disableStyle()
 
-def draw(): 
-    background(0)
-    shape(states, -48, 5)
-    fill(102, 0, 0)
-    shape(ohio, -48, 5)
+background(0)
+shape(states, -48, 5)
+fill(102, 0, 0)
+shape(ohio, -48, 5)
 ]]></code>
 </example>
 

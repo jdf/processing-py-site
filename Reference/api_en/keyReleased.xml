@@ -21,6 +21,7 @@ def draw():
   rect(25, 25, 50, 50)
 
 def keyReleased():
+  global value
   if value == 0:
     value = 255
   else:

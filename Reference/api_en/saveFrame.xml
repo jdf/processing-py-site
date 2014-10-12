@@ -13,7 +13,9 @@
 <notest />
 <code><![CDATA[
 x = 0
+
 def draw():
+    global x
     background(204)
     if x < 100:
         line(x, 0, x, 100)
@@ -30,7 +32,9 @@ def draw():
 <notest />
 <code><![CDATA[
 x = 0
+
 def draw():
+    global x
     background(204)
     if x < 100:
         line(x, 0, x, 100)

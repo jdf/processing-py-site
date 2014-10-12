@@ -23,6 +23,7 @@ def draw():
     line(x, 0, x, height)
 
 def mousePressed():
+    global x
     x += 1
     redraw()
 ]]></code>

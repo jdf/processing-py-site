@@ -12,9 +12,8 @@
 <noimage />
 <notest />
 <code><![CDATA[
-bigImage = None
-
 def setup():
+    global bigImage
     bigImage = requestImage("something.jpg")
 
 def draw():

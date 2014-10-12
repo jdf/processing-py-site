@@ -23,6 +23,7 @@ def draw():
 
 
 def keyPressed():
+	global value
     if value == 0:
         value = 255
     else:

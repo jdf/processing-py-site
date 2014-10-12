@@ -11,9 +11,8 @@
 <example>
 <image />
 <code><![CDATA[
-s = None
-
 def setup(): 
+    global s
     s = loadShape("bot.svg")
 
 def draw(): 

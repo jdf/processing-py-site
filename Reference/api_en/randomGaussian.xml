@@ -23,20 +23,16 @@ for y in range(100):
 <notest />
 <code><![CDATA[
 distribution = [0.0] * 360
-
-def setup():
-    size(100, 100)
-    for i in range(len(distribution)):
-        distribution[i] = int(randomGaussian() * 15)
-
-def draw():
-    background(204)
-    translate(width / 2, width / 2)
-    for i in range(len(distribution)):
-        rotate(TWO_PI / len(distribution))
-        stroke(0)
-        dist = abs(distribution[i])
-        line(0, 0, dist, 0)
+size(100, 100)
+for i in range(len(distribution)):
+    distribution[i] = int(randomGaussian() * 15)
+background(204)
+translate(width / 2, width / 2)
+for i in range(len(distribution)):
+    rotate(TWO_PI / len(distribution))
+    stroke(0)
+    dist = abs(distribution[i])
+    line(0, 0, dist, 0)
 ]]></code>
 </example>
 

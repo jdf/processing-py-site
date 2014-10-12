@@ -20,9 +20,8 @@ image(img, 0, 0)
 <noimage />
 <notest />
 <code><![CDATA[
-img = None
-
 def setup():
+    global img
     img = loadImage("laDefense.jpg")
 
 def draw():
@@ -35,11 +34,10 @@ def draw():
 <noimage />
 <notest />
 <code><![CDATA[
-webImg = None
-
 def setup():
     url = "http://processing.org/img/processing-web"
     # Load image from a web server
+    global webImg
     webImg = loadImage(url, "png")
 
 def draw():

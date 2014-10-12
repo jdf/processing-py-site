@@ -23,7 +23,20 @@ drawSquare()
 </example>
 
 <description><![CDATA[
-Global variables are declared outside functions and are accessible throughout the program.  
+Global variables are declared outside functions and are readable throughout the program. If you wish to modify or create a global variable from within a function, you must use the <tt>global</tt> Python statement:
+<pre>
+# We create the global x.
+x = 0
+
+def keyPressed():
+    # We want to modify the global x.
+    global x
+    x = x + 1
+
+def draw():
+    # We wish to read the global x.
+    ellipse(x, height / 2, 10, 10)
+</pre>
 ]]></description>
 
 <syntax>

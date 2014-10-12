@@ -22,6 +22,7 @@ def draw():
     rect(25, 25, 50, 50)
 
 def mouseDragged(): 
+    global value
     value = value + 5
     if value > 255:
         value = 0

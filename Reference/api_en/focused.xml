@@ -14,7 +14,7 @@
 <code><![CDATA[
 def draw():
     background(255)
-    if focused: # or "if (focused == True)"
+    if focused:
         ellipse(25, 25, 50, 50)
     else:
         line(0, 0, 100, 100)
@@ -23,7 +23,7 @@ def draw():
 </example>
 
 <description><![CDATA[
-Confirms if a Processing program is "focused," meaning that it is active and will accept mouse or keyboard input. This variable is "True" if it is focused and "False" if not.
+Confirms if a Processing program is "focused," meaning that it is active and will accept mouse or keyboard input. This variable is <tt>True</tt> if it is focused and <tt>False</tt> if not.
 ]]></description>
 
 

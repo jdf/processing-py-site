@@ -32,6 +32,7 @@ def setup():
 
 def draw():
     background(204)
+    global x
     x = x + 0.1
     if x > width:
         x = 0
@@ -59,6 +60,7 @@ def draw():
         pass
 
 def mousePressed():
+    global someMode
     someMode = True
     redraw()  # or loop()
 ]]></code>

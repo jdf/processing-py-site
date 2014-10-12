@@ -14,11 +14,10 @@
 <example>
 <image />
 <code><![CDATA[
-s = None
-
 def setup():
     size(100, 100, P2D)
     # Make a shape
+    global s
     s = createShape()
     s.beginShape()
     s.noStroke()

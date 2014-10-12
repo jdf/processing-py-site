@@ -14,21 +14,19 @@
 <example>
 <image />
 <code><![CDATA[
-s = None  # The PShape object
+size(100, 100, P2D)
 
-def setup(): 
-    size(100, 100, P2D)
-    s = createShape()
-    s.beginShape()
-    s.fill(0, 0, 255)
-    s.noStroke()
-    s.vertex(0, 0)
-    s.vertex(0, 50)
-    s.vertex(50, 0)
-    s.endShape()
+s = createShape()
 
-def draw(): 
-    shape(s, 25, 25)
+s.beginShape()
+s.fill(0, 0, 255)
+s.noStroke()
+s.vertex(0, 0)
+s.vertex(0, 50)
+s.vertex(50, 0)
+s.endShape()
+
+shape(s, 25, 25)
 ]]></code>
 </example>
 
