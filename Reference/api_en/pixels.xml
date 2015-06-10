@@ -25,6 +25,16 @@ List containing the values for all the pixels in the display window. These value
 Before accessing this list, the data must loaded with the <b>loadPixels()</b> function. After the list data has been modified, the <b>updatePixels()</b> function must be run to update the changes. Without <b>loadPixels()</b>, running the code may (or will in future releases) result in a NullPointerException.
 ]]></description>
 
+<syntax>
+	loadPixels()
+	pixels[i] = var
+</syntax>
+
+<parameter>
+<label>i</label>
+<description> <![CDATA[int: index within the pixels array to access]]></description>
+</parameter>
+
 <related>PImage_loadPixels</related>
 <related>updatePixels</related>
 <related>PVector_get</related>

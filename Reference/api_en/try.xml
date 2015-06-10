@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>except</name>
+<name>try</name>
 
 <category>Structure</category>
 
@@ -14,14 +14,14 @@ element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
 
 try:
   print(element_names['Zz'])
-
+  
 except KeyError as e:
   print("caught KeyError: " + e.message) # Prints 'caught KeyError: Zz'
 ]]></code>
 </example>
 
 <description><![CDATA[
-The <b>except</b> keyword is used with <b>try</b> to handle exceptions. When an
+The <b>try</b> keyword is used with <b>except</b> to handle exceptions. When an
 exception is thrown inside a <b>try</b> block, the code inside the
 <b>except</b> block with a matching exception class name is run. If an
 <b>as</b> clause is given, the exception itself will be available inside this
@@ -57,9 +57,10 @@ except <c>exception</c> as <c>tmpName</c>:
 <description><![CDATA[code that handles the exception]]></description>
 </parameter>
 
+<related>except</related>
+
 <returns></returns>
 
-<related>try</related>
 
 <availability>1.0</availability>
 

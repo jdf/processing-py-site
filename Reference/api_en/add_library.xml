@@ -32,7 +32,7 @@ add_library(<c>libraryName</c>)
 
 <parameter>
 <label>libraryName</label>
-<description><![CDATA[the name of the library to load (e.g. "pdf")]]></description>
+<description><![CDATA[string: the name of the library to load (e.g. "pdf")]]></description>
 </parameter>
 
 <returns></returns>

@@ -25,5 +25,9 @@ Calculates the absolute value (magnitude) of a number. The absolute value of a n
 abs(n)
 </syntax>
 
+<parameter>
+	<label>n</label>
+	<description><![CDATA[any numberical value, usually an int or float]]></description>
+</parameter>
 
 </root>

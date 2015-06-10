@@ -38,9 +38,17 @@ Mouse and keyboard events only work when a program has <b>draw()</b>. Without <b
 ]]></description>
 
 <syntax>
-mouseClicked()
-mouseClicked(event)
+def mouseClicked():
+    statements
+
+def mouseClicked(event):
+    statements
 </syntax>
+
+<parameter>
+	<label>event</label>
+	<description><![CDATA[MouseEvent: the MouseEvent]]></description>
+</parameter>
 
 <related>mouseX</related>
 <related>mouseY</related>

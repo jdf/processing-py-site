@@ -14,6 +14,20 @@ print("%d : %.1f"% (i, f)) # Prints "65 : 65.0"
 ]]></code>
 </example>
 
+<syntax>
+	var = float(i)
+</syntax>
+
+<parameter>
+<label>var</label>
+<description><![CDATA[variable name referencing the float]]></description>
+</parameter>
+
+<parameter>
+<label>i</label>
+<description><![CDATA[int: any int to be converted to a float]]></description>
+</parameter>
+
 <description><![CDATA[
 Converts an int to its floating point representation.
 ]]></description>

@@ -57,9 +57,10 @@ Controls a sequence of repetitions. In Python, a for loop requires a list functi
 </br>
 range(10)       # Creates the list [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] <br/>
 range(5, 10)    # Creates the list [5, 6, 7, 8, 9] <br/>
-range(5, 10, 2) # Creates the list [5, 7, 9] <br/>
+range(5, 10, 2) # Creates the list [5, 7, 9] <br />
 </br>
-In the first example above, the <b>for</b> structure is executed 40 times. The for structure loops until it reaches the last element of the list created by range(40): 39.
+<br />
+In the first example above, the <b>for</b> structure is executed 40 times. The for structure loops until it reaches the last element of the list created by range(40): 39. <br />
 <br/>
 A second type of <b>for</b> structure makes it easier to iterate over each element of a list. The last example above shows how it works. First, define a variable name. This variable name will be assigned to each element of the list in turn as the <b>for</b> moves through the entire list. Then specify the list to iterate over after <b>in</b>, in this case <b>nums</b>. 
 ]]></description>

@@ -31,8 +31,29 @@ Limits the rendering to the boundaries of a rectangle defined by the parameters.
 ]]></description>
 
 <syntax>
-clear()
+clip(x1, y1, x2, y2)
 </syntax>
+
+<parameter>
+<label>x1</label>
+<description><![CDATA[int: x coordinate of first corner of bounding box]]></description>
+</parameter>
+
+<parameter>
+<label>y1</label>
+<description><![CDATA[int: y coordinate of first corner of bounding box]]></description>
+</parameter>
+
+<parameter>
+<label>x2</label>
+<description><![CDATA[int: x coordinate of second corner of bounding box]]></description>
+</parameter>
+
+<parameter>
+<label>y2</label>
+<description><![CDATA[int: y coordinate of second corner of bounding box]]></description>
+</parameter>
+
 
 
 </root>

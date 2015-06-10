@@ -24,8 +24,17 @@ When run inside of a <b>for</b> or <b>while</b>, it skips the remainder of the b
 ]]></description>
 
 <syntax>
-<c>continue</c>
+	for i in xrange(10):
+		if (test):
+		    <b>continue</b>
+	    statements
+	    
+	while (condition):
+		if (test):
+		    <b>continue</b>
+	    statements
 </syntax>
+
 
 <returns></returns>
 

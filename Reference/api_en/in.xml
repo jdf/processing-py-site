@@ -47,7 +47,7 @@ comprehensions.)
 ]]></description>
 
 <syntax>
-	<c>i</c> in <c>a</c>
+	<c>item</c> in <c>object</c>
 </syntax>
 
 <parameter>

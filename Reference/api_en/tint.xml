@@ -50,6 +50,45 @@ The value for the gray parameter must be less than or equal to the current maxim
 The <b>tint()</b> function is also used to control the coloring of textures in 3D. 
 ]]></description>
 
+<syntax>
+	tint(rgb)
+	tint(rgb, alpha)
+	tint(gray)
+	tint(gray, alpha)
+	tint(v1, v2, v3)
+	tint(v1, v2, v3, alpha)
+</syntax>
+
+<parameter> 
+<label>rgb</label>
+<description><![CDATA[ int: color value in hexadecimal notation]]></description>
+</parameter>
+
+<parameter> 
+<label>alpha</label>
+<description><![CDATA[ float: opacity of the image]]></description>
+</parameter>
+
+<parameter> 
+<label>gray</label>
+<description><![CDATA[ float: specifies a value between white and black]]></description>
+</parameter>
+
+<parameter> 
+<label>v1</label>
+<description><![CDATA[ float: red or hue value (depending on color mode)]]></description>
+</parameter>
+
+<parameter> 
+<label>v2</label>
+<description><![CDATA[ float: blue or saturation value (depending on color mode)]]></description>
+</parameter>
+
+<parameter> 
+<label>v1</label>
+<description><![CDATA[ float: green or brightness value (depending on color mode)]]></description>
+</parameter>
+
 <related>noTint</related>
 <related>image</related>
 

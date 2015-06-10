@@ -71,6 +71,15 @@ of execution.)
 
 ]]></description>
 
+<syntax>
+	var = (elem1, ..., elemN)
+</syntax>
+
+<parameter>
+	<label>elem</label>
+	<description><![CDATA[any element to store within the tuple]]></description>
+</parameter>
+
 <related>list</related>
 <related>dictionary</related>
 <related>indexbrackets</related>

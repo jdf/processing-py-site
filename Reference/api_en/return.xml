@@ -50,11 +50,11 @@ Keyword used to indicate the value to return from a function.
 The keyword <b>return</b> may also be used to break out of a function, thus not allowing the program to the remaining statements. (See the third example above.)
 ]]></description>
 
-<syntax><![CDATA[
+<syntax>
 def <c>function</c>:
     <c>statements</c>
     return <c>value</c>
-]]></syntax>
+</syntax>
 
 <parameter>
 <label>function</label>

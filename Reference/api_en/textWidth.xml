@@ -27,6 +27,15 @@ line(sw, 50, sw, 100)
 Calculates and returns the width of any character or text string.
 ]]></description>
 
+<syntax>
+	textWidth(str)
+</syntax>
+
+<parameter>
+	<label>str</label>
+	<description><![CDATA[String: any character or text string]]></description>
+</parameter>
+
 <related>loadFont</related>
 <related>text</related>
 <related>textFont</related>

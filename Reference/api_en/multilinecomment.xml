@@ -26,9 +26,13 @@ Explanatory notes embedded within the code. Comments are used to remind yourself
 ]]></description>
 
 <syntax>
-/*
+"""
   <c>comment</c>
-*/
+"""
+or 
+'''
+   <c>comment</c>
+'''
 </syntax>
 
 <parameter>
@@ -39,7 +43,6 @@ Explanatory notes embedded within the code. Comments are used to remind yourself
 <returns></returns>
 
 <related>comment</related>
-<related>multilinecomment</related>
 
 <availability>1.0</availability>
 

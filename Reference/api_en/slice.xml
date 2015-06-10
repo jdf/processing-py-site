@@ -89,17 +89,17 @@ substrings by numerical index. <br/><br/>
 
 <parameter>
 <label>sequence</label>
-<description><![CDATA[a list, string or other sequence]]></description>
+<description><![CDATA[list: string or other sequence]]></description>
 </parameter>
 
 <parameter>
 <label>begin</label>
-<description><![CDATA[the integer index at which to begin the slice]]></description>
+<description><![CDATA[int: index at which to begin the slice]]></description>
 </parameter>
 
 <parameter>
 <label>end</label>
-<description><![CDATA[the integer index at which to end the slice]]></description>
+<description><![CDATA[int: integer index at which to end the slice]]></description>
 </parameter>
 
 <returns></returns>

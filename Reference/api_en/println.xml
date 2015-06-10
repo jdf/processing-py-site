@@ -26,7 +26,7 @@ println(list_of_stuff)
 <br />
 Using <b>println()</b> on an object will output a string representation of that object, as determined by its internal <b>__str__</b> and <b>__repr__</b> methods (<a href="http://stackoverflow.com/a/2626364">more information here</a>).<br/>
 <br/>
-In Python Mode, <b>print()</b> and <b>println</b> are functionally identical.
+In Python Mode, <b>print()</b> and <b>println()</b> are functionally identical.
 ]]></description>
 
 <syntax>

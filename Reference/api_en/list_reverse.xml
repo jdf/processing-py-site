@@ -22,14 +22,15 @@ Reverse the elements of a list in place.
 ]]></description>
 
 <syntax>
+	a.reverse()
 </syntax>
 
 <parameter>
-<label></label>
-<description></description>
+<label>a</label>
+<description><![CDATA[list: the list to be reversed]]></description>
 </parameter>
-
 <returns></returns>
+
 
 <related>list_insert</related>
 <related>list_pop</related>

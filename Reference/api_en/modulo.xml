@@ -22,6 +22,7 @@ d = 30.0 % 33.0    # Sets 'd' to 30.0
 <noimage />
 <notest />
 <code><![CDATA[
+#Keep line within sketch boundaries
 a = 0
 def draw():
     background(200)

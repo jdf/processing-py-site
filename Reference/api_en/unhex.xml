@@ -22,6 +22,15 @@ rect(30, 20, 55, 55)
 Converts a String representation of a hexadecimal number to its equivalent integer value.
 ]]></description>
 
+<syntax>
+	unhex(str)
+</syntax>
+
+<parameter>
+	<label>str</label>
+	<description><![CDATA[str: string representation of a hexadecimal number]]></description>
+</parameter>
+
 <related>hex</related>
 <related>binary</related>
 <related>unbinary</related>
