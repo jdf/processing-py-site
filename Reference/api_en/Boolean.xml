@@ -26,7 +26,7 @@ Datatype for the Boolean values <b>True</b> and <b>False</b>. It is common to us
 ]]></description>
 
 <syntax>
-<c>var</c> = <c>booleanvalue</c>
+<c>var</c> = <c>booleanValue</c>
 </syntax>
 
 <parameter>
@@ -35,7 +35,7 @@ Datatype for the Boolean values <b>True</b> and <b>False</b>. It is common to us
 </parameter>
 
 <parameter>
-<label>booleanvalue</label>
+<label>booleanValue</label>
 <description><![CDATA[True or False]]></description>
 </parameter>
 

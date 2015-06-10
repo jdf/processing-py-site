@@ -24,5 +24,6 @@ A triangle is a plane created by connecting three points. The first two argument
 ]]></description>
 
 <related>PShape_beginShape</related>
+<related>rect</related>
 
 </root>

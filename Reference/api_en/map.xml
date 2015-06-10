@@ -13,15 +13,19 @@
 <example>
 <image />
 <code><![CDATA[
-size(200, 200)
-value = 25
-m = map(value, 0, 100, 0, width)
-ellipse(m, 200, 10, 10)
+	# Map between positive values. 
+    value = 50
+    m = map(value, 0, width, 0, width/2)
+    # Draw white ellipse at original x location. 
+    ellipse(value, height *.25, 10, 10)
+    # Draw black ellipse at mapped x location
+    fill(0)
+    ellipse(m, height*.75, 10, 10)
 ]]></code>
 </example>
 
 <example>
-<image />
+<noimage />
 <code><![CDATA[
 value = 110
 m = map(value, 0, 100, -20, -10)
@@ -49,9 +53,11 @@ def draw():
 <description><![CDATA[
 Re-maps a number from one range to another.<br/>
 <br/>
-In the first example above, the number 25 is converted from a value in the range of 0 to 100 into a value that ranges from the left edge of the window (0) to the right edge (width).<br/>
+In the first example above, the number 50 is converted from a value in the range of 0 to the width of the window (which is the default value of 100) into a value that ranges from the left edge of the window (0) to half the width of the window (50).<br/>
 <br/>
-As shown in the second example, numbers outside of the range are not clamped to the minimum and maximum parameters values, because out-of-range values are often intentional and useful.
+As shown in the second example, numbers outside of the range are not clamped to the minimum and maximum parameters values, because out-of-range values are often intentional and useful. <br />
+<br />
+The third example shows how this function may be applied to user input. 
 ]]></description>
 
 <syntax>

@@ -10,9 +10,9 @@
 
 <example>
 <code><![CDATA[
-message = 'Alfa bravo charlie delta'
+message = 'Alpha bravo charlie delta'
 uppercase_message = message.upper()
-print(uppercase_message) # prints "ALFA BRAVO CHARLIE DELTA"
+print(uppercase_message) # prints "ALPHA BRAVO CHARLIE DELTA"
 ]]></code>
 </example>
 
@@ -22,9 +22,13 @@ uppercase.
 ]]></description>
 
 <syntax>
+	str.upper()
 </syntax>
 
-<returns></returns>
+<parameter>
+	<label>str</label>
+	<description><![CDATA[String: any string of characters.]]></description>
+</parameter>
 
 <related>string</related>
 <related>string_formatting</related>

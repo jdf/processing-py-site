@@ -24,7 +24,6 @@ else:
 Reserved word representing the logical value "False". Only variables of type <b>Boolean</b> may be assigned the value <b>False</b>.
 ]]></description>
 
-<syntax></syntax>
 
 <returns></returns>
 

@@ -11,7 +11,7 @@
 <example>
 <noimage />
 <code><![CDATA[
-def exclaim(s, count):  # A colon declares the start of an indented block.
+def exclaim(s, count): # A colon declares the start of an indented block.
   return s + ("!" * count)
 
 # Any statements followed by indented lines should end with a colon.
@@ -30,7 +30,9 @@ print(element_names['H'])
 </example>
 
 <description><![CDATA[
-A colon declares the start of an indented block. Any statement followed by an indendent block of code should end with a colon. The colon also separates key/value pairs in dictionary literals. 
+A colon declares the start of an indented block. Any statement followed by an indented
+block of code should end with a colon. The colon also separates key/value pairs 
+in dictionary literals. 
 ]]></description>
 
 <related>if</related>

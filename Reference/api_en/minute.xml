@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image />
+<noimage />
 <notest />
 <code><![CDATA[
 def draw():
@@ -24,7 +24,7 @@ def draw():
 </example>
 
 <description><![CDATA[
-Processing communicates with the clock on your computer. The <b>minute()</b> function returns the current minute as a value from 0 - 59.
+Processing communicates with the clock on your computer. The <b>minute()</b> function returns the current minute as an integer from 0 - 59.
 ]]></description>
 
 <syntax>

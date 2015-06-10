@@ -28,7 +28,7 @@ one other with commas.
 ]]></description>
 
 <syntax>
-	{<c>key0: val0, ..., keyN: valN</c>}
+	dict = {<c>key0: val0, ..., keyN: valN</c>}
 </syntax>
 
 <parameter>

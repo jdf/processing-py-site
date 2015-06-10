@@ -58,7 +58,7 @@ There can only be one <b>draw()</b> function for each sketch, and <b>draw()</b> 
 ]]></description>
 
 <syntax>
-draw()
+def draw():
 </syntax>
 
 <related>setup</related>

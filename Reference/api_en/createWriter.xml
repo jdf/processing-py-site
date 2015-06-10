@@ -31,6 +31,20 @@ Creates a new file in the sketch folder, and a <b>PrintWriter</b> object to writ
 Starting with Processing release 0134, all files loaded and saved by the Processing API use UTF-8 encoding. In previous releases, the default encoding for your platform was used, which causes problems when files are moved to other platforms.
 ]]></description>
 
+<syntax>
+	output = createWriter(fileName)
+</syntax>
+
+<parameter>
+	<label>output</label>
+	<description><![CDATA[PrintWriter object]]></description>
+</parameter>
+
+<parameter>
+	<label>fileName</label>
+	<description><![CDATA[String: Name of file to create and allow the PrintWriter object to write to.]]></description>
+</parameter>
+
 <related>createReader</related>
 
 </root>

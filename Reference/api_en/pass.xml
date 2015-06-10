@@ -21,11 +21,11 @@ class Foo(object):
 </example>
 
 <description><![CDATA[
-When pass is executed, nothing happens. Pass is useful when a statement is required syntactically -- as in the above function doNothing. 
+When pass is executed, nothing happens. Pass is useful when a statement is required syntactically -- as in the above function doNothing.
 ]]></description>
 
 <syntax>
-
+<c>pass</c>
 </syntax>
 
 <parameter>

@@ -24,7 +24,10 @@ else:
 Reserved word representing the logical value "True". 
 ]]></description>
 
-<syntax></syntax>
+<syntax>
+	x = True
+	y == True
+</syntax>
 
 <returns></returns>
 

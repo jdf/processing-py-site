@@ -33,8 +33,18 @@ Calculates the magnitude (or length) of a vector. A vector is a direction in spa
 ]]></description>
 
 <syntax>
-.mag()
+mag(x, y)
 </syntax>
+
+<parameter>
+	<label>x</label>
+	<description><![CDATA[int: x component of a vector]]></description>
+</parameter>
+
+<parameter>
+	<label>y</label>
+	<description><![CDATA[int: y component of a vector]]></description>
+</parameter>
 
 <related>PVector_magSq</related>
 

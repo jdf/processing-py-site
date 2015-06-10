@@ -65,15 +65,21 @@ program to the next.<br/><br/>
 ]]></description>
 
 <syntax>
-
+d = {}
+d = dict()
+d = {key: value, key2: value}
 </syntax>
 
 <parameter>
-<label></label>
-<description></description>
+<label>key</label>
+<description>any immutable object; used to index the dictionary (ex. String or int)</description>
 </parameter>
 
-<returns></returns>
+<parameter>
+<label>value</label>
+<description>any value to be stored in the dictionary</description>
+</parameter>
+
 
 <method>
 <label>keys()</label>
