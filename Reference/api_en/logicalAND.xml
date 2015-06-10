@@ -25,10 +25,10 @@ for y in range(5, 95, 5):
 <description><![CDATA[
 <p>Compares two expressions and evaluates to <b>True</b> only if both evaluate to <b>True</b>. Returns <b>False</b> if one or both evaluate to <b>False</b>. The following list shows all possible combinations:
 <pre>
-True &amp;&amp; False   # Evaluates False because the second is False
-False &amp;&amp; True   # Evaluates False because the first is False
-True &amp;&amp; True    # Evaluates True because both are True
-False &amp;&amp; False  # Evaluates False because both are False
+True and False   # Evaluates False because the second is False
+False and True   # Evaluates False because the first is False
+True and True    # Evaluates True because both are True
+False and False  # Evaluates False because both are False
 </pre>
 <p>The "and" operator is <i>short-circuiting</i>; it will not bother to evaluate its
 second expression of the first is False. That means, in the following example, that

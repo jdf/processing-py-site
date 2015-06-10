@@ -24,7 +24,7 @@ Inverts the Boolean value of an expression. Returns <b>True</b> if the expressio
 ]]></description>
 
 <syntax>
-not<c>expression</c>
+not <c>expression</c>
 </syntax>
 
 <parameter>

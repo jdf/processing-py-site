@@ -172,6 +172,11 @@ beginShape()
 beginShape(kind)
 </syntax>
 
+<parameter>
+<label>kind</label>
+<description><![CDATA[int: either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, and QUAD_STRIP]]></description>
+</parameter>
+
 <related>PShape</related>
 <related>PShape_endShape</related>
 <related>vertex</related>

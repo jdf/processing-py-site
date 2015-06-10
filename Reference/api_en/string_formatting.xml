@@ -13,6 +13,7 @@
 age = 7
 animal = 'turtle'
 weight = 317.5
+
 # Format string to include animal, age, and weight to one digit after the decimal point.
 s = ("This %s is %i years old, and weighs %.1f pounds." % (animal, age, weight))
 print(s)
@@ -25,11 +26,24 @@ Substitute variables in a string using the string format operator % as shown abo
 ]]></description>
 
 <syntax>
+	"%s" % "string"
+	"%i" % 10 
+	"%f" % 10.5
 </syntax>
 
 <parameter>
-<label></label>
-<description></description>
+<label>%s</label>
+<description><![CDATA[String: any string]]></description>
+</parameter>
+
+<parameter>
+<label>%i</label>
+<description><![CDATA[int: any int]]></description>
+</parameter>
+
+<parameter>
+<label>%f</label>
+<description><![CDATA[float: any float]]></description>
 </parameter>
 
 <returns></returns>

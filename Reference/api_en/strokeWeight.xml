@@ -24,6 +24,15 @@ line(20, 70, 80, 70)
 Sets the width of the stroke used for lines, points, and the border around shapes. All widths are set in units of pixels.
 ]]></description>
 
+<syntax>
+	strokeWeight(weight)
+</syntax>
+
+<parameter>
+<label>weight</label>
+<description><![CDATA[int: thickness of stroke]]></description>
+</parameter>
+
 <related>stroke</related>
 <related>strokeJoin</related>
 <related>strokeCap</related>

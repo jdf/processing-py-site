@@ -11,19 +11,18 @@
 <example>
 <image />
 <code><![CDATA[
-
-
-
-
+	print True == None # Prints False
+	print False == None # Prints False 
+	print None == None # Prints True
 ]]></code>
 </example>
 
-<description><![CDATA[
-
+<description><![CDATA[ None is often used to represent the absences of a value. Such as
+	when default arguments are not passed to a function. 
 ]]></description>
 
 <syntax>
-
+x = None 
 </syntax>
 
 <parameter>
@@ -40,6 +39,8 @@
 
 <partof></partof>
 
+<related>True</related>
+<related>False</related>
 
 
 

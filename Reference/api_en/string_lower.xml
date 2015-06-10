@@ -22,9 +22,15 @@ lowercase.
 ]]></description>
 
 <syntax>
+	str.lower()
 </syntax>
 
-<returns></returns>
+<parameter>
+	<label>str</label>
+	<description><![CDATA[String: any string of characters.]]></description>
+</parameter>
+
+<returns>String</returns>
 
 <related>string</related>
 <related>string_formatting</related>

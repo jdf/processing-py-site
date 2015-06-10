@@ -26,5 +26,9 @@ def draw():
 Confirms if a Processing program is "focused," meaning that it is active and will accept mouse or keyboard input. This variable is <tt>True</tt> if it is focused and <tt>False</tt> if not.
 ]]></description>
 
+<syntax>
+	if (focused):
+	    statements
+</syntax>
 
 </root>

@@ -6,6 +6,33 @@
 
 <subcategory>Files</subcategory>
 
+<example>
+<image />
+<notest />
+<code><![CDATA[
+def setup():
+    global reader
+    #Create the global buffered reader object
+    reader = createReader("positions.txt")
+    
+def draw():
+    try:
+        line = reader.readLine()
+    except:
+        line = None
+    
+    if (line == None):
+        #Stop reading, because of an error or the file is empty
+        noLoop()
+    else:
+        #Split eace line on a tab. 
+        positions = line.split("\t")
+        x = int(positions[0])
+        y = int(positions[1])
+        point(x,y)
+]]></code>
+</example>
+
 <description><![CDATA[
 Creates a BufferedReader object that can be used to read files line-by-line as individual String objects. This is the complement to the createWriter() function. 
 

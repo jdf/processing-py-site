@@ -41,8 +41,18 @@ Transformations such as <b>translate()</b>, <b>rotate()</b>, and <b>scale()</b> 
 ]]></description>
 
 <syntax>
-beginContour()
+	beginShape()
+	<b>vertexStatements </b>
+
+	beginContour()
+	<b>vertexStatements </b>
+	endContour()
+
+	endShape()
 </syntax>
 
+<related>endContour</related>
+<related>beginShape</related>
+<related>endShape</related>
 
 </root>

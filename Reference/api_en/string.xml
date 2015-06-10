@@ -64,7 +64,18 @@ There are more string methods than those linked from this page. Additional docum
 
 ]]></description>
 
-<syntax></syntax>
+<syntax>
+	'str'
+	"str"
+	"""
+	str
+	"""
+</syntax>
+
+<parameter>
+<label>str</label>
+<description><![CDATA[any string of characters]]></description>
+</parameter>
 
 <method>
 <label>find()</label>

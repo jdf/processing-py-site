@@ -9,7 +9,7 @@
 <usage></usage>
 
 <example>
-<image />
+<noimage />
 <code><![CDATA[
 
 element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}

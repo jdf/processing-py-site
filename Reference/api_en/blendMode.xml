@@ -69,7 +69,7 @@ blendMode(<c>mode</c>)
 
 <parameter>
 <label>mode</label>
-<description><![CDATA[int: the blending mode to use]]></description>
+<description><![CDATA[int: either BLEND, SUBTRACT, DARKEST, LIGHTEST, DIFFERENCE, EXCLUSION, MULTIPLY, SCREEN or REPLACE]]></description>
 </parameter>
 
 </root>

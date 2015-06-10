@@ -44,6 +44,11 @@ keyReleased()
 keyReleased(event)
 </syntax>
 
+<parameter>
+	<label>event</label>
+	<description><![CDATA[MouseEvent: the MouseEvent]]></description>
+</parameter>
+
 <related>key</related>
 <related>keyCode</related>
 <related>keyPressed_var</related>

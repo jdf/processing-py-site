@@ -47,6 +47,11 @@ keyTyped()
 keyTyped(event)
 </syntax>
 
+<parameter>
+	<label>event</label>
+	<description><![CDATA[MouseEvent: the MouseEvent]]></description>
+</parameter>
+
 <related>keyPressed_var</related>
 <related>key</related>
 <related>keyCode</related>

@@ -27,6 +27,8 @@ tinySquare(width/2, height/2)
 ]]></description>
 
 <syntax>
+	def functionName():
+	    statements
 </syntax>
 
 <parameter>

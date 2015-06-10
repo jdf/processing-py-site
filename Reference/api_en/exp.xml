@@ -23,5 +23,10 @@ Returns Euler's number <i>e</i> (2.71828...) raised to the power of the <b>n</b>
 exp(n)
 </syntax>
 
+<parameter>
+	<label>n</label>
+	<decription><![CDATA[float: amount to raise Euler's number by.]]></decription>
+</parameter>
+
 
 </root>

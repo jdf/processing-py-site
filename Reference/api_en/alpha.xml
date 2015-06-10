@@ -29,6 +29,11 @@ Extracts the alpha value from a color.
 alpha(rgb)
 </syntax>
 
+<parameter>
+<label>rgb</label>
+<description><![CDATA[int: any value of the color datatype]]></description>
+</parameter>
+
 <related>red</related>
 <related>green</related>
 <related>blue</related>

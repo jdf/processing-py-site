@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image />
+<noimage />
 <notest />
 <code><![CDATA[
 background(204)
@@ -23,7 +23,7 @@ line(h, 66, h, 100)
 </example>
 
 <description><![CDATA[
-Processing communicates with the clock on your computer. The <b>second()</b> function returns the current second as a value from 0 - 59.
+Processing communicates with the clock on your computer. The <b>second()</b> function returns the current second as an integer from 0 - 59.
 ]]></description>
 
 <syntax>

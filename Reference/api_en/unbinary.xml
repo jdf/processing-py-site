@@ -23,6 +23,15 @@ print(unbinary(s3))  # Prints "4"
 Converts a string representation of a binary number to its equivalent integer value. For example, <b>unbinary("00001000")</b> will return 8.
 ]]></description>
 
+<syntax>
+	unbinary(str)
+</syntax>
+
+<parameter>
+	<label>str</label>
+	<description><![CDATA[str: string representation of a binary number]]></description>
+</parameter>
+
 <related>binary</related>
 <related>hex</related>
 <related>unhex</related>
