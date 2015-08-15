@@ -6,7 +6,6 @@
 */
 
 /* ================ GENERAL CSS ================== 
-
 Mostly original stuff from existing site */
 
 
@@ -105,14 +104,12 @@ a:link:visited {
 	color			: white;
 	text-decoration	: underline;
 	}
-
 .navBar
 	{
 	height			: 20px;
 	padding			: 5px 0px 0px 55px;
 	margin			: 0px;
 	}
-
 #mainnav
 	{
 	background-color		: #333323;
@@ -122,7 +119,6 @@ a:link:visited {
 	{
 	background-color		: #5A5A46;
 	}
-
 #subnav
 	{
 	padding					: 5px 0 5px 40px;

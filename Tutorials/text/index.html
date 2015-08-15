@@ -1,0 +1,591 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.12), see www.w3.org">
+
+  <title>Strings and Drawing Text</title>
+</head>
+
+<body>
+  <h1>Strings and Drawing Text</h1>
+  
+<table width="656">
+    <tr>
+      <td>
+        <p class="license">This tutorial is for Processing's Python Mode.
+        If you see any errors or have comments, please <a href=
+        "https://github.com/processing/processing-docs/issues?state=open">
+        let us know</a>. This tutorial is adapted from the book, <a href=
+        "http://www.processing.org/learning/books/#shiffman">Learning
+        Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann
+        Publishers, Copyright &copy; 2008 Elsevier Inc. All rights
+        reserved. </p>
+  
+        <p>&nbsp;</p>
+
+
+<h3>The String Class</h3>
+
+<p>If you are looking to display text onscreen with Processing, you've got to first become familiar with python's built-in <a href="http://py.processing.org/reference/string.html">string</a> class. Strings are probably not a totally new concept for you, it's quite likely you've dealt with them before. For example, if you've printed some text to the message window or loaded an image from a file, you've written code like so:</pr>
+
+<pre>
+print("printing some text to the message window!")  # Printing a string
+img = loadImage("filename.jpg")                     # Using a string for a file name
+</pre>
+<p>
+Nevertheless, although you may have used a string here and there, it's time to unleash their full potential.</p>
+
+<h3>Where do we find documentation for the string class?</h3>
+<p>
+Although technically a Python class, because strings are so commonly used, Processing.py includes documentation in its <a href="http://py.processing.org/reference/">reference</a>. Here you'll find reference pages like the general<a href="http://py.processing.org/reference/string.html">string</a> class.  
+</p>
+<p>
+This page only covers some of the available methods of the String class. The full documentation can be found on python's <a href="https://docs.python.org/2/library/string.html">string</a> page.
+</p>
+<h3>What is a string?</h3>
+<p>
+A string, at its core, is really just a fancy way of storing a list of characters. If we didn't have the string class, we'd probably have to write some code like this:
+</p>
+<pre>
+sometext = ['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd']
+</pre>
+<p>
+Clearly, this would be a royal pain in the Processing behind. It's much simpler to do the following and make a string object:
+</p>
+<pre>
+sometext = "How do I make string? Type some characters between quotation marks!"
+</pre>
+<p>
+It appears from the above that a string is nothing more than a list of characters in between quotes. Nevertheless, this is only the data of a string. We must remember that a string is an object with methods (which you can find on the reference page.) This is just like how we learned in the <a href="http://py.processing.org/tutorials/pixels/">Pixels tutorial</a> that a <a href="http://py.processing.org/reference/PImage.html">PImage</a> stores both the data associated with an image as well as the functionality: <a href="http://py.processing.org/reference/copy.html">copy()</a>, <a href="http://py.processing.org/reference/loadPixels.html">loadPixels()</a>, etc.  
+</p><p>
+For example, using square brackets at the end of a string (i.e. myString[0]) returns the individual character in the string at a given index. This is actually just a simple way of calling the strings __getitem__() method! Note that Strings are just like lists in that the first character is index #0! 
+</p>
+<pre>
+message = "some text here."
+c = message[3]
+print(c)                   # Results in 'e'
+</pre>
+<p>
+Another useful function is <a href="http://py.processing.org/reference/len.html">len()</a>. By calling the len() function with our string as its argument, we can retrieve the length of our string.
+</p>
+<pre>
+message = "This String is 34 characters long."
+print( len(message) )                          # Prints 34
+</pre>
+<p>We can also change a string to all uppercase using the <a href="http://py.processing.org/reference/string_upper.html">.upper()</a> method (<a href="http://py.processing.org/reference/string_lower.html">.lower</a> is also available).  </p>
+<pre>
+uppercase = message.upper
+println(uppercase)
+</pre>
+<p>
+You might notice something a bit odd here. Why didn't we simply say "message.upper()" and then print "message" variable? Instead, we assigned the result of "message.upper" to a new variable with a different name -- "uppercase".  
+</p><p>
+This is because a string is a special kind of object. It is immutable. An immutable object is one whose data can never be changed. Once we create a string, it stays the same for life. Anytime we want to change the string, we have to create a new one. So in the case of converting to uppercase, the method .upper() returns a copy of the string object with all caps.
+</p>
+<p>Finally, let's look at the <a href="http://py.processing.org/reference/equality.html">== (equality)</a> operator. Now, strings can be compared with the "==" operator as follows:  
+</p>
+<pre>
+one = "hello"
+two = "hello"
+print(one == two) # True! 
+</pre>
+<p>
+While in other languages strings have their own equality checking methods, in Python the equality check is built into the default <a href="http://py.processing.org/reference/equality.html">== (equality)</a> operator. This makes comparing strings super simple! 
+</p>
+<p>
+One other feature of string objects is concatenation, joining two strings together. Strings are joined with the "+" operator. Plus, of course, usually means add in the case of numbers. When used with Strings, it means join.
+</p>
+<pre>
+helloworld = "Hello" + "World"
+</pre>
+<p>
+Variables can also be brought into a string using <a href="http://py.processing.org/reference/string_formatting.html">String Formatting</a>
+</p>
+<pre>
+x = 10
+message = "The value of x is: %i" % (x)
+print(message)
+
+codeMsg = "spooky ghost"
+secretMsg = "The secret message is: %s" % codeMsg
+</pre>
+<p>
+Notice above that I used a different character (%i for integer, %s for strings) when placing different types of variables into our string. You can find a whole list of these <a href="https://docs.python.org/2.4/lib/typesseq-strings.html">string formatting operations here</a>.
+</p>
+<h3>Displaying Text</h3>
+<p>
+The easiest way to display a string is to print it in the message window. This is likely something you've done while debugging. For example, if you needed to know the horizontal mouse location, you would write:
+</p>
+<pre>
+print(mouseX)
+</pre>
+<p>
+Or if you needed to determine that a certain part of the code was executed, you might print out a descriptive message.
+</p>
+<pre>
+print("We got here and we're printing out the mouse location!!!")
+</pre>
+<p>
+While this is valuable for debugging, it's not going to help our goal of displaying text for a user. To place text on screen, we have to follow a series of simple steps.
+</p><p>
+First, we create a  <a href="http://py.processing.org/reference/PFont.html">PFont</a> object. In order to do this, we'll use the <a href="http://py.processing.org/reference/createFont.html">createFont()</a> function. As arguments we reference the font name and size. This should only be done once, usually during <a href="http://py.processing.org/reference/setup.html">setup()</a>. Just like loading an image, loading a font is a memory intensive and slow process which will seriously affect your sketch's performance if placed inside a frequently called function like <a href="http://py.processing.org/reference/draw.html">draw()</a>. Because of limitations with Java (The language Processing.py is created with) not all fonts can be used and some might work with one operating system and not others. When sharing a sketch with other people or posting it on the web, you may need to include a .ttf or .otf verson of your font in the data directory of the sketch because other people might not have the font installed on their computer. Only fonts that can be legally distributed should be included with a sketch. In addition to the name of the font, you can specify size as well as whether or not to turn on Anti-aliasing.
+</p>
+<pre>
+f = createFont("Arial", 16, True) # f will represent size 16 Arial, Anti-aliasing is on
+</pre>
+<p>
+Next, we specify the font using <a href="http://py.processing.org/reference/textFont.html">textFont()</a>. textFont() takes one or two arguments, the font variable and the font size, which is optional. If you do not include the font size, the font will be displayed at the size originally loaded. When possible, the text() function will use a native font rather than the bitmapped version created behind the scenes with createFont() so you have the opportunity to scale the font dynamically. When using P2D, the actual native version of the font will be employed by the sketch, improving drawing quality and performance. With the P3D renderer, the bitmapped version will be used and therefore specifying a font size that is different from the font size loaded can result in pixelated text.
+</p>
+<pre>
+textFont(f,36)
+</pre>
+<p>
+Then, specify a color using <a href="http://py.processing.org/reference/fill.html">fill()</a>.
+</p>
+<pre>
+fill(255)
+</pre>
+<p>
+Lastly, call the <a href="http://py.processing.org/reference/text.html">text()</a> function to display text. (This function is just like shape or image drawing, it takes 3 arguments -- the text to be displayed, and the x & y coordinate to display that text.)
+</p>
+<pre>
+text("Hello Strings!",10,100)
+</pre>
+<p>
+Here are all the steps together:
+</p>
+<pre>
+<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-1-simple-displaying-text/"><b>Example Simple Displaying Text</b></a>
+def setup():
+    global f
+    size(200,200)
+    f = createFont("Arial",16)
+
+def draw():
+    global f
+    background(255)
+    textFont(f,16)            
+    fill(0)                       
+    text("Hello Strings!",10,100)
+</pre>
+<p>
+Fonts can also be created using "Tools" --> "Create Font."  This will create and place a VLW font file in your data directory which you can load into a PFont object using <a href="http://py.processing.org/reference/loadFont.html">loadFont()</a>.
+</p>
+<pre>
+f = loadFont("ArialMT-16.vlw")
+</pre>
+
+<h3>Animating Text</h3>
+
+<p>Let's look at two more useful Processing functions related to displaying text:
+</p><p>
+<a href="http://py.processing.org/reference/textAlign.html">textAlign()</a> -- specifies RIGHT, LEFT or CENTER alignment for text.
+</p>
+<pre>
+
+<p><img src="imgs/textalign.jpg"></p>
+
+<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-2/"><b>Example Text Align</b></a>
+def setup():
+    global f
+    size(400,200)
+    f = createFont("Arial",16,True)
+
+def draw():
+    global f
+    background(255)
+
+    stroke(175)
+    line(width/2,0,width/2,height)
+
+    textFont(f)       
+    fill(0)
+
+    textAlign(CENTER)
+    text("This text is centered.",width/2,60) 
+
+    textAlign(LEFT)
+    text("This text is left aligned.",width/2,100)
+
+    textAlign(RIGHT)
+    text("This text is right aligned.",width/2,140)
+</pre>
+<p>
+<a href="http://py.processing.org/reference/textWidth.html">textWidth()</a> -- Calculates and returns the width of any character or text string.
+</p><p>
+Let's say we want to create a news ticker, where text scrolls across the bottom of the screen from left to right. When the news headline leaves the window, it reappears on the right hand side and scrolls again. If we know the x location of the beginning of the text and we know the width of that text, we can determine when it is no longer in view. textWidth() gives us that width.
+</p><p>
+To start, we declare headline, font, and x location variables, initializing them in setup().
+</p>
+<pre>
+headline = "New study shows computer programming lowers cholesterol."
+
+def setup():
+  global f, x
+  f = createFont("Arial",16,true)  # Loading font
+  x = width # initializing headline off-screen to the right
+</pre>
+<p>
+In draw(), we display the text at the appropriate location.
+</p>
+<pre>
+# Display headline at x  location
+textFont(f,16)     
+textAlign(LEFT)
+text(headline,x,180)
+</pre>
+<p>
+We change x by a speed value (in this case a negative number so that the text moves to the left.)
+</p>
+<pre>
+# Decrement x
+x = x - 3
+</pre>
+<p>
+Now comes more difficult part. It was easy to test when a circle reached the left side of the screen. We would simply ask: is x less than 0?  With text, however, since it is left-aligned, when x equals zero, it is still viewable on screen.   Instead, the text will be invisible when x is less than 0 minus the width of the text (See figure below). When that is the case, we reset x back to the right-hand side of the window, i.e. width.
+</p>
+<img src="imgs/textwidth.jpg">
+
+<pre>
+# If x is less than the negative width, then it is completely off the screen
+w = textWidth(headline)
+if (x &lt; -w):
+  x = width
+</pre>
+<p>
+Here's the full example that displays a different headline each time the previous headline leaves the screen. The headlines are stored in a list of strings.
+</p>
+<pre>
+<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-3/"><b>Example Scrolling Headlines</b></a>
+# A list of news headlines
+headlines = [ "Processing downloads break downloading record.", 
+              "New study shows computer programming lowers cholesterol."]
+
+def setup():
+    global f, x, index
+    size(400,200)
+    f = createFont("Arial",16,True)
+    # Initialize headline offscreen to the right 
+    x = width 
+    index = 0
+
+def draw():
+    global f, x, index, headlines
+    background(255)
+    fill(0)
+
+    # Display headline at x  location
+    textFont(f,16)       
+    textAlign(LEFT)
+    text(headlines[index],x,180)
+
+    # Decrement x
+    x = x - 3
+
+    # If x is less than the negative width, 
+    # then it is off the screen
+    w = textWidth(headlines[index])
+    if (x &lt; -w):
+      x = width 
+      index = (index + 1) % len(headlines)
+
+</pre>
+<p>
+In addition to textAlign() and textWidth(), Processing also offers the functions <a href="http://py.processing.org/reference/textLeading.html">textLeading()</a>, <a href="http://py.processing.org/reference/textMode.html">textMode()</a>, <a href="http://py.processing.org/reference/textSize.html">textSize()</a> for additional display functionality.  
+</p>
+
+<h3>Rotating text</h3>
+
+<p>Translation and rotation can also be applied to text. For example, to rotate text around its center, translate to an origin point and use textAlign(CENTER) before displaying the text.
+</p>
+<pre>
+<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-5-rotating-text/"><b>Example: Rotating Text</b></a>
+message = "this text is spinning"
+def setup():
+    global f, theta
+    size(200, 200)
+    f = createFont("Arial",20,True)
+    theta = 0
+
+def draw():
+    global message, f, theta
+    background(255)
+    fill(0)
+    textFont(f)                  # Set the font
+    translate(width/2,height/2)  # Translate to the center
+    rotate(theta)                # Rotate by theta
+    textAlign(CENTER)            
+    text(message,0,0)            
+    theta += 0.05                # Increase rotation
+</pre>
+
+<h3>Displaying text character by character</h3>
+<p>
+In certain graphics applications, displaying text with each character rendered individually is required. For example, if each character needs to move or be colored independently then simply saying</p>
+<pre>
+text("a bunch of letters",0,0)
+</pre>
+<p>
+will not do.
+</p><p>
+The solution is to loop through a string, displaying each character one at a time.
+</p><p>
+Let's start by looking at an example that displays the text all at once.
+</p>
+<pre>
+message = "Each character is not written individually."
+
+def setup():
+    global f
+    size(400, 200)
+    f = createFont("Arial",20,True)
+
+def draw(): 
+    global f, message
+    background(255)
+    fill(0)
+    textFont(f)         
+    # Displaying a block of text all at once using text().  
+    text(message,10,height/2)
+
+</pre>
+<p>
+We can rewrite the code to display each character in loop, using the <a href="http://py.processing.org/reference/indexbrackets.html">[] (square brackets / get item)</a> operator.
+</p>
+<pre>
+message = "Each character is written individually."
+
+# The first character is at pixel 10.
+x = 10
+for i in xrange(len(message)):
+  # Each character is displayed one at a time with the charAt() function.
+  text(message[i],x,height/2)
+  # All characters are spaced 10 pixels apart.
+  x += 10 
+</pre>
+<p>
+Calling the <a href="http://py.processing.org/reference/text.html">text()</a> function for each character will allow us more flexibility (for coloring, sizing, and placing characters within one string individually). The above code has a pretty major flaw, however -- the x location is increased by 10 pixels for each character.  Although this is approximately correct, because each character is not exactly ten pixels wide, the spacing is off.
+</p><p>
+The proper spacing can be achieved using the <a href="http://py.processing.org/reference/textWidth.html">textWidth()</a> function as demonstrated in the code below.  Note how this example achieves the proper spacing even with each character being a random size!
+</p><p>
+<img src="imgs/charbychar.jpg" >
+</p>
+<pre>
+message = "Each character is written individually."
+
+def setup():
+    global f
+    size(400, 150)
+    f = createFont("Arial",20,True)
+
+def draw(): 
+    global f, message
+    background(255)
+    fill(0)
+    textFont(f)         
+    x = 10
+    for i in xrange(len(message)):
+        textSize(random(12,36))
+        text(message[i],x,height/2);
+
+        # textWidth() spaces the characters out properly.
+        x += textWidth(message[i]) 
+    noLoop()
+</pre>
+<p>
+This "letter by letter" methodology can also be applied to a sketch where characters from a string move independently of one another. The following example uses object-oriented design to make each character from the original string a Letter object, allowing it to both be a displayed in its proper location as well as move about the screen individually.  
+</p>
+<pre>
+<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-6/"><b>Example Text breaking up</b></a>
+message = "click mouse to shake it up"
+
+def setup():
+    global f, message, letters
+    size(260, 200)
+    # Load the font
+    f = createFont("Arial",20,True)
+    textFont(f)
+  
+    # Create a list the same size as the string of all 0's 
+    letters = [0] * len(message)
+    # Initialize Letters at the correct x location
+    x = 16
+    for i in xrange(len(message)):
+        letters[i] = Letter(x,100,message[i]) 
+        x += textWidth(message[i])
+
+def draw():
+    global f, letters
+    background(255)
+    for i in xrange(len(letters)):
+        # Display all letters
+        letters[i].display()
+        
+        # If the mouse is pressed the letters shake
+        # If not, they return to their original location
+        if (mousePressed):
+            letters[i].shake()
+        else:
+            letters[i].home()
+
+
+
+# A class to describe a single Letter
+class Letter():
+    def __init__(self, x, y, letter):
+        self.homex = self.x = x
+        self.homey = self.y = y
+        self.letter = letter
+
+    # Display the Letter
+    def display(self):
+        fill(0)
+        textAlign(LEFT)
+        text(self.letter, self.x, self.y)
+
+    # Move the letter randomly
+    def shake(self):
+        self.x += random(-2,2)
+        self.y += random(-2,2)
+
+    # Return the letter home
+    def home(self):
+        self.x = self.homex
+        self.y = self.homey
+
+</pre>
+<p>
+The character by character method also allows us to display text along a curve. Before we move on to letters, let's first look at how we would draw a series of boxes along a curve. This example makes heavy use of <a href="http://www.processing.org/learning/trig/">Trignometry</a>.
+</p>
+<pre>
+<p>
+<img src="imgs/boxes.jpg">
+</p>
+<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-7/"><b>Example Boxes along a curve</b></a>
+# The radius of a circle
+r = 100.0
+# The width and height of the boxes
+w = 40.0
+h = 40.0
+
+def setup():
+    size(320, 320)
+    smooth()
+
+def draw():
+    global r, w, h
+    background(255)
+    
+    # Start in the center and draw the circle
+    translate(width / 2, height / 2)
+    noFill()
+    stroke(0)
+    # Our curve is a circle with radius r in the center of the window.
+    ellipse(0, 0, r*2, r*2)
+
+    # 10 boxes along the curve
+    totalBoxes = 10
+    # We must keep track of our position along the curve
+    arclength = 0.0
+    
+    # For every box
+    for i in xrange(totalBoxes):
+        # Each box is centered so we move half the width
+        arclength += w/2
+        # Angle in radians is the arclength divided by the radius
+        theta = arclength / r    
+        
+        pushMatrix()
+        # Polar to cartesian coordinate conversion
+        translate(r*cos(theta), r*sin(theta))
+        # Rotate the box
+        rotate(theta)
+        # Display the box
+        fill(0,100)
+        rectMode(CENTER)
+        rect(0,0,w,h)
+        popMatrix()
+        # Move halfway again
+        arclength += w/2
+</pre>
+<p>
+What we need to do is replace each box with a character from a String that fits inside the box. And since characters all do not have the same width, instead of using a variable "w" that stays constant, each box will have a variable width along the curve according to the textWidth() function. 
+</p><p>
+<img src="imgs/textcurve.jpg" >
+</p>
+<pre>
+<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-8/"><b>Example Characters along a curve</b></a>
+# The message to be displayed
+message = "text along a curve"
+
+# The radius of a circle
+r = 100
+
+def setup():
+    global f
+    size(320, 320)
+    f = createFont("Georgia",40,True)
+    textFont(f)
+    # The text must be centered!
+    textAlign(CENTER)
+    smooth()
+
+
+def draw():
+    global r, f
+    background(255)
+
+    # Start in the center and draw the circle
+    translate(width / 2, height / 2)
+    noFill()
+    stroke(0)
+    ellipse(0, 0, r*2, r*2)
+
+    # We must keep track of our position along the curve
+    arclength = 0
+
+    # For every box
+    for i in xrange(len(message)):
+
+        # Instead of a constant width, we check the width of each character.
+        currentChar = message[i]
+        w = textWidth(currentChar)
+
+        # Each box is centered so we move half the width
+        arclength += w/2
+        # Angle in radians is the arclength divided by the radius
+        # Starting on the left side of the circle by adding PI
+        theta = PI + arclength / r   
+
+        pushMatrix();
+        # Polar to cartesian coordinate conversion
+        translate(r*cos(theta), r*sin(theta))
+        # Rotate the box
+        rotate(theta+PI/2)   # rotation is offset by 90 degrees
+        # Display the character
+        fill(0)
+        text(currentChar,0,0)
+        popMatrix()
+        # Move halfway again
+        arclength += w/2
+</pre>
+<p>
+<i>Special thanks to <a href="http://ariel.chronotext.org/">Ariel Malka</a> for his advice on this last curved text example.</i>
+</p>
+	<p>&nbsp;</p>
+
+        <p class="license">This tutorial is for Processing's Python Mode.
+        If you see any errors or have comments, please <a href=
+        "https://github.com/processing/processing-docs/issues?state=open">
+        let us know</a>. This tutorial is adapted from the book, <a href=
+        "http://www.processing.org/learning/books/#shiffman">Learning
+        Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann
+        Publishers, Copyright &copy; 2008 Elsevier Inc. All rights
+        reserved. </p>
+
+</td>
+	</tr>
+  </table>
+</p>
