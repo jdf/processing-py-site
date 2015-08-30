@@ -1246,3 +1246,15 @@ ul.nostyle { margin: 0; padding: 0; list-style: none outside; }
 */
 
 .navBar a.bug { color: red; }
+
+.butterbar {
+	font-size: 120%;
+	line-height: 135%;
+  padding: 1em;
+  background: #FFFFB7;
+  border: 1px solid #BFBA26;
+
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
