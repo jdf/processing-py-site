@@ -324,23 +324,28 @@ def make_convert_hypertext(names_dict):
     The function is used directly from jinja.
     """
     def convert_hypertext(element, _toplevel=True):
+        if not element:
+            return ''
+            
         if _toplevel:
             element = copy.deepcopy(element)
-            text = element.text or ''
+            text = element.text if hasattr(element, 'text') and element.text else ''
 
-        if element.tag == 'ref':
+        if hasattr(element, 'tag') and element.tag == 'ref':
             element.tag = 'a'
             name = names_dict[target] # Look up the proper name for this page in the names dictionary
             element.attib['href'] = create_ref_link(target)
             element.text = name
-        elif element.tag == 'c':
+        elif hasattr(element, 'tag') and element.tag == 'c':
             element.tag = 'kbd'
 
         for child in element:
             convert_hypertext(child, _toplevel=False)
             if _toplevel:
                 # We don't just do this at the top level because we need to skip the top-level tags
-                text += lxml.html.tostring(child)
+                s = lxml.html.tostring(child)
+                if s:
+                    text += s
 
         if _toplevel:
             return text
@@ -658,7 +663,7 @@ def bootstrap(force, dryrun, update):
             out, err = process.communicate()
             print(out, end='')
             print(err, end='')
-            if '1.7' not in out and '1.7' not in err:
+            if '1.8' not in out and '1.8' not in err:
                 print_error('Please install an oracle jdk 1.7')
                 sys.exit(1)
 
