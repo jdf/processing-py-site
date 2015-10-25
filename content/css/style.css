@@ -70,6 +70,7 @@ body {
 	-webkit-text-size-adjust: none;
 	
 	font-size			: 100%; 
+/*	font-size           : 0.79em;*/
 	font-weight			: normal;
 	line-height			: 1.5em;
 	color				: #252525;
@@ -300,7 +301,7 @@ h4 { font-size			: 1.5em; 	}
 h5 { font-size			: 1.25em; 	}
 h6 { font-size			: 1em; 		}
 
-p { font-size			: 1em; 		}
+p { font-size			: 0.79em;   }
 
 pre {  
 	font-family			: monaco, "Courier New", Courier, monospace; 
@@ -573,8 +574,10 @@ p.exhibition-nav { margin-top: 20px; margin-bottom: 10px; }
 	line-height			: normal; 
 }
 pre { 
-	margin-bottom: 30px;
-	margin-top: 0;
+	margin-bottom : 30px;
+	margin-top    : 0;
+	font-size     : .79em;
+	width         : 678px;  
 }
 tr.name-row { height: 60px; }
 td p { margin-top: 0; }

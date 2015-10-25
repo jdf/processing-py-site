@@ -5,5 +5,12 @@
 <tutorial>overview</tutorial>
 <tutorial>drawing</tutorial>
 <tutorial>color</tutorial>
+<tutorial>interactivity</tutorial>
 <tutorial>objects</tutorial>
+<tutorial>2dlists</tutorial>
+<tutorial>pixels</tutorial>
+<tutorial>text</tutorial>
+<tutorial>transform2d</tutorial>
+<tutorial>p3d</tutorial>
+<tutorial>anatomy</tutorial>
 </root>
