@@ -570,8 +570,8 @@ def build_examples(env):
     print_success('success!')
 
 def build_cover(env):
-    print("building cover")
-    cover_template = env.get_template('cover.jinja')
+    print("building index.html")
+    cover_template = env.get_template('index.jinja')
     with open(os.path.join('generated', 'index.html'), 'w') as tfile:
         tfile.write(clean_html(cover_template.render()))
     print_success('success!')
@@ -664,7 +664,7 @@ def bootstrap(force, dryrun, update):
             print(out, end='')
             print(err, end='')
             if '1.8' not in out and '1.8' not in err:
-                print_error('Please install an oracle jdk 1.7')
+                print_error('Please install an oracle jdk 1.8')
                 sys.exit(1)
 
     print_success('All necessary commands supported!')
@@ -682,7 +682,7 @@ def bootstrap(force, dryrun, update):
 
     # (repo, url, tag)
     git_repos = [
-            ('processing', 'https://github.com/processing/processing.git', 'processing-0227-2.2.1'),
+            ('processing', 'https://github.com/processing/processing.git', None),
             ('processing-video', 'https://github.com/processing/processing-video.git', None),
             ('processing.py', 'https://github.com/jdf/processing.py.git', None)
             ]
