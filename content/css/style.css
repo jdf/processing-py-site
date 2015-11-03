@@ -149,8 +149,8 @@ a.large-link:before {
 
 #header .processing-logo {
     display: block;
-	width: 206px;
-	height: 38px;
+	width: 231px;
+	height: 36px;
 	margin: 20px 0 0 30px;
 	background: transparent url(../img/processing-logo.png) center center no-repeat;
 	background-image: -webkit-linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
