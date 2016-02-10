@@ -153,6 +153,7 @@ def draw():
   display()
 
 def move():
+  global x
   x = x + speed
   if x &gt; width:
           x = 0
@@ -332,7 +333,7 @@ def display(self):
     20, 10)
 
 def drive(self):
-  self.xpos = self.xspeed
+  self.xpos += self.xspeed
   if self.xpos &gt; width:
     self.xpos = 0
 </pre>
