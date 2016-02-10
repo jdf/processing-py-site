@@ -26,9 +26,12 @@ c = a + b
 f = 0
 for i in range(100000):
     f = f + 0.0001  # Bad idea! See below.
+
 for i in range(100000):
-    # The variable 'f' will work better here, less affected by rounding
-    f = i / 1000.0  # Count by thousandths
+    # The variable 'f' will work better here,
+    # less affected by rounding
+    # Count by thousandths
+    f = i / 1000.0  
 ]]></code>
 </example>
 
