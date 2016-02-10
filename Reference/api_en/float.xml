@@ -10,9 +10,14 @@
 
 <example>
 <code><![CDATA[
-a = 1.5387 # Declare variable 'a' and assign it the value 1.5387
-b = -2.984 # Declare variable 'b' and assign it the value -2.984
-c = a + b  # Declare variable 'c' and assign it the sum of 'a' and 'b'
+# Declare variable 'a' and assign it the value 1.5387
+a = 1.5387 
+
+# Declare variable 'b' and assign it the value -2.984
+b = -2.984 
+
+# Declare variable 'c' and assign it the sum of 'a' and 'b'
+c = a + b  
 ]]></code>
 </example>
 
