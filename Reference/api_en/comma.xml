@@ -11,11 +11,15 @@
 <example>
 <image />
 <code><![CDATA[
-# Comma used to separate a list of variable declarations
+# Comma used to separate like in various cases:
+
+# 1. a list of variable declarations
 a, b, c = 20, 30, 80
-# Comma used to separate a list of values
+
+# 2.a list of values
 d = [20, 60, 80]
-# Comma used to separate a list of parameters passed to a function
+
+# 3.a list of parameters passed to a function
 line(a, b, c, b)
 line(d[0], d[1], d[2], d[1])
 ]]></code>
