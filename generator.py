@@ -102,6 +102,10 @@ class ReferenceItem:
         if xml.find('subcategory') is not None:
             self.subcategory = self.get_element_text(xml.find('subcategory'))
 
+        self.usage = None
+        if xml.find('usage') is not None:
+            self.usage = self.get_element_text(xml.find('usage'))
+
         # We store plain xml-elements for some children so that we can use convert_hypertext on them at generation time.
         # This is necessary because all ReferenceItems have to be parsed before links can be resolved.
         self.examples = []
