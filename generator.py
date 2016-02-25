@@ -542,7 +542,7 @@ def build_tutorials(env):
         tutorial_data = etree.parse(os.path.join(tutorials_dir, tutorial['folder'], 'tutorial.xml'))
         tutorial['image'] = os.path.join(tutorial['folder'], 'imgs', tutorial_data.find('image').text)
         tutorial['title'] = tutorial_data.find('title').text
-        tutorial['author']=tutorial_data.find('author').text
+        tutorial['author'] = tutorial_data.find('author').text
         tutorial['blurb'] = tutorial_data.find('blurb')
         # I want to use convert_hypertext on the examples so they can use things like 'ref';
         # we can use lxml.html to parse the html into an element-tree!
