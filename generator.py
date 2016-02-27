@@ -106,16 +106,7 @@ class ReferenceItem:
         if xml.find('usage') is not None:
             self.usage = self.get_element_text(xml.find('usage'))
 
-        
-        self.parameter = None
-        if xml.find('parameter') is not None:
-            self.parameter = self.get_element_text(xml.find('parameter'))
-
-
-        self.related = None
-        if xml.find('related') is not None:
-            self.parameter = self.get_element_text(xml.find('related'))
-    
+                  
         # We store plain xml-elements for some children so that we can use convert_hypertext on them at generation time.
         # This is necessary because all ReferenceItems have to be parsed before links can be resolved.
         self.examples = []
