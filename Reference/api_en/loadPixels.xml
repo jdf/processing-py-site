@@ -11,7 +11,7 @@
 <example>
 <image />
 <code><![CDATA[
-halfImage = width*height/2
+halfImage = width * height / 2
 myImage = loadImage("apples.jpg")
 image(myImage, 0, 0)
 loadPixels()
