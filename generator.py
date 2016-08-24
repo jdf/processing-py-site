@@ -15,14 +15,9 @@ import copy
 import cgi
 import time, datetime
 
-bootstrapped = True
-
-try:
-    import jinja2
-    import lxml.html
-    from lxml import etree # We need to use lxml because it can handle CDATA tags
-except:
-    bootstrapped = False
+import jinja2
+import lxml.html
+from lxml import etree # We need to use lxml because it can handle CDATA tags
 
 src_dir='.'
 target_dir=os.path.join(src_dir, 'generated/')
@@ -152,29 +147,15 @@ class JythonImageProcess:
     running_re = re.compile(r'^:RUNNING:(.+)$')
     success_re = re.compile(r'^:SUCCESS:$')
     failure_re = re.compile(r'^:FAILURE:$')
-     
-    @staticmethod
-    def make_jython_command(processing_py_dir):
-        dist_dir = os.path.join(processing_py_dir, 'dist')
-        if not os.path.exists(dist_dir):
-           raise IOError("{} does not exist. Please bootstrap.".format(dist_dir))
-        
-        system_string = check_p5py_platform()
-
-        # Find most-recent processing.py distribution folder for current platform
-        platform_dist_dir = sorted(filter(lambda f: f.endswith(system_string), os.listdir(dist_dir)))[0]
-        platform_dist_dir = os.path.join(dist_dir, platform_dist_dir)
-        javabin = os.path.join(platform_dist_dir, 'jre', 'bin', 'java')
-        jars = filter(lambda f: f.endswith('.jar'), os.listdir(platform_dist_dir))
-        classpath = ''
-        for jar in jars:
-            classpath += os.path.join(platform_dist_dir, jar) + ':'
-        classpath = classpath[:-1]
-        return [javabin, '-cp', classpath, 'org.python.util.jython'] 
     
     @staticmethod
-    def create_args(p5py_dir, jython_dir, workitems):
-        command = JythonImageProcess.make_jython_command(p5py_dir)
+    def make_jython_command(processing_py_jar="./processing-py.jar",
+            javabin="java"):
+        return [javabin, '-cp', processing_py_jar, 'org.python.util.jython'] 
+    
+    @staticmethod
+    def create_args(processing_py_jar, jython_dir, workitems):
+        command = JythonImageProcess.make_jython_command(processing_py_jar)
         jython_script = os.path.join(jython_dir, 'generate_images.py')
         if not os.path.exists(jython_script):
             raise IOError("Can't find jython script to run...")
@@ -182,12 +163,12 @@ class JythonImageProcess:
         command += ['--todo'] + ['{}:{}:{}'.format(ex['name'], ex['scriptfile'], ex['imagefile']) for ex in workitems.itervalues()]
         return command
 
-    def __init__(self, p5py_dir, jython_dir, workitems):
+    def __init__(self, processing_py_jar, jython_dir, workitems):
         self.current = None
         self.generated = {}
         self.failed = {}
         self.workitems = workitems
-        args = JythonImageProcess.create_args(p5py_dir, jython_dir, workitems)
+        args = JythonImageProcess.create_args(processing_py_jar, jython_dir, workitems)
         print(args, file=sys.stderr)
         self.popen = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, bufsize=1) # line-buffered
         self.comthread = threading.Thread(target=self.consume_communication, args=())
@@ -237,7 +218,7 @@ save('{imagefile}')
 exit()
 '''
 
-def generate_images(items_dict, to_update, src_dir, p5py_dir, target_image_dir):
+def generate_images(items_dict, to_update, src_dir, processing_py_jar, target_image_dir):
     '''Generate images from examples and return the number of failures.'''
     workitems  = {} # Examples to run
     work_dir   = tempfile.mkdtemp(prefix='processing-py-site-build')
@@ -271,7 +252,7 @@ def generate_images(items_dict, to_update, src_dir, p5py_dir, target_image_dir):
     while workitems:
         if not process:
             print("Starting image process")
-            process = JythonImageProcess(p5py_dir, jython_dir, workitems)
+            process = JythonImageProcess(processing_py_jar, jython_dir, workitems)
 
         if process.is_complete():
             if process.exited_well():
@@ -386,7 +367,7 @@ def build_reference(reference_dir, to_update, env, build_images):
         os.makedirs(target_img_dir)
 
     if build_images:
-        failures += generate_images(items_dict, to_update, src_dir, os.path.join(depends_dir, 'processing.py'), target_img_dir)
+        failures += generate_images(items_dict, to_update, src_dir, "./processing-py.jar", target_img_dir)
     find_images(items_dict, to_update, target_img_dir)
 
     reference_template = env.get_template("reference_item_template.jinja")
@@ -625,112 +606,6 @@ def test():
     webbrowser.open(address)
     httpd.serve_forever()
 
-def bootstrap(force, dryrun, update):
-    if force and os.path.exists(depends_dir):
-        shutil.rmtree(depends_dir)
-
-    if dryrun:
-        def call(cmd, *args, **kwargs):
-            print_warning(' '.join(cmd))
-            return True
-    else:
-        def call(cmd, *args, **kwargs):
-            print_warning(' '.join(cmd))
-            try:
-                return subprocess.call(cmd, *args, **kwargs) == 0 
-            except:
-                return False
-
-    print_header('Bootstrapping')
-    print_warning('(This may take a while.)')
-    print('Verifying command requirements...')
-    failures = []
-    verifiables = [
-            ['pip', '-V'],
-            ['ant', '-version'],
-            ['git', '--version']
-            ]
-    for cmd in verifiables:
-        if not call(cmd):
-            failures.append(cmd[0])
-
-    if failures:
-        print_error('Please install/make available the following commands for your platform:')
-        for failure in failures:
-            print_error('     ' + failure)
-        sys.exit(1)
-
-    for javabin in ['java', 'javac']:
-        print_warning(javabin + ' -version')
-        if not dryrun:
-            process = subprocess.Popen([javabin, '-version'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            out, err = process.communicate()
-            print(out, end='')
-            print(err, end='')
-            if '1.8' not in out and '1.8' not in err:
-                print_error('Please install an oracle jdk 1.8')
-                sys.exit(1)
-
-    print_success('All necessary commands supported!')
-    
-    print('Installing python requirements')
-    if not call(['pip', 'install', '-r', 'requirements.txt', '--user']):
-        print_error("Couldn't install! Oh no!")
-        sys.exit(1) 
-
-    if not os.path.exists(depends_dir):
-        print('Creating "{}"'.format(depends_dir))
-        os.makedirs(depends_dir)
-
-    print('Checking git dependencies...')
-
-    # (repo, url, tag)
-    git_repos = [
-            ('processing', 'https://github.com/processing/processing.git', None),
-            ('processing-video', 'https://github.com/processing/processing-video.git', None),
-            ('processing.py', 'https://github.com/jdf/processing.py.git', None)
-            ]
-
-    for repo, url, tag in git_repos:
-        repo_path = os.path.join(depends_dir, repo)
-        if not os.path.exists(repo_path):
-            print('Cloning {}...'.format(repo))
-            if tag:
-                cmd = ['git', 'clone', '--depth', '1', '--branch', tag, url, repo_path]
-            else:
-                cmd = ['git', 'clone', '--depth', '1', url, repo_path]
-            if not call(cmd):
-                print_error('Failed to clone! Oh no!')
-                sys.exit(1)
-
-    if update:
-        print('Updating dependency repos')
-        for repo, url, tag in git_repos: # All guaranteed to exist by now!
-            if tag:
-                continue # We've checked out a specific tag, no need to update
-            repo_path = os.path.join(depends_dir, repo)
-            if not call(['git', '--git-dir={}'.format(os.path.join(repo_path, '.git')), '--work-tree={}'.format(repo_path), 'pull']):
-                print_error('Failed to pull! Oh no!')
-                sys.exit(1)
-
-        print('Cleaning dependencies')
-        if not call(['ant', '-buildfile', os.path.join(depends_dir, 'processing.py', 'build.xml'), 'clean']):
-            print_error('Clean unsuccessful!')
-            sys.exit(1)
-    print('Building dependencies')
-
-    # Do these separately to avoid a bug in processing.py/build.xml
-    if not call(['ant', '-buildfile', os.path.join(depends_dir, 'processing.py', 'build.xml'), 'build-processing']):
-        print_error('Processing build unsuccessful!')
-        sys.exit(1)
-
-    if not call(['ant', '-buildfile', os.path.join(depends_dir, 'processing.py', 'build.xml'),
-        '-Dplatform={}'.format(check_p5py_platform()), 'make-distribution']):
-        print_error('Processing.py build unsuccessful!')
-        sys.exit(1)
-
-    print_success('Dependencies good to go!')
-
 # A flat name is the name of the file, sans .xml
 def get_flat_names_to_update(all, random, files):
 
@@ -777,10 +652,6 @@ if __name__ == '__main__':
     build_type.add_argument('--files', nargs='+', help='Build a specific set of files')
     build_parser.add_argument('--images', action='store_true', help="Run and save example sketches")
     test_parser = subparsers.add_parser('test', description='Test locally')
-    bootstrap_parser=subparsers.add_parser('bootstrap', description='Verify/download requirements of generator.py')
-    bootstrap_parser.add_argument('--force', action='store_true', help='Re-bootstrap even if everything is installed')
-    bootstrap_parser.add_argument('--update', action='store_true', help='Update dependencies')
-    bootstrap_parser.add_argument('--dryrun', action='store_true', help='Print actions but do not perform them')
     clean_parser = subparsers.add_parser('clean', description='Clean generated stuff')
     args = parser.parse_args()
 
@@ -791,14 +662,9 @@ if __name__ == '__main__':
 
     depends_dir = os.path.realpath('./depends')
 
-    if not bootstrapped and args.command != 'bootstrap':
-        print_error("Please bootstrap, I can't load libraries I need.")
-
     if args.command == 'build':
         build(build_images=args.images, to_update=get_flat_names_to_update(all=args.all, random=args.random, files=args.files))
     elif args.command == 'test':
         test()
-    elif args.command == 'bootstrap':
-        bootstrap(force=args.force, dryrun=args.dryrun, update=args.update)
     elif args.command == 'clean':
         shutil.rmtree(target_dir)
