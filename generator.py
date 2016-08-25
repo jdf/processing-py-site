@@ -142,89 +142,65 @@ class ReferenceItem:
             text = ''
         return text
 
-class JythonImageProcess:
-    '''Class to manage communicating with a remote process. We could eventually have multiple instances going at once.'''
-    running_re = re.compile(r'^:RUNNING:(.+)$')
-    success_re = re.compile(r'^:SUCCESS:$')
-    failure_re = re.compile(r'^:FAILURE:$')
-    
-    @staticmethod
-    def make_jython_command(processing_py_jar="./processing-py.jar",
-            javabin="java"):
-        return [javabin, '-cp', processing_py_jar, 'org.python.util.jython'] 
-    
-    @staticmethod
-    def create_args(processing_py_jar, jython_dir, workitems):
-        command = JythonImageProcess.make_jython_command(processing_py_jar)
-        jython_script = os.path.join(jython_dir, 'generate_images.py')
-        if not os.path.exists(jython_script):
-            raise IOError("Can't find jython script to run...")
-        command += [jython_script]
-        command += ['--todo'] + ['{}:{}:{}'.format(ex['name'], ex['scriptfile'], ex['imagefile']) for ex in workitems.itervalues()]
-        return command
-
-    def __init__(self, processing_py_jar, jython_dir, workitems):
-        self.current = None
-        self.generated = {}
-        self.failed = {}
-        self.workitems = workitems
-        args = JythonImageProcess.create_args(processing_py_jar, jython_dir, workitems)
-        print(args, file=sys.stderr)
-        self.popen = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, bufsize=1) # line-buffered
-        self.comthread = threading.Thread(target=self.consume_communication, args=())
-        self.comthread.start()
-
-    def consume_communication(self):
-        for line in iter(self.popen.stdout.readline, ''):
-            running = JythonImageProcess.running_re.match(line)
-            if running:
-                self.current = self.workitems[running.group(1)]
-                print("{} ... RUNNING: {}".format(self.desc, self.current['name']))
-                continue
-            success = JythonImageProcess.success_re.match(line)
-            if success:
-                print("{} ... SUCCESS: ".format(self.desc), end='')
-                print_success("{} -> {}".format(self.current['name'], self.current['imagefile']))
-                self.generated[self.current['name']] = self.current
-                self.current = None
-                continue
-            failure = JythonImageProcess.failure_re.match(line)
-            if failure:
-                print("{} ... FAILURE: ".format(self.desc), end='')
-                print_error(self.current['name'])
-                self.failed[self.current['name']] = self.current
-                self.current = None
-                continue
-            # Not a success or failure, must be debug messages
-            print("{} ... DEBUG: {}".format(self.desc, line), end='')
-
-    def is_complete(self):
-        return self.popen.poll() != None
-
-    def exited_well(self):
-        return self.popen.returncode == 0
-
-    def print_debug(self):
-        print("Debug from {}:".format(self.desc()))
-        for line in self.err_blob:
-            print("{}: {}".format(self.desc(), line))
-
-    @property
-    def desc(self):
-        return 'Image Process'
-
 export_image_postlude = r'''
 save('{imagefile}')
 exit()
 '''
 
-def generate_images(items_dict, to_update, src_dir, processing_py_jar, target_image_dir):
+# run an instance of generate_images.py, capturing and recording its output.
+# base_cmd should be a list-formatted command-line to run the
+# generate_images.py script, suitable for passing to subprocess.Popen;
+# workitems should be a list of dictionaries describing the scripts to be run.
+def image_worker(base_cmd, workitems):
+
+    workitems_cmdline_param = ['{}:{}:{}'.format(ex['name'], ex['scriptfile'], ex['imagefile']) \
+            for ex in workitems.itervalues()]
+    process = subprocess.Popen(base_cmd + workitems_cmdline_param, stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT, bufsize=1)
+    generated = {}
+    failed = {}
+    current = None
+
+    for line in iter(process.stdout.readline, ''):
+        m = re.search(r'^:RUNNING:(.+)$', line)
+        if m:
+            current = workitems[m.group(1)]
+            print("{} ... RUNNING: {}".format('Image process', current['name']))
+            continue
+        m = re.search(r'^:SUCCESS:$', line)
+        if m:
+            print("{} ... SUCCESS: ".format('Image process'), end='')
+            print_success("{} -> {}".format(current['name'], current['imagefile']))
+            generated[current['name']] = current
+            current = None
+            continue
+        m = re.search(r'^:FAILURE:$', line)
+        if m:
+            print("{} ... FAILURE: ".format('Image process'), end='')
+            print_error(current['name'])
+            failed[current['name']] = current
+            current = None
+            continue
+        # Not a success or failure, must be debug messages
+        print("{} ... DEBUG: {}".format('Image process', line), end='')
+
+    process.wait()
+    if process.returncode == 0:
+        print("Image process terminated successfully.")
+    else:
+        print_error("Image process terminated unsuccessfully.")
+        if current:
+            failed[current['name']] = current
+    return generated, failed
+
+def generate_images(items_dict, to_update, src_dir, processing_py_jar,
+        target_image_dir, javabin="java"):
     '''Generate images from examples and return the number of failures.'''
     workitems  = {} # Examples to run
     work_dir   = tempfile.mkdtemp(prefix='processing-py-site-build')
-    jython_dir = os.path.join(src_dir, 'jython')
-    if not os.path.exists(jython_dir):
-        raise IOError("{} doesn't exist; can't generate images.".format(jython_dir))
+    generate_img_script = os.path.join(src_dir, 'jython', 'generate_images.py')
+    if not os.path.exists(generate_img_script):
+        raise IOError("{} doesn't exist; can't generate images.".format(generate_img_script))
 
     for name in to_update:
         item = items_dict[name]
@@ -245,31 +221,12 @@ def generate_images(items_dict, to_update, src_dir, processing_py_jar, target_im
         print("Skipping image generation, everything up to date") 
         return 0
 
-    process = None
-    generated = {}
-    failed = {}
+    base_cmd = [javabin, "-cp", processing_py_jar, "org.python.util.jython",
+            generate_img_script, '--todo']
 
-    while workitems:
-        if not process:
-            print("Starting image process")
-            process = JythonImageProcess(processing_py_jar, jython_dir, workitems)
-
-        if process.is_complete():
-            if process.exited_well():
-                print("{} terminated successfully.".format(process.desc))
-            else:
-                print_error("{} terminated unsuccessfully.".format(process.desc))
-                if process.current:
-                    process.failed[process.current['name']] = process.current
-            for workitem in process.generated.itervalues():
-                generated[workitem['name']] = workitem
-                del workitems[workitem['name']]
-            for workitem in process.failed.itervalues():
-                failed[workitem['name']] = workitem
-                del workitems[workitem['name']]
-            process = None
-
-        time.sleep(0.2)
+    # TODO: use the multiprocessing module's Pool class to run multiple
+    # instances of this at once
+    generated, failed = image_worker(base_cmd, workitems) 
 
     print("Generated images:")
     for workitem in generated.itervalues():
