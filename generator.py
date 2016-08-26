@@ -64,25 +64,6 @@ def print_warning(text):
 def print_success(text):
     print('\033[32m{}\033[0m'.format(text))
 
-def check_p5py_platform():
-    import platform
-    system = platform.system()
-    if 'Darwin' in system:
-        system_string = 'macosx'
-    elif 'Linux' in system:
-        arch, _ = platform.architecture()
-        if '64' in arch:
-            system_string = 'linux64'
-        else:
-            system_string = 'linux32'
-    elif 'Java' in system:
-        raise RuntimeError('Please run generator.py with python rather than jython.')
-    elif 'Windows' in system:
-        raise RuntimeError('Building (examples) is not supported on Windows.')
-    else:
-        raise RuntimeError("Don't know what system we're on.")
-    return system_string
-
 class ReferenceItem:
     '''Represents a single page of reference information.'''
     def __init__(self, source_xml):
@@ -207,6 +188,11 @@ def image_worker(base_cmd, workitems):
         print_error("Image process terminated unsuccessfully.")
         if current:
             failed[current['name']] = current
+        # if the process just plain exited without doing anything,
+        # add a sentinel value so it "counts" as an error in the calling
+        # code (FIXME this is a hack)
+        if len(failed) == 0:
+            failed['PROBLEM'] = {'name': 'problem'}
     return generated, failed
 
 def generate_images(items_dict, to_update, src_dir, processing_py_jar,
@@ -551,7 +537,7 @@ def build(build_images, to_update):
     timedelta = datetime.datetime.now() - start
     print('Build took {} seconds'.format(timedelta.seconds + timedelta.microseconds/1000000))
     if failures:
-        print_error('{} failures'.format(failures))
+        print_error('{} failure(s)'.format(failures))
         sys.exit(1)
 
 def test():
