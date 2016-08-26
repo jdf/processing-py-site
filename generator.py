@@ -219,7 +219,6 @@ def generate_images(items_dict, to_update, src_dir, processing_py_jar,
         raise IOError("{} doesn't exist; can't generate images.".format(generate_img_script))
 
     for name in to_update:
-        print(name)
         item = items_dict[name]
         for number, example in enumerate(item.examples):
             if not example['run']:
