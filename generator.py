@@ -36,6 +36,22 @@ target_examples_dir  = target_dir + canon_examples_dir
 reference_dir='Reference/api_en/'
 tutorials_dir='Tutorials/'
 
+# files in the reference matching these regexps will not be built or included
+# in the index.
+to_skip_patterns = [
+    r'^PShape.*',
+    r'^PrintWriter.*',
+    r'^Table.*',
+    r'^XML.*',
+    r'^beginRecord$',
+    r'^endRecord$',
+    r'^loadXML$',
+    r'^parseXML$',
+    r'^loadTable$',
+    r'^saveXML$',
+    r'^saveTable$',
+]
+
 def print_header(text):
     print('=== \033[35m{}\033[0m ==='.format(text))
 
@@ -203,6 +219,7 @@ def generate_images(items_dict, to_update, src_dir, processing_py_jar,
         raise IOError("{} doesn't exist; can't generate images.".format(generate_img_script))
 
     for name in to_update:
+        print(name)
         item = items_dict[name]
         for number, example in enumerate(item.examples):
             if not example['run']:
@@ -349,20 +366,6 @@ def build_reference(reference_dir, to_update, env, build_images):
 def build_reference_index(reference_dir, env):
     import re
     print('Building reference index')
-    # skip putting some items in the reference, as needed
-    to_skip_patterns = [
-        r'^PShape.*',
-        r'^PrintWriter.*',
-        r'^Table.*',
-        r'^XML.*',
-        r'^beginRecord$',
-        r'^endRecord$',
-        r'^loadXML$',
-        r'^parseXML$',
-        r'^loadTable$',
-        r'^saveXML$',
-        r'^saveTable$',
-    ]
     reference_items = list()
     for filename in os.listdir(reference_dir):
         if not filename.endswith('.xml'): continue
@@ -564,7 +567,7 @@ def test():
     httpd.serve_forever()
 
 # A flat name is the name of the file, sans .xml
-def get_flat_names_to_update(all, random, files):
+def get_flat_names_to_update(all_, random, files):
 
     if files:
         # print_error() returns None, which is falsy, and so can be used to filter!
@@ -575,7 +578,7 @@ def get_flat_names_to_update(all, random, files):
     if random:
         return [map(lambda f: f[:-4], filter(lambda f: f.endswith('.xml'), os.listdir(reference_dir)))[0]]
 
-    if not all:
+    if not all_:
         def should_be_updated(f):
             src_f = os.path.join(reference_dir, f)
             if not f.endswith('.xml'):
@@ -589,6 +592,8 @@ def get_flat_names_to_update(all, random, files):
     else:
         files = filter(lambda f: f.endswith('.xml'), os.listdir(reference_dir))
 
+    # skip files that match patterns in to_skip_patterns
+    files = [f for f in files if not(any([re.search(patt, f) for patt in to_skip_patterns]))]
     files = map(lambda f: f[:-4], files)
     return files
 
@@ -620,7 +625,7 @@ if __name__ == '__main__':
     depends_dir = os.path.realpath('./depends')
 
     if args.command == 'build':
-        build(build_images=args.images, to_update=get_flat_names_to_update(all=args.all, random=args.random, files=args.files))
+        build(build_images=args.images, to_update=get_flat_names_to_update(all_=args.all, random=args.random, files=args.files))
     elif args.command == 'test':
         test()
     elif args.command == 'clean':
