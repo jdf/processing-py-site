@@ -43,13 +43,13 @@ to_skip_patterns = [
     r'^PrintWriter.*',
     r'^Table.*',
     r'^XML.*',
-    r'^beginRecord$',
-    r'^endRecord$',
+    r'^beginRecord',
+    r'^endRecord',
     r'^loadXML$',
     r'^parseXML$',
     r'^loadTable$',
     r'^saveXML$',
-    r'^saveTable$',
+    r'^saveTable',
 ]
 
 def print_header(text):

@@ -13,14 +13,14 @@
 <example>
 <image />
 <code><![CDATA[
-	# Map between positive values. 
-    value = 50
-    m = map(value, 0, width, 0, width/2)
-    # Draw white ellipse at original x location. 
-    ellipse(value, height *.25, 10, 10)
-    # Draw black ellipse at mapped x location
-    fill(0)
-    ellipse(m, height*.75, 10, 10)
+# Map between positive values. 
+value = 50
+m = map(value, 0, width, 0, width/2)
+# Draw white ellipse at original x location. 
+ellipse(value, height *.25, 10, 10)
+# Draw black ellipse at mapped x location
+fill(0)
+ellipse(m, height*.75, 10, 10)
 ]]></code>
 </example>
 

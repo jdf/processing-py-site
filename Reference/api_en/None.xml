@@ -11,9 +11,9 @@
 <example>
 <image />
 <code><![CDATA[
-	print True == None # Prints False
-	print False == None # Prints False 
-	print None == None # Prints True
+print True == None # Prints False
+print False == None # Prints False 
+print None == None # Prints True
 ]]></code>
 </example>
 
