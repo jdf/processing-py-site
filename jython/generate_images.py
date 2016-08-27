@@ -111,3 +111,4 @@ if __name__ == '__main__':
     except:
         debug_error()
         sys.exit(1)
+    sys.exit(0)

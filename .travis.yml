@@ -2,12 +2,15 @@ env: DISPLAY=:99.0 # from p5py
 
 language: java # say it's Java so we can use the jdk
 
-jdk: oraclejdk7
+jdk: oraclejdk8
 
 before_install:
     - sudo apt-get update
-    - sudo apt-get install python python-pip git
-    - ./generator.py bootstrap
+    - sudo apt-get install python python-pip git python-lxml
+    - curl -L -O http://py.processing.org/processing.py-linux64.tgz
+    - tar xfvz processing.py-linux64.tgz
+    - cp processing.py-*-linux64/*.jar .
+    - sudo pip install -r requirements.txt
     - "sh -e /etc/init.d/xvfb start" # from p5py
 
 script: ./generator.py build --all --images
