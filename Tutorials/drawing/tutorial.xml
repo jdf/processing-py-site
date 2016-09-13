@@ -2,6 +2,7 @@
 <root>
 <image>basics.jpg</image>
 <title>Coordinate System and Shapes</title>
+<author>Daniel Shiffman</author>
 <blurb>
     <p>Drawing simple shapes and using the coordinate system.</p>
     <p>Level: Beginner</p>
