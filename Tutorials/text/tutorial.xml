@@ -2,6 +2,7 @@
 <root>
 <image>text.jpg</image>
 <title>Strings and Drawing Text</title>
+<author>Daniel Shiffman</author>
 <blurb>
     <p>Learn how to use the string class and display text onscreen.</p>
     <p>Level: Intermediate</p>

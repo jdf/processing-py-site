@@ -2,6 +2,7 @@
 <root>
 <image>anatomy.jpg</image>
 <title>Anatomy of a Program</title>
+<author>J David Eisenberg</author>
 <blurb>
     <p> How do you analyze a problem and break it down into steps that the computer can do?</p>
     <p>Level: Advanced</p>
