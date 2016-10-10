@@ -296,8 +296,8 @@ library in a Processing.py sketch.</p>
 <p>Unfortunately, the way that the Processing.py command-line launcher is
 written makes it impossible to supply extra parameters to your script on the
 command line. As a workaround, you can use environment variables. For example,
-here's a sketch that reads the environment variables <code>SKETCH_WIDTH</code>
-and <code>SKETCH_HEIGHT</code> with Python's <code>os</code> library and uses
+here's a sketch that reads the environment variables <code>ELLIPSE_SIZE_X</code>
+and <code>ELLIPSE_SIZE_Y</code> with Python's <code>os</code> library and uses
 them to initialize the size of an ellipse in the sketch:</p>
 
 <pre><code>import os
@@ -343,14 +343,14 @@ sketches, you can create a sketch in the format the IDE expects &quot;by
 hand&quot; using the following steps:</p>
 
 <ul>
-<li>Rename the main Python file of your sketch to have a `.pyde`
+    <li>Rename the main Python file of your sketch to have a <tt>.pyde</tt>
 extension.</li>
-<li>Make sure that the name of the directory that the `.pyde` file is in
-  exactly matches the name of the `.pyde` file itself. (E.g., if your
-  sketch is called `foo.pyde`, the directory it&#39;s in should be called
-  `foo`).</li>
-<li>In the Processing IDE, use the `File &gt; Open` menu option and navigate to
-  the directory with your sketch. Select the `.pyde` file and click
+<li>Make sure that the name of the directory that the <tt>.pyde</tt> file is in
+exactly matches the name of the <tt>.pyde</tt> file itself. (E.g., if your
+sketch is called <tt>foo.pyde</tt>, the directory it&#39;s in should be called
+<tt>foo</tt>).</li>
+<li>In the Processing IDE, use the <tt>File &gt; Open</tt> menu option and navigate to
+the directory with your sketch. Select the <tt>.pyde</tt> file and click
   &quot;Open.&quot;</li>
 </ul>
 
