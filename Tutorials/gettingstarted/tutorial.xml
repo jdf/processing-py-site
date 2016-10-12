@@ -2,6 +2,7 @@
 <root>
 <image>gettingstarted.gif</image>
 <title>Getting Started</title>
+<author> Casey Reas and Ben Fry</author>
 <blurb>
     <p>Welcome to Processing! This tutorial covers the basics of writing Python code.</p>
     <p>Level: Beginner</p>

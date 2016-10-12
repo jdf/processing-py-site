@@ -2,6 +2,7 @@
 <root>
 <image>objects.jpg</image>
 <title>Objects</title>
+<author>Daniel Shiffman</author>
 <blurb>
     <p>The basics of object-oriented programming.</p>
     <p>Level: Beginner</p>

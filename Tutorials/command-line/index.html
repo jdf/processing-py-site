@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.12), see www.w3.org">
+
+  <title></title>
+</head>
+
+<body>
+  <h1>Processing.py on the command line</h1>
+  
+<table width="656">
+    <tr>
+      <td>
+        <p class="license">This tutorial is for Processing's Python Mode.
+        If you see any errors or have comments, please <a href=
+        "https://github.com/processing/processing-docs/issues?state=open">
+        let us know</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"> Creative Commons 
+        Attribution-NonCommercial-ShareAlike 4.0 International License.</a> </p>
+  
+
+	<p>&nbsp;</p>
+<p>Most of the material online about Processing.py is oriented to Python Mode,
+which allows you to write Processing sketches in the PDE using the Python
+programming language. But Processing.py also provides a way for you to write
+and launch sketches from the command line.</p>
+
+<p>Why use the command line? The PDE is great, of course, and many people use
+it for writing interactive applications from sketch to finished product. But
+there are some scenarios in which you might want to use the command line: for
+easier integration with collaborative version control tools; for more control
+over how your application gets packaged; for easier interoperability with other tools that
+live on the command-line; etc. Or maybe (like me) you just prefer working on
+the command line to working in a GUI. Whatever your reason, this tutorial will
+show you how to get up and running.</p>
+
+<p>These instructions are tested on OSX El Capitan, but should work on other
+platforms as well.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>In order to run Processing.py from the command line, you'll need to <a
+    href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">install
+    the Java JRE</a>. Ensure that you can run Java by typing the following on
+the command line:</p>
+
+<pre><code>$ java -version</code></pre>
+
+<p>You should see some output that looks like this:</p>
+
+<pre><code>java version &quot;1.8.0_92&quot;
+Java(TM) SE Runtime Environment (build 1.8.0_92-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.92-b14, mixed mode)</code></pre>
+
+<p>You'll also need to obtain the standalone version of Processing.py. Choose
+the appropriate link according to your platform:</p>
+
+<ul>
+<li><a href="http://py.processing.org/processing.py-macosx.tgz">Mac OS X</a></li>
+<li>Windows: <a href="http://py.processing.org/processing.py-windows64.zip">64-bit</a>, <a href="http://py.processing.org/processing.py-windows32.zip">32-bit</a></li>
+<li>Linux: <a href="http://py.processing.org/processing.py-linux64.tgz">64-bit</a> <a href="http://py.processing.org/processing.py-linux32.tgz">32-bit</a></li>
+</ul>
+
+<p>These files contain the Processing.py JAR file along with some example
+scripts and some utility programs for running Processing.py on its own, for
+various platforms. Decompress the file, making note of the location of the
+resulting directory.</p> <h2 id="the-basics">The basics</h2> <p>Once you've
+installed Java and decompressed the <code>processing-py.jar</code> file, put a
+copy of the <code>.jar</code> file in a new directory for your project. Now you
+can use your favorite text editor to write a Processing.py sketch. Here's a
+simple sketch you can use for testing. Copy it and paste as
+<code>mouse_follow.py</code>:</p>
+
+<pre><code>def setup():
+    size(400, 400)
+
+def draw():
+    background(255)
+    fill(0)
+    ellipse(mouseX, mouseY, 50, 50)</code></pre>
+
+<p>Save the file in the same directory as the <code>.jar</code>. Open a command
+line session (with, e.g., Terminal on OSX or Command Prompt in Windows) and
+<code>cd</code> to the directory with the sketch and the
+<code>processing-py.jar</code> file. Now, type the following:</p>
+
+<pre><code>java -jar processing-py.jar mouse_follow.py</code></pre>
+
+<p>The command above runs the Java interpreter (<code>java</code>), and tells
+the interpreter to run the code in the given JAR. The
+<code>processing-py.jar</code> file contains all of Processing.py along with a
+little bit of code that reads and executes the Python file specified on the
+command line.</p>
+
+<p>After typing the above and hitting return, you should see a window appear
+with the <code>mouse_follow.py</code> sketch up and running. Once you have that
+program working, you can run any Processing.py program on the command line
+using the same syntax. The <code>examples.py</code> folder contains a number of
+example scripts to get you started.</p>
+
+<h3 id="if-something-goes-wrong...">If something goes wrong...</h3>
+
+<p>If the window did not appear, then something went wrong. Make sure that you
+typed the command as specified, spaces and all (note that there's a space
+between <code>java</code> and <code>-jar</code> and that there's only one
+hyphen in the <code>-jar</code> parameter). If your error message says
+something like <code>'java' is not a recognized command</code> or <code>java:
+command not found</code>, then you may not have successfully installed Java
+(see previous section for further instructions).</p>
+
+<p>Any syntax errors or runtime exceptions in your program will be printed to
+the terminal.</p>
+
+<h3 id="java-command-line-parameters">Java command-line parameters</h3>
+
+<p>When you run <code>java</code> on the command line, it's up to you to know
+which parameters to pass to the interpreter. For most simple applications of
+command-line Processing.py, the <code>-jar</code> parameter is probably the
+only parameter you'll need, but for more advanced usage you might need to dig a
+bit deeper into the possibilities. You can see a full list of parameters by
+typing <code>java -help</code>.</p>
+
+<p>The most important parameters for you to know about right from the beginning
+are <code>-Xms</code> and <code>-Xmx</code>, which set the initial and maximum
+heap size, respectively. Roughly, the heap size is how much memory Java is
+allowed to use when running your program. If you're getting errors saying that
+you're out of memory, or if Java performance is poor when working with programs
+that load large objects into memory repeatedly, it might be worth overriding
+the defaults for these values by specifying them on the command line. <a
+    href="https://github.com/processing/processing/wiki/Troubleshooting#out-of-memory-errors-javalangoutofmemoryerror">All
+    of the advice given here in the Java Processing Wiki</a> also applies to
+Processing.py; <a
+    href="http://crunchify.com/jvm-tuning-heapsize-stacksize-garbage-collection-fundamental/">here's
+    another good starting point for adjusting these values</a>.</p>
+
+<p>For example, to run Processing.py requesting a starting heap size of 256
+megabytes and a maximum heap size of 1 gigabyte:</p>
+
+<pre><code>java -Xms256m -Xmx1024m -jar processing-py.jar </code></pre>
+
+<h2 id="included-helper-scripts">Included helper scripts</h2>
+
+<p>The distribution you downloaded comes with a number of &quot;helper
+scripts&quot; for running Processing.py on the command line. These are:</p>
+
+<ul>
+<li><code>processing-py.app</code>: A drag-and-drop application for Mac OS X. You can run this and then drag Processing.py programs from the Finder into the window to run them.</li>
+<li><code>processing-py.bat</code>: A Windows batch file that launches a Processing.py program with a splash screen and default Java parameters</li>
+<li><code>processing-py.sh</code>: A shell script (for Linux, OS X and Cygwin) that launches a Processing.py program with a splash screen and default Java parameters</li>
+</ul>
+
+<p>The benefit of using these programs is that you can launch them directly
+from your GUI's filesystem navigator without having to navigate to the
+appropriate directory, etc. All of these helper scripts, by default, launch a
+sketch called <code>workspace/example.py</code>; you can overwrite this script
+with your own code if you'd like.</p>
+
+<h2 id="loading-media-and-other-data">Loading media and other data</h2>
+
+<p>The Processing language supports several functions, like
+<code>loadImage()</code>, <code>loadFont()</code>, <code>loadShape()</code>,
+etc. that load data from the filesystem. Processing.py supports these functions
+as well! In order to use these functions, you need to put the data in a place
+where Processing can find it. If you're used to working in the Processing IDE,
+you've probably added external data to your sketch using the &quot;Add
+file...&quot; menu option. When you're using Processing.py directly from the
+command line, you can accomplish the same task by copying files directly.</p>
+
+<p>By default, functions like <code>loadImage()</code> in Processing.py will
+look for the given filename in a subdirectory named <code>data</code> located
+in the same directory as your sketch. If the file isn't found there, it will
+attempt to find the file in the same directory as the sketch itself. For
+example, the following statement:</p>
+
+<pre><code>loadImage(&quot;test.png&quot;)</code></pre>
+
+<p>... will first attempt to load <code>&lt;your sketch
+    dir&gt;/data/test.png</code>; if it's not found there, Processing will try
+to load <code>&lt;your sketch dir&gt;/test.png</code>.</p>
+
+<p>An additional wrinkle with Processing.py is that Python's built-in
+<code>open()</code> function has been modified to follow these same rules. So
+the following statement:</p>
+
+<pre><code>open(&quot;foo.txt&quot;).read()</code></pre>
+
+<p>... will attempt to open a file named <code>foo.txt</code> inside a
+<code>data</code> subdirectory as well. (If it can't find the file in the
+<code>data</code> subdirectory, it will default to Python's normal behavior of
+looking for the file in exactly the path specified.)</p>
+
+<p>Note: For compatibility purposes, and to avoid any unusual behavior when
+your sketch is bundled as a standalone library, we recommend keeping your
+external media in the <code>data</code> subdirectory.</p>
+
+<h2 id="external-libraries">External libraries</h2>
+
+<p>Just like Python Mode in the Processing IDE, Processing.py on the command
+line can make use of third-party libraries.</p>
+
+<h3 id="processing-libraries">Processing libraries</h3>
+
+<p>Processing (the vanilla Java version) has a <a
+    href="http://processing.org/reference/libraries/">rich library of
+    third-party contributed libraries</a>. The Processing IDE has a helpful
+&quot;Add Library&quot; feature that allows you to locate, download and use
+these libraries in your project using a GUI interface. Of course, on the
+command line, that option isn't available to you! So here's what you do:</p>
+
+<ul>
+<li>Make a subdirectory called 'libraries' in the same directory as your sketch file.</li>
+<li>Download the Processing library that you want to use. Depending on the library, it can sometimes be tricky to find the right file to download. <a href="https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library#manual-install">The Processing Wiki has good advice on how to identify the appropriate file and how to find the relevant files within that repository</a></li>
+<li>Extract the library's archive file (usually a ZIP file) and copy the resulting directory into the <code>libraries</code> subdirectory that you just created.</li>
+</ul>
+
+<p>If you're having trouble locating the right file to download for a
+particular library, there's a helpful alternative technique. Use the Processing
+IDE's &quot;Add Library&quot; feature to download and install the library for
+use in the IDE. Then find the folder where the IDE keeps the libraries you've
+downloaded by going to the IDE's Preferences panel and clicking the
+&quot;Browse&quot; button next to the &quot;Sketchook Location&quot; field.
+Take a look inside the <code>libraries</code> subdirectory and you'll find all
+of the Processing libraries that you've added to the IDE. To add any of these
+libraries to your Processing.py sketch, simply copy the library's entire
+directory Processing.py's <code>libraries</code> subdirectory.</p>
+
+<p>Once you've copied the files to the correct location, use Processing.py's <a
+    href="http://py.processing.org/reference/add_library.html"><code>add_library()</code></a>
+function to import the library, putting the name of the library as a string
+literal as the parameter to the function call.</p>
+
+<p>For example, to use the <a
+    href="https://processing.org/reference/libraries/sound/">Processing Sound
+    library</a>, download the ZIP file from <a
+    href="https://github.com/processing/processing-sound/releases/tag/latest">the
+    repository's &quot;releases&quot; page</a>. Unzipping the file should
+result in a directory called <code>sound</code>; copy this to the
+<code>libraries</code> subdirectory for your sketch. Once the files are in the
+right location, put this function call at the top of your sketch:</p>
+
+<pre><code>add_library(&quot;sound&quot;)</code></pre>
+
+<h3 id="python-code">Python code</h3>
+
+<p>Use the <code>import</code> keyword to use external Python modules in your
+sketch. For code that you've written, the <code>import</code> keyword works the
+same as it does in vanilla Python: <code>import foo</code> will first attempt
+to load the code in <code>foo.py</code> (or a package in a subdirectory named
+<code>foo</code>) in the same directory as the sketch, and then will attempt to
+load a module with that name from the standard library.</p>
+
+<p>It's important to note that Processing.py uses the pre-packaged Jython
+standard library, and (by default) can't see or use any of the Python libraries
+in your own system installation of Python. <a href="TK">See this tutorial on
+    using Python libraries in Processing.py</a> for more information. Because
+Processing.py is built with Jython, it might also be helpful <a
+    href="http://www.jython.org/jythonbook/en/1.0/ModulesPackages.html">to
+    consult Jython's documentation on modules and packages</a>.</p>
+
+<h3 id="other-java-libraries">Other Java libraries</h3>
+
+<p>Processing.py is built with Jython, which is built with Java, which means
+you can also regular Java libraries in your Processing.py sketches. (This is
+true whether you're using Python Mode in the IDE or Processing.py from the
+command line.) Just for starters, all of the <a
+    href="https://docs.oracle.com/javase/8/docs/api/">Java standard API</a> is
+available to you; here's a sample sketch that opens a <a
+    href="https://docs.oracle.com/javase/tutorial/uiswing/">Swing</a>
+window:</p>
+
+<pre><code>from javax.swing import JFrame
+
+def setup():
+    size(400, 400)
+    frame = JFrame(&quot;Simple Test&quot;, size=(200, 200))
+    frame.setVisible(True)
+
+def draw():
+    background(0)</code></pre>
+
+<p>Consult the <a
+    href="http://www.jython.org/jythonbook/en/1.0/ModulesPackages.html">Jython
+    Book's chapter on modules and packages</a> for more information.</p>
+
+<p>You can also use third-party Java libraries. The easiest way to do this is
+to download the library's JAR file and put it in the same directory as your
+Processing.py sketch. (The command-line launcher for Processing.py
+automatically adds whatever JARs it finds in the sketch's directory to Java's
+classpath.) A forthcoming tutorial will show a full example of using a Java
+library in a Processing.py sketch.</p>
+
+<h2 id="command-line-parameters-and-environment-variables">Command-line parameters and environment variables</h2>
+
+<p>Unfortunately, the way that the Processing.py command-line launcher is
+written makes it impossible to supply extra parameters to your script on the
+command line. As a workaround, you can use environment variables. For example,
+here's a sketch that reads the environment variables <code>ELLIPSE_SIZE_X</code>
+and <code>ELLIPSE_SIZE_Y</code> with Python's <code>os</code> library and uses
+them to initialize the size of an ellipse in the sketch:</p>
+
+<pre><code>import os
+ellipse_size_x = int(os.environ[&#39;ELLIPSE_SIZE_X&#39;])
+ellipse_size_y = int(os.environ[&#39;ELLIPSE_SIZE_Y&#39;])
+def setup():
+    size(400, 400)
+def draw():
+    background(0)
+    fill(255)
+    ellipse(width/2, height/2, ellipse_size_x, ellipse_size_y)</code></pre>
+
+<p>On the OS X or Linux command line, you can set the environment variables and
+run the sketch simultaneously by typing something like this (assuming you've
+put the code above in a file named <code>env_params.py</code>):</p>
+
+<pre><code>$ ELLIPSE_SIZE_X=100 ELLIPSE_SIZE_Y=150 java -jar processing-py.jar env_params.py</code></pre>
+
+<h2 id="moving-a-project-from-the-ide-to-the-command-line-and-vice-versa">Moving a project from the IDE to the command line (and vice versa)</h2>
+
+<p>You can run any sketch you create in the Processing IDE on the command line.
+To do this, you'll first need to find the directory on your computer where the
+sketch files are using the &quot;Show Sketch Folder&quot; option in the
+&quot;Sketch&quot; menu of the IDE. Copy the <code>processing-py.jar</code>
+file to this directory and then navigate to the directory on the command line.
+(In OS X, the easiest way to do this is by typing <code>cd</code> in the
+Terminal window, followed by a space, and then dragging the folder from the
+Finder to the Terminal window and then hitting &quot;Return.&quot;)</p>
+
+<p>After you've done this, run the Java interpreter as you would for any
+command-line Processing.py sketch. The filename to supply on the command line
+is the main <code>.pyde</code> file of the sketch. So, for example, if your
+sketch from the IDE is called <code>wonderful_python_sketch_yay</code> you
+might type the following to run the sketch from the command-line:</p>
+
+<pre><code>$ java -jar processing-py.jar wonderful_python_sketch_yay.pyde</code></pre>
+
+<p>If you have an existing Processing.py sketch that you wrote on the command
+line, it's possible to &quot;import&quot; it back into the Processing IDE. For
+short sketches, the easiest way to do this is probably to just copy and paste
+the source code into a new Processing IDE project. For more sophisticated
+sketches, you can create a sketch in the format the IDE expects &quot;by
+hand&quot; using the following steps:</p>
+
+<ul>
+    <li>Rename the main Python file of your sketch to have a <tt>.pyde</tt>
+extension.</li>
+<li>Make sure that the name of the directory that the <tt>.pyde</tt> file is in
+exactly matches the name of the <tt>.pyde</tt> file itself. (E.g., if your
+sketch is called <tt>foo.pyde</tt>, the directory it&#39;s in should be called
+<tt>foo</tt>).</li>
+<li>In the Processing IDE, use the <tt>File &gt; Open</tt> menu option and navigate to
+the directory with your sketch. Select the <tt>.pyde</tt> file and click
+  &quot;Open.&quot;</li>
+</ul>
+
+<h2 id="building-a-standalone-application">Building a standalone application</h2>
+
+<p>The command-line version of Processing.py has had, in the past, a feature to
+create a standalone application bundle. Unfortunately, as of this writing <a
+    href="https://github.com/jdf/processing.py/issues/211">this feature is
+    broken</a> on some platforms. For now, the easiest way to create a
+stand-alone application with a command-line Processing.py sketch is to import
+it into the Processing IDE (as outlined in the previous section) and use Python
+Mode's &quot;Export Application&quot; feature, which works just fine.</p>
+
+<p>&nbsp;</p>
+
+        <p class="license">This tutorial is for Processing's Python Mode.
+        If you see any errors or have comments, please <a href=
+        "https://github.com/processing/processing-docs/issues?state=open">
+        let us know</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"> Creative Commons 
+        Attribution-NonCommercial-ShareAlike 4.0 International License.</a> </p>
+
+</td>
+    </tr>
+  </table>

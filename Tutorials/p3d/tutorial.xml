@@ -2,8 +2,9 @@
 <root>
 <image>p3d.jpg</image>
 <title>P3D</title>
+<author>Daniel Shiffman</author>
 <blurb>
-    <p> Developing advanced ggraphics applications in Processing using P3D( (OpenGL) mode.</p>
+    <p>Developing advanced graphics applications in Processing using P3D (OpenGL) mode.</p>
     <p>Level: Advanced</p>
 </blurb>
 </root>

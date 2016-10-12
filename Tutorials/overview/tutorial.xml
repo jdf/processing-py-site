@@ -2,6 +2,7 @@
 <root>
 <image>overview.jpg</image>
 <title>Processing Overview</title>
+<author>Ben Fry and Casey Reas</author>
 <blurb>
     <p>A more detailed introduction to the different features of Processing.</p>
     <p>Level: Beginner</p>

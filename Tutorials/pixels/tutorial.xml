@@ -2,6 +2,7 @@
 <root>
 <image>pixels.jpg</image>
 <title>Images and Pixels</title>
+<author>Daniel Shiffman</author>
 <blurb>
     <p>How to load and display images as well as access their pixels.</p>
     <p>Level: Intermediate</p>

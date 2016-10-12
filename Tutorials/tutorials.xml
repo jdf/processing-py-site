@@ -13,4 +13,6 @@
 <tutorial>transform2d</tutorial>
 <tutorial>p3d</tutorial>
 <tutorial>anatomy</tutorial>
+<tutorial>command-line</tutorial>
+<tutorial>python-jython-java</tutorial>
 </root>

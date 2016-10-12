@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.12), see www.w3.org">
+
+  <title></title>
+</head>
+
+<body>
+  <h1>Python, Jython and Java</h1>
+
+<table width="656">
+    <tr>
+      <td>
+        <p class="license">This tutorial is for Processing's Python Mode.
+        If you see any errors or have comments, please <a href=
+        "https://github.com/processing/processing-docs/issues?state=open">
+        let us know</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"> Creative Commons 
+        Attribution-NonCommercial-ShareAlike 4.0 International License.</a> </p>
+
+    <p>Processing.py is based on the Java implementation of <a
+        href="http://www.processing.org/">Processing</a>. It uses making use of
+    <a href="http://www.jython.org/">Jython</a>, an implementation of Python
+    that runs on the Java Virtual Machine (JVM), to directly access the
+    underlying Java library. The benefit of this strategy is that your
+    Processing.py sketches can do pretty much anything regular Processing
+    sketches can do, and newer versions of Processing.py immediately benefit
+    from performance enhancements and new features that are added to the Java
+    implementation. When you're making sketches with Processing.py, you have
+    access to best of three different software platforms and ecosystems:
+    Python, Java, and Processing.</p>
+
+    <p>However, if you're already familar with any of these platforms, you may
+    find that some things work in unintuitive way, or fail to work at all. This
+    tutorial is designed to help you become literate about how Processing.py,
+    Processing, Python and Java all work together, so you can reason better
+    about how to diagnose problems and use the full potential of the
+    platform.</p>
+
+    <h2>Jython's limitations (and quirks)</h2>
+
+    <p>Jython is an implementation of Python that runs on the Java Virtual
+    Machine (JVM). Jython was initially developed as a way to write Python
+    programs that make use of existing Java libraries, frameworks and
+    infrastructure. Jython is designed to be as compatible as possible
+    with all Python programs, and is generally just as fast as <a
+        href="https://en.wikipedia.org/wiki/CPython">CPython</a> (the
+    "reference" implementation of Python, written in C) for most tasks.</p>
+
+    <p>However, Jython does have some significant limitations, especially if
+    you're used to working with CPython. For more details, see the <a
+        href="https://wiki.python.org/jython/JythonFaq">official Jython
+        FAQ</a>. But here's a rundown of the most important differences for
+    users of Processing.py.</p>
+
+    <h3>Python versions</h3>
+    
+    <p>The latest version of Jython implements Python 2.7. Python 2.7 is still
+    widely used, but Python 3 (which has a number of incompatibilities with
+    earlier versions) is gaining popularity. If you're new to Python, keep in
+    mind that some tutorials and example programs you find on the web will be
+    written in Python 3, not Python 2.7, and may require a bit of reworking to
+    make them functional in Processing.py.</p>
+
+    <h3>Python Libraries</h3>
+
+    <p>Jython supports almost all of the Python standard
+    library (i.e., the libraries that come with Python when you first install
+    it). One notable exception is <a
+        href="https://docs.python.org/2/library/sqlite3.html">sqlite3</a>
+    (although you can access SQLite databases using ODBC, and <a
+        href="http://bugs.jython.org/issue1682864">there's an open
+        ticket for sqlite3 support in the Jython bug tracker</a>. Jython does
+    *not* support third-party Python libraries that use extensions written in
+    C. This means that popular Python libraries like <a
+        href="http://www.numpy.org/">numpy</a>, <a
+        href="http://www.scipy.org/">scipy</a> and <a
+        href="http://scikit-learn.org/stable/">scikit-learn</a> <i>will not
+        work</i> in Jython (and, for this reason, will not work in
+    Processing.py).</p>
+    
+    <p>Unfortunately, there's no easy way to tell whether or not a
+    library uses a C extension (or has a dependency on a library with a C
+    extension) without attempting to install it, though there
+    are some libraries that ship with a pure-Python fallback if it's impossible
+    to compile the C extension.</p>
+
+    <h3>Python and Java don't always see eye to eye</h3>
+    
+    <p>Java is a statically-typed language, whereas Python is dynamically
+    typed. To make the two languages talk to each other, the implementors of
+    Jython had to bridge the gap. This can occasionally result in unexpected
+    problems when attempting to call Java code from Jython, or when attempting
+    to write Jython code that can be called into from Java code.</p>
+    
+    <p>One notable example is that classes in Jython are defined at
+    <em>runtime</em> (unlike pure Java classes, which are usually defined at
+    compile-time). This means that a number of features that are important for
+    interoperability with Processing libraries, like method introspection, <a
+        href="https://github.com/jdf/processing.py/issues/201">sometimes don't
+        work as expected</a>. The <a
+        href="http://www.jython.org/jythonbook/en/1.0/JythonAndJavaIntegration.html">Jython
+        and Java Integration chapter</a> from <a
+        href="http://www.jython.org/jythonbook/en/1.0/index.html">The Jython
+        Book</a> has a number of good tips and tricks.</p>
+
+    <h2>Gotchas for Python programmers</h2>
+
+    <p>One of the goals of Processing.py is to follow the standard Processing
+    API as closely as possible. This means that the functions you might call in
+    "vanilla" Processing (i.e., the Java implementation) have exactly the same
+    functionality in Processing.py.</p>
+
+    <h3>Conflicting names</h3>
+
+    <p>There are, however, a number of Processing
+    functions whose names conflict with existing built-in Python functions. To
+    cope with these cases, Processing.py implements special "wrapper" functions
+    invoke the appropriate underlying code based on the number of parameters
+    passed to the call. Here's a list of some of the affected functions:</p>
+
+    <ul>
+        <li><tt>filter()</tt>. In Processing, this function <a
+            href="https://processing.org/reference/filter_.html">applies a filter or
+            shader to the pixels in the current frame</a>. In Python, this is
+        <a href="https://docs.python.org/2/library/functions.html#filter">a
+            built-in function that constructs a list by evaluating a function
+            on each item of an existing list</a>. Processing.py checks the
+        types of the variables passed to the function at runtime and invokes the
+        Processing function if the parameters match the appropriate signature,
+        and the Python built-in otherwise.</li>
+        <li><tt>map()</tt>. In Processing, <a
+            href="https://processing.org/reference/map_.html">map()</a> is one of several functions
+        (along with <a
+            href="https://processing.org/reference/lerp_.html">lerp()</a>, <a
+            href="https://processing.org/reference/constrain_.html">constrain()</a>,
+        etc.) that help interpolate numerical values between ranges.
+        Processing.py's wrapper will invoke the Processing function if the number and type of
+        the arguments in the function call matches the signature, and invoke the
+        Python built-in <a
+            href="https://docs.python.org/2/library/functions.html#map">map()</a> otherwise.
+        <li><tt>set()</tt>. This Processing function <a
+            href="https://processing.org/reference/set_.html">sets the color of
+            a single pixel on the screen or draws an image</a>. In Python, <a
+            href="https://docs.python.org/2/library/functions.html#func-set">set()</a>
+        creates a new set object or converts an iterable to a set. Again,
+        Processing.py's wrapper function invokes either the Processing or
+        Python function based on the signature of the arguments passed in the
+        original call.</li>
+    </ul>
+
+    <p>Processing.py makes the core Processing functions available by setting
+    attributes of Jython's `__builtins__` object. If you're interested in the
+    technical details, <a
+        href="https://github.com/jdf/processing.py/blob/master/runtime/src/jycessing/core.py">the
+        built-ins are assigned in core.py</a>, and the "wrapper" functions are
+    implemented in <a
+        href="https://github.com/jdf/processing.py/blob/master/runtime/src/jycessing/PAppletJythonDriver.java">PAppletJythonDriver.java</a>.
+
+    <h3>Lists and arrays</h3>
+
+    <p>To make things easier on beginner programmers, vanilla Java Processing
+    includes a number of functions for easily manipulating arrays 
+    such as <tt>split()</tt>, <tt>splitTokens</tt>, <tt>append</tt>,
+    <tt>arrayCopy</tt>, <tt>reverse</tt>, etc.). For compatibility purposes,
+    Processing.py supports these functions, even though in most cases you would
+    want to use Python built-in data structures instead.</p>
+
+    <p>If you do end up using these functions, be aware that they return
+    Python <tt>array</tt> objects, not lists. (Jython internally represents
+    Java arrays as objects of type <tt>array</tt> from Python's <a
+        href="https://docs.python.org/2/library/array.html">array</a> module.)
+    For example, consider the following two lines of code:</p>
+
+    <pre>
+    print type(split("a,b,c,d", ",")) # Processing built-in, prints <type 'array.array'>
+    print type("a,b,c,d".split(",")) # Python string method, prints <type 'list'>
+    </pre>
+
+    <p>In most situations, arrays and lists are interchangeable, so you might not
+    even notice. But arrays and lists have subtly different functionality,
+    which might cause bugs in your program if you're not careful. For
+    example, the following code raises a TypeError:</p>
+
+    <pre>
+    x = split("a,b,c,d", ",")
+    x.append(20)
+    </pre>
+
+    <p>... because <tt>split()</tt> returns a strictly-typed array of Java
+    String objects, and you can't append an integer to such an array. Likewise,
+    lists and arrays don't compare element-wise, as illustrated by the
+    following example:</p>
+
+    <pre>
+    x = split("a,b,c,d", ",")
+    y = ["a", "b", "c", "d"]
+    print x == y # prints False
+    </pre>
+
+    <p>Always keep an eye on the types of your variables and make sure you know
+    what you're working with. In addition to the Processing functions mentioned
+    above, there may be third-party libraries that you use in your
+    Processing.py sketch that return array types as well. Fortunately, there's
+    an easy fix: use the Python built-in <tt>list()</tt> function to convert
+    the arrays into a list. For example:</p>
+
+    <pre>
+    x = list(split("a,b,c,d", ","))
+    y = ["a", "b", "c", "d"]
+    print x == y # prints True
+    </pre>
+
+    <p>Note, however, that most vanilla Java Processing function that normally
+    takes an array as a parameter will happily accept plain Python lists in
+    their stead, though they'll still return an array. So, for example:</p>
+
+    <pre>
+    print shorten([1, 2, 3, 4]) # prints array('i', [1, 2, 3])
+    </pre>
+
+    <h2>Gotchas for Java/Processing programmers</h2>
+
+    <p>For various reasons, Processing.py's implementation of Processing
+    functions differ in small ways from the implementation in vanilla Java
+    Processing. For the most part, these differences will be invisible to you
+    and the functions should "just work" as expected. Included below are a few
+    quirks that might come up.</p>
+
+    <ul>
+        <li>As noted in the previous section, Processing.py supports many
+        string and array manipulation functions from vanilla Java Processing.
+        But it's almost always a better idea to use Python built-in types and
+        their methods instead. (The official <a
+            href="https://docs.python.org/2.7/tutorial/index.html">Python
+            Tutorial</a> is a good place to start if you want to learn more
+        about Python lists, strings and other data structures.)</li>
+
+        <li>Processing.py does not support the <tt>loadTable()</tt> function.
+        Use the Python standard library <a
+            href="https://docs.python.org/2/library/csv.html">csv</a> module
+        instead. Likewise, use the <a
+            href="https://docs.python.org/2/library/json.html">json</a> module
+        from the Python standard library for loading, manipulating and saving
+        JSON data (instead of, e.g., vanilla Java Processing's
+        <tt>loadJSONObject()</tt>), and <a
+            href="https://docs.python.org/2/library/xml.etree.elementtree.html">elementtree</a>
+        for XML data (instead of <tt>loadXML()</tt>).</li>
+
+        <li>Processing.py does not support "web color notation" for specifying
+        colors. Instead, enclose the notation in a string literal and pass that
+        to the relevant function. (e.g., <tt>fill(#0000FF)</tt> is a syntax
+        error, but <tt>fill("#0000FF")</tt> works just fine).</li>
+    </ul>
+
+    <h2>Using Processing Libraries</h2>
+
+    <p>Most Processing libraries work with Processing.py out of the box. In
+    Python Mode in the Processing IDE, you can search for and add libraries to
+    your sketch using the "Add Tool..." dialog, just like you do with vanilla
+    Java Processing. Processing.py adds a global variable
+    <tt>this</tt> to your sketch automatically which you can pass to
+    third-party libraries that need a reference to the current sketch.</p>
+
+    <p>Some Processing libraries want you to define functions in your sketch with particular
+    names and signatures in your sketch as callbacks or event handlers. Right
+    now, these libraries won't work in Processing.py unless specific support has been
+    added. As of this writing, full or partial support exists for 
+    <a href="https://processing.org/reference/libraries/serial/index.html">Serial</a>,
+    <a
+        href="https://processing.org/reference/libraries/video/index.html">Video</a>,
+    <a href="https://processing.org/reference/libraries/net/index.html">Net</a>
+    and <a href="http://www.sojamo.de/libraries/oscp5/">oscP5</a>. If there's a
+    library that you'd like to use that isn't yet supported, <a
+        href="https://github.com/jdf/processing.py/issues">open an issue
+        here</a>.</p>
+
+    <h2>Further reading</h2>
+
+    <ul>
+        <li>The <a
+            href="https://github.com/jdf/processing.py#faq">Processing.py
+            FAQ</a> in the Github repository has more tips and tricks on how to
+        use Processing libraries with Processing.py.</li>
+        <li>The <a href="https://wiki.python.org/jython/JythonFaq">Jython
+            FAQ</a> has more in-depth answers for questions about compatibility
+        between Python, Jython and Java.</li>
+    </ul>
+
+</td>
+    </tr>
+  </table>
