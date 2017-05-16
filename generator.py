@@ -278,7 +278,7 @@ def make_convert_hypertext(names_dict):
     The function is used directly from jinja.
     """
     def convert_hypertext(element, _toplevel=True):
-        if not element:
+        if element is None:
             return ''
             
         if _toplevel:
