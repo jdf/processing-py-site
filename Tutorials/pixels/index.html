@@ -586,8 +586,8 @@ def draw():
     matrixsize = 3
     loadPixels()
     # Begin our loop for every pixel
-    for x in xrange(xend):
-        for y in xrange(yend):
+    for x in xrange(xstart,xend):
+        for y in xrange(ystart,yend):
             # Each pixel location (x,y) gets passed into a function called convolution() 
             # which returns a new color value to be displayed.
             c = convolution(x,y,matrix,matrixsize,img)
