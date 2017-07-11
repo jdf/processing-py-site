@@ -14,30 +14,6 @@ x Last Modified: 2013.10.16 09:28AM
 
 
 @font-face {
-	font-family: 'theSerifItalic';
-	src: url(fonts/TheSerif_B4_Italic.eot),
-		 url(fonts/TheSerif_B4_Italic.woff) format("woff");
-	font-weight: 400;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'theSerif';
-	src: url(fonts/TheSerif_B4_Plain_.eot),
-		 url(fonts/TheSerif_B4_Plain_.woff) format("woff");
-	font-weight: 400;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'theSerif';
-	src: url(fonts/TheSerif_B4_Bold_.eot),
-		 url(fonts/TheSerif_B4_Bold_.woff) format("woff");
-	font-weight: 800;
-	font-style: normal;
-}
-
-@font-face {
 	font-family: 'Enriqueta';
 	src: url(fonts/Enriqueta-Regular-webfont.eot),
 		 url(fonts/Enriqueta-Regular-webfont.woff) format("woff");
@@ -64,15 +40,13 @@ body {
 	
 	background-color	: #ddd;  /* #FFFFFF; */  /* #333322 */
 	
-	font-family			: 'theSerif', 'Enriqueta', georgia, times, serif; 
+	font-family			: 'Enriqueta', georgia, times, serif; 
 	
 	-webkit-font-smoothing: antialiased; 
 	-webkit-text-size-adjust: none;
 	
 	font-size			: 100%; 
-/*	font-size           : 0.79em;*/
 	font-weight			: normal;
-	line-height			: 1.5em;
 	color				: #252525;
 }
 
@@ -149,7 +123,7 @@ a.large-link:before {
 
 #header .processing-logo {
     display: block;
-	width: 231px;
+	width: 255px;
 	height: 36px;
 	margin: 20px 0 0 30px;
 	background: transparent url(../img/processing-logo.png) center center no-repeat;
@@ -165,7 +139,7 @@ a.large-link:before {
 	content: '\2039';
 }
 #header a { 
-	font-family: 'theSerif', 'Enriqueta', georgia, times, sans-serif;
+	font-family: 'Enriqueta', georgia, times, sans-serif;
 	text-decoration: none;
 	border: none;
 	color: white;
@@ -190,7 +164,7 @@ a.large-link:before {
 	outline: none;
 	height: 18px;
 	background: #fff;
-	font-family: 'theSerif', 'Enriqueta', georgia, times, serif; 
+	font-family: 'Enriqueta', georgia, times, serif; 
 	font-size: 1em;
 	color: #959595;
 }
@@ -237,8 +211,8 @@ a.large-link:before {
 .content {
 	width: 680px;
 	float: left;
-	/*overflow: hidden;*/
 	position: relative;
+	line-height: 130%;
 }
 
 /* ================ FOOTER ================== */
@@ -268,7 +242,7 @@ h1, h2, h3, h4, h5, h6
 	{
 	/*margin-bottom 		: 5px;*/
 	color				: #5A5A5A; 
-	font-family			: 'theSerif', 'Enriqueta', georgia, times, serif;
+	font-family			: 'Enriqueta', georgia, times, serif;
 	font-weight			: 400;
 	line-height			: 1.6em;
 	}
@@ -283,12 +257,12 @@ h4, h5, h6
 	/*font-weight			: bold;*/ 
 }
 .large-link { 
-	font-family: 'theSerif', 'Enriqueta', georgia, times, serif;
+	font-family: 'Enriqueta', georgia, times, serif;
 }
 a.code { color: #2c7bb5; }
 /* dirty italic fix */
 i, em, .italic { 
-	font-family: 'theSerifItalic', 'Enriqueta' !important; 
+	font-family: 'Enriqueta' !important; 
 	font-style: normal !important; 
 }
 
@@ -304,18 +278,15 @@ h6 { font-size			: 1em; 		}
 p { font-size			: 0.79em;   }
 
 pre {  
-	font-family			: monaco, "Courier New", Courier, monospace; 
-	line-height			: normal; color: #000000;
+	color: #000000;
 }
 
 tt {  
-	font-family			: monaco, "Courier New", Courier, monospace; 
-	line-height			: normal; color: #000000;
+	color: #000000;
 }
 
 code, .code, kbd {  
-	font-family			: monaco, "Courier New", Courier, monospace; 
-	line-height			: normal; color: #000000;
+	color: #000000;
 }
 
 li {margin-bottom: 1em; }
@@ -371,7 +342,7 @@ li {margin-bottom: 1em; }
 
 dl { margin: 0; }
 dt { /*font-style: italic;*/
-font-family			: 'theSerifItalic', 'Enriqueta'; }
+font-family			: 'Enriqueta'; }
 dd { margin: 0 0 1em 0; }
 
 .happenings { margin-bottom: 30px; }
@@ -389,7 +360,7 @@ td img { margin: 0; display: block; }
 #Cover .mailing-list,
 #Cover .contact { margin-top: 3em; }
 #Cover .video .video-caption { /*font-style: italic;*/
-font-family: 'theSerifItalic', 'Enriqueta'; }
+font-family: 'Enriqueta'; }
 #Cover .video .video-caption:first-child { display: inline-block; margin-bottom: 1.5em; }
 
 #Cover .mailing-list input[type="email"],
@@ -399,7 +370,7 @@ font-family: 'theSerifItalic', 'Enriqueta'; }
 	outline: none;
 	height: 20px;
 	padding-left: 4px;
-	font-family: 'theSerif', 'Enriqueta', georgia, times, serif; 
+	font-family: 'Enriqueta', georgia, times, serif; 
 	font-size: 1em;
 	color: #252525;
 }
@@ -508,6 +479,8 @@ p.exhibition-nav { margin-top: 20px; margin-bottom: 10px; }
 #reference-nav { position: relative; width: 300px; height: 2em; padding-top: .5em; }
 #reference-nav p { position: absolute; right: 10px; top: 0; margin: 0; }
 
+.refchunk>td { padding-bottom: 1em; }
+.refchunk td { line-height: 130%; }
 .ref-top {
 	display:none; 
 	margin-top: 20px;
@@ -517,9 +490,15 @@ p.exhibition-nav { margin-top: 20px; margin-bottom: 10px; }
 .ref-notice { margin: 0 0 2.5em 0; color: #FF3399; clear: both; margin-right: 40px;}
 
 .ref-item { margin-bottom: 60px; }
-.ref-item th { width: 100px; font-weight: bold; text-align: left; vertical-align: top; }
-.ref-item td { vertical-align: top; padding-bottom: 2em; }
-.ref-item td p {
+.ref-item > th { 
+	width: 100px; 
+}
+.ref-item th { 
+	font-weight: bold; text-align: left; vertical-align: top;
+	padding-right: 2em;
+}
+.ref-item > td { vertical-align: top; padding-bottom: 2em; max-width: 600px;}
+.ref-item > td p {
 	max-width: 520px;
 }
 
@@ -569,14 +548,11 @@ p.exhibition-nav { margin-top: 20px; margin-bottom: 10px; }
 .ref-item td h3 { margin: -11px 0 0 0; }
 .ref-item td b {
 	font-weight: normal;
-	font-family			: monaco, "Courier New", Courier, monospace; 
-	font-size			: 11px; 
-	line-height			: normal; 
+	font-family			: monospace; 
 }
 pre { 
 	margin-bottom : 30px;
 	margin-top    : 0;
-	font-size     : .79em;
 }
 tr.name-row { height: 60px; }
 td p { margin-top: 0; }
@@ -821,7 +797,7 @@ div.ref-col {
 	}
 	#Download #selectForm .select-amount label.last { margin-right: 2px; }
 	#Download .donate-box input[type="submit"]{
-		font-family: 'theSerif', 'Enriqueta', georgia, times, serif;
+		font-family: 'Enriqueta', georgia, times, serif;
 		-webkit-font-smoothing: antialiased;
 		font-size: 1.7em;
 		color: #2c7bb5;
@@ -871,7 +847,7 @@ div.ref-col {
 		#donateForm .payType .or {
 			display: inline-block;
 			/*font-style: italic;*/
-			font-family			: 'theSerifItalic', 'Enriqueta';
+			font-family			: 'Enriqueta';
 			margin: 0 30px 0 20px;
 		}
 	#donateForm .ccInfo {
@@ -1203,49 +1179,6 @@ div.examples-nav {
 div.examples-nav img { position: relative; top: 11px; }
 
 
-/**************************************************************** updates, courses, happenings ***/
-/*
-#Courses .content, #Updates .content, #Happenings .content {
-    width: 595px; 
-     }
-#Updates h2 { margin-top: 0 0 20px 0; }
-
-
-.course-desc p { margin: 0; }
-.course-desc p.date { margin: 0; }
-.course-desc h3 { margin: 0; font-size: 1em; font-weight: bold; line-height: 1em; }
-.course-desc { margin-bottom: 2em; }
-*/
-
-/************************************************************** comparison ***/
-/*
-
-#Compare h1 { margin-top: 2em; }
-#Compare h2 { margin-bottom: 0; }
-#Compare .threecol { float: left; width: 210px; margin-right: 20px; }
-#Compare .threecol p { margin-top: 0; }
-
-
-#Compare .content {
-        margin-left    : 55px;
-        margin-right   : 0px;
-        position: relative;
-}
-*/
-
-/************************************************************** troubleshooting ***/
-/*
-#Troubleshooting h1 { margin-top: 2em; }
-#Troubleshooting h5 a { float: left; margin-left: -30px; }
-ul.nostyle { margin: 0; padding: 0; list-style: none outside; }
-#Troubleshooting td { padding-bottom: 1em; }
-*/
-
-/************************************************************** FAQ ***/
-
-/*
-#FAQ h5 a { float: left; margin-left: -30px; }
-*/
 
 .navBar a.bug { color: red; }
 

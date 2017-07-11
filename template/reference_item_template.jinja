@@ -26,7 +26,7 @@
         </tr>
     {% endif %}
 
-    <tr class="">
+    <tr class="refchunk">
         <th scope="row">Description</th>
         <td>
             {{ convert_hypertext(item.description) }}
@@ -34,11 +34,11 @@
     </tr>
 
     {% if item.syntax is not none %} {# To keep lxml from yelling at us about unstable APIs #}
-        <tr class=""><th scope="row">Syntax</th><td><pre>{{ convert_hypertext(item.syntax) }}</pre></td></tr>
+        <tr class="refchunk"><th scope="row">Syntax</th><td><pre>{{ convert_hypertext(item.syntax) }}</pre></td></tr>
     {% endif %}
 
     {% if item.parameters %}
-        <tr class=""><th scope="row">Parameters</th><td><table cellpadding="0" cellspacing="0" border="0">                
+        <tr class="refchunk"><th scope="row">Parameters</th><td><table cellpadding="0" cellspacing="0" border="0">                
         {% for param in item.parameters %}
             <tr class=""><th scope="row" class="code">{{ param.label }}</th><td>{{ convert_hypertext(param.description) }}</td></tr>
         {% endfor %}
@@ -46,11 +46,11 @@
     {% endif %}
 
     {% if item.returns %}
-    <tr class=""><th scope="row">Returns</th><td class="code">{{ item.returns }}</td></tr>
+    <tr class="refchunk"><th scope="row">Returns</th><td class="code">{{ item.returns }}</td></tr>
     {% endif %}
 
     {% if item.constructors %}
-        <tr><th scope="row">Constructors</th><td class="code">
+        <tr class="refchunk"><th scope="row">Constructors</th><td class="code">
             {% for constructor in item.constructors %}
                 {{ constructor }} <br />
             {% endfor %}
@@ -58,15 +58,15 @@
     {% endif %}
 
     {% if item.methods %}
-        <tr><th scope="row">Methods</th><td><table cellpadding="0" cellspacing="0" border="0">
+        <tr class="refchunk"><th scope="row">Methods</th><td><table cellpadding="0" cellspacing="0" border="0">
         {% for method in item.methods %}
         <tr><th scope="row" class="code"><a href="{{ method.ref }}">{{ method.label }}</a></th><td>{{ convert_hypertext(method.description) }}</td></tr>
         {% endfor %}
         </table></tr>
     {% endif %}
 
-    {% if item.relateds %}{# Who needs grammar? #}
-    <tr><th scope="row">Related</th><td class="code">
+    {% if item.relateds %}
+    <tr class="refchunk"><th scope="row">Related</th><td class="code">
         {% for related in item.relateds %}
             <a class="code" href="{{ create_ref_link(related) }}">{{ items_dict[related].name }}</a><br />
         {% endfor %}
