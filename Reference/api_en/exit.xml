@@ -25,6 +25,7 @@ Quits/stops/exits the program. Programs without a <b>draw()</b> function exit au
 <br />
 Rather than terminating immediately, <b>exit()</b> will cause the sketch to exit after <b>draw()</b> has completed (or after <b>setup()</b> completes if called during the <b>setup()</b> function).<br />
 <br />
+To terminate immediately in the middle of setup() or draw(): call <b>exit()</b> followed  by <b>return</b>
 ]]></description>
 
 <syntax>
