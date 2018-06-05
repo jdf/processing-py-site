@@ -35,7 +35,7 @@ The Processing variables mouseX and mouseY (note the capital X and Y) store the 
 
 def draw():
     frameRate(12)
-    println(mouseX + " : " + mouseY)
+    println(str(mouseX) + " : " + str(mouseY))
 
 </pre>
 When a program starts, the mouseX and mouseY values are 0. If the cursor moves into the display window, the values are set to the current position of the cursor. If the cursor is at the left, the mouseX value is 0 and the value increases as the cursor moves to the right. If the cursor is at the top, the mouseY value is 0 and the value increases as the cursor moves down. If mouseX and mouseY are used in programs without a draw() or if noLoop() is run in setup(), the values will always be 0.
