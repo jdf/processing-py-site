@@ -21,17 +21,17 @@ def setup():
     s = createShape()
     s.beginShape()
     s.noStroke()
-    # Exterior part of shape
+    # Exterior part of shape, clockwise winding
     s.vertex(-50, -50)
     s.vertex(50, -50)
     s.vertex(50, 50)
     s.vertex(-50, 50)
-    # Interior part of shape
+    # Interior part of shape, counter-clockwise winding
     s.beginContour()
     s.vertex(-20, -20)
-    s.vertex(20, -20)
-    s.vertex(20, 20)
     s.vertex(-20, 20)
+    s.vertex(20, 20)
+    s.vertex(20, -20)
     s.endContour()
     # Finish off shape
     s.endShape()
@@ -45,7 +45,9 @@ def draw():
 </example>
 
 <description><![CDATA[
-The <b>beginContour()</b> and <b>endContour()</b> methods make it possible to define shapes with other shapes cut out of them. For example, the inside of a letter 'O'. These two functions are always used together, you'll never use one without the other. Between them, define the geometry you want to create. As you'll see when you run the example above, the second smaller shape is cut out of the first larger shape.
+Use the <b>beginContour()</b> and <b>endContour()</b> function to create negative shapes within shapes such as the center of the letter 'O'. <b>beginContour()</b> begins recording vertices for the shape and <b>endContour()</b> stops recording. The vertices that define a negative shape must "wind" in the opposite direction from the exterior shape. First draw vertices for the exterior shape in clockwise order, then for internal shapes, draw vertices counterclockwise.<br>
+<br>
+These functions can only be used within a <b>beginShape()</b>/<b>endShape()</b> pair and transformations such as <b>translate()</b>, <b>rotate()</b>, and <b>scale()</b> do not work within a <b>beginContour()</b>/<b>endContour()</b> pair. It is also not possible to use other shapes, such as <b>ellipse()</b> or <b>rect()</b> within.
 ]]></description>
 
 <syntax><c>sh</c>.beginContour()</syntax>
