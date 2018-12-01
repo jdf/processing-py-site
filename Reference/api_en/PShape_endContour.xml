@@ -21,17 +21,17 @@ def setup():
     s = createShape()
     s.beginShape()
     s.noStroke()
-    # Exterior part of shape
+    # Exterior part of shape, clockwise winding
     s.vertex(-50,-50)
     s.vertex(50,-50)
     s.vertex(50,50)
     s.vertex(-50,50)
-    # Interior part of shape
+    # Interior part of shape, counter-clockwise winding
     s.beginContour()
     s.vertex(-20,-20)
-    s.vertex(20,-20)
-    s.vertex(20,20)
     s.vertex(-20,20)
+    s.vertex(20,20)
+    s.vertex(20,-20)
     s.endContour()
     # Finish off shape
     s.endShape()
