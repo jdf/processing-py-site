@@ -1,3 +1,5 @@
+dist: trusty
+
 env: DISPLAY=:99.0 # from p5py
 
 language: java # say it's Java so we can use the jdk
