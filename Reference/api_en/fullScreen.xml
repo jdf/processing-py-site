@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<notest/>
+<notest /><noimage />
 <code><![CDATA[
 # Run the code at the full dimensions of the screen currently
 # selected inside the Preferences window
@@ -30,6 +30,7 @@ def draw():
 </example>
 
 <example>
+<notest /><noimage />
 <code><![CDATA[
 # If more than one screen is attached to the computer, run the 
 # code at the full dimensions on the screen defined by the 
@@ -51,6 +52,7 @@ def draw():
 </example>
 
 <example>
+<notest /><noimage />
 <code><![CDATA[
 # Run full screen using the P2D renderer on screen 2
 
@@ -70,6 +72,7 @@ def draw():
 </example>
 
 <example>
+<notest /><noimage />
 <code><![CDATA[
 # If more than one screen is attached to the computer, run the 
 # code at the full dimensions across all of the attached screens
