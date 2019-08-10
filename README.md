@@ -137,18 +137,14 @@ operating system. Then run the build script like so:
 
     xvfb-run python generator.py build --images
 
-## Contributing
+## Reporting Issues
 
-We welcome contributions! To contribute new documentation or fixes to the
-existing documentation, create a fork of the
-[processing-py-site](https://github.com/kazimuth/processing-py-site) repository
-on GitHub. With `git`, create a new branch in your fork and make your changes,
-ensuring that `python generator.py build --all --images` completes without
-errors. When you're done, push your branch to your fork of the project on
-Github, and then issue a Pull Request against the main repository. [Here's a
-good overview of the pull request
-process](https://yangsu.github.io/pull-request-tutorial/) on GitHub. (If you're
-totally unfamiliar with Git or GitHub, [try this
-tutorial](https://try.github.io/).
+Before opening a new issue, please review existing [issues](issues).
 
+Issues should include as many details as possible, including URLs and/or
+excerpts from the related material, and a description of what is missing/wrong
+or could be improved, and if possible how.
 
+## Contributing:
+
+see [CONTRIBUTING.md](CONTRIBUTING.md)
