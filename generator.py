@@ -425,7 +425,7 @@ def build_reference_index(reference_dir, env):
         ('Typography', 'Loading & Displaying'),
         ('Typography', 'Attributes'),
         ('Typography', 'Metrics'),
-        ('Math', ''),
+        ('Math', 'PVector'),
         ('Math', 'Operators'),
         ('Math', 'Bitwise Operators'),
         ('Math', 'Calculation'),
