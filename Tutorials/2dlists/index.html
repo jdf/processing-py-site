@@ -139,10 +139,10 @@
             return newList
 
         def drawPoints(pointList):
-            for i in xrange(len(pointList)):
-                for j in xrange(len(pointList[0])):
-                    stroke(pointList[i][j])
-                    rect(i,j,10,10)
+            for y in xrange(len(pointList)):
+                for x in xrange(len(pointList[0])):
+                    stroke(pointList[y][x])
+                    rect(x,y,10,10)
         </pre>
         <br>
         <p>
