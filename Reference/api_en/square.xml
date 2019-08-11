@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image />
+<notest /><noimage />
 <code><![CDATA[
 square(10, 10, 55)
 ]]></code>

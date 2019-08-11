@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image />
+<notest /><noimage />
 <code><![CDATA[
 ellipse(56, 46, 55, 55)
 ]]></code>
