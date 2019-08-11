@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<notest /><noimage />
+<notest /><image />
 <code><![CDATA[
 circle(56, 46, 55)
 ]]></code>
