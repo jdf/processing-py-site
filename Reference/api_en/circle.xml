@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image />
+<notest /><noimage />
 <code><![CDATA[
 ellipse(56, 46, 55, 55)
 ]]></code>
@@ -40,3 +40,5 @@ circle(<c>a</c>, <c>b</c>, <c>extent</c>)
 
 <related>ellipse</related>
 <related>ellipseMode</related>
+
+</root>

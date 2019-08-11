@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image />
+<notest /><noimage />
 <code><![CDATA[
 square(10, 10, 55)
 ]]></code>
@@ -40,3 +40,5 @@ square(<c>a</c>, <c>b</c>, <c>extent</c>)
 
 <related>rect</related>
 <related>rectMode</related>
+
+</root>
