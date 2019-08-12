@@ -1,4 +1,4 @@
-# Processing.py Documentation [![How are we doing?](https://travis-ci.org/kazimuth/processing-py-site.svg)](https://travis-ci.org/kazimuth/processing-py-site)
+# Processing.py Documentation [![How are we doing?](https://travis-ci.org/jdf/processing-py-site.svg)](https://travis-ci.org/jdf/processing-py-site)
 
 This repository contains the files and executable code used to build
 [py.processing.org](http://py.processing.org), the official documentation for

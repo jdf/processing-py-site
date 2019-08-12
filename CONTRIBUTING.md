@@ -5,7 +5,7 @@ reference documentation and website. We welcome contributions!
 
 To contribute new documentation or fixes to the
 existing documentation, create a fork of the
-[processing-py-site](https://github.com/kazimuth/processing-py-site) repository
+[processing-py-site](https://github.com/jdf/processing-py-site) repository
 on GitHub. With `git`, create a new branch in your fork and make your changes,
 ensuring that `python generator.py build --all --images` completes without
 errors. When you're done, push your branch to your fork of the project on
