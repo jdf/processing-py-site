@@ -9,9 +9,9 @@
 <type></type>
 
 <example>
-<notest /><noimage />
+<notest /><image />
 <code><![CDATA[
-ellipse(56, 46, 55, 55)
+circle(56, 46, 55)
 ]]></code>
 </example>
 
