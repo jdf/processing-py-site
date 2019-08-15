@@ -25,7 +25,16 @@ print(list_of_stuff)
 	The <b>print()</b> function writes to the console area, the black rectangle at the bottom of the Processing environment. This function is often helpful for looking at the data a program is producing.<br/>
 <br />
 Using <b>print()</b> on an object will output a string representation of that object, as determined by its internal <b>__str__</b> and <b>__repr__</b> methods (<a href="http://stackoverflow.com/a/2626364">more information here</a>).<br/><br/>
-In Python Mode, <b>print()</b> and <b>println()</b> are functionally identical.
+In Python Mode, <b>print()</b> and <b>println()</b> are functionally identical.<br />
+<br/ >
+Under the hood, <b>print</b> in Python 2 is not actually a function at all--it 
+is a statement, and can be used without quotes: <b>print i</b>. Writing 
+<b>print(i)</b> is <b>print</b> plus the single-element expression <b>(i)</b>. 
+When we write <b>print(1,2)</b>, the statement outputs a tuple: <b>(1, 2)</b>.
+To change this behavior, make the first line of a sketch: <b>from __future__ 
+import print_function</b>. This turns <b>print(i)</b> into a function, disallows
+<b>print i</b>, and causes <b>print(1, 2)</b> to output <b>1, 2</b> rather than
+<b>(1, 2)</b>.
 ]]></description>
 
 <syntax>
