@@ -45,12 +45,21 @@ Changes the color of any pixel, or writes an image directly to the display windo
 <br />
 The <b>x</b> and <b>y</b> parameters specify the pixel to change and the <b>c</b> parameter specifies the color value. The <b>c</b> parameter is interpreted according to the current color mode.  (The default color mode is RGB values from 0 to 255.)  When setting an image, the <b>x</b> and <b>y</b> parameters define the coordinates for the upper-left corner of the image, regardless of the current <b>imageMode()</b>.
 <br /><br />
-Setting the color of a single pixel with <b>set(x, y)</b> is easy, but not as fast as putting the data directly into <b>pixels</b>. The equivalent statement to <b>set(x, y, #000000)</b> using <b>pixels</b> is <b>pixels[y*width+x] = #000000</b>. See the reference for <a href="pixels.html">pixels</a> for more information.
+Setting the color of a single pixel with <b>set(x, y)</b> is easy, but not as
+fast as putting the data directly into <b>pixels</b>. The equivalent statement
+to <b>set(x, y, #000000)</b> using <b>pixels</b> is <b>pixels[y*width+x] =
+#000000</b>. See the reference for <a href="pixels.html">pixels</a> for more
+information.<br />
+<br />
+While set(r, g, b) changes pixel color, s = set([1, 1, 3]) is a Python function
+for converting a single list or tuple into int a set of unique keys: {1, 3}.
+Sets in this sense may also be created using curly braces: s = {1, 2, 3}.
 ]]></description>
 
 <syntax>
 set(<c>x</c>, <c>y</c>, <c>c</c>)
 set(<c>x</c>, <c>y</c>, <c>img</c>)
+s = set(<c>[key0, key1, ..., keyN]</c>)
 </syntax>
 
 <parameter>
@@ -73,6 +82,12 @@ set(<c>x</c>, <c>y</c>, <c>img</c>)
 <description><![CDATA[PImage: image to copy into the original image]]></description>
 </parameter>
 
+<parameter>
+<label>[key0, key1, ..., keyN]</label>
+<description><![CDATA[a sequence of unique keys]]></description>
+</parameter>
+
 <related>pixels</related>
+<related>curlybraces</related>
 
 </root>
