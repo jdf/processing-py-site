@@ -16,7 +16,7 @@ GitHub.</a></p>
 
 <table width="679" cellspacing="1" cellpadding="0" border="0">
     <tbody>
-        {% for tutorial_batch in tutorials %}
+        {% for tutorial_batch in tutorials|batch(3) %}
             <tr>
                 {% for tutorial in tutorial_batch %}
                     <td><div class="curated-item">
