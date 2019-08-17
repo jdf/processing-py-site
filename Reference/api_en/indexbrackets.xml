@@ -12,17 +12,19 @@
 <image></image>
 <code><![CDATA[
 # Create a list literal
-elements = ["H", "He", "Li", "B", "C", "N", "O", "F", "Ne"]
+elements = ["H", "He", "Li", "B", "C", "N", "O"]
 
-# Retrieve a single item from the list with a given index
+# Retrieve a single list item with a given index
 print(elements[3]) # Prints 'B'
 
-# Negative indexes can be used, and count from the end of the list.
-print(elements[-2]) # Prints 'F'
+# Negative indexes can be used, and count from
+# the end of the list.
+print(elements[-2]) # Prints 'N'
 
-# Assign a new value to an existing element of a list:
+# Assign a new value to an existing list element:
 elements[4] = 'Si'
-print(elements) # Prints ['H', 'He', 'Li', 'B', 'Si', 'N', 'O', 'F', 'Ne']
+print(elements)
+# Prints ['H', 'He', 'Li', 'B', 'Si', 'N', 'O']
 
 ]]></code>
 </example>
@@ -31,8 +33,8 @@ print(elements) # Prints ['H', 'He', 'Li', 'B', 'Si', 'N', 'O', 'F', 'Ne']
 <image></image>
 <code><![CDATA[
 
-# You can use index brackets with strings as well, to access individual
-# characters by index:
+# You can use index brackets with strings as well
+# to access individual characters by index:
 message = "Now is the winter of our discontent"
 print(message[0]) # Prints 'N'
 print(message[-1]) # Prints 't'
@@ -45,13 +47,15 @@ print(message[11]) # Prints 'w'
 <image></image>
 <code><![CDATA[
 
-# Index brackets are used to retrieve the value for a given key from a
-# dictionary
-element_names = {'H': 'hydrogen', 'He': 'helium', 'Li': 'lithium'}
+# Index brackets are used to retrieve the value
+# for a given key from a dictionary
+element_names = {'H': 'hydrogen',
+                 'He': 'helium',
+                 'Li': 'lithium'}
 print(element_names['He']) # Prints 'helium'
 
-# Overwrite the value of an element, or add a new key/value pair, by assigning
-# to the key:
+# Overwrite the value of an element, or add a new
+# key/value pair, by assigning to the key:
 element_names['Be'] = 'beryllium'
 print(element_names['Be']) # Prints 'beryllium'
 
