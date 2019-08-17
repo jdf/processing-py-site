@@ -17,11 +17,11 @@ xml = loadXML("mammals.xml")
 s = xml.toString()
 print(s)
 # Sketch prints:
-# &lt;mammals&gt;
-#   &lt;animal id="0" species="Capra hircus"&gt;Goat&lt;/animal&gt;
-#   &lt;animal id="1" species="Panthera pardus"&gt;Leopard&lt;/animal&gt;
-#   &lt;animal id="2" species="Equus zebra"&gt;Zebra&lt;/animal&gt;
-# &lt;/mammals&gt;
+# <mammals>
+#   <animal id="0" species="Capra hircus">Goat</animal>
+#   <animal id="1" species="Panthera pardus">Leopard</animal>
+#   <animal id="2" species="Equus zebra">Zebra</animal>
+# </mammals>
 ]]></code>
 </example>
 

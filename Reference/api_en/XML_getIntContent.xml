@@ -14,12 +14,12 @@
 # The following short XML file called "positions.xml" is parsed
 # in the code below. It must be in the project's "data" folder.
 #
-# &lt?xml version=&quot1.0&quot?&gt
-# &ltpositions&gt
-#     &ltposition id="0"&gt128&lt/position&gt
-#     &ltposition id="1"&gt256&lt/position&gt
-#     &ltposition id="2"&gt512&lt/position&gt
-# &lt/positions&gt
+# <?xml version="1.0"?>
+# <positions>
+#     <position id="0">128</position>
+#     <position id="1">256</position>
+#     <position id="2">512</position>
+# </positions>
 def setup(): 
     xml = loadXML("positions.xml")
     firstChild = xml.getChild("position")
