@@ -16,21 +16,21 @@ v2 = PVector(25, 50)
 
 ellipse(v1.x, v1.y, 12, 12)
 ellipse(v2.x, v2.y, 12, 12)
-v2.add(v1)
+v2.add(v1) # v2 += v1
 ellipse(v2.x, v2.y, 24, 24)
 ]]></code>
 </example>
 
-
 <description><![CDATA[
 A class to describe a two or three dimensional vector, specifically a Euclidean (also known as geometric) vector.   A vector is an entity that has both magnitude and direction.  The datatype, however, stores the components of the vector (x,y for 2D, and x,y,z for 3D).  The magnitude and direction can be accessed via the methods <b>mag()</b> and <b>heading()</b>.<br />
 <br />
-In many of the Processing examples, you will see <b>PVector</b> used to describe a position, velocity, or acceleration.  For example, if you consider a rectangle moving across the screen, at any given instant it has a position (a vector that points from the origin to its location), a velocity (the rate at which the object's position changes per time unit, expressed as a vector), and acceleration (the rate at which the object's velocity changes per time unit, expressed as a vector). Since vectors represent groupings of values, we cannot simply use traditional addition/multiplication/etc. Instead, we'll need to do some "vector" math, which is made easy by the methods inside the <b>PVector</b> class.
+In many of the Processing examples, you will see <b>PVector</b> used to describe a position, velocity, or acceleration.  For example, if you consider a rectangle moving across the screen, at any given instant it has a position (a vector that points from the origin to its location), a velocity (the rate at which the object's position changes per time unit, expressed as a vector), and acceleration (the rate at which the object's velocity changes per time unit, expressed as a vector).<br />
+<br />Since vectors represent groupings of values, we'll need to do some "vector" math, which is made easy by the methods inside the <b>PVector</b> class, or, in Python Mode, in some cases the traditional mathematical operators have been "overloaded" to work with PVectors: "+" adds vectors, "-" subtracts vectors, "*" does scalar multiplication, and "/" does scalar division. The related augmented assigment operators, "+=", "-=", "*=", and "/=", also work.
 ]]></description>
 
 <syntax>
-	var = PVector(x, y)
-	var = PVector(x, y, z)
+	v = PVector(x, y)
+	v = PVector(x, y, z)
 </syntax>
 
 <parameter>
@@ -48,10 +48,141 @@ In many of the Processing examples, you will see <b>PVector</b> used to describe
 	<description><![CDATA[int: z component of the PVector]]></description>
 </parameter>
 
-<parameter>
-	<label>var</label>
-	<description><![CDATA[variable which refers to the PVector]]></description>
-</parameter>
+<method>
+    <label>set()</label>
+    <description> 	Set the components of the vector</description>
+    <ref>PVector_set</ref>
+</method>
 
+<method>
+    <label>random2D()</label>
+    <description> 	Make a new 2D unit vector with a random direction.</description>
+    <ref>PVector_random2D</ref>
+</method>
+
+<method>
+    <label>random3D()</label>
+    <description> 	Make a new 3D unit vector with a random direction.</description>
+    <ref>PVector_random3D</ref>
+</method>
+
+<method>
+    <label>fromAngle()</label>
+    <description> 	Make a new 2D unit vector from an angle</description>
+    <ref>PVector_fromAngle</ref>
+</method>
+
+<method>
+    <label>fromAngle()</label>
+    <description> 	Make a new 2D unit vector from an angle</description>
+    <ref>PVector_fromAngle</ref>
+</method>
+
+<method>
+    <label>copy()</label>
+    <description> 	Get a copy of the vector</description>
+    <ref>PVector_copy</ref>
+</method>
+
+<method>
+    <label>mag()</label>
+    <description> 	Calculate the magnitude of the vector</description>
+    <ref>PVector_mag</ref>
+    
+</method><method>
+    <label>magSq()</label>
+    <description> 	Calculate the magnitude of the vector, squared</description>
+    <ref>PVector_magSq</ref>
+</method>
+
+<method>
+    <label>add()</label>
+    <description> 	Adds x, y, and z components to a vector, one vector to another, or two independent vectors</description>
+    <ref>PVector_add</ref>
+</method>
+
+<method>
+    <label>sub()</label>
+    <description> 	Subtract x, y, and z components from a vector, one vector from another, or two independent vectors</description>
+    <ref>PVector_sub</ref>
+</method>
+
+<method>
+    <label>mult()</label>
+    <description>   Multiply a vector by a scalar</description>
+    <ref>PVector_mult</ref>
+</method>
+
+<method>
+    <label>div()</label>
+    <description> 	 Divide a vector by a scalar</description>
+    <ref>PVector_div</ref>
+</method>
+
+<method>
+    <label>dist()</label>
+    <description>	Calculate the distance between two points</description>
+    <ref>PVector_dist</ref>
+</method>
+
+<method>
+    <label>dot()</label>
+    <description> 	 Calculate the dot product of two vectors</description>
+    <ref>PVector_dot</ref>
+</method>
+
+<method>
+    <label>cross()</label>
+    <description> 	 Calculate and return the cross product</description>
+    <ref>PVector_cross</ref>
+</method>
+
+<method>
+    <label>normalize()</label>
+    <description> 	 Normalize the vector to a length of 1</description>
+    <ref>PVector_normalize</ref>
+</method>
+
+<method>
+    <label>limit()</label>
+    <description> 	 Limit the magnitude of the vector</description>
+    <ref>PVector_limit</ref>
+</method>
+
+<method>
+    <label>setMag()</label>
+    <description> 	 Set the magnitude of the vector</description>
+    <ref>PVector_setMag</ref>
+</method>
+
+<method>
+    <label>heading()</label>
+    <description>   Calculate the angle of rotation for this vector</description>
+    <ref>PVector_heading</ref>
+</method>
+
+<method>
+    <label>rotate()</label>
+    <description> 	  Rotate the vector by an angle (2D only)</description>
+    <ref>PVector_rotate</ref>
+</method>
+
+<method>
+    <label>lerp()</label>
+    <description> 	 Linear interpolate the vector to another vector</description>
+    <ref>PVector_lerp</ref>
+</method>
+
+<method>
+    <label>angleBetween()</label>
+    <description> 	 Calculate and return the angle between two vectors</description>
+    <ref>PVector_angleBetween</ref>
+</method>
+
+<method>
+    <label>array()</label>
+    <description> 	 Return a representation of the vector as a float array</description>
+    <ref>PVector_array</ref>
+</method>
 
 </root>
