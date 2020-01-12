@@ -13,7 +13,7 @@
         <td>
 <p>
 The screen forms a bridge between our bodies and the realm of circuits and electricity inside computers. We control elements on screen through a variety of devices such as touch pads, trackballs, and joysticks, but the keyboard and mouse remain the most common input devices for desktop computers.
-The computer mouse dates back to the late 1960s, when Douglas Engelbart presented the device as an element of the oN-Line System (NLS), one of the first computer systems with a video display. The mouse concept was further developed at the Xerox Palo Alto Research Center (PARC), but its introduction with the Apple Macintosh in 1984 was the catalyst for its current ubiquity. The design of the mouse has gone through many revisions in the last forty years, but its function has remained the same. In Engelbart’s original patent application in 1970 he referred to the mouse as an “X-Y position indicator,” and this still accurately, but dryly, defines its contemporary use.
+The computer mouse dates back to the late 1960s, when Douglas Engelbart presented the device as an element of the oN-Line System (NLS), one of the first computer systems with a video display. The mouse concept was further developed at the Xerox Palo Alto Research Center (PARC), but its introduction with the Apple Macintosh in 1984 was the catalyst for its current ubiquity. The design of the mouse has gone through many revisions in the last forty years, but its function has remained the same. In Engelbart's original patent application in 1970 he referred to the mouse as an "X-Y position indicator," and this still accurately, but dryly, defines its contemporary use.
 <br /> 
 <br /> 
 The physical mouse object is used to control the position of the cursor on screen and to select interface elements. The cursor position is read by computer programs as two numbers, the x-coordinate and the y-coordinate. These numbers can be used to control attributes of elements on screen. If these coordinates are collected and
@@ -21,7 +21,7 @@ analyzed, they can be used to extract higher-level information such as the speed
 <br /> 
 <br /> 
 Keyboards are typically used to input characters for composing documents, email, and instant messages, but the keyboard has potential for use beyond its original
-intent. The migration of the keyboard from typewriter to computer expanded its function to enable launching software, moving through the menus of software applications, and navigating 3D environments in games. When writing your own software, you have the freedom to use the keyboard data any way you wish. For example, basic information such as the speed and rhythm of the fingers can be determined by the rate at which keys are pressed. This information could control the speed of an event or the quality of motion. It’s also possible to ignore the characters printed on the keyboard itself and use the location of each key relative to the keyboard grid as a numeric position.
+intent. The migration of the keyboard from typewriter to computer expanded its function to enable launching software, moving through the menus of software applications, and navigating 3D environments in games. When writing your own software, you have the freedom to use the keyboard data any way you wish. For example, basic information such as the speed and rhythm of the fingers can be determined by the rate at which keys are pressed. This information could control the speed of an event or the quality of motion. It's also possible to ignore the characters printed on the keyboard itself and use the location of each key relative to the keyboard grid as a numeric position.
 <br /> 
 <br /> 
 The modern computer keyboard is a direct descendant of the typewriter. The position of the keys on an English-language keyboard is inherited from early typewriters. This layout is called QWERTY because of the order of the top row of letter keys. It was developed for typewriters to put physical distance between frequently typed letter pairs, helping reduce the likelihood of the typebars colliding and jamming as they hit the ribbon. This more than one-hundred-year-old mechanical legacy still affects how we write software today.
@@ -329,7 +329,7 @@ def draw():
 <tr>
     <td>
 <p> 
-This code asks, “Is the cursor to the right of the left edge and is the cursor to the left of the right edge and is the cursor beyond the top edge and is the cursor above the bottom?” The code for the next example asks a set of similar questions and combines them with the keyword else to determine which one of the defined areas contains the cursor.
+This code asks, "Is the cursor to the right of the left edge and is the cursor to the left of the right edge and is the cursor beyond the top edge and is the cursor above the bottom?" The code for the next example asks a set of similar questions and combines them with the keyword else to determine which one of the defined areas contains the cursor.
 </p>
         </td>
     </tr>
@@ -581,7 +581,7 @@ def draw():
 <tr>
     <td>
 <p>
-The key variable may be used to determine whether a specific key is pressed. The following example uses the expression key=='A' to test if the A key is pressed. The single quotes signify A as the data type char (p. 144). The expression key=="A" will cause an error because the double quotes signify the A as a String, and it’s not possible to compare a String with a char. The logical AND symbol, the <code>and</code> operator, is used to connect the expression with the keyPressed variable to ascertain that the key pressed is the uppercase A.
+The key variable may be used to determine whether a specific key is pressed. The following example uses the expression key=='A' to test if the A key is pressed. The single quotes signify A as the data type char (p. 144). The expression key=="A" will cause an error because the double quotes signify the A as a String, and it's not possible to compare a String with a char. The logical AND symbol, the <code>and</code> operator, is used to connect the expression with the keyPressed variable to ascertain that the key pressed is the uppercase A.
 </p>
         </td>
     </tr>
@@ -696,7 +696,7 @@ def draw():
     <td>
 <p> 
 <h3>Coded keys</h3> 
-In addition to reading key values for numbers, letters, and symbols, Processing can also read the values from other keys including the arrow keys and the Alt, Control, Shift, Backspace, Tab, Enter, Return, Escape, and Delete keys. The variable keyCode stores the ALT, CONTROL, SHIFT, UP, DOWN, LEFT, and RIGHT keys as constants. Before determining which coded key is pressed, it’s necessary to check first to see if the key is coded. The expression key==CODED is true if the key is coded and false otherwise. Even though not alphanumeric, the keys included in the ASCII specification (BACKSPACE, TAB, ENTER, RETURN, ESC, and DELETE) will not be identified as a coded key. If you’re making cross-platform projects, note that the Enter key is commonly used on PCs and UNIX and the Return key is used on Macintosh. Check for both Enter and Return to make sure your program will work for all platforms (see code 12-17).
+In addition to reading key values for numbers, letters, and symbols, Processing can also read the values from other keys including the arrow keys and the Alt, Control, Shift, Backspace, Tab, Enter, Return, Escape, and Delete keys. The variable keyCode stores the ALT, CONTROL, SHIFT, UP, DOWN, LEFT, and RIGHT keys as constants. Before determining which coded key is pressed, it's necessary to check first to see if the key is coded. The expression key==CODED is true if the key is coded and false otherwise. Even though not alphanumeric, the keys included in the ASCII specification (BACKSPACE, TAB, ENTER, RETURN, ESC, and DELETE) will not be identified as a coded key. If you're making cross-platform projects, note that the Enter key is commonly used on PCs and UNIX and the Return key is used on Macintosh. Check for both Enter and Return to make sure your program will work for all platforms (see code 12-17).
 </p>
 </td>
 </tr>
@@ -743,7 +743,7 @@ def draw():
     <td>
 <p> 
 <h3>Events</h3>
-A category of functions called events alter the normal flow of a program when an action such as a key press or mouse movement takes place. An event is a polite interruption of the normal flow of a program. Key presses and mouse movements are stored until the end of draw(), where they can take action that won’t disturb drawing that’s currently in progress. The code inside an event function is run once each time the corresponding event occurs. For example, if a mouse button is pressed, the code inside the mousePressed() function will run once and will not run again until the button is pressed again. This allows data produced by the mouse and keyboard to be read independently from what is happening in the rest of the program.
+A category of functions called events alter the normal flow of a program when an action such as a key press or mouse movement takes place. An event is a polite interruption of the normal flow of a program. Key presses and mouse movements are stored until the end of draw(), where they can take action that won't disturb drawing that's currently in progress. The code inside an event function is run once each time the corresponding event occurs. For example, if a mouse button is pressed, the code inside the mousePressed() function will run once and will not run again until the button is pressed again. This allows data produced by the mouse and keyboard to be read independently from what is happening in the rest of the program.
 </p>
 <br /> 
 <p>
@@ -832,8 +832,8 @@ def mouseReleased():
 <tr>
     <td>
 <p> 
-It is generally not a good idea to draw inside an event function, but it can be done under certain conditions. Before drawing inside these functions, it’s important to
-think about the flow of the program. In this example, squares are drawn inside mousePressed() and they remain on screen because there is no background() inside draw(). But if background() is used, visual elements drawn within one of the mouse event functions will appear on screen for only a single frame, or, by default, 1/60th of a second. In fact, you’ll notice this example has nothing at all inside draw(), but it needs to be there to force Processing to keep listening for the events. If a background() function were run inside draw(), the rectangles would flash onto the screen and disappear.
+It is generally not a good idea to draw inside an event function, but it can be done under certain conditions. Before drawing inside these functions, it's important to
+think about the flow of the program. In this example, squares are drawn inside mousePressed() and they remain on screen because there is no background() inside draw(). But if background() is used, visual elements drawn within one of the mouse event functions will appear on screen for only a single frame, or, by default, 1/60th of a second. In fact, you'll notice this example has nothing at all inside draw(), but it needs to be there to force Processing to keep listening for the events. If a background() function were run inside draw(), the rectangles would flash onto the screen and disappear.
 </p>
         </td>
     </tr>
@@ -928,7 +928,7 @@ keyPressed() Code inside this block is run one time when any key is pressed
 keyReleased() Code inside this block is run one time when any key is released
 <br /> 
 <br />
-Each time a key is pressed, the code inside the keyPressed() block is run once. Within this block, it’s possible to test which key has been pressed and to use this value for any purpose. If a key is held down for an extended time, the code inside the keyPressed() block might run many times in a rapid succession because most operating systems will take over and repeatedly call the keyPressed() function. The amount of time it takes to start repeating and the rate of repetitions will be different from computer to computer, depending on the keyboard preference settings. In this example, the value of the boolean variable drawT is set from false to true when the T key is pressed; this causes the lines of code to render the rectangles in draw() to start running.
+Each time a key is pressed, the code inside the keyPressed() block is run once. Within this block, it's possible to test which key has been pressed and to use this value for any purpose. If a key is held down for an extended time, the code inside the keyPressed() block might run many times in a rapid succession because most operating systems will take over and repeatedly call the keyPressed() function. The amount of time it takes to start repeating and the rate of repetitions will be different from computer to computer, depending on the keyboard preference settings. In this example, the value of the boolean variable drawT is set from false to true when the T key is pressed; this causes the lines of code to render the rectangles in draw() to start running.
 </p>
 </td> 
 </tr> 
@@ -1049,7 +1049,7 @@ def mousePressed():
     frame = 0
 </pre>
 
-The redraw() function runs the code in draw() one time and then halts the execution. It’s helpful when the display needn’t be updated continuously. The following example runs the code in draw() once each time a mouse button is pressed.
+The redraw() function runs the code in draw() one time and then halts the execution. It's helpful when the display needn't be updated continuously. The following example runs the code in draw() once each time a mouse button is pressed.
 </p>
 <br />
 <pre>
@@ -1112,7 +1112,7 @@ def draw():
     line(0, mouseY, height, mouseY)
 
 </pre> 
-These cursor icons are part of your computer’s operating system and will appear different on different machines.
+These cursor icons are part of your computer's operating system and will appear different on different machines.
 </p>
 </td>
 </tr> 		
