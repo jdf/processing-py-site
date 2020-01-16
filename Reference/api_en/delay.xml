@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>delay()</name>
+
+<category>Environment</category>
+
+<subcategory></subcategory>
+
+<example>
+<noimage />
+<code><![CDATA[
+def draw():
+    line(random(100), random(100), random(100), random(100))
+    delay(1000)
+]]></code>
+</example>
+
+<description><![CDATA[
+The delay() function halts for a specified time. Delay times are specified in thousandths of a second. For example, running delay(3000) will stop the program for three seconds and delay(500) will stop the program for a half-second.<br />
+<br />
+The screen only updates when the end of draw() is reached, so delay() cannot be used to slow down drawing. For instance, you cannot use delay() to control the timing of an animation.
+]]></description>
+
+<syntax>
+delay(<c>time</c>)
+</syntax>
+
+<parameter>
+<label>time</label>
+<description><![CDATA[int: milliseconds to pause before running draw() again]]></description>
+</parameter>
+
+<related>frameRate_var</related>
+<related>draw</related>
+
+</root>
