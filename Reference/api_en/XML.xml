@@ -44,6 +44,150 @@ Only files encoded as UTF-8 (or plain ASCII) are parsed properly; the encoding p
 
 <type>class</type>
 
+<method>
+<label>getParent()</label>
+<description>Gets a copy of the element's parent</description>
+<ref>XML_getParent</ref>
+</method>
+
+<method>
+<label>setName()</label>
+<description>Sets the element's name</description>
+<ref>XML_setName</ref>
+</method>
+
+<method>
+<label>hasChildren()</label>
+<description>Checks whether or not an element has any children</description>
+<ref>XML_hasChildren</ref>
+</method>
+
+<method>
+<label>listChildren()</label>
+<description>Returns the names of all children as an array</description>
+<ref>XML_listChildren</ref>
+</method>
+
+<method>
+<label>getChildren()</label>
+<description>Returns an array containing all child elements</description>
+<ref>XML_getChildren</ref>
+</method>
+
+<method>
+<label>getChild()</label>
+<description>Returns the child element with the specified index value or path</description>
+<ref>XML_getChild</ref>
+</method>
+
+<method>
+<label>addChild()</label>
+<description>Appends a new child to the element</description>
+<ref>XML_addChild</ref>
+</method>
+
+<method>
+<label>removeChild()</label>
+<description>Removes the specified child</description>
+<ref>XML_removeChild</ref>
+</method>
+
+<method>
+<label>getAttributeCount()</label>
+<description>Counts the specified element's number of attributes</description>
+<ref>XML_getAttributeCount</ref>
+</method>
+
+<method>
+<label>listAttributes()</label>
+<description>Returns a list of names of all attributes as an array</description>
+<ref>XML_listAttributes</ref>
+</method>
+
+<method>
+<label>hasAttribute()</label>
+<description>Checks whether or not an element has the specified attribute</description>
+<ref>XML_hasAttribute</ref>
+</method>
+
+<method>
+<label>getString()</label>
+<description>Gets the content of an attribute as a String</description>
+<ref>XML_getString</ref>
+</method>
+
+<method>
+<label>setString()</label>
+<description>Sets the content of an attribute as a String</description>
+<ref>XML_setString</ref>
+</method>
+
+<method>
+<label>getInt()</label>
+<description>Gets the content of an attribute as an int</description>
+<ref>XML_getInt</ref>
+</method>
+
+<method>
+<label>setInt()</label>
+<description>Sets the content of an attribute as an int</description>
+<ref>XML_setInt</ref>
+</method>
+
+<method>
+<label>getFloat()</label>
+<description>Gets the content of an attribute as a float</description>
+<ref>XML_getFloat</ref>
+</method>
+
+<method>
+<label>setFloat()</label>
+<description>Sets the content of an attribute as a float</description>
+<ref>XML_setFloat</ref>
+</method>
+
+<method>
+<label>getContent()</label>
+<description>Gets the content of an element</description>
+<ref>XML_getContent</ref>
+</method>
+
+<method>
+<label>getIntContent()</label>
+<description>Gets the content of an element as an int</description>
+<ref>XML_getIntContent</ref>
+</method>
+
+<method>
+<label>getIntContent()</label>
+<description>Gets the content of an element as an int</description>
+<ref>XML_getIntContent</ref>
+</method>
+
+<method>
+<label>getFloatContent()</label>
+<description>Gets the content of an element as a float</description>
+<ref>XML_getFloatContent</ref>
+</method>
+
+<method>
+<label>setContent()</label>
+<description>Sets the content of an element</description>
+<ref>XML_setContent</ref>
+</method>
+
+<method>
+<label>format()</label>
+<description>Formats XML data as a String</description>
+<ref>XML_format</ref>
+</method>
+
+<method>
+<label>toString()</label>
+<description>Gets XML data as a String using default formatting</description>
+<ref>XML_toString</ref>
+</method>
+
 <related>loadXML</related>
 <related>parseXML</related>
 <related>saveXML</related>
