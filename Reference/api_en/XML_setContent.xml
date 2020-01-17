@@ -10,6 +10,8 @@
 <type></type>
 
 <example>
+<notest />
+<noimage />
 <code><![CDATA[
 # The following short XML file called "mammals.xml" is parsed
 # in the code below. It must be in the project's "data" folder.
