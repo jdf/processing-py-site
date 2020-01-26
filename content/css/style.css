@@ -479,8 +479,10 @@ p.exhibition-nav { margin-top: 20px; margin-bottom: 10px; }
 #reference-nav { position: relative; width: 300px; height: 2em; padding-top: .5em; }
 #reference-nav p { position: absolute; right: 10px; top: 0; margin: 0; }
 
-.refchunk>td { padding-bottom: 1em; }
-.refchunk td { line-height: 140%; }
+.refchunk td {
+	line-height: 140%;
+	padding-bottom: 1em; 
+}
 .ref-top {
 	display:none; 
 	margin-top: 20px;
@@ -490,12 +492,10 @@ p.exhibition-nav { margin-top: 20px; margin-bottom: 10px; }
 .ref-notice { margin: 0 0 2.5em 0; color: #FF3399; clear: both; margin-right: 40px;}
 
 .ref-item { margin-bottom: 60px; }
-.ref-item > th { 
-	width: 100px; 
-}
 .ref-item th { 
 	font-weight: bold; text-align: left; vertical-align: top;
 	padding-right: 2em;
+	width: 100px;
 }
 .ref-item > td { vertical-align: top; padding-bottom: 2em; max-width: 600px;}
 .ref-item > td p {
