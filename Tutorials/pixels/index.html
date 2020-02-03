@@ -355,7 +355,7 @@ for x in xrange(img.width):
         b = blue(img.pixels[loc])
         
         # Change brightness according to the mouse here
-        adjustBrightness = ((float) mouseX / width) * 8.0
+        adjustBrightness = (float(mouseX) / width) * 8.0
         r *= adjustBrightness
         g *= adjustBrightness
         b *= adjustBrightness
