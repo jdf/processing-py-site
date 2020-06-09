@@ -88,7 +88,7 @@ color(<c>v1</c>, <c>v2</c>, <c>v3</c>, <c>alpha</c>)
 
 <parameter>
 <label>v3</label>
-<description><![CDATA[float, or int: blue or brightness values relative to the current _f range]]></description>
+<description><![CDATA[float, or int: blue or brightness values relative to the current color range]]></description>
 </parameter>
 
 <related>colorMode</related>
