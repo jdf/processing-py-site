@@ -54,7 +54,7 @@ Creates colors for storing in variables of the <b>color</b> datatype. The parame
 <br/>
 Note that if only one value is provided to <b>color()</b>, it will be interpreted as a grayscale value. Add a second value, and it will be used for alpha transparency. When three values are specified, they are interpreted as either RGB or HSB values. Adding a fourth value applies alpha transparency.<br/>
 <br/>
-Note that when using hexadecimal notation in Python Mode you need to either make it a string or a 4-byte hexadecimal literal, it is not necessary to use <b>color()</b>, as in: <b>c = '#006699' # or 0xFF006699</b><br/>
+Note that when using hexadecimal notation in Python Mode you need to either make it a string or a 4-byte hexadecimal literal, as in: <b>fill('#006699') # or fill(0xFF006699)</b>, and the string version can't be used with <b>color()</b>.<br/>
 <br/>
 More about how colors are stored can be found in the reference for the <a href="color_datatype.html">color</a> datatype.
 ]]></description>
@@ -88,7 +88,7 @@ color(<c>v1</c>, <c>v2</c>, <c>v3</c>, <c>alpha</c>)
 
 <parameter>
 <label>v3</label>
-<description><![CDATA[float, or int: blue or brightness values relative to the current color range]]></description>
+<description><![CDATA[float, or int: blue or brightness values relative to the current _f range]]></description>
 </parameter>
 
 <related>colorMode</related>
