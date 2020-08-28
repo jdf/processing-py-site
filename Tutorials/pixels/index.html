@@ -615,7 +615,7 @@ def convolution(x, y, matrix, matrixsize, img):
             # Make sure we have not walked off the edge of the pixel array
             loc = constrain(loc,0,len(img.pixels)-1)
             # Calculate the convolution
-            # We sum all the neighboring pixels multiplied by the values in the convolution matrix.
+            # We sum all the neighboring pixels multiplied by the convolution matrix values.
             rtotal += (red(img.pixels[loc]) * matrix[i][j])
             gtotal += (green(img.pixels[loc]) * matrix[i][j])
             btotal += (blue(img.pixels[loc]) * matrix[i][j])
