@@ -14,8 +14,25 @@
     </head>
     <body id="Langauge-en" onload="" >
         <div id="container">
+            {% block ribbon %}
+            <div id="ribbon">
+				<ul class="left">
+					<li><a href="http://processing.org/">Processing</a></li>
+					<li><a href="http://p5js.org/">p5.js</a></li>
+					<li class="highlight"><a href="http://py.processing.org/">Processing.py</a></li>
+					<li><a href="http://android.processing.org/">Processing for Android</a></li>
+					<li><a href="http://pi.processing.org/">Processing for Pi</a></li>
+				</ul>
+				<ul class="right">
+					<li><a href="https://processingfoundation.org/">Processing Foundation</a></li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+            {% endblock %}
+
             {% block header %}
             <div id="header">
+                // put a menu here? https://github.com/jdf/processing-py-site/issues/169
                 <a href="/" title="Back to Python Mode" class="processing-logo no-cover"></a>
             </div>
             <a id="TOP" name="TOP"></a>
