@@ -9,7 +9,7 @@ jdk: oraclejdk8
 before_install:
     - sudo apt-get update
     - sudo apt-get install python python-pip git python-lxml
-    - curl -L -O http://py.processing.org/processing.py-linux64.tgz
+    - curl -k -L -O http://py.processing.org/processing.py-linux64.tgz
     - tar xfvz processing.py-linux64.tgz
     - cp processing.py-*-linux64/*.jar .
     - sudo pip install -r requirements.txt
