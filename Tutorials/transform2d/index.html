@@ -777,7 +777,7 @@ def draw():
    adjusted to be relative to the robot's coordinate system
    instead of the window's coordinate system.
    """
-  
+  global leftArmAngle, rightArmAngle
   background(255)
   pushMatrix()
   translate(ROBOT_X, ROBOT_Y)   # place robot so arms are always on screen
@@ -786,7 +786,7 @@ def draw():
       mY = mouseY - ROBOT_Y
       if (mX &lt; MIDPOINT_X):    # left side of robot
         leftArmAngle = atan2(mY - PIVOT_Y, mX - LEFT_PIVOT_X) - HALF_PI
-  else:
+      else:
         rightArmAngle = atan2(mY - PIVOT_Y, mX - RIGHT_PIVOT_X) - HALF_PI;
   drawRobot()
   
