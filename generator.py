@@ -251,7 +251,8 @@ def find_images(items_dict, to_update, img_dir):
                 else:
                     # We want an image, but we don't have one. hm.
                     del example['image']
-                    example['broken'] = True
+                    if example['run']:
+                        example['broken'] = True
             else:
                 if os.path.exists(example_path):
                     # So, we run all example sketches as a kind of unit-test, and they all save images,
