@@ -86,6 +86,7 @@ def setup():
   fill(102)
 
 def draw():
+  global x
   rect(x, height*0.2, 1, height*0.6)
   x = x + 2
 ]]></code>
