@@ -69,7 +69,7 @@ rect(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>, <c>tl</c>, <c>tr</c>, <c>br</c>, <c
 
 <parameter>
 <label>r</label>
-<description><![CDATA[float: radii for all four corners]]></description>
+<description><![CDATA[float: radius for all four corners]]></description>
 </parameter>
 
 <parameter>
